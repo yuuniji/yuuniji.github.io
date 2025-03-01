@@ -9,33 +9,12 @@
     <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/tags/%E8%B7%AF%E7%BA%BF%E5%9B%BE/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Docker 路线图</title>
-      <link>https://yuuniji.us.kg/posts/roadmap-docker/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/posts/roadmap-docker/</guid>
-      <description>&lt;p&gt;这里是中文版本的内容。&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Git 和 GitHub 路线图</title>
       <link>https://yuuniji.us.kg/posts/roadmap-git-github/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.us.kg/posts/roadmap-git-github/</guid>
       <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
 &lt;p&gt;版本控制系统（VCS）是一种帮助开发者管理代码随时间变化的工具。它允许多个项目版本同时存在，使得与他人协作和维护所有修改记录变得更加容易。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Kubernetes 路线图</title>
-      <link>https://yuuniji.us.kg/posts/roadmap-kubernetes/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/posts/roadmap-kubernetes/</guid>
-      <description>&lt;p&gt;这里是中文版本的内容。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Terraform 路线图</title>
-      <link>https://yuuniji.us.kg/posts/roadmap-terraform/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/posts/roadmap-terraform/</guid>
-      <description>&lt;p&gt;这里是中文版本的内容。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Go 路线图</title>

@@ -9,13 +9,6 @@
     <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/en/tags/roadmap/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Docker Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-docker/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-docker/</guid>
-      <description>&lt;p&gt;This is the English version of the post.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Git and GitHub Roadmap</title>
       <link>https://yuuniji.us.kg/en/posts/roadmap-git-github/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
@@ -33,20 +26,6 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;what-is-version-control&#34;&gt;◇What is Version Control?&lt;/h3&gt;
 &lt;p&gt;Version control is a system that manages and tracks changes to files over time, allowing multiple people to collaborate on a project while maintaining a history of all modifications. It records changes to files, such as code, documents, or configuration files, and stores them in a repository. With version control, developers can revert to previous versions, compare differences between versions, and understand the evolution of a project. It supports features like branching, where different lines of development can occur independently, and merging, which combines changes from different branches. Overall, version control ensures that changes are organized, recoverable, and easily managed, making it a critical tool in software development and collaborative projects.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Kubernetes Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-kubernetes/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-kubernetes/</guid>
-      <description>&lt;p&gt;This is the English version of the post.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Terraform Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-terraform/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-terraform/</guid>
-      <description>&lt;p&gt;This is the English version of the post.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Go Roadmap</title>
