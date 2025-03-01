@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vim on 叶泽伟的博客</title>
+    <link>https://yuuniji.us.kg/tags/vim/</link>
+    <description>Recent content in Vim on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.144.2</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.us.kg/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习 Vim</title>
+      <link>https://yuuniji.us.kg/posts/learn-vim/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/learn-vim/</guid>
+      <description>&lt;h2 id=&#34;学习vim&#34;&gt;★学习Vim&lt;/h2&gt;
+&lt;h3 id=&#34;前言&#34;&gt;◇前言&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;过渡&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt; 在终端运行 &lt;code&gt;vimtutor&lt;/code&gt; 以学习 Vim 的基础命令。这个交互式教程大约需要 30 分钟，涵盖了基础知识。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;理解 Vim 的语法化结构是掌握其强大功能的关键，只需学习少量命令并通过直观的组合即可高效完成多种操作。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

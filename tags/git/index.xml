@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Git on 叶泽伟的博客</title>
+    <link>https://yuuniji.us.kg/tags/git/</link>
+    <description>Recent content in Git on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.144.2</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.us.kg/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git 和 GitHub 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-git-github/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/roadmap-git-github/</guid>
+      <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
+&lt;p&gt;版本控制系统（VCS）是一种帮助开发者管理代码随时间变化的工具。它允许多个项目版本同时存在，使得与他人协作和维护所有修改记录变得更加容易。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

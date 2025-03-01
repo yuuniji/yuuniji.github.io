@@ -6,13 +6,79 @@
     <description>Recent content on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DevOps 学习路线图</title>
-      <link>https://yuuniji.us.kg/posts/devops-roadmap/</link>
+      <title>Docker 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-docker/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/roadmap-docker/</guid>
+      <description>&lt;p&gt;这里是中文版本的内容。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Git 和 GitHub 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-git-github/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/roadmap-git-github/</guid>
+      <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
+&lt;p&gt;版本控制系统（VCS）是一种帮助开发者管理代码随时间变化的工具。它允许多个项目版本同时存在，使得与他人协作和维护所有修改记录变得更加容易。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kubernetes 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-kubernetes/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/roadmap-kubernetes/</guid>
+      <description>&lt;p&gt;这里是中文版本的内容。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terraform 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-terraform/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/roadmap-terraform/</guid>
+      <description>&lt;p&gt;这里是中文版本的内容。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>学习 Vim</title>
+      <link>https://yuuniji.us.kg/posts/learn-vim/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/learn-vim/</guid>
+      <description>&lt;h2 id=&#34;学习vim&#34;&gt;★学习Vim&lt;/h2&gt;
+&lt;h3 id=&#34;前言&#34;&gt;◇前言&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;过渡&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt; 在终端运行 &lt;code&gt;vimtutor&lt;/code&gt; 以学习 Vim 的基础命令。这个交互式教程大约需要 30 分钟，涵盖了基础知识。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;理解 Vim 的语法化结构是掌握其强大功能的关键，只需学习少量命令并通过直观的组合即可高效完成多种操作。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-go/</link>
+      <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/roadmap-go/</guid>
+      <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
+&lt;p&gt;学习 Go 的常见概念，如变量、循环、条件语句、函数、数据类型等。Go 基础的一个好起点是官方文档。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;官方&lt;/em&gt; &lt;a href=&#34;https://go.dev/doc/tutorial/&#34;&gt;Go 教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;文章&lt;/em&gt; &lt;a href=&#34;https://www.w3schools.com/go/index.php&#34;&gt;W3 Schools Go 教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;订阅&lt;/em&gt; &lt;a href=&#34;https://app.daily.dev/tags/golang?ref=roadmapsh&#34;&gt;探索关于 Golang 的热门文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;基本语法&#34;&gt;◇基本语法&lt;/h3&gt;
+&lt;p&gt;学习 Go 的基本语法，例如 Go 程序的执行方式、包导入、主函数等。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-python/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/roadmap-python/</guid>
+      <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
+&lt;p&gt;Python 是一种高级、解释型、通用编程语言。其设计哲学强调代码的可读性，使用显著的缩进。Python 是动态类型语言，并且具有垃圾回收机制。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DevOps 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-devops/</link>
       <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/posts/devops-roadmap/</guid>
+      <guid>https://yuuniji.us.kg/posts/roadmap-devops/</guid>
       <description>&lt;h2 id=&#34;1-学习一门编程语言&#34;&gt;1. 学习一门编程语言&lt;/h2&gt;
 &lt;p&gt;选择哪种语言并不重要，但至少学习一门编程语言是至关重要的。你可以使用该语言编写自动化脚本。&lt;/p&gt;
 &lt;ul&gt;

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Terraform on 叶泽伟的博客</title>
+    <link>https://yuuniji.us.kg/en/tags/terraform/</link>
+    <description>Recent content in Terraform on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.144.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.us.kg/en/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terraform Roadmap</title>
+      <link>https://yuuniji.us.kg/en/posts/roadmap-terraform/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/en/posts/roadmap-terraform/</guid>
+      <description>&lt;p&gt;This is the English version of the post.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
