@@ -6,14 +6,15 @@
     <description>Recent content in Docker on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/ja/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dockerのロードマップ</title>
       <link>https://yuuniji.us.kg/ja/posts/roadmap-docker/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.us.kg/ja/posts/roadmap-docker/</guid>
-      <description>&lt;p&gt;この記事は日本語バージョンです。&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;1-dockerとは&#34;&gt;1. Dockerとは？&lt;/h2&gt;
+&lt;p&gt;Dockerは、アプリケーションを軽量でポータブルなコンテナに隔離することで、アプリケーションのデプロイ、スケーリング、管理を自動化するオープンソースプラットフォームです。コンテナは、アプリケーションがさまざまな環境で一貫して実行されるために必要なすべての依存関係、ライブラリ、設定ファイルをカプセル化したスタンドアロンの実行可能なユニットです。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

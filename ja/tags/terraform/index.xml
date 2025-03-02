@@ -6,14 +6,15 @@
     <description>Recent content in Terraform on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/ja/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Terraformのロードマップ</title>
       <link>https://yuuniji.us.kg/ja/posts/roadmap-terraform/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.us.kg/ja/posts/roadmap-terraform/</guid>
-      <description>&lt;p&gt;この記事は日本語バージョンです。&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;1-はじめに&#34;&gt;1. はじめに&lt;/h2&gt;
+&lt;p&gt;Terraformは、HashiCorpによって設計された強力なツールで、さまざまなクラウドプロバイダー間でインフラストラクチャを安全かつ効率的に設定、管理、更新するのに役立ちます。サーバー、ストレージ、ネットワークなどのクラウドリソースをシンプルなコード形式で定義する方法と考えてください。これにより、インフラストラクチャの自動化、共有、管理が容易になり、すべてが一貫しており、必要に応じて迅速に再現または変更できるようになります。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

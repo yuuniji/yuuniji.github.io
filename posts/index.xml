@@ -6,8 +6,24 @@
     <description>Recent content in 文章列表 on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-docker/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/roadmap-docker/</guid>
+      <description>&lt;h2 id=&#34;1-什么是-docker&#34;&gt;1. 什么是 Docker？&lt;/h2&gt;
+&lt;p&gt;Docker 是一个开源平台，通过将应用程序隔离到轻量级、可移植的容器中，自动化应用程序的部署、扩展和管理。容器是独立的可执行单元，封装了应用程序在各种环境中一致运行所需的所有必要依赖项、库和配置文件。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terraform 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-terraform/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/roadmap-terraform/</guid>
+      <description>&lt;h2 id=&#34;1-介绍&#34;&gt;1. 介绍&lt;/h2&gt;
+&lt;p&gt;Terraform 是由 HashiCorp 设计的一款强大工具，旨在帮助您安全高效地设置、管理和更新跨多个云提供商的基础设施。您可以将其视为一种使用简单代码格式定义云资源（如服务器、存储和网络）的方式。这使得自动化、共享和管理您的基础设施变得更加容易，确保一切保持一致，并可以根据需要快速复制或修改。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Git 和 GitHub 路线图</title>
       <link>https://yuuniji.us.kg/posts/roadmap-git-github/</link>

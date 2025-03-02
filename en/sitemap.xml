@@ -38,6 +38,99 @@
                 href="https://yuuniji.us.kg/en/"
                 />
   </url><url>
+    <loc>https://yuuniji.us.kg/en/tags/docker/</loc>
+    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.us.kg/tags/docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.us.kg/ja/tags/docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.us.kg/en/tags/docker/"
+                />
+  </url><url>
+    <loc>https://yuuniji.us.kg/en/posts/roadmap-docker/</loc>
+    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.us.kg/posts/roadmap-docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.us.kg/ja/posts/roadmap-docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.us.kg/en/posts/roadmap-docker/"
+                />
+  </url><url>
+    <loc>https://yuuniji.us.kg/en/tags/roadmap/</loc>
+    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.us.kg/en/tags/</loc>
+    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.us.kg/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.us.kg/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.us.kg/en/tags/"
+                />
+  </url><url>
+    <loc>https://yuuniji.us.kg/en/tags/terraform/</loc>
+    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.us.kg/tags/terraform/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.us.kg/ja/tags/terraform/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.us.kg/en/tags/terraform/"
+                />
+  </url><url>
+    <loc>https://yuuniji.us.kg/en/posts/roadmap-terraform/</loc>
+    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.us.kg/posts/roadmap-terraform/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.us.kg/ja/posts/roadmap-terraform/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.us.kg/en/posts/roadmap-terraform/"
+                />
+  </url><url>
     <loc>https://yuuniji.us.kg/en/tags/git/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -90,27 +183,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yuuniji.us.kg/en/tags/github/"
-                />
-  </url><url>
-    <loc>https://yuuniji.us.kg/en/tags/roadmap/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yuuniji.us.kg/en/tags/</loc>
-    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.us.kg/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.us.kg/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.us.kg/en/tags/"
                 />
   </url><url>
     <loc>https://yuuniji.us.kg/en/tags/go/</loc>

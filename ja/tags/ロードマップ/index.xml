@@ -6,8 +6,24 @@
     <description>Recent content in ロードマップ on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/ja/tags/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dockerのロードマップ</title>
+      <link>https://yuuniji.us.kg/ja/posts/roadmap-docker/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/ja/posts/roadmap-docker/</guid>
+      <description>&lt;h2 id=&#34;1-dockerとは&#34;&gt;1. Dockerとは？&lt;/h2&gt;
+&lt;p&gt;Dockerは、アプリケーションを軽量でポータブルなコンテナに隔離することで、アプリケーションのデプロイ、スケーリング、管理を自動化するオープンソースプラットフォームです。コンテナは、アプリケーションがさまざまな環境で一貫して実行されるために必要なすべての依存関係、ライブラリ、設定ファイルをカプセル化したスタンドアロンの実行可能なユニットです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terraformのロードマップ</title>
+      <link>https://yuuniji.us.kg/ja/posts/roadmap-terraform/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/ja/posts/roadmap-terraform/</guid>
+      <description>&lt;h2 id=&#34;1-はじめに&#34;&gt;1. はじめに&lt;/h2&gt;
+&lt;p&gt;Terraformは、HashiCorpによって設計された強力なツールで、さまざまなクラウドプロバイダー間でインフラストラクチャを安全かつ効率的に設定、管理、更新するのに役立ちます。サーバー、ストレージ、ネットワークなどのクラウドリソースをシンプルなコード形式で定義する方法と考えてください。これにより、インフラストラクチャの自動化、共有、管理が容易になり、すべてが一貫しており、必要に応じて迅速に再現または変更できるようになります。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>GitとGitHubのロードマップ</title>
       <link>https://yuuniji.us.kg/ja/posts/roadmap-git-github/</link>
