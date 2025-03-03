@@ -6,14 +6,15 @@
     <description>Recent content in Kubernetes on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/en/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes Roadmap</title>
       <link>https://yuuniji.us.kg/en/posts/roadmap-kubernetes/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.us.kg/en/posts/roadmap-kubernetes/</guid>
-      <description>&lt;p&gt;This is the English version of the post.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;1-kubernetes-introduction&#34;&gt;1. Kubernetes Introduction&lt;/h2&gt;
+&lt;p&gt;Kubernetes, also known as k8s, is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. It provides a way to abstract the underlying infrastructure and manage applications at scale, while also offering flexibility, portability, and a rich feature set. Kubernetes has become the de facto standard for container orchestration due to its widespread adoption, active community, and ability to handle complex, multi-tiered applications.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

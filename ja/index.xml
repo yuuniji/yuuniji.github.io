@@ -6,8 +6,16 @@
     <description>Recent content in Yuunijiのブログ on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/ja/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetesのロードマップ</title>
+      <link>https://yuuniji.us.kg/ja/posts/roadmap-kubernetes/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/ja/posts/roadmap-kubernetes/</guid>
+      <description>&lt;h2 id=&#34;1-kubernetes-イントロダクション&#34;&gt;1. Kubernetes イントロダクション&lt;/h2&gt;
+&lt;p&gt;Kubernetes（k8sとも呼ばれる）は、コンテナ化されたアプリケーションのデプロイ、スケーリング、管理を自動化するオープンソースのコンテナオーケストレーションプラットフォームです。Kubernetesは、基盤となるインフラストラクチャを抽象化し、大規模なアプリケーションを管理する方法を提供し、柔軟性、移植性、豊富な機能セットを提供します。Kubernetesは、その広範な採用、活発なコミュニティ、複雑な多層アプリケーションを処理する能力により、コンテナオーケストレーションのデファクトスタンダードとなっています。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dockerのロードマップ</title>
       <link>https://yuuniji.us.kg/ja/posts/roadmap-docker/</link>

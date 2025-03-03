@@ -38,6 +38,63 @@
                 href="https://yuuniji.us.kg/en/"
                 />
   </url><url>
+    <loc>https://yuuniji.us.kg/en/tags/kubernetes/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.us.kg/tags/kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.us.kg/ja/tags/kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.us.kg/en/tags/kubernetes/"
+                />
+  </url><url>
+    <loc>https://yuuniji.us.kg/en/posts/roadmap-kubernetes/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.us.kg/posts/roadmap-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.us.kg/ja/posts/roadmap-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.us.kg/en/posts/roadmap-kubernetes/"
+                />
+  </url><url>
+    <loc>https://yuuniji.us.kg/en/tags/roadmap/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.us.kg/en/tags/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.us.kg/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.us.kg/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.us.kg/en/tags/"
+                />
+  </url><url>
     <loc>https://yuuniji.us.kg/en/tags/docker/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -72,27 +129,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yuuniji.us.kg/en/posts/roadmap-docker/"
-                />
-  </url><url>
-    <loc>https://yuuniji.us.kg/en/tags/roadmap/</loc>
-    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yuuniji.us.kg/en/tags/</loc>
-    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.us.kg/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.us.kg/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.us.kg/en/tags/"
                 />
   </url><url>
     <loc>https://yuuniji.us.kg/en/tags/terraform/</loc>

@@ -6,8 +6,22 @@
     <description>Recent content in タグ on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/ja/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes</title>
+      <link>https://yuuniji.us.kg/ja/tags/kubernetes/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/ja/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ロードマップ</title>
+      <link>https://yuuniji.us.kg/ja/tags/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/ja/tags/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Docker</title>
       <link>https://yuuniji.us.kg/ja/tags/docker/</link>
@@ -20,13 +34,6 @@
       <link>https://yuuniji.us.kg/ja/tags/terraform/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.us.kg/ja/tags/terraform/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ロードマップ</title>
-      <link>https://yuuniji.us.kg/ja/tags/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97/</link>
-      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/ja/tags/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97/</guid>
       <description></description>
     </item>
     <item>

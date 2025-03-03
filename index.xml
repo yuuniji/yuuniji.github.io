@@ -6,8 +6,16 @@
     <description>Recent content on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.us.kg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes 路线图</title>
+      <link>https://yuuniji.us.kg/posts/roadmap-kubernetes/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.us.kg/posts/roadmap-kubernetes/</guid>
+      <description>&lt;h2 id=&#34;1-kubernetes-简介&#34;&gt;1. Kubernetes 简介&lt;/h2&gt;
+&lt;p&gt;Kubernetes，也称为 k8s，是一个开源的容器编排平台，能够自动化容器化应用程序的部署、扩展和管理。它提供了一种抽象底层基础设施的方式，并能够大规模管理应用程序，同时还提供了灵活性、可移植性和丰富的功能集。由于其广泛采用、活跃的社区以及处理复杂多层应用程序的能力，Kubernetes 已成为容器编排的事实标准。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Docker 路线图</title>
       <link>https://yuuniji.us.kg/posts/roadmap-docker/</link>
