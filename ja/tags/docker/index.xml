@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Docker on 叶泽伟的博客</title>
-    <link>http://localhost:1313/ja/tags/docker/</link>
+    <link>https://yuuniji.github.io/ja/tags/docker/</link>
     <description>Recent content in Docker on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/ja/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yuuniji.github.io/ja/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dockerのロードマップ</title>
-      <link>http://localhost:1313/ja/posts/roadmap-docker/</link>
+      <link>https://yuuniji.github.io/ja/posts/roadmap-docker/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ja/posts/roadmap-docker/</guid>
+      <guid>https://yuuniji.github.io/ja/posts/roadmap-docker/</guid>
       <description>&lt;h2 id=&#34;1-dockerとは&#34;&gt;1. Dockerとは？&lt;/h2&gt;
 &lt;p&gt;Dockerは、アプリケーションを軽量でポータブルなコンテナに隔離することで、アプリケーションのデプロイ、スケーリング、管理を自動化するオープンソースプラットフォームです。コンテナは、アプリケーションがさまざまな環境で一貫して実行されるために必要なすべての依存関係、ライブラリ、設定ファイルをカプセル化したスタンドアロンの実行可能なユニットです。&lt;/p&gt;</description>
     </item>

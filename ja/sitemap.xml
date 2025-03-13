@@ -2,463 +2,553 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/ja/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/roadmap-linux/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/"
+                href="https://yuuniji.github.io/posts/roadmap-linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://yuuniji.github.io/en/posts/roadmap-linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/"
+                href="https://yuuniji.github.io/ja/posts/roadmap-linux/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/posts/</loc>
+    <loc>https://yuuniji.github.io/ja/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/"
+                href="https://yuuniji.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/"
+                href="https://yuuniji.github.io/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/"
+                href="https://yuuniji.github.io/ja/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/tags/kubernetes/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/tags/python/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/tags/python/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/posts/learn-python/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/learn-python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/learn-python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/learn-python/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/tags/vim/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/tags/vim/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/tags/vim/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/tags/vim/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/posts/learn-vim/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/learn-vim/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/learn-vim/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/learn-vim/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/tags/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/tags/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/tags/%E5%AD%A6%E7%BF%92%E6%B3%95/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/posts/japanese/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/japanese/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/japanese/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/japanese/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/tags/kubernetes/</loc>
     <lastmod>2025-03-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/tags/kubernetes/"
+                href="https://yuuniji.github.io/tags/kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/kubernetes/"
+                href="https://yuuniji.github.io/en/tags/kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/tags/kubernetes/"
+                href="https://yuuniji.github.io/ja/tags/kubernetes/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/posts/roadmap-kubernetes/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/roadmap-kubernetes/</loc>
     <lastmod>2025-03-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/roadmap-kubernetes/"
+                href="https://yuuniji.github.io/posts/roadmap-kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/roadmap-kubernetes/"
+                href="https://yuuniji.github.io/en/posts/roadmap-kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/roadmap-kubernetes/"
+                href="https://yuuniji.github.io/ja/posts/roadmap-kubernetes/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/tags/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97/</loc>
+    <loc>https://yuuniji.github.io/ja/tags/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97/</loc>
     <lastmod>2025-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ja/tags/</loc>
-    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/tags/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/ja/tags/docker/</loc>
+    <loc>https://yuuniji.github.io/ja/tags/docker/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/tags/docker/"
+                href="https://yuuniji.github.io/tags/docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/docker/"
+                href="https://yuuniji.github.io/en/tags/docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/tags/docker/"
+                href="https://yuuniji.github.io/ja/tags/docker/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/posts/roadmap-docker/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/roadmap-docker/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/roadmap-docker/"
+                href="https://yuuniji.github.io/posts/roadmap-docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/roadmap-docker/"
+                href="https://yuuniji.github.io/en/posts/roadmap-docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/roadmap-docker/"
+                href="https://yuuniji.github.io/ja/posts/roadmap-docker/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/tags/terraform/</loc>
+    <loc>https://yuuniji.github.io/ja/tags/terraform/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/tags/terraform/"
+                href="https://yuuniji.github.io/tags/terraform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/terraform/"
+                href="https://yuuniji.github.io/en/tags/terraform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/tags/terraform/"
+                href="https://yuuniji.github.io/ja/tags/terraform/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/posts/roadmap-terraform/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/roadmap-terraform/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/roadmap-terraform/"
+                href="https://yuuniji.github.io/posts/roadmap-terraform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/roadmap-terraform/"
+                href="https://yuuniji.github.io/en/posts/roadmap-terraform/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/roadmap-terraform/"
+                href="https://yuuniji.github.io/ja/posts/roadmap-terraform/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/tags/git/</loc>
+    <loc>https://yuuniji.github.io/ja/tags/git/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/tags/git/"
+                href="https://yuuniji.github.io/tags/git/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/git/"
+                href="https://yuuniji.github.io/en/tags/git/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/tags/git/"
+                href="https://yuuniji.github.io/ja/tags/git/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/tags/github/</loc>
+    <loc>https://yuuniji.github.io/ja/tags/github/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/tags/github/"
+                href="https://yuuniji.github.io/tags/github/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/github/"
+                href="https://yuuniji.github.io/en/tags/github/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/tags/github/"
+                href="https://yuuniji.github.io/ja/tags/github/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/posts/roadmap-git-github/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/roadmap-git-github/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/roadmap-git-github/"
+                href="https://yuuniji.github.io/posts/roadmap-git-github/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/roadmap-git-github/"
+                href="https://yuuniji.github.io/en/posts/roadmap-git-github/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/roadmap-git-github/"
+                href="https://yuuniji.github.io/ja/posts/roadmap-git-github/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/tags/go/</loc>
+    <loc>https://yuuniji.github.io/ja/tags/go/</loc>
     <lastmod>2025-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/tags/go/"
+                href="https://yuuniji.github.io/tags/go/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/go/"
+                href="https://yuuniji.github.io/en/tags/go/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/tags/go/"
+                href="https://yuuniji.github.io/ja/tags/go/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/posts/roadmap-go/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/roadmap-go/</loc>
     <lastmod>2025-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/roadmap-go/"
+                href="https://yuuniji.github.io/posts/roadmap-go/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/roadmap-go/"
+                href="https://yuuniji.github.io/en/posts/roadmap-go/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/roadmap-go/"
+                href="https://yuuniji.github.io/ja/posts/roadmap-go/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/tags/python/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/roadmap-python/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/tags/python/"
+                href="https://yuuniji.github.io/posts/roadmap-python/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/python/"
+                href="https://yuuniji.github.io/en/posts/roadmap-python/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/tags/python/"
+                href="https://yuuniji.github.io/ja/posts/roadmap-python/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/posts/roadmap-python/</loc>
-    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/posts/roadmap-python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/posts/roadmap-python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/posts/roadmap-python/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/ja/tags/devops/</loc>
+    <loc>https://yuuniji.github.io/ja/tags/devops/</loc>
     <lastmod>2025-02-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/tags/devops/"
+                href="https://yuuniji.github.io/tags/devops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/devops/"
+                href="https://yuuniji.github.io/en/tags/devops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/tags/devops/"
+                href="https://yuuniji.github.io/ja/tags/devops/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/posts/roadmap-devops/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/roadmap-devops/</loc>
     <lastmod>2025-02-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/roadmap-devops/"
+                href="https://yuuniji.github.io/posts/roadmap-devops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/roadmap-devops/"
+                href="https://yuuniji.github.io/en/posts/roadmap-devops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/roadmap-devops/"
+                href="https://yuuniji.github.io/ja/posts/roadmap-devops/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
-    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/ja/posts/japanese-grammar/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/japanese-grammar/</loc>
     <lastmod>2025-02-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/japanese-grammar/"
+                href="https://yuuniji.github.io/posts/japanese-grammar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/japanese-grammar/"
+                href="https://yuuniji.github.io/en/posts/japanese-grammar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/japanese-grammar/"
+                href="https://yuuniji.github.io/ja/posts/japanese-grammar/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/tags/%E5%AD%A6%E7%BF%92%E6%B3%95/</loc>
-    <lastmod>2025-02-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/ja/posts/japanese-learning-methods/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/japanese-learning-methods/</loc>
     <lastmod>2025-02-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/japanese-learning-methods/"
+                href="https://yuuniji.github.io/posts/japanese-learning-methods/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/japanese-learning-methods/"
+                href="https://yuuniji.github.io/en/posts/japanese-learning-methods/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/japanese-learning-methods/"
+                href="https://yuuniji.github.io/ja/posts/japanese-learning-methods/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/posts/japanese-learning-concept/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/japanese-learning-concept/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/japanese-learning-concept/"
+                href="https://yuuniji.github.io/posts/japanese-learning-concept/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/japanese-learning-concept/"
+                href="https://yuuniji.github.io/en/posts/japanese-learning-concept/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/japanese-learning-concept/"
+                href="https://yuuniji.github.io/ja/posts/japanese-learning-concept/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/tags/%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89/</loc>
+    <loc>https://yuuniji.github.io/ja/tags/%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89/</loc>
     <lastmod>2025-02-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ja/posts/my-first-post/</loc>
+    <loc>https://yuuniji.github.io/ja/posts/my-first-post/</loc>
     <lastmod>2025-02-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/posts/my-first-post/"
+                href="https://yuuniji.github.io/posts/my-first-post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/my-first-post/"
+                href="https://yuuniji.github.io/en/posts/my-first-post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/posts/my-first-post/"
+                href="https://yuuniji.github.io/ja/posts/my-first-post/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/archives/</loc>
+    <loc>https://yuuniji.github.io/ja/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/archives/"
+                href="https://yuuniji.github.io/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/archives/"
+                href="https://yuuniji.github.io/en/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/archives/"
+                href="https://yuuniji.github.io/ja/archives/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/categories/</loc>
+    <loc>https://yuuniji.github.io/ja/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/categories/"
+                href="https://yuuniji.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="https://yuuniji.github.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/categories/"
+                href="https://yuuniji.github.io/ja/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ja/search/</loc>
+    <loc>https://yuuniji.github.io/ja/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/search/"
+                href="https://yuuniji.github.io/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/search/"
+                href="https://yuuniji.github.io/en/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://localhost:1313/ja/search/"
+                href="https://yuuniji.github.io/ja/search/"
                 />
   </url>
 </urlset>

@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Japanese on 叶泽伟的博客</title>
-    <link>http://localhost:1313/en/tags/japanese/</link>
+    <link>https://yuuniji.github.io/en/tags/japanese/</link>
     <description>Recent content in Japanese on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/en/tags/japanese/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.github.io/en/tags/japanese/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Japanese Guide</title>
+      <link>https://yuuniji.github.io/en/posts/japanese/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/japanese/</guid>
+      <description>&lt;p&gt;This is the English version of the post.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Japanese Grammar Guide</title>
-      <link>http://localhost:1313/en/posts/japanese-grammar/</link>
+      <link>https://yuuniji.github.io/en/posts/japanese-grammar/</link>
       <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/posts/japanese-grammar/</guid>
+      <guid>https://yuuniji.github.io/en/posts/japanese-grammar/</guid>
       <description>&lt;h2 id=&#34;problems-with-traditional-textbooks&#34;&gt;★Problems with Traditional Textbooks&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -35,9 +42,9 @@
     </item>
     <item>
       <title>Introduction to Learning Japanese: Effective Methods</title>
-      <link>http://localhost:1313/en/posts/japanese-learning-methods/</link>
+      <link>https://yuuniji.github.io/en/posts/japanese-learning-methods/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/posts/japanese-learning-methods/</guid>
+      <guid>https://yuuniji.github.io/en/posts/japanese-learning-methods/</guid>
       <description>&lt;h1 id=&#34;introduction-to-learning-japanese-efficient-methods&#34;&gt;Introduction to Learning Japanese: Efficient Methods&lt;/h1&gt;
 &lt;h2 id=&#34;1-find-a-textbook-recommended-minna-no-nihongo-みんなの日本語&#34;&gt;1. Find a Textbook (Recommended: &amp;ldquo;Minna no Nihongo&amp;rdquo; (みんなの日本語))&lt;/h2&gt;
 &lt;ul&gt;
@@ -76,9 +83,9 @@
     </item>
     <item>
       <title>Introduction to Learning Japanese: Core Concepts</title>
-      <link>http://localhost:1313/en/posts/japanese-learning-concept/</link>
+      <link>https://yuuniji.github.io/en/posts/japanese-learning-concept/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/posts/japanese-learning-concept/</guid>
+      <guid>https://yuuniji.github.io/en/posts/japanese-learning-concept/</guid>
       <description>&lt;h1 id=&#34;introduction-to-learning-japanese-core-concepts&#34;&gt;Introduction to Learning Japanese: Core Concepts&lt;/h1&gt;
 &lt;h2 id=&#34;first-core-everything-revolves-around-sentences-sentences-are-everything-sentences-are-wealth&#34;&gt;First Core: Everything Revolves Around Sentences! Sentences are Everything! Sentences are Wealth!&lt;/h2&gt;
 &lt;p&gt;Sentences are simple, clear, easy to master, and can be immediately used for communication!&lt;/p&gt;
