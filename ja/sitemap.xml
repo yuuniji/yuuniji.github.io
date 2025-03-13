@@ -2,60 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://yuuniji.github.io/ja/posts/roadmap-linux/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/posts/roadmap-linux/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/posts/roadmap-linux/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/posts/roadmap-linux/"
-                />
-  </url><url>
-    <loc>https://yuuniji.github.io/ja/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/"
-                />
-  </url><url>
-    <loc>https://yuuniji.github.io/ja/posts/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/posts/"
-                />
-  </url><url>
     <loc>https://yuuniji.github.io/ja/tags/python/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -128,6 +74,24 @@
                 href="https://yuuniji.github.io/ja/posts/learn-vim/"
                 />
   </url><url>
+    <loc>https://yuuniji.github.io/ja/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/"
+                />
+  </url><url>
     <loc>https://yuuniji.github.io/ja/tags/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -148,6 +112,24 @@
   </url><url>
     <loc>https://yuuniji.github.io/ja/tags/%E5%AD%A6%E7%BF%92%E6%B3%95/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/posts/</loc>
+    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/"
+                />
   </url><url>
     <loc>https://yuuniji.github.io/ja/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
