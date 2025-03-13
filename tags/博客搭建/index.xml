@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>博客搭建 on 叶泽伟的博客</title>
-    <link>https://yuuniji.us.kg/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+    <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
     <description>Recent content in 博客搭建 on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yuuniji.us.kg/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我的博客搭建之旅：从零到上线</title>
-      <link>https://yuuniji.us.kg/posts/my-first-post/</link>
+      <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
       <description>&lt;h1 id=&#34;hugo-博客--github-pages-完整部署方案&#34;&gt;Hugo 博客 + GitHub Pages 完整部署方案&lt;/h1&gt;
 &lt;h2 id=&#34;-环境准备&#34;&gt;📌 环境准备&lt;/h2&gt;
 &lt;ul&gt;

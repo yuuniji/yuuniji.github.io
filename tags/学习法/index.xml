@@ -2,31 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>学习法 on 叶泽伟的博客</title>
-    <link>https://yuuniji.us.kg/tags/%E5%AD%A6%E4%B9%A0%E6%B3%95/</link>
+    <link>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0%E6%B3%95/</link>
     <description>Recent content in 学习法 on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yuuniji.us.kg/tags/%E5%AD%A6%E4%B9%A0%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>日文指南</title>
-      <link>https://yuuniji.us.kg/posts/japanese/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/posts/japanese/</guid>
-      <description>&lt;h2 id=&#34;引子&#34;&gt;★引子&lt;/h2&gt;
-&lt;p&gt;　　汇总这篇“日文指南”源于如下几点：&lt;br&gt;
-　　其一，&lt;br&gt;
-　　大学毕业了还是哑巴英语，所以绝不能让日语学习也出现这种情况 :(&lt;br&gt;
-　　其二，&lt;br&gt;
-　　最近找工作力不从心，再次迷漫在十字路口中。这不禁让俺想去日本找工作，于是也就有了今天这篇。&lt;br&gt;
-　　其三，&lt;br&gt;
-　　俺还年轻，想出去看看。通过这个“日文指南”可以让更多人意识到：日语到底有怎么才能学好。&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>日语学习入门：高效方法</title>
-      <link>https://yuuniji.us.kg/posts/japanese-learning-methods/</link>
+      <link>http://localhost:1313/posts/japanese-learning-methods/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/posts/japanese-learning-methods/</guid>
+      <guid>http://localhost:1313/posts/japanese-learning-methods/</guid>
       <description>&lt;h1 id=&#34;日语学习入门高效方法&#34;&gt;日语学习入门：高效方法&lt;/h1&gt;
 &lt;h2 id=&#34;一找一本教材推荐大家的日本语みんなの日本語&#34;&gt;一、找一本教材（推荐《大家的日本语》（みんなの日本語）&lt;/h2&gt;
 &lt;ul&gt;
@@ -65,9 +51,9 @@
     </item>
     <item>
       <title>日语学习入门：核心概念</title>
-      <link>https://yuuniji.us.kg/posts/japanese-learning-concept/</link>
+      <link>http://localhost:1313/posts/japanese-learning-concept/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/posts/japanese-learning-concept/</guid>
+      <guid>http://localhost:1313/posts/japanese-learning-concept/</guid>
       <description>&lt;h1 id=&#34;日语学习入门核心概念&#34;&gt;日语学习入门：核心概念&lt;/h1&gt;
 &lt;h2 id=&#34;第一核心一切以句子为中心句子就是一切句子就是财富&#34;&gt;第一核心：一切以句子为中心！句子就是一切！句子就是财富！&lt;/h2&gt;
 &lt;p&gt;句子简单明确，容易掌握，并马上可以用于交流！&lt;/p&gt;

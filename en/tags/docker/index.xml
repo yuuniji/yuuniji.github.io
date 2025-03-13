@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Docker on 叶泽伟的博客</title>
-    <link>https://yuuniji.us.kg/en/tags/docker/</link>
+    <link>http://localhost:1313/en/tags/docker/</link>
     <description>Recent content in Docker on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>en</language>
     <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yuuniji.us.kg/en/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-docker/</link>
+      <link>http://localhost:1313/en/posts/roadmap-docker/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-docker/</guid>
+      <guid>http://localhost:1313/en/posts/roadmap-docker/</guid>
       <description>&lt;h2 id=&#34;1-what-is-docker&#34;&gt;1. What is Docker?&lt;/h2&gt;
 &lt;p&gt;Docker is an open-source platform that automates the deployment, scaling, and management of applications by isolating them into lightweight, portable containers. Containers are standalone executable units that encapsulate all necessary dependencies, libraries, and configuration files required for an application to run consistently across various environments.&lt;/p&gt;
 &lt;ul&gt;

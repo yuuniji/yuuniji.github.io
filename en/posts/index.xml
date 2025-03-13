@@ -2,97 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Article List on 叶泽伟的博客</title>
-    <link>https://yuuniji.us.kg/en/posts/</link>
+    <link>http://localhost:1313/en/posts/</link>
     <description>Recent content in Article List on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yuuniji.us.kg/en/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>roadmap-linux</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-linux/</link>
-      <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Japanese Guide</title>
-      <link>https://yuuniji.us.kg/en/posts/japanese/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/japanese/</guid>
-      <description>&lt;p&gt;This is the English version of the post.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Learn Python</title>
-      <link>https://yuuniji.us.kg/en/posts/learn-python/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/learn-python/</guid>
-      <description>&lt;h2 id=&#34;variables-&#34;&gt;variables ❎&lt;/h2&gt;
-&lt;p&gt;A container for a value (string, integer, float, boolean)&lt;/p&gt;
-&lt;p&gt;A variable behaves as if it was the value it contains&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Strings&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;first_name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Bro&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;food &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pizza&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;email &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Bro123@gmail.com&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;first_name&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You like &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;food&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your email is: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;email&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Integers&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;age &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;quantity &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;num_of_students &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You are &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;age&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; years old&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You are buying &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;quantity&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; items&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You class has &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;num_of_students&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; students&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Float&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;price &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10.99&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gpa &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3.2&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;distance &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5.5&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;The price is $&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;price&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your gpa is: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;gpa&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You ran &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;distance&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;km&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Boolean&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;is_student &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;for_sale &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;is_online &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; is_online:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You are online&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You are offline&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Variable assignments&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Learn Vim</title>
-      <link>https://yuuniji.us.kg/en/posts/learn-vim/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/learn-vim/</guid>
-      <description>&lt;h1 id=&#34;learning-vim&#34;&gt;★Learning Vim&lt;/h1&gt;
-&lt;h3 id=&#34;preface&#34;&gt;◇Preface&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Transition&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Tip&lt;/strong&gt; Run &lt;code&gt;vimtutor&lt;/code&gt; in the terminal to learn basic Vim commands. This interactive tutorial takes about 30 minutes and covers the fundamentals.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;Understanding Vim&amp;rsquo;s syntactic structure is key to mastering its powerful features. You only need to learn a small set of commands and combine them intuitively to efficiently complete various operations.&lt;/p&gt;
-&lt;p&gt;Once your editing speed reaches 50% of your original speed, it&amp;rsquo;s time to fully switch to Vim.&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-kubernetes/</link>
+      <link>http://localhost:1313/en/posts/roadmap-kubernetes/</link>
       <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-kubernetes/</guid>
+      <guid>http://localhost:1313/en/posts/roadmap-kubernetes/</guid>
       <description>&lt;h2 id=&#34;1-kubernetes-introduction&#34;&gt;1. Kubernetes Introduction&lt;/h2&gt;
 &lt;p&gt;Kubernetes, also known as k8s, is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. It provides a way to abstract the underlying infrastructure and manage applications at scale, while also offering flexibility, portability, and a rich feature set. Kubernetes has become the de facto standard for container orchestration due to its widespread adoption, active community, and ability to handle complex, multi-tiered applications.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Docker Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-docker/</link>
+      <link>http://localhost:1313/en/posts/roadmap-docker/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-docker/</guid>
+      <guid>http://localhost:1313/en/posts/roadmap-docker/</guid>
       <description>&lt;h2 id=&#34;1-what-is-docker&#34;&gt;1. What is Docker?&lt;/h2&gt;
 &lt;p&gt;Docker is an open-source platform that automates the deployment, scaling, and management of applications by isolating them into lightweight, portable containers. Containers are standalone executable units that encapsulate all necessary dependencies, libraries, and configuration files required for an application to run consistently across various environments.&lt;/p&gt;
 &lt;ul&gt;
@@ -104,17 +32,17 @@
     </item>
     <item>
       <title>Terraform Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-terraform/</link>
+      <link>http://localhost:1313/en/posts/roadmap-terraform/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-terraform/</guid>
+      <guid>http://localhost:1313/en/posts/roadmap-terraform/</guid>
       <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
 &lt;p&gt;Terraform is a powerful tool designed by HashiCorp that helps you set up, manage, and update infrastructure safely and efficiently across various cloud providers. Think of it as a way to define your cloud resources—like servers, storage, and networks—using a simple code format. This makes it easier to automate, share, and manage your infrastructure, ensuring that everything is consistent and can be quickly reproduced or modified as needed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Git and GitHub Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-git-github/</link>
+      <link>http://localhost:1313/en/posts/roadmap-git-github/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-git-github/</guid>
+      <guid>http://localhost:1313/en/posts/roadmap-git-github/</guid>
       <description>&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
 &lt;p&gt;A Version Control System (VCS) is a tool that helps developers manage changes to their code over time. It allows multiple versions of a project to exist simultaneously, making it easier to collaborate with others and maintain a record of all modifications.&lt;/p&gt;
 &lt;ul&gt;
@@ -131,9 +59,9 @@
     </item>
     <item>
       <title>Go Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-go/</link>
+      <link>http://localhost:1313/en/posts/roadmap-go/</link>
       <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-go/</guid>
+      <guid>http://localhost:1313/en/posts/roadmap-go/</guid>
       <description>&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
 &lt;p&gt;Learn the common concepts of Go like variables, loops, conditional statements, functions, data types, and so on. A good starting point for go basics is its Go’s official docs.&lt;/p&gt;
 &lt;ul&gt;
@@ -153,9 +81,9 @@
     </item>
     <item>
       <title>Python Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-python/</link>
+      <link>http://localhost:1313/en/posts/roadmap-python/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-python/</guid>
+      <guid>http://localhost:1313/en/posts/roadmap-python/</guid>
       <description>&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
 &lt;p&gt;Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected.&lt;/p&gt;
 &lt;ul&gt;
@@ -172,9 +100,9 @@
     </item>
     <item>
       <title>DevOps Roadmap</title>
-      <link>https://yuuniji.us.kg/en/posts/roadmap-devops/</link>
+      <link>http://localhost:1313/en/posts/roadmap-devops/</link>
       <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/roadmap-devops/</guid>
+      <guid>http://localhost:1313/en/posts/roadmap-devops/</guid>
       <description>&lt;h2 id=&#34;1-learn-a-programming-language&#34;&gt;1. Learn a Programming Language&lt;/h2&gt;
 &lt;p&gt;It doesn’t matter what language you pick, but it is important to learn at least one. You will be able to use that language to write automation scripts.&lt;/p&gt;
 &lt;ul&gt;
@@ -184,9 +112,9 @@
     </item>
     <item>
       <title>Japanese Grammar Guide</title>
-      <link>https://yuuniji.us.kg/en/posts/japanese-grammar/</link>
+      <link>http://localhost:1313/en/posts/japanese-grammar/</link>
       <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/japanese-grammar/</guid>
+      <guid>http://localhost:1313/en/posts/japanese-grammar/</guid>
       <description>&lt;h2 id=&#34;problems-with-traditional-textbooks&#34;&gt;★Problems with Traditional Textbooks&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -209,9 +137,9 @@
     </item>
     <item>
       <title>Introduction to Learning Japanese: Effective Methods</title>
-      <link>https://yuuniji.us.kg/en/posts/japanese-learning-methods/</link>
+      <link>http://localhost:1313/en/posts/japanese-learning-methods/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/japanese-learning-methods/</guid>
+      <guid>http://localhost:1313/en/posts/japanese-learning-methods/</guid>
       <description>&lt;h1 id=&#34;introduction-to-learning-japanese-efficient-methods&#34;&gt;Introduction to Learning Japanese: Efficient Methods&lt;/h1&gt;
 &lt;h2 id=&#34;1-find-a-textbook-recommended-minna-no-nihongo-みんなの日本語&#34;&gt;1. Find a Textbook (Recommended: &amp;ldquo;Minna no Nihongo&amp;rdquo; (みんなの日本語))&lt;/h2&gt;
 &lt;ul&gt;
@@ -250,9 +178,9 @@
     </item>
     <item>
       <title>Introduction to Learning Japanese: Core Concepts</title>
-      <link>https://yuuniji.us.kg/en/posts/japanese-learning-concept/</link>
+      <link>http://localhost:1313/en/posts/japanese-learning-concept/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/japanese-learning-concept/</guid>
+      <guid>http://localhost:1313/en/posts/japanese-learning-concept/</guid>
       <description>&lt;h1 id=&#34;introduction-to-learning-japanese-core-concepts&#34;&gt;Introduction to Learning Japanese: Core Concepts&lt;/h1&gt;
 &lt;h2 id=&#34;first-core-everything-revolves-around-sentences-sentences-are-everything-sentences-are-wealth&#34;&gt;First Core: Everything Revolves Around Sentences! Sentences are Everything! Sentences are Wealth!&lt;/h2&gt;
 &lt;p&gt;Sentences are simple, clear, easy to master, and can be immediately used for communication!&lt;/p&gt;
@@ -285,9 +213,9 @@
     </item>
     <item>
       <title>Building My Blog: From Scratch to Online</title>
-      <link>https://yuuniji.us.kg/en/posts/my-first-post/</link>
+      <link>http://localhost:1313/en/posts/my-first-post/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/en/posts/my-first-post/</guid>
       <description>&lt;h1 id=&#34;hugo-blog--github-pages-complete-deployment-guide&#34;&gt;Hugo Blog + GitHub Pages Complete Deployment Guide&lt;/h1&gt;
 &lt;h2 id=&#34;-environment-preparation&#34;&gt;📌 Environment Preparation&lt;/h2&gt;
 &lt;ul&gt;
@@ -314,7 +242,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Edit &lt;code&gt;config.toml&lt;/code&gt;, add:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;PaperMod&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://yuuniji.us.kg&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://yuuniji.github.io&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;-write-blog-posts&#34;&gt;📝 Write Blog Posts&lt;/h2&gt;
 &lt;p&gt;Create your first post:&lt;/p&gt;</description>

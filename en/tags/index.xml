@@ -2,101 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on 叶泽伟的博客</title>
-    <link>https://yuuniji.us.kg/en/tags/</link>
+    <link>http://localhost:1313/en/tags/</link>
     <description>Recent content in Tags on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yuuniji.us.kg/en/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Japanese</title>
-      <link>https://yuuniji.us.kg/en/tags/japanese/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/japanese/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://yuuniji.us.kg/en/tags/python/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Study Tips</title>
-      <link>https://yuuniji.us.kg/en/tags/study-tips/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/study-tips/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Vim</title>
-      <link>https://yuuniji.us.kg/en/tags/vim/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/vim/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes</title>
-      <link>https://yuuniji.us.kg/en/tags/kubernetes/</link>
+      <link>http://localhost:1313/en/tags/kubernetes/</link>
       <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/kubernetes/</guid>
+      <guid>http://localhost:1313/en/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>Roadmap</title>
-      <link>https://yuuniji.us.kg/en/tags/roadmap/</link>
+      <link>http://localhost:1313/en/tags/roadmap/</link>
       <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/roadmap/</guid>
+      <guid>http://localhost:1313/en/tags/roadmap/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://yuuniji.us.kg/en/tags/docker/</link>
+      <link>http://localhost:1313/en/tags/docker/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/docker/</guid>
+      <guid>http://localhost:1313/en/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Terraform</title>
-      <link>https://yuuniji.us.kg/en/tags/terraform/</link>
+      <link>http://localhost:1313/en/tags/terraform/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/terraform/</guid>
+      <guid>http://localhost:1313/en/tags/terraform/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>https://yuuniji.us.kg/en/tags/git/</link>
+      <link>http://localhost:1313/en/tags/git/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/git/</guid>
+      <guid>http://localhost:1313/en/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Github</title>
-      <link>https://yuuniji.us.kg/en/tags/github/</link>
+      <link>http://localhost:1313/en/tags/github/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/github/</guid>
+      <guid>http://localhost:1313/en/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>https://yuuniji.us.kg/en/tags/go/</link>
+      <link>http://localhost:1313/en/tags/go/</link>
       <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/go/</guid>
+      <guid>http://localhost:1313/en/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/en/tags/python/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>https://yuuniji.us.kg/en/tags/devops/</link>
+      <link>http://localhost:1313/en/tags/devops/</link>
       <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/devops/</guid>
+      <guid>http://localhost:1313/en/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Japanese</title>
+      <link>http://localhost:1313/en/tags/japanese/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/tags/japanese/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Study Tips</title>
+      <link>http://localhost:1313/en/tags/study-tips/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/tags/study-tips/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog Setup</title>
-      <link>https://yuuniji.us.kg/en/tags/blog-setup/</link>
+      <link>http://localhost:1313/en/tags/blog-setup/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/en/tags/blog-setup/</guid>
+      <guid>http://localhost:1313/en/tags/blog-setup/</guid>
       <description></description>
     </item>
   </channel>

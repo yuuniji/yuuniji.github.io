@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Go on 叶泽伟的博客</title>
-    <link>https://yuuniji.us.kg/tags/go/</link>
+    <link>http://localhost:1313/tags/go/</link>
     <description>Recent content in Go on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 28 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yuuniji.us.kg/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go 路线图</title>
-      <link>https://yuuniji.us.kg/posts/roadmap-go/</link>
+      <link>http://localhost:1313/posts/roadmap-go/</link>
       <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.us.kg/posts/roadmap-go/</guid>
+      <guid>http://localhost:1313/posts/roadmap-go/</guid>
       <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
 &lt;p&gt;学习 Go 的常见概念，如变量、循环、条件语句、函数、数据类型等。Go 基础的一个好起点是官方文档。&lt;/p&gt;
 &lt;ul&gt;
