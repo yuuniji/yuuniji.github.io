@@ -18,7 +18,7 @@ Understanding Vim&rsquo;s syntactic structure is key to mastering its powerful f
 Once your editing speed reaches 50% of your original speed, it&rsquo;s time to fully switch to Vim.">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.us.kg/en/posts/learn-vim/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.64d2e6fe1ad2db4a22ddcef696ecd3b4f0d576605ca283ff41cbfc80b875ba0a.css" integrity="sha256-ZNLm/hrS20oi3c72luzTtPDVdmBcooP/Qcv8gLh1ugo=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.us.kg/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.us.kg/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.us.kg/favicon-32x32.png">
@@ -75,8 +75,8 @@ Once your editing speed reaches 50% of your original speed, it’s time to fully
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-03-01T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-03-01T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-03-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-10T00:00:00+00:00">
     <meta property="article:tag" content="Vim">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Vim">
@@ -124,8 +124,8 @@ Once your editing speed reaches 50% of your original speed, it&rsquo;s time to f
   "articleBody": "★Learning Vim ◇Preface Transition\nTip Run vimtutor in the terminal to learn basic Vim commands. This interactive tutorial takes about 30 minutes and covers the fundamentals.\nUnderstanding Vim’s syntactic structure is key to mastering its powerful features. You only need to learn a small set of commands and combine them intuitively to efficiently complete various operations.\nOnce your editing speed reaches 50% of your original speed, it’s time to fully switch to Vim.\nLearning Vim is like learning to ride a bicycle - reading guides alone isn’t enough; you must practice hands-on to master it.\nThe key to mastering Vim is practice: repeatedly input and combine commands, explore its features, make good use of :help and search engines. The goal is to make command execution natural and instinctive.\nA small tip for using the Vim help manual: when looking for commands in specific modes, add the mode prefix. For example, to search for Ctrl-P in insert mode, search for :h i_CTRL-P, where i_ represents insert mode.\nVimrc\nSetting line numbers:\nTo permanently display line numbers, add set number to your Vim configuration file (.vimrc). If you don’t have a .vimrc file yet, create one in your root directory. On macOS, the path is ~/.vimrc. After saving the file with :w, use :source % to activate the configuration. Line numbers will appear on the left side of each line. Temporary settings:\nIf you don’t want to set it permanently, you can type :set number in Vim’s command line, but this is only temporary and will disappear after closing Vim. Enable Vim-specific features:\nTo use Vim-specific features, you must add set nocompatible to your .vimrc, otherwise many Vim features will be disabled. General configuration method:\nFor any Vim configuration option, simply add it to your .vimrc file, save, and activate it. ◇Getting Started Understanding modes: Vim has different modes:\nNormal mode: for navigation and commands (default mode when opening Vim) Insert mode: for entering text (press i to enter) Visual mode: for selecting text (press v to enter) Command mode: for executing commands (press : to enter) Saving and exiting\n:w: save (:write) :w file.txt: save as a new file :q: quit (:quit) :wq: save and quit :q!: quit without saving Help\n:help or :h: open the main help file :help command: view help for a specific command (e.g., :h write-quit) Opening files\nvim filename: open a specified file vim file1 file2: open multiple files (place them in buffers) Parameters\nvim --version: display Vim version information and all supported features, + indicates supported features, - indicates unsupported features :version: check the current Vim version within the Vim program There are several ways to execute commands immediately after opening the hello.txt file: Use the :s command (short for substitute) to replace text\nUse the +command syntax:\nvim +command hello.txt For example, to replace all “pancake” with “bagel” immediately after opening hello.txt:\nvim +%s/pancake/bagel/g hello.txt vim starts the Vim editor %s means full text replacement, g means global (replace all matches in each line) Commands can be stacked; all original “pancake”, “bagel”, and “egg” in the file will become “donut”:\nvim +%s/pancake/bagel/g +%s/bagel/egg/g +%s/egg/donut/g hello.txt Searching for text:\nvim +/searchword hello.txt Using the -c parameter:\nvim -c 'command' hello.txt vim -c %s/pancake/bagel/g hello.txt vim -c %s/pancake/bagel/g -c %s/bagel/egg/g -c %s/egg/donut/g hello.txt Opening multiple windows\nHorizontal split windows (using the -o option), vertical split windows (using the -O option) work similarly.\nOpen Vim and create 2 horizontally split empty windows (arranged top and bottom). vim -o2 Open Vim and create 5 horizontally split empty windows. vim -o5 Open Vim and create 5 horizontally split windows, where the first two windows load hello1.txt and hello2.txt respectively, and the remaining 3 windows are empty. vim -o5 hello1.txt hello2.txt These commands are particularly useful when you need to view and edit multiple files or different parts of the same file simultaneously. Combined with Vim’s window navigation commands (such as Ctrl+w plus direction keys), you can efficiently switch between different windows.\nSuspending\nThere are three ways to suspend Vim:\nPress the Ctrl-z shortcut Use the :stop command Use the :suspend command To return to a suspended Vim session, simply type in the terminal:\nfg The fg command is short for “foreground” and will restore the most recently suspended job to the foreground.\nIf you have multiple suspended jobs, you can use the jobs command to view a list of all suspended jobs, then use the fg %n command to restore a specific job, where n is the job number. For example:\nfg %2 Use cases\nNeed to view file content without exiting Vim Need to run some commands to get information, then bring the results back to Vim Need to handle urgent tasks without losing the current editing state Vim startup tips\nCommand line parameters\nVim accepts various startup options and flags, similar to other terminal commands Common options: +{cmd}/-c cmd can execute Vim commands at startup vim -c \"set number\" file.txt (open file and display line numbers) vim +10 file.txt (jump to line 10) Pipe operations\nVim can be combined with pipes and redirections ls -l | vim -: Redirect command output to Vim for editing grep pattern file | vim -: Edit search results directly Resources\nman vim: Terminal documentation :help: Internal help system ",
   "wordCount" : "877",
   "inLanguage": "en",
-  "datePublished": "2025-03-01T00:00:00Z",
-  "dateModified": "2025-03-01T00:00:00Z",
+  "datePublished": "2025-03-10T00:00:00Z",
+  "dateModified": "2025-03-10T00:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://yuuniji.us.kg/en/posts/learn-vim/"
@@ -229,7 +229,7 @@ Once your editing speed reaches 50% of your original speed, it&rsquo;s time to f
         </svg>
       </span>
     </h1>
-    <div class="post-meta"><span title='2025-03-01 00:00:00 +0000 UTC'>March 1, 2025</span>&nbsp;·&nbsp;5 min&nbsp;|&nbsp;Translations:
+    <div class="post-meta"><span title='2025-03-10 00:00:00 +0000 UTC'>March 10, 2025</span>&nbsp;·&nbsp;5 min&nbsp;|&nbsp;Translations:
 <ul class="i18n_list">
     <li>
         <a href="https://yuuniji.us.kg/posts/learn-vim/">Zh</a>
@@ -466,15 +466,15 @@ Once your editing speed reaches 50% of your original speed, it&rsquo;s time to f
       <li><a href="https://yuuniji.us.kg/en/tags/vim/">Vim</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://yuuniji.us.kg/en/posts/roadmap-kubernetes/">
+  <a class="prev" href="https://yuuniji.us.kg/en/posts/learn-python/">
     <span class="title">« Prev</span>
     <br>
-    <span>Kubernetes Roadmap</span>
+    <span>Learn Python</span>
   </a>
-  <a class="next" href="https://yuuniji.us.kg/en/posts/roadmap-terraform/">
+  <a class="next" href="https://yuuniji.us.kg/en/posts/roadmap-kubernetes/">
     <span class="title">Next »</span>
     <br>
-    <span>Terraform Roadmap</span>
+    <span>Kubernetes Roadmap</span>
   </a>
 </nav>
 
