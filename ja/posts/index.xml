@@ -6,8 +6,22 @@
     <description>Recent content in 記事一覧 on 叶泽伟的博客</description>
     <generator>Hugo -- 0.144.2</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/ja/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>日本語ガイド</title>
+      <link>https://yuuniji.github.io/ja/posts/japanese/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/ja/posts/japanese/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;★はじめに&lt;/h2&gt;
+&lt;p&gt;　　この「日本語ガイド」をまとめた理由は以下の通りです：&lt;br&gt;
+　　一つ目、&lt;br&gt;
+　　大学を卒業しても英語が話せないので、日本語学習でも同じことが起こらないようにしたいと思っています :(&lt;br&gt;
+　　二つ目、&lt;br&gt;
+　　最近、仕事探しに苦労し、再び岐路に立たされています。これがきっかけで、日本で仕事を探したいと思うようになり、今日のこの記事を書くに至りました。&lt;br&gt;
+　　三つ目、&lt;br&gt;
+　　私はまだ若く、外の世界を見てみたいと思っています。この「日本語ガイド」を通じて、より多くの人に日本語をどのように学べば良いかを意識してもらいたいと考えています。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Pythonを学ぶ</title>
       <link>https://yuuniji.github.io/ja/posts/learn-python/</link>
@@ -64,13 +78,6 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;ヒント&lt;/strong&gt; ターミナルで &lt;code&gt;vimtutor&lt;/code&gt; を実行して、Vimの基本コマンドを学びましょう。この対話式チュートリアルは約30分で、基礎知識をカバーしています。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Vimの文法構造を理解することが、その強力な機能をマスターするための鍵です。少数のコマンドを学び、直感的に組み合わせることで、様々な操作を効率的に完了できます。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>日本語ガイド</title>
-      <link>https://yuuniji.github.io/ja/posts/japanese/</link>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/ja/posts/japanese/</guid>
-      <description>&lt;p&gt;この記事は日本語バージョンです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kubernetesのロードマップ</title>

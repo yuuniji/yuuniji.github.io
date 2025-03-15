@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yuuniji.github.io/en/posts/</loc>
-    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -21,10 +21,10 @@
                 />
   </url><url>
     <loc>https://yuuniji.github.io/en/tags/japanese/</loc>
-    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yuuniji.github.io/en/posts/japanese/</loc>
-    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -39,6 +39,45 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yuuniji.github.io/en/posts/japanese/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/en/tags/study-tips/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.github.io/en/tags/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/tags/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/en/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/en/posts/learn-python/</loc>
@@ -95,27 +134,6 @@
                 href="https://yuuniji.github.io/en/tags/python/"
                 />
   </url><url>
-    <loc>https://yuuniji.github.io/en/tags/study-tips/</loc>
-    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yuuniji.github.io/en/tags/</loc>
-    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/tags/"
-                />
-  </url><url>
     <loc>https://yuuniji.github.io/en/tags/vim/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -132,24 +150,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yuuniji.github.io/en/tags/vim/"
-                />
-  </url><url>
-    <loc>https://yuuniji.github.io/en/</loc>
-    <lastmod>2025-03-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/en/tags/kubernetes/</loc>
