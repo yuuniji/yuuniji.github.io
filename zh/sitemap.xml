@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yuuniji.github.io/tags/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -21,28 +21,28 @@
                 />
   </url><url>
     <loc>https://yuuniji.github.io/tags/%E6%97%A5%E8%AF%AD/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-1-resources/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <loc>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-2-kana/</loc>
+    <lastmod>2025-03-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-1-resources/"
+                href="https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-2-kana/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-1-resources/"
+                href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-2-kana/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-1-resources/"
+                href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-2-kana/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/posts/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -60,7 +60,7 @@
                 />
   </url><url>
     <loc>https://yuuniji.github.io/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -75,6 +75,24 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://yuuniji.github.io/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-1-resources/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-1-resources/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-1-resources/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-1-resources/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/tags/%E8%B5%84%E6%BA%90/</loc>
