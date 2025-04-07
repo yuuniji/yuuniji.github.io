@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://yuuniji.github.io/tags/python/</loc>
-    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
+    <loc>https://yuuniji.github.io/posts/</loc>
+    <lastmod>2025-04-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://yuuniji.github.io/en/tags/python/"
+                href="https://yuuniji.github.io/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://yuuniji.github.io/ja/tags/python/"
+                href="https://yuuniji.github.io/ja/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://yuuniji.github.io/tags/python/"
+                href="https://yuuniji.github.io/posts/"
                 />
   </url><url>
-    <loc>https://yuuniji.github.io/tags/vim/</loc>
-    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
+    <loc>https://yuuniji.github.io/</loc>
+    <lastmod>2025-04-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://yuuniji.github.io/en/tags/vim/"
+                href="https://yuuniji.github.io/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://yuuniji.github.io/ja/tags/vim/"
+                href="https://yuuniji.github.io/ja/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://yuuniji.github.io/tags/vim/"
+                href="https://yuuniji.github.io/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/tags/</loc>
@@ -75,78 +75,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-4-accent/"
-                />
-  </url><url>
-    <loc>https://yuuniji.github.io/posts/</loc>
-    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/posts/"
-                />
-  </url><url>
-    <loc>https://yuuniji.github.io/posts/learn-python/</loc>
-    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/posts/learn-python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/posts/learn-python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/posts/learn-python/"
-                />
-  </url><url>
-    <loc>https://yuuniji.github.io/posts/learn-vim/</loc>
-    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/posts/learn-vim/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/posts/learn-vim/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/posts/learn-vim/"
-                />
-  </url><url>
-    <loc>https://yuuniji.github.io/</loc>
-    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/tags/%E6%95%99%E6%9D%90/</loc>
@@ -439,6 +367,24 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://yuuniji.github.io/posts/roadmap-go/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/tags/python/</loc>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/tags/python/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/posts/roadmap-python/</loc>
