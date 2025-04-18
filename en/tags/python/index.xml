@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on 叶泽伟的博客</title>
+    <link>https://yuuniji.github.io/en/tags/python/</link>
+    <description>Recent content in Python on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.143.0</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.github.io/en/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-python/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-python/</guid>
+      <description>&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
+&lt;p&gt;Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://www.python.org/&#34;&gt;Python Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Python_%28programming_language%29&#34;&gt;Python - Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-write-your-first-python-3-program&#34;&gt;Tutorial Series: How to Code in Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://developers.google.com/edu/python&#34;&gt;Google’s Python Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.w3schools.com/python&#34;&gt;W3Schools - Python Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;video&lt;/em&gt; &lt;a href=&#34;https://www.youtube.com/watch?v=4M87qBgpafk&#34;&gt;Learn Python - Full Course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;feed&lt;/em&gt; &lt;a href=&#34;https://app.daily.dev/tags/python?ref=roadmapsh&#34;&gt;Explore top posts about Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;basics-syntax&#34;&gt;◇Basics Syntax&lt;/h3&gt;
+&lt;p&gt;Setup the environment for python and get started with the basics.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

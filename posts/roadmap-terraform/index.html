@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Terraform 路线图 | 叶泽伟的博客</title>
+<meta name="keywords" content="Terraform, 路线图">
+<meta name="description" content="1. 介绍
+Terraform 是由 HashiCorp 设计的一款强大工具，旨在帮助您安全高效地设置、管理和更新跨多个云提供商的基础设施。您可以将其视为一种使用简单代码格式定义云资源（如服务器、存储和网络）的方式。这使得自动化、共享和管理您的基础设施变得更加容易，确保一切保持一致，并可以根据需要快速复制或修改。">
+<meta name="author" content="">
+<link rel="canonical" href="https://yuuniji.github.io/posts/roadmap-terraform/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.73a6a10fdd1b97761d58094db273eda3a1b5578a8040b1149a997d7657d4f473.css" integrity="sha256-c6ahD90bl3YdWAlNsnPto6G1V4qAQLEUmpl9dlfU9HM=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://yuuniji.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yuuniji.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yuuniji.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://yuuniji.github.io/posts/roadmap-terraform/">
+<link rel="alternate" hreflang="en" href="https://yuuniji.github.io/en/posts/roadmap-terraform/">
+<link rel="alternate" hreflang="ja" href="https://yuuniji.github.io/ja/posts/roadmap-terraform/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://yuuniji.github.io/posts/roadmap-terraform/">
+  <meta property="og:site_name" content="叶泽伟的博客">
+  <meta property="og:title" content="Terraform 路线图">
+  <meta property="og:description" content="1. 介绍 Terraform 是由 HashiCorp 设计的一款强大工具，旨在帮助您安全高效地设置、管理和更新跨多个云提供商的基础设施。您可以将其视为一种使用简单代码格式定义云资源（如服务器、存储和网络）的方式。这使得自动化、共享和管理您的基础设施变得更加容易，确保一切保持一致，并可以根据需要快速复制或修改。">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-02T00:00:00+00:00">
+    <meta property="article:tag" content="Terraform">
+    <meta property="article:tag" content="路线图">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Terraform 路线图">
+<meta name="twitter:description" content="1. 介绍
+Terraform 是由 HashiCorp 设计的一款强大工具，旨在帮助您安全高效地设置、管理和更新跨多个云提供商的基础设施。您可以将其视为一种使用简单代码格式定义云资源（如服务器、存储和网络）的方式。这使得自动化、共享和管理您的基础设施变得更加容易，确保一切保持一致，并可以根据需要快速复制或修改。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "文章列表",
+      "item": "https://yuuniji.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Terraform 路线图",
+      "item": "https://yuuniji.github.io/posts/roadmap-terraform/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Terraform 路线图",
+  "name": "Terraform 路线图",
+  "description": "1. 介绍 Terraform 是由 HashiCorp 设计的一款强大工具，旨在帮助您安全高效地设置、管理和更新跨多个云提供商的基础设施。您可以将其视为一种使用简单代码格式定义云资源（如服务器、存储和网络）的方式。这使得自动化、共享和管理您的基础设施变得更加容易，确保一切保持一致，并可以根据需要快速复制或修改。\n",
+  "keywords": [
+    "Terraform", "路线图"
+  ],
+  "articleBody": "1. 介绍 Terraform 是由 HashiCorp 设计的一款强大工具，旨在帮助您安全高效地设置、管理和更新跨多个云提供商的基础设施。您可以将其视为一种使用简单代码格式定义云资源（如服务器、存储和网络）的方式。这使得自动化、共享和管理您的基础设施变得更加容易，确保一切保持一致，并可以根据需要快速复制或修改。\n官方 Terraform 官网 官方 Terraform 文档 视频 Terraform 初学者指南 订阅 探索关于 Terraform 的热门帖子 ◇什么是基础设施即代码？ 基础设施即代码（Infrastructure as Code，IaC）是 DevOps 和云计算中的一种实践，它通过机器可读的配置文件来管理和配置计算基础设施，而不是通过物理硬件配置或交互式配置工具。这种方法允许在基础设施部署中进行版本控制、自动化和一致性管理，使得环境的管理、扩展和复制变得更加容易，同时减少了人为错误的风险。\n文章 什么是基础设施即代码？为什么它很重要？ 文章 什么是基础设施即代码？ 视频 什么是基础设施即代码？ ◇什么是 Terraform？ Terraform 是由 HashiCorp 设计的一款强大工具，旨在帮助您安全高效地设置、管理和更新跨多个云提供商的基础设施。您可以将其视为一种使用简单代码格式定义云资源（如服务器、存储和网络）的方式。这使得自动化、共享和管理您的基础设施变得更加容易，确保一切保持一致，并可以根据需要快速复制或修改。\n官方 什么是 Terraform？ 文章 什么是 Terraform？ 视频 什么是 Terraform？2 分钟了解 Terraform ◇Terraform 的优势 使用 Terraform 带来了诸多好处。它允许您将基础设施定义为代码（IaC），使其具有可读性、版本控制和可共享性。其多云支持意味着您可以跨多个云提供商和本地环境一致地管理资源。通过自动化基础设施的配置和管理，Terraform 减少了手动错误并加快了部署速度。版本控制集成确保您可以跟踪更改、在需要时回滚，并与团队成员有效协作。Terraform 使用模板和模块确保配置的一致性和跨项目和环境的可重用性，而其状态管理功能则跟踪现有资源以实现高效更新。\n官方 Terraform 的用例 文章 基础设施即代码的 9 个 Terraform 用例 视频 使用 Terraform 的好处是什么？ ◇CaC 与 IaC CaC（配置即代码）和 IaC（基础设施即代码）都是管理基础设施资源的方式，但它们关注的重点不同。CaC 涉及设置和管理服务器内的软件和设置，如用户设置和应用程序配置。CaC 工具的示例包括 Ansible 和 Puppet。另一方面，IaC 则是管理底层基础设施，如虚拟机、网络和存储。IaC 工具的示例包括 Terraform 和 AWS CloudFormation。因此，IaC 负责设置环境，而 CaC 确保该环境中的软件正常运行。\n文章 IaC 与 CaC 视频 Ansible 与 Terraform：有什么区别？ ◇安装 Terraform 要安装 Terraform，您需要从 Terraform 官方网站下载适用于您操作系统的安装包。下载后，解压缩并将可执行文件移动到系统 PATH 中包含的目录中。这样，您就可以从终端运行 Terraform 命令。有关更详细的安装说明，请参阅以下链接。\n官方 安装 Terraform 官方 安装 Terraform CLI 视频 在 Ubuntu 上安装 Terraform 视频 在 MacOS 上安装 Terraform 视频 在 Windows 10/11 上安装 Terraform 2. HashiCorp 配置语言 (HCL) HashiCorp 配置语言 (HCL) 是由 HashiCorp 构建的一种配置语言，用于配置 HashiCorp 生态系统中的产品。HCL 以其人类可读的风格设计，旨在在通用配置语言（如 JSON 或 YAML）和高级脚本语言之间取得平衡。在 Terraform 路线图中，HCL 是编写 Terraform 配置文件的主要语言，因此它成为以描述性方式定义和提供数据中心基础设施的基础部分。\n官方 Terraform 语言文档 开源 HCL 仓库 ◇什么是 HCL？ HCL，即 HashiCorp 配置语言，是一种用于 DevOps 工具的人类可读语言。它用于以清晰且可管理的方式编写基础设施管理和服务编排代码。包括 Terraform 在内的多个 HashiCorp 产品使用 HCL 作为其主要配置语言。Terraform 使用 HCL 来高效地配置和管理云资源。其清晰的语法和结构有助于创建与 Terraform 路线图目标一致的资源模块和配置，从而为基础设施即代码提供一个无缝、用户友好的平台。\n官方 语法 - 配置语言 | Terraform 开源 hashicorp/hcl ◇基本语法 HashiCorp 配置语言 (HCL) 的基本语法包括定义块、属性和表达式。块是基本单元，如 resource、module 和 provider，由关键字标识并用花括号括起来。属性是块内的键值对，其中键是字符串，值可以是字符串、数字或其他数据类型。表达式允许嵌入变量、函数和对其他资源的引用，从而实现动态配置。\n开源 HCL 原生语法规范 3. 项目初始化 Terraform 中的项目初始化涉及设置必要的配置文件和目录结构，以便以代码形式管理基础设施。terraform init 命令在此过程中至关重要，因为它初始化工作目录，下载所需的提供者插件，并设置用于存储状态文件的后端配置。此命令确保项目正确配置并准备好执行后续的 Terraform 命令，为高效且有条理的基础设施管理奠定基础。\n官方 Init 命令 官方 初始化 Terraform 配置 文章 Terraform Init 视频 学习 Terraform：Init 命令 4. 提供者（Providers） Terraform 提供者是用于与各种外部 API 进行交互的插件。它们通过定义资源类型和数据源来管理资源的生命周期。每个提供者都需要配置，通常包括认证信息和端点 URL。提供者在 provider 块中指定，单个 Terraform 项目可以使用多个提供者来管理不同平台的资源。\n官方 提供者文档 文章 理解 Terraform 提供者 视频 什么是 Terraform 提供者以及如何使用它们？ ◇Terraform 注册表（Terraform Registry） Terraform 注册表是一个集中式的仓库，用于发现、共享和使用 Terraform 模块和提供者。它允许用户浏览和下载预构建的配置，从而快速集成最佳实践。注册表支持版本控制，确保一致的部署，并为每个模块和提供者提供详细的文档。用户还可以将自己的模块发布到注册表中，促进社区协作和重用。\n官方 Terraform 注册表 文章 Terraform 注册表指南 视频 Terraform 注册表中的提供者和模块 ◇配置提供者（Configuring Providers） 在 Terraform 中配置提供者涉及在 Terraform 配置文件的 provider 块中指定所需的提供者。该块包括认证凭证、区域和其他提供者特定参数等设置。必须使用 terraform init 初始化提供者以下载并安装必要的插件。通过为提供者设置别名，可以管理多个配置，从而在同一提供者中跨不同环境或账户管理资源。\n官方 提供者概述 文章 如何使用 Terraform 提供者 ◇版本控制（Versions） 在 Terraform 中指定提供者版本可确保在不同环境中保持一致和可预测的行为。不应在提供者块中使用 version 元参数（该参数在 Terraform 0.13 中已被弃用并移除），而应在 required_providers 块中定义提供者版本约束。这种方法可以防止由于提供者更新导致的意外更改或兼容性问题，从而提高基础设施管理的稳定性和可靠性。它允许您控制提供者更新的应用时间和方式，确保您的基础设施代码在预期的提供者功能下运行。\n官方 要求提供者 5. 资源（Resources） 资源代表您基础设施的组件，例如虚拟机、存储桶、数据库或虚拟私有云。在成功初始化项目并声明所需的提供者后，您可以访问提供者资源。\n官方 资源块 视频 使用 Terraform 资源定义基础设施 ◇资源行为（Resource Behavior） 资源行为涵盖了如何根据 Terraform 文件中指定的配置来管理、创建、更新和销毁资源。每个资源块指定所需的属性，Terraform 确保现实世界的基础设施与这些规范相匹配。如果首次编写配置，定义的资源将仅存在于配置中，直到应用后才会反映在目标平台上。应用配置时，Terraform 会生成一个执行计划，确定达到所需状态所需的操作，例如创建新资源、更新现有资源或删除不再需要的资源。\n官方 行为 文章 Terraform 资源语法、行为和状态 ◇资源生命周期（Resource Lifecycle） 每个 Terraform 资源都遵循生命周期：创建、更新或重新创建、销毁。执行 terraform apply 时，每个资源：\n存在于配置中但不在状态中的资源将被创建 存在于配置和状态中且已更改的资源将被更新 存在于配置和状态中且已更改但由于 API 限制无法更新的资源将被销毁并重新创建 存在于状态中但不再存在于配置中的资源将被销毁 可以使用 lifecycle 元参数在一定程度上修改生命周期行为。\n官方 Terraform 如何应用配置 官方 生命周期元参数 ◇元参数（Meta Arguments） Terraform 资源中的元参数提供了对资源管理和配置内交互的额外控制。\n文章 Terraform 中的元参数 文章 Terraform 元参数 视频 资源元参数 depends_on Terraform 中的 depends_on 元参数用于显式声明资源之间的依赖关系，确保一个或多个资源仅在指定的依赖资源成功应用后才被创建或销毁。这对于管理 Terraform 隐式依赖分析无法自动检测到的资源依赖关系至关重要。通过使用 depends_on，您可以强制执行资源创建、修改或销毁的正确顺序，这在某些资源必须存在或配置后才能有效管理其他资源的复杂基础设施设置中特别有用。此元参数增强了 Terraform 配置的可靠性和可预测性。\n官方 Terraform 文档 - depends_on 文章 如何使用 Terraform depends_on 视频 如何使用 Terraform depends_on 元标签？ count Terraform 中的 count 元参数允许您指定要创建的特定资源的实例数量。通过将 count 设置为数值，Terraform 会动态生成多个资源实例，索引从 0 到 count-1。这对于管理需要多个相同或相似资源的基础设施非常有用，例如创建多个虚拟机或存储桶。使用 count，您可以通过根据变量或表达式设置值来有条件地创建资源，从而使您的配置更加灵活并减少冗余。每个资源实例都可以使用 count.index 值唯一引用，从而实现对每个资源实例的更细粒度控制和自定义。\n注意：您不能在同一资源上同时声明 count 和 for_each。\n官方 Terraform 文档 - count 文章 Terraform 示例 - count 视频 使用 count 在 Terraform 中创建条件块 for_each Terraform 中的 for_each 元参数允许您基于集合或映射创建多个资源实例。与 count 不同，for_each 使用简单的整数，而 for_each 允许更细粒度和动态的资源创建，因为每个实例都与给定集合或映射中的特定键值对相关联。此元参数特别适用于创建具有从集合或映射的键和值派生的唯一配置的资源。通过利用 for_each，您可以更有效地管理资源集合，确保每个实例都可以根据其特定键进行单独引用和自定义。\n注意：您不能在同一资源上同时声明 for_each 和 count。\n官方 Terraform 文档 - for_each 文章 Terraform 示例 - for_each 视频 Terraform 循环 provider Terraform 中的 provider 元参数指定资源使用的提供者配置，覆盖基于资源类型名称的默认提供者选择。这在需要同一提供者的多个配置的情况下非常有用，例如跨不同区域或环境管理资源。通过设置 provider 参数，您可以确保资源使用指定的提供者设置（由其别名标识），从而增强多提供者或多区域部署中的控制和灵活性。此元参数对于精确指导 Terraform 如何与底层基础设施提供者交互至关重要。\n官方 Terraform 文档 - provider 文章 Terraform 示例 - provider lifecycle Terraform 中的 lifecycle 元参数自定义资源在创建、更新和删除期间的行为。它包括诸如 create_before_destroy 等设置，确保在销毁旧资源之前创建新资源，从而防止停机。prevent_destroy 保护资源免遭意外删除，ignore_changes 指定在更新期间忽略的属性，允许外部修改而不触发 Terraform 更改。这些选项提供了对资源管理的细粒度控制，确保以最小的中断和精确的资源生命周期处理来维护基础设施的所需状态。\n官方 Terraform 文档 - lifecycle 文章 Terraform 资源生命周期 文章 理解生命周期块 6. 变量（Variables） Terraform 使用变量使配置更加灵活和可重用。变量可以在 .tf 文件中声明，并通过各种方法分配值，包括默认值、命令行标志、环境变量或单独的 .tfvars 文件。它们支持多种数据类型，例如字符串、数字、布尔值、列表和映射。可以使用 var 前缀在整个配置中引用变量。该系统使基础设施即代码更加动态，并适应不同的环境或用例。\n官方 输入变量 文章 如何使用 Terraform 变量 视频 学习如何使用 Terraform 变量 ◇输入变量（Input Variables） Terraform 输入变量是模块的参数，使用 variable 块声明。它们支持多种数据类型、默认值和描述。用户在调用模块或运行 Terraform 时提供值。通过 var. 语法访问，输入变量使基础设施模板灵活且可重用，适应各种部署场景。它们可以标记为敏感以确保安全，通常定义在 variables.tf 文件中。\n官方 定义输入变量 文章 Terraform 输入和输出变量解释 视频 Terraform 基础：输入变量 ◇类型约束（Type Constraints） Terraform 变量类型约束指定输入变量允许的数据类型。它们包括原始类型（字符串、数字、布尔值）、复杂类型（列表、集合、映射、对象）和 any 用于未指定类型。约束可以强制执行特定结构、嵌套类型或值范围。它们在 variable 块的 type 参数中定义，有助于及早捕获错误并确保在整个配置中正确使用变量。\n官方 变量类型约束 视频 Terraform 类型约束 ◇变量定义文件（Variable Definition File） Terraform 的 variables.tf 文件集中了模块或配置的输入变量声明。它通常包含多个 variable 块，每个块定义一个输入变量及其名称、类型约束、可选的默认值和描述。该文件作为配置中使用的所有变量的单一参考点，增强了可读性和可维护性。虽然不是强制性的，但使用 variables.tf 是组织和记录模块预期输入的常见做法。\n官方 参数化您的配置 视频 您应该使用 tfvars 而不是 Terraform 中的变量 ◇本地值（Local Values） 本地值可以理解为分配给任何表达式的名称，以便在您的 Terraform 模块中通过名称多次直接使用它。本地值被称为 locals，可以使用 locals 块声明。本地值可以是字面常量、资源属性、变量或其他本地值。本地值有助于定义您需要在模块中多次使用的表达式或值，因为它允许通过更新本地值轻松更新值。可以使用 local 参数访问本地值，如 local.。\n官方 本地值 文章 Terraform 本地值 ◇环境变量（Environment Variables） 环境变量可用于自定义 Terraform 的各个方面。您可以设置这些变量以更改 Terraform 的默认行为，例如增加详细程度、更新日志文件路径、设置工作区等。环境变量是可选的，Terraform 默认不需要它们。\n官方 环境变量 ◇验证规则（Validation Rules） 验证规则可用于为变量指定自定义验证。添加验证规则的目的是使变量符合规则。可以使用 validation 块添加验证规则。\n官方 自定义验证规则 7. 输出 Terraform 输出暴露了配置或模块中的选定值，使用户或其他模块可以访问这些值。输出块通常在 outputs.tf 文件中定义，可以引用资源属性或其他计算值。输出在应用操作后显示，可以使用 terraform output 命令查询，并且在模块之间或与外部系统传递信息时至关重要。\n官方 输出值 文章 Terraform 输出值 视频 4 分钟学会 Terraform 输出 ◇前置条件 Terraform 前置条件是资源或数据块中的声明性检查，用于在 Terraform 尝试创建或修改资源之前验证配置或状态。它们使用条件参数来指定逻辑测试，并使用 error_message 参数来自定义失败通知。前置条件有助于及早发现配置错误，执行业务规则，并确保在资源操作之前满足依赖关系。\n官方 自定义条件检查 视频 在 Terraform 中使用前置条件和后置条件块 ◇敏感输出 Terraform 敏感输出是用于保护 Terraform 配置中敏感信息的功能。当输出被标记为敏感时，Terraform 会在控制台输出中隐藏其值，显示为 而不是实际值。这对于保护密码或 API 密钥等敏感数据至关重要。\n要将输出标记为敏感，请在输出块中使用 sensitive 参数：\noutput \"database_password\" { value = aws_db_instance.example.password sensitive = true } 敏感输出仍然可以通过编程方式访问，并且以明文形式写入状态文件，但其值在日志和控制台中被隐藏，以防止意外暴露。此功能有助于在与团队成员共享 Terraform 配置或输出时或在 CI/CD 管道中保持安全性。\n官方 在 CLI 输出中隐藏值 文章 如何在 Terraform 中输出敏感数据 ◇输出语法 Terraform 输出语法用于定义在应用 Terraform 配置后应可访问的值。基本语法如下：\noutput \"name\" { value = expression description = \"Optional description\" sensitive = bool } name 是输出的唯一标识符。value 是其结果将被输出的表达式。description 是可选的，用于提供上下文。sensitive 是一个布尔标志，用于标记敏感数据。\n官方 Hashicorp 输出教程 官方 声明输出值 文章 Terraform 输出值：完整指南与示例 文章 Terraform：从模块输出字段 8. 格式化与验证 Terraform 的 format 和 validate 是两个用于维护干净且正确的 Terraform 配置的基本命令：\nterraform fmt 自动将 Terraform 配置文件格式化为一致的样式。它调整缩进、对齐参数并排序块和参数。此命令有助于在团队项目中保持代码的可读性和一致性。\nterraform validate 检查 Terraform 配置的语法和内部一致性。它验证配置在语法上是否有效，引用是否正确，以及属性名称和类型是否适当。此命令在开发过程中及早捕获错误，避免在尝试对基础设施应用更改时出现问题。\n官方 Terraform 验证 - 文档\n官方 Terraform 格式化 - 文档\n文章 验证、格式化、检查、保护和测试 Terraform IaC\n文章 Terraform 验证命令 – 本地验证配置\n◇terraform fmt terraform fmt 是 Terraform 中的一个命令，用于自动将配置文件格式化为一致的样式。它调整缩进、对齐参数并按字母顺序排序块和参数。该命令会重写当前目录及其子目录中的 Terraform 配置文件（.tf 和 .tfvars）。它用于在项目和团队之间保持一致的编码风格，提高可读性并减少合并冲突。该命令可以使用 -recursive 选项来格式化子目录中的文件，使用 -diff 来显示差异，或使用 -check 来验证格式而不进行更改。定期使用 terraform fmt 被认为是 Terraform 开发工作流程中的最佳实践。\n官方 Terraform fmt 文档 文章 使用 Terraform fmt 命令格式化您的 Terraform 代码 视频 如何自动格式化 Terraform 代码 ◇terraform validate validate 命令帮助您在部署之前确保您的 Terraform 代码在语法上是正确的。这有助于防止由于缺少属性或不正确的依赖关系而导致的配置错误，从而节省时间、提高效率并降低成本。\n文章 Terraform 验证示例 ◇TFLint TFLint 是一个第三方的、可扩展的 Terraform 代码检查工具。它对 Terraform 配置进行静态分析，以检测潜在错误、强制执行最佳实践并保持代码一致性。主要功能包括：检查 terraform validate 可能遗漏的潜在错误，强制执行命名约定和代码样式规则，识别已弃用的语法或资源类型，并提供云提供商特定的检查。\nTFLint 可通过 .tflint.hcl 文件进行配置，并支持自定义规则。它可以集成到 CI/CD 管道中以进行自动化的代码质量检查。虽然 TFLint 不是官方的 Terraform 工具，但它在 Terraform 社区中被广泛使用，以补充内置的验证工具，并提高基础设施即代码项目中的整体代码质量和可靠性。\n开源 TFLint 文档 文章 什么是 TFLint 以及如何检查您的 Terraform 代码 视频 快速技术 - TFLint 9. 部署 部署由 Terraform 定义的基础设施涉及以下几个关键步骤：\n使用 terraform init 初始化工作目录\n使用 terraform plan 查看变更\n使用 terraform apply 应用配置\n官方 Terraform 核心工作流程\n◇terraform apply terraform apply 是用于实现 Terraform 配置文件中定义的变更的命令。它会创建、更新或删除指定的基础设施资源，以匹配期望的状态。在做出更改之前，它会显示类似于 terraform plan 的计划，并提示确认，除非使用了 -auto-approve 标志。apply 会更新状态文件以反映当前的基础设施状态，使 Terraform 能够随着时间的推移跟踪和管理资源。它会处理资源之间的依赖关系，并按正确的顺序创建它们。\n课程 应用 Terraform 配置 官方 Terraform Apply 文档 文章 Terraform Apply 命令：选项、示例和最佳实践 ◇terraform plan terraform plan 是一个创建执行计划的命令，显示 Terraform 将对基础设施进行的更改。它会将当前状态与配置文件中定义的期望状态进行比较，并输出要创建、修改或删除的资源的详细列表。重要的是，它不会对基础设施进行任何实际更改，而是帮助在应用更改之前识别潜在问题。计划可以保存到文件中以供以后执行或审查。此命令对于在实施之前审查更改至关重要，尤其是在复杂环境中，并且通常用于代码审查和 CI/CD 管道中以验证提议的基础设施修改。虽然 terraform plan 提供了预览，但值得注意的是，由于外部因素或 API 限制，它不能总是预测每一个更改。\n课程 创建 Terraform 计划 官方 Terraform Plan 文档 文章 Terraform plan 命令及其工作原理 视频 Terraform - Terraform Plan 10. 清理 使用 Terraform 后的清理工作涉及删除创建的基础设施资源并管理相关的状态。主要的命令是 terraform destroy，它会删除当前 Terraform 配置管理的所有资源。它会显示一个销毁计划，并在继续之前要求确认。销毁后，如果不再需要状态文件，应将其删除或存档。对于部分清理，可以使用 terraform state rm 从状态中删除特定资源，然后运行 terraform apply 以删除它们。确保所有资源都被正确删除以避免不必要的成本和安全风险至关重要。在共享或生产环境中，始终仔细审查销毁计划，以防止意外删除关键资源。\n文章 如何销毁 Terraform 资源 ◇terraform destroy terraform destroy 是一个用于删除由 Terraform 配置管理的所有资源的命令。它会创建一个删除所有资源的计划，并在执行之前提示确认。此命令对于清理临时环境或停用整个基础设施非常有用。它会按照依赖关系的相反顺序删除资源，以确保正确拆除。虽然功能强大，但应谨慎使用 terraform destroy，尤其是在共享或生产环境中，因为如果不仔细管理，可能会导致数据丢失。它通常与 terraform state 命令结合使用，以更精细地控制资源删除。销毁后，Terraform 会更新状态文件以反映更改，但如果项目完全停用，则管理或删除此文件非常重要。\n课程 销毁基础设施 官方 Terraform Destroy 文档 文章 如何销毁 Terraform 资源 11. 状态 Terraform 状态是 Terraform 中的一个关键概念，用于跟踪您管理的基础设施的当前状态。它通常存储在一个名为 terraform.tfstate 的文件中，该文件将现实世界的资源映射到您的配置。此状态允许 Terraform 确定实现所需配置所需的更改。它包含敏感信息，应安全存储，通常存储在远程后端（如 S3 或 Terraform Cloud）中。可以使用 terraform state 命令来操作状态，例如在状态之间移动资源或从管理中移除资源。适当的状态管理对于协作工作至关重要，确保团队成员之间的一致性，并使 Terraform 能够准确地规划和应用对基础设施的更改。\n官方 状态 文章 Terraform 状态的目的 视频 管理 Terraform 状态文件 ◇远程状态 Terraform 远程状态指的是将状态文件存储在共享的集中位置，而不是本地。这种方法支持团队协作，提高安全性，并确保状态一致性。常见的远程后端包括云存储服务（如 AWS S3、Azure Blob Storage）或托管服务（如 Terraform Cloud）。远程状态允许多个团队成员安全地在同一基础设施上工作，防止状态文件丢失，并提供锁定机制以避免并发修改。它在 Terraform 配置的后端块中进行配置。远程状态还可以用于在不同 Terraform 配置之间共享输出，从而实现模块化基础设施设计。虽然初始设置较为复杂，但远程状态被认为是生产环境和基于团队的 Terraform 工作流程的最佳实践。\n官方 远程状态 官方 terraform_remote_state 数据源 视频 Terraform 远程状态后端解释 ◇状态锁定 Terraform 状态锁定是一种机制，用于防止对同一状态文件的并发修改，避免潜在的冲突和数据损坏。启用后，Terraform 在执行可能修改状态的操作（如 apply 或 destroy）之前会获取锁。如果锁不可用，Terraform 会根据配置等待或失败。状态锁定由许多后端类型自动支持，包括带有 DynamoDB 的 S3、Azure Blob Storage 和 Terraform Cloud。对于团队环境来说，状态锁定至关重要，因为多个用户或自动化流程可能会尝试同时进行更改。虽然对数据完整性至关重要，但实施适当的锁管理以防止锁阻塞操作也很重要。\n官方 状态 - 锁定 官方 状态存储和锁定 视频 Terraform - 状态锁定 ◇导入现有资源 Terraform 状态导入是一个命令，用于将现有资源纳入 Terraform 管理。它允许您将 Terraform 之外创建的资源（例如手动创建或由其他工具创建）添加到 Terraform 状态中。该命令接受两个主要参数：Terraform 资源地址和现实世界的资源标识符。执行时，它会将资源添加到状态文件中，而不会修改实际的基础设施。这对于在已有资源的环境中采用 Terraform 或从状态与现实不一致的情况中恢复非常有用。导入后，您需要在 Terraform 文件中编写相应的配置以匹配导入的资源。\n在 Terraform v1.5.0 及更高版本中，您还可以在任何 Terraform 配置文件中创建 import 块。\n官方 Terraform 导入命令 文章 Terraform 导入：什么是导入以及如何使用 视频 探索 Terraform 1.5 中的导入块 ◇拆分状态文件 拆分 Terraform 状态文件涉及将大型状态拆分为更小、更易管理的部分。这通常通过使用 Terraform 工作区或将资源组织到具有自己状态文件的单独模块中来完成。此过程有助于管理复杂的基础设施，提高性能，并允许更细粒度的访问控制。要拆分现有状态，可以使用 terraform state mv 在状态之间移动资源，或在新配置中使用 terraform state rm 后跟 terraform import。这种方法对于大型项目非常有益，使团队能够独立处理基础设施的不同部分。然而，它需要仔细规划以管理拆分状态之间的依赖关系。适当的状态拆分可以带来更高效的工作流程、更轻松的故障排除以及更好地与大规模 Terraform 部署中的组织结构保持一致。\n文章 如何拆分状态文件 文章 介绍 terraform-state-split 视频 使用多个状态组织 Terraform ◇版本控制 Terraform 状态版本控制指的是随着时间的推移维护状态文件的多个版本的做法。虽然 Terraform 本身不提供内置的版本控制，但通常通过支持版本控制的后端配置（如启用版本控制的 Amazon S3 或 Terraform Cloud）来实现。这种方法允许团队跟踪更改，在需要时回滚到以前的状态，并维护基础设施修改的审计跟踪。版本控制有助于从意外的状态损坏或删除中恢复，并了解基础设施随时间的演变。它被认为是生产环境的最佳实践，增强了灾难恢复能力，并提供了对基础设施变化的洞察。\n官方 状态版本 API ◇敏感数据 Terraform 状态文件通常包含敏感数据，如密码、API 密钥和其他在资源配置中使用的机密信息。这些数据以明文形式存储在状态文件中，如果文件被泄露，将带来安全风险。为了缓解这一问题，Terraform 提供了几种方法：将变量标记为敏感以防止它们出现在日志中，使用加密的远程后端存储状态，实施严格的状态文件访问控制，以及利用外部机密管理系统。将状态文件视为敏感文件并相应地保护它们至关重要。对于高度敏感的环境，一些团队选择将某些机密完全存储在 Terraform 之外，在运行时注入它们。定期审计状态文件以查找敏感信息并实施适当的安全措施对于维护 Terraform 部署中基础设施机密的机密性至关重要。\n官方 状态中的敏感数据 官方 处理状态中的敏感值 视频 Terraform — 保护敏感数据 12. 状态管理的最佳实践 Terraform 状态管理的最佳实践侧重于安全性、一致性和协作。\n将状态文件远程存储在加密的、版本控制的后端（如 S3 或 Terraform Cloud）中，以支持团队访问并增强安全性。 实施状态锁定以防止并发修改。为不同环境使用工作区或单独的状态文件。 定期备份状态文件并启用版本控制以实现回滚功能。 避免直接在状态中存储敏感数据；相反，使用机密管理工具。 将状态文件与 Terraform 配置分开存储在版本控制中。 使用状态子命令进行维护和故障排除。实施访问控制以限制状态文件的访问。 定期审查并清理状态中未使用的资源。 这些实践有助于维护安全、高效且可管理的 Terraform 工作流程，特别是在团队环境和复杂的基础设施中。\n文章 管理 Terraform 状态 – 最佳实践与示例 文章 Terraform 状态文件管理的最佳实践 视频 管理 Terraform 状态文件 - 您有哪些选择？ 13. 检查/修改状态 Terraform 提供了检查和修改状态的工具，使得可以在不改变实际基础设施的情况下管理跟踪的资源。这些功能允许用户以人类可读的格式查看当前状态，列出状态中的所有资源，并获取特定资源的详细信息。对于状态修改，Terraform 提供了将资源在状态中移动或移动到不同状态文件的方法，从状态中移除资源而不删除实际资源，以及更新状态以匹配实际基础设施。这些工具对于调和 Terraform 状态与实际基础设施之间的差异以及管理不同 Terraform 配置或工作区中的资源至关重要。然而，状态修改应谨慎执行，因为不当的更改可能导致状态与实际基础设施之间的不一致。\n官方 检查状态 文章 如何管理 Terraform 状态：逐步指南 ◇graph terraform graph 命令生成配置或执行计划的视觉表示。它以 DOT 格式创建资源及其依赖关系的图，可以使用 Graphviz 等工具将其转换为图像。这种视觉辅助工具帮助开发人员理解复杂的资源关系，识别资源排序中的潜在问题，并可视化其基础设施的整体结构。该图可以显示 Terraform 配置的不同方面，包括资源依赖关系、数据流和模块关系。虽然主要用于调试和文档目的，但该命令在向利益相关者展示基础设施设计或用于教育目的时也非常有价值。在大型复杂项目中，理解资源相互依赖关系可能具有挑战性，因此该命令特别有用。\n官方 graph 命令 开源 Graphviz 文章 如何使用 Terraform Graph 命令生成图像 视频 Terraform — 资源图 ◇show terraform show 命令以人类可读的格式显示当前状态或保存的计划文件。当不带参数使用时，它会显示当前管理的基础设施状态，包括所有资源及其属性。如果给定保存的计划文件的路径，它会显示应用该计划时将进行的更改。该命令对于检查基础设施的当前状态、验证特定资源的详细信息或在应用之前审查计划更改非常有用。它提供了对 Terraform 管理资源的全面概述，对于调试、审计和理解基础设施的当前状态非常有价值。输出包括敏感信息（如果存在），因此在非安全环境中共享或显示结果时应小心。\n官方 Terraform show 官方 Terraform state show ◇list terraform list 命令用于显示 Terraform 状态中的资源列表。它提供了当前由 Terraform 管理的所有资源的快速概览。在处理大型或复杂的基础设施时，该命令特别有用，允许开发人员快速查看哪些资源由 Terraform 控制。输出包括每个管理资源的资源类型和名称，便于识别基础设施的特定元素。它通常与其他状态操作命令结合使用，以验证状态内容或识别资源以进行进一步检查或修改。\n官方 Terraform State List ◇output terraform output 命令用于从 Terraform 状态中提取输出变量的值。它允许您在应用后查看 Terraform 配置中定义的输出值。该命令对于检索有关基础设施的信息（如 IP 地址、资源 ID 或计算值）非常有用，这些信息可以用于脚本或传递给其他系统。当不带参数运行时，它会显示所有输出。您可以指定特定的输出名称以检索特定值。该命令支持不同的输出格式，包括 JSON，便于与其他工具或工作流集成。在 CI/CD 管道中或当 Terraform 作为更大自动化过程的一部分使用时，该命令特别有价值。\n官方 Terraform output 命令 文章 Terraform output ◇rm terraform state rm 命令用于从 Terraform 状态中移除资源而不销毁实际基础设施。当您希望停止使用 Terraform 管理某个资源而不删除它，或者需要将资源移动到不同的状态文件时，该命令非常有用。它接受一个或多个资源地址作为参数，指定要从状态中移除的资源。移除后，Terraform 将不再跟踪或管理这些资源，但它们将继续存在于您的基础设施中。应谨慎使用此命令，因为它可能导致 Terraform 配置与实际基础设施状态之间的不一致。\n官方 Terraform rm 命令 文章 Terraform State Rm：如何从状态文件中移除资源 视频 如何从 Terraform 状态文件中移除资源 | terraform state rm 示例 ◇mv terraform state mv 命令用于在 Terraform 状态内或不同状态文件之间移动资源。它允许在不修改实际基础设施的情况下重新组织状态。该命令在重构 Terraform 配置、在模块之间移动资源或将大型状态文件拆分为较小的文件时非常有用。它接受两个参数：资源的源地址和目标地址。该命令更新对移动资源的所有引用，确保未来的操作正确针对新位置的资源。在重构复杂项目或适应不断变化的组织需求时，此功能特别有价值。然而，应谨慎使用，因为错误的移动可能导致状态不一致。\n官方 Terraform State mv 官方 移动资源 视频 Terraform — Terraform State MV ◇-replace 选项在 apply 中 Terraform 中的 -replace 标志与 apply 或 plan 命令一起使用，通过污染资源来强制替换特定资源。该标志指示 Terraform 删除并重新创建指定的资源，而不是就地更新它。当您需要完全重新生成资源时（例如某些属性在创建后无法修改时），该标志非常有用。通常当 Terraform 无法自动检测到资源需要替换时，或者当您希望强制替换以进行测试或故障排除时，会使用该标志。虽然功能强大，但应谨慎使用该标志，特别是在有状态资源上，因为它可能导致数据丢失。通常在就地更新不足以实现资源的所需配置状态时使用。\n官方 强制重新创建资源 文章 Terraform Taint, Untaint, Replace – 如何使用（示例） 视频 Terraform Taint 实际上不好 - 使用 Replace 代替 ◇state pull / push terraform state pull 和 terraform state push 命令用于管理远程后端中的 Terraform 状态。pull 命令从配置的后端检索当前状态并将其输出到 stdout，允许检查或备份远程状态。它对于调试或执行手动状态操作非常有用。\npush 命令则相反，它将本地状态文件上传到配置的后端，覆盖现有的远程状态。通常用于恢复备份或手动调和状态差异。应谨慎使用这两个命令，特别是 push，因为它们可能会覆盖重要的状态信息。\n官方 命令 - State pull 官方 命令 - State push 文章 使用 Terraform State Push / Pull 迁移工作区状态 ◇state replace-provider Terraform 中的 state replace-provider 命令用于更新状态文件中的提供者信息而不改变实际基础设施。该命令在从一个提供者迁移到另一个提供者时特别有用，或者在更新到涉及提供者命名空间更改的提供者新主要版本时非常有用。它允许用户更改状态文件中与资源关联的提供者，有效地告诉 Terraform 在未来的操作中使用不同的提供者来管理这些资源。该命令对于在提供者过渡或升级期间保持状态一致性至关重要，特别是在大规模基础设施中。虽然它不会修改实际资源，但它会更新 Terraform 对哪个提供者应被用于管理这些资源的理解，从而在不要求资源重新创建的情况下促进提供者的顺利迁移。\n官方 命令 - state replace-provider ◇state force-unlock Terraform 中的 state force-unlock 命令用于手动释放卡住的状态锁。状态锁定是一种防止对同一状态进行并发操作的机制，但有时由于崩溃或网络问题，锁可能无法正确释放。该命令允许管理员强制移除锁，从而使进一步的 Terraform 操作得以继续。应极其谨慎地使用该命令，因为如果多个用户同时尝试修改状态，可能会导致状态损坏。在使用 force-unlock 之前，必须确保没有其他 Terraform 操作正在进行。该命令通常是解决锁定问题的最后手段，只有在确定锁被错误持有且没有冲突操作正在进行时才能使用。\n官方 命令: force-unlock 文章 Terraform force-unlock 命令 视频 Terraform — Force Unlock 14. 模块 Terraform 模块是封装了一组资源、其配置及其相互连接的可重用组件。它们允许将 Terraform 代码组织成逻辑上独立的单元，这些单元可以在不同项目之间或同一项目内共享和重用。模块促进了代码的可重用性、可维护性和基础设施部署的一致性。它们可以接受输入变量、生成输出值，并且可以嵌套在其他模块中。通过使用模块，团队可以创建标准化的基础设施组件，强制执行最佳实践，并简化复杂的配置。模块可以从本地目录、版本控制系统或 Terraform Registry 等公共注册表中获取。有效使用模块可以显著减少代码重复，改善基础设施管理，并实现可扩展、可维护的 Terraform 配置。\n官方 模块概述 - 配置语言 | Terraform 官方 Terraform 模块 官方 模块 - Terraform Registry ◇根模块与子模块 在 Terraform 中，根模块和子模块指的是配置中模块层次结构的不同级别。根模块是执行 Terraform 的工作目录中的主要配置文件集。它是 Terraform 项目的入口点，通常调用其他模块。子模块则是被根模块或其他模块调用的模块。它们是封装特定资源配置的可重用组件。根模块定义了整体架构，并通过组合子模块来创建完整的基础设施。子模块专注于特定的、可重复的任务或资源组。这种层次结构有助于更好地组织、重用和维护 Terraform 代码，使复杂的基础设施能够分解为可管理的模块化组件。\n官方 根模块 官方 子模块 文章 Terraform “模块” 和 “子模块” 的区别是什么 ◇已发布模块的使用 在 Terraform 中使用已发布的模块涉及将预构建的、通常由社区贡献的模块集成到您的基础设施代码中。这些模块通常通过 Terraform Registry 或其他版本控制系统提供。它们为常见的基础设施组件提供了现成的配置，节省了时间并促进了最佳实践。要使用已发布的模块，您需要在 Terraform 配置中指定其来源（通常是 URL 或注册表路径）和版本。然后，您可以通过传递输入变量来配置模块。已发布的模块范围从简单的资源包装器到复杂的多资源配置。它们提供了减少开发时间、标准化实现和社区测试解决方案等好处。然而，在生产环境中使用任何已发布的模块之前，务必审查并理解其内容，以确保它满足您的特定要求和安全标准。\n官方 发布模块 开源 Terraform Registry - 模块 视频 Terraform - 发布模块 ◇创建本地模块 在 Terraform 中创建本地模块涉及将一组相关资源组织到项目中的可重用包中。要创建本地模块，通常需要在项目结构中创建一个新目录，并将 Terraform 配置文件（.tf）放入其中。这些文件定义了模块的资源、变量和输出。然后，可以通过模块块从根配置中调用该模块，指定模块目录的本地路径。本地模块对于封装和重用项目中的常见基础设施模式非常有用，可以提高代码的组织性和可维护性。它们可以接受输入变量以进行自定义，并提供输出以供调用配置使用。本地模块特别适用于将复杂的基础设施分解为可管理的逻辑组件，并在项目中标准化资源配置。\n官方 构建和使用本地模块 文章 如何使用 Terraform 模块创建可重用的基础设施 视频 在 Terraform 中创建模块 ◇输入 / 输出 Terraform 中的模块输入和输出促进了数据流入和流出模块，从而实现自定义和数据共享。输入使用模块内的变量块定义，并允许在使用模块时自定义其行为。它们可以具有默认值和类型约束。\n调用模块时，输入作为参数提供。输出使用输出块定义，暴露模块资源的特定值，使其可用于调用模块。这允许在模块之间传递数据或将数据用于配置的其他部分。输出可以包括计算值、资源属性或任何 Terraform 表达式。正确设计的输入和输出对于创建灵活、可重用的模块至关重要，这些模块可以轻松集成到各种配置中。\n官方 访问模块输出值 ◇模块最佳实践 Terraform 模块最佳实践侧重于创建可重用、可维护和可扩展的基础设施组件。\n模块应具有单一、明确的目的，并设计为具有灵活性，使用输入变量进行自定义。\n输出应精心选择，以提供必要的信息，而不过度暴露内部细节。\n对模块进行版本控制，并使用语义版本控制来管理更改。\n保持模块小巧且专注，遵循单一职责原则。\n彻底记录您的模块，包括使用示例和输入/输出描述。\n在模块之间使用一致的命名约定和结构。\n在隔离和作为更大系统的一部分时测试模块。\n避免硬编码可能在不同环境之间变化的值。\n考虑对复杂结构使用嵌套模块，但要注意过度嵌套。\n定期审查和重构模块，以纳入改进并保持最佳实践。\n官方 模块最佳实践\n文章 Terraform 模块指南：最佳实践与示例\n视频 模块化 Terraform 项目的最佳实践 | PlatformCon 2023\n15. 配置器 Terraform 中的配置器用于在本地或远程机器上执行脚本或其他操作，作为资源创建或销毁的一部分。它们允许执行超出 Terraform 声明性模型的配置管理任务。配置器可以在资源创建后运行脚本、上传文件或在资源上执行其他工具。常见类型包括 local-exec（在运行 Terraform 的机器上运行命令）和 remote-exec（在远程资源上运行命令）。虽然功能强大，但应谨慎使用配置器，因为它们可能使 Terraform 运行变得不那么可预测和幂等。它们通常被视为当 Terraform 资源或提供者功能不足时的最后手段。最佳实践建议使用专用的配置管理工具（如 Ansible 或 Chef），而不是过度依赖配置器。使用时，配置器应设计为幂等的，并优雅地处理潜在故障。\n官方 配置器 - Terraform ◇何时使用？ Terraform 中的配置器应谨慎使用，主要在其他声明性选项不足时使用。它们适用于无法通过 Terraform 资源配置或数据源完成的任务。常见场景包括在新创建的服务器上运行初始化脚本、安装提供者特定资源未涵盖的软件或执行一次性设置任务。配置器对于引导配置管理工具或处理 Terraform 无法直接管理的复杂、有状态操作非常有用。然而，由于它们可能使 Terraform 运行变得不那么可预测和难以管理，因此应被视为最后的手段。尽可能优先使用 cloud-init 脚本、自定义镜像或单独的配置管理工具。当必须使用配置器时，应将其设计为幂等的，并对故障具有弹性，以保持 Terraform 的期望状态一致性。\n文章 为什么您应该将 Terraform 配置器作为最后的选择 文章 为什么 Terraform 配置器是最后的手段？ ◇创建 / 销毁时间 Terraform 中的创建和销毁时间配置器用于在资源生命周期的特定点执行操作。创建时间配置器在资源创建后运行，而销毁时间配置器在资源销毁前运行。创建时间配置器对于初始化新创建的服务器、安装软件或配置应用程序等任务非常有用。销毁时间配置器通常用于清理任务，例如在删除之前从负载均衡器中注销服务器。两种类型都可以在资源块中指定。\n失败的创建时间配置器将导致资源创建失败，可能会使资源处于不完整状态。失败的销毁时间配置器不会阻止资源销毁，但可能会使外部资源处于不一致状态。由于它们可能影响 Terraform 管理状态一致性的能力，因此应谨慎使用这两种类型，并设计为幂等的和容错的。\n官方 创建时间配置器 官方 销毁时间配置器 官方 如何：Terraform 销毁时间配置器 ◇文件配置器 Terraform 文件配置器用于将文件或目录从运行 Terraform 的机器复制到新创建的资源。它对于上传配置文件、脚本或其他必要数据到远程系统非常有用。文件配置器可以复制单个文件或递归复制目录。它支持源和内容参数，允许基于文件或内联内容传输。此配置器通常与 remote-exec 配置器结合使用，以执行上传的脚本。虽然对于简单的文件传输很方便，但在处理敏感数据时应考虑安全影响。对于更复杂或大规模的文件管理任务，通常首选专用的配置管理工具。文件配置器最适合用于引导或配置新创建资源所需的小型、简单的文件传输。\n官方 Terraform 文件配置器 文章 文件配置器 ◇local-exec 配置器 Terraform 中的 local-exec 配置器允许在资源创建后在运行 Terraform 的机器上执行本地命令。它对于需要在本地而不是远程资源上执行的任务非常有用。此配置器可以运行脚本、更新本地文件或基于云资源的创建触发本地进程。常见用例包括更新本地清单、触发本地通知或运行与新创建资源交互的本地脚本。虽然功能强大，但应谨慎使用，因为它可能使 Terraform 操作依赖于本地环境。local-exec 配置器不会影响资源本身，也不会在 Terraform 的状态中跟踪，因此设计这些命令时应使其具有幂等性。它最适合不需要复杂错误处理或状态管理的简单本地操作。\n官方 local-exec 配置器 文章 local-exec 配置器 视频 Terraform - local-exec ◇remote-exec 配置器 Terraform 中的 remote-exec 配置器用于在远程资源创建后直接调用脚本。此配置器通常用于软件安装、配置或新创建资源所需的任何其他设置任务。它可以在远程系统上运行命令列表或脚本文件。remote-exec 配置器需要一个连接块来指定如何访问远程系统，通常使用 SSH 访问 Linux 或 WinRM 访问 Windows。虽然对于初始设置任务非常有用，但通常建议谨慎使用此配置器，并首选更强大的配置管理工具来处理复杂或持续的管理任务。应注意确保 remote-exec 运行的脚本具有幂等性，并优雅地处理潜在的网络问题或其他故障。\n官方 remote-exec 配置器 文章 Terraform remote-exec 配置器 视频 Terraform - remote-exec ◇自定义配置器 Terraform 自定义配置器允许开发人员扩展 Terraform 的配置功能，超越内置选项。这些配置器使用 Go 编程语言和 Terraform 插件 SDK 创建。自定义配置器可以执行专门的任务，以满足特定的基础设施需求或组织要求。它们遵循与内置配置器相同的生命周期，在资源创建或销毁期间执行。\n开发自定义配置器需要对 Terraform 架构和 Go 编程有深入的理解。它们对于将 Terraform 与专有系统集成或实现复杂的、组织特定的配置逻辑非常有用。然而，应谨慎对待自定义配置器，因为它们增加了维护开销，并可能使 Terraform 升级复杂化。在许多情况下，除非有强烈的自定义功能需求，否则最好使用现有的配置器或单独的配置管理工具。\n官方 Terraform 配置器 文章 Terraform 配置器 - 为什么应避免使用它们 16. 数据源 Terraform 数据源允许从外部系统或现有资源中检索信息，以便在 Terraform 配置中使用。它们提供了一种查询和获取数据的方式，这些数据可以用于资源定义，使配置更具动态性和适应性。数据源不创建或管理资源；相反，它们读取现有数据。常见用途包括获取 AMI ID、查找 IP 范围或检索有关现有基础设施组件的信息。数据源在 Terraform 配置文件中使用数据块定义，并可以接受参数以过滤或指定请求的数据。它们使 Terraform 能够与现有基础设施或外部系统集成，促进更灵活和上下文感知的资源管理。\n官方 Terraform 数据源 文章 Terraform 数据源 – 如何使用它们 视频 Terraform 中的数据源 17. 模板文件 Terraform 模板文件是用于创建可自定义、可重用的配置片段的强大功能。这些文件通常具有 .tftpl 扩展名，包含可以在运行时用变量填充的占位符。Terraform 使用 templatefile 函数处理这些文件，用实际值替换变量。这种方法对于生成配置文件、脚本或任何需要参数化的基于文本的内容非常有用。模板文件增强了 Terraform 配置的模块化，并减少了重复。它们通常用于创建 EC2 实例的用户数据脚本、生成复杂的 JSON 配置或准备任何需要动态内容的基于文本的资源。templatefile 函数读取文件内容并使用给定的一组变量渲染其模板语法，从而实现动态和灵活的资源配置。\n官方 templatefile 函数 文章 什么是 Terraform 模板？ 视频 在 Terraform 中使用 templatefile 18. 工作区 Terraform 工作区允许在单个配置中管理多个不同的基础设施资源集。它们提供了一种为同一配置创建单独状态实例的方式，使用户能够维护不同的环境（如开发、 staging 和生产）或在不影响主要基础设施的情况下进行更改实验。每个工作区都有自己的状态文件，允许对资源进行隔离管理。工作区特别适用于在将更改应用到生产之前进行测试，或管理不同环境之间的配置差异。可以使用 Terraform CLI 命令轻松切换工作区。对于更显著的环境差异，单独的配置目录或状态文件可能更合适。\n官方 工作区 文章 什么是 Terraform 工作区？ 视频 为 Terraform 工作区构建存储库 - Hashicorp 19. CI / CD 集成 Terraform 的 CI/CD 集成涉及将基础设施即代码（Infrastructure-as-Code）实践融入持续集成和持续部署管道中。这种集成自动化了在软件交付工作流中规划、验证和应用 Terraform 配置的过程。\n在典型的设置中，CI/CD 管道运行 Terraform 命令来检查语法、生成计划并应用基础设施的更改。这种方法确保基础设施的更改与应用程序代码一起进行版本控制、测试和部署。关键方面包括自动化测试 Terraform 配置、安全处理敏感数据（如访问密钥）以及实施基础设施更改的审批流程。\n◇GitHub Actions 将 Terraform 与 GitHub Actions 结合使用，可以在基于 GitHub 的 CI/CD 管道中实现自动化基础设施管理。这种集成使得在代码推送到仓库时自动规划、验证和应用 Terraform 配置成为可能。典型的工作流步骤包括检出代码、设置 Terraform、初始化工作目录以及运行 plan 和 apply 等 Terraform 命令。GitHub Actions 可以配置为在不同环境中运行 Terraform、管理状态文件并安全处理密钥。重要的是要配置适当的权限并使用 GitHub Secrets 来存储敏感数据。\n官方 GitHub Actions 官方 使用 GitHub Actions 自动化 Terraform 开源 setup-terraform 文章 Terraform 与 GitHub Actions：如何管理和扩展 ◇Circle CI 将 Terraform 与 CircleCI 集成可以在 CircleCI 的持续集成和部署管道中实现自动化基础设施管理。这种设置允许在应用程序代码更改的同时进行一致且可重复的基础设施部署。在典型的 CircleCI 配置中，作业被定义为运行 init、plan 和 apply 等 Terraform 命令。工作流可以包括检出代码、设置 Terraform 和管理状态文件的步骤。CircleCI 的环境变量和上下文可用于安全存储和访问云提供商凭证等敏感数据。CircleCI 的并行功能可以在复杂设置中加快 Terraform 的执行速度。\n官方 使用 Terraform 和 CircleCI 部署基础设施 开源 CircleCI Terraform Orb 文章 如何使用 CircleCI 部署 Terraform 资源 ◇GitLab CI 将 Terraform 与 GitLab CI 结合使用，可以在 GitLab 的 CI/CD 管道中实现自动化基础设施管理。典型的 GitLab CI 管道包括验证、规划和应用更改的阶段。管道可以配置为在代码推送或合并请求时自动运行 Terraform 命令。GitLab CI 变量用于安全存储云凭证等敏感信息。GitLab 的原生功能（如环境和审批）可用于管理不同的部署阶段并控制何时应用更改。\n官方 使用 Terraform 和 GitLab 进行基础设施即代码 文章 如何实现 GitLab CI/CD 管道与 Terraform 的集成 视频 使用 GitLab CICD 管道自动化部署到 AWS ◇Jenkins 将 Terraform 与 Jenkins 结合使用，可以在基于 Jenkins 的 CI/CD 管道中实现自动化基础设施管理。这种集成允许在应用程序构建的同时进行一致且可重复的基础设施部署。在典型的设置中，Jenkins 作业或管道配置为执行 init、plan 和 apply 等 Terraform 命令。Jenkins 可以通过使用参数或为每个环境设置单独的作业来管理不同的环境。适当的凭证管理对于安全处理云提供商访问密钥至关重要。Jenkins 丰富的插件生态系统可以通过可视化、通知等功能增强 Terraform 工作流。\n文章 Terraform 与 Jenkins – 如何管理工作流 文章 如何在 Jenkins CI/CD 管道中运行 Terraform 视频 如何使用 Terraform 和 Jenkins 自动化基础设施设置 20. 测试 测试 Terraform 代码涉及多种方法，以确保基础设施即代码的可靠性和正确性。这包括语法验证、最佳实践的 linting、模块的单元测试、验证资源创建的集成测试、审查预期更改的计划测试以及组织策略的合规性测试。常用的工具包括 TFLint 和 Terratest 等框架。在 CI/CD 管道中进行自动化测试有助于及早发现错误并保持代码质量。可以使用模拟提供程序进行测试而不影响实际基础设施，而基于属性的测试则探索不同的输入组合。有效的测试策略在全面性和实用性之间取得平衡，考虑执行时间和资源成本等因素。\n◇单元测试 Terraform 单元测试侧重于验证单个模块或组件在隔离环境中的行为。它通常涉及创建小型、集中的测试用例，以验证模块在给定特定输入时的预期输出和资源配置。常用的工具包括 Terratest（一个 Go 库）。Terraform 的单元测试可能会检查资源是否正确定义、count 和 for_each 元参数是否按预期工作，或者输出值是否正确计算。这些测试通常使用模拟数据或最小化的真实基础设施来模拟各种场景。虽然它们不能保证实际创建资源，但单元测试对于快速捕获逻辑错误、确保模块接口按预期工作以及在模块演进过程中保持代码质量非常有价值。\n官方 集成或单元测试 文章 Terraform 单元测试 ◇契约测试 Terraform 契约测试侧重于验证不同模块或基础设施代码组件之间的接口和交互。这种方法确保模块能够正确协同工作并遵守预期的输入/输出契约。契约测试通常验证模块是否接受正确的输入变量、生成预期的输出，并使用正确的属性创建资源。它们通常涉及使用模拟数据或最小化的真实基础设施设置测试夹具。目标是及早发现集成问题，例如变量类型不匹配或意外的资源配置。契约测试有助于保持模块版本之间的一致性，并确保对一个模块的更改不会破坏依赖模块。这种类型的测试在大型模块化 Terraform 项目中特别有价值，因为多个团队可能正在处理基础设施的不同组件。\n官方 Terraform 契约测试 文章 契约测试：介绍与指南 视频 微服务的契约测试是必须的！ ◇集成测试 Terraform 集成测试涉及验证 Terraform 配置是否与实际云资源和服务正确协同工作。这些测试创建真实的基础设施组件，与其交互，然后销毁它们，确保资源在实时环境中正确配置和部署。集成测试通常使用 Terratest 或自定义脚本等框架来自动化应用 Terraform 配置、验证生成的基础设施并进行清理的过程。它们检查资源的正确创建、相互依赖资源的正确配置以及整体系统行为。虽然比单元测试更耗时且可能成本更高，但集成测试为 Terraform 代码在真实场景中的可靠性提供了高度信心。它们对于捕获仅在与实际云服务交互时才会出现的问题（如 API 限制或意外服务行为）至关重要。\n官方 集成测试或单元测试 文章 集成测试 视频 学习 Terraform - 集成和端到端测试 ◇端到端测试 Terraform 端到端测试涉及验证从开始到结束的整个基础设施部署过程，模拟真实世界的使用场景。这些测试应用完整的 Terraform 配置以创建完整的环境，验证所有组件的功能和交互，然后销毁基础设施。端到端测试通常包括检查网络连接、应用程序部署和整体系统性能。它们可能涉及多个 Terraform 模块和外部系统，将基础设施作为一个整体进行测试。虽然资源密集且耗时，但这些测试为基础设施的正确性和可靠性提供了最高水平的信心。它们对于检测基础设施不同部分之间复杂交互引起的问题特别有价值。端到端测试通常运行频率较低，通常作为发布过程或重大变更验证的一部分。\n文章 入门：端到端测试 文章 端到端测试 视频 使用 Terratest 进行 Terraform 端到端测试 ◇模块测试 测试 Terraform 模块涉及验证其功能、可重用性和正确性，无论是在隔离环境中还是作为更大系统的一部分。此过程通常包括单元测试以验证单个模块的行为，集成测试以确保与其他组件的正确交互，有时还包括复杂模块的端到端测试。测试通常使用 Terratest 或自定义脚本等工具来自动化资源的创建、输出的验证和清理。关键方面包括测试各种输入组合、验证资源属性和输出，以及确保幂等性。模块测试还涉及检查边缘情况和错误条件的正确处理。虽然需要初始设置工作，但彻底的模块测试增强了可靠性，促进了重构，并提高了整体基础设施代码质量。\n官方 编写 Terraform 测试 官方 Terraform 测试 视频 Terraform 模块测试 21. 扩展 Terraform 扩展 Terraform 涉及管理大型和复杂基础设施部署的策略。关键方法包括模块化配置以提高可重用性和可维护性，使用工作区或单独的状态文件来管理不同环境，以及实施带有锁定机制的远程状态存储。\n高效的状态管理变得至关重要，通常涉及状态分割以减少操作时间。采用 Terraform 的 CI/CD 流水线有助于自动化和标准化部署流程。实施适当的访问控制，并使用 Terraform Cloud 或 Enterprise 等功能进行团队协作和治理变得非常重要。性能优化技术，如使用 -parallelism 标志和定向应用，有助于管理大规模变更。随着规模的增加，成本管理、安全性和合规性方面的考虑变得更加突出。有效的扩展通常需要在基础设施管理中平衡集中控制和分布式团队自治。\n◇分割大型状态 分割大型 Terraform 状态涉及将单一的状态文件分解为更小、更易管理的单元。这种方法对于提高性能、减少状态损坏的风险以及在大规模基础设施中启用并行工作流至关重要。策略包括将资源组织到单独的 Terraform 工作区中，或为不同的逻辑组件或环境使用不同的状态文件。该过程通常涉及使用 terraform state mv 在状态之间移动资源，或在新配置中使用 terraform state rm 后跟 import。仔细规划对于管理分割状态之间的依赖关系至关重要。好处包括更快的应用时间、减少并发修改冲突的风险，以及能够授予更细粒度的访问控制。\n有关更多资源，请参阅 State 主题中的 Splitting State Files。\n◇并行性 Terraform 的并行性是指其同时创建、修改或销毁多个资源的能力。默认情况下，Terraform 最多同时操作 10 个资源实例。这种并行执行可以显著减少应用大型配置所需的时间。可以通过在 Terraform 命令中使用 -parallelism 标志或通过配置设置来调整并行级别。增加并行性可以加快操作速度，尤其是在大型基础设施中，但也可能增加云提供商 API 端点的负载。重要的是要平衡并行性与 API 速率限制和资源依赖关系。某些资源或提供商可能不支持并行操作，Terraform 会自动将这些操作序列化。有效使用并行性需要了解资源依赖关系和提供商能力，以优化性能而不会导致错误或超出服务限制。\n官方 Walking the graph 文章 Considerations when setting the TFE_PARALLELISM environment variable ◇部署工作流 用于扩展的 Terraform 部署工作流通常涉及几个关键阶段，这些阶段经过优化以管理大型基础设施。它从功能分支中的代码开发开始，然后进行包括语法检查、代码检查和单元测试在内的自动化测试。拉取请求会触发计划生成以供审查。批准后，更改合并到主分支，启动 CI/CD 流水线。该流水线运行更全面的测试，包括集成测试和可能的端到端测试。对于大型基础设施，工作流通常包括分阶段部署，从较低的环境开始，逐步推进到生产环境。它可能涉及部分应用或使用工作区来管理不同的环境。该过程包括对关键变更的手动批准门控。状态管理变得至关重要，通常使用带有锁定的远程后端。集成监控和日志记录以跟踪部署进度并及早发现问题。\n官方 The Core Terraform Workflow 视频 Terraform Basics: Core Workflow 视频 Advanced Concepts and Faster Workflows in the Terraform Language ◇版本管理 Terraform 中的版本管理对于在不同环境和团队成员之间保持一致性至关重要。像 tfenv 这样的工具允许开发人员轻松切换不同版本的 Terraform。tfenv 是一个版本管理器，可以在单个系统上安装和管理多个 Terraform 版本。它使团队能够为不同项目指定和使用特定的 Terraform 版本，确保兼容性和可重复性。该工具与 tfswitch 等其他工具一起，帮助管理版本差异引起的潜在冲突，促进更轻松的升级，并支持在具有不同 Terraform 版本要求的多个项目上工作。\n开源 tfenv 文章 How to Use tfenv to Manage Multiple Terraform Versions 视频 Quick Tech: tfenv ◇Terragrunt Terragrunt 是 Terraform 的一个薄封装，提供了额外的工具来保持配置的 DRY（Don’t Repeat Yourself），处理多个 Terraform 模块，并管理远程状态。它通过减少代码重复和简化多环境管理来帮助管理大规模基础设施。关键功能包括通过集中定义输入和后端配置来保持 Terraform 代码的 DRY，一次性在多个模块上执行 Terraform 命令，以及自动管理每个模块的远程状态。Terragrunt 还通过允许轻松注入参数，促进了跨不同环境的 Terraform 模块的使用。它在复杂的多环境设置中特别有用，在这些设置中，保持一致性并减少 Terraform 配置中的重复至关重要。\n官方 Terragrunt Website 开源 gruntwork-io/terragrunt 文章 Terragrunt Tutorial: Examples and Use Cases ◇Infracost Infracost 是一个开源工具，为 Terraform 项目提供实时成本估算。它分析 Terraform 配置文件，并为 AWS、Azure 和 Google Cloud 等各种提供商的云资源生成详细的成本分解。Infracost 集成到 CI/CD 流水线中，以显示开发过程中基础设施变更的成本影响。它支持差异输出，显示提议的变更将如何影响成本。该工具对于希望优化云支出并在基础设施开发生命周期中保持成本意识的团队特别有价值。Infracost 可以单独使用，也可以与其他工具集成，帮助团队就资源供应和配置变更做出明智的决策。\n官方 Infracost Website 开源 infracost/infracost 视频 Shifting FinOps Left: A live demo 22. 安全性 Terraform 安全性涵盖了确保基础设施即代码（Infrastructure-as-Code）安全合规管理的实践和工具。关键方面包括通过使用加密的远程后端来保护 Terraform 状态文件，这些文件通常包含敏感信息。访问控制至关重要，应为人类用户和服务账户实施最小权限原则。敏感数据管理涉及使用保险库系统或云原生密钥管理器，而不是硬编码凭据。代码审查过程应包括安全检查，并且可以集成自动化扫描工具以检测错误配置或策略违规。使用 Terraform Sentinel 等工具实施合规即代码（Compliance-as-Code）可确保遵守组织策略。版本控制和适当的 Git 卫生有助于维护审计跟踪。\n官方 Terraform 安全性 文章 12 个 Terraform 安全最佳实践 ◇密钥管理 Terraform 密钥管理是安全基础设施即代码实践的关键方面，专注于保护 API 密钥、密码和访问令牌等敏感信息。最佳实践建议使用外部密钥管理系统（如 HashiCorp Vault、AWS Secrets Manager 或 Azure Key Vault），而不是直接将密钥存储在 Terraform 文件中。这些系统允许 Terraform 在执行期间安全地检索密钥，从而显著降低暴露风险。对于本地开发，git-crypt 或 SOPS 等工具为敏感文件提供加密，而 Terraform 内置的加密状态存储选项可保护状态文件中的密钥。通过将变量标记为敏感变量，可以防止意外记录密钥值。在 CI/CD 管道中，关键是在运行时安全地注入密钥，并避免将其提交到版本控制系统。定期轮换密钥和访问审计进一步增强了安全性。\n官方 使用 Vault 注入密钥 文章 Terraform 密钥 - 如何管理它们 文章 管理 Terraform 代码中密钥的综合指南 ◇合规性 / Sentinel Hashicorp Sentinel 是一个与 HashiCorp 企业产品（包括 Terraform Cloud 和 Terraform Enterprise）集成的策略即代码框架。它允许组织在其基础设施部署中定义和执行标准化、细粒度的策略。Sentinel 策略可以编写为在 Terraform 应用任何更改之前检查安全合规性、成本管理或操作最佳实践。这些策略使用特定领域语言定义规则，评估 Terraform 计划和状态，使团队能够在开发过程的早期发现潜在问题。Sentinel 可以强制执行阻止不合规基础设施更改的强制性策略，或警告但不阻止部署的咨询性策略。\n官方 Terraform 和 Sentinel 开源 hashicorp/terraform-sentinel-policies 文章 强制执行策略即代码 ◇Terrascan Terrascan 是一个用于基础设施即代码（IaC）的开源静态代码分析器，可帮助检测包括 Terraform 在内的多个 IaC 工具中的合规性和安全性违规行为。它根据一组预定义的策略扫描 Terraform 配置，以在部署前识别潜在的安全风险、错误配置和合规性问题。Terrascan 可以集成到 CI/CD 管道中，在开发生命周期中提供漏洞的早期检测。它支持自定义策略，允许组织强制执行其特定的安全和合规要求。该工具涵盖各种云提供商，并且可以扩展以支持其他策略类型。\n官方 Terrascan 网站 开源 tenable/terrascan 文章 什么是 Terrascan？ ◇Checkov Checkov 是一个开源静态代码分析工具，旨在扫描基础设施即代码（IaC）文件（包括 Terraform 配置）中的安全性和合规性问题。它提供了一套全面的开箱即用策略，涵盖各种云提供商和安全最佳实践。Checkov 可以在部署前识别 Terraform 代码中的错误配置、安全风险和合规性违规行为，有助于在开发过程中将安全性左移。该工具支持用 Python 编写的自定义策略，允许组织强制执行特定要求。Checkov 可以轻松集成到 CI/CD 管道中，并提供多种输出格式，以便更好地报告和与其他工具集成。它能够扫描从默认不安全到符合 CIS 基准等标准的各种问题，使其成为维护安全和合规基础设施部署的强大资产。\n官方 Checkov 开源 bridgecrewio/checkov 文章 使用 Checkov 扫描 Terraform 代码 ◇Trivy Trivy 是一个全面的开源安全扫描器，主要以容器镜像扫描而闻名，但它也支持基础设施即代码（IaC）分析，包括 Terraform 配置。它可以检测依赖项中的漏洞、云基础设施设置中的错误配置以及 Terraform 代码中的潜在安全风险。Trivy 的 IaC 扫描功能涵盖各种云提供商，并且可以识别与合规性、安全最佳实践和常见错误配置相关的问题。该工具设计用于轻松集成到 CI/CD 管道中，提供快速的扫描时间和多种输出格式，以便更好地报告和与其他 DevOps 工具集成。Trivy 的优势在于它能够提供跨软件开发生命周期不同方面的统一扫描解决方案，从容器镜像到 IaC，使其成为在整个开发和部署过程中维护安全性的多功能工具。\n官方 Trivy 网站 开源 aquasecurity/trivy 文章 如何使用 Trivy 保护 Terraform 代码 ◇KICS KICS（Keeping Infrastructure as Code Secure）是一个开源静态分析工具，旨在扫描基础设施即代码（IaC）文件（包括 Terraform 配置）中的安全漏洞、合规性问题和基础设施错误配置。它支持多种 IaC 技术和云提供商，提供了一种全面的方法来保护云原生环境。KICS 使用一组强大的预定义规则来检测潜在的安全风险，从默认不安全到违反行业标准和最佳实践。该工具允许开发自定义查询，使组织能够根据其特定的安全和合规需求定制扫描。KICS 可以轻松集成到 CI/CD 管道中，在开发生命周期中提供问题的早期检测。它能够生成详细的报告并支持各种输出格式，便于轻松解释结果并与其他安全和 DevOps 工具集成，使其成为通过 Terraform 管理的安全和合规基础设施部署的宝贵资产。\n官方 KICS 网站 开源 checkmarx/kics 视频 自动修复您的基础设施即代码 23. HCP HCP（HashiCorp Cloud Platform）是一个完全托管的平台，提供HashiCorp产品即服务，包括Terraform。它提供了一种集中化的方式来为任何应用程序配置、保护、连接和运行任何基础设施。HCP与Terraform无缝集成，提供了增强的功能来管理大规模的基础设施。关键功能包括自动化工作流、集中化的状态管理和安全的远程操作。它提供了内置的协作工具，使团队更容易在基础设施项目上合作。HCP提供了治理和策略执行功能，允许组织在其基础设施中保持合规性和安全标准。通过与Vault（用于秘密管理）和Consul（用于服务网络）等其他HashiCorp工具的集成，HCP为云基础设施管理创建了一个全面的生态系统。该平台特别适合那些希望简化基础设施操作、增强安全性并在多云环境中保持一致性的组织。\n◇何时使用HCP？ HashiCorp Cloud Platform（HCP）最适合在组织需要为其基础设施即代码实践提供托管、可扩展的解决方案时使用。它对于寻求在多云环境中简化操作、增强协作并保持一致治理的团队尤其有价值。HCP在需要集中管理Terraform工作流、安全远程操作和集成秘密管理时是理想的选择。它对于需要强大访问控制、策略执行和审计能力的大型企业或成长中的团队非常有益。当自我管理HashiCorp工具的复杂性成为负担时，或者希望减少操作开销时，应考虑使用HCP。当组织希望在一个统一的托管环境中利用Terraform、Vault和Consul等不同HashiCorp产品之间的协同效应时，它也很有用。当基础设施管理需求的扩展超出独立Terraform实现的能力时，该平台最为有效。\n官方 使用案例 ◇企业功能 HashiCorp Cloud Platform（HCP）提供了多项企业级功能，旨在增强大规模基础设施管理：\n集中化的工作流管理，用于Terraform操作 高级基于角色的访问控制（RBAC），用于细粒度权限 使用Sentinel的策略即代码，用于治理和合规性 私有网络连接，用于安全访问云资源 审计日志，用于全面跟踪所有平台活动 与Vault集成的秘密管理 通过Consul实现的服务网络功能 多云和混合云支持 可扩展的远程状态管理 成本估算和优化工具 可定制的策略库，用于安全和合规性 单点登录（SSO）和身份联合 API驱动的自动化，用于基础设施配置 协作功能，用于基于团队的基础设施开发 持续合规性监控和报告 这些功能共同为企业和DevOps实践提供了一个强大、安全和可扩展的基础设施管理环境。\n官方 HashiCorp Cloud Platform 官方 HCP Terraform计划和功能 视频 基础设施云如何工作？ ◇认证 HCP（HashiCorp Cloud Platform）认证为其服务（包括Terraform Cloud）提供了安全的访问管理。它利用了一个全面的身份和访问管理系统，支持多种认证方法。这些方法包括用户名/密码组合、与流行身份提供商的单点登录（SSO）集成以及用于编程访问的API令牌。HCP支持SAML 2.0以实现企业级SSO，允许与现有身份管理系统无缝集成。对于机器到机器的通信，HCP提供了服务主体认证，支持与HCP服务的安全自动化交互。该平台还提供了细粒度的基于角色的访问控制（RBAC），允许管理员定义和管理跨不同资源和操作用户权限。\n官方 HCP认证 官方 使用HCP进行认证 开源 hashicorp/hcp-auth-login ◇工作区 HCP工作区，特别是在Terraform Cloud的上下文中，提供了用于管理不同基础设施集的隔离环境。每个工作区与特定的Terraform配置相关联，并维护其自己的状态文件、变量和访问控制。工作区使团队能够根据项目、环境或团队组织和分离基础设施。它们通过允许多个团队成员在相同的基础设施上工作，同时保持版本控制和变更历史，支持协作工作流。HCP工作区提供了远程状态管理、安全变量存储和与版本控制系统的集成等功能。它们还提供了运行触发器，用于自动化跨依赖基础设施的工作流。通过内置的访问控制，组织可以通过为每个工作区的用户或团队授予特定权限来实施最小权限原则。\n官方 工作区 文章 使用项目组织工作区 视频 使用项目组织Terraform Cloud工作区 ◇VCS集成 HCP的版本控制系统（VCS）集成，特别是在Terraform Cloud中，实现了基础设施代码仓库与HCP服务之间的无缝连接。此功能允许团队将其Git仓库（来自GitHub、GitLab或Bitbucket等提供商）直接链接到HCP工作区。配置后，推送到链接仓库的更改会自动触发相应工作区中的Terraform运行。此集成支持GitOps工作流，确保基础设施变更经过适当的版本控制流程。它支持诸如在拉取请求上自动生成计划等功能，提供对提议变更的早期反馈。该集成还支持基于分支的工作流，允许将不同分支链接到不同工作区以用于暂存和生产环境。\n官方 将VCS提供商连接到HCP Terraform 官方 使用VCS驱动的工作流 官方 配置工作区VCS连接 ◇运行任务 HCP运行任务，Terraform Cloud的一项功能，允许将外部服务或自定义逻辑集成到Terraform工作流中。这些任务可以配置为在Terraform计划和应用之前或之后运行，从而实现额外的验证、通知或数据处理步骤。运行任务可用于各种目的，如安全扫描、成本估算、自定义策略检查或触发外部工作流。它们通过webhook执行，允许与广泛的第三方服务或内部工具集成。此功能增强了Terraform工作流的灵活性和可扩展性，使组织能够实施适合其特定需求的自定义流程和集成。\n官方 运行任务 官方 Terraform Registry - 运行任务 官方 运行任务API ",
+  "wordCount" : "25690",
+  "inLanguage": "zh",
+  "datePublished": "2025-03-02T00:00:00Z",
+  "dateModified": "2025-03-02T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yuuniji.github.io/posts/roadmap-terraform/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "叶泽伟的博客",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yuuniji.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yuuniji.github.io/" accesskey="h" title="叶泽伟的博客 (Alt + H)">叶泽伟的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yuuniji.github.io/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                    <li>
+                        <a href="https://yuuniji.github.io/ja/" title="日本語"
+                            aria-label="日本語">Ja</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yuuniji.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://yuuniji.github.io/">主页</a>&nbsp;»&nbsp;<a href="https://yuuniji.github.io/posts/">文章列表</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Terraform 路线图
+    </h1>
+    <div class="post-meta"><span title='2025-03-02 00:00:00 +0000 UTC'>三月 2, 2025</span>&nbsp;·&nbsp;52 分钟&nbsp;|&nbsp;语言:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yuuniji.github.io/en/posts/roadmap-terraform/">En</a>
+    </li>
+    <li>
+        <a href="https://yuuniji.github.io/ja/posts/roadmap-terraform/">Ja</a>
+    </li>
+</ul>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-%e4%bb%8b%e7%bb%8d" aria-label="1. 介绍">1. 介绍</a><ul>
+                        
+                <li>
+                    <a href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%9f%ba%e7%a1%80%e8%ae%be%e6%96%bd%e5%8d%b3%e4%bb%a3%e7%a0%81" aria-label="◇什么是基础设施即代码？">◇什么是基础设施即代码？</a></li>
+                <li>
+                    <a href="#%e4%bb%80%e4%b9%88%e6%98%af-terraform" aria-label="◇什么是 Terraform？">◇什么是 Terraform？</a></li>
+                <li>
+                    <a href="#terraform-%e7%9a%84%e4%bc%98%e5%8a%bf" aria-label="◇Terraform 的优势">◇Terraform 的优势</a></li>
+                <li>
+                    <a href="#cac-%e4%b8%8e-iac" aria-label="◇CaC 与 IaC">◇CaC 与 IaC</a></li>
+                <li>
+                    <a href="#%e5%ae%89%e8%a3%85-terraform" aria-label="◇安装 Terraform">◇安装 Terraform</a></li></ul>
+                </li>
+                <li>
+                    <a href="#2-hashicorp-%e9%85%8d%e7%bd%ae%e8%af%ad%e8%a8%80-hcl" aria-label="2. HashiCorp 配置语言 (HCL)">2. HashiCorp 配置语言 (HCL)</a><ul>
+                        
+                <li>
+                    <a href="#%e4%bb%80%e4%b9%88%e6%98%af-hcl" aria-label="◇什么是 HCL？">◇什么是 HCL？</a></li>
+                <li>
+                    <a href="#%e5%9f%ba%e6%9c%ac%e8%af%ad%e6%b3%95" aria-label="◇基本语法">◇基本语法</a></li></ul>
+                </li>
+                <li>
+                    <a href="#3-%e9%a1%b9%e7%9b%ae%e5%88%9d%e5%a7%8b%e5%8c%96" aria-label="3. 项目初始化">3. 项目初始化</a></li>
+                <li>
+                    <a href="#4-%e6%8f%90%e4%be%9b%e8%80%85providers" aria-label="4. 提供者（Providers）">4. 提供者（Providers）</a><ul>
+                        
+                <li>
+                    <a href="#terraform-%e6%b3%a8%e5%86%8c%e8%a1%a8terraform-registry" aria-label="◇Terraform 注册表（Terraform Registry）">◇Terraform 注册表（Terraform Registry）</a></li>
+                <li>
+                    <a href="#%e9%85%8d%e7%bd%ae%e6%8f%90%e4%be%9b%e8%80%85configuring-providers" aria-label="◇配置提供者（Configuring Providers）">◇配置提供者（Configuring Providers）</a></li>
+                <li>
+                    <a href="#%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6versions" aria-label="◇版本控制（Versions）">◇版本控制（Versions）</a></li></ul>
+                </li>
+                <li>
+                    <a href="#5-%e8%b5%84%e6%ba%90resources" aria-label="5. 资源（Resources）">5. 资源（Resources）</a><ul>
+                        
+                <li>
+                    <a href="#%e8%b5%84%e6%ba%90%e8%a1%8c%e4%b8%baresource-behavior" aria-label="◇资源行为（Resource Behavior）">◇资源行为（Resource Behavior）</a></li>
+                <li>
+                    <a href="#%e8%b5%84%e6%ba%90%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9fresource-lifecycle" aria-label="◇资源生命周期（Resource Lifecycle）">◇资源生命周期（Resource Lifecycle）</a></li>
+                <li>
+                    <a href="#%e5%85%83%e5%8f%82%e6%95%b0meta-arguments" aria-label="◇元参数（Meta Arguments）">◇元参数（Meta Arguments）</a><ul>
+                        
+                <li>
+                    <a href="#depends_on" aria-label="depends_on">depends_on</a></li>
+                <li>
+                    <a href="#count" aria-label="count">count</a></li>
+                <li>
+                    <a href="#for_each" aria-label="for_each">for_each</a></li>
+                <li>
+                    <a href="#provider" aria-label="provider">provider</a></li>
+                <li>
+                    <a href="#lifecycle" aria-label="lifecycle">lifecycle</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#6-%e5%8f%98%e9%87%8fvariables" aria-label="6. 变量（Variables）">6. 变量（Variables）</a><ul>
+                        
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e5%8f%98%e9%87%8finput-variables" aria-label="◇输入变量（Input Variables）">◇输入变量（Input Variables）</a></li>
+                <li>
+                    <a href="#%e7%b1%bb%e5%9e%8b%e7%ba%a6%e6%9d%9ftype-constraints" aria-label="◇类型约束（Type Constraints）">◇类型约束（Type Constraints）</a></li>
+                <li>
+                    <a href="#%e5%8f%98%e9%87%8f%e5%ae%9a%e4%b9%89%e6%96%87%e4%bb%b6variable-definition-file" aria-label="◇变量定义文件（Variable Definition File）">◇变量定义文件（Variable Definition File）</a></li>
+                <li>
+                    <a href="#%e6%9c%ac%e5%9c%b0%e5%80%bclocal-values" aria-label="◇本地值（Local Values）">◇本地值（Local Values）</a></li>
+                <li>
+                    <a href="#%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8fenvironment-variables" aria-label="◇环境变量（Environment Variables）">◇环境变量（Environment Variables）</a></li>
+                <li>
+                    <a href="#%e9%aa%8c%e8%af%81%e8%a7%84%e5%88%99validation-rules" aria-label="◇验证规则（Validation Rules）">◇验证规则（Validation Rules）</a></li></ul>
+                </li>
+                <li>
+                    <a href="#7-%e8%be%93%e5%87%ba" aria-label="7. 输出">7. 输出</a><ul>
+                        
+                <li>
+                    <a href="#%e5%89%8d%e7%bd%ae%e6%9d%a1%e4%bb%b6" aria-label="◇前置条件">◇前置条件</a></li>
+                <li>
+                    <a href="#%e6%95%8f%e6%84%9f%e8%be%93%e5%87%ba" aria-label="◇敏感输出">◇敏感输出</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e8%af%ad%e6%b3%95" aria-label="◇输出语法">◇输出语法</a></li></ul>
+                </li>
+                <li>
+                    <a href="#8-%e6%a0%bc%e5%bc%8f%e5%8c%96%e4%b8%8e%e9%aa%8c%e8%af%81" aria-label="8. 格式化与验证">8. 格式化与验证</a><ul>
+                        
+                <li>
+                    <a href="#terraform-fmt" aria-label="◇terraform fmt">◇terraform fmt</a></li>
+                <li>
+                    <a href="#terraform-validate" aria-label="◇terraform validate">◇terraform validate</a></li>
+                <li>
+                    <a href="#tflint" aria-label="◇TFLint">◇TFLint</a></li></ul>
+                </li>
+                <li>
+                    <a href="#9-%e9%83%a8%e7%bd%b2" aria-label="9. 部署">9. 部署</a><ul>
+                        
+                <li>
+                    <a href="#terraform-apply" aria-label="◇terraform apply">◇terraform apply</a></li>
+                <li>
+                    <a href="#terraform-plan" aria-label="◇terraform plan">◇terraform plan</a></li></ul>
+                </li>
+                <li>
+                    <a href="#10-%e6%b8%85%e7%90%86" aria-label="10. 清理">10. 清理</a><ul>
+                        
+                <li>
+                    <a href="#terraform-destroy" aria-label="◇terraform destroy">◇terraform destroy</a></li></ul>
+                </li>
+                <li>
+                    <a href="#11-%e7%8a%b6%e6%80%81" aria-label="11. 状态">11. 状态</a><ul>
+                        
+                <li>
+                    <a href="#%e8%bf%9c%e7%a8%8b%e7%8a%b6%e6%80%81" aria-label="◇远程状态">◇远程状态</a></li>
+                <li>
+                    <a href="#%e7%8a%b6%e6%80%81%e9%94%81%e5%ae%9a" aria-label="◇状态锁定">◇状态锁定</a></li>
+                <li>
+                    <a href="#%e5%af%bc%e5%85%a5%e7%8e%b0%e6%9c%89%e8%b5%84%e6%ba%90" aria-label="◇导入现有资源">◇导入现有资源</a></li>
+                <li>
+                    <a href="#%e6%8b%86%e5%88%86%e7%8a%b6%e6%80%81%e6%96%87%e4%bb%b6" aria-label="◇拆分状态文件">◇拆分状态文件</a></li>
+                <li>
+                    <a href="#%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6" aria-label="◇版本控制">◇版本控制</a></li>
+                <li>
+                    <a href="#%e6%95%8f%e6%84%9f%e6%95%b0%e6%8d%ae" aria-label="◇敏感数据">◇敏感数据</a></li></ul>
+                </li>
+                <li>
+                    <a href="#12-%e7%8a%b6%e6%80%81%e7%ae%a1%e7%90%86%e7%9a%84%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5" aria-label="12. 状态管理的最佳实践">12. 状态管理的最佳实践</a></li>
+                <li>
+                    <a href="#13-%e6%a3%80%e6%9f%a5%e4%bf%ae%e6%94%b9%e7%8a%b6%e6%80%81" aria-label="13. 检查/修改状态">13. 检查/修改状态</a><ul>
+                        
+                <li>
+                    <a href="#graph" aria-label="◇graph">◇graph</a></li>
+                <li>
+                    <a href="#show" aria-label="◇show">◇show</a></li>
+                <li>
+                    <a href="#list" aria-label="◇list">◇list</a></li>
+                <li>
+                    <a href="#output" aria-label="◇output">◇output</a></li>
+                <li>
+                    <a href="#rm" aria-label="◇rm">◇rm</a></li>
+                <li>
+                    <a href="#mv" aria-label="◇mv">◇mv</a></li>
+                <li>
+                    <a href="#-replace-%e9%80%89%e9%a1%b9%e5%9c%a8-apply-%e4%b8%ad" aria-label="◇-replace 选项在 apply 中">◇-replace 选项在 apply 中</a></li>
+                <li>
+                    <a href="#state-pull--push" aria-label="◇state pull / push">◇state pull / push</a></li>
+                <li>
+                    <a href="#state-replace-provider" aria-label="◇state replace-provider">◇state replace-provider</a></li>
+                <li>
+                    <a href="#state-force-unlock" aria-label="◇state force-unlock">◇state force-unlock</a></li></ul>
+                </li>
+                <li>
+                    <a href="#14-%e6%a8%a1%e5%9d%97" aria-label="14. 模块">14. 模块</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b9%e6%a8%a1%e5%9d%97%e4%b8%8e%e5%ad%90%e6%a8%a1%e5%9d%97" aria-label="◇根模块与子模块">◇根模块与子模块</a></li>
+                <li>
+                    <a href="#%e5%b7%b2%e5%8f%91%e5%b8%83%e6%a8%a1%e5%9d%97%e7%9a%84%e4%bd%bf%e7%94%a8" aria-label="◇已发布模块的使用">◇已发布模块的使用</a></li>
+                <li>
+                    <a href="#%e5%88%9b%e5%bb%ba%e6%9c%ac%e5%9c%b0%e6%a8%a1%e5%9d%97" aria-label="◇创建本地模块">◇创建本地模块</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5--%e8%be%93%e5%87%ba" aria-label="◇输入 / 输出">◇输入 / 输出</a></li>
+                <li>
+                    <a href="#%e6%a8%a1%e5%9d%97%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5" aria-label="◇模块最佳实践">◇模块最佳实践</a></li></ul>
+                </li>
+                <li>
+                    <a href="#15-%e9%85%8d%e7%bd%ae%e5%99%a8" aria-label="15. 配置器">15. 配置器</a><ul>
+                        
+                <li>
+                    <a href="#%e4%bd%95%e6%97%b6%e4%bd%bf%e7%94%a8" aria-label="◇何时使用？">◇何时使用？</a></li>
+                <li>
+                    <a href="#%e5%88%9b%e5%bb%ba--%e9%94%80%e6%af%81%e6%97%b6%e9%97%b4" aria-label="◇创建 / 销毁时间">◇创建 / 销毁时间</a></li>
+                <li>
+                    <a href="#%e6%96%87%e4%bb%b6%e9%85%8d%e7%bd%ae%e5%99%a8" aria-label="◇文件配置器">◇文件配置器</a></li>
+                <li>
+                    <a href="#local-exec-%e9%85%8d%e7%bd%ae%e5%99%a8" aria-label="◇local-exec 配置器">◇local-exec 配置器</a></li>
+                <li>
+                    <a href="#remote-exec-%e9%85%8d%e7%bd%ae%e5%99%a8" aria-label="◇remote-exec 配置器">◇remote-exec 配置器</a></li>
+                <li>
+                    <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e9%85%8d%e7%bd%ae%e5%99%a8" aria-label="◇自定义配置器">◇自定义配置器</a></li></ul>
+                </li>
+                <li>
+                    <a href="#16-%e6%95%b0%e6%8d%ae%e6%ba%90" aria-label="16. 数据源">16. 数据源</a></li>
+                <li>
+                    <a href="#17-%e6%a8%a1%e6%9d%bf%e6%96%87%e4%bb%b6" aria-label="17. 模板文件">17. 模板文件</a></li>
+                <li>
+                    <a href="#18-%e5%b7%a5%e4%bd%9c%e5%8c%ba" aria-label="18. 工作区">18. 工作区</a></li>
+                <li>
+                    <a href="#19-ci--cd-%e9%9b%86%e6%88%90" aria-label="19. CI / CD 集成">19. CI / CD 集成</a><ul>
+                        
+                <li>
+                    <a href="#github-actions" aria-label="◇GitHub Actions">◇GitHub Actions</a></li>
+                <li>
+                    <a href="#circle-ci" aria-label="◇Circle CI">◇Circle CI</a></li>
+                <li>
+                    <a href="#gitlab-ci" aria-label="◇GitLab CI">◇GitLab CI</a></li>
+                <li>
+                    <a href="#jenkins" aria-label="◇Jenkins">◇Jenkins</a></li></ul>
+                </li>
+                <li>
+                    <a href="#20-%e6%b5%8b%e8%af%95" aria-label="20. 测试">20. 测试</a><ul>
+                        
+                <li>
+                    <a href="#%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95" aria-label="◇单元测试">◇单元测试</a></li>
+                <li>
+                    <a href="#%e5%a5%91%e7%ba%a6%e6%b5%8b%e8%af%95" aria-label="◇契约测试">◇契约测试</a></li>
+                <li>
+                    <a href="#%e9%9b%86%e6%88%90%e6%b5%8b%e8%af%95" aria-label="◇集成测试">◇集成测试</a></li>
+                <li>
+                    <a href="#%e7%ab%af%e5%88%b0%e7%ab%af%e6%b5%8b%e8%af%95" aria-label="◇端到端测试">◇端到端测试</a></li>
+                <li>
+                    <a href="#%e6%a8%a1%e5%9d%97%e6%b5%8b%e8%af%95" aria-label="◇模块测试">◇模块测试</a></li></ul>
+                </li>
+                <li>
+                    <a href="#21-%e6%89%a9%e5%b1%95-terraform" aria-label="21. 扩展 Terraform">21. 扩展 Terraform</a><ul>
+                        
+                <li>
+                    <a href="#%e5%88%86%e5%89%b2%e5%a4%a7%e5%9e%8b%e7%8a%b6%e6%80%81" aria-label="◇分割大型状态">◇分割大型状态</a></li>
+                <li>
+                    <a href="#%e5%b9%b6%e8%a1%8c%e6%80%a7" aria-label="◇并行性">◇并行性</a></li>
+                <li>
+                    <a href="#%e9%83%a8%e7%bd%b2%e5%b7%a5%e4%bd%9c%e6%b5%81" aria-label="◇部署工作流">◇部署工作流</a></li>
+                <li>
+                    <a href="#%e7%89%88%e6%9c%ac%e7%ae%a1%e7%90%86" aria-label="◇版本管理">◇版本管理</a></li>
+                <li>
+                    <a href="#terragrunt" aria-label="◇Terragrunt">◇Terragrunt</a></li>
+                <li>
+                    <a href="#infracost" aria-label="◇Infracost">◇Infracost</a></li></ul>
+                </li>
+                <li>
+                    <a href="#22-%e5%ae%89%e5%85%a8%e6%80%a7" aria-label="22. 安全性">22. 安全性</a><ul>
+                        
+                <li>
+                    <a href="#%e5%af%86%e9%92%a5%e7%ae%a1%e7%90%86" aria-label="◇密钥管理">◇密钥管理</a></li>
+                <li>
+                    <a href="#%e5%90%88%e8%a7%84%e6%80%a7--sentinel" aria-label="◇合规性 / Sentinel">◇合规性 / Sentinel</a></li>
+                <li>
+                    <a href="#terrascan" aria-label="◇Terrascan">◇Terrascan</a></li>
+                <li>
+                    <a href="#checkov" aria-label="◇Checkov">◇Checkov</a></li>
+                <li>
+                    <a href="#trivy" aria-label="◇Trivy">◇Trivy</a></li>
+                <li>
+                    <a href="#kics" aria-label="◇KICS">◇KICS</a></li></ul>
+                </li>
+                <li>
+                    <a href="#23-hcp" aria-label="23. HCP">23. HCP</a><ul>
+                        
+                <li>
+                    <a href="#%e4%bd%95%e6%97%b6%e4%bd%bf%e7%94%a8hcp" aria-label="◇何时使用HCP？">◇何时使用HCP？</a></li>
+                <li>
+                    <a href="#%e4%bc%81%e4%b8%9a%e5%8a%9f%e8%83%bd" aria-label="◇企业功能">◇企业功能</a></li>
+                <li>
+                    <a href="#%e8%ae%a4%e8%af%81" aria-label="◇认证">◇认证</a></li>
+                <li>
+                    <a href="#%e5%b7%a5%e4%bd%9c%e5%8c%ba" aria-label="◇工作区">◇工作区</a></li>
+                <li>
+                    <a href="#vcs%e9%9b%86%e6%88%90" aria-label="◇VCS集成">◇VCS集成</a></li>
+                <li>
+                    <a href="#%e8%bf%90%e8%a1%8c%e4%bb%bb%e5%8a%a1" aria-label="◇运行任务">◇运行任务</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="1-介绍">1. 介绍<a hidden class="anchor" aria-hidden="true" href="#1-介绍">#</a></h2>
+<p>Terraform 是由 HashiCorp 设计的一款强大工具，旨在帮助您安全高效地设置、管理和更新跨多个云提供商的基础设施。您可以将其视为一种使用简单代码格式定义云资源（如服务器、存储和网络）的方式。这使得自动化、共享和管理您的基础设施变得更加容易，确保一切保持一致，并可以根据需要快速复制或修改。</p>
+<ul>
+<li><em>官方</em> <a href="https://www.terraform.io/">Terraform 官网</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform">Terraform 文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=SLB_c_ayRMo">Terraform 初学者指南</a></li>
+<li><em>订阅</em> <a href="https://app.daily.dev/tags/terraform?ref=roadmapsh">探索关于 Terraform 的热门帖子</a></li>
+</ul>
+<h3 id="什么是基础设施即代码">◇什么是基础设施即代码？<a hidden class="anchor" aria-hidden="true" href="#什么是基础设施即代码">#</a></h3>
+<p>基础设施即代码（Infrastructure as Code，IaC）是 DevOps 和云计算中的一种实践，它通过机器可读的配置文件来管理和配置计算基础设施，而不是通过物理硬件配置或交互式配置工具。这种方法允许在基础设施部署中进行版本控制、自动化和一致性管理，使得环境的管理、扩展和复制变得更加容易，同时减少了人为错误的风险。</p>
+<ul>
+<li><em>文章</em> <a href="https://www.hashicorp.com/resources/what-is-infrastructure-as-code">什么是基础设施即代码？为什么它很重要？</a></li>
+<li><em>文章</em> <a href="https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac">什么是基础设施即代码？</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=zWw2wuiKd5o">什么是基础设施即代码？</a></li>
+</ul>
+<h3 id="什么是-terraform">◇什么是 Terraform？<a hidden class="anchor" aria-hidden="true" href="#什么是-terraform">#</a></h3>
+<p>Terraform 是由 HashiCorp 设计的一款强大工具，旨在帮助您安全高效地设置、管理和更新跨多个云提供商的基础设施。您可以将其视为一种使用简单代码格式定义云资源（如服务器、存储和网络）的方式。这使得自动化、共享和管理您的基础设施变得更加容易，确保一切保持一致，并可以根据需要快速复制或修改。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/intro#what-is-terraform">什么是 Terraform？</a></li>
+<li><em>文章</em> <a href="https://www.varonis.com/blog/what-is-terraform">什么是 Terraform？</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=lIaUz2GAqEQ">什么是 Terraform？2 分钟了解 Terraform</a></li>
+</ul>
+<h3 id="terraform-的优势">◇Terraform 的优势<a hidden class="anchor" aria-hidden="true" href="#terraform-的优势">#</a></h3>
+<p>使用 Terraform 带来了诸多好处。它允许您将基础设施定义为代码（IaC），使其具有可读性、版本控制和可共享性。其多云支持意味着您可以跨多个云提供商和本地环境一致地管理资源。通过自动化基础设施的配置和管理，Terraform 减少了手动错误并加快了部署速度。版本控制集成确保您可以跟踪更改、在需要时回滚，并与团队成员有效协作。Terraform 使用模板和模块确保配置的一致性和跨项目和环境的可重用性，而其状态管理功能则跟踪现有资源以实现高效更新。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/intro/use-cases#use-cases">Terraform 的用例</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-use-cases">基础设施即代码的 9 个 Terraform 用例</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=0M4IvedbLJ4">使用 Terraform 的好处是什么？</a></li>
+</ul>
+<h3 id="cac-与-iac">◇CaC 与 IaC<a hidden class="anchor" aria-hidden="true" href="#cac-与-iac">#</a></h3>
+<p>CaC（配置即代码）和 IaC（基础设施即代码）都是管理基础设施资源的方式，但它们关注的重点不同。CaC 涉及设置和管理服务器内的软件和设置，如用户设置和应用程序配置。CaC 工具的示例包括 Ansible 和 Puppet。另一方面，IaC 则是管理底层基础设施，如虚拟机、网络和存储。IaC 工具的示例包括 Terraform 和 AWS CloudFormation。因此，IaC 负责设置环境，而 CaC 确保该环境中的软件正常运行。</p>
+<ul>
+<li><em>文章</em> <a href="https://medium.com/@cloudhacks_/infrastructure-as-code-iac-vs-configuration-as-code-cac-unraveling-the-differences-24fbce05ae25">IaC 与 CaC</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=rx4Uh3jv1cA">Ansible 与 Terraform：有什么区别？</a></li>
+</ul>
+<h3 id="安装-terraform">◇安装 Terraform<a hidden class="anchor" aria-hidden="true" href="#安装-terraform">#</a></h3>
+<p>要安装 Terraform，您需要从 Terraform 官方网站下载适用于您操作系统的安装包。下载后，解压缩并将可执行文件移动到系统 PATH 中包含的目录中。这样，您就可以从终端运行 Terraform 命令。有关更详细的安装说明，请参阅以下链接。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/install">安装 Terraform</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli">安装 Terraform CLI</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=LM3RLgNu7tU">在 Ubuntu 上安装 Terraform</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=ViMwnReV1A8">在 MacOS 上安装 Terraform</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=qj4cOSYr7po">在 Windows 10/11 上安装 Terraform</a></li>
+</ul>
+<h2 id="2-hashicorp-配置语言-hcl">2. HashiCorp 配置语言 (HCL)<a hidden class="anchor" aria-hidden="true" href="#2-hashicorp-配置语言-hcl">#</a></h2>
+<p>HashiCorp 配置语言 (HCL) 是由 HashiCorp 构建的一种配置语言，用于配置 HashiCorp 生态系统中的产品。HCL 以其人类可读的风格设计，旨在在通用配置语言（如 JSON 或 YAML）和高级脚本语言之间取得平衡。在 Terraform 路线图中，HCL 是编写 Terraform 配置文件的主要语言，因此它成为以描述性方式定义和提供数据中心基础设施的基础部分。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language">Terraform 语言文档</a></li>
+<li><em>开源</em> <a href="https://github.com/hashicorp/hcl">HCL 仓库</a></li>
+</ul>
+<h3 id="什么是-hcl">◇什么是 HCL？<a hidden class="anchor" aria-hidden="true" href="#什么是-hcl">#</a></h3>
+<p>HCL，即 HashiCorp 配置语言，是一种用于 DevOps 工具的人类可读语言。它用于以清晰且可管理的方式编写基础设施管理和服务编排代码。包括 Terraform 在内的多个 HashiCorp 产品使用 HCL 作为其主要配置语言。Terraform 使用 HCL 来高效地配置和管理云资源。其清晰的语法和结构有助于创建与 Terraform 路线图目标一致的资源模块和配置，从而为基础设施即代码提供一个无缝、用户友好的平台。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/syntax/configuration">语法 - 配置语言 | Terraform</a></li>
+<li><em>开源</em> <a href="https://github.com/hashicorp/hcl">hashicorp/hcl</a></li>
+</ul>
+<h3 id="基本语法">◇基本语法<a hidden class="anchor" aria-hidden="true" href="#基本语法">#</a></h3>
+<p>HashiCorp 配置语言 (HCL) 的基本语法包括定义块、属性和表达式。块是基本单元，如 <code>resource</code>、<code>module</code> 和 <code>provider</code>，由关键字标识并用花括号括起来。属性是块内的键值对，其中键是字符串，值可以是字符串、数字或其他数据类型。表达式允许嵌入变量、函数和对其他资源的引用，从而实现动态配置。</p>
+<ul>
+<li><em>开源</em> <a href="https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md">HCL 原生语法规范</a></li>
+</ul>
+<h2 id="3-项目初始化">3. 项目初始化<a hidden class="anchor" aria-hidden="true" href="#3-项目初始化">#</a></h2>
+<p>Terraform 中的项目初始化涉及设置必要的配置文件和目录结构，以便以代码形式管理基础设施。<code>terraform init</code> 命令在此过程中至关重要，因为它初始化工作目录，下载所需的提供者插件，并设置用于存储状态文件的后端配置。此命令确保项目正确配置并准备好执行后续的 Terraform 命令，为高效且有条理的基础设施管理奠定基础。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/init">Init 命令</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/cli/init">初始化 Terraform 配置</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-init">Terraform Init</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=82lsMLqWjS4">学习 Terraform：Init 命令</a></li>
+</ul>
+<h2 id="4-提供者providers">4. 提供者（Providers）<a hidden class="anchor" aria-hidden="true" href="#4-提供者providers">#</a></h2>
+<p>Terraform 提供者是用于与各种外部 API 进行交互的插件。它们通过定义资源类型和数据源来管理资源的生命周期。每个提供者都需要配置，通常包括认证信息和端点 URL。提供者在 <code>provider</code> 块中指定，单个 Terraform 项目可以使用多个提供者来管理不同平台的资源。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/providers#providers">提供者文档</a></li>
+<li><em>文章</em> <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/getting-started-terraform/providers.html">理解 Terraform 提供者</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=Kd7ddHBR2ec">什么是 Terraform 提供者以及如何使用它们？</a></li>
+</ul>
+<h3 id="terraform-注册表terraform-registry">◇Terraform 注册表（Terraform Registry）<a hidden class="anchor" aria-hidden="true" href="#terraform-注册表terraform-registry">#</a></h3>
+<p>Terraform 注册表是一个集中式的仓库，用于发现、共享和使用 Terraform 模块和提供者。它允许用户浏览和下载预构建的配置，从而快速集成最佳实践。注册表支持版本控制，确保一致的部署，并为每个模块和提供者提供详细的文档。用户还可以将自己的模块发布到注册表中，促进社区协作和重用。</p>
+<ul>
+<li><em>官方</em> <a href="https://registry.terraform.io/">Terraform 注册表</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-registry">Terraform 注册表指南</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=q4VdvS8aXnc">Terraform 注册表中的提供者和模块</a></li>
+</ul>
+<h3 id="配置提供者configuring-providers">◇配置提供者（Configuring Providers）<a hidden class="anchor" aria-hidden="true" href="#配置提供者configuring-providers">#</a></h3>
+<p>在 Terraform 中配置提供者涉及在 Terraform 配置文件的 <code>provider</code> 块中指定所需的提供者。该块包括认证凭证、区域和其他提供者特定参数等设置。必须使用 <code>terraform init</code> 初始化提供者以下载并安装必要的插件。通过为提供者设置别名，可以管理多个配置，从而在同一提供者中跨不同环境或账户管理资源。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/providers#providers">提供者概述</a></li>
+<li><em>文章</em> <a href="https://www.env0.com/blog/how-to-use-terraform-providers">如何使用 Terraform 提供者</a></li>
+</ul>
+<h3 id="版本控制versions">◇版本控制（Versions）<a hidden class="anchor" aria-hidden="true" href="#版本控制versions">#</a></h3>
+<p>在 Terraform 中指定提供者版本可确保在不同环境中保持一致和可预测的行为。不应在提供者块中使用 <code>version</code> 元参数（该参数在 Terraform 0.13 中已被弃用并移除），而应在 <code>required_providers</code> 块中定义提供者版本约束。这种方法可以防止由于提供者更新导致的意外更改或兼容性问题，从而提高基础设施管理的稳定性和可靠性。它允许您控制提供者更新的应用时间和方式，确保您的基础设施代码在预期的提供者功能下运行。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/providers/requirements#requiring-providers">要求提供者</a></li>
+</ul>
+<h2 id="5-资源resources">5. 资源（Resources）<a hidden class="anchor" aria-hidden="true" href="#5-资源resources">#</a></h2>
+<p>资源代表您基础设施的组件，例如虚拟机、存储桶、数据库或虚拟私有云。在成功初始化项目并声明所需的提供者后，您可以访问提供者资源。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/resources/syntax">资源块</a></li>
+<li><em>视频</em> <a href="https://developer.hashicorp.com/terraform/tutorials/configuration-language/resource">使用 Terraform 资源定义基础设施</a></li>
+</ul>
+<h3 id="资源行为resource-behavior">◇资源行为（Resource Behavior）<a hidden class="anchor" aria-hidden="true" href="#资源行为resource-behavior">#</a></h3>
+<p>资源行为涵盖了如何根据 Terraform 文件中指定的配置来管理、创建、更新和销毁资源。每个资源块指定所需的属性，Terraform 确保现实世界的基础设施与这些规范相匹配。如果首次编写配置，定义的资源将仅存在于配置中，直到应用后才会反映在目标平台上。应用配置时，Terraform 会生成一个执行计划，确定达到所需状态所需的操作，例如创建新资源、更新现有资源或删除不再需要的资源。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/resources/behavior">行为</a></li>
+<li><em>文章</em> <a href="https://terraformguru.com/terraform-certification-using-azure-cloud/09-Resource-Syntax-and-Behavior/">Terraform 资源语法、行为和状态</a></li>
+</ul>
+<h3 id="资源生命周期resource-lifecycle">◇资源生命周期（Resource Lifecycle）<a hidden class="anchor" aria-hidden="true" href="#资源生命周期resource-lifecycle">#</a></h3>
+<p>每个 Terraform 资源都遵循生命周期：创建、更新或重新创建、销毁。执行 <code>terraform apply</code> 时，每个资源：</p>
+<ul>
+<li>存在于配置中但不在状态中的资源将被创建</li>
+<li>存在于配置和状态中且已更改的资源将被更新</li>
+<li>存在于配置和状态中且已更改但由于 API 限制无法更新的资源将被销毁并重新创建</li>
+<li>存在于状态中但不再存在于配置中的资源将被销毁</li>
+</ul>
+<p>可以使用 <code>lifecycle</code> 元参数在一定程度上修改生命周期行为。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/resources/behavior#how-terraform-applies-a-configuration">Terraform 如何应用配置</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle">生命周期元参数</a></li>
+</ul>
+<h3 id="元参数meta-arguments">◇元参数（Meta Arguments）<a hidden class="anchor" aria-hidden="true" href="#元参数meta-arguments">#</a></h3>
+<p>Terraform 资源中的元参数提供了对资源管理和配置内交互的额外控制。</p>
+<ul>
+<li><em>文章</em> <a href="https://muditmathur121.medium.com/meta-arguments-in-terraform-aaaa6e3734e6">Terraform 中的元参数</a></li>
+<li><em>文章</em> <a href="https://www.devopsschool.com/blog/terraform-tutorials-meta-arguments/">Terraform 元参数</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=7JraLCfroyE">资源元参数</a></li>
+</ul>
+<h4 id="depends_on">depends_on<a hidden class="anchor" aria-hidden="true" href="#depends_on">#</a></h4>
+<p>Terraform 中的 <code>depends_on</code> 元参数用于显式声明资源之间的依赖关系，确保一个或多个资源仅在指定的依赖资源成功应用后才被创建或销毁。这对于管理 Terraform 隐式依赖分析无法自动检测到的资源依赖关系至关重要。通过使用 <code>depends_on</code>，您可以强制执行资源创建、修改或销毁的正确顺序，这在某些资源必须存在或配置后才能有效管理其他资源的复杂基础设施设置中特别有用。此元参数增强了 Terraform 配置的可靠性和可预测性。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/meta-arguments/depends_on">Terraform 文档 - depends_on</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-depends-on">如何使用 Terraform depends_on</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=v0Qt-ltvmXU">如何使用 Terraform depends_on 元标签？</a></li>
+</ul>
+<h4 id="count">count<a hidden class="anchor" aria-hidden="true" href="#count">#</a></h4>
+<p>Terraform 中的 <code>count</code> 元参数允许您指定要创建的特定资源的实例数量。通过将 <code>count</code> 设置为数值，Terraform 会动态生成多个资源实例，索引从 0 到 count-1。这对于管理需要多个相同或相似资源的基础设施非常有用，例如创建多个虚拟机或存储桶。使用 <code>count</code>，您可以通过根据变量或表达式设置值来有条件地创建资源，从而使您的配置更加灵活并减少冗余。每个资源实例都可以使用 <code>count.index</code> 值唯一引用，从而实现对每个资源实例的更细粒度控制和自定义。</p>
+<p>注意：您不能在同一资源上同时声明 <code>count</code> 和 <code>for_each</code>。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/meta-arguments/count">Terraform 文档 - count</a></li>
+<li><em>文章</em> <a href="https://www.terraformbyexample.com/count">Terraform 示例 - count</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=RVoIqWkN_gI">使用 count 在 Terraform 中创建条件块</a></li>
+</ul>
+<h4 id="for_each">for_each<a hidden class="anchor" aria-hidden="true" href="#for_each">#</a></h4>
+<p>Terraform 中的 <code>for_each</code> 元参数允许您基于集合或映射创建多个资源实例。与 <code>count</code> 不同，<code>for_each</code> 使用简单的整数，而 <code>for_each</code> 允许更细粒度和动态的资源创建，因为每个实例都与给定集合或映射中的特定键值对相关联。此元参数特别适用于创建具有从集合或映射的键和值派生的唯一配置的资源。通过利用 <code>for_each</code>，您可以更有效地管理资源集合，确保每个实例都可以根据其特定键进行单独引用和自定义。</p>
+<p>注意：您不能在同一资源上同时声明 <code>for_each</code> 和 <code>count</code>。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/meta-arguments/for_each">Terraform 文档 - for_each</a></li>
+<li><em>文章</em> <a href="https://www.terraformbyexample.com/for_each">Terraform 示例 - for_each</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=4qO7WK6D3cA">Terraform 循环</a></li>
+</ul>
+<h4 id="provider">provider<a hidden class="anchor" aria-hidden="true" href="#provider">#</a></h4>
+<p>Terraform 中的 <code>provider</code> 元参数指定资源使用的提供者配置，覆盖基于资源类型名称的默认提供者选择。这在需要同一提供者的多个配置的情况下非常有用，例如跨不同区域或环境管理资源。通过设置 <code>provider</code> 参数，您可以确保资源使用指定的提供者设置（由其别名标识），从而增强多提供者或多区域部署中的控制和灵活性。此元参数对于精确指导 Terraform 如何与底层基础设施提供者交互至关重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/meta-arguments/resource-provider">Terraform 文档 - provider</a></li>
+<li><em>文章</em> <a href="https://www.terraformbyexample.com/providers/">Terraform 示例 - provider</a></li>
+</ul>
+<h4 id="lifecycle">lifecycle<a hidden class="anchor" aria-hidden="true" href="#lifecycle">#</a></h4>
+<p>Terraform 中的 <code>lifecycle</code> 元参数自定义资源在创建、更新和删除期间的行为。它包括诸如 <code>create_before_destroy</code> 等设置，确保在销毁旧资源之前创建新资源，从而防止停机。<code>prevent_destroy</code> 保护资源免遭意外删除，<code>ignore_changes</code> 指定在更新期间忽略的属性，允许外部修改而不触发 Terraform 更改。这些选项提供了对资源管理的细粒度控制，确保以最小的中断和精确的资源生命周期处理来维护基础设施的所需状态。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle">Terraform 文档 - lifecycle</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-resource-lifecycle">Terraform 资源生命周期</a></li>
+<li><em>文章</em> <a href="https://dev.to/pwd9000/terraform-understanding-the-lifecycle-block-4f6e">理解生命周期块</a></li>
+</ul>
+<h2 id="6-变量variables">6. 变量（Variables）<a hidden class="anchor" aria-hidden="true" href="#6-变量variables">#</a></h2>
+<p>Terraform 使用变量使配置更加灵活和可重用。变量可以在 <code>.tf</code> 文件中声明，并通过各种方法分配值，包括默认值、命令行标志、环境变量或单独的 <code>.tfvars</code> 文件。它们支持多种数据类型，例如字符串、数字、布尔值、列表和映射。可以使用 <code>var</code> 前缀在整个配置中引用变量。该系统使基础设施即代码更加动态，并适应不同的环境或用例。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/values/variables">输入变量</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/how-to-use-terraform-variables">如何使用 Terraform 变量</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=oArutYYvQ_Y">学习如何使用 Terraform 变量</a></li>
+</ul>
+<h3 id="输入变量input-variables">◇输入变量（Input Variables）<a hidden class="anchor" aria-hidden="true" href="#输入变量input-variables">#</a></h3>
+<p>Terraform 输入变量是模块的参数，使用 <code>variable</code> 块声明。它们支持多种数据类型、默认值和描述。用户在调用模块或运行 Terraform 时提供值。通过 <code>var.&lt;name&gt;</code> 语法访问，输入变量使基础设施模板灵活且可重用，适应各种部署场景。它们可以标记为敏感以确保安全，通常定义在 <code>variables.tf</code> 文件中。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-variables">定义输入变量</a></li>
+<li><em>文章</em> <a href="https://kodekloud.com/blog/terraform-variables-explained/">Terraform 输入和输出变量解释</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch%3Fv%3D2f65JhfYmIo">Terraform 基础：输入变量</a></li>
+</ul>
+<h3 id="类型约束type-constraints">◇类型约束（Type Constraints）<a hidden class="anchor" aria-hidden="true" href="#类型约束type-constraints">#</a></h3>
+<p>Terraform 变量类型约束指定输入变量允许的数据类型。它们包括原始类型（字符串、数字、布尔值）、复杂类型（列表、集合、映射、对象）和 <code>any</code> 用于未指定类型。约束可以强制执行特定结构、嵌套类型或值范围。它们在 <code>variable</code> 块的 <code>type</code> 参数中定义，有助于及早捕获错误并确保在整个配置中正确使用变量。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/expressions/type-constraints">变量类型约束</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=hNZiZEQfV4Q">Terraform 类型约束</a></li>
+</ul>
+<h3 id="变量定义文件variable-definition-file">◇变量定义文件（Variable Definition File）<a hidden class="anchor" aria-hidden="true" href="#变量定义文件variable-definition-file">#</a></h3>
+<p>Terraform 的 <code>variables.tf</code> 文件集中了模块或配置的输入变量声明。它通常包含多个 <code>variable</code> 块，每个块定义一个输入变量及其名称、类型约束、可选的默认值和描述。该文件作为配置中使用的所有变量的单一参考点，增强了可读性和可维护性。虽然不是强制性的，但使用 <code>variables.tf</code> 是组织和记录模块预期输入的常见做法。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/configuration-language/variables#parameterize-your-configuration">参数化您的配置</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=BHWM4D2GJvI">您应该使用 tfvars 而不是 Terraform 中的变量</a></li>
+</ul>
+<h3 id="本地值local-values">◇本地值（Local Values）<a hidden class="anchor" aria-hidden="true" href="#本地值local-values">#</a></h3>
+<p>本地值可以理解为分配给任何表达式的名称，以便在您的 Terraform 模块中通过名称多次直接使用它。本地值被称为 <code>locals</code>，可以使用 <code>locals</code> 块声明。本地值可以是字面常量、资源属性、变量或其他本地值。本地值有助于定义您需要在模块中多次使用的表达式或值，因为它允许通过更新本地值轻松更新值。可以使用 <code>local</code> 参数访问本地值，如 <code>local.&lt;value_name&gt;</code>。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/values/locals">本地值</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-locals">Terraform 本地值</a></li>
+</ul>
+<h3 id="环境变量environment-variables">◇环境变量（Environment Variables）<a hidden class="anchor" aria-hidden="true" href="#环境变量environment-variables">#</a></h3>
+<p>环境变量可用于自定义 Terraform 的各个方面。您可以设置这些变量以更改 Terraform 的默认行为，例如增加详细程度、更新日志文件路径、设置工作区等。环境变量是可选的，Terraform 默认不需要它们。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/config/environment-variables">环境变量</a></li>
+</ul>
+<h3 id="验证规则validation-rules">◇验证规则（Validation Rules）<a hidden class="anchor" aria-hidden="true" href="#验证规则validation-rules">#</a></h3>
+<p>验证规则可用于为变量指定自定义验证。添加验证规则的目的是使变量符合规则。可以使用 <code>validation</code> 块添加验证规则。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/values/variables#custom-validation-rules">自定义验证规则</a></li>
+</ul>
+<h2 id="7-输出">7. 输出<a hidden class="anchor" aria-hidden="true" href="#7-输出">#</a></h2>
+<p>Terraform 输出暴露了配置或模块中的选定值，使用户或其他模块可以访问这些值。输出块通常在 <code>outputs.tf</code> 文件中定义，可以引用资源属性或其他计算值。输出在应用操作后显示，可以使用 <code>terraform output</code> 命令查询，并且在模块之间或与外部系统传递信息时至关重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/values/outputs">输出值</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-output">Terraform 输出值</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=i-Ky1Tut_2I">4 分钟学会 Terraform 输出</a></li>
+</ul>
+<h3 id="前置条件">◇前置条件<a hidden class="anchor" aria-hidden="true" href="#前置条件">#</a></h3>
+<p>Terraform 前置条件是资源或数据块中的声明性检查，用于在 Terraform 尝试创建或修改资源之前验证配置或状态。它们使用条件参数来指定逻辑测试，并使用 <code>error_message</code> 参数来自定义失败通知。前置条件有助于及早发现配置错误，执行业务规则，并确保在资源操作之前满足依赖关系。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/values/outputs#custom-condition-checks">自定义条件检查</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=55ZLu8tSnvk">在 Terraform 中使用前置条件和后置条件块</a></li>
+</ul>
+<h3 id="敏感输出">◇敏感输出<a hidden class="anchor" aria-hidden="true" href="#敏感输出">#</a></h3>
+<p>Terraform 敏感输出是用于保护 Terraform 配置中敏感信息的功能。当输出被标记为敏感时，Terraform 会在控制台输出中隐藏其值，显示为 <code>&lt;sensitive&gt;</code> 而不是实际值。这对于保护密码或 API 密钥等敏感数据至关重要。</p>
+<p>要将输出标记为敏感，请在输出块中使用 <code>sensitive</code> 参数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">output</span> <span style="color:#e6db74">&#34;database_password&#34;</span> {
+</span></span><span style="display:flex;"><span>  value     <span style="color:#f92672">=</span> <span style="color:#66d9ef">aws_db_instance</span>.<span style="color:#66d9ef">example</span>.<span style="color:#66d9ef">password</span>
+</span></span><span style="display:flex;"><span>  sensitive <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>敏感输出仍然可以通过编程方式访问，并且以明文形式写入状态文件，但其值在日志和控制台中被隐藏，以防止意外暴露。此功能有助于在与团队成员共享 Terraform 配置或输出时或在 CI/CD 管道中保持安全性。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/values/outputs#sensitive-suppressing-values-in-cli-output">在 CLI 输出中隐藏值</a></li>
+<li><em>文章</em> <a href="https://support.hashicorp.com/hc/en-us/articles/5175257151891-How-to-output-sensitive-data-with-Terraform">如何在 Terraform 中输出敏感数据</a></li>
+</ul>
+<h3 id="输出语法">◇输出语法<a hidden class="anchor" aria-hidden="true" href="#输出语法">#</a></h3>
+<p>Terraform 输出语法用于定义在应用 Terraform 配置后应可访问的值。基本语法如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">output</span> <span style="color:#e6db74">&#34;name&#34;</span> {
+</span></span><span style="display:flex;"><span>  value <span style="color:#f92672">=</span> <span style="color:#66d9ef">expression</span>
+</span></span><span style="display:flex;"><span>  description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Optional description&#34;</span>
+</span></span><span style="display:flex;"><span>  sensitive <span style="color:#f92672">=</span> <span style="color:#66d9ef">bool</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>name</code> 是输出的唯一标识符。<code>value</code> 是其结果将被输出的表达式。<code>description</code> 是可选的，用于提供上下文。<code>sensitive</code> 是一个布尔标志，用于标记敏感数据。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/configuration-language/outputs">Hashicorp 输出教程</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/values/outputs#declaring-an-output-value">声明输出值</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-output">Terraform 输出值：完整指南与示例</a></li>
+<li><em>文章</em> <a href="https://stackoverflow.com/questions/47034515/terraform-output-a-field-from-a-module">Terraform：从模块输出字段</a></li>
+</ul>
+<h2 id="8-格式化与验证">8. 格式化与验证<a hidden class="anchor" aria-hidden="true" href="#8-格式化与验证">#</a></h2>
+<p>Terraform 的 <code>format</code> 和 <code>validate</code> 是两个用于维护干净且正确的 Terraform 配置的基本命令：</p>
+<ul>
+<li>
+<p><code>terraform fmt</code> 自动将 Terraform 配置文件格式化为一致的样式。它调整缩进、对齐参数并排序块和参数。此命令有助于在团队项目中保持代码的可读性和一致性。</p>
+</li>
+<li>
+<p><code>terraform validate</code> 检查 Terraform 配置的语法和内部一致性。它验证配置在语法上是否有效，引用是否正确，以及属性名称和类型是否适当。此命令在开发过程中及早捕获错误，避免在尝试对基础设施应用更改时出现问题。</p>
+</li>
+<li>
+<p><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/validate">Terraform 验证 - 文档</a></p>
+</li>
+<li>
+<p><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/fmt">Terraform 格式化 - 文档</a></p>
+</li>
+<li>
+<p><em>文章</em> <a href="https://tech.aabouzaid.com/2020/04/validate-format-lint-and-test-terraform-iac-ci.html">验证、格式化、检查、保护和测试 Terraform IaC</a></p>
+</li>
+<li>
+<p><em>文章</em> <a href="https://spacelift.io/blog/terraform-validate">Terraform 验证命令 – 本地验证配置</a></p>
+</li>
+</ul>
+<h3 id="terraform-fmt">◇terraform fmt<a hidden class="anchor" aria-hidden="true" href="#terraform-fmt">#</a></h3>
+<p><code>terraform fmt</code> 是 Terraform 中的一个命令，用于自动将配置文件格式化为一致的样式。它调整缩进、对齐参数并按字母顺序排序块和参数。该命令会重写当前目录及其子目录中的 Terraform 配置文件（.tf 和 .tfvars）。它用于在项目和团队之间保持一致的编码风格，提高可读性并减少合并冲突。该命令可以使用 <code>-recursive</code> 选项来格式化子目录中的文件，使用 <code>-diff</code> 来显示差异，或使用 <code>-check</code> 来验证格式而不进行更改。定期使用 <code>terraform fmt</code> 被认为是 Terraform 开发工作流程中的最佳实践。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/fmt">Terraform fmt 文档</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-fmt">使用 Terraform fmt 命令格式化您的 Terraform 代码</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=kZX3KLOZvhY">如何自动格式化 Terraform 代码</a></li>
+</ul>
+<h3 id="terraform-validate">◇terraform validate<a hidden class="anchor" aria-hidden="true" href="#terraform-validate">#</a></h3>
+<p><code>validate</code> 命令帮助您在部署之前确保您的 Terraform 代码在语法上是正确的。这有助于防止由于缺少属性或不正确的依赖关系而导致的配置错误，从而节省时间、提高效率并降低成本。</p>
+<ul>
+<li><em>文章</em> <a href="https://www.env0.com/blog/terraform-validate-command-practical-examples-and-best-practices">Terraform 验证示例</a></li>
+</ul>
+<h3 id="tflint">◇TFLint<a hidden class="anchor" aria-hidden="true" href="#tflint">#</a></h3>
+<p>TFLint 是一个第三方的、可扩展的 Terraform 代码检查工具。它对 Terraform 配置进行静态分析，以检测潜在错误、强制执行最佳实践并保持代码一致性。主要功能包括：检查 <code>terraform validate</code> 可能遗漏的潜在错误，强制执行命名约定和代码样式规则，识别已弃用的语法或资源类型，并提供云提供商特定的检查。</p>
+<p>TFLint 可通过 <code>.tflint.hcl</code> 文件进行配置，并支持自定义规则。它可以集成到 CI/CD 管道中以进行自动化的代码质量检查。虽然 TFLint 不是官方的 Terraform 工具，但它在 Terraform 社区中被广泛使用，以补充内置的验证工具，并提高基础设施即代码项目中的整体代码质量和可靠性。</p>
+<ul>
+<li><em>开源</em> <a href="https://github.com/terraform-linters/tflint">TFLint 文档</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/what-is-tflint">什么是 TFLint 以及如何检查您的 Terraform 代码</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=-BKWpI4Olpw">快速技术 - TFLint</a></li>
+</ul>
+<h2 id="9-部署">9. 部署<a hidden class="anchor" aria-hidden="true" href="#9-部署">#</a></h2>
+<p>部署由 Terraform 定义的基础设施涉及以下几个关键步骤：</p>
+<ul>
+<li>
+<p>使用 <code>terraform init</code> 初始化工作目录</p>
+</li>
+<li>
+<p>使用 <code>terraform plan</code> 查看变更</p>
+</li>
+<li>
+<p>使用 <code>terraform apply</code> 应用配置</p>
+</li>
+<li>
+<p><em>官方</em> <a href="https://developer.hashicorp.com/terraform/intro/core-workflow">Terraform 核心工作流程</a></p>
+</li>
+</ul>
+<h3 id="terraform-apply">◇terraform apply<a hidden class="anchor" aria-hidden="true" href="#terraform-apply">#</a></h3>
+<p><code>terraform apply</code> 是用于实现 Terraform 配置文件中定义的变更的命令。它会创建、更新或删除指定的基础设施资源，以匹配期望的状态。在做出更改之前，它会显示类似于 <code>terraform plan</code> 的计划，并提示确认，除非使用了 <code>-auto-approve</code> 标志。<code>apply</code> 会更新状态文件以反映当前的基础设施状态，使 Terraform 能够随着时间的推移跟踪和管理资源。它会处理资源之间的依赖关系，并按正确的顺序创建它们。</p>
+<ul>
+<li><em>课程</em> <a href="https://developer.hashicorp.com/terraform/tutorials/cli/apply">应用 Terraform 配置</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/apply">Terraform Apply 文档</a></li>
+<li><em>文章</em> <a href="https://www.env0.com/blog/terraform-apply-guide-command-options-and-examples">Terraform Apply 命令：选项、示例和最佳实践</a></li>
+</ul>
+<h3 id="terraform-plan">◇terraform plan<a hidden class="anchor" aria-hidden="true" href="#terraform-plan">#</a></h3>
+<p><code>terraform plan</code> 是一个创建执行计划的命令，显示 Terraform 将对基础设施进行的更改。它会将当前状态与配置文件中定义的期望状态进行比较，并输出要创建、修改或删除的资源的详细列表。重要的是，它不会对基础设施进行任何实际更改，而是帮助在应用更改之前识别潜在问题。计划可以保存到文件中以供以后执行或审查。此命令对于在实施之前审查更改至关重要，尤其是在复杂环境中，并且通常用于代码审查和 CI/CD 管道中以验证提议的基础设施修改。虽然 <code>terraform plan</code> 提供了预览，但值得注意的是，由于外部因素或 API 限制，它不能总是预测每一个更改。</p>
+<ul>
+<li><em>课程</em> <a href="https://developer.hashicorp.com/terraform/tutorials/cli/plan">创建 Terraform 计划</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/plan">Terraform Plan 文档</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-plan">Terraform plan 命令及其工作原理</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=9v08h-Oaelo">Terraform - Terraform Plan</a></li>
+</ul>
+<h2 id="10-清理">10. 清理<a hidden class="anchor" aria-hidden="true" href="#10-清理">#</a></h2>
+<p>使用 Terraform 后的清理工作涉及删除创建的基础设施资源并管理相关的状态。主要的命令是 <code>terraform destroy</code>，它会删除当前 Terraform 配置管理的所有资源。它会显示一个销毁计划，并在继续之前要求确认。销毁后，如果不再需要状态文件，应将其删除或存档。对于部分清理，可以使用 <code>terraform state rm</code> 从状态中删除特定资源，然后运行 <code>terraform apply</code> 以删除它们。确保所有资源都被正确删除以避免不必要的成本和安全风险至关重要。在共享或生产环境中，始终仔细审查销毁计划，以防止意外删除关键资源。</p>
+<ul>
+<li><em>文章</em> <a href="https://spacelift.io/blog/how-to-destroy-terraform-resources">如何销毁 Terraform 资源</a></li>
+</ul>
+<h3 id="terraform-destroy">◇terraform destroy<a hidden class="anchor" aria-hidden="true" href="#terraform-destroy">#</a></h3>
+<p><code>terraform destroy</code> 是一个用于删除由 Terraform 配置管理的所有资源的命令。它会创建一个删除所有资源的计划，并在执行之前提示确认。此命令对于清理临时环境或停用整个基础设施非常有用。它会按照依赖关系的相反顺序删除资源，以确保正确拆除。虽然功能强大，但应谨慎使用 <code>terraform destroy</code>，尤其是在共享或生产环境中，因为如果不仔细管理，可能会导致数据丢失。它通常与 <code>terraform state</code> 命令结合使用，以更精细地控制资源删除。销毁后，Terraform 会更新状态文件以反映更改，但如果项目完全停用，则管理或删除此文件非常重要。</p>
+<ul>
+<li><em>课程</em> <a href="https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-destroy">销毁基础设施</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/destroy">Terraform Destroy 文档</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/how-to-destroy-terraform-resources">如何销毁 Terraform 资源</a></li>
+</ul>
+<h2 id="11-状态">11. 状态<a hidden class="anchor" aria-hidden="true" href="#11-状态">#</a></h2>
+<p>Terraform 状态是 Terraform 中的一个关键概念，用于跟踪您管理的基础设施的当前状态。它通常存储在一个名为 <code>terraform.tfstate</code> 的文件中，该文件将现实世界的资源映射到您的配置。此状态允许 Terraform 确定实现所需配置所需的更改。它包含敏感信息，应安全存储，通常存储在远程后端（如 S3 或 Terraform Cloud）中。可以使用 <code>terraform state</code> 命令来操作状态，例如在状态之间移动资源或从管理中移除资源。适当的状态管理对于协作工作至关重要，确保团队成员之间的一致性，并使 Terraform 能够准确地规划和应用对基础设施的更改。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/state">状态</a></li>
+<li><em>文章</em> <a href="https://developer.hashicorp.com/terraform/language/state/purpose">Terraform 状态的目的</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=UDBVCzg2IRo">管理 Terraform 状态文件</a></li>
+</ul>
+<h3 id="远程状态">◇远程状态<a hidden class="anchor" aria-hidden="true" href="#远程状态">#</a></h3>
+<p>Terraform 远程状态指的是将状态文件存储在共享的集中位置，而不是本地。这种方法支持团队协作，提高安全性，并确保状态一致性。常见的远程后端包括云存储服务（如 AWS S3、Azure Blob Storage）或托管服务（如 Terraform Cloud）。远程状态允许多个团队成员安全地在同一基础设施上工作，防止状态文件丢失，并提供锁定机制以避免并发修改。它在 Terraform 配置的后端块中进行配置。远程状态还可以用于在不同 Terraform 配置之间共享输出，从而实现模块化基础设施设计。虽然初始设置较为复杂，但远程状态被认为是生产环境和基于团队的 Terraform 工作流程的最佳实践。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/state/remote">远程状态</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/state/remote-state-data">terraform_remote_state 数据源</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=jSoMQCBxp7E">Terraform 远程状态后端解释</a></li>
+</ul>
+<h3 id="状态锁定">◇状态锁定<a hidden class="anchor" aria-hidden="true" href="#状态锁定">#</a></h3>
+<p>Terraform 状态锁定是一种机制，用于防止对同一状态文件的并发修改，避免潜在的冲突和数据损坏。启用后，Terraform 在执行可能修改状态的操作（如 <code>apply</code> 或 <code>destroy</code>）之前会获取锁。如果锁不可用，Terraform 会根据配置等待或失败。状态锁定由许多后端类型自动支持，包括带有 DynamoDB 的 S3、Azure Blob Storage 和 Terraform Cloud。对于团队环境来说，状态锁定至关重要，因为多个用户或自动化流程可能会尝试同时进行更改。虽然对数据完整性至关重要，但实施适当的锁管理以防止锁阻塞操作也很重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/state/locking">状态 - 锁定</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/state/backends">状态存储和锁定</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=QdDCUpggmrw">Terraform - 状态锁定</a></li>
+</ul>
+<h3 id="导入现有资源">◇导入现有资源<a hidden class="anchor" aria-hidden="true" href="#导入现有资源">#</a></h3>
+<p>Terraform 状态导入是一个命令，用于将现有资源纳入 Terraform 管理。它允许您将 Terraform 之外创建的资源（例如手动创建或由其他工具创建）添加到 Terraform 状态中。该命令接受两个主要参数：Terraform 资源地址和现实世界的资源标识符。执行时，它会将资源添加到状态文件中，而不会修改实际的基础设施。这对于在已有资源的环境中采用 Terraform 或从状态与现实不一致的情况中恢复非常有用。导入后，您需要在 Terraform 文件中编写相应的配置以匹配导入的资源。</p>
+<p>在 Terraform v1.5.0 及更高版本中，您还可以在任何 Terraform 配置文件中创建 <code>import</code> 块。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/import">Terraform 导入命令</a></li>
+<li><em>文章</em> <a href="https://terrateam.io/blog/terraform-import">Terraform 导入：什么是导入以及如何使用</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=znfh_00EDZ0">探索 Terraform 1.5 中的导入块</a></li>
+</ul>
+<h3 id="拆分状态文件">◇拆分状态文件<a hidden class="anchor" aria-hidden="true" href="#拆分状态文件">#</a></h3>
+<p>拆分 Terraform 状态文件涉及将大型状态拆分为更小、更易管理的部分。这通常通过使用 Terraform 工作区或将资源组织到具有自己状态文件的单独模块中来完成。此过程有助于管理复杂的基础设施，提高性能，并允许更细粒度的访问控制。要拆分现有状态，可以使用 <code>terraform state mv</code> 在状态之间移动资源，或在新配置中使用 <code>terraform state rm</code> 后跟 <code>terraform import</code>。这种方法对于大型项目非常有益，使团队能够独立处理基础设施的不同部分。然而，它需要仔细规划以管理拆分状态之间的依赖关系。适当的状态拆分可以带来更高效的工作流程、更轻松的故障排除以及更好地与大规模 Terraform 部署中的组织结构保持一致。</p>
+<ul>
+<li><em>文章</em> <a href="https://support.hashicorp.com/hc/en-us/articles/7955227415059-How-to-Split-State-Files">如何拆分状态文件</a></li>
+<li><em>文章</em> <a href="https://www.shebanglabs.io/moving-terraform-resources-between-different-states/">介绍 terraform-state-split</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=5TfgdKXr45I">使用多个状态组织 Terraform</a></li>
+</ul>
+<h3 id="版本控制">◇版本控制<a hidden class="anchor" aria-hidden="true" href="#版本控制">#</a></h3>
+<p>Terraform 状态版本控制指的是随着时间的推移维护状态文件的多个版本的做法。虽然 Terraform 本身不提供内置的版本控制，但通常通过支持版本控制的后端配置（如启用版本控制的 Amazon S3 或 Terraform Cloud）来实现。这种方法允许团队跟踪更改，在需要时回滚到以前的状态，并维护基础设施修改的审计跟踪。版本控制有助于从意外的状态损坏或删除中恢复，并了解基础设施随时间的演变。它被认为是生产环境的最佳实践，增强了灾难恢复能力，并提供了对基础设施变化的洞察。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cloud-docs/api-docs/state-versions">状态版本 API</a></li>
+</ul>
+<h3 id="敏感数据">◇敏感数据<a hidden class="anchor" aria-hidden="true" href="#敏感数据">#</a></h3>
+<p>Terraform 状态文件通常包含敏感数据，如密码、API 密钥和其他在资源配置中使用的机密信息。这些数据以明文形式存储在状态文件中，如果文件被泄露，将带来安全风险。为了缓解这一问题，Terraform 提供了几种方法：将变量标记为敏感以防止它们出现在日志中，使用加密的远程后端存储状态，实施严格的状态文件访问控制，以及利用外部机密管理系统。将状态文件视为敏感文件并相应地保护它们至关重要。对于高度敏感的环境，一些团队选择将某些机密完全存储在 Terraform 之外，在运行时注入它们。定期审计状态文件以查找敏感信息并实施适当的安全措施对于维护 Terraform 部署中基础设施机密的机密性至关重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/state/sensitive-data">状态中的敏感数据</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/plugin/best-practices/sensitive-state">处理状态中的敏感值</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=yLc1YkB7DFo">Terraform — 保护敏感数据</a></li>
+</ul>
+<h2 id="12-状态管理的最佳实践">12. 状态管理的最佳实践<a hidden class="anchor" aria-hidden="true" href="#12-状态管理的最佳实践">#</a></h2>
+<p>Terraform 状态管理的最佳实践侧重于安全性、一致性和协作。</p>
+<ul>
+<li>将状态文件远程存储在加密的、版本控制的后端（如 S3 或 Terraform Cloud）中，以支持团队访问并增强安全性。</li>
+<li>实施状态锁定以防止并发修改。为不同环境使用工作区或单独的状态文件。</li>
+<li>定期备份状态文件并启用版本控制以实现回滚功能。</li>
+<li>避免直接在状态中存储敏感数据；相反，使用机密管理工具。</li>
+<li>将状态文件与 Terraform 配置分开存储在版本控制中。</li>
+<li>使用状态子命令进行维护和故障排除。实施访问控制以限制状态文件的访问。</li>
+<li>定期审查并清理状态中未使用的资源。</li>
+</ul>
+<p>这些实践有助于维护安全、高效且可管理的 Terraform 工作流程，特别是在团队环境和复杂的基础设施中。</p>
+<ul>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-state">管理 Terraform 状态 – 最佳实践与示例</a></li>
+<li><em>文章</em> <a href="https://www.cloudthat.com/resources/blog/best-practices-for-terraform-state-file-management">Terraform 状态文件管理的最佳实践</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=keiIyarEKf8">管理 Terraform 状态文件 - 您有哪些选择？</a></li>
+</ul>
+<h2 id="13-检查修改状态">13. 检查/修改状态<a hidden class="anchor" aria-hidden="true" href="#13-检查修改状态">#</a></h2>
+<p>Terraform 提供了检查和修改状态的工具，使得可以在不改变实际基础设施的情况下管理跟踪的资源。这些功能允许用户以人类可读的格式查看当前状态，列出状态中的所有资源，并获取特定资源的详细信息。对于状态修改，Terraform 提供了将资源在状态中移动或移动到不同状态文件的方法，从状态中移除资源而不删除实际资源，以及更新状态以匹配实际基础设施。这些工具对于调和 Terraform 状态与实际基础设施之间的差异以及管理不同 Terraform 配置或工作区中的资源至关重要。然而，状态修改应谨慎执行，因为不当的更改可能导致状态与实际基础设施之间的不一致。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/state/inspect">检查状态</a></li>
+<li><em>文章</em> <a href="https://meriemterki.medium.com/how-to-manage-terraform-state-a-step-by-step-guide-b615bd6ee0de">如何管理 Terraform 状态：逐步指南</a></li>
+</ul>
+<h3 id="graph">◇graph<a hidden class="anchor" aria-hidden="true" href="#graph">#</a></h3>
+<p><code>terraform graph</code> 命令生成配置或执行计划的视觉表示。它以 DOT 格式创建资源及其依赖关系的图，可以使用 Graphviz 等工具将其转换为图像。这种视觉辅助工具帮助开发人员理解复杂的资源关系，识别资源排序中的潜在问题，并可视化其基础设施的整体结构。该图可以显示 Terraform 配置的不同方面，包括资源依赖关系、数据流和模块关系。虽然主要用于调试和文档目的，但该命令在向利益相关者展示基础设施设计或用于教育目的时也非常有价值。在大型复杂项目中，理解资源相互依赖关系可能具有挑战性，因此该命令特别有用。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/graph">graph 命令</a></li>
+<li><em>开源</em> <a href="https://gitlab.com/graphviz/graphviz">Graphviz</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-graph">如何使用 Terraform Graph 命令生成图像</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=YbnBstMyVEI">Terraform — 资源图</a></li>
+</ul>
+<h3 id="show">◇show<a hidden class="anchor" aria-hidden="true" href="#show">#</a></h3>
+<p><code>terraform show</code> 命令以人类可读的格式显示当前状态或保存的计划文件。当不带参数使用时，它会显示当前管理的基础设施状态，包括所有资源及其属性。如果给定保存的计划文件的路径，它会显示应用该计划时将进行的更改。该命令对于检查基础设施的当前状态、验证特定资源的详细信息或在应用之前审查计划更改非常有用。它提供了对 Terraform 管理资源的全面概述，对于调试、审计和理解基础设施的当前状态非常有价值。输出包括敏感信息（如果存在），因此在非安全环境中共享或显示结果时应小心。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/show">Terraform show</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/state/show">Terraform state show</a></li>
+</ul>
+<h3 id="list">◇list<a hidden class="anchor" aria-hidden="true" href="#list">#</a></h3>
+<p><code>terraform list</code> 命令用于显示 Terraform 状态中的资源列表。它提供了当前由 Terraform 管理的所有资源的快速概览。在处理大型或复杂的基础设施时，该命令特别有用，允许开发人员快速查看哪些资源由 Terraform 控制。输出包括每个管理资源的资源类型和名称，便于识别基础设施的特定元素。它通常与其他状态操作命令结合使用，以验证状态内容或识别资源以进行进一步检查或修改。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/state/list">Terraform State List</a></li>
+</ul>
+<h3 id="output">◇output<a hidden class="anchor" aria-hidden="true" href="#output">#</a></h3>
+<p><code>terraform output</code> 命令用于从 Terraform 状态中提取输出变量的值。它允许您在应用后查看 Terraform 配置中定义的输出值。该命令对于检索有关基础设施的信息（如 IP 地址、资源 ID 或计算值）非常有用，这些信息可以用于脚本或传递给其他系统。当不带参数运行时，它会显示所有输出。您可以指定特定的输出名称以检索特定值。该命令支持不同的输出格式，包括 JSON，便于与其他工具或工作流集成。在 CI/CD 管道中或当 Terraform 作为更大自动化过程的一部分使用时，该命令特别有价值。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/output">Terraform output 命令</a></li>
+<li><em>文章</em> <a href="https://learning-ocean.com/tutorials/terraform/terraform-output/">Terraform output</a></li>
+</ul>
+<h3 id="rm">◇rm<a hidden class="anchor" aria-hidden="true" href="#rm">#</a></h3>
+<p><code>terraform state rm</code> 命令用于从 Terraform 状态中移除资源而不销毁实际基础设施。当您希望停止使用 Terraform 管理某个资源而不删除它，或者需要将资源移动到不同的状态文件时，该命令非常有用。它接受一个或多个资源地址作为参数，指定要从状态中移除的资源。移除后，Terraform 将不再跟踪或管理这些资源，但它们将继续存在于您的基础设施中。应谨慎使用此命令，因为它可能导致 Terraform 配置与实际基础设施状态之间的不一致。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/state/rm">Terraform rm 命令</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-state-rm">Terraform State Rm：如何从状态文件中移除资源</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=uK__Ls6an1c">如何从 Terraform 状态文件中移除资源 | terraform state rm 示例</a></li>
+</ul>
+<h3 id="mv">◇mv<a hidden class="anchor" aria-hidden="true" href="#mv">#</a></h3>
+<p><code>terraform state mv</code> 命令用于在 Terraform 状态内或不同状态文件之间移动资源。它允许在不修改实际基础设施的情况下重新组织状态。该命令在重构 Terraform 配置、在模块之间移动资源或将大型状态文件拆分为较小的文件时非常有用。它接受两个参数：资源的源地址和目标地址。该命令更新对移动资源的所有引用，确保未来的操作正确针对新位置的资源。在重构复杂项目或适应不断变化的组织需求时，此功能特别有价值。然而，应谨慎使用，因为错误的移动可能导致状态不一致。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/state/mv">Terraform State mv</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/state/move">移动资源</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=i10IMXn3l0o">Terraform — Terraform State MV</a></li>
+</ul>
+<h3 id="-replace-选项在-apply-中">◇-replace 选项在 apply 中<a hidden class="anchor" aria-hidden="true" href="#-replace-选项在-apply-中">#</a></h3>
+<p>Terraform 中的 <code>-replace</code> 标志与 <code>apply</code> 或 <code>plan</code> 命令一起使用，通过污染资源来强制替换特定资源。该标志指示 Terraform 删除并重新创建指定的资源，而不是就地更新它。当您需要完全重新生成资源时（例如某些属性在创建后无法修改时），该标志非常有用。通常当 Terraform 无法自动检测到资源需要替换时，或者当您希望强制替换以进行测试或故障排除时，会使用该标志。虽然功能强大，但应谨慎使用该标志，特别是在有状态资源上，因为它可能导致数据丢失。通常在就地更新不足以实现资源的所需配置状态时使用。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/state/taint">强制重新创建资源</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-taint">Terraform Taint, Untaint, Replace – 如何使用（示例）</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=v_T1fuYGjV0">Terraform Taint 实际上不好 - 使用 Replace 代替</a></li>
+</ul>
+<h3 id="state-pull--push">◇state pull / push<a hidden class="anchor" aria-hidden="true" href="#state-pull--push">#</a></h3>
+<p><code>terraform state pull</code> 和 <code>terraform state push</code> 命令用于管理远程后端中的 Terraform 状态。<code>pull</code> 命令从配置的后端检索当前状态并将其输出到 stdout，允许检查或备份远程状态。它对于调试或执行手动状态操作非常有用。</p>
+<p><code>push</code> 命令则相反，它将本地状态文件上传到配置的后端，覆盖现有的远程状态。通常用于恢复备份或手动调和状态差异。应谨慎使用这两个命令，特别是 <code>push</code>，因为它们可能会覆盖重要的状态信息。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/state/pull">命令 - State pull</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/state/push">命令 - State push</a></li>
+<li><em>文章</em> <a href="https://support.hashicorp.com/hc/en-us/articles/360001151948-Migrate-Workspace-State-Using-Terraform-State-Push-Pull">使用 Terraform State Push / Pull 迁移工作区状态</a></li>
+</ul>
+<h3 id="state-replace-provider">◇state replace-provider<a hidden class="anchor" aria-hidden="true" href="#state-replace-provider">#</a></h3>
+<p>Terraform 中的 <code>state replace-provider</code> 命令用于更新状态文件中的提供者信息而不改变实际基础设施。该命令在从一个提供者迁移到另一个提供者时特别有用，或者在更新到涉及提供者命名空间更改的提供者新主要版本时非常有用。它允许用户更改状态文件中与资源关联的提供者，有效地告诉 Terraform 在未来的操作中使用不同的提供者来管理这些资源。该命令对于在提供者过渡或升级期间保持状态一致性至关重要，特别是在大规模基础设施中。虽然它不会修改实际资源，但它会更新 Terraform 对哪个提供者应被用于管理这些资源的理解，从而在不要求资源重新创建的情况下促进提供者的顺利迁移。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/state/replace-provider">命令 - state replace-provider</a></li>
+</ul>
+<h3 id="state-force-unlock">◇state force-unlock<a hidden class="anchor" aria-hidden="true" href="#state-force-unlock">#</a></h3>
+<p>Terraform 中的 <code>state force-unlock</code> 命令用于手动释放卡住的状态锁。状态锁定是一种防止对同一状态进行并发操作的机制，但有时由于崩溃或网络问题，锁可能无法正确释放。该命令允许管理员强制移除锁，从而使进一步的 Terraform 操作得以继续。应极其谨慎地使用该命令，因为如果多个用户同时尝试修改状态，可能会导致状态损坏。在使用 <code>force-unlock</code> 之前，必须确保没有其他 Terraform 操作正在进行。该命令通常是解决锁定问题的最后手段，只有在确定锁被错误持有且没有冲突操作正在进行时才能使用。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cli/commands/force-unlock">命令: force-unlock</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-force-unlock">Terraform force-unlock 命令</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=qVs9pLaXSeg">Terraform — Force Unlock</a></li>
+</ul>
+<h2 id="14-模块">14. 模块<a hidden class="anchor" aria-hidden="true" href="#14-模块">#</a></h2>
+<p>Terraform 模块是封装了一组资源、其配置及其相互连接的可重用组件。它们允许将 Terraform 代码组织成逻辑上独立的单元，这些单元可以在不同项目之间或同一项目内共享和重用。模块促进了代码的可重用性、可维护性和基础设施部署的一致性。它们可以接受输入变量、生成输出值，并且可以嵌套在其他模块中。通过使用模块，团队可以创建标准化的基础设施组件，强制执行最佳实践，并简化复杂的配置。模块可以从本地目录、版本控制系统或 Terraform Registry 等公共注册表中获取。有效使用模块可以显著减少代码重复，改善基础设施管理，并实现可扩展、可维护的 Terraform 配置。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/modules">模块概述 - 配置语言 | Terraform</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/modules">Terraform 模块</a></li>
+<li><em>官方</em> <a href="https://registry.terraform.io/browse/modules">模块 - Terraform Registry</a></li>
+</ul>
+<h3 id="根模块与子模块">◇根模块与子模块<a hidden class="anchor" aria-hidden="true" href="#根模块与子模块">#</a></h3>
+<p>在 Terraform 中，根模块和子模块指的是配置中模块层次结构的不同级别。根模块是执行 Terraform 的工作目录中的主要配置文件集。它是 Terraform 项目的入口点，通常调用其他模块。子模块则是被根模块或其他模块调用的模块。它们是封装特定资源配置的可重用组件。根模块定义了整体架构，并通过组合子模块来创建完整的基础设施。子模块专注于特定的、可重复的任务或资源组。这种层次结构有助于更好地组织、重用和维护 Terraform 代码，使复杂的基础设施能够分解为可管理的模块化组件。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/modules#the-root-module">根模块</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/modules#child-modules">子模块</a></li>
+<li><em>文章</em> <a href="https://stackoverflow.com/questions/77671412/what-is-the-difference-between-terraform-module-and-child-module">Terraform “模块” 和 “子模块” 的区别是什么</a></li>
+</ul>
+<h3 id="已发布模块的使用">◇已发布模块的使用<a hidden class="anchor" aria-hidden="true" href="#已发布模块的使用">#</a></h3>
+<p>在 Terraform 中使用已发布的模块涉及将预构建的、通常由社区贡献的模块集成到您的基础设施代码中。这些模块通常通过 Terraform Registry 或其他版本控制系统提供。它们为常见的基础设施组件提供了现成的配置，节省了时间并促进了最佳实践。要使用已发布的模块，您需要在 Terraform 配置中指定其来源（通常是 URL 或注册表路径）和版本。然后，您可以通过传递输入变量来配置模块。已发布的模块范围从简单的资源包装器到复杂的多资源配置。它们提供了减少开发时间、标准化实现和社区测试解决方案等好处。然而，在生产环境中使用任何已发布的模块之前，务必审查并理解其内容，以确保它满足您的特定要求和安全标准。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/registry/modules/publish">发布模块</a></li>
+<li><em>开源</em> <a href="https://registry.terraform.io/browse/modules">Terraform Registry - 模块</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=9vBp1D3myH8">Terraform - 发布模块</a></li>
+</ul>
+<h3 id="创建本地模块">◇创建本地模块<a hidden class="anchor" aria-hidden="true" href="#创建本地模块">#</a></h3>
+<p>在 Terraform 中创建本地模块涉及将一组相关资源组织到项目中的可重用包中。要创建本地模块，通常需要在项目结构中创建一个新目录，并将 Terraform 配置文件（<code>.tf</code>）放入其中。这些文件定义了模块的资源、变量和输出。然后，可以通过模块块从根配置中调用该模块，指定模块目录的本地路径。本地模块对于封装和重用项目中的常见基础设施模式非常有用，可以提高代码的组织性和可维护性。它们可以接受输入变量以进行自定义，并提供输出以供调用配置使用。本地模块特别适用于将复杂的基础设施分解为可管理的逻辑组件，并在项目中标准化资源配置。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/modules/module-create">构建和使用本地模块</a></li>
+<li><em>文章</em> <a href="https://blog.gruntwork.io/how-to-create-reusable-infrastructure-with-terraform-modules-25526d65f73d">如何使用 Terraform 模块创建可重用的基础设施</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=OeL2AlsdNaQ">在 Terraform 中创建模块</a></li>
+</ul>
+<h3 id="输入--输出">◇输入 / 输出<a hidden class="anchor" aria-hidden="true" href="#输入--输出">#</a></h3>
+<p>Terraform 中的模块输入和输出促进了数据流入和流出模块，从而实现自定义和数据共享。输入使用模块内的变量块定义，并允许在使用模块时自定义其行为。它们可以具有默认值和类型约束。</p>
+<p>调用模块时，输入作为参数提供。输出使用输出块定义，暴露模块资源的特定值，使其可用于调用模块。这允许在模块之间传递数据或将数据用于配置的其他部分。输出可以包括计算值、资源属性或任何 Terraform 表达式。正确设计的输入和输出对于创建灵活、可重用的模块至关重要，这些模块可以轻松集成到各种配置中。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/modules/syntax#accessing-module-output-values">访问模块输出值</a></li>
+</ul>
+<h3 id="模块最佳实践">◇模块最佳实践<a hidden class="anchor" aria-hidden="true" href="#模块最佳实践">#</a></h3>
+<p>Terraform 模块最佳实践侧重于创建可重用、可维护和可扩展的基础设施组件。</p>
+<ul>
+<li>
+<p>模块应具有单一、明确的目的，并设计为具有灵活性，使用输入变量进行自定义。</p>
+</li>
+<li>
+<p>输出应精心选择，以提供必要的信息，而不过度暴露内部细节。</p>
+</li>
+<li>
+<p>对模块进行版本控制，并使用语义版本控制来管理更改。</p>
+</li>
+<li>
+<p>保持模块小巧且专注，遵循单一职责原则。</p>
+</li>
+<li>
+<p>彻底记录您的模块，包括使用示例和输入/输出描述。</p>
+</li>
+<li>
+<p>在模块之间使用一致的命名约定和结构。</p>
+</li>
+<li>
+<p>在隔离和作为更大系统的一部分时测试模块。</p>
+</li>
+<li>
+<p>避免硬编码可能在不同环境之间变化的值。</p>
+</li>
+<li>
+<p>考虑对复杂结构使用嵌套模块，但要注意过度嵌套。</p>
+</li>
+<li>
+<p>定期审查和重构模块，以纳入改进并保持最佳实践。</p>
+</li>
+<li>
+<p><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/modules/module#module-best-practices">模块最佳实践</a></p>
+</li>
+<li>
+<p><em>文章</em> <a href="https://www.env0.com/blog/terraform-modules">Terraform 模块指南：最佳实践与示例</a></p>
+</li>
+<li>
+<p><em>视频</em> <a href="https://www.youtube.com/watch?v=byzwaTng3ac">模块化 Terraform 项目的最佳实践 | PlatformCon 2023</a></p>
+</li>
+</ul>
+<h2 id="15-配置器">15. 配置器<a hidden class="anchor" aria-hidden="true" href="#15-配置器">#</a></h2>
+<p>Terraform 中的配置器用于在本地或远程机器上执行脚本或其他操作，作为资源创建或销毁的一部分。它们允许执行超出 Terraform 声明性模型的配置管理任务。配置器可以在资源创建后运行脚本、上传文件或在资源上执行其他工具。常见类型包括 local-exec（在运行 Terraform 的机器上运行命令）和 remote-exec（在远程资源上运行命令）。虽然功能强大，但应谨慎使用配置器，因为它们可能使 Terraform 运行变得不那么可预测和幂等。它们通常被视为当 Terraform 资源或提供者功能不足时的最后手段。最佳实践建议使用专用的配置管理工具（如 Ansible 或 Chef），而不是过度依赖配置器。使用时，配置器应设计为幂等的，并优雅地处理潜在故障。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax">配置器 - Terraform</a></li>
+</ul>
+<h3 id="何时使用">◇何时使用？<a hidden class="anchor" aria-hidden="true" href="#何时使用">#</a></h3>
+<p>Terraform 中的配置器应谨慎使用，主要在其他声明性选项不足时使用。它们适用于无法通过 Terraform 资源配置或数据源完成的任务。常见场景包括在新创建的服务器上运行初始化脚本、安装提供者特定资源未涵盖的软件或执行一次性设置任务。配置器对于引导配置管理工具或处理 Terraform 无法直接管理的复杂、有状态操作非常有用。然而，由于它们可能使 Terraform 运行变得不那么可预测和难以管理，因此应被视为最后的手段。尽可能优先使用 cloud-init 脚本、自定义镜像或单独的配置管理工具。当必须使用配置器时，应将其设计为幂等的，并对故障具有弹性，以保持 Terraform 的期望状态一致性。</p>
+<ul>
+<li><em>文章</em> <a href="https://thomasthornton.cloud/2023/05/11/my-thoughts-on-why-you-should-use-terraform-provisioners-as-a-final-option/">为什么您应该将 Terraform 配置器作为最后的选择</a></li>
+<li><em>文章</em> <a href="https://k21academy.com/terraform-iac/terraform-provisioners/">为什么 Terraform 配置器是最后的手段？</a></li>
+</ul>
+<h3 id="创建--销毁时间">◇创建 / 销毁时间<a hidden class="anchor" aria-hidden="true" href="#创建--销毁时间">#</a></h3>
+<p>Terraform 中的创建和销毁时间配置器用于在资源生命周期的特定点执行操作。创建时间配置器在资源创建后运行，而销毁时间配置器在资源销毁前运行。创建时间配置器对于初始化新创建的服务器、安装软件或配置应用程序等任务非常有用。销毁时间配置器通常用于清理任务，例如在删除之前从负载均衡器中注销服务器。两种类型都可以在资源块中指定。</p>
+<p>失败的创建时间配置器将导致资源创建失败，可能会使资源处于不完整状态。失败的销毁时间配置器不会阻止资源销毁，但可能会使外部资源处于不一致状态。由于它们可能影响 Terraform 管理状态一致性的能力，因此应谨慎使用这两种类型，并设计为幂等的和容错的。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax#creation-time-provisioners">创建时间配置器</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax#destroy-time-provisioners">销毁时间配置器</a></li>
+<li><em>官方</em> <a href="https://support.hashicorp.com/hc/en-us/articles/11119084989587-How-to-Terraform-Destroy-time-Provisioners">如何：Terraform 销毁时间配置器</a></li>
+</ul>
+<h3 id="文件配置器">◇文件配置器<a hidden class="anchor" aria-hidden="true" href="#文件配置器">#</a></h3>
+<p>Terraform 文件配置器用于将文件或目录从运行 Terraform 的机器复制到新创建的资源。它对于上传配置文件、脚本或其他必要数据到远程系统非常有用。文件配置器可以复制单个文件或递归复制目录。它支持源和内容参数，允许基于文件或内联内容传输。此配置器通常与 remote-exec 配置器结合使用，以执行上传的脚本。虽然对于简单的文件传输很方便，但在处理敏感数据时应考虑安全影响。对于更复杂或大规模的文件管理任务，通常首选专用的配置管理工具。文件配置器最适合用于引导或配置新创建资源所需的小型、简单的文件传输。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/resources/provisioners/file">Terraform 文件配置器</a></li>
+<li><em>文章</em> <a href="https://learning-ocean.com/tutorials/terraform/terraform-file-provisioner/">文件配置器</a></li>
+</ul>
+<h3 id="local-exec-配置器">◇local-exec 配置器<a hidden class="anchor" aria-hidden="true" href="#local-exec-配置器">#</a></h3>
+<p>Terraform 中的 local-exec 配置器允许在资源创建后在运行 Terraform 的机器上执行本地命令。它对于需要在本地而不是远程资源上执行的任务非常有用。此配置器可以运行脚本、更新本地文件或基于云资源的创建触发本地进程。常见用例包括更新本地清单、触发本地通知或运行与新创建资源交互的本地脚本。虽然功能强大，但应谨慎使用，因为它可能使 Terraform 操作依赖于本地环境。local-exec 配置器不会影响资源本身，也不会在 Terraform 的状态中跟踪，因此设计这些命令时应使其具有幂等性。它最适合不需要复杂错误处理或状态管理的简单本地操作。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/resources/provisioners/local-exec">local-exec 配置器</a></li>
+<li><em>文章</em> <a href="https://learning-ocean.com/tutorials/terraform/terraform-local-exec-provisioner/">local-exec 配置器</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=2dVq8L2LBc0">Terraform - local-exec</a></li>
+</ul>
+<h3 id="remote-exec-配置器">◇remote-exec 配置器<a hidden class="anchor" aria-hidden="true" href="#remote-exec-配置器">#</a></h3>
+<p>Terraform 中的 remote-exec 配置器用于在远程资源创建后直接调用脚本。此配置器通常用于软件安装、配置或新创建资源所需的任何其他设置任务。它可以在远程系统上运行命令列表或脚本文件。remote-exec 配置器需要一个连接块来指定如何访问远程系统，通常使用 SSH 访问 Linux 或 WinRM 访问 Windows。虽然对于初始设置任务非常有用，但通常建议谨慎使用此配置器，并首选更强大的配置管理工具来处理复杂或持续的管理任务。应注意确保 remote-exec 运行的脚本具有幂等性，并优雅地处理潜在的网络问题或其他故障。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec">remote-exec 配置器</a></li>
+<li><em>文章</em> <a href="https://learning-ocean.com/tutorials/terraform/terraform-remote-exec-provisioner/">Terraform remote-exec 配置器</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=kjDXbGeLvRw">Terraform - remote-exec</a></li>
+</ul>
+<h3 id="自定义配置器">◇自定义配置器<a hidden class="anchor" aria-hidden="true" href="#自定义配置器">#</a></h3>
+<p>Terraform 自定义配置器允许开发人员扩展 Terraform 的配置功能，超越内置选项。这些配置器使用 Go 编程语言和 Terraform 插件 SDK 创建。自定义配置器可以执行专门的任务，以满足特定的基础设施需求或组织要求。它们遵循与内置配置器相同的生命周期，在资源创建或销毁期间执行。</p>
+<p>开发自定义配置器需要对 Terraform 架构和 Go 编程有深入的理解。它们对于将 Terraform 与专有系统集成或实现复杂的、组织特定的配置逻辑非常有用。然而，应谨慎对待自定义配置器，因为它们增加了维护开销，并可能使 Terraform 升级复杂化。在许多情况下，除非有强烈的自定义功能需求，否则最好使用现有的配置器或单独的配置管理工具。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax">Terraform 配置器</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-provisioners">Terraform 配置器 - 为什么应避免使用它们</a></li>
+</ul>
+<h2 id="16-数据源">16. 数据源<a hidden class="anchor" aria-hidden="true" href="#16-数据源">#</a></h2>
+<p>Terraform 数据源允许从外部系统或现有资源中检索信息，以便在 Terraform 配置中使用。它们提供了一种查询和获取数据的方式，这些数据可以用于资源定义，使配置更具动态性和适应性。数据源不创建或管理资源；相反，它们读取现有数据。常见用途包括获取 AMI ID、查找 IP 范围或检索有关现有基础设施组件的信息。数据源在 Terraform 配置文件中使用数据块定义，并可以接受参数以过滤或指定请求的数据。它们使 Terraform 能够与现有基础设施或外部系统集成，促进更灵活和上下文感知的资源管理。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/data-sources">Terraform 数据源</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-data-sources-how-they-are-utilised">Terraform 数据源 – 如何使用它们</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=Y92Q5nW5-5g">Terraform 中的数据源</a></li>
+</ul>
+<h2 id="17-模板文件">17. 模板文件<a hidden class="anchor" aria-hidden="true" href="#17-模板文件">#</a></h2>
+<p>Terraform 模板文件是用于创建可自定义、可重用的配置片段的强大功能。这些文件通常具有 <code>.tftpl</code> 扩展名，包含可以在运行时用变量填充的占位符。Terraform 使用 <code>templatefile</code> 函数处理这些文件，用实际值替换变量。这种方法对于生成配置文件、脚本或任何需要参数化的基于文本的内容非常有用。模板文件增强了 Terraform 配置的模块化，并减少了重复。它们通常用于创建 EC2 实例的用户数据脚本、生成复杂的 JSON 配置或准备任何需要动态内容的基于文本的资源。<code>templatefile</code> 函数读取文件内容并使用给定的一组变量渲染其模板语法，从而实现动态和灵活的资源配置。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/functions/templatefile">templatefile 函数</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-templates">什么是 Terraform 模板？</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=cRYYFCekOIk">在 Terraform 中使用 templatefile</a></li>
+</ul>
+<h2 id="18-工作区">18. 工作区<a hidden class="anchor" aria-hidden="true" href="#18-工作区">#</a></h2>
+<p>Terraform 工作区允许在单个配置中管理多个不同的基础设施资源集。它们提供了一种为同一配置创建单独状态实例的方式，使用户能够维护不同的环境（如开发、 staging 和生产）或在不影响主要基础设施的情况下进行更改实验。每个工作区都有自己的状态文件，允许对资源进行隔离管理。工作区特别适用于在将更改应用到生产之前进行测试，或管理不同环境之间的配置差异。可以使用 Terraform CLI 命令轻松切换工作区。对于更显著的环境差异，单独的配置目录或状态文件可能更合适。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/state/workspaces">工作区</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-workspaces">什么是 Terraform 工作区？</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=IDLGpkRmDXg">为 Terraform 工作区构建存储库 - Hashicorp</a></li>
+</ul>
+<h2 id="19-ci--cd-集成">19. CI / CD 集成<a hidden class="anchor" aria-hidden="true" href="#19-ci--cd-集成">#</a></h2>
+<p>Terraform 的 CI/CD 集成涉及将基础设施即代码（Infrastructure-as-Code）实践融入持续集成和持续部署管道中。这种集成自动化了在软件交付工作流中规划、验证和应用 Terraform 配置的过程。</p>
+<p>在典型的设置中，CI/CD 管道运行 Terraform 命令来检查语法、生成计划并应用基础设施的更改。这种方法确保基础设施的更改与应用程序代码一起进行版本控制、测试和部署。关键方面包括自动化测试 Terraform 配置、安全处理敏感数据（如访问密钥）以及实施基础设施更改的审批流程。</p>
+<h3 id="github-actions">◇GitHub Actions<a hidden class="anchor" aria-hidden="true" href="#github-actions">#</a></h3>
+<p>将 Terraform 与 GitHub Actions 结合使用，可以在基于 GitHub 的 CI/CD 管道中实现自动化基础设施管理。这种集成使得在代码推送到仓库时自动规划、验证和应用 Terraform 配置成为可能。典型的工作流步骤包括检出代码、设置 Terraform、初始化工作目录以及运行 <code>plan</code> 和 <code>apply</code> 等 Terraform 命令。GitHub Actions 可以配置为在不同环境中运行 Terraform、管理状态文件并安全处理密钥。重要的是要配置适当的权限并使用 GitHub Secrets 来存储敏感数据。</p>
+<ul>
+<li><em>官方</em> <a href="https://docs.github.com/en/actions">GitHub Actions</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/automation/github-actions">使用 GitHub Actions 自动化 Terraform</a></li>
+<li><em>开源</em> <a href="https://github.com/hashicorp/setup-terraform">setup-terraform</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/github-actions-terraform">Terraform 与 GitHub Actions：如何管理和扩展</a></li>
+</ul>
+<h3 id="circle-ci">◇Circle CI<a hidden class="anchor" aria-hidden="true" href="#circle-ci">#</a></h3>
+<p>将 Terraform 与 CircleCI 集成可以在 CircleCI 的持续集成和部署管道中实现自动化基础设施管理。这种设置允许在应用程序代码更改的同时进行一致且可重复的基础设施部署。在典型的 CircleCI 配置中，作业被定义为运行 <code>init</code>、<code>plan</code> 和 <code>apply</code> 等 Terraform 命令。工作流可以包括检出代码、设置 Terraform 和管理状态文件的步骤。CircleCI 的环境变量和上下文可用于安全存储和访问云提供商凭证等敏感数据。CircleCI 的并行功能可以在复杂设置中加快 Terraform 的执行速度。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/automation/circle-ci">使用 Terraform 和 CircleCI 部署基础设施</a></li>
+<li><em>开源</em> <a href="https://circleci.com/developer/orbs/orb/circleci/terraform">CircleCI Terraform Orb</a></li>
+<li><em>文章</em> <a href="https://medium.com/nerd-for-tech/how-i-deployed-terraform-resources-with-circleci-628aa29ed514">如何使用 CircleCI 部署 Terraform 资源</a></li>
+</ul>
+<h3 id="gitlab-ci">◇GitLab CI<a hidden class="anchor" aria-hidden="true" href="#gitlab-ci">#</a></h3>
+<p>将 Terraform 与 GitLab CI 结合使用，可以在 GitLab 的 CI/CD 管道中实现自动化基础设施管理。典型的 GitLab CI 管道包括验证、规划和应用更改的阶段。管道可以配置为在代码推送或合并请求时自动运行 Terraform 命令。GitLab CI 变量用于安全存储云凭证等敏感信息。GitLab 的原生功能（如环境和审批）可用于管理不同的部署阶段并控制何时应用更改。</p>
+<ul>
+<li><em>官方</em> <a href="https://docs.gitlab.com/ee/user/infrastructure/iac/">使用 Terraform 和 GitLab 进行基础设施即代码</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/gitlab-terraform">如何实现 GitLab CI/CD 管道与 Terraform 的集成</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=oqOzM_WBqZc">使用 GitLab CICD 管道自动化部署到 AWS</a></li>
+</ul>
+<h3 id="jenkins">◇Jenkins<a hidden class="anchor" aria-hidden="true" href="#jenkins">#</a></h3>
+<p>将 Terraform 与 Jenkins 结合使用，可以在基于 Jenkins 的 CI/CD 管道中实现自动化基础设施管理。这种集成允许在应用程序构建的同时进行一致且可重复的基础设施部署。在典型的设置中，Jenkins 作业或管道配置为执行 <code>init</code>、<code>plan</code> 和 <code>apply</code> 等 Terraform 命令。Jenkins 可以通过使用参数或为每个环境设置单独的作业来管理不同的环境。适当的凭证管理对于安全处理云提供商访问密钥至关重要。Jenkins 丰富的插件生态系统可以通过可视化、通知等功能增强 Terraform 工作流。</p>
+<ul>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-jenkins">Terraform 与 Jenkins – 如何管理工作流</a></li>
+<li><em>文章</em> <a href="https://blog.digger.dev/how-to-run-terraform-in-jenkins/">如何在 Jenkins CI/CD 管道中运行 Terraform</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=kIDiP3Unj7Y">如何使用 Terraform 和 Jenkins 自动化基础设施设置</a></li>
+</ul>
+<h2 id="20-测试">20. 测试<a hidden class="anchor" aria-hidden="true" href="#20-测试">#</a></h2>
+<p>测试 Terraform 代码涉及多种方法，以确保基础设施即代码的可靠性和正确性。这包括语法验证、最佳实践的 linting、模块的单元测试、验证资源创建的集成测试、审查预期更改的计划测试以及组织策略的合规性测试。常用的工具包括 TFLint 和 Terratest 等框架。在 CI/CD 管道中进行自动化测试有助于及早发现错误并保持代码质量。可以使用模拟提供程序进行测试而不影响实际基础设施，而基于属性的测试则探索不同的输入组合。有效的测试策略在全面性和实用性之间取得平衡，考虑执行时间和资源成本等因素。</p>
+<h3 id="单元测试">◇单元测试<a hidden class="anchor" aria-hidden="true" href="#单元测试">#</a></h3>
+<p>Terraform 单元测试侧重于验证单个模块或组件在隔离环境中的行为。它通常涉及创建小型、集中的测试用例，以验证模块在给定特定输入时的预期输出和资源配置。常用的工具包括 Terratest（一个 Go 库）。Terraform 的单元测试可能会检查资源是否正确定义、<code>count</code> 和 <code>for_each</code> 元参数是否按预期工作，或者输出值是否正确计算。这些测试通常使用模拟数据或最小化的真实基础设施来模拟各种场景。虽然它们不能保证实际创建资源，但单元测试对于快速捕获逻辑错误、确保模块接口按预期工作以及在模块演进过程中保持代码质量非常有价值。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/tests#integration-or-unit-testing">集成或单元测试</a></li>
+<li><em>文章</em> <a href="https://www.hashicorp.com/blog/testing-hashicorp-terraform#unit-tests">Terraform 单元测试</a></li>
+</ul>
+<h3 id="契约测试">◇契约测试<a hidden class="anchor" aria-hidden="true" href="#契约测试">#</a></h3>
+<p>Terraform 契约测试侧重于验证不同模块或基础设施代码组件之间的接口和交互。这种方法确保模块能够正确协同工作并遵守预期的输入/输出契约。契约测试通常验证模块是否接受正确的输入变量、生成预期的输出，并使用正确的属性创建资源。它们通常涉及使用模拟数据或最小化的真实基础设施设置测试夹具。目标是及早发现集成问题，例如变量类型不匹配或意外的资源配置。契约测试有助于保持模块版本之间的一致性，并确保对一个模块的更改不会破坏依赖模块。这种类型的测试在大型模块化 Terraform 项目中特别有价值，因为多个团队可能正在处理基础设施的不同组件。</p>
+<ul>
+<li><em>官方</em> <a href="https://www.hashicorp.com/blog/testing-hashicorp-terraform#contract-tests">Terraform 契约测试</a></li>
+<li><em>文章</em> <a href="https://www.blazemeter.com/blog/contract-testing#:~:text=Contract%20testing%20focuses%20on%20verifying,services%20that%20rely%20on%20it.">契约测试：介绍与指南</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=Fh8CqZtghQw">微服务的契约测试是必须的！</a></li>
+</ul>
+<h3 id="集成测试">◇集成测试<a hidden class="anchor" aria-hidden="true" href="#集成测试">#</a></h3>
+<p>Terraform 集成测试涉及验证 Terraform 配置是否与实际云资源和服务正确协同工作。这些测试创建真实的基础设施组件，与其交互，然后销毁它们，确保资源在实时环境中正确配置和部署。集成测试通常使用 Terratest 或自定义脚本等框架来自动化应用 Terraform 配置、验证生成的基础设施并进行清理的过程。它们检查资源的正确创建、相互依赖资源的正确配置以及整体系统行为。虽然比单元测试更耗时且可能成本更高，但集成测试为 Terraform 代码在真实场景中的可靠性提供了高度信心。它们对于捕获仅在与实际云服务交互时才会出现的问题（如 API 限制或意外服务行为）至关重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/tests#integration-or-unit-testing">集成测试或单元测试</a></li>
+<li><em>文章</em> <a href="https://www.hashicorp.com/blog/testing-hashicorp-terraform#integration-tests">集成测试</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=gdcc1WBzMwY">学习 Terraform - 集成和端到端测试</a></li>
+</ul>
+<h3 id="端到端测试">◇端到端测试<a hidden class="anchor" aria-hidden="true" href="#端到端测试">#</a></h3>
+<p>Terraform 端到端测试涉及验证从开始到结束的整个基础设施部署过程，模拟真实世界的使用场景。这些测试应用完整的 Terraform 配置以创建完整的环境，验证所有组件的功能和交互，然后销毁基础设施。端到端测试通常包括检查网络连接、应用程序部署和整体系统性能。它们可能涉及多个 Terraform 模块和外部系统，将基础设施作为一个整体进行测试。虽然资源密集且耗时，但这些测试为基础设施的正确性和可靠性提供了最高水平的信心。它们对于检测基础设施不同部分之间复杂交互引起的问题特别有价值。端到端测试通常运行频率较低，通常作为发布过程或重大变更验证的一部分。</p>
+<ul>
+<li><em>文章</em> <a href="https://tf2project.io/docs/getting-started/end-to-end-tests.html">入门：端到端测试</a></li>
+<li><em>文章</em> <a href="https://www.hashicorp.com/blog/testing-hashicorp-terraform#end-to-end-tests">端到端测试</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=PlzL6Bv2fSA">使用 Terratest 进行 Terraform 端到端测试</a></li>
+</ul>
+<h3 id="模块测试">◇模块测试<a hidden class="anchor" aria-hidden="true" href="#模块测试">#</a></h3>
+<p>测试 Terraform 模块涉及验证其功能、可重用性和正确性，无论是在隔离环境中还是作为更大系统的一部分。此过程通常包括单元测试以验证单个模块的行为，集成测试以确保与其他组件的正确交互，有时还包括复杂模块的端到端测试。测试通常使用 Terratest 或自定义脚本等工具来自动化资源的创建、输出的验证和清理。关键方面包括测试各种输入组合、验证资源属性和输出，以及确保幂等性。模块测试还涉及检查边缘情况和错误条件的正确处理。虽然需要初始设置工作，但彻底的模块测试增强了可靠性，促进了重构，并提高了整体基础设施代码质量。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/configuration-language/test">编写 Terraform 测试</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/language/tests">Terraform 测试</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=1LInIWM_2UQ">Terraform 模块测试</a></li>
+</ul>
+<h2 id="21-扩展-terraform">21. 扩展 Terraform<a hidden class="anchor" aria-hidden="true" href="#21-扩展-terraform">#</a></h2>
+<p>扩展 Terraform 涉及管理大型和复杂基础设施部署的策略。关键方法包括模块化配置以提高可重用性和可维护性，使用工作区或单独的状态文件来管理不同环境，以及实施带有锁定机制的远程状态存储。</p>
+<p>高效的状态管理变得至关重要，通常涉及状态分割以减少操作时间。采用 Terraform 的 CI/CD 流水线有助于自动化和标准化部署流程。实施适当的访问控制，并使用 Terraform Cloud 或 Enterprise 等功能进行团队协作和治理变得非常重要。性能优化技术，如使用 <code>-parallelism</code> 标志和定向应用，有助于管理大规模变更。随着规模的增加，成本管理、安全性和合规性方面的考虑变得更加突出。有效的扩展通常需要在基础设施管理中平衡集中控制和分布式团队自治。</p>
+<h3 id="分割大型状态">◇分割大型状态<a hidden class="anchor" aria-hidden="true" href="#分割大型状态">#</a></h3>
+<p>分割大型 Terraform 状态涉及将单一的状态文件分解为更小、更易管理的单元。这种方法对于提高性能、减少状态损坏的风险以及在大规模基础设施中启用并行工作流至关重要。策略包括将资源组织到单独的 Terraform 工作区中，或为不同的逻辑组件或环境使用不同的状态文件。该过程通常涉及使用 <code>terraform state mv</code> 在状态之间移动资源，或在新配置中使用 <code>terraform state rm</code> 后跟 <code>import</code>。仔细规划对于管理分割状态之间的依赖关系至关重要。好处包括更快的应用时间、减少并发修改冲突的风险，以及能够授予更细粒度的访问控制。</p>
+<p>有关更多资源，请参阅 <code>State</code> 主题中的 <code>Splitting State Files</code>。</p>
+<h3 id="并行性">◇并行性<a hidden class="anchor" aria-hidden="true" href="#并行性">#</a></h3>
+<p>Terraform 的并行性是指其同时创建、修改或销毁多个资源的能力。默认情况下，Terraform 最多同时操作 10 个资源实例。这种并行执行可以显著减少应用大型配置所需的时间。可以通过在 Terraform 命令中使用 <code>-parallelism</code> 标志或通过配置设置来调整并行级别。增加并行性可以加快操作速度，尤其是在大型基础设施中，但也可能增加云提供商 API 端点的负载。重要的是要平衡并行性与 API 速率限制和资源依赖关系。某些资源或提供商可能不支持并行操作，Terraform 会自动将这些操作序列化。有效使用并行性需要了解资源依赖关系和提供商能力，以优化性能而不会导致错误或超出服务限制。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/internals/graph#walking-the-graph">Walking the graph</a></li>
+<li><em>文章</em> <a href="https://support.hashicorp.com/hc/en-us/articles/10348130482451-Considerations-when-setting-the-TFE-PARALLELISM-environment-variable">Considerations when setting the TFE_PARALLELISM environment variable</a></li>
+</ul>
+<h3 id="部署工作流">◇部署工作流<a hidden class="anchor" aria-hidden="true" href="#部署工作流">#</a></h3>
+<p>用于扩展的 Terraform 部署工作流通常涉及几个关键阶段，这些阶段经过优化以管理大型基础设施。它从功能分支中的代码开发开始，然后进行包括语法检查、代码检查和单元测试在内的自动化测试。拉取请求会触发计划生成以供审查。批准后，更改合并到主分支，启动 CI/CD 流水线。该流水线运行更全面的测试，包括集成测试和可能的端到端测试。对于大型基础设施，工作流通常包括分阶段部署，从较低的环境开始，逐步推进到生产环境。它可能涉及部分应用或使用工作区来管理不同的环境。该过程包括对关键变更的手动批准门控。状态管理变得至关重要，通常使用带有锁定的远程后端。集成监控和日志记录以跟踪部署进度并及早发现问题。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/intro/core-workflow">The Core Terraform Workflow</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=sqLD39xqcx0">Terraform Basics: Core Workflow</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=J8J7ixBNF-M">Advanced Concepts and Faster Workflows in the Terraform Language</a></li>
+</ul>
+<h3 id="版本管理">◇版本管理<a hidden class="anchor" aria-hidden="true" href="#版本管理">#</a></h3>
+<p>Terraform 中的版本管理对于在不同环境和团队成员之间保持一致性至关重要。像 <code>tfenv</code> 这样的工具允许开发人员轻松切换不同版本的 Terraform。<code>tfenv</code> 是一个版本管理器，可以在单个系统上安装和管理多个 Terraform 版本。它使团队能够为不同项目指定和使用特定的 Terraform 版本，确保兼容性和可重复性。该工具与 <code>tfswitch</code> 等其他工具一起，帮助管理版本差异引起的潜在冲突，促进更轻松的升级，并支持在具有不同 Terraform 版本要求的多个项目上工作。</p>
+<ul>
+<li><em>开源</em> <a href="https://github.com/tfutils/tfenv">tfenv</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/tfenv">How to Use tfenv to Manage Multiple Terraform Versions</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=Smk5PrRPQsU">Quick Tech: tfenv</a></li>
+</ul>
+<h3 id="terragrunt">◇Terragrunt<a hidden class="anchor" aria-hidden="true" href="#terragrunt">#</a></h3>
+<p>Terragrunt 是 Terraform 的一个薄封装，提供了额外的工具来保持配置的 DRY（Don’t Repeat Yourself），处理多个 Terraform 模块，并管理远程状态。它通过减少代码重复和简化多环境管理来帮助管理大规模基础设施。关键功能包括通过集中定义输入和后端配置来保持 Terraform 代码的 DRY，一次性在多个模块上执行 Terraform 命令，以及自动管理每个模块的远程状态。Terragrunt 还通过允许轻松注入参数，促进了跨不同环境的 Terraform 模块的使用。它在复杂的多环境设置中特别有用，在这些设置中，保持一致性并减少 Terraform 配置中的重复至关重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://terragrunt.gruntwork.io/">Terragrunt Website</a></li>
+<li><em>开源</em> <a href="https://github.com/gruntwork-io/terragrunt">gruntwork-io/terragrunt</a></li>
+<li><em>文章</em> <a href="https://www.env0.com/blog/terragrunt">Terragrunt Tutorial: Examples and Use Cases</a></li>
+</ul>
+<h3 id="infracost">◇Infracost<a hidden class="anchor" aria-hidden="true" href="#infracost">#</a></h3>
+<p>Infracost 是一个开源工具，为 Terraform 项目提供实时成本估算。它分析 Terraform 配置文件，并为 AWS、Azure 和 Google Cloud 等各种提供商的云资源生成详细的成本分解。Infracost 集成到 CI/CD 流水线中，以显示开发过程中基础设施变更的成本影响。它支持差异输出，显示提议的变更将如何影响成本。该工具对于希望优化云支出并在基础设施开发生命周期中保持成本意识的团队特别有价值。Infracost 可以单独使用，也可以与其他工具集成，帮助团队就资源供应和配置变更做出明智的决策。</p>
+<ul>
+<li><em>官方</em> <a href="https://www.infracost.io/">Infracost Website</a></li>
+<li><em>开源</em> <a href="https://github.com/infracost/infracost">infracost/infracost</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=BQeO137DDo8">Shifting FinOps Left: A live demo</a></li>
+</ul>
+<h2 id="22-安全性">22. 安全性<a hidden class="anchor" aria-hidden="true" href="#22-安全性">#</a></h2>
+<p>Terraform 安全性涵盖了确保基础设施即代码（Infrastructure-as-Code）安全合规管理的实践和工具。关键方面包括通过使用加密的远程后端来保护 Terraform 状态文件，这些文件通常包含敏感信息。访问控制至关重要，应为人类用户和服务账户实施最小权限原则。敏感数据管理涉及使用保险库系统或云原生密钥管理器，而不是硬编码凭据。代码审查过程应包括安全检查，并且可以集成自动化扫描工具以检测错误配置或策略违规。使用 Terraform Sentinel 等工具实施合规即代码（Compliance-as-Code）可确保遵守组织策略。版本控制和适当的 Git 卫生有助于维护审计跟踪。</p>
+<ul>
+<li><em>官方</em> <a href="https://www.terraform.io/cloud-docs/architectural-details/security-model">Terraform 安全性</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-security">12 个 Terraform 安全最佳实践</a></li>
+</ul>
+<h3 id="密钥管理">◇密钥管理<a hidden class="anchor" aria-hidden="true" href="#密钥管理">#</a></h3>
+<p>Terraform 密钥管理是安全基础设施即代码实践的关键方面，专注于保护 API 密钥、密码和访问令牌等敏感信息。最佳实践建议使用外部密钥管理系统（如 HashiCorp Vault、AWS Secrets Manager 或 Azure Key Vault），而不是直接将密钥存储在 Terraform 文件中。这些系统允许 Terraform 在执行期间安全地检索密钥，从而显著降低暴露风险。对于本地开发，git-crypt 或 SOPS 等工具为敏感文件提供加密，而 Terraform 内置的加密状态存储选项可保护状态文件中的密钥。通过将变量标记为敏感变量，可以防止意外记录密钥值。在 CI/CD 管道中，关键是在运行时安全地注入密钥，并避免将其提交到版本控制系统。定期轮换密钥和访问审计进一步增强了安全性。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/secrets">使用 Vault 注入密钥</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/terraform-secrets">Terraform 密钥 - 如何管理它们</a></li>
+<li><em>文章</em> <a href="https://blog.gruntwork.io/a-comprehensive-guide-to-managing-secrets-in-your-terraform-code-1d586955ace1">管理 Terraform 代码中密钥的综合指南</a></li>
+</ul>
+<h3 id="合规性--sentinel">◇合规性 / Sentinel<a hidden class="anchor" aria-hidden="true" href="#合规性--sentinel">#</a></h3>
+<p>Hashicorp Sentinel 是一个与 HashiCorp 企业产品（包括 Terraform Cloud 和 Terraform Enterprise）集成的策略即代码框架。它允许组织在其基础设施部署中定义和执行标准化、细粒度的策略。Sentinel 策略可以编写为在 Terraform 应用任何更改之前检查安全合规性、成本管理或操作最佳实践。这些策略使用特定领域语言定义规则，评估 Terraform 计划和状态，使团队能够在开发过程的早期发现潜在问题。Sentinel 可以强制执行阻止不合规基础设施更改的强制性策略，或警告但不阻止部署的咨询性策略。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/sentinel/docs/terraform">Terraform 和 Sentinel</a></li>
+<li><em>开源</em> <a href="https://github.com/hashicorp/terraform-sentinel-policies">hashicorp/terraform-sentinel-policies</a></li>
+<li><em>文章</em> <a href="https://www.terraform.io/use-cases/enforce-policy-as-code">强制执行策略即代码</a></li>
+</ul>
+<h3 id="terrascan">◇Terrascan<a hidden class="anchor" aria-hidden="true" href="#terrascan">#</a></h3>
+<p>Terrascan 是一个用于基础设施即代码（IaC）的开源静态代码分析器，可帮助检测包括 Terraform 在内的多个 IaC 工具中的合规性和安全性违规行为。它根据一组预定义的策略扫描 Terraform 配置，以在部署前识别潜在的安全风险、错误配置和合规性问题。Terrascan 可以集成到 CI/CD 管道中，在开发生命周期中提供漏洞的早期检测。它支持自定义策略，允许组织强制执行其特定的安全和合规要求。该工具涵盖各种云提供商，并且可以扩展以支持其他策略类型。</p>
+<ul>
+<li><em>官方</em> <a href="https://runterrascan.io/">Terrascan 网站</a></li>
+<li><em>开源</em> <a href="https://github.com/tenable/terrascan">tenable/terrascan</a></li>
+<li><em>文章</em> <a href="https://spacelift.io/blog/what-is-terrascan">什么是 Terrascan？</a></li>
+</ul>
+<h3 id="checkov">◇Checkov<a hidden class="anchor" aria-hidden="true" href="#checkov">#</a></h3>
+<p>Checkov 是一个开源静态代码分析工具，旨在扫描基础设施即代码（IaC）文件（包括 Terraform 配置）中的安全性和合规性问题。它提供了一套全面的开箱即用策略，涵盖各种云提供商和安全最佳实践。Checkov 可以在部署前识别 Terraform 代码中的错误配置、安全风险和合规性违规行为，有助于在开发过程中将安全性左移。该工具支持用 Python 编写的自定义策略，允许组织强制执行特定要求。Checkov 可以轻松集成到 CI/CD 管道中，并提供多种输出格式，以便更好地报告和与其他工具集成。它能够扫描从默认不安全到符合 CIS 基准等标准的各种问题，使其成为维护安全和合规基础设施部署的强大资产。</p>
+<ul>
+<li><em>官方</em> <a href="https://www.checkov.io/">Checkov</a></li>
+<li><em>开源</em> <a href="https://github.com/bridgecrewio/checkov">bridgecrewio/checkov</a></li>
+<li><em>文章</em> <a href="https://devopscube.com/terraform-checkov-scan/">使用 Checkov 扫描 Terraform 代码</a></li>
+</ul>
+<h3 id="trivy">◇Trivy<a hidden class="anchor" aria-hidden="true" href="#trivy">#</a></h3>
+<p>Trivy 是一个全面的开源安全扫描器，主要以容器镜像扫描而闻名，但它也支持基础设施即代码（IaC）分析，包括 Terraform 配置。它可以检测依赖项中的漏洞、云基础设施设置中的错误配置以及 Terraform 代码中的潜在安全风险。Trivy 的 IaC 扫描功能涵盖各种云提供商，并且可以识别与合规性、安全最佳实践和常见错误配置相关的问题。该工具设计用于轻松集成到 CI/CD 管道中，提供快速的扫描时间和多种输出格式，以便更好地报告和与其他 DevOps 工具集成。Trivy 的优势在于它能够提供跨软件开发生命周期不同方面的统一扫描解决方案，从容器镜像到 IaC，使其成为在整个开发和部署过程中维护安全性的多功能工具。</p>
+<ul>
+<li><em>官方</em> <a href="https://trivy.dev/">Trivy 网站</a></li>
+<li><em>开源</em> <a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a></li>
+<li><em>文章</em> <a href="https://verifa.io/blog/how-to-secure-terraform-trivy/">如何使用 Trivy 保护 Terraform 代码</a></li>
+</ul>
+<h3 id="kics">◇KICS<a hidden class="anchor" aria-hidden="true" href="#kics">#</a></h3>
+<p>KICS（Keeping Infrastructure as Code Secure）是一个开源静态分析工具，旨在扫描基础设施即代码（IaC）文件（包括 Terraform 配置）中的安全漏洞、合规性问题和基础设施错误配置。它支持多种 IaC 技术和云提供商，提供了一种全面的方法来保护云原生环境。KICS 使用一组强大的预定义规则来检测潜在的安全风险，从默认不安全到违反行业标准和最佳实践。该工具允许开发自定义查询，使组织能够根据其特定的安全和合规需求定制扫描。KICS 可以轻松集成到 CI/CD 管道中，在开发生命周期中提供问题的早期检测。它能够生成详细的报告并支持各种输出格式，便于轻松解释结果并与其他安全和 DevOps 工具集成，使其成为通过 Terraform 管理的安全和合规基础设施部署的宝贵资产。</p>
+<ul>
+<li><em>官方</em> <a href="https://kics.io/index.html">KICS 网站</a></li>
+<li><em>开源</em> <a href="https://github.com/Checkmarx/kics">checkmarx/kics</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=jVpQPTyg3hs">自动修复您的基础设施即代码</a></li>
+</ul>
+<h2 id="23-hcp">23. HCP<a hidden class="anchor" aria-hidden="true" href="#23-hcp">#</a></h2>
+<p>HCP（HashiCorp Cloud Platform）是一个完全托管的平台，提供HashiCorp产品即服务，包括Terraform。它提供了一种集中化的方式来为任何应用程序配置、保护、连接和运行任何基础设施。HCP与Terraform无缝集成，提供了增强的功能来管理大规模的基础设施。关键功能包括自动化工作流、集中化的状态管理和安全的远程操作。它提供了内置的协作工具，使团队更容易在基础设施项目上合作。HCP提供了治理和策略执行功能，允许组织在其基础设施中保持合规性和安全标准。通过与Vault（用于秘密管理）和Consul（用于服务网络）等其他HashiCorp工具的集成，HCP为云基础设施管理创建了一个全面的生态系统。该平台特别适合那些希望简化基础设施操作、增强安全性并在多云环境中保持一致性的组织。</p>
+<h3 id="何时使用hcp">◇何时使用HCP？<a hidden class="anchor" aria-hidden="true" href="#何时使用hcp">#</a></h3>
+<p>HashiCorp Cloud Platform（HCP）最适合在组织需要为其基础设施即代码实践提供托管、可扩展的解决方案时使用。它对于寻求在多云环境中简化操作、增强协作并保持一致治理的团队尤其有价值。HCP在需要集中管理Terraform工作流、安全远程操作和集成秘密管理时是理想的选择。它对于需要强大访问控制、策略执行和审计能力的大型企业或成长中的团队非常有益。当自我管理HashiCorp工具的复杂性成为负担时，或者希望减少操作开销时，应考虑使用HCP。当组织希望在一个统一的托管环境中利用Terraform、Vault和Consul等不同HashiCorp产品之间的协同效应时，它也很有用。当基础设施管理需求的扩展超出独立Terraform实现的能力时，该平台最为有效。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/intro/use-cases">使用案例</a></li>
+</ul>
+<h3 id="企业功能">◇企业功能<a hidden class="anchor" aria-hidden="true" href="#企业功能">#</a></h3>
+<p>HashiCorp Cloud Platform（HCP）提供了多项企业级功能，旨在增强大规模基础设施管理：</p>
+<ol>
+<li>集中化的工作流管理，用于Terraform操作</li>
+<li>高级基于角色的访问控制（RBAC），用于细粒度权限</li>
+<li>使用Sentinel的策略即代码，用于治理和合规性</li>
+<li>私有网络连接，用于安全访问云资源</li>
+<li>审计日志，用于全面跟踪所有平台活动</li>
+<li>与Vault集成的秘密管理</li>
+<li>通过Consul实现的服务网络功能</li>
+<li>多云和混合云支持</li>
+<li>可扩展的远程状态管理</li>
+<li>成本估算和优化工具</li>
+<li>可定制的策略库，用于安全和合规性</li>
+<li>单点登录（SSO）和身份联合</li>
+<li>API驱动的自动化，用于基础设施配置</li>
+<li>协作功能，用于基于团队的基础设施开发</li>
+<li>持续合规性监控和报告</li>
+</ol>
+<p>这些功能共同为企业和DevOps实践提供了一个强大、安全和可扩展的基础设施管理环境。</p>
+<ul>
+<li><em>官方</em> <a href="https://www.hashicorp.com/cloud">HashiCorp Cloud Platform</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cloud-docs/overview">HCP Terraform计划和功能</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=zWWGsJrWj5E">基础设施云如何工作？</a></li>
+</ul>
+<h3 id="认证">◇认证<a hidden class="anchor" aria-hidden="true" href="#认证">#</a></h3>
+<p>HCP（HashiCorp Cloud Platform）认证为其服务（包括Terraform Cloud）提供了安全的访问管理。它利用了一个全面的身份和访问管理系统，支持多种认证方法。这些方法包括用户名/密码组合、与流行身份提供商的单点登录（SSO）集成以及用于编程访问的API令牌。HCP支持SAML 2.0以实现企业级SSO，允许与现有身份管理系统无缝集成。对于机器到机器的通信，HCP提供了服务主体认证，支持与HCP服务的安全自动化交互。该平台还提供了细粒度的基于角色的访问控制（RBAC），允许管理员定义和管理跨不同资源和操作用户权限。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/hcp/docs/cli/commands/auth/login">HCP认证</a></li>
+<li><em>官方</em> <a href="https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/guides/auth">使用HCP进行认证</a></li>
+<li><em>开源</em> <a href="https://github.com/hashicorp/hcp-auth-action">hashicorp/hcp-auth-login</a></li>
+</ul>
+<h3 id="工作区">◇工作区<a hidden class="anchor" aria-hidden="true" href="#工作区">#</a></h3>
+<p>HCP工作区，特别是在Terraform Cloud的上下文中，提供了用于管理不同基础设施集的隔离环境。每个工作区与特定的Terraform配置相关联，并维护其自己的状态文件、变量和访问控制。工作区使团队能够根据项目、环境或团队组织和分离基础设施。它们通过允许多个团队成员在相同的基础设施上工作，同时保持版本控制和变更历史，支持协作工作流。HCP工作区提供了远程状态管理、安全变量存储和与版本控制系统的集成等功能。它们还提供了运行触发器，用于自动化跨依赖基础设施的工作流。通过内置的访问控制，组织可以通过为每个工作区的用户或团队授予特定权限来实施最小权限原则。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cloud-docs/workspaces">工作区</a></li>
+<li><em>文章</em> <a href="https://developer.hashicorp.com/terraform/tutorials/cloud/projects">使用项目组织工作区</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=J1T1tbU6wAU">使用项目组织Terraform Cloud工作区</a></li>
+</ul>
+<h3 id="vcs集成">◇VCS集成<a hidden class="anchor" aria-hidden="true" href="#vcs集成">#</a></h3>
+<p>HCP的版本控制系统（VCS）集成，特别是在Terraform Cloud中，实现了基础设施代码仓库与HCP服务之间的无缝连接。此功能允许团队将其Git仓库（来自GitHub、GitLab或Bitbucket等提供商）直接链接到HCP工作区。配置后，推送到链接仓库的更改会自动触发相应工作区中的Terraform运行。此集成支持GitOps工作流，确保基础设施变更经过适当的版本控制流程。它支持诸如在拉取请求上自动生成计划等功能，提供对提议变更的早期反馈。该集成还支持基于分支的工作流，允许将不同分支链接到不同工作区以用于暂存和生产环境。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cloud-docs/vcs">将VCS提供商连接到HCP Terraform</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-vcs-change">使用VCS驱动的工作流</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cloud-docs/workspaces/settings/vcs">配置工作区VCS连接</a></li>
+</ul>
+<h3 id="运行任务">◇运行任务<a hidden class="anchor" aria-hidden="true" href="#运行任务">#</a></h3>
+<p>HCP运行任务，Terraform Cloud的一项功能，允许将外部服务或自定义逻辑集成到Terraform工作流中。这些任务可以配置为在Terraform计划和应用之前或之后运行，从而实现额外的验证、通知或数据处理步骤。运行任务可用于各种目的，如安全扫描、成本估算、自定义策略检查或触发外部工作流。它们通过webhook执行，允许与广泛的第三方服务或内部工具集成。此功能增强了Terraform工作流的灵活性和可扩展性，使组织能够实施适合其特定需求的自定义流程和集成。</p>
+<ul>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cloud-docs/workspaces/settings/run-tasks">运行任务</a></li>
+<li><em>官方</em> <a href="https://registry.terraform.io/browse/run-tasks">Terraform Registry - 运行任务</a></li>
+<li><em>官方</em> <a href="https://developer.hashicorp.com/terraform/cloud-docs/api-docs/run-tasks/run-tasks">运行任务API</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yuuniji.github.io/tags/terraform/">Terraform</a></li>
+      <li><a href="https://yuuniji.github.io/tags/%E8%B7%AF%E7%BA%BF%E5%9B%BE/">路线图</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://yuuniji.github.io/posts/roadmap-docker/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>Docker 路线图</span>
+  </a>
+  <a class="next" href="https://yuuniji.github.io/posts/roadmap-git-github/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>Git 和 GitHub 路线图</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Terraform 路线图 on x"
+            href="https://x.com/intent/tweet/?text=Terraform%20%e8%b7%af%e7%ba%bf%e5%9b%be&amp;url=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-terraform%2f&amp;hashtags=Terraform%2c%e8%b7%af%e7%ba%bf%e5%9b%be">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Terraform 路线图 on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-terraform%2f&amp;title=Terraform%20%e8%b7%af%e7%ba%bf%e5%9b%be&amp;summary=Terraform%20%e8%b7%af%e7%ba%bf%e5%9b%be&amp;source=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-terraform%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Terraform 路线图 on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-terraform%2f&title=Terraform%20%e8%b7%af%e7%ba%bf%e5%9b%be">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Terraform 路线图 on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-terraform%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Terraform 路线图 on whatsapp"
+            href="https://api.whatsapp.com/send?text=Terraform%20%e8%b7%af%e7%ba%bf%e5%9b%be%20-%20https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-terraform%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Terraform 路线图 on telegram"
+            href="https://telegram.me/share/url?text=Terraform%20%e8%b7%af%e7%ba%bf%e5%9b%be&amp;url=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-terraform%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Terraform 路线图 on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Terraform%20%e8%b7%af%e7%ba%bf%e5%9b%be&u=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-terraform%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://yuuniji.github.io/">叶泽伟的博客</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

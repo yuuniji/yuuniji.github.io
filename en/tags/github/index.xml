@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Github on 叶泽伟的博客</title>
+    <link>https://yuuniji.github.io/en/tags/github/</link>
+    <description>Recent content in Github on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.143.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.github.io/en/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git and GitHub Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-git-github/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-git-github/</guid>
+      <description>&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
+&lt;p&gt;A Version Control System (VCS) is a tool that helps developers manage changes to their code over time. It allows multiple versions of a project to exist simultaneously, making it easier to collaborate with others and maintain a record of all modifications.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://git-scm.com/downloads/guis&#34;&gt;GUI Clients&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;&gt;Getting Started - Installing Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github&#34;&gt;Creating an account on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.atlassian.com/git/tutorials/what-is-version-control&#34;&gt;What is version control?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.datacamp.com/blog/all-about-git&#34;&gt;What is Git? - The Complete Guide to Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://missing.csail.mit.edu/2020/version-control/&#34;&gt;Version Control (Git) - The Missing Semester of Your CS Education&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;video&lt;/em&gt; &lt;a href=&#34;https://www.youtube.com/watch?v=2ReR1YJrNOM&#34;&gt;What is Git? Explained in 2 Minutes!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-is-version-control&#34;&gt;◇What is Version Control?&lt;/h3&gt;
+&lt;p&gt;Version control is a system that manages and tracks changes to files over time, allowing multiple people to collaborate on a project while maintaining a history of all modifications. It records changes to files, such as code, documents, or configuration files, and stores them in a repository. With version control, developers can revert to previous versions, compare differences between versions, and understand the evolution of a project. It supports features like branching, where different lines of development can occur independently, and merging, which combines changes from different branches. Overall, version control ensures that changes are organized, recoverable, and easily managed, making it a critical tool in software development and collaborative projects.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building My Blog: From Scratch to Online</title>
+      <link>https://yuuniji.github.io/en/posts/my-first-post/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/my-first-post/</guid>
+      <description>&lt;h1 id=&#34;hugo-blog--github-pages-complete-deployment-guide&#34;&gt;Hugo Blog + GitHub Pages Complete Deployment Guide&lt;/h1&gt;
+&lt;h2 id=&#34;-environment-preparation&#34;&gt;📌 Environment Preparation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Device&lt;/strong&gt;: MacBook (macOS)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tools&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;li&gt;Hugo&lt;/li&gt;
+&lt;li&gt;GitHub Account&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;install-hugo&#34;&gt;&lt;strong&gt;Install Hugo&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Verify installation:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-create-hugo-blog&#34;&gt;🎯 Create Hugo Blog&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir blog &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cd blog
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Initialize Git:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-choose--add-theme&#34;&gt;🎨 Choose &amp;amp; Add Theme&lt;/h2&gt;
+&lt;p&gt;Recommended &lt;code&gt;PaperMod&lt;/code&gt; theme:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Edit &lt;code&gt;config.toml&lt;/code&gt;, add:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;PaperMod&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseURL&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://yuuniji.github.io&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-write-blog-posts&#34;&gt;📝 Write Blog Posts&lt;/h2&gt;
+&lt;p&gt;Create your first post:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

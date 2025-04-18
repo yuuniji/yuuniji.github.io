@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Goのロードマップ | 叶泽伟的博客</title>
+<meta name="keywords" content="Go, ロードマップ">
+<meta name="description" content="1. 基礎を学ぶ
+Goの変数、ループ、条件文、関数、データ型などの一般的な概念を学びます。Goの基礎を学ぶための良い出発点は、Goの公式ドキュメントです。">
+<meta name="author" content="">
+<link rel="canonical" href="https://yuuniji.github.io/ja/posts/roadmap-go/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.73a6a10fdd1b97761d58094db273eda3a1b5578a8040b1149a997d7657d4f473.css" integrity="sha256-c6ahD90bl3YdWAlNsnPto6G1V4qAQLEUmpl9dlfU9HM=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://yuuniji.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yuuniji.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yuuniji.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://yuuniji.github.io/posts/roadmap-go/">
+<link rel="alternate" hreflang="en" href="https://yuuniji.github.io/en/posts/roadmap-go/">
+<link rel="alternate" hreflang="ja" href="https://yuuniji.github.io/ja/posts/roadmap-go/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://yuuniji.github.io/ja/posts/roadmap-go/">
+  <meta property="og:site_name" content="叶泽伟的博客">
+  <meta property="og:title" content="Goのロードマップ">
+  <meta property="og:description" content="1. 基礎を学ぶ Goの変数、ループ、条件文、関数、データ型などの一般的な概念を学びます。Goの基礎を学ぶための良い出発点は、Goの公式ドキュメントです。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-28T00:00:00+00:00">
+    <meta property="article:tag" content="Go">
+    <meta property="article:tag" content="ロードマップ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Goのロードマップ">
+<meta name="twitter:description" content="1. 基礎を学ぶ
+Goの変数、ループ、条件文、関数、データ型などの一般的な概念を学びます。Goの基礎を学ぶための良い出発点は、Goの公式ドキュメントです。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "記事一覧",
+      "item": "https://yuuniji.github.io/ja/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Goのロードマップ",
+      "item": "https://yuuniji.github.io/ja/posts/roadmap-go/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Goのロードマップ",
+  "name": "Goのロードマップ",
+  "description": "1. 基礎を学ぶ Goの変数、ループ、条件文、関数、データ型などの一般的な概念を学びます。Goの基礎を学ぶための良い出発点は、Goの公式ドキュメントです。\n",
+  "keywords": [
+    "Go", "ロードマップ"
+  ],
+  "articleBody": "1. 基礎を学ぶ Goの変数、ループ、条件文、関数、データ型などの一般的な概念を学びます。Goの基礎を学ぶための良い出発点は、Goの公式ドキュメントです。\n公式 Goチュートリアル 記事 W3 Schools Goチュートリアル フィード Golangに関するトップ投稿を探索 ◇基本構文 Goプログラムの実行方法、パッケージのインポート、main関数など、Goの基本構文について学びます。\n公式 Goチュートリアル: はじめに 記事 Go by Example: Hello World 記事 W3schools: Goの構文 ◇Goの変数 変数は、特定の型の値を格納するためのメモリ位置に付けられた名前です。Goでは、変数を宣言して使用するための複数の方法が提供されています。\n公式 Goの変数 記事 Go by Example: 変数 記事 w3schools Goの変数 ◇データ型(bool | int, int8/16/32/64 | byte | unit, unit8/16/32/64 | rune | float32/64 | complex64/128 | unitptr) Goは静的に型付けされたプログラミング言語であり、各変数は最初に型が定義され、その型の値のみを保持できます。Goの型には、基本型と複合型の2つのカテゴリがあります。\n公式 Goツアー: 型 記事 Goの型と例 記事 データ型 ◇Forループ Goには、forループという1つのループ構造しかありません。基本的なforループには、セミコロンで区切られた3つのコンポーネントがあります：\ninit文: 最初の反復の前に実行されます\n条件式: 各反復の前に評価されます\npost文: 各反復の最後に実行されます\n公式 GoのForループ\n公式 Effective Go: Forループ\n記事 Go by Example: Forループ\n記事 5つの基本的なForループパターン\n◇Range rangeは、forループと共に使用して、配列、文字列、およびその他のデータ構造の各要素を反復処理します。\n公式 GoのRange 記事 Go by Example: Range 記事 GoのRange基本パターン ◇条件文 条件文は、特定の条件が真の場合にのみコードを実行するために使用されます。Goは以下をサポートしています：\nif文\nif...else文\nswitch...case文\n公式 Effective Go: if文\n記事 Go by Example: If-Else\n記事 GoのIf-Else文\n記事 GoのSwitch Caseプログラム\n◇エラー/パニック/リカバー 例外ハンドラを追加する代わりに、Goの作成者はGoの複数の値を返す能力を活用しました。Goでエラーを発行するために最も一般的に使用される技術は、エラーを戻り値の最後の値として返すことです。\nパニックは通常、予期せぬ問題が発生したことを意味します。通常の操作中に発生してはならないエラーや、適切に処理する準備ができていないエラーに対して、迅速に失敗するために使用されます。\nGoでのパニック回復は、遅延関数と呼ばれる言語の機能に依存しています。Goは、親関数が戻る時点で関数の実行を保証する能力を持っています。これは、親関数の戻りの理由がreturn文、関数ブロックの終了、またはパニックであるかどうかに関係なく発生します。\n公式 エラーハンドリングとGo 公式 GoのDefer、Panic、Recover 記事 Goでの効果的なエラーハンドリング ◇関数、複数/名前付き戻り値 関数は、特定のタスクを実行するコードのブロックです。プログラムの他の部分から呼び出すことができる再利用可能なコードの単位です。関数はコードを整理し、モジュール化し、可読性を向上させます。\n公式 Effective Go: 関数 記事 Go by Example: 関数 記事 Goの関数 ◇パッケージ、インポート、エクスポート パッケージはGo言語の最も強力な部分です。パッケージの目的は、関連する機能を単一の単位にグループ化して、多数のプログラムを設計および維持することです。これにより、保守と理解が容易になり、他のパッケージプログラムから独立して動作します。このモジュール性により、共有と再利用が可能になります。Go言語では、すべてのパッケージは異なる名前で定義され、その名前は「strings」パッケージのように機能に近いものとなっています。このパッケージには、文字列に関連するメソッドと関数のみが含まれています。\n公式 Goパッケージエクスプローラー 公式 標準ライブラリ 公式 Goでの外部依存関係の管理方法 記事 Goでパッケージを作成する方法 ◇型キャスト Goは自動的な型変換をサポートしていませんが、型キャストを許可しています。型キャストは、変数の型を明示的に変更するプロセスです。\n公式 Goツアー: 型キャストの基礎 記事 Goドキュメント: 型キャスト ◇型推論 型推論により、Goは値の型を明示的に指定しなくても検出する能力を持っています。これにより、最初に型を指定せずに変数を宣言することが可能になります。\n公式 Goツアー: 型推論 記事 Goの変数: 型推論 ◇配列 Goでは、配列は同じ型の要素のコレクションであり、配列が作成されるときに固定サイズが定義されます。\n公式 Goの配列 公式 Effective Go: 配列 動画 Goプログラミングを学ぶ - 配列 ◇スライス スライスは配列に似ていますが、より強力で柔軟です。配列と同様に、スライスも同じ型の複数の値を単一の変数に格納するために使用されます。ただし、配列とは異なり、スライスの長さは必要に応じて増減できます。\n公式 Goのスライス 公式 Effective Go: スライス 記事 Goのスライス 動画 Goプログラミングを学ぶ - スライス ◇マップ マップはGoのデータ構造で、キーと値のペア間のマッピングが必要な場合に使用します。マップは要素の追加や削除に関して柔軟性があります。マップは重複エントリを許可せず、データは順序付けられていません。\n公式 Goのマップ 公式 Effective Go: マップ 記事 Goのマップ 動画 Golangチュートリアル #15 - マップ (Tech With TimによるYouTube動画) ◇make() Goの組み込み関数makeは、スライス、マップ、チャネルを作成および初期化するのに役立ちます。この関数に提供される引数に応じて、作成されるデータ構造が異なります。\n公式 Effective Go: makeによる割り当て 記事 makeを使用してスライスを作成 記事 makeを使用してマップを作成 記事 makeを使用してチャネルを作成 ◇構造体 構造体は、ユーザー定義型であり、単一のエンティティを記述するデータのコレクションを作成するのに役立ちます。\n公式 Goの構造体 記事 Go by Example: 構造体 動画 Goの構造体 動画 構造体タグとリフレクションによる独自タグの作成 2. さらに深く Golangの深い理解には、言語のより高度な機能とベストプラクティスを探求し、その全ポテンシャルを引き出すことが含まれます。基本をマスターしたら、Goの複雑な側面を理解することで、コードのパフォーマンス、可読性、保守性を大幅に向上させることができます。\n記事 Mastering Advance GO ◇Goモジュール Goモジュールは、バージョン管理され、一緒に配布される関連パッケージのグループです。これらはプロジェクトの要件を指定し、必要な依存関係をリストアップし、インストールされた依存関係の特定のバージョンを追跡するのに役立ちます。\n公式 Go Modules 記事 DigitalOcean: How to use Go Modules 動画 Go Modules フィード Explore top posts about Golang ◇JSONのマーシャリングとアンマーシャリング JSON（JavaScript Object Notation）は、シンプルなデータ交換フォーマットです。構文的にはJavaScriptのオブジェクトやリストに似ています。主にウェブバックエンドとブラウザで実行されるJavaScriptプログラム間の通信に使用されますが、他の多くの場所でも使用されます。\n公式 JSON 記事 Guide to JSON in Golang 記事 JSON to GO 記事 Comprehensive Guide to using JSON in Go ◇型、型アサーション、スイッチ Golangの型は、有効なGo変数が保持できるデータ型を指定します。Golangには、基本型、集約型、参照型、インターフェース型の4つのカテゴリがあります。Golangの型アサーションは、インターフェースの変数の正確な型にアクセスするための手段を提供します。\n公式 Types Assertions 動画 Go Syntax - Type Assertions ◇インターフェース Goのインターフェースは、メソッドのセットを定義する型です。そのメソッドセットを実装する型（例えば構造体）がある場合、その型はこのインターフェースを実装しています。\n公式 Go Interfaces 公式 Effective Go: Interfaces 記事 Go by Example: Interfaces 動画 Golang Tutorial #22 - Interfaces (by Tech With Tim on YouTube) 動画 Understanding Go Interfaces ◇コンテキスト contextパッケージは、リクエスト中の状態管理の問題を解決するための標準的な方法を提供します。このパッケージは、リクエストスコープのデータの必要性を満たし、デッドライン、キャンセルシグナルなどを処理するための標準化された方法を提供します。\n公式 Go Context 記事 Go by Example: Context 記事 Digital Ocean: How to Use Contexts in Go 動画 Context in Go 動画 Understanding Contexts in Go ◇ゴルーチン ゴルーチンを使用すると、Goで並行プログラムを書くことができます。ウェブサーバーが数千のリクエストを処理したり、ウェブサイトが新しいページをレンダリングしながら同時にネットワークリクエストを行うなどが並行性の例です。Goでは、これらの並行タスクのそれぞれをゴルーチンと呼びます。\n公式 Goroutines 公式 Effective Go: Goroutines 記事 Go by Example: Goroutines 動画 GoRoutines 動画 Understanding Concurrency フィード Explore top posts about Golang ◇チャネル チャネルは、並行ゴルーチンを接続するパイプです。あるゴルーチンからチャネルに値を送信し、別のゴルーチンでそれらの値を受信することができます。\nチャネルは、チャネル演算子\u003c-を使用して値を送受信できる型付きの導管です。\n公式 Channels 公式 Effective Go: Channels 記事 Go by Example: Channels 記事 Channels in Golang 動画 Channels 動画 Golang Channel Basics You must Know! ◇バッファ バッファはGo言語のバイトパッケージに属し、これらのパッケージを使用して文字列のバイトを操作することができます。\n公式 Buffer Examples 記事 Buffer ◇セレクト selectステートメントは、ゴルーチンが複数の通信操作を待機することを可能にします。\nselectは、そのケースの1つが実行可能になるまでブロックし、その後そのケースを実行します。複数のケースが準備できている場合、ランダムに1つを選択します。selectステートメントはswitchステートメントに似ていますが、selectステートメントでは、ケースステートメントは通信、つまりチャネルへの送信または受信操作を指します。\n公式 Select 記事 Go by Example: Select 動画 Select Statement ◇ミューテックス Goでは、ゴルーチンを使用してコードを並行して実行することができます。ただし、並行プロセスが同じデータにアクセスすると、競合状態が発生する可能性があります。ミューテックスは、syncパッケージによって提供されるデータ構造です。これを使用して、データの異なるセクションにロックをかけ、一度に1つのゴルーチンだけがアクセスできるようにすることができます。\n記事 Using a Mutex in Go with Examples 記事 Sync Package ◇スケジューラ Goスケジューラを使用すると、Golangが内部的にどのように動作するかをより深く理解することができます。論理プロセッサ、コア、スレッド、プールキャッシュ、コンテキストスイッチなどについてです。GoスケジューラはGoランタイムの一部であり、Goランタイムはアプリケーションに組み込まれています。\n記事 OS Scheduler - 1 記事 Go Scheduler - 2 記事 Illustrated Tales of Go Runtime Scheduler 動画 Go scheduler: Implementing language with lightweight concurrency ◇ジェネリクス Goジェネリクスは、任意の型で動作する関数、データ構造、アルゴリズムを書くことができる機能です。これは、より柔軟で再利用可能なコードを書くのに役立つ強力な機能です。\n公式 Generics 公式 Go Blog: Generics 記事 Go by Example: Generics 動画 Generics Explained ◇ポインタ Goのポインタは、メモリアドレスを直接操作できる強力な機能です。これらは変数のメモリアドレスを格納するために使用されます。これは、大量のデータを関数に渡す必要がある場合や、関数内で変数の値を変更する必要がある場合に役立ちます。\n公式 Pointers 記事 Go by Example: Pointers 動画 YouTube: Pointers 3. CLIアプリケーションの構築 グラフィカルユーザーインターフェース（GUI）とは異なり、コマンドラインインターフェース（CLI）はテキストのみです。クラウドやインフラストラクチャアプリケーションは、主にCLIベースです。これは、自動化やリモート操作が容易であるためです。\nGoアプリケーションは単一の自己完結型バイナリにビルドされるため、Goアプリケーションのインストールは簡単です。具体的には、Goで書かれたプログラムは、既存のライブラリ、ランタイム、または依存関係を必要とせずに、どのシステムでも実行できます。また、Goで書かれたプログラムは、CやC++と同様に即座に起動しますが、他のプログラミング言語ではこれは実現できません。\n公式 コマンドラインインターフェース（CLI） フィード Golangに関するトップ投稿を探索 ◇Cobra Cobraは、強力なモダンなCLIアプリケーションを作成するためのライブラリです。\n公式 Cobraウェブサイト オープンソース Cobra Github 記事 Cobraパッケージドキュメント 動画 美しいGolang CLIの書き方 ◇Urfave CLI Urfave CLIは、Goでコマンドラインアプリを構築するためのシンプルで高速で楽しいパッケージです。\nオープンソース Urfave CLI 記事 Urfaveウェブサイト 記事 GoでCLIを構築する方法 記事 urfave cliを使用してCLIを構築する フィード CLIに関するトップ投稿を探索 4. ORM オブジェクト関係マッピング（ORM、O/RM、O/Rマッピングツール）は、コンピュータサイエンスにおいて、オブジェクト指向プログラミング言語を使用して型システム間でデータを変換するためのプログラミング技術です。これにより、事実上「仮想オブジェクトデータベース」が作成され、プログラミング言語内から使用できる抽象化レイヤーが提供されます。Goで最も一般的なORMライブラリはGORMです。\n◇GORM GORMは、Golangのための素晴らしいORMライブラリで、開発者フレンドリーを目指しています。これは、リレーショナルデータベースを扱うためのORMライブラリです。このgormライブラリは、database/sqlパッケージの上に開発されています。ORMの概要と機能は次のとおりです：フル機能のORM（ほぼ）\n公式 Gorm 記事 Gormパッケージ 動画 GORMとMYSQL 5. Webフレームワーク Goにはいくつかの有名なWebフレームワークがあります。最も一般的なものは次のとおりです：\nBeego\nGin\nRevel\nEcho\nGoFiber\nオープンソース Webフレームワークの比較\nフィード Golangに関するトップ投稿を探索\n◇Beego Beegoは、Goでのエンタープライズアプリケーションの迅速な開発に使用されます。RESTful API、Webアプリ、バックエンドサービスを含みます。Tornado、Sinatra、Flaskにインスパイアされています。beegoには、インターフェースや構造体の埋め込みなどのGo特有の機能があります。\nオープンソース Beego/Beego ◇Gin Ginは、Golang（Go）で書かれた高性能HTTP Webフレームワークです。GinはMartiniのようなAPIを持ち、最大40倍高速であると主張しています。Ginを使用すると、GoでWebアプリケーションやマイクロサービスを構築できます。\nオープンソース Gin 記事 Gin Webフレームワーク フィード Golangに関するトップ投稿を探索 ◇Revel Revelは、エンドポイントをコントローラーに整理します。簡単なデータバインディングとフォーム検証を提供します。Revelは、Goテンプレートを大規模に簡単に使用できるようにします。アクションの前後に呼び出される機能を登録します。\n公式 Revel 記事 Revelパッケージ ◇Echo Echoは、パフォーマンスに焦点を当てた拡張可能なオープンソースのGo Webアプリケーションフレームワークです。これは、stdlib +ルーターとフルスタックWebフレームワークの間に位置するミニマリストWebフレームワークです。\n公式 Echoウェブサイト オープンソース Echo ◇Gofiber Go Fiberは、ExpressにインスパイアされたGolangのフレームワークです。Go Fiberは、高速HTTPの上に構築されたWebフレームワークです。ルーティング/エンドポイント、ミドルウェア、サーバーリクエストなどの操作を処理するために使用できます。\n公式 公式ドキュメント オープンソース Fiber ◇Gorilla Gorillaは、Goプログラミング言語のためのWebツールキットで、HTTPベースのアプリケーションを書くための有用で構成可能なパッケージを提供します。\n公式 Gorillaツールキット オープンソース Gorilla 6. ロギング Goには、プログラマーがロギングを簡単に実装できるようにするための組み込み機能があります。また、サードパーティがロギングをさらに簡単にするための追加ツールを提供しています。\n記事 Goでのロギング: システムの選択と使用方法 記事 Golangでのロギング – 始め方 フィード ロギングに関するトップ投稿を探索 ◇log/slog logおよびlog/slog（Go 1.21以降）パッケージは、Goの標準ロギングパッケージです。これらのパッケージは、コンソールやファイルにメッセージをログ出力するためのシンプルなAPIを提供します。\n公式 ドキュメント: log 公式 ドキュメント: slog 公式 Goブログ: slogを使った構造化ロギング 記事 Go by Example: ロギング フィード ロギングに関するトップ投稿を探索 ◇Zap Goでの高速で構造化されたレベル別ロギング。\nオープンソース Zap ◇Zerolog Zerologパッケージは、JSON出力に特化した高速でシンプルなロガーを提供します。\nZerologのAPIは、優れた開発者体験と驚異的なパフォーマンスを提供するように設計されています。そのユニークなチェーンAPIにより、Zerologはアロケーションとリフレクションを避けてJSON（またはCBOR）ログイベントを書き込むことができます。\nオープンソース Zerolog 7. リアルタイム通信 名前の通り、リアルタイム通信はリクエストを並行して効率的に処理することです。チャット/メッセージングアプリ、メールサービス、ゲームサーバー、またはオンライン共同プロジェクト（例: Excalidraw）など、リアルタイム通信を処理する方法はいくつかありますが、最も一般的なのはWebSocketを使用する方法です。その他のリアルタイム通信のオプションには、MQTTプロトコルやサーバー送信イベントなどがあります。\n動画 Golang WebSocket ◇Melody Melodyは、gorilla/websocketに基づくWebSocketフレームワークで、WebSocketの扱いにおける面倒な部分を抽象化します。リアルタイムアプリを簡単に作成できるようにします。\nオープンソース Melody オープンソース WebSocket ◇Centrifugo Centrifugoは、オープンソースのスケーラブルなリアルタイムメッセージングサーバーです。Centrifugoは、サポートされているトランスポート（WebSocket、HTTP-streaming、SSE/EventSource、GRPC、SockJS、WebTransport）を介して接続されたアプリケーションのオンラインユーザーにメッセージを即座に配信できます。Centrifugoにはチャネルの概念があり、ユーザー向けのPUB/SUBサーバーです。\n公式 はじめに オープンソース Centrifugo 8. APIクライアント APIクライアントは、コンピュータ上のアプリケーションから動作するツールとプロトコルのセットです。これらは、ウェブアプリケーションの開発時に毎回車輪の再発明をするのではなく、いくつかの操作をバイパスするのに役立ちます。クライアントAPIを使用することは、開発プロセスをスピードアップするための優れた方法です。\n記事 APIクライアント フィード Golangに関するトップ投稿を探索 ◇REST REST（Representational State Transfer）API（Application Programming Interface）は、ウェブサイトを扱う際にユーザー機能を提供するために使用されます。HTTPリクエストを使用してREST APIと通信し、ユーザーがURLウェブサイトをナビゲートできるようにします。これらのURLは、APIの一部として保存されている特定の情報を返すことができます。\n公式 チュートリアル 動画 RESTful APIシリーズ フィード REST APIに関するトップ投稿を探索 Heimdall Heimdallは、アプリケーションが大規模な数のリクエストを行うのを支援するHTTPクライアントです。Heimdallを使用すると、以下のことができます：\n失敗するリクエストを制御するためのHystrixのようなサーキットブレーカーを使用する\n各リクエストに同期メモリ内リトライを追加し、独自のリトライ戦略を設定するオプションを提供する\nすべてのリクエストに対して異なるタイムアウトを持つクライアントを作成する すべてのHTTPメソッドは、フルーエントインターフェースとして公開されています。\nオープンソース Heimdall\nGrequests Pythonの有名なHTTPライブラリであるGrequestsライブラリのGolang実装です。\n特徴：\nレスポンスをJSONおよびXMLにシリアライズ可能\n簡単なファイルアップロード\n簡単なファイルダウンロード\n以下のHTTP動詞をサポート: GET, HEAD, POST, PUT, DELETE, PATCH, OPTIONS\nオープンソース Grequests\n◇GraphQL GraphQLはAPIのためのクエリ言語で、クライアントが要求したデータだけを提供するサービスを優先します。また、REST APIのような破壊的変更、バージョニング、後方互換性について心配する必要はありません。そのため、GraphQLを使用するだけで、独自のバージョンを実装し、APIを自動ドキュメント化できます。\nロードマップ 専用のGraphQLロードマップを参照 公式 GraphQLを学ぶ 公式 GraphQLチュートリアル 記事 Red Hat: GraphQLとは？ 記事 Digital Ocean: GraphQL入門 動画 GraphQL完全コース - 初心者からエキスパートまで 動画 初心者向けGraphQLシリーズ（Ben AwadによるYouTube） フィード GraphQLに関するトップ投稿を探索 Graphql-go GoのためのGraphQLパッケージ。\nオープンソース Graphql 記事 Graphql-goホームページ 記事 Graphql-goドキュメント 動画 GraphQL-Go - Golangチュートリアル（TechPracticeによるYouTube） フィード GraphQLに関するトップ投稿を探索 Gqlgen ドキュメントによると、GolangでGraphQLサーバーを簡単に構築するためのライブラリです。\n公式 Gqlgenドキュメント 記事 gqlgenの紹介: GoのためのGraphQLサーバージェネレータ 動画 GoでのGraphQL - GQLGenチュートリアル（acklacklによるYouTube） 9. Goコードのテスト Goには、プログラムをテストするために使用できる組み込みのテストコマンドがあります。\n公式 Goチュートリアル: テストの追加 記事 Go by Example: テスト 記事 YourBasic Go: テーブル駆動ユニットテスト 記事 Learn Go with Tests フィード テストに関するトップ投稿を探索 10. マイクロサービス向けツール マイクロサービスは、ソフトウェア開発のアーキテクチャアプローチであり、明確に定義されたAPIを介して通信を行うデプロイ可能なサービスから分散アプリケーションを作成することを可能にします。モノリシックなアプリケーションに対する解決策です。\n公式 Chris Richardsonによるマイクロサービスパターンとリソース 記事 マイクロサービスの紹介 記事 マイクロサービスのアンチパターンと落とし穴 - Mark Richards 記事 Building Microservices, 第2版 - Sam Newman フィード マイクロサービスに関するトップ投稿を探索 ◇Watermill Watermillは、Goで非同期リクエストを処理するためのイベントストリーミングライブラリです。Pub/Subのための複数の実装を提供しています。例えば、KafkaやRabbitMQのような従来のPub/Subシステムや、HTTPやMySQLのバイナリログなど、ユースケースに応じて使用できます。\n公式 Watermillウェブサイト 公式 Watermillドキュメント ◇Rpcx Rpcxは、Alibaba DubboやWeibo MotanのようなRPC（リモートプロシージャコール）フレームワークです。Rpcxを使用する利点は以下の通りです：\nシンプル：学びやすく、開発しやすく、統合しやすく、デプロイしやすい\nパフォーマンス：高性能（\u003e= grpc-go）\nクロスプラットフォーム：生のバイトスライス、JSON、Protobuf、MessagePackをサポート。理論的にはJava、PHP、Python、C/C++、Node.js、C#などのプラットフォームで使用可能\nサービスディスカバリーとサービスガバナンス：Zookeeper、etcd、Consulをサポート\n公式 Rpcx公式ウェブサイト\n公式 Rpcxドキュメント\nオープンソース Rpcx\n◇Go-kit Go kitは、Goでマイクロサービス（またはエレガントなモノリス）を構築するためのプログラミングツールキットです。分散システムやアプリケーションアーキテクチャにおける一般的な問題を解決し、ビジネス価値を提供することに集中できるようにします。\n公式 Go-kitウェブサイト 記事 Go kitを使用したGoでのマイクロサービス 動画 Go Kitツールキットを使用したマイクロサービスの構築 フィード Golangに関するトップ投稿を探索 ◇Micro これはAPIファーストの開発プラットフォームです。マイクロサービスアーキテクチャパターンを活用し、プラットフォームのビルディングブロックとして機能する一連のサービスを提供します。\n公式 Microウェブサイト オープンソース Micro ◇go-zero go-zeroは、多くのエンジニアリングベストプラクティスが組み込まれたWebおよびRPCフレームワークです。レジリエンス設計により、繁忙なサービスの安定性を確保するために生まれ、何百万人ものユーザーを抱えるサイトに長年サービスを提供しています。\n公式 Go-zero 公式 Go-zeroドキュメント オープンソース Go-Zero フィード Golangに関するトップ投稿を探索 ◇Protocol Buffers Protocol Buffers（Protobuf）は、構造化データをシリアライズするために使用される、無料でオープンソースの言語中立、プラットフォーム中立、拡張可能なデータフォーマットです。JSONに似ていますが、より小さく、高速で、ネイティブの言語バインディングを生成します。\nProtocol Buffersを使用する利点は以下の通りです：\nコンパクトなデータストレージ\n高速なパース\n多くのプログラミング言語での利用可能\n自動生成クラスによる最適化された機能\nオープンソース Protobuf\n記事 Protobufドキュメント\n記事 GoでのProtobuf\n動画 GolangでのProtocol Buffers\nフィード バックエンド開発に関するトップ投稿を探索\n◇gRPC-Go gRPCのGo言語実装（gRPCはRPC APIを実装するための技術です）。\n公式 GoでのgRPCの基本的なチュートリアル オープンソース gRPC-go 記事 gRPC-goドキュメント フィード gRPCに関するトップ投稿を探索 ◇Grpc gateway gRPC-Gatewayは、gRPCサービスの上にレイヤーを作成し、クライアントに対してRESTfulサービスとして機能します。protocのプラグインです。gRPCサービスの定義を読み取り、RESTful JSON APIをgRPCに変換するリバースプロキシサーバーを生成します。\n公式 Grpc-gatewayドキュメント オープンソース Grpc-gateway フィード gRPCに関するトップ投稿を探索 ◇Twirp Twirpは、シンプルさとミニマリズムを重視したサービス間通信のためのフレームワークです。API定義ファイルからルーティングとシリアライゼーションを生成し、HTTPメソッドやパス、JSONなどの雑事に悩むことなく、アプリケーションのロジックに集中できるようにします。\n公式 はじめに オープンソース Twirp ",
+  "wordCount" : "11336",
+  "inLanguage": "ja",
+  "datePublished": "2025-02-28T00:00:00Z",
+  "dateModified": "2025-02-28T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yuuniji.github.io/ja/posts/roadmap-go/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "叶泽伟的博客",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yuuniji.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yuuniji.github.io/ja/" accesskey="h" title="叶泽伟的博客 (Alt + H)">叶泽伟的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yuuniji.github.io/" title="中文"
+                            aria-label="中文">Zh</a>
+                    </li>
+                    <li>
+                        <a href="https://yuuniji.github.io/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yuuniji.github.io/ja/" title="ホーム">
+                    <span>ホーム</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/ja/tags/" title="タグ">
+                    <span>タグ</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/ja/archives/" title="アーカイブ">
+                    <span>アーカイブ</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/ja/search/" title="検索">
+                    <span>検索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://yuuniji.github.io/ja/">ホーム</a>&nbsp;»&nbsp;<a href="https://yuuniji.github.io/ja/posts/">記事一覧</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Goのロードマップ
+    </h1>
+    <div class="post-meta"><span title='2025-02-28 00:00:00 +0000 UTC'>2月 28, 2025</span>&nbsp;·&nbsp;23 分&nbsp;|&nbsp;言語:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yuuniji.github.io/posts/roadmap-go/">Zh</a>
+    </li>
+    <li>
+        <a href="https://yuuniji.github.io/en/posts/roadmap-go/">En</a>
+    </li>
+</ul>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-%e5%9f%ba%e7%a4%8e%e3%82%92%e5%ad%a6%e3%81%b6" aria-label="1. 基礎を学ぶ">1. 基礎を学ぶ</a><ul>
+                        
+                <li>
+                    <a href="#%e5%9f%ba%e6%9c%ac%e6%a7%8b%e6%96%87" aria-label="◇基本構文">◇基本構文</a></li>
+                <li>
+                    <a href="#go%e3%81%ae%e5%a4%89%e6%95%b0" aria-label="◇Goの変数">◇Goの変数</a></li>
+                <li>
+                    <a href="#%e3%83%87%e3%83%bc%e3%82%bf%e5%9e%8bbool--int-int8163264--byte--unit-unit8163264--rune--float3264--complex64128--unitptr" aria-label="◇データ型(bool | int, int8/16/32/64 | byte | unit, unit8/16/32/64 | rune | float32/64 | complex64/128 | unitptr)">◇データ型(bool | int, int8/16/32/64 | byte | unit, unit8/16/32/64 | rune | float32/64 | complex64/128 | unitptr)</a></li>
+                <li>
+                    <a href="#for%e3%83%ab%e3%83%bc%e3%83%97" aria-label="◇Forループ">◇Forループ</a></li>
+                <li>
+                    <a href="#range" aria-label="◇Range">◇Range</a></li>
+                <li>
+                    <a href="#%e6%9d%a1%e4%bb%b6%e6%96%87" aria-label="◇条件文">◇条件文</a></li>
+                <li>
+                    <a href="#%e3%82%a8%e3%83%a9%e3%83%bc%e3%83%91%e3%83%8b%e3%83%83%e3%82%af%e3%83%aa%e3%82%ab%e3%83%90%e3%83%bc" aria-label="◇エラー/パニック/リカバー">◇エラー/パニック/リカバー</a></li>
+                <li>
+                    <a href="#%e9%96%a2%e6%95%b0%e8%a4%87%e6%95%b0%e5%90%8d%e5%89%8d%e4%bb%98%e3%81%8d%e6%88%bb%e3%82%8a%e5%80%a4" aria-label="◇関数、複数/名前付き戻り値">◇関数、複数/名前付き戻り値</a></li>
+                <li>
+                    <a href="#%e3%83%91%e3%83%83%e3%82%b1%e3%83%bc%e3%82%b8%e3%82%a4%e3%83%b3%e3%83%9d%e3%83%bc%e3%83%88%e3%82%a8%e3%82%af%e3%82%b9%e3%83%9d%e3%83%bc%e3%83%88" aria-label="◇パッケージ、インポート、エクスポート">◇パッケージ、インポート、エクスポート</a></li>
+                <li>
+                    <a href="#%e5%9e%8b%e3%82%ad%e3%83%a3%e3%82%b9%e3%83%88" aria-label="◇型キャスト">◇型キャスト</a></li>
+                <li>
+                    <a href="#%e5%9e%8b%e6%8e%a8%e8%ab%96" aria-label="◇型推論">◇型推論</a></li>
+                <li>
+                    <a href="#%e9%85%8d%e5%88%97" aria-label="◇配列">◇配列</a></li>
+                <li>
+                    <a href="#%e3%82%b9%e3%83%a9%e3%82%a4%e3%82%b9" aria-label="◇スライス">◇スライス</a></li>
+                <li>
+                    <a href="#%e3%83%9e%e3%83%83%e3%83%97" aria-label="◇マップ">◇マップ</a></li>
+                <li>
+                    <a href="#make" aria-label="◇make()">◇make()</a></li>
+                <li>
+                    <a href="#%e6%a7%8b%e9%80%a0%e4%bd%93" aria-label="◇構造体">◇構造体</a></li></ul>
+                </li>
+                <li>
+                    <a href="#2-%e3%81%95%e3%82%89%e3%81%ab%e6%b7%b1%e3%81%8f" aria-label="2. さらに深く">2. さらに深く</a><ul>
+                        
+                <li>
+                    <a href="#go%e3%83%a2%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab" aria-label="◇Goモジュール">◇Goモジュール</a></li>
+                <li>
+                    <a href="#json%e3%81%ae%e3%83%9e%e3%83%bc%e3%82%b7%e3%83%a3%e3%83%aa%e3%83%b3%e3%82%b0%e3%81%a8%e3%82%a2%e3%83%b3%e3%83%9e%e3%83%bc%e3%82%b7%e3%83%a3%e3%83%aa%e3%83%b3%e3%82%b0" aria-label="◇JSONのマーシャリングとアンマーシャリング">◇JSONのマーシャリングとアンマーシャリング</a></li>
+                <li>
+                    <a href="#%e5%9e%8b%e5%9e%8b%e3%82%a2%e3%82%b5%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%b9%e3%82%a4%e3%83%83%e3%83%81" aria-label="◇型、型アサーション、スイッチ">◇型、型アサーション、スイッチ</a></li>
+                <li>
+                    <a href="#%e3%82%a4%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%95%e3%82%a7%e3%83%bc%e3%82%b9" aria-label="◇インターフェース">◇インターフェース</a></li>
+                <li>
+                    <a href="#%e3%82%b3%e3%83%b3%e3%83%86%e3%82%ad%e3%82%b9%e3%83%88" aria-label="◇コンテキスト">◇コンテキスト</a></li>
+                <li>
+                    <a href="#%e3%82%b4%e3%83%ab%e3%83%bc%e3%83%81%e3%83%b3" aria-label="◇ゴルーチン">◇ゴルーチン</a></li>
+                <li>
+                    <a href="#%e3%83%81%e3%83%a3%e3%83%8d%e3%83%ab" aria-label="◇チャネル">◇チャネル</a></li>
+                <li>
+                    <a href="#%e3%83%90%e3%83%83%e3%83%95%e3%82%a1" aria-label="◇バッファ">◇バッファ</a></li>
+                <li>
+                    <a href="#%e3%82%bb%e3%83%ac%e3%82%af%e3%83%88" aria-label="◇セレクト">◇セレクト</a></li>
+                <li>
+                    <a href="#%e3%83%9f%e3%83%a5%e3%83%bc%e3%83%86%e3%83%83%e3%82%af%e3%82%b9" aria-label="◇ミューテックス">◇ミューテックス</a></li>
+                <li>
+                    <a href="#%e3%82%b9%e3%82%b1%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%a9" aria-label="◇スケジューラ">◇スケジューラ</a></li>
+                <li>
+                    <a href="#%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%aa%e3%82%af%e3%82%b9" aria-label="◇ジェネリクス">◇ジェネリクス</a></li>
+                <li>
+                    <a href="#%e3%83%9d%e3%82%a4%e3%83%b3%e3%82%bf" aria-label="◇ポインタ">◇ポインタ</a></li></ul>
+                </li>
+                <li>
+                    <a href="#3-cli%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e6%a7%8b%e7%af%89" aria-label="3. CLIアプリケーションの構築">3. CLIアプリケーションの構築</a><ul>
+                        
+                <li>
+                    <a href="#cobra" aria-label="◇Cobra">◇Cobra</a></li>
+                <li>
+                    <a href="#urfave-cli" aria-label="◇Urfave CLI">◇Urfave CLI</a></li></ul>
+                </li>
+                <li>
+                    <a href="#4-orm" aria-label="4. ORM">4. ORM</a><ul>
+                        
+                <li>
+                    <a href="#gorm" aria-label="◇GORM">◇GORM</a></li></ul>
+                </li>
+                <li>
+                    <a href="#5-web%e3%83%95%e3%83%ac%e3%83%bc%e3%83%a0%e3%83%af%e3%83%bc%e3%82%af" aria-label="5. Webフレームワーク">5. Webフレームワーク</a><ul>
+                        
+                <li>
+                    <a href="#beego" aria-label="◇Beego">◇Beego</a></li>
+                <li>
+                    <a href="#gin" aria-label="◇Gin">◇Gin</a></li>
+                <li>
+                    <a href="#revel" aria-label="◇Revel">◇Revel</a></li>
+                <li>
+                    <a href="#echo" aria-label="◇Echo">◇Echo</a></li>
+                <li>
+                    <a href="#gofiber" aria-label="◇Gofiber">◇Gofiber</a></li>
+                <li>
+                    <a href="#gorilla" aria-label="◇Gorilla">◇Gorilla</a></li></ul>
+                </li>
+                <li>
+                    <a href="#6-%e3%83%ad%e3%82%ae%e3%83%b3%e3%82%b0" aria-label="6. ロギング">6. ロギング</a><ul>
+                        
+                <li>
+                    <a href="#logslog" aria-label="◇log/slog">◇log/slog</a></li>
+                <li>
+                    <a href="#zap" aria-label="◇Zap">◇Zap</a></li>
+                <li>
+                    <a href="#zerolog" aria-label="◇Zerolog">◇Zerolog</a></li></ul>
+                </li>
+                <li>
+                    <a href="#7-%e3%83%aa%e3%82%a2%e3%83%ab%e3%82%bf%e3%82%a4%e3%83%a0%e9%80%9a%e4%bf%a1" aria-label="7. リアルタイム通信">7. リアルタイム通信</a><ul>
+                        
+                <li>
+                    <a href="#melody" aria-label="◇Melody">◇Melody</a></li>
+                <li>
+                    <a href="#centrifugo" aria-label="◇Centrifugo">◇Centrifugo</a></li></ul>
+                </li>
+                <li>
+                    <a href="#8-api%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88" aria-label="8. APIクライアント">8. APIクライアント</a><ul>
+                        
+                <li>
+                    <a href="#rest" aria-label="◇REST">◇REST</a><ul>
+                        
+                <li>
+                    <a href="#heimdall" aria-label="Heimdall">Heimdall</a></li>
+                <li>
+                    <a href="#grequests" aria-label="Grequests">Grequests</a></li></ul>
+                </li>
+                <li>
+                    <a href="#graphql" aria-label="◇GraphQL">◇GraphQL</a><ul>
+                        
+                <li>
+                    <a href="#graphql-go" aria-label="Graphql-go">Graphql-go</a></li>
+                <li>
+                    <a href="#gqlgen" aria-label="Gqlgen">Gqlgen</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#9-go%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e3%83%86%e3%82%b9%e3%83%88" aria-label="9. Goコードのテスト">9. Goコードのテスト</a></li>
+                <li>
+                    <a href="#10-%e3%83%9e%e3%82%a4%e3%82%af%e3%83%ad%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e5%90%91%e3%81%91%e3%83%84%e3%83%bc%e3%83%ab" aria-label="10. マイクロサービス向けツール">10. マイクロサービス向けツール</a><ul>
+                        
+                <li>
+                    <a href="#watermill" aria-label="◇Watermill">◇Watermill</a></li>
+                <li>
+                    <a href="#rpcx" aria-label="◇Rpcx">◇Rpcx</a></li>
+                <li>
+                    <a href="#go-kit" aria-label="◇Go-kit">◇Go-kit</a></li>
+                <li>
+                    <a href="#micro" aria-label="◇Micro">◇Micro</a></li>
+                <li>
+                    <a href="#go-zero" aria-label="◇go-zero">◇go-zero</a></li>
+                <li>
+                    <a href="#protocol-buffers" aria-label="◇Protocol Buffers">◇Protocol Buffers</a></li>
+                <li>
+                    <a href="#grpc-go" aria-label="◇gRPC-Go">◇gRPC-Go</a></li>
+                <li>
+                    <a href="#grpc-gateway" aria-label="◇Grpc gateway">◇Grpc gateway</a></li>
+                <li>
+                    <a href="#twirp" aria-label="◇Twirp">◇Twirp</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="1-基礎を学ぶ">1. 基礎を学ぶ<a hidden class="anchor" aria-hidden="true" href="#1-基礎を学ぶ">#</a></h2>
+<p>Goの変数、ループ、条件文、関数、データ型などの一般的な概念を学びます。Goの基礎を学ぶための良い出発点は、Goの公式ドキュメントです。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/doc/tutorial/">Goチュートリアル</a></li>
+<li><em>記事</em> <a href="https://www.w3schools.com/go/index.php">W3 Schools Goチュートリアル</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/golang?ref=roadmapsh">Golangに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="基本構文">◇基本構文<a hidden class="anchor" aria-hidden="true" href="#基本構文">#</a></h3>
+<p>Goプログラムの実行方法、パッケージのインポート、main関数など、Goの基本構文について学びます。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/doc/tutorial/getting-started">Goチュートリアル: はじめに</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/hello-world">Go by Example: Hello World</a></li>
+<li><em>記事</em> <a href="https://www.w3schools.com/go/go_syntax.php">W3schools: Goの構文</a></li>
+</ul>
+<h3 id="goの変数">◇Goの変数<a hidden class="anchor" aria-hidden="true" href="#goの変数">#</a></h3>
+<p>変数は、特定の型の値を格納するためのメモリ位置に付けられた名前です。Goでは、変数を宣言して使用するための複数の方法が提供されています。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/basics/8">Goの変数</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/variables">Go by Example: 変数</a></li>
+<li><em>記事</em> <a href="https://www.w3schools.com/go/go_variables.php">w3schools Goの変数</a></li>
+</ul>
+<h3 id="データ型bool--int-int8163264--byte--unit-unit8163264--rune--float3264--complex64128--unitptr">◇データ型(bool | int, int8/16/32/64 | byte | unit, unit8/16/32/64 | rune | float32/64 | complex64/128 | unitptr)<a hidden class="anchor" aria-hidden="true" href="#データ型bool--int-int8163264--byte--unit-unit8163264--rune--float3264--complex64128--unitptr">#</a></h3>
+<p>Goは静的に型付けされたプログラミング言語であり、各変数は最初に型が定義され、その型の値のみを保持できます。Goの型には、基本型と複合型の2つのカテゴリがあります。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/basics/11">Goツアー: 型</a></li>
+<li><em>記事</em> <a href="https://golangbyexample.com/all-data-types-in-golang-with-examples/">Goの型と例</a></li>
+<li><em>記事</em> <a href="https://www.w3schools.com/go/go_data_types.php">データ型</a></li>
+</ul>
+<h3 id="forループ">◇Forループ<a hidden class="anchor" aria-hidden="true" href="#forループ">#</a></h3>
+<p>Goには、forループという1つのループ構造しかありません。基本的なforループには、セミコロンで区切られた3つのコンポーネントがあります：</p>
+<ul>
+<li>
+<p>init文: 最初の反復の前に実行されます</p>
+</li>
+<li>
+<p>条件式: 各反復の前に評価されます</p>
+</li>
+<li>
+<p>post文: 各反復の最後に実行されます</p>
+</li>
+<li>
+<p><em>公式</em> <a href="https://go.dev/tour/flowcontrol/1">GoのForループ</a></p>
+</li>
+<li>
+<p><em>公式</em> <a href="https://go.dev/doc/effective_go#for">Effective Go: Forループ</a></p>
+</li>
+<li>
+<p><em>記事</em> <a href="https://gobyexample.com/for">Go by Example: Forループ</a></p>
+</li>
+<li>
+<p><em>記事</em> <a href="https://yourbasic.org/golang/for-loop/">5つの基本的なForループパターン</a></p>
+</li>
+</ul>
+<h3 id="range">◇Range<a hidden class="anchor" aria-hidden="true" href="#range">#</a></h3>
+<p><code>range</code>は、forループと共に使用して、配列、文字列、およびその他のデータ構造の各要素を反復処理します。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/moretypes/16">GoのRange</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/range">Go by Example: Range</a></li>
+<li><em>記事</em> <a href="https://yourbasic.org/golang/for-loop-range-array-slice-map-channel/">GoのRange基本パターン</a></li>
+</ul>
+<h3 id="条件文">◇条件文<a hidden class="anchor" aria-hidden="true" href="#条件文">#</a></h3>
+<p>条件文は、特定の条件が真の場合にのみコードを実行するために使用されます。Goは以下をサポートしています：</p>
+<ul>
+<li>
+<p><code>if</code>文</p>
+</li>
+<li>
+<p><code>if...else</code>文</p>
+</li>
+<li>
+<p><code>switch...case</code>文</p>
+</li>
+<li>
+<p><em>公式</em> <a href="https://go.dev/doc/effective_go#if">Effective Go: if文</a></p>
+</li>
+<li>
+<p><em>記事</em> <a href="https://gobyexample.com/if-else">Go by Example: If-Else</a></p>
+</li>
+<li>
+<p><em>記事</em> <a href="https://www.golangprograms.com/golang-if-else-statements.html">GoのIf-Else文</a></p>
+</li>
+<li>
+<p><em>記事</em> <a href="https://www.golangprograms.com/golang-switch-case-statements.html">GoのSwitch Caseプログラム</a></p>
+</li>
+</ul>
+<h3 id="エラーパニックリカバー">◇エラー/パニック/リカバー<a hidden class="anchor" aria-hidden="true" href="#エラーパニックリカバー">#</a></h3>
+<p>例外ハンドラを追加する代わりに、Goの作成者はGoの複数の値を返す能力を活用しました。Goでエラーを発行するために最も一般的に使用される技術は、エラーを戻り値の最後の値として返すことです。</p>
+<p>パニックは通常、予期せぬ問題が発生したことを意味します。通常の操作中に発生してはならないエラーや、適切に処理する準備ができていないエラーに対して、迅速に失敗するために使用されます。</p>
+<p>Goでのパニック回復は、遅延関数と呼ばれる言語の機能に依存しています。Goは、親関数が戻る時点で関数の実行を保証する能力を持っています。これは、親関数の戻りの理由がreturn文、関数ブロックの終了、またはパニックであるかどうかに関係なく発生します。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/blog/error-handling-and-go">エラーハンドリングとGo</a></li>
+<li><em>公式</em> <a href="https://go.dev/blog/defer-panic-and-recover">GoのDefer、Panic、Recover</a></li>
+<li><em>記事</em> <a href="https://earthly.dev/blog/golang-errors/">Goでの効果的なエラーハンドリング</a></li>
+</ul>
+<h3 id="関数複数名前付き戻り値">◇関数、複数/名前付き戻り値<a hidden class="anchor" aria-hidden="true" href="#関数複数名前付き戻り値">#</a></h3>
+<p>関数は、特定のタスクを実行するコードのブロックです。プログラムの他の部分から呼び出すことができる再利用可能なコードの単位です。関数はコードを整理し、モジュール化し、可読性を向上させます。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/doc/effective_go#functions">Effective Go: 関数</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/functions">Go by Example: 関数</a></li>
+<li><em>記事</em> <a href="https://www.golangprograms.com/go-language/functions.html">Goの関数</a></li>
+</ul>
+<h3 id="パッケージインポートエクスポート">◇パッケージ、インポート、エクスポート<a hidden class="anchor" aria-hidden="true" href="#パッケージインポートエクスポート">#</a></h3>
+<p>パッケージはGo言語の最も強力な部分です。パッケージの目的は、関連する機能を単一の単位にグループ化して、多数のプログラムを設計および維持することです。これにより、保守と理解が容易になり、他のパッケージプログラムから独立して動作します。このモジュール性により、共有と再利用が可能になります。Go言語では、すべてのパッケージは異なる名前で定義され、その名前は「strings」パッケージのように機能に近いものとなっています。このパッケージには、文字列に関連するメソッドと関数のみが含まれています。</p>
+<ul>
+<li><em>公式</em> <a href="https://pkg.go.dev/">Goパッケージエクスプローラー</a></li>
+<li><em>公式</em> <a href="https://pkg.go.dev/std">標準ライブラリ</a></li>
+<li><em>公式</em> <a href="https://go.dev/doc/modules/managing-dependencies">Goでの外部依存関係の管理方法</a></li>
+<li><em>記事</em> <a href="https://www.golang-book.com/books/intro/11">Goでパッケージを作成する方法</a></li>
+</ul>
+<h3 id="型キャスト">◇型キャスト<a hidden class="anchor" aria-hidden="true" href="#型キャスト">#</a></h3>
+<p>Goは自動的な型変換をサポートしていませんが、型キャストを許可しています。型キャストは、変数の型を明示的に変更するプロセスです。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/basics/13">Goツアー: 型キャストの基礎</a></li>
+<li><em>記事</em> <a href="https://golangdocs.com/type-casting-in-golang">Goドキュメント: 型キャスト</a></li>
+</ul>
+<h3 id="型推論">◇型推論<a hidden class="anchor" aria-hidden="true" href="#型推論">#</a></h3>
+<p>型推論により、Goは値の型を明示的に指定しなくても検出する能力を持っています。これにより、最初に型を指定せずに変数を宣言することが可能になります。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/basics/14">Goツアー: 型推論</a></li>
+<li><em>記事</em> <a href="https://www.callicoder.com/golang-variables-zero-values-type-inference/#type-inference">Goの変数: 型推論</a></li>
+</ul>
+<h3 id="配列">◇配列<a hidden class="anchor" aria-hidden="true" href="#配列">#</a></h3>
+<p>Goでは、<code>配列</code>は同じ型の要素のコレクションであり、配列が作成されるときに<strong>固定</strong>サイズが定義されます。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/moretypes/6">Goの配列</a></li>
+<li><em>公式</em> <a href="https://go.dev/doc/effective_go#arrays">Effective Go: 配列</a></li>
+<li><em>動画</em> <a href="https://youtu.be/YS4e4q9oBaU?t=6473">Goプログラミングを学ぶ - 配列</a></li>
+</ul>
+<h3 id="スライス">◇スライス<a hidden class="anchor" aria-hidden="true" href="#スライス">#</a></h3>
+<p>スライスは配列に似ていますが、より強力で柔軟です。配列と同様に、スライスも同じ型の複数の値を単一の変数に格納するために使用されます。ただし、配列とは異なり、スライスの長さは必要に応じて増減できます。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/moretypes/7">Goのスライス</a></li>
+<li><em>公式</em> <a href="https://go.dev/doc/effective_go#slices">Effective Go: スライス</a></li>
+<li><em>記事</em> <a href="https://www.w3schools.com/go/go_slices.php">Goのスライス</a></li>
+<li><em>動画</em> <a href="https://youtu.be/YS4e4q9oBaU?t=6473">Goプログラミングを学ぶ - スライス</a></li>
+</ul>
+<h3 id="マップ">◇マップ<a hidden class="anchor" aria-hidden="true" href="#マップ">#</a></h3>
+<p>マップはGoのデータ構造で、キーと値のペア間のマッピングが必要な場合に使用します。マップは要素の追加や削除に関して柔軟性があります。マップは重複エントリを許可せず、データは順序付けられていません。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/moretypes/19">Goのマップ</a></li>
+<li><em>公式</em> <a href="https://go.dev/doc/effective_go#maps">Effective Go: マップ</a></li>
+<li><em>記事</em> <a href="https://www.w3schools.com/go/go_maps.php">Goのマップ</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=yJE2RC37BF4">Golangチュートリアル #15 - マップ (Tech With TimによるYouTube動画)</a></li>
+</ul>
+<h3 id="make">◇make()<a hidden class="anchor" aria-hidden="true" href="#make">#</a></h3>
+<p>Goの組み込み関数<code>make</code>は、スライス、マップ、チャネルを作成および初期化するのに役立ちます。この関数に提供される引数に応じて、作成されるデータ構造が異なります。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/doc/effective_go#allocation_make">Effective Go: makeによる割り当て</a></li>
+<li><em>記事</em> <a href="https://www.golangprograms.com/how-to-create-slice-using-make-function-in-golang.html">makeを使用してスライスを作成</a></li>
+<li><em>記事</em> <a href="https://www.golangprograms.com/golang-package-examples/how-to-create-map-using-the-make-function-in-go.html">makeを使用してマップを作成</a></li>
+<li><em>記事</em> <a href="https://www.programiz.com/golang/channel#channel">makeを使用してチャネルを作成</a></li>
+</ul>
+<h3 id="構造体">◇構造体<a hidden class="anchor" aria-hidden="true" href="#構造体">#</a></h3>
+<p>構造体は、ユーザー定義型であり、単一のエンティティを記述するデータのコレクションを作成するのに役立ちます。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/moretypes/2">Goの構造体</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/structs">Go by Example: 構造体</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=NMTN543WVQY">Goの構造体</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=vtHZb7gNlbw">構造体タグとリフレクションによる独自タグの作成</a></li>
+</ul>
+<h2 id="2-さらに深く">2. さらに深く<a hidden class="anchor" aria-hidden="true" href="#2-さらに深く">#</a></h2>
+<p>Golangの深い理解には、言語のより高度な機能とベストプラクティスを探求し、その全ポテンシャルを引き出すことが含まれます。基本をマスターしたら、Goの複雑な側面を理解することで、コードのパフォーマンス、可読性、保守性を大幅に向上させることができます。</p>
+<ul>
+<li><em>記事</em> <a href="https://www.reddit.com/r/golang/comments/m57vwe/advanced_go_techniques_you_think_everyone_should/">Mastering Advance GO</a></li>
+</ul>
+<h3 id="goモジュール">◇Goモジュール<a hidden class="anchor" aria-hidden="true" href="#goモジュール">#</a></h3>
+<p>Goモジュールは、バージョン管理され、一緒に配布される関連パッケージのグループです。これらはプロジェクトの要件を指定し、必要な依存関係をリストアップし、インストールされた依存関係の特定のバージョンを追跡するのに役立ちます。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/blog/using-go-modules">Go Modules</a></li>
+<li><em>記事</em> <a href="https://www.digitalocean.com/community/tutorials/how-to-use-go-modules">DigitalOcean: How to use Go Modules</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=9cV1KESTJRc">Go Modules</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/golang?ref=roadmapsh">Explore top posts about Golang</a></li>
+</ul>
+<h3 id="jsonのマーシャリングとアンマーシャリング">◇JSONのマーシャリングとアンマーシャリング<a hidden class="anchor" aria-hidden="true" href="#jsonのマーシャリングとアンマーシャリング">#</a></h3>
+<p>JSON（JavaScript Object Notation）は、シンプルなデータ交換フォーマットです。構文的にはJavaScriptのオブジェクトやリストに似ています。主にウェブバックエンドとブラウザで実行されるJavaScriptプログラム間の通信に使用されますが、他の多くの場所でも使用されます。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/blog/json">JSON</a></li>
+<li><em>記事</em> <a href="https://www.sohamkamani.com/golang/json/">Guide to JSON in Golang</a></li>
+<li><em>記事</em> <a href="https://mholt.github.io/json-to-go/">JSON to GO</a></li>
+<li><em>記事</em> <a href="https://betterstack.com/community/guides/scaling-go/json-in-go/">Comprehensive Guide to using JSON in Go</a></li>
+</ul>
+<h3 id="型型アサーションスイッチ">◇型、型アサーション、スイッチ<a hidden class="anchor" aria-hidden="true" href="#型型アサーションスイッチ">#</a></h3>
+<p>Golangの型は、有効なGo変数が保持できるデータ型を指定します。Golangには、基本型、集約型、参照型、インターフェース型の4つのカテゴリがあります。Golangの型アサーションは、インターフェースの変数の正確な型にアクセスするための手段を提供します。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/methods/15">Types Assertions</a></li>
+<li><em>動画</em> <a href="https://youtube.com/watch?v=vtGbi9bGr3s">Go Syntax - Type Assertions</a></li>
+</ul>
+<h3 id="インターフェース">◇インターフェース<a hidden class="anchor" aria-hidden="true" href="#インターフェース">#</a></h3>
+<p>Goのインターフェースは、メソッドのセットを定義する型です。そのメソッドセットを実装する型（例えば構造体）がある場合、その型はこのインターフェースを実装しています。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/methods/9">Go Interfaces</a></li>
+<li><em>公式</em> <a href="https://go.dev/doc/effective_go#interfaces">Effective Go: Interfaces</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/interfaces">Go by Example: Interfaces</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=lh_Uv2imp14">Golang Tutorial #22 - Interfaces (by Tech With Tim on YouTube)</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=qJKQZKGZgf0">Understanding Go Interfaces</a></li>
+</ul>
+<h3 id="コンテキスト">◇コンテキスト<a hidden class="anchor" aria-hidden="true" href="#コンテキスト">#</a></h3>
+<p><code>context</code>パッケージは、リクエスト中の状態管理の問題を解決するための標準的な方法を提供します。このパッケージは、リクエストスコープのデータの必要性を満たし、デッドライン、キャンセルシグナルなどを処理するための標準化された方法を提供します。</p>
+<ul>
+<li><em>公式</em> <a href="https://pkg.go.dev/context">Go Context</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/context">Go by Example: Context</a></li>
+<li><em>記事</em> <a href="https://www.digitalocean.com/community/tutorials/how-to-use-contexts-in-go">Digital Ocean: How to Use Contexts in Go</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=LSzR0VEraWw">Context in Go</a></li>
+<li><em>動画</em> <a href="https://youtu.be/h2RdcrMLQAo">Understanding Contexts in Go</a></li>
+</ul>
+<h3 id="ゴルーチン">◇ゴルーチン<a hidden class="anchor" aria-hidden="true" href="#ゴルーチン">#</a></h3>
+<p>ゴルーチンを使用すると、Goで並行プログラムを書くことができます。ウェブサーバーが数千のリクエストを処理したり、ウェブサイトが新しいページをレンダリングしながら同時にネットワークリクエストを行うなどが並行性の例です。Goでは、これらの並行タスクのそれぞれを<code>ゴルーチン</code>と呼びます。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/concurrency/1">Goroutines</a></li>
+<li><em>公式</em> <a href="https://go.dev/doc/effective_go#goroutines">Effective Go: Goroutines</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/goroutines">Go by Example: Goroutines</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=LvgVSSpwND8">GoRoutines</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=V-0ifUKCkBI">Understanding Concurrency</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/golang?ref=roadmapsh">Explore top posts about Golang</a></li>
+</ul>
+<h3 id="チャネル">◇チャネル<a hidden class="anchor" aria-hidden="true" href="#チャネル">#</a></h3>
+<p>チャネルは、並行ゴルーチンを接続するパイプです。あるゴルーチンからチャネルに値を送信し、別のゴルーチンでそれらの値を受信することができます。</p>
+<p>チャネルは、チャネル演算子<code>&lt;-</code>を使用して値を送受信できる型付きの導管です。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/concurrency/2">Channels</a></li>
+<li><em>公式</em> <a href="https://go.dev/doc/effective_go#channels">Effective Go: Channels</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/channels">Go by Example: Channels</a></li>
+<li><em>記事</em> <a href="https://golangbot.com/channels/">Channels in Golang</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=e4bu9g-bYtg">Channels</a></li>
+<li><em>動画</em> <a href="https://youtu.be/LgCmPHqAuf4">Golang Channel Basics You must Know!</a></li>
+</ul>
+<h3 id="バッファ">◇バッファ<a hidden class="anchor" aria-hidden="true" href="#バッファ">#</a></h3>
+<p><code>バッファ</code>はGo言語のバイトパッケージに属し、これらのパッケージを使用して文字列のバイトを操作することができます。</p>
+<ul>
+<li><em>公式</em> <a href="https://pkg.go.dev/bytes#example-Buffer">Buffer Examples</a></li>
+<li><em>記事</em> <a href="https://www.educba.com/golang-buffer/">Buffer</a></li>
+</ul>
+<h3 id="セレクト">◇セレクト<a hidden class="anchor" aria-hidden="true" href="#セレクト">#</a></h3>
+<p><code>select</code>ステートメントは、ゴルーチンが複数の通信操作を待機することを可能にします。</p>
+<p><code>select</code>は、そのケースの1つが実行可能になるまでブロックし、その後そのケースを実行します。複数のケースが準備できている場合、ランダムに1つを選択します。<code>select</code>ステートメントはswitchステートメントに似ていますが、selectステートメントでは、ケースステートメントは通信、つまりチャネルへの送信または受信操作を指します。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/concurrency/5">Select</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/select">Go by Example: Select</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=1c7ttSJDMAI">Select Statement</a></li>
+</ul>
+<h3 id="ミューテックス">◇ミューテックス<a hidden class="anchor" aria-hidden="true" href="#ミューテックス">#</a></h3>
+<p>Goでは、ゴルーチンを使用してコードを並行して実行することができます。ただし、並行プロセスが同じデータにアクセスすると、競合状態が発生する可能性があります。ミューテックスは、syncパッケージによって提供されるデータ構造です。これを使用して、データの異なるセクションにロックをかけ、一度に1つのゴルーチンだけがアクセスできるようにすることができます。</p>
+<ul>
+<li><em>記事</em> <a href="https://www.sohamkamani.com/golang/mutex/">Using a Mutex in Go with Examples</a></li>
+<li><em>記事</em> <a href="https://pkg.go.dev/sync/">Sync Package</a></li>
+</ul>
+<h3 id="スケジューラ">◇スケジューラ<a hidden class="anchor" aria-hidden="true" href="#スケジューラ">#</a></h3>
+<p>Goスケジューラを使用すると、Golangが内部的にどのように動作するかをより深く理解することができます。論理プロセッサ、コア、スレッド、プールキャッシュ、コンテキストスイッチなどについてです。GoスケジューラはGoランタイムの一部であり、Goランタイムはアプリケーションに組み込まれています。</p>
+<ul>
+<li><em>記事</em> <a href="https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html">OS Scheduler - 1</a></li>
+<li><em>記事</em> <a href="https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part2.html">Go Scheduler - 2</a></li>
+<li><em>記事</em> <a href="https://medium.com/@ankur_anand/illustrated-tales-of-go-runtime-scheduler-74809ef6d19b">Illustrated Tales of Go Runtime Scheduler</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=-K11rY57K7k&amp;ab_channel=Hydra">Go scheduler: Implementing language with lightweight concurrency</a></li>
+</ul>
+<h3 id="ジェネリクス">◇ジェネリクス<a hidden class="anchor" aria-hidden="true" href="#ジェネリクス">#</a></h3>
+<p>Goジェネリクスは、任意の型で動作する関数、データ構造、アルゴリズムを書くことができる機能です。これは、より柔軟で再利用可能なコードを書くのに役立つ強力な機能です。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/doc/tutorial/generics">Generics</a></li>
+<li><em>公式</em> <a href="https://go.dev/blog/intro-generics">Go Blog: Generics</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/generics">Go by Example: Generics</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=SSRIn5DAmyw">Generics Explained</a></li>
+</ul>
+<h3 id="ポインタ">◇ポインタ<a hidden class="anchor" aria-hidden="true" href="#ポインタ">#</a></h3>
+<p>Goのポインタは、メモリアドレスを直接操作できる強力な機能です。これらは変数のメモリアドレスを格納するために使用されます。これは、大量のデータを関数に渡す必要がある場合や、関数内で変数の値を変更する必要がある場合に役立ちます。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/tour/moretypes/1">Pointers</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/pointers">Go by Example: Pointers</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=a4HcEsJ1hIE">YouTube: Pointers</a></li>
+</ul>
+<h2 id="3-cliアプリケーションの構築">3. CLIアプリケーションの構築<a hidden class="anchor" aria-hidden="true" href="#3-cliアプリケーションの構築">#</a></h2>
+<p>グラフィカルユーザーインターフェース（GUI）とは異なり、コマンドラインインターフェース（CLI）はテキストのみです。クラウドやインフラストラクチャアプリケーションは、主にCLIベースです。これは、自動化やリモート操作が容易であるためです。</p>
+<p>Goアプリケーションは単一の自己完結型バイナリにビルドされるため、Goアプリケーションのインストールは簡単です。具体的には、Goで書かれたプログラムは、既存のライブラリ、ランタイム、または依存関係を必要とせずに、どのシステムでも実行できます。また、Goで書かれたプログラムは、CやC++と同様に即座に起動しますが、他のプログラミング言語ではこれは実現できません。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/solutions/clis">コマンドラインインターフェース（CLI）</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/golang?ref=roadmapsh">Golangに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="cobra">◇Cobra<a hidden class="anchor" aria-hidden="true" href="#cobra">#</a></h3>
+<p>Cobraは、強力なモダンなCLIアプリケーションを作成するためのライブラリです。</p>
+<ul>
+<li><em>公式</em> <a href="https://cobra.dev/">Cobraウェブサイト</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/spf13/cobra">Cobra Github</a></li>
+<li><em>記事</em> <a href="https://pkg.go.dev/github.com/spf13/cobra">Cobraパッケージドキュメント</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=SSRIn5DAmyw">美しいGolang CLIの書き方</a></li>
+</ul>
+<h3 id="urfave-cli">◇Urfave CLI<a hidden class="anchor" aria-hidden="true" href="#urfave-cli">#</a></h3>
+<p>Urfave CLIは、Goでコマンドラインアプリを構築するためのシンプルで高速で楽しいパッケージです。</p>
+<ul>
+<li><em>オープンソース</em> <a href="https://github.com/urfave/cli">Urfave CLI</a></li>
+<li><em>記事</em> <a href="https://cli.urfave.org/">Urfaveウェブサイト</a></li>
+<li><em>記事</em> <a href="https://blog.hackajob.co/how-to-build-cli-in-go/">GoでCLIを構築する方法</a></li>
+<li><em>記事</em> <a href="https://zerokspot.com/weblog/2021/01/25/building-a-cli-using-urfave-cli/">urfave cliを使用してCLIを構築する</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/cli?ref=roadmapsh">CLIに関するトップ投稿を探索</a></li>
+</ul>
+<h2 id="4-orm">4. ORM<a hidden class="anchor" aria-hidden="true" href="#4-orm">#</a></h2>
+<p>オブジェクト関係マッピング（ORM、O/RM、O/Rマッピングツール）は、コンピュータサイエンスにおいて、オブジェクト指向プログラミング言語を使用して型システム間でデータを変換するためのプログラミング技術です。これにより、事実上「仮想オブジェクトデータベース」が作成され、プログラミング言語内から使用できる抽象化レイヤーが提供されます。Goで最も一般的なORMライブラリはGORMです。</p>
+<h3 id="gorm">◇GORM<a hidden class="anchor" aria-hidden="true" href="#gorm">#</a></h3>
+<p>GORMは、Golangのための素晴らしいORMライブラリで、開発者フレンドリーを目指しています。これは、リレーショナルデータベースを扱うためのORMライブラリです。このgormライブラリは、database/sqlパッケージの上に開発されています。ORMの概要と機能は次のとおりです：フル機能のORM（ほぼ）</p>
+<ul>
+<li><em>公式</em> <a href="https://gorm.io/docs/index.html">Gorm</a></li>
+<li><em>記事</em> <a href="https://pkg.go.dev/gorm.io/gorm">Gormパッケージ</a></li>
+<li><em>動画</em> <a href="https://youtu.be/1E_YycpCsXw?si=_XeaElLMMChaEZw3">GORMとMYSQL</a></li>
+</ul>
+<h2 id="5-webフレームワーク">5. Webフレームワーク<a hidden class="anchor" aria-hidden="true" href="#5-webフレームワーク">#</a></h2>
+<p>Goにはいくつかの有名なWebフレームワークがあります。最も一般的なものは次のとおりです：</p>
+<ul>
+<li>
+<p>Beego</p>
+</li>
+<li>
+<p>Gin</p>
+</li>
+<li>
+<p>Revel</p>
+</li>
+<li>
+<p>Echo</p>
+</li>
+<li>
+<p>GoFiber</p>
+</li>
+<li>
+<p><em>オープンソース</em> <a href="https://github.com/diyan/go-web-framework-comparison">Webフレームワークの比較</a></p>
+</li>
+<li>
+<p><em>フィード</em> <a href="https://app.daily.dev/tags/golang?ref=roadmapsh">Golangに関するトップ投稿を探索</a></p>
+</li>
+</ul>
+<h3 id="beego">◇Beego<a hidden class="anchor" aria-hidden="true" href="#beego">#</a></h3>
+<p>Beegoは、Goでのエンタープライズアプリケーションの迅速な開発に使用されます。RESTful API、Webアプリ、バックエンドサービスを含みます。Tornado、Sinatra、Flaskにインスパイアされています。beegoには、インターフェースや構造体の埋め込みなどのGo特有の機能があります。</p>
+<ul>
+<li><em>オープンソース</em> <a href="https://github.com/beego/beego">Beego/Beego</a></li>
+</ul>
+<h3 id="gin">◇Gin<a hidden class="anchor" aria-hidden="true" href="#gin">#</a></h3>
+<p>Ginは、Golang（Go）で書かれた高性能HTTP Webフレームワークです。GinはMartiniのようなAPIを持ち、最大40倍高速であると主張しています。Ginを使用すると、GoでWebアプリケーションやマイクロサービスを構築できます。</p>
+<ul>
+<li><em>オープンソース</em> <a href="https://github.com/gin-gonic/gin">Gin</a></li>
+<li><em>記事</em> <a href="https://pkg.go.dev/github.com/gin-gonic/gin">Gin Webフレームワーク</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/golang?ref=roadmapsh">Golangに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="revel">◇Revel<a hidden class="anchor" aria-hidden="true" href="#revel">#</a></h3>
+<p>Revelは、エンドポイントをコントローラーに整理します。簡単なデータバインディングとフォーム検証を提供します。Revelは、Goテンプレートを大規模に簡単に使用できるようにします。アクションの前後に呼び出される機能を登録します。</p>
+<ul>
+<li><em>公式</em> <a href="https://revel.github.io/tutorial/index.html">Revel</a></li>
+<li><em>記事</em> <a href="https://pkg.go.dev/github.com/revel/revel">Revelパッケージ</a></li>
+</ul>
+<h3 id="echo">◇Echo<a hidden class="anchor" aria-hidden="true" href="#echo">#</a></h3>
+<p>Echoは、パフォーマンスに焦点を当てた拡張可能なオープンソースのGo Webアプリケーションフレームワークです。これは、stdlib +ルーターとフルスタックWebフレームワークの間に位置するミニマリストWebフレームワークです。</p>
+<ul>
+<li><em>公式</em> <a href="https://echo.labstack.com/">Echoウェブサイト</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/labstack/echo">Echo</a></li>
+</ul>
+<h3 id="gofiber">◇Gofiber<a hidden class="anchor" aria-hidden="true" href="#gofiber">#</a></h3>
+<p>Go Fiberは、ExpressにインスパイアされたGolangのフレームワークです。Go Fiberは、高速HTTPの上に構築されたWebフレームワークです。ルーティング/エンドポイント、ミドルウェア、サーバーリクエストなどの操作を処理するために使用できます。</p>
+<ul>
+<li><em>公式</em> <a href="https://docs.gofiber.io/">公式ドキュメント</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/gofiber/fiber">Fiber</a></li>
+</ul>
+<h3 id="gorilla">◇Gorilla<a hidden class="anchor" aria-hidden="true" href="#gorilla">#</a></h3>
+<p>Gorillaは、Goプログラミング言語のためのWebツールキットで、HTTPベースのアプリケーションを書くための有用で構成可能なパッケージを提供します。</p>
+<ul>
+<li><em>公式</em> <a href="https://www.gorillatoolkit.org/">Gorillaツールキット</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/gorilla">Gorilla</a></li>
+</ul>
+<h2 id="6-ロギング">6. ロギング<a hidden class="anchor" aria-hidden="true" href="#6-ロギング">#</a></h2>
+<p>Goには、プログラマーがロギングを簡単に実装できるようにするための組み込み機能があります。また、サードパーティがロギングをさらに簡単にするための追加ツールを提供しています。</p>
+<ul>
+<li><em>記事</em> <a href="https://www.honeybadger.io/blog/golang-logging/">Goでのロギング: システムの選択と使用方法</a></li>
+<li><em>記事</em> <a href="https://www.loggly.com/use-cases/logging-in-golang-how-to-start/">Golangでのロギング – 始め方</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/logging?ref=roadmapsh">ロギングに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="logslog">◇log/slog<a hidden class="anchor" aria-hidden="true" href="#logslog">#</a></h3>
+<p><code>log</code>および<code>log/slog</code>（Go 1.21以降）パッケージは、Goの標準ロギングパッケージです。これらのパッケージは、コンソールやファイルにメッセージをログ出力するためのシンプルなAPIを提供します。</p>
+<ul>
+<li><em>公式</em> <a href="https://pkg.go.dev/log">ドキュメント: log</a></li>
+<li><em>公式</em> <a href="https://pkg.go.dev/log/slog">ドキュメント: slog</a></li>
+<li><em>公式</em> <a href="https://go.dev/blog/slog">Goブログ: slogを使った構造化ロギング</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/logging">Go by Example: ロギング</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/logging?ref=roadmapsh">ロギングに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="zap">◇Zap<a hidden class="anchor" aria-hidden="true" href="#zap">#</a></h3>
+<p>Goでの高速で構造化されたレベル別ロギング。</p>
+<ul>
+<li><em>オープンソース</em> <a href="https://github.com/uber-go/zap">Zap</a></li>
+</ul>
+<h3 id="zerolog">◇Zerolog<a hidden class="anchor" aria-hidden="true" href="#zerolog">#</a></h3>
+<p>Zerologパッケージは、JSON出力に特化した高速でシンプルなロガーを提供します。</p>
+<p>ZerologのAPIは、優れた開発者体験と驚異的なパフォーマンスを提供するように設計されています。そのユニークなチェーンAPIにより、Zerologはアロケーションとリフレクションを避けてJSON（またはCBOR）ログイベントを書き込むことができます。</p>
+<ul>
+<li><em>オープンソース</em> <a href="https://github.com/rs/zerolog">Zerolog</a></li>
+</ul>
+<h2 id="7-リアルタイム通信">7. リアルタイム通信<a hidden class="anchor" aria-hidden="true" href="#7-リアルタイム通信">#</a></h2>
+<p>名前の通り、リアルタイム通信はリクエストを並行して効率的に処理することです。チャット/メッセージングアプリ、メールサービス、ゲームサーバー、またはオンライン共同プロジェクト（例: Excalidraw）など、リアルタイム通信を処理する方法はいくつかありますが、最も一般的なのはWebSocketを使用する方法です。その他のリアルタイム通信のオプションには、MQTTプロトコルやサーバー送信イベントなどがあります。</p>
+<ul>
+<li><em>動画</em> <a href="https://youtu.be/G8SKhZMqvsE">Golang WebSocket</a></li>
+</ul>
+<h3 id="melody">◇Melody<a hidden class="anchor" aria-hidden="true" href="#melody">#</a></h3>
+<p>Melodyは、gorilla/websocketに基づくWebSocketフレームワークで、WebSocketの扱いにおける面倒な部分を抽象化します。リアルタイムアプリを簡単に作成できるようにします。</p>
+<ul>
+<li><em>オープンソース</em> <a href="https://github.com/olahol/melody">Melody</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/gorilla/websocket">WebSocket</a></li>
+</ul>
+<h3 id="centrifugo">◇Centrifugo<a hidden class="anchor" aria-hidden="true" href="#centrifugo">#</a></h3>
+<p>Centrifugoは、オープンソースのスケーラブルなリアルタイムメッセージングサーバーです。Centrifugoは、サポートされているトランスポート（WebSocket、HTTP-streaming、SSE/EventSource、GRPC、SockJS、WebTransport）を介して接続されたアプリケーションのオンラインユーザーにメッセージを即座に配信できます。Centrifugoにはチャネルの概念があり、ユーザー向けのPUB/SUBサーバーです。</p>
+<ul>
+<li><em>公式</em> <a href="https://centrifugal.dev/docs/getting-started/introduction">はじめに</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/centrifugal/centrifugo">Centrifugo</a></li>
+</ul>
+<h2 id="8-apiクライアント">8. APIクライアント<a hidden class="anchor" aria-hidden="true" href="#8-apiクライアント">#</a></h2>
+<p>APIクライアントは、コンピュータ上のアプリケーションから動作するツールとプロトコルのセットです。これらは、ウェブアプリケーションの開発時に毎回車輪の再発明をするのではなく、いくつかの操作をバイパスするのに役立ちます。クライアントAPIを使用することは、開発プロセスをスピードアップするための優れた方法です。</p>
+<ul>
+<li><em>記事</em> <a href="https://rapidapi.com/blog/api-glossary/client/">APIクライアント</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/golang?ref=roadmapsh">Golangに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="rest">◇REST<a hidden class="anchor" aria-hidden="true" href="#rest">#</a></h3>
+<p>REST（Representational State Transfer）API（Application Programming Interface）は、ウェブサイトを扱う際にユーザー機能を提供するために使用されます。HTTPリクエストを使用してREST APIと通信し、ユーザーがURLウェブサイトをナビゲートできるようにします。これらのURLは、APIの一部として保存されている特定の情報を返すことができます。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/doc/tutorial/web-service-gin">チュートリアル</a></li>
+<li><em>動画</em> <a href="https://youtube.com/playlist?list=PLzUGFf4GhXBL4GHXVcMMvzgtO8-WEJIoY">RESTful APIシリーズ</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/rest-api?ref=roadmapsh">REST APIに関するトップ投稿を探索</a></li>
+</ul>
+<h4 id="heimdall">Heimdall<a hidden class="anchor" aria-hidden="true" href="#heimdall">#</a></h4>
+<p>Heimdallは、アプリケーションが大規模な数のリクエストを行うのを支援するHTTPクライアントです。Heimdallを使用すると、以下のことができます：</p>
+<ul>
+<li>
+<p>失敗するリクエストを制御するためのHystrixのようなサーキットブレーカーを使用する</p>
+</li>
+<li>
+<p>各リクエストに同期メモリ内リトライを追加し、独自のリトライ戦略を設定するオプションを提供する</p>
+</li>
+<li>
+<p>すべてのリクエストに対して異なるタイムアウトを持つクライアントを作成する
+すべてのHTTPメソッドは、フルーエントインターフェースとして公開されています。</p>
+</li>
+<li>
+<p><em>オープンソース</em> <a href="https://github.com/gojek/heimdall">Heimdall</a></p>
+</li>
+</ul>
+<h4 id="grequests">Grequests<a hidden class="anchor" aria-hidden="true" href="#grequests">#</a></h4>
+<p>Pythonの有名なHTTPライブラリであるGrequestsライブラリのGolang実装です。</p>
+<p>特徴：</p>
+<ul>
+<li>
+<p>レスポンスをJSONおよびXMLにシリアライズ可能</p>
+</li>
+<li>
+<p>簡単なファイルアップロード</p>
+</li>
+<li>
+<p>簡単なファイルダウンロード</p>
+</li>
+<li>
+<p>以下のHTTP動詞をサポート: GET, HEAD, POST, PUT, DELETE, PATCH, OPTIONS</p>
+</li>
+<li>
+<p><em>オープンソース</em> <a href="https://github.com/levigross/grequests">Grequests</a></p>
+</li>
+</ul>
+<h3 id="graphql">◇GraphQL<a hidden class="anchor" aria-hidden="true" href="#graphql">#</a></h3>
+<p><code>GraphQL</code>はAPIのためのクエリ言語で、クライアントが要求したデータだけを提供するサービスを優先します。また、REST APIのような破壊的変更、バージョニング、後方互換性について心配する必要はありません。そのため、<code>GraphQL</code>を使用するだけで、独自のバージョンを実装し、APIを自動ドキュメント化できます。</p>
+<ul>
+<li><em>ロードマップ</em> <a href="https://roadmap.sh/graphql">専用のGraphQLロードマップを参照</a></li>
+<li><em>公式</em> <a href="https://graphql.org/learn/">GraphQLを学ぶ</a></li>
+<li><em>公式</em> <a href="https://www.graphql.com/tutorials/">GraphQLチュートリアル</a></li>
+<li><em>記事</em> <a href="https://www.redhat.com/en/topics/api/what-is-graphql">Red Hat: GraphQLとは？</a></li>
+<li><em>記事</em> <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-graphql">Digital Ocean: GraphQL入門</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=ed8SzALpx1Q">GraphQL完全コース - 初心者からエキスパートまで</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/playlist?list=PLN3n1USn4xln0j_NN9k4j5hS1thsGibKi">初心者向けGraphQLシリーズ（Ben AwadによるYouTube）</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/graphql?ref=roadmapsh">GraphQLに関するトップ投稿を探索</a></li>
+</ul>
+<h4 id="graphql-go">Graphql-go<a hidden class="anchor" aria-hidden="true" href="#graphql-go">#</a></h4>
+<p><code>Go</code>のための<code>GraphQL</code>パッケージ。</p>
+<ul>
+<li><em>オープンソース</em> <a href="https://github.com/graphql-go/graphql">Graphql</a></li>
+<li><em>記事</em> <a href="https://graphql-go.github.io/graphql-go.org/">Graphql-goホームページ</a></li>
+<li><em>記事</em> <a href="https://pkg.go.dev/github.com/graphql-go/graphql">Graphql-goドキュメント</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=YK7BQfQ84ws">GraphQL-Go - Golangチュートリアル（TechPracticeによるYouTube）</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/graphql?ref=roadmapsh">GraphQLに関するトップ投稿を探索</a></li>
+</ul>
+<h4 id="gqlgen">Gqlgen<a hidden class="anchor" aria-hidden="true" href="#gqlgen">#</a></h4>
+<p>ドキュメントによると、GolangでGraphQLサーバーを簡単に構築するためのライブラリです。</p>
+<ul>
+<li><em>公式</em> <a href="https://gqlgen.com/">Gqlgenドキュメント</a></li>
+<li><em>記事</em> <a href="https://99designs.com.au/blog/engineering/gqlgen-a-graphql-server-generator-for-go/">gqlgenの紹介: GoのためのGraphQLサーバージェネレータ</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=O6jYy421tGw">GoでのGraphQL - GQLGenチュートリアル（acklacklによるYouTube）</a></li>
+</ul>
+<h2 id="9-goコードのテスト">9. Goコードのテスト<a hidden class="anchor" aria-hidden="true" href="#9-goコードのテスト">#</a></h2>
+<p>Goには、プログラムをテストするために使用できる組み込みのテストコマンドがあります。</p>
+<ul>
+<li><em>公式</em> <a href="https://go.dev/doc/tutorial/add-a-test">Goチュートリアル: テストの追加</a></li>
+<li><em>記事</em> <a href="https://gobyexample.com/testing">Go by Example: テスト</a></li>
+<li><em>記事</em> <a href="https://yourbasic.org/golang/table-driven-unit-test/">YourBasic Go: テーブル駆動ユニットテスト</a></li>
+<li><em>記事</em> <a href="https://quii.gitbook.io/learn-go-with-tests/">Learn Go with Tests</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/testing?ref=roadmapsh">テストに関するトップ投稿を探索</a></li>
+</ul>
+<h2 id="10-マイクロサービス向けツール">10. マイクロサービス向けツール<a hidden class="anchor" aria-hidden="true" href="#10-マイクロサービス向けツール">#</a></h2>
+<p>マイクロサービスは、ソフトウェア開発のアーキテクチャアプローチであり、明確に定義されたAPIを介して通信を行うデプロイ可能なサービスから分散アプリケーションを作成することを可能にします。モノリシックなアプリケーションに対する解決策です。</p>
+<ul>
+<li><em>公式</em> <a href="https://microservices.io/index.html">Chris Richardsonによるマイクロサービスパターンとリソース</a></li>
+<li><em>記事</em> <a href="https://developer.ibm.com/learningpaths/get-started-application-modernization/intro-microservices/introduction/">マイクロサービスの紹介</a></li>
+<li><em>記事</em> <a href="https://www.oreilly.com/content/microservices-antipatterns-and-pitfalls/">マイクロサービスのアンチパターンと落とし穴 - Mark Richards</a></li>
+<li><em>記事</em> <a href="https://samnewman.io/books/building_microservices_2nd_edition/">Building Microservices, 第2版 - Sam Newman</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/microservices?ref=roadmapsh">マイクロサービスに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="watermill">◇Watermill<a hidden class="anchor" aria-hidden="true" href="#watermill">#</a></h3>
+<p>Watermillは、Goで非同期リクエストを処理するためのイベントストリーミングライブラリです。Pub/Subのための複数の実装を提供しています。例えば、KafkaやRabbitMQのような従来のPub/Subシステムや、HTTPやMySQLのバイナリログなど、ユースケースに応じて使用できます。</p>
+<ul>
+<li><em>公式</em> <a href="https://watermill.io/">Watermillウェブサイト</a></li>
+<li><em>公式</em> <a href="https://watermill.io/docs/getting-started">Watermillドキュメント</a></li>
+</ul>
+<h3 id="rpcx">◇Rpcx<a hidden class="anchor" aria-hidden="true" href="#rpcx">#</a></h3>
+<p>Rpcxは、Alibaba DubboやWeibo MotanのようなRPC（リモートプロシージャコール）フレームワークです。Rpcxを使用する利点は以下の通りです：</p>
+<ul>
+<li>
+<p>シンプル：学びやすく、開発しやすく、統合しやすく、デプロイしやすい</p>
+</li>
+<li>
+<p>パフォーマンス：高性能（&gt;= grpc-go）</p>
+</li>
+<li>
+<p>クロスプラットフォーム：生のバイトスライス、JSON、Protobuf、MessagePackをサポート。理論的にはJava、PHP、Python、C/C++、Node.js、C#などのプラットフォームで使用可能</p>
+</li>
+<li>
+<p>サービスディスカバリーとサービスガバナンス：Zookeeper、etcd、Consulをサポート</p>
+</li>
+<li>
+<p><em>公式</em> <a href="https://rpcx.io/">Rpcx公式ウェブサイト</a></p>
+</li>
+<li>
+<p><em>公式</em> <a href="https://en.doc.rpcx.io/">Rpcxドキュメント</a></p>
+</li>
+<li>
+<p><em>オープンソース</em> <a href="https://github.com/smallnest/rpcx">Rpcx</a></p>
+</li>
+</ul>
+<h3 id="go-kit">◇Go-kit<a hidden class="anchor" aria-hidden="true" href="#go-kit">#</a></h3>
+<p>Go kitは、Goでマイクロサービス（またはエレガントなモノリス）を構築するためのプログラミングツールキットです。分散システムやアプリケーションアーキテクチャにおける一般的な問題を解決し、ビジネス価値を提供することに集中できるようにします。</p>
+<ul>
+<li><em>公式</em> <a href="https://gokit.io/">Go-kitウェブサイト</a></li>
+<li><em>記事</em> <a href="https://dev.to/eminetto/microservices-in-go-using-the-go-kit-jjf">Go kitを使用したGoでのマイクロサービス</a></li>
+<li><em>動画</em> <a href="https://www.youtube.com/watch?v=sjd2ePF3CuQ">Go Kitツールキットを使用したマイクロサービスの構築</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/golang?ref=roadmapsh">Golangに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="micro">◇Micro<a hidden class="anchor" aria-hidden="true" href="#micro">#</a></h3>
+<p>これはAPIファーストの開発プラットフォームです。マイクロサービスアーキテクチャパターンを活用し、プラットフォームのビルディングブロックとして機能する一連のサービスを提供します。</p>
+<ul>
+<li><em>公式</em> <a href="https://micro.dev/">Microウェブサイト</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/micro/micro">Micro</a></li>
+</ul>
+<h3 id="go-zero">◇go-zero<a hidden class="anchor" aria-hidden="true" href="#go-zero">#</a></h3>
+<p>go-zeroは、多くのエンジニアリングベストプラクティスが組み込まれたWebおよびRPCフレームワークです。レジリエンス設計により、繁忙なサービスの安定性を確保するために生まれ、何百万人ものユーザーを抱えるサイトに長年サービスを提供しています。</p>
+<ul>
+<li><em>公式</em> <a href="https://go-zero.dev/">Go-zero</a></li>
+<li><em>公式</em> <a href="https://go-zero.dev/docs/introduction">Go-zeroドキュメント</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/zeromicro/go-zero">Go-Zero</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/golang?ref=roadmapsh">Golangに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="protocol-buffers">◇Protocol Buffers<a hidden class="anchor" aria-hidden="true" href="#protocol-buffers">#</a></h3>
+<p>Protocol Buffers（Protobuf）は、構造化データをシリアライズするために使用される、無料でオープンソースの言語中立、プラットフォーム中立、拡張可能なデータフォーマットです。JSONに似ていますが、より小さく、高速で、ネイティブの言語バインディングを生成します。</p>
+<p>Protocol Buffersを使用する利点は以下の通りです：</p>
+<ul>
+<li>
+<p>コンパクトなデータストレージ</p>
+</li>
+<li>
+<p>高速なパース</p>
+</li>
+<li>
+<p>多くのプログラミング言語での利用可能</p>
+</li>
+<li>
+<p>自動生成クラスによる最適化された機能</p>
+</li>
+<li>
+<p><em>オープンソース</em> <a href="https://github.com/protocolbuffers/protobuf/">Protobuf</a></p>
+</li>
+<li>
+<p><em>記事</em> <a href="https://developers.google.com/protocol-buffers/">Protobufドキュメント</a></p>
+</li>
+<li>
+<p><em>記事</em> <a href="https://developers.google.com/protocol-buffers/docs/gotutorial/">GoでのProtobuf</a></p>
+</li>
+<li>
+<p><em>動画</em> <a href="https://www.youtube.com/watch?v=NoDRq6Twkts">GolangでのProtocol Buffers</a></p>
+</li>
+<li>
+<p><em>フィード</em> <a href="https://app.daily.dev/tags/backend?ref=roadmapsh">バックエンド開発に関するトップ投稿を探索</a></p>
+</li>
+</ul>
+<h3 id="grpc-go">◇gRPC-Go<a hidden class="anchor" aria-hidden="true" href="#grpc-go">#</a></h3>
+<p>gRPCのGo言語実装（gRPCはRPC APIを実装するための技術です）。</p>
+<ul>
+<li><em>公式</em> <a href="https://grpc.io/docs/languages/go/basics/">GoでのgRPCの基本的なチュートリアル</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/grpc/grpc-go/">gRPC-go</a></li>
+<li><em>記事</em> <a href="https://pkg.go.dev/google.golang.org/grpc/">gRPC-goドキュメント</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/grpc?ref=roadmapsh">gRPCに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="grpc-gateway">◇Grpc gateway<a hidden class="anchor" aria-hidden="true" href="#grpc-gateway">#</a></h3>
+<p>gRPC-Gatewayは、gRPCサービスの上にレイヤーを作成し、クライアントに対してRESTfulサービスとして機能します。protocのプラグインです。gRPCサービスの定義を読み取り、RESTful JSON APIをgRPCに変換するリバースプロキシサーバーを生成します。</p>
+<ul>
+<li><em>公式</em> <a href="https://grpc-ecosystem.github.io/grpc-gateway/">Grpc-gatewayドキュメント</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/grpc-ecosystem/grpc-gateway/">Grpc-gateway</a></li>
+<li><em>フィード</em> <a href="https://app.daily.dev/tags/grpc?ref=roadmapsh">gRPCに関するトップ投稿を探索</a></li>
+</ul>
+<h3 id="twirp">◇Twirp<a hidden class="anchor" aria-hidden="true" href="#twirp">#</a></h3>
+<p>Twirpは、シンプルさとミニマリズムを重視したサービス間通信のためのフレームワークです。API定義ファイルからルーティングとシリアライゼーションを生成し、HTTPメソッドやパス、JSONなどの雑事に悩むことなく、アプリケーションのロジックに集中できるようにします。</p>
+<ul>
+<li><em>公式</em> <a href="https://twitchtv.github.io/twirp/docs/intro.html">はじめに</a></li>
+<li><em>オープンソース</em> <a href="https://github.com/twitchtv/twirp">Twirp</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yuuniji.github.io/ja/tags/go/">Go</a></li>
+      <li><a href="https://yuuniji.github.io/ja/tags/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97/">ロードマップ</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://yuuniji.github.io/ja/posts/roadmap-git-github/">
+    <span class="title">« 前へ</span>
+    <br>
+    <span>GitとGitHubのロードマップ</span>
+  </a>
+  <a class="next" href="https://yuuniji.github.io/ja/posts/roadmap-python/">
+    <span class="title">次へ »</span>
+    <br>
+    <span>Pythonのロードマップ</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Goのロードマップ on x"
+            href="https://x.com/intent/tweet/?text=Go%e3%81%ae%e3%83%ad%e3%83%bc%e3%83%89%e3%83%9e%e3%83%83%e3%83%97&amp;url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2froadmap-go%2f&amp;hashtags=Go%2c%e3%83%ad%e3%83%bc%e3%83%89%e3%83%9e%e3%83%83%e3%83%97">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Goのロードマップ on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2froadmap-go%2f&amp;title=Go%e3%81%ae%e3%83%ad%e3%83%bc%e3%83%89%e3%83%9e%e3%83%83%e3%83%97&amp;summary=Go%e3%81%ae%e3%83%ad%e3%83%bc%e3%83%89%e3%83%9e%e3%83%83%e3%83%97&amp;source=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2froadmap-go%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Goのロードマップ on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2froadmap-go%2f&title=Go%e3%81%ae%e3%83%ad%e3%83%bc%e3%83%89%e3%83%9e%e3%83%83%e3%83%97">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Goのロードマップ on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2froadmap-go%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Goのロードマップ on whatsapp"
+            href="https://api.whatsapp.com/send?text=Go%e3%81%ae%e3%83%ad%e3%83%bc%e3%83%89%e3%83%9e%e3%83%83%e3%83%97%20-%20https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2froadmap-go%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Goのロードマップ on telegram"
+            href="https://telegram.me/share/url?text=Go%e3%81%ae%e3%83%ad%e3%83%bc%e3%83%89%e3%83%9e%e3%83%83%e3%83%97&amp;url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2froadmap-go%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Goのロードマップ on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Go%e3%81%ae%e3%83%ad%e3%83%bc%e3%83%89%e3%83%9e%e3%83%83%e3%83%97&u=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2froadmap-go%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://yuuniji.github.io/ja/">叶泽伟的博客</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'コピー';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'コピーされました!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'コピー';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Go on 叶泽伟的博客</title>
+    <link>https://yuuniji.github.io/en/tags/go/</link>
+    <description>Recent content in Go on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.143.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.github.io/en/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-go/</link>
+      <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-go/</guid>
+      <description>&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
+&lt;p&gt;Learn the common concepts of Go like variables, loops, conditional statements, functions, data types, and so on. A good starting point for go basics is its Go’s official docs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://go.dev/doc/tutorial/&#34;&gt;Go Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.w3schools.com/go/index.php&#34;&gt;W3 Schools Go Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;feed&lt;/em&gt; &lt;a href=&#34;https://app.daily.dev/tags/golang?ref=roadmapsh&#34;&gt;Explore top posts about Golang&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;basic-syntax&#34;&gt;◇Basic Syntax&lt;/h3&gt;
+&lt;p&gt;Learn about the basic syntax of Go, such as how the Go programs are executed, package imports, main function, and so on.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://go.dev/doc/tutorial/getting-started&#34;&gt;Go Tutorial: Getting started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://gobyexample.com/hello-world&#34;&gt;Go by Example: Hello World&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.w3schools.com/go/go_syntax.php&#34;&gt;W3schools: Go Syntax&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;variables-in-go&#34;&gt;◇Variables in Go&lt;/h3&gt;
+&lt;p&gt;Variable is the name given to a memory location to store a value of a specific type. Go provides multiple ways to declare and use variables.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

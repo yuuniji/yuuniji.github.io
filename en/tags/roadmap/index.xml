@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Roadmap on 叶泽伟的博客</title>
+    <link>https://yuuniji.github.io/en/tags/roadmap/</link>
+    <description>Recent content in Roadmap on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.143.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.github.io/en/tags/roadmap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-kubernetes/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-kubernetes/</guid>
+      <description>&lt;h2 id=&#34;1-kubernetes-introduction&#34;&gt;1. Kubernetes Introduction&lt;/h2&gt;
+&lt;p&gt;Kubernetes, also known as k8s, is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. It provides a way to abstract the underlying infrastructure and manage applications at scale, while also offering flexibility, portability, and a rich feature set. Kubernetes has become the de facto standard for container orchestration due to its widespread adoption, active community, and ability to handle complex, multi-tiered applications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-docker/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-docker/</guid>
+      <description>&lt;h2 id=&#34;1-what-is-docker&#34;&gt;1. What is Docker?&lt;/h2&gt;
+&lt;p&gt;Docker is an open-source platform that automates the deployment, scaling, and management of applications by isolating them into lightweight, portable containers. Containers are standalone executable units that encapsulate all necessary dependencies, libraries, and configuration files required for an application to run consistently across various environments.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://docs.docker.com/&#34;&gt;Docker Docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-are-containers&#34;&gt;◇What are Containers?&lt;/h3&gt;
+&lt;p&gt;Containers are lightweight, portable, and isolated software environments that allow developers to run and package applications with their dependencies, consistently across different platforms. They help to streamline application development, deployment, and management processes while ensuring that applications run consistently, regardless of the underlying infrastructure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terraform Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-terraform/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-terraform/</guid>
+      <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+&lt;p&gt;Terraform is a powerful tool designed by HashiCorp that helps you set up, manage, and update infrastructure safely and efficiently across various cloud providers. Think of it as a way to define your cloud resources—like servers, storage, and networks—using a simple code format. This makes it easier to automate, share, and manage your infrastructure, ensuring that everything is consistent and can be quickly reproduced or modified as needed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Git and GitHub Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-git-github/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-git-github/</guid>
+      <description>&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
+&lt;p&gt;A Version Control System (VCS) is a tool that helps developers manage changes to their code over time. It allows multiple versions of a project to exist simultaneously, making it easier to collaborate with others and maintain a record of all modifications.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://git-scm.com/downloads/guis&#34;&gt;GUI Clients&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;&gt;Getting Started - Installing Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github&#34;&gt;Creating an account on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.atlassian.com/git/tutorials/what-is-version-control&#34;&gt;What is version control?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.datacamp.com/blog/all-about-git&#34;&gt;What is Git? - The Complete Guide to Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://missing.csail.mit.edu/2020/version-control/&#34;&gt;Version Control (Git) - The Missing Semester of Your CS Education&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;video&lt;/em&gt; &lt;a href=&#34;https://www.youtube.com/watch?v=2ReR1YJrNOM&#34;&gt;What is Git? Explained in 2 Minutes!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-is-version-control&#34;&gt;◇What is Version Control?&lt;/h3&gt;
+&lt;p&gt;Version control is a system that manages and tracks changes to files over time, allowing multiple people to collaborate on a project while maintaining a history of all modifications. It records changes to files, such as code, documents, or configuration files, and stores them in a repository. With version control, developers can revert to previous versions, compare differences between versions, and understand the evolution of a project. It supports features like branching, where different lines of development can occur independently, and merging, which combines changes from different branches. Overall, version control ensures that changes are organized, recoverable, and easily managed, making it a critical tool in software development and collaborative projects.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-go/</link>
+      <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-go/</guid>
+      <description>&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
+&lt;p&gt;Learn the common concepts of Go like variables, loops, conditional statements, functions, data types, and so on. A good starting point for go basics is its Go’s official docs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://go.dev/doc/tutorial/&#34;&gt;Go Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.w3schools.com/go/index.php&#34;&gt;W3 Schools Go Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;feed&lt;/em&gt; &lt;a href=&#34;https://app.daily.dev/tags/golang?ref=roadmapsh&#34;&gt;Explore top posts about Golang&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;basic-syntax&#34;&gt;◇Basic Syntax&lt;/h3&gt;
+&lt;p&gt;Learn about the basic syntax of Go, such as how the Go programs are executed, package imports, main function, and so on.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://go.dev/doc/tutorial/getting-started&#34;&gt;Go Tutorial: Getting started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://gobyexample.com/hello-world&#34;&gt;Go by Example: Hello World&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.w3schools.com/go/go_syntax.php&#34;&gt;W3schools: Go Syntax&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;variables-in-go&#34;&gt;◇Variables in Go&lt;/h3&gt;
+&lt;p&gt;Variable is the name given to a memory location to store a value of a specific type. Go provides multiple ways to declare and use variables.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-python/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-python/</guid>
+      <description>&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
+&lt;p&gt;Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://www.python.org/&#34;&gt;Python Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Python_%28programming_language%29&#34;&gt;Python - Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-write-your-first-python-3-program&#34;&gt;Tutorial Series: How to Code in Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://developers.google.com/edu/python&#34;&gt;Google’s Python Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.w3schools.com/python&#34;&gt;W3Schools - Python Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;video&lt;/em&gt; &lt;a href=&#34;https://www.youtube.com/watch?v=4M87qBgpafk&#34;&gt;Learn Python - Full Course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;feed&lt;/em&gt; &lt;a href=&#34;https://app.daily.dev/tags/python?ref=roadmapsh&#34;&gt;Explore top posts about Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;basics-syntax&#34;&gt;◇Basics Syntax&lt;/h3&gt;
+&lt;p&gt;Setup the environment for python and get started with the basics.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DevOps Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-devops/</link>
+      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-devops/</guid>
+      <description>&lt;h2 id=&#34;1-learn-a-programming-language&#34;&gt;1. Learn a Programming Language&lt;/h2&gt;
+&lt;p&gt;It doesn’t matter what language you pick, but it is important to learn at least one. You will be able to use that language to write automation scripts.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://cs.fyi/guide/programming-language-for-devops&#34;&gt;Guide to Picking a Language for DevOps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The guide recommends Python or Go for programming languages and Bash or PowerShell Core for shell scripting in DevOps. Python is versatile, widely used for automation and tools, while Go is crucial for container technologies like Kubernetes and Docker. Bash is ideal for Linux environments, and PowerShell Core is cross-platform, suitable for Windows and Linux. For more details, check the full guide &lt;a href=&#34;https://cs.fyi/guide/programming-language-for-devops&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

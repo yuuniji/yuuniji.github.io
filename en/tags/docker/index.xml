@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Docker on 叶泽伟的博客</title>
+    <link>https://yuuniji.github.io/en/tags/docker/</link>
+    <description>Recent content in Docker on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.143.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.github.io/en/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/roadmap-docker/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/roadmap-docker/</guid>
+      <description>&lt;h2 id=&#34;1-what-is-docker&#34;&gt;1. What is Docker?&lt;/h2&gt;
+&lt;p&gt;Docker is an open-source platform that automates the deployment, scaling, and management of applications by isolating them into lightweight, portable containers. Containers are standalone executable units that encapsulate all necessary dependencies, libraries, and configuration files required for an application to run consistently across various environments.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://docs.docker.com/&#34;&gt;Docker Docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-are-containers&#34;&gt;◇What are Containers?&lt;/h3&gt;
+&lt;p&gt;Containers are lightweight, portable, and isolated software environments that allow developers to run and package applications with their dependencies, consistently across different platforms. They help to streamline application development, deployment, and management processes while ensuring that applications run consistently, regardless of the underlying infrastructure.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
