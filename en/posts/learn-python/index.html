@@ -177,7 +177,7 @@ Variable assignments">
     "Python"
   ],
   "articleBody": "1. variables ❎ A container for a value (string, integer, float, boolean)\nA variable behaves as if it was the value it contains\n# Strings first_name = \"Bro\" food = \"pizza\" email = \"Bro123@gmail.com\" print(f\"Hello {first_name}\") print(f\"You like {food}\") print(f\"Your email is: {email}\") # Integers age = 25 quantity = 3 num_of_students =30 print(f\"You are {age} years old\") print(f\"You are buying {quantity} items\") print(f\"You class has {num_of_students} students\") # Float price = 10.99 gpa = 3.2 distance = 5.5 print(f\"The price is ${price}\") print(f\"Your gpa is: {gpa}\") print(f\"You ran {distance}km\") # Boolean is_student = False for_sale = False is_online = True if is_online: print(\"You are online\") else: print(\"You are offline\") Variable assignments\nuser_name = \"Yuuniji\" year = 2025 pi = 3.14 is_admin = True print(f\"User Name: {user_name}\") print(f\"Current Year: {year}\") # Round to two decimal places print(f\"Pi: {pi:.2f}\") # Convert boolean to 'Yes' or 'No' print(f\"Admin Status: {'Yes' if is_admin else 'No'}\") 2. type casting 💱 Typecasting = the process of converting a variable from one data type to another\nstr(), int(), float(), bool()\nname = \"Yuuniji\" age = 25 gpa = 3.2 is_student = True # print(type(name)) gpa = int(gpa) # 3 age = float(age) # 25.0 age = str(age) age += \"1\" # \"251\" name = bool(name) # True 3. user input ⌨️ A function that prompts the user to enter data\nReturns the entered data as a string\nname = input(\"What is your name?: \") age = int(input(\"How old are you?: \")) # age = int(age) age = age + 1 print(f\"Hello {name}!\") print(\"HAPPY BIRTHDAY\") print(f\"You are {age} years old\") Exercise 1 Rectangle Area Calc\nlength = float(intput(\"Enter the length: \")) width = float(intput(\"Enter the width: \")) area = length * width print(f\"The area is: {area}cm²\") #Mac superscript 2: Command + Control + Space, In the search bar, type “superscript” or “2”.Or Option + v Exercise 2 Shopping Cart Program\nitem = input(\"What item would you like to buy?: \") price = float(input(\"What is the price?: \")) quantity = int(input(\"How many would you like?: \")) total = price * quantity print(f\"You have bought {quantity} x {item}/s\") print(f\"Your total is: ${total}\") 4. ⭐ madlibs game word game where you create a story\nby filling in blanks with random words\nadjective1 = input(\"Enter an adjective (description): \") noun1 = input(\"Enter a noun (person, place, thing): \") adjective2 = input(\"Enter an adjective (description): \") verb1 = input(\"Enter a verb ending with 'ing'\") adjective3 = input(\"Enter an adjective (description): \") print(f\"Today I went to a {adjective1} zoo.\") print(f\"In an exhibit, I saw a {noun1}\") print(f\"{noun1} was {adjective2} and {verb1}\") print(f\"I was {adjective3}!\") 5. arithmetic operators \u0026 math functions 📐 friends = 10 friends = friends + 1 friends += 1 friends = friends - 2 friends -= 2 friends = friends * 3 friends *= 3 friends = friends / 2 friends /= 2 friends = friends ** 2 friends **= 2 remainder = friends % 3 x = 3.14 y = 4 z = 5 result = round(x) # 3 result = abs(y) # 4 result = pow(4, 3) # 4*4*4=64 result = max(x, y, z) # 5 result = min(x, y, z) # 3.14 import math x = 9 y = 9.1 z = 9.9 print(math.pi) # 3.141592653589793 print(math.e) # 2.718281828459045 result = math.sqrt(x) # 3.0 result = math.ceil(y) # 10 result = math.floor(z) # 9 # C = 2πr import math radius = float(input('Enter the radius of a circle: ')) # 10.5 circumference = 2 * math.pi *radius print(f\"The circumference is: {round(circumference, 2)}cm\") # 65.97 # A = πr² import math radius = float(input('Enter the radius of a circle: ')) # 10.5 area = math.pi * pow(radius, 2) print(f\"The area of the circle is: {round(area, 2)}cm²\") # 346.36 # c = √(a²+b²) import math a = float(input(\"Enter side A: \")) # 3 b = float(input(\"Enter side B: \")) # 4 c = math.sqrt(pow(a, 2) + pow(b, 2)) print(f\"Side C = {c}\") # 5.0 6. if statements 🤔 Do some code only IF some condition is True\nElse do something else\nage = int(input(\"Enter your age: \")) if age \u003e= 100: print(\"You are too old to sign up\") elif age \u003e= 18: print(\"You are now signed up!\") elif age \u003c 0: print(\"You haven't been born yet!\") else: print(\"You must be 18+ to sign up\") resopnse = input(\"Would you like food? (Y/N): \") if resopnse == \"Y\": print(\"Have some food!\") else: print(\"No food for you!\") name = inptut(\"Enter your name: \") if name === \"\": print(\"You did not type in your name!\") else: print(f\"Hello {name}\") for_sale = True if for_sale: print(\"This item is for sale\") else: print(\"This item is NOT for sale\") 7. ⭐ calculator program 🧮 # + = addition # - = subtraction # * = multiplication # / = division operator = input(\"Enter an operator (+ - * /)\") num1 = float(input(\"Enter the 1st number: \")) num2 = float(input(\"Enter the 2nd number: \")) if operator == \"+\": result =num1 + num2 print(round(result, 3)) elif operator == \"-\": result =num1 - num2 print(round(result, 3)) elif operator == \"*\": result =num1 * num2 print(round(result, 3)) elif operator == \"/\": result =num1 / num2 print(round(result, 3)) else: print(f\"{operator} is not a valid operator\") 8. ⭐ weight conversion program 🏋️ weight = float(input(\"Enter your weight\")) unit = input(\"Kilograms or Pounds? (K or L): \") if unit == \"K\": weight = weight * 2.205 unit = \"Lbs.\" print(f\"Your weight is: {round(weight, 1)} {unit}\") elif unit == \"L\": weight = weight / 2.205 unit = \"Kgs.\" print(f\"Your weight is: {round(weight, 1)} {unit}\") else: print(f\"{unit} was not valid\") 9. ⭐ temperature conversion program 🌡️ # (°C x 9/5) + 32 = °F # (°F - 32) x 5/9 = °C # °(Option + Shift + 8) unit = input(\"Is this temperature in Celsius or Fahrenheit (C/F): \") temp = float(input(\"Enter the temperature: \")) if unit == \"C\": temp = round((9 * temp) / 5 + 32, 1) print(f\"The temperature in Fahrenheit is: {temp}°F\") elif unit == \"F\": temp = round((temp - 32) * 5 / 9, 1) print(f\"The temperature in Celsius is: {temp}°C\") else: print(f\"{unit} is an invalid unit of measurement\") 10. logical operators 🌦️ evaluate multiple conditions (or, and, not)\nor = at least one condition must be True\nand = both conditions must be True\nnot = inverts the condition (not False, not True)\ntemp = 25 is_raining = True if temp \u003e 35 or temp \u003c 0 or is_raining: print(\"The outdoor event is cancelled\") else: print(\"The outdoor event is still scheduled\") temp = 25 is_sunny = True if temp \u003e= 28 and is_sunny: print(\"It is HOT outside 🥵\") print(\"It is SUNNY 🌞\") elif temp \u003c= 0 and is_sunny: print(\"It is COLD outside 🥶\") print(\"It is SUNNY 🌞\") elif 28 \u003e temp \u003e 0 and is_sunny: print(\"It is WARM outside 🙂\") print(\"It is SUNNY 🌞\") elif temp \u003e= 28 and not is_sunny: print(\"It is HOT outside 🥵\") print(\"It is CLOUDY ☁️\") elif temp \u003c= 0 and not is_sunny: print(\"It is COLD outside 🥶\") print(\"It is CLOUDY ☁️\") elif 28 \u003e temp \u003e 0 and not is_sunny: print(\"It is WARM outside 🙂\") print(\"It is CLOUDY ☁️\") 11. conditional expressions ❓ A one-line shortcut for the if-else statement (ternary operator)\nPrint or assign one of two values based on a condition\nX if condition else Y\nnum = 5 a = 6 b = 7 age = 13 temperature = 20 user_role = \"guest\" print(\"Positive\" if num \u003e 0 else \"Negative\") result = \"EVEN\" if num % 2 == 0 else \"ODD\" max_num = a if a \u003e b else b min_num = a if a \u003c b else b status = \"Adult\" if age \u003e= 18 else \"Child\" weather = \"HOT\" if temperature \u003e 20 else \"COLD\" access_level = \"Full Access\" if user_role == \"admin\" else \"Limited Access\" print(access_level) 12. string methods 〰️ name = input(\"Enter your full name: \") result = len(name) # yuunijiy -\u003e 8 result = name.find(\"n\") # yuunijiy -\u003e 3 result = name.rfind(\"n\") # yuunijiy -\u003e 4 name = name.capitalize() # yuunijiy -\u003e Yuunijiy name = name.upper() # yuunijiy -\u003e YUUNIJIY name = name.lower() # YUUNIJIY -\u003e yuunijiy result = name.isdigit() # yuunijiy,yuu123 -\u003e False; 123 -\u003e True result = name.isalpha() # yuunijiy -\u003e True; yuu niji,yuu123,123 -\u003e False phone_number = input(\"Enter your phone #: \") result = phone_number.count(\"-\") # 1-234-567-8901 -\u003e 3 phone_number = phone_number.replace(\"-\", \" \") # 1-234-567-8901 -\u003e 1 234 567 8901 If you want a complete list of all available string methods, use the help function:print(help(str))\nExercise:\n# validate user input exercise # 1. username is no more than 12 characters # 2. username must not contain spaces # 3. username must not contain digits username = input(\"Enter a username: \") if len(username) \u003e 12: print(\"Your username can't be more than 12 characters\") elif not username.find(\" \") == -1: print(\"Your username can't contain spaces\") elif not username.isalpha(): print(\"Your username can't contain digits\") else: print(f\"Welcome {username}\") 13. string indexing ✂️ accessing elements of a sequence using [] (indexing operator)\n[start : end : step]\ncredit_number = \"1234-5678-9012-3456\" print(credit_number[0]) # 1 print(credit_number[:4]) # 1234 print(credit_number[5:9]) # 5678 print(credit_number[5:]) # 5678-9012-3456 print(credit_number[-1]) # 6 print(credit_number[-2]) # 5 print(credit_number[::2]) # 13-6891-46 print(credit_number[::3]) # 146-136 credit_number = \"1234-5678-9012-3456\" last_digits = credit_number[-4:] # 3456 print(f\"XXXX-XXXX-XXXX-{last_digits}\") credit_number = \"1234-5678-9012-3456\" credit_number = credit_number[::-1] print(credit_number) # 6543-2109-8765-4321 14. format specifiers 💬 {value:flags} format a value based on what\nflags are inserted\n.(number)f = round to that many decimal places (fixed point) :(number) = allocate that many spaces :03 = allocate and zero pad that many spaces :\u003c = left justify :\u003e = right justify :^ = center justify :+ = use a plus sign to indicate positive value := = place sign to leftmost position : = insert a space before positive numbers :, = comma separator price1 = 3.14159 price2 = -987.65 price3 = 12.34 print(f\"Price 1 is ${price1:.3f}\") # 3.142 print(f\"Price 2 is ${price2:.3f}\") # -987.650 print(f\"Price 3 is ${price3:.3f}\") # 12.340 print(f\"Price 1 is ${price1:10}\") print(f\"Price 2 is ${price2:10}\") print(f\"Price 3 is ${price3:10}\") # Price 1 is $ 3.14159 # Price 2 is $ -987.65 # Price 3 is $ 12.34 print(f\"Price 1 is ${price1:010}\") print(f\"Price 2 is ${price2:010}\") print(f\"Price 3 is ${price3:010}\") # Price 1 is $0003.14159 # Price 2 is $-000987.65 # Price 3 is $0000012.34 print(f\"Price 1 is ${price1:\u003c10}\") print(f\"Price 2 is ${price2:\u003c10}\") print(f\"Price 3 is ${price3:\u003c10}\") # Price 1 is $3.14159 | # Price 2 is $-987.65 | # Price 3 is $12.34 | print(f\"Price 1 is ${price1:+}\") # +3.14159 print(f\"Price 2 is ${price2:+}\") # -987.65 print(f\"Price 3 is ${price3:+}\") # +12.34 print(f\"Price 1 is ${price1:10}\") print(f\"Price 2 is ${price2:10}\") print(f\"Price 3 is ${price3:10}\") # Price 1 is $ 3.14159 # Price 2 is $-987.65 # Price 3 is $ 12.34 price1 = 3000.14159 price2 = -9870.65 price3 = 1200.34 print(f\"Price 1 is ${price1:,}\") print(f\"Price 2 is ${price2:,}\") print(f\"Price 3 is ${price3:,}\") # Price 1 is $3,000.14159 # Price 2 is $-9,870.65 # Price 3 is $1,200.34 print(f\"Price 1 is ${price1:+,.2f}\") print(f\"Price 2 is ${price2:+,.2f}\") print(f\"Price 3 is ${price3:+,.2f}\") # Price 1 is $+3,000.14 # Price 2 is $-9,870.65 # Price 3 is $+1,200.34 15. while loops ♾️ execute some code WHILE some condition remains true\nage = int(input(\"Enter your age: \")) while age \u003c 0: print(\"Age can't be negative\") age = int(input(\"Enter your age: \")) print(f\"You are {age} years old\") food = input(\"Enter a food you like (q to quit): \") while not food == \"q\": print(f\"You like {food}\") food = input(\"Enter another food you like (q to quit): \") print(\"bye\") num = int(input(\"Enter a # between 1 - 10: \")) while num \u003c 1 or num \u003e 10: print(f\"{num} is not valid\") num = int(input(\"Enter a # between 1 - 10: \")) print(f\"Your number is {num}\") 16. ⭐ compound interest calculator 💵 # A = P (1 + r/n)ᵗ # A = final amount # P = initial principal balance # r = interest rate # t = number of time periods elapsed principle = 0 rate = 0 time = 0 while principle \u003c= 0: principle = float(input(\"Enter the principle aount: \")) if principle \u003c= 0: print(\"Principle can't be less than or equal to zero\") while rate \u003c= 0: rate = float(input(\"Enter the interest rate: \")) if rate \u003c= 0: print(\"Interest rate can't be less than or equal to zero\") while time \u003c= 0: time = int(input(\"Enter the time in years: \")) if time \u003c= 0: print(\"Time can't be less than or equal to zero\") print(principle) print(rate) print(time) total = principle * pow((1 + rate / 100), time) print(f\"Balance after {time} year/s: ${total:.2f}\") principle = 0 rate = 0 time = 0 while True: principle = float(input(\"Enter the principle aount: \")) if principle \u003c 0: print(\"Principle can't be less than zero\") else: break while True: rate = float(input(\"Enter the interest rate: \")) if rate \u003c 0: print(\"Interest rate can't be less than zero\") else: break while True: time = int(input(\"Enter the time in years: \")) if time \u003c 0: print(\"Time can't be less than zero\") else: break total = principle * pow((1 + rate / 100), time) print(f\"Balance after {time} year/s: ${total:.2f}\") 17. for loops 🔁 execute a block of code a fixed number of times.\nYou can iterate over a range, string, sequence, etc.\nfor x in range(1, 6): print(x) # 1 # 2 # 3 # 4 # 5 for x in reversed(range(1, 6)): print(x) print(\"HAPPY NEW YEAR!\") # 1 # 2 # 3 # 4 # 5 # HAPPY NEW YEAR! for x in range(1, 6, 3): print(x) # 1 # 4 credit_card = \"12-34\" for x in credit_card: print(x) # 1 # 2 # - # 3 # 4 for x in range(1, 6): if x == 3: continue else: print(x) # 1 # 2 # 4 # 5 for x in range(1, 6): if x == 3: break else: print(x) # 1 # 2 18. ⭐ countdown timer program ⌛ import time my_time = int(input(\"Enter the time in seconds: \")) # 3 for x in range(0, my_time): print(x) time.sleep(1) # 0 # 1 # 2 print(\"TIME'S UP!\") import time my_time = int(input(\"Enter the time in seconds: \")) # 3 for x in range(my_time, 0, -1): print(x) time.sleep(1) # 3 # 2 # 1 print(\"TIME'S UP!\") import time my_time = int(input(\"Enter the time in seconds: \")) # 3605 for x in range(my_time, 0, -1): seconds = x % 60 minutes = int(x / 60) % 60 hours = int(x / 3600) print(f\"{hours:02}:{minutes:02}:{seconds:02}\") time.sleep(1) # 01:00:05 # 01:00:04 # 01:00:03 # 01:00:02 # 01:00:01 # 01:00:00 # 00:59:59 # 00:59:58 print(\"TIME'S UP!\") 19. nested loops ➿ A loop within another loop (outer, inner)\nouter loop: inner loop: for x in range(1, 10): print(x, end=\"\") # 123456789 for x in range(3): for y in range(1, 10): print(y, end=\"\") # 123456789123456789123456789 for x in range(3): for y in range(1, 10): print(y, end=\"\") print() # 123456789 # 123456789 # 123456789 rows = int(input(\"Enter the # of rows: \")) # 3 columns = int(input(\"Enter the # of rows: \")) # 5 symbol = input(\"Enter a symbol to use: \") # * for x in range(rows): for y in range(columns): print(symbol, end=\"\") print() # ***** # ***** # ***** 20. lists, sets, and tuples 🍎 collection = single “variable” used to store multiple values List = [] ordered and changeable. Duplicates OK Set = {} unordered and immutable, but Add/Remove OK. NO duplicates Tuple = () ordered and unchangeable. Duplicates OK. FASTER fruits = [\"apple\", \"orange\", \"banana\", \"coconut\"] # print(help(fruits)) print(dir(fruits)) # ['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort'] print(\"apple\" in fruits) # True print(fruits[0]) # apple print(fruits[0:3]) # [\"apple\", \"orange\", \"banana\"] print(fruits[::2]) # [\"apple\", \"banana\"] print(fruits[::-1]) # [\"coconut\", \"banana\", \"orange\", \"apple\"] fruits = [\"apple\", \"orange\", \"banana\", \"coconut\"] fruits.append(\"pineapple\") # fruits.remove(\"pineapple\") print(fruits) # [\"apple\", \"orange\", \"banana\", \"coconut\", \"pineapple\"] fruits = [\"apple\", \"orange\", \"banana\", \"coconut\"] fruits.insert(0, \"pineapple\") print(fruits) # [\"pineapple\", \"apple\", \"orange\", \"banana\", \"coconut\"] fruits = [\"apple\", \"orange\", \"banana\", \"coconut\"] fruits.sort() print(fruits) # [\"apple\", \"banana\", \"coconut\", \"orange\"] fruits = [\"apple\", \"orange\", \"banana\", \"coconut\"] fruits.reverse() print(fruits) # [\"coconut\", \"banana\", \"orange\", \"apple\"] fruits = [\"apple\", \"orange\", \"banana\", \"coconut\"] fruits.sort() fruits.reverse() print(fruits) # [\"orange\", \"coconut\", \"banana\", \"apple\"] fruits = [\"apple\", \"orange\", \"banana\", \"coconut\"] fruits.clear() print(fruits) # [] fruits = [\"apple\", \"orange\", \"banana\", \"coconut\"] print(fruits.index(\"apple\")) # 0 fruits = {\"apple\", \"orange\", \"banana\", \"coconut\", \"coconut\"} print(len(fruits)) # 4 print(dir(fruits)) # ['__and__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__iand__', '__init__', '__init_subclass__', '__iter__', '__ixor__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__rand__', '__reduce__', '__reduce_ex__', '__repr__', '__ror__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__xor__', 'add', 'clear', 'copy', 'difference', 'difference_update', 'discard', 'intersection', 'intersection_update', 'isdisjoint', 'issubset', 'issuperset', 'pop', 'remove', 'symmetric_difference', 'symmetric_difference_update', 'union', 'update'] print(fruits[0]) # TypeError: 'set' object is not subscriptable print(fruits) # {\"orange\", \"apple\", \"banana\", \"coconut\"} fruits.pop() # {\"orange\", \"apple\", \"banana\"} # OR {\"apple\", \"banana\", \"coconut\"} # OR {\"orange\", \"banana\", \"coconut\"} # OR ... fruits.clear() # set() fruits = (\"apple\", \"orange\", \"banana\", \"coconut\", \"coconut\") print(dir(fruits)) # ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index'] print(fruits) # (\"apple\", \"orange\", \"banana\", \"coconut\", \"coconut\") 21. ⭐ shopping cart program 🛒 foods = [] prices = [] total = 0 while True: food = input(\"Enter a food to buy (q to quit): \") if food.lower() == \"q: break else: price = float(input(f\"Enter the price of a {food}: $\")) foods.append(food) prices.append(price) print(\"----- YOUR CART -----\") for food in foods: print(food, end=\" \") for price in prices: total += price print() print(f\"Your total is: ${total}\") 22. 2D collections ⬜ fruits = [\"apple\", \"orange\", \"banana\", \"coconut\"] vegetables = [\"celery\", \"carrots\", \"potatoes\"] meats = [\"chicken\", \"fish\", \"turkey\"] groceries = [fruits, vegetables, meats] print(groceries[0]) # [\"apple\", \"orange\", \"banana\", \"coconut\"] print(groceries[0][3]) # coconut print(groceries[2][3]) # IndexError: list index out of range groceries = [[\"apple\", \"orange\", \"banana\", \"coconut\"], [\"celery\", \"carrots\", \"potatoes\"], [\"chicken\", \"fish\", \"turkey\"]] for collection in groceries: for food in collection: print(food, end=\" \") print() # apple orange banana coconut # celery carrots potatoes # chicken fish turkey num_pad = ((1, 2, 3), (4, 5, 6), (7, 8, 9), (\"*\", 0, \"#\")) for row in num_pad: for num in row: print(num, end=\" \") print() # 1 2 3 # 4 5 6 # 7 8 9 # * 0 # 23. ⭐ quiz game 💯 question = (\"How many elements are in the periodic table?: \", \"Which animal lays the largest eggs?: \", \"What is the most abundant gas in Earth's atmosphere?: \", \"How many bones are in the human body?: \", \"Which planet in the solar system is the hottest?: \") options = ((\"A. 116\", \"B. 117\", \"C. 118\", \"D. 119\"), (\"A. Whale\", \"B. Crocodile\", \"C. Elephant\", \"D. Ostrich\"), (\"A. Nitrogen\", \"B. Oxygen\", \"C. Carbon-Dioxide\", \"D. Hydrogen\"), (\"A. 206\", \"B. 207\", \"C. 208\", \"D. 209\"), (\"A. Mercury\", \"B. Venus\", \"C. Earth\", \"D. Mars\")) answers = (\"C\", \"D\", \"A\", \"A\", \"B\" ) guesses = [] score = 0 question_num = 0 for question in questions: print(\"-----------------------\") print(question) for option in options[question_num]: print(option) guess = input(\"Enter (A, B, C, D): \").upper() guesses.append(guess) if guess == answers[question_num]: score += 1 print(\"CORRECT!\") else: print(\"INCORRECT!\") print(f\"{answers[question_num]} is the correct answer\") question_num += 1 print(\"-----------------------\") print(\" RESULTS \") print(\"-----------------------\") print(\"answers: \", end=\"\") for answer in answers: print(answer, end=\" \") print() print(\"guesses: \", end=\"\") for guesse in guesses: print(guesse, end=\" \") print() score = int(score / len(questions) * 100) print(f\"Your score is: {score}%\") 24. dictionaries 📙 a collection of {key:value} pairs ordered and changeable. No duplicates\ncapitals = {\"USA\": \"Washington D.C.\", \"India\": \"New Delhi\", \"China\": \"Beijing\", \"Russia\": \"Moscow\"} print(dir(capitals)) # print(help(capitals)) # ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values'] print(capitals.get(\"USA\")) # Washington D.C. print(capitals.get(\"Japan\")) # None capitals.update({\"Germany\": \"Berlin\"}) capitals.update({\"USA\": \"Detroit\"}) # {\"USA\": \"Detroit\", \"India\": \"New Delhi\", \"China\": \"Beijing\", \"Russia\": \"Moscow\", \"Germany\": \"Berlin\"} capitals.pop(\"China\") # {\"USA\": \"Detroit\", \"India\": \"New Delhi\", \"Russia\": \"Moscow\", \"Germany\": \"Berlin\"} capitals.popitem() # {\"USA\": \"Detroit\", \"India\": \"New Delhi\", \"Russia\": \"Moscow\"} # capitals.clear() # {} keys = capitals.keys() # dict_keys(['USA', 'India', 'Russia']) for keys in capitals.keys(): print(key) # USA # India # Russia values = capitals.values() # dict_values(['Detroit', 'New Delhi', 'Moscow']) for value in capitals.values(): print(value) # Detroit # New Delhi # Moscow items = capitals.items() print(items) # dict_items([('USA', 'Detroit'), ('India', 'New Delhi'), ('Russia', 'Moscow')]) for key, value in capitals.items(): print(f\"{key}: {value}\") # USA: Detroit # India: New Delhi # Russia: Moscow 25. ⭐ concession stand program 🍿 menu = {\"pizza\": 3.00, \"nachos\": 4.50, \"popcorn\": 6.00, \"fries\": 2.50, \"chips\": 1.00, \"pretzel\": 3.50, \"soda\": 3.00, \"lemonade\": 4.25} cart = [] total = 0 print(\"----- MENU -----\") for key, value in menu.items(): print(f\"{key:10}: ${value:.2f}\") print(\"----------------\") while True: food = input(\"Select an item (q to quit): \").lower() if food == \"q\": break elif menu.get(food) is not None: cart.append(food) print(\"-- YOUR ORDER --\") for food in cart: total += menu.get(food) print(food, end=\" \") print() print(f\"Total is: ${total:.2f}\") 26. random numbers 🎲 import random # print(help random) low = 1 high = 100 options = (\"rock\", \"paper\", \"scissors\") cards = [\"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"J\", \"Q\", \"K\", \"A\"] # number = random.randint(1, 6) # number = random.randint(low, high) # number = random.random() # option = random.choice(options) # random.shuffle(cards) 27. ⭐ number guessing game 🔢 import random lowest_num = 1 highest_num = 100 answer = random.randint(lowest_num, highest_num) guesses = 0 is_running = True print(\"Python Number Guessing Game\") print(f\"Select a number between {lowest_num} and {highest_num}\") while is_running: guess = input(\"Enter your guess: \") if guess.isdigit(): guess = int(guess) guesses += 1 if guess \u003c lowest_num or guess \u003e highest_num: print(\"That number is out of range\") print(f\"Please select a number between {lowest_num} and {highest_num}\") elif guess \u003c answer: print(\"Too low! Try again!\") elif guess \u003e answer: print(\"Too high! Try again!\") else: print(f\"CORRECT! The answer was {answer}\") print(f\"Number of guesses: {guesses}\") is_running = False else: print(\"Invalid guess\") print(f\"Please select a number between {lowest_num} and {highest_num}\") 28. ⭐ rock, paper, scissors game 🗿 import random options = (\"rock\", \"paper\", \"scissors\") playing = True while playing: player = None computer = random.choice(options) while player not in options: player = input(\"Enter a choice (rock, paper, scissors):\") print(f\"Player: {player}\") print(f\"Computer: {computer}\") if player == computer: print(\"It's a tie!\") elif player == \"rock\" and computer == \"scissors\": print(\"You win!\") elif player == \"paper\" and computer == \"rock\": print(\"You win!\") elif player == \"scissors\" and computer == \"paper\": print(\"You win!\") else: print(\"You lose!\") play_again = input(\"Play again? (y/n): \").lower() if not play_again == \"y\": playing = False print(\"Thanks for playing!\") 29. ⭐ dice roller program ⚂ import random print(\"\\u25CF \\u250C \\u2500 \\u2510 \\u2502 \\u2514 \\u2518\") # ● ┌ ─ ┐ │ └ ┘ \"┌─────────┐\" \"│ │\" \"│ │\" \"│ │\" \"└─────────┘\" dice_art = { 1: (\"┌─────────┐\", \"│ │\", \"│ ● │\", \"│ │\", \"└─────────┘\"), 2: (\"┌─────────┐\", \"│ ● │\", \"│ │\", \"│ ● │\", \"└─────────┘\"), 3: (\"┌─────────┐\", \"│ ● │\", \"│ ● │\", \"│ ● │\", \"└─────────┘\"), 4: (\"┌─────────┐\", \"│ ● ● │\", \"│ │\", \"│ ● ● │\", \"└─────────┘\"), 5: (\"┌─────────┐\", \"│ ● ● │\", \"│ ● │\", \"│ ● ● │\", \"└─────────┘\"), 6: (\"┌─────────┐\", \"│ ● ● │\", \"│ ● ● │\", \"│ ● ● │\", \"└─────────┘\"), } dice = [] total = 0 num_of_dice = int(input(\"How many dice?: \")) for die in range(num_of_dice): dice.append(random.randint(1, 6)) print(dice) # for die in range(num_of_dice): # for line in dice_art.get(dice[die]): # print(line) for line in range(5): # 外部循环，按行打印 for die in dice: # 内部循环，遍历每个骰子的点数 print(dice_art.get(die)[line], end=\"\") # 打印当前骰子图案的当前行 print() # 每打印完一行后换行 for die in dice: total += die print(f\"total: {total}\") 30. functions 📞 # function = A block of reusable code # place () after the function name to invoke it def happy_birthday(name, age): print(f\"Happy birthday to {name}!\") print(\"You are {age}!\") print(\"Happy birthday to you!\") print() happy_birthday(\"Bro\", 20) happy_birthday(\"Steve\", 30) happy_birthday(\"Joe\", 40) -------- def display_invoice(username, amount, due_date): print(f\"Hello {username}\") print(f\"Your bill of ${amount:.2f} is due: {due_date}\") display_invoice(\"YuuNiji\", 100.01, \"01/02\") -------- # return = statement used to end a function # and send a result back to the caller def add(x, y): z = x + y return z def subtract(x, y): z = x - y return z def multiply(x, y): z = x * y return z def divide(x, y): z = x / y return z print(add(1, 2)) # 3 print(subtract(1, 2)) # -1 print(multiply(1, 2)) # 2 print(divide(1, 2)) # 0.5 -------- def create_name(first, last): first = first.capitalize() last = last.capitalize() return first + \" \" + last full_name = create_name(\"yuuniji\", \"code\") print(full_name) # Yuuniji Code 31. default arguments 👍 # default arguments = A default value for certain parameters # default is used when that argument is omitted # make your functions more flexible, reduces # of arguments # 1. positional, 2. DEFAULT, 3. keyword, 4. arbitrary def net_price(list_price, discount=1, tax=0.05): return list_price * (1 - discount) * (1 + tax) print(net_price(500)) # 525.0 print(net_price(500, 0.1)) # 472.5 print(net_price(500, 0.1, 0)) # 450 -------- import time def count(start, end): for x in range(start, end+1): print(x) time.sleep(1) print(\"DONE!\") count(0, 10) # 0 # 1 # 2 # 3 # 4 # 5 # 6 # 7 # 8 # 9 # 10 # DONE! -------- import time def count(start=0, end): for x in range(start, end+1): print(x) time.sleep(1) print(\"DONE!\") count(10) # SyntaxError: non-default argument follows default argument -------- import time def count(end, start=0): for x in range(start, end+1): print(x) time.sleep(1) print(\"DONE!\") count(10) # 0 # 1 # 2 # 3 # 4 # 5 # 6 # 7 # 8 # 9 # 10 # DONE! -------- import time def count(end, start=0): for x in range(start, end+1): print(x) time.sleep(1) print(\"DONE!\") count(30, 15) # 15 # 16 # 17 # 18 # 19 # 20 # 21 # 22 # 23 # 24 # 25 # 26 # 27 # 28 # 29 # 30 # DONE! 32. keyword arguments 🗝️ # keyword arguments = an argument preceded by an identifier # helps with readability # order of arguments doesn't matter # 1. positional 2. default 3. KEYWORD 4. arbitrary def hello(greeting, title, first, last): print(f\"{greeting} {title}{first} {last}\") hello(\"Hello\", \"Mr.\", \"Spongebob\", \"Squarepants\") # Hello Mr.Spongebob Squarepants hello(\"Hello\", \"Spongebob\", \"Squarepants\", \"Mr.\") # Hello SpongebobSquarepants Mr. hello(\"Hello\", title=\"Mr.\", first=\"Spongebob\", last=\"Squarepants\") # Hello Mr.Spongebob Squarepants hello(\"Hello\", title=\"Mr.\", last=\"Squarepants\", first=\"Spongebob\") # Hello Mr.Spongebob Squarepants hello(title=\"Mr.\", last=\"Squarepants\", first=\"Spongebob\", \"Hello\") # SyntaxError: positional argument follows keyword argument hello(\"Hello\", \"Mr.\", \"John\", \"James\") # Hello Mr.John James hello(\"Hello\", title=\"Mr.\", last=\"John\", first=\"James\") # Hello Mr.James John -------- for x in range(1, 11): print(x, end=\" \") # 1 2 3 4 5 6 7 8 9 10 -------- print(\"1\", \"2\", \"3\", \"4\", \"5\", sep=\"-\") # 1-2-3-4-5 -------- def get_phone(country, area, first, last): return f\"{country}-{area}-{first}-{last}\" phone_num = get_phone(country=1, area=123, first=456, last=7890) print(phone_num) # 1-123-456-7890 33. *args \u0026 **kwargs 📦 # *args = allows you to pass multiple non-key arguments # **kwargs = allows you to pass multiple keyword-arguments # * unpacking operator # 1. positional 2. default 3. keyword 4. ARBITRARY def add(a, b): return a + b print(add(1, 2)) # 3 print(add(1, 2, 3)) # TypeError: add() takes 2 positional arguments but 3 were given -------- def add(*args): print(type(args)) # ",
-  "wordCount" : "9304",
+  "wordCount" : "10810",
   "inLanguage": "en",
   "datePublished": "2025-04-24T00:00:00Z",
   "dateModified": "2025-04-24T00:00:00Z",
@@ -284,7 +284,7 @@ Variable assignments">
         </svg>
       </span>
     </h1>
-    <div class="post-meta"><span title='2025-04-24 00:00:00 +0000 UTC'>April 24, 2025</span>&nbsp;·&nbsp;19 min&nbsp;|&nbsp;Translations:
+    <div class="post-meta"><span title='2025-04-24 00:00:00 +0000 UTC'>April 24, 2025</span>&nbsp;·&nbsp;22 min&nbsp;|&nbsp;Translations:
 <ul class="i18n_list">
     <li>
         <a href="https://yuuniji.github.io/posts/learn-python/">Zh</a>
@@ -3217,7 +3217,405 @@ Variable assignments">
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Thank you! Have a nice day!</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># *********************</span>
 </span></span></code></pre></div><h2 id="42--slot-machine-">42. ⭐ slot machine 🎰<a hidden class="anchor" aria-hidden="true" href="#42--slot-machine-">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"></code></pre></div><h2 id="43--encryption-program-">43. ⭐ encryption program 🔐<a hidden class="anchor" aria-hidden="true" href="#43--encryption-program-">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Python Slot Machine</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spin_row</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_row</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_payout</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--------</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spin_row</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_row</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_payout</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    balance <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************************&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Welcome to Python Slots &#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Symbols: 🍒 🍉 🍋 🔔 ⭐️&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************************&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> balance <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Current balance: $</span><span style="color:#e6db74">{</span>balance<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        bet <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Place your bet amount: &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> bet<span style="color:#f92672">.</span>isdigit():
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Please enter a valid number&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        bet <span style="color:#f92672">=</span> int(bet)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bet <span style="color:#f92672">&gt;</span> balance:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Insufficient funds&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bet <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Bet must be greater than 0&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        balance <span style="color:#f92672">-=</span> bet
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Welcome to Python Slots </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Symbols: 🍒 🍉 🍋 🔔 ⭐️</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $100</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: pizza</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Please enter a valid number</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $100</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 10000000000000000</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Insufficient funds</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $100</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 0</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Bet must be greater than 0</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $100</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $99</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 10</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $89</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 90</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Insufficient funds</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $89</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 89</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--------</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spin_row</span>():
+</span></span><span style="display:flex;"><span>    symbols <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;🍒&#39;</span>, <span style="color:#e6db74">&#39;🍉&#39;</span>, <span style="color:#e6db74">&#39;🍋&#39;</span>, <span style="color:#e6db74">&#39;🔔&#39;</span>, <span style="color:#e6db74">&#39;⭐️&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># results =[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># for symbols in range(3):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#     results.append(random.choice(symbols))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># return results</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [random<span style="color:#f92672">.</span>choice(symbols) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>)]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># return [random.choice(symbols) for symbols in range(3)]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_row</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_payout</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    balance <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************************&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Welcome to Python Slots &#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Symbols: 🍒 🍉 🍋 🔔 ⭐️&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************************&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> balance <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Current balance: $</span><span style="color:#e6db74">{</span>balance<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        bet <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Place your bet amount: &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> bet<span style="color:#f92672">.</span>isdigit():
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Please enter a valid number&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        bet <span style="color:#f92672">=</span> int(bet)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bet <span style="color:#f92672">&gt;</span> balance:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Insufficient funds&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bet <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Bet must be greater than 0&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        balance <span style="color:#f92672">-=</span> bet
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        row <span style="color:#f92672">=</span> spin_row()
+</span></span><span style="display:flex;"><span>        print(row)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Welcome to Python Slots </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Symbols: 🍒 🍉 🍋 🔔 ⭐️</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $100</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&#39;⭐️&#39;, &#39;🍋&#39;, &#39;🍋&#39;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $99</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&#39;🍉&#39;, &#39;🍒&#39;, &#39;⭐️&#39;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $98</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&#39;🍒&#39;, &#39;🍉&#39;, &#39;🍒&#39;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $97</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&#39;⭐️&#39;, &#39;🍋&#39;, &#39;⭐️&#39;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $96</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [&#39;🍋&#39;, &#39;🍒&#39;, &#39;🍋&#39;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $95</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--------</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spin_row</span>():
+</span></span><span style="display:flex;"><span>    symbols <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;🍒&#39;</span>, <span style="color:#e6db74">&#39;🍉&#39;</span>, <span style="color:#e6db74">&#39;🍋&#39;</span>, <span style="color:#e6db74">&#39;🔔&#39;</span>, <span style="color:#e6db74">&#39;⭐️&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># results =[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># for symbols in range(3):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#     results.append(random.choice(symbols))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># return results</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [random<span style="color:#f92672">.</span>choice(symbols) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>)]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># return [random.choice(symbols) for symbols in range(3)]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_row</span>(row):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">.</span>join(row))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_payout</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    balance <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************************&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Welcome to Python Slots &#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Symbols: 🍒 🍉 🍋 🔔 ⭐️&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************************&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> balance <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Current balance: $</span><span style="color:#e6db74">{</span>balance<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        bet <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Place your bet amount: &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> bet<span style="color:#f92672">.</span>isdigit():
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Please enter a valid number&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        bet <span style="color:#f92672">=</span> int(bet)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bet <span style="color:#f92672">&gt;</span> balance:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Insufficient funds&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bet <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Bet must be greater than 0&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        balance <span style="color:#f92672">-=</span> bet
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        row <span style="color:#f92672">=</span> spin_row()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Spinning...</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print_row(row)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Welcome to Python Slots </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Symbols: 🍒 🍉 🍋 🔔 ⭐️</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $100</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 1</span>
+</span></span><span style="display:flex;"><span>Spinning<span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">🍋</span> <span style="color:#960050;background-color:#1e0010">⭐️</span> <span style="color:#960050;background-color:#1e0010">🔔</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $99</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--------</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spin_row</span>():
+</span></span><span style="display:flex;"><span>    symbols <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;🍒&#39;</span>, <span style="color:#e6db74">&#39;🍉&#39;</span>, <span style="color:#e6db74">&#39;🍋&#39;</span>, <span style="color:#e6db74">&#39;🔔&#39;</span>, <span style="color:#e6db74">&#39;⭐️&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># results =[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># for symbols in range(3):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#     results.append(random.choice(symbols))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># return results</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [random<span style="color:#f92672">.</span>choice(symbols) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>)]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># return [random.choice(symbols) for symbols in range(3)]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_row</span>(row):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34; | &#34;</span><span style="color:#f92672">.</span>join(row))
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_payout</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    balance <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************************&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Welcome to Python Slots &#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Symbols: 🍒 🍉 🍋 🔔 ⭐️&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************************&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> balance <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Current balance: $</span><span style="color:#e6db74">{</span>balance<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        bet <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Place your bet amount: &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> bet<span style="color:#f92672">.</span>isdigit():
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Please enter a valid number&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        bet <span style="color:#f92672">=</span> int(bet)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bet <span style="color:#f92672">&gt;</span> balance:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Insufficient funds&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bet <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Bet must be greater than 0&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        balance <span style="color:#f92672">-=</span> bet
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        row <span style="color:#f92672">=</span> spin_row()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Spinning...</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print_row(row)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Welcome to Python Slots </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Symbols: 🍒 🍉 🍋 🔔 ⭐️</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $100</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Spinning...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 🔔 | 🍉 | ⭐️</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $99</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Spinning...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 🍒 | 🍒 | 🔔</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $97</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Spinning...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 🍒 | ⭐️ | ⭐️</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $94</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: 4</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Spinning...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 🍉 | 🍉 | 🍉</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># *************</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Current balance: $90</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place your bet amount: </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--------</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spin_row</span>():
+</span></span><span style="display:flex;"><span>    symbols <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;🍒&#39;</span>, <span style="color:#e6db74">&#39;🍉&#39;</span>, <span style="color:#e6db74">&#39;🍋&#39;</span>, <span style="color:#e6db74">&#39;🔔&#39;</span>, <span style="color:#e6db74">&#39;⭐️&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># results =[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># for symbols in range(3):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#     results.append(random.choice(symbols))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># return results</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [random<span style="color:#f92672">.</span>choice(symbols) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>)]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># return [random.choice(symbols) for symbols in range(3)]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_row</span>(row):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34; | &#34;</span><span style="color:#f92672">.</span>join(row))
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_payout</span>(row, bet):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> row[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> row[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> row[<span style="color:#ae81ff">2</span>]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> row[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;🍒&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> bet <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> row[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;🍉&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> bet <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> row[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;🍋&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> bet <span style="color:#f92672">*</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> row[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;🔔&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> bet <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> row[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;⭐️&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> bet <span style="color:#f92672">*</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    balance <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************************&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Welcome to Python Slots &#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Symbols: 🍒 🍉 🍋 🔔 ⭐️&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;*************************&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> balance <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Current balance: $</span><span style="color:#e6db74">{</span>balance<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        bet <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Place your bet amount: &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> bet<span style="color:#f92672">.</span>isdigit():
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Please enter a valid number&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        bet <span style="color:#f92672">=</span> int(bet)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bet <span style="color:#f92672">&gt;</span> balance:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Insufficient funds&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bet <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Bet must be greater than 0&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        balance <span style="color:#f92672">-=</span> bet
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        row <span style="color:#f92672">=</span> spin_row()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Spinning...</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        print_row(row)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        payout <span style="color:#f92672">=</span> get_payout(row, bet)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> payout <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;You won $</span><span style="color:#e6db74">{</span>payout<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Sorry you lost this round&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        balance <span style="color:#f92672">+=</span> payout
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><h2 id="43--encryption-program-">43. ⭐ encryption program 🔐<a hidden class="anchor" aria-hidden="true" href="#43--encryption-program-">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"></code></pre></div><h2 id="44--hangman-game-">44. ⭐ hangman game 🕺<a hidden class="anchor" aria-hidden="true" href="#44--hangman-game-">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"></code></pre></div><h2 id="45-python-object-oriented-programming-">45. python object oriented programming 🚗<a hidden class="anchor" aria-hidden="true" href="#45-python-object-oriented-programming-">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"></code></pre></div><h2 id="46-class-variables-">46. class variables 🎓<a hidden class="anchor" aria-hidden="true" href="#46-class-variables-">#</a></h2>
