@@ -6,12 +6,12 @@
     <description>Recent content in Yuunijiのブログ on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 26 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/ja/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pythonを学ぶ</title>
       <link>https://yuuniji.github.io/ja/posts/learn-python/</link>
-      <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/ja/posts/learn-python/</guid>
       <description>&lt;h2 id=&#34;1-変数-&#34;&gt;1. 変数 ❎&lt;/h2&gt;
 &lt;p&gt;値（文字列、整数、浮動小数点数、ブール値）を格納するコンテナ&lt;/p&gt;
