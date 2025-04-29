@@ -9,6 +9,26 @@
     <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>How to Learn Python Effectively [1]: Roadmap</title>
+      <link>https://yuuniji.github.io/en/posts/python-1-roadmap/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/python-1-roadmap/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/en/posts/python-0-overview/&#34;&gt;Back to the series index&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
+&lt;p&gt;Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://www.python.org/&#34;&gt;Python Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Python_%28programming_language%29&#34;&gt;Python - Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-write-your-first-python-3-program&#34;&gt;Tutorial Series: How to Code in Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://developers.google.com/edu/python&#34;&gt;Google’s Python Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.w3schools.com/python&#34;&gt;W3Schools - Python Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;video&lt;/em&gt; &lt;a href=&#34;https://www.youtube.com/watch?v=4M87qBgpafk&#34;&gt;Learn Python - Full Course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;feed&lt;/em&gt; &lt;a href=&#34;https://app.daily.dev/tags/python?ref=roadmapsh&#34;&gt;Explore top posts about Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;basics-syntax&#34;&gt;◇Basics Syntax&lt;/h3&gt;
+&lt;p&gt;Setup the environment for python and get started with the basics.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Learn Python</title>
       <link>https://yuuniji.github.io/en/posts/learn-python/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
@@ -52,23 +72,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Variable assignments&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Python Roadmap</title>
-      <link>https://yuuniji.github.io/en/posts/python-1-roadmap/</link>
-      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/en/posts/python-1-roadmap/</guid>
-      <description>&lt;h2 id=&#34;1-learn-the-basics&#34;&gt;1. Learn the Basics&lt;/h2&gt;
-&lt;p&gt;Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;official&lt;/em&gt; &lt;a href=&#34;https://www.python.org/&#34;&gt;Python Website&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Python_%28programming_language%29&#34;&gt;Python - Wiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-write-your-first-python-3-program&#34;&gt;Tutorial Series: How to Code in Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://developers.google.com/edu/python&#34;&gt;Google’s Python Class&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;article&lt;/em&gt; &lt;a href=&#34;https://www.w3schools.com/python&#34;&gt;W3Schools - Python Tutorial&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;video&lt;/em&gt; &lt;a href=&#34;https://www.youtube.com/watch?v=4M87qBgpafk&#34;&gt;Learn Python - Full Course&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;feed&lt;/em&gt; &lt;a href=&#34;https://app.daily.dev/tags/python?ref=roadmapsh&#34;&gt;Explore top posts about Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;basics-syntax&#34;&gt;◇Basics Syntax&lt;/h3&gt;
-&lt;p&gt;Setup the environment for python and get started with the basics.&lt;/p&gt;</description>
+      <title>python-0-overview</title>
+      <link>https://yuuniji.github.io/en/posts/python-0-overview/</link>
+      <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/python-0-overview/</guid>
+      <description>&lt;p&gt;For ease of reading, the directory of this series of posts is organized as follows:&lt;br&gt;
+　　1. &lt;a href=&#34;https://yuuniji.github.io/en/posts/python-1-roadmap/&#34;&gt;How to Learn Python Effectively [1]: Roadmap&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Learn Japanese Effectively [6]: Japanese Pitch Accent</title>

@@ -56,24 +56,6 @@
                 href="https://yuuniji.github.io/ja/tags/python/"
                 />
   </url><url>
-    <loc>https://yuuniji.github.io/ja/posts/python-1-roadmap/</loc>
-    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/posts/python-1-roadmap/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/posts/python-1-roadmap/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/posts/python-1-roadmap/"
-                />
-  </url><url>
     <loc>https://yuuniji.github.io/ja/posts/learn-python/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -90,6 +72,24 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://yuuniji.github.io/ja/posts/learn-python/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/posts/python-1-roadmap/</loc>
+    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/python-1-roadmap/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/python-1-roadmap/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/python-1-roadmap/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/ja/tags/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97/</loc>
@@ -111,6 +111,24 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://yuuniji.github.io/ja/tags/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/posts/python-0-overview/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/python-0-overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/python-0-overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/python-0-overview/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/ja/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
