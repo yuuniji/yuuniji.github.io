@@ -9,6 +9,14 @@
     <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Python 路线图</title>
+      <link>https://yuuniji.github.io/posts/python-1-roadmap/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/posts/python-1-roadmap/</guid>
+      <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
+&lt;p&gt;Python 是一种高级、解释型、通用编程语言。其设计哲学强调代码的可读性，使用显著的缩进。Python 是动态类型语言，并且具有垃圾回收机制。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>学习 Python</title>
       <link>https://yuuniji.github.io/posts/learn-python/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
@@ -50,14 +58,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;你离线&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;变量赋值&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Python 路线图</title>
-      <link>https://yuuniji.github.io/posts/roadmap-python/</link>
-      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/posts/roadmap-python/</guid>
-      <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
-&lt;p&gt;Python 是一种高级、解释型、通用编程语言。其设计哲学强调代码的可读性，使用显著的缩进。Python 是动态类型语言，并且具有垃圾回收机制。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

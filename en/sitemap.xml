@@ -74,6 +74,27 @@
                 href="https://yuuniji.github.io/en/tags/python/"
                 />
   </url><url>
+    <loc>https://yuuniji.github.io/en/posts/python-1-roadmap/</loc>
+    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/python-1-roadmap/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/python-1-roadmap/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/python-1-roadmap/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/en/tags/roadmap/</loc>
+    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://yuuniji.github.io/en/tags/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -229,9 +250,6 @@
                 hreflang="en"
                 href="https://yuuniji.github.io/en/posts/roadmap-kubernetes/"
                 />
-  </url><url>
-    <loc>https://yuuniji.github.io/en/tags/roadmap/</loc>
-    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yuuniji.github.io/en/tags/docker/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
@@ -393,24 +411,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yuuniji.github.io/en/posts/roadmap-go/"
-                />
-  </url><url>
-    <loc>https://yuuniji.github.io/en/posts/roadmap-python/</loc>
-    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/posts/roadmap-python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/posts/roadmap-python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/posts/roadmap-python/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/en/tags/devops/</loc>

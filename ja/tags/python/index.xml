@@ -9,6 +9,14 @@
     <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/ja/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Pythonのロードマップ</title>
+      <link>https://yuuniji.github.io/ja/posts/python-1-roadmap/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/ja/posts/python-1-roadmap/</guid>
+      <description>&lt;h2 id=&#34;1-基本を学ぶ&#34;&gt;1. 基本を学ぶ&lt;/h2&gt;
+&lt;p&gt;Pythonは、高水準、インタプリタ型、汎用のプログラミング言語です。その設計哲学は、インデントを重視したコードの可読性を強調しています。Pythonは動的型付けであり、ガベージコレクションを備えています。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Pythonを学ぶ</title>
       <link>https://yuuniji.github.io/ja/posts/learn-python/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
@@ -50,14 +58,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;あなたはオフラインです&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;変数の代入&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Pythonのロードマップ</title>
-      <link>https://yuuniji.github.io/ja/posts/roadmap-python/</link>
-      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/ja/posts/roadmap-python/</guid>
-      <description>&lt;h2 id=&#34;1-基本を学ぶ&#34;&gt;1. 基本を学ぶ&lt;/h2&gt;
-&lt;p&gt;Pythonは、高水準、インタプリタ型、汎用のプログラミング言語です。その設計哲学は、インデントを重視したコードの可読性を強調しています。Pythonは動的型付けであり、ガベージコレクションを備えています。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

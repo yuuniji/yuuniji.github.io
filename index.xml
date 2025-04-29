@@ -9,6 +9,14 @@
     <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Python 路线图</title>
+      <link>https://yuuniji.github.io/posts/python-1-roadmap/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/posts/python-1-roadmap/</guid>
+      <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
+&lt;p&gt;Python 是一种高级、解释型、通用编程语言。其设计哲学强调代码的可读性，使用显著的缩进。Python 是动态类型语言，并且具有垃圾回收机制。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>学习 Python</title>
       <link>https://yuuniji.github.io/posts/learn-python/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
@@ -249,14 +257,6 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;基本语法&#34;&gt;◇基本语法&lt;/h3&gt;
 &lt;p&gt;学习 Go 的基本语法，例如 Go 程序的执行方式、包导入、主函数等。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Python 路线图</title>
-      <link>https://yuuniji.github.io/posts/roadmap-python/</link>
-      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/posts/roadmap-python/</guid>
-      <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
-&lt;p&gt;Python 是一种高级、解释型、通用编程语言。其设计哲学强调代码的可读性，使用显著的缩进。Python 是动态类型语言，并且具有垃圾回收机制。&lt;/p&gt;</description>
     </item>
     <item>
       <title>DevOps 路线图</title>

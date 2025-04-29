@@ -6,8 +6,16 @@
     <description>Recent content in ロードマップ on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/ja/tags/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%9E%E3%83%83%E3%83%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pythonのロードマップ</title>
+      <link>https://yuuniji.github.io/ja/posts/python-1-roadmap/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/ja/posts/python-1-roadmap/</guid>
+      <description>&lt;h2 id=&#34;1-基本を学ぶ&#34;&gt;1. 基本を学ぶ&lt;/h2&gt;
+&lt;p&gt;Pythonは、高水準、インタプリタ型、汎用のプログラミング言語です。その設計哲学は、インデントを重視したコードの可読性を強調しています。Pythonは動的型付けであり、ガベージコレクションを備えています。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Kubernetesのロードマップ</title>
       <link>https://yuuniji.github.io/ja/posts/roadmap-kubernetes/</link>
@@ -47,14 +55,6 @@
       <guid>https://yuuniji.github.io/ja/posts/roadmap-go/</guid>
       <description>&lt;h2 id=&#34;1-基礎を学ぶ&#34;&gt;1. 基礎を学ぶ&lt;/h2&gt;
 &lt;p&gt;Goの変数、ループ、条件文、関数、データ型などの一般的な概念を学びます。Goの基礎を学ぶための良い出発点は、Goの公式ドキュメントです。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Pythonのロードマップ</title>
-      <link>https://yuuniji.github.io/ja/posts/roadmap-python/</link>
-      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/ja/posts/roadmap-python/</guid>
-      <description>&lt;h2 id=&#34;1-基本を学ぶ&#34;&gt;1. 基本を学ぶ&lt;/h2&gt;
-&lt;p&gt;Pythonは、高水準、インタプリタ型、汎用のプログラミング言語です。その設計哲学は、インデントを重視したコードの可読性を強調しています。Pythonは動的型付けであり、ガベージコレクションを備えています。&lt;/p&gt;</description>
     </item>
     <item>
       <title>DevOpsのロードマップ</title>
