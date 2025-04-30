@@ -6,22 +6,8 @@
     <description>Recent content in 文章列表 on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>学习 Vim</title>
-      <link>https://yuuniji.github.io/posts/learn-vim/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/posts/learn-vim/</guid>
-      <description>&lt;h2 id=&#34;学习vim&#34;&gt;★学习Vim&lt;/h2&gt;
-&lt;h3 id=&#34;前言&#34;&gt;◇前言&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;过渡&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt; 在终端运行 &lt;code&gt;vimtutor&lt;/code&gt; 以学习 Vim 的基础命令。这个交互式教程大约需要 30 分钟，涵盖了基础知识。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;理解 Vim 的语法化结构是掌握其强大功能的关键，只需学习少量命令并通过直观的组合即可高效完成多种操作。&lt;/p&gt;</description>
-    </item>
     <item>
       <title>如何学好Python[2]: 学习 Python</title>
       <link>https://yuuniji.github.io/posts/python-2-learn/</link>

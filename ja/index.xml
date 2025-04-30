@@ -6,22 +6,8 @@
     <description>Recent content in Yuunijiのブログ on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/ja/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Vimを学ぶ</title>
-      <link>https://yuuniji.github.io/ja/posts/learn-vim/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/ja/posts/learn-vim/</guid>
-      <description>&lt;h1 id=&#34;vimの学習&#34;&gt;★Vimの学習&lt;/h1&gt;
-&lt;h2 id=&#34;序文&#34;&gt;◇序文&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;移行&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;ヒント&lt;/strong&gt; ターミナルで &lt;code&gt;vimtutor&lt;/code&gt; を実行して、Vimの基本コマンドを学びましょう。この対話式チュートリアルは約30分で、基礎知識をカバーしています。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;Vimの文法構造を理解することが、その強力な機能をマスターするための鍵です。少数のコマンドを学び、直感的に組み合わせることで、様々な操作を効率的に完了できます。&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Pythonを上手に学ぶ方法[2]: Pythonを学ぶ</title>
       <link>https://yuuniji.github.io/ja/posts/python-2-learn/</link>
