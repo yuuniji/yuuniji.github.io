@@ -6,8 +6,15 @@
     <description>Recent content in Tags on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim</title>
+      <link>https://yuuniji.github.io/en/tags/vim/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/tags/vim/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Python</title>
       <link>https://yuuniji.github.io/en/tags/python/</link>
