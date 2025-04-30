@@ -4932,10 +4932,10 @@ Class methods = Best for class-level data or require access to the class itself<
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>title <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>title <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>author <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>author
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __lt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __gt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>book1 <span style="color:#f92672">=</span> Book(<span style="color:#e6db74">&#34;The Hobbit&#34;</span>, <span style="color:#e6db74">&#34;J.R.R. Tolkien&#34;</span>, <span style="color:#ae81ff">310</span>)
 </span></span><span style="display:flex;"><span>book2 <span style="color:#f92672">=</span> Book(<span style="color:#e6db74">&#34;Harry Potter and The Philosopher&#39;s Stone&#34;</span>, <span style="color:#e6db74">&#34;J.K. Rowling&#34;</span>, <span style="color:#ae81ff">223</span>)
@@ -4962,13 +4962,13 @@ Class methods = Best for class-level data or require access to the class itself<
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>title <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>title <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>author <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>author
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __lt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __gt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __add__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">+</span> other<span style="color:#f92672">.</span>num_pagess<span style="color:#e6db74">}</span><span style="color:#e6db74"> pages&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">+</span> other<span style="color:#f92672">.</span>num_pages<span style="color:#e6db74">}</span><span style="color:#e6db74"> pages&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>book1 <span style="color:#f92672">=</span> Book(<span style="color:#e6db74">&#34;The Hobbit&#34;</span>, <span style="color:#e6db74">&#34;J.R.R. Tolkien&#34;</span>, <span style="color:#ae81ff">310</span>)
 </span></span><span style="display:flex;"><span>book2 <span style="color:#f92672">=</span> Book(<span style="color:#e6db74">&#34;Harry Potter and The Philosopher&#39;s Stone&#34;</span>, <span style="color:#e6db74">&#34;J.K. Rowling&#34;</span>, <span style="color:#ae81ff">223</span>)
@@ -4993,13 +4993,13 @@ Class methods = Best for class-level data or require access to the class itself<
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>title <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>title <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>author <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>author
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __lt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __gt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __add__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">+</span> other<span style="color:#f92672">.</span>num_pagess<span style="color:#e6db74">}</span><span style="color:#e6db74"> pages&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">+</span> other<span style="color:#f92672">.</span>num_pages<span style="color:#e6db74">}</span><span style="color:#e6db74"> pages&#34;</span>
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __contains__(self, keyword):
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> keyword <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>title <span style="color:#f92672">or</span> keyword <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>author
@@ -5033,13 +5033,13 @@ Class methods = Best for class-level data or require access to the class itself<
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>title <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>title <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>author <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>author
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __lt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __gt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __add__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">+</span> other<span style="color:#f92672">.</span>num_pagess<span style="color:#e6db74">}</span><span style="color:#e6db74"> pages&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">+</span> other<span style="color:#f92672">.</span>num_pages<span style="color:#e6db74">}</span><span style="color:#e6db74"> pages&#34;</span>
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __contains__(self, keyword):
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> keyword <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>title <span style="color:#f92672">or</span> keyword <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>author
@@ -5075,13 +5075,13 @@ Class methods = Best for class-level data or require access to the class itself<
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>title <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>title <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>author <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>author
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __lt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __gt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __add__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">+</span> other<span style="color:#f92672">.</span>num_pagess<span style="color:#e6db74">}</span><span style="color:#e6db74"> pages&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">+</span> other<span style="color:#f92672">.</span>num_pages<span style="color:#e6db74">}</span><span style="color:#e6db74"> pages&#34;</span>
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __contains__(self, keyword):
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> keyword <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>title <span style="color:#f92672">or</span> keyword <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>author
@@ -5119,13 +5119,13 @@ Class methods = Best for class-level data or require access to the class itself<
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>title <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>title <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>author <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>author
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __lt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __gt__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pagess
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">&gt;</span> other<span style="color:#f92672">.</span>num_pages
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __add__(self, other):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">+</span> other<span style="color:#f92672">.</span>num_pagess<span style="color:#e6db74">}</span><span style="color:#e6db74"> pages&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>num_pages <span style="color:#f92672">+</span> other<span style="color:#f92672">.</span>num_pages<span style="color:#e6db74">}</span><span style="color:#e6db74"> pages&#34;</span>
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __contains__(self, keyword):
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> keyword <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>title <span style="color:#f92672">or</span> keyword <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>author
