@@ -11,7 +11,7 @@
 Terraformは、HashiCorpによって設計された強力なツールで、さまざまなクラウドプロバイダー間でインフラストラクチャを安全かつ効率的に設定、管理、更新するのに役立ちます。サーバー、ストレージ、ネットワークなどのクラウドリソースをシンプルなコード形式で定義する方法と考えてください。これにより、インフラストラクチャの自動化、共有、管理が容易になり、すべてが一貫しており、必要に応じて迅速に再現または変更できるようになります。">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.github.io/ja/posts/roadmap-terraform/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.428a71632cc98b77f300dfad260e33063d7e983c7b891cb92f926d199644d8ef.css" integrity="sha256-QopxYyzJi3fzAN&#43;tJg4zBj1&#43;mDx7iRy5L5JtGZZE2O8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9b5f5f13d00d57a7681cfb5ddc7efdab265d60e4345c7c4ff03f41cd0d92638f.css" integrity="sha256-m19fE9ANV6doHPtd3H79qyZdYOQ0XHxP8D9BzQ2SY48=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
@@ -1407,10 +1407,68 @@ Terraformは、HashiCorpによって設計された強力なツールで、さ�
 
   </footer>
 </article>
+<div id="giscus_container"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="yuuniji/yuu-repo"
+        data-repo-id="R_kgDOOl2JTQ"
+        data-category="General"
+        data-category-id="DIC_kwDOOl2JTc4Cp3MT"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://yuuniji.github.io/ja/">叶泽伟的博客</a></span>
+    <span>&copy; 2025 <a href="https://yuuniji.github.io/ja/">叶泽伟的博客</a></span>
+    <span id="runtime_span"></span> 
+    <script type="text/javascript">
+        function show_runtime() {
+            
+            setTimeout(show_runtime, 1000);
+
+            
+            const startDate = new Date("2025/02/22 00:00:00");
+
+            
+            const now = new Date();
+
+            
+            const diff = now.getTime() - startDate.getTime();
+
+            
+            const days = Math.floor(diff / (24 * 60 * 60 * 1000));                     
+            const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000)); 
+            const minutes = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));        
+            const seconds = Math.floor((diff % (60 * 1000)) / 1000);                    
+
+            
+            const lang = document.documentElement.lang || "en"; 
+
+            
+            const translations = {
+                zh: `网站已运行 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`,
+                ja: `サイトは稼働してから ${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`,
+                en: `Site has been running for ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
+            };
+
+            
+            const output = translations[lang] || translations["en"];
+
+            
+            document.getElementById("runtime_span").innerHTML = output;
+        }
+
+        
+        show_runtime();
+    </script>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -1519,6 +1577,29 @@ Terraformは、HashiCorpによって設計された強力なツールで、さ�
         }
     });
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    mediumZoom('article img', {
+      margin: 24,
+      background: 'rgba(0, 0, 0, 0.8)',
+      scrollOffset: 40
+    });
+  });
+</script>
+
+
+<style>
+  article img {
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out;
+  }
+  article img:hover {
+    transform: scale(1.02);
+  }
+</style>
 </body>
 
 </html>

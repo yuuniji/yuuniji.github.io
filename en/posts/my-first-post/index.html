@@ -39,7 +39,7 @@ baseURL = &#34;https://yuuniji.github.io&#34;
 Create your first post:">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.github.io/en/posts/my-first-post/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.428a71632cc98b77f300dfad260e33063d7e983c7b891cb92f926d199644d8ef.css" integrity="sha256-QopxYyzJi3fzAN&#43;tJg4zBj1&#43;mDx7iRy5L5JtGZZE2O8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9b5f5f13d00d57a7681cfb5ddc7efdab265d60e4345c7c4ff03f41cd0d92638f.css" integrity="sha256-m19fE9ANV6doHPtd3H79qyZdYOQ0XHxP8D9BzQ2SY48=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
@@ -166,7 +166,7 @@ Create your first post:">
     "Blog Setup", "GitHub"
   ],
   "articleBody": "Hugo Blog + GitHub Pages Complete Deployment Guide 📌 Environment Preparation Device: MacBook (macOS) Tools: Git Hugo GitHub Account Install Hugo brew install hugo Verify installation:\nhugo version 🎯 Create Hugo Blog mkdir blog \u0026\u0026 cd blog hugo new site . Initialize Git:\ngit init 🎨 Choose \u0026 Add Theme Recommended PaperMod theme:\ngit submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod Edit config.toml, add:\ntheme = \"PaperMod\" baseURL = \"https://yuuniji.github.io\" 📝 Write Blog Posts Create your first post:\nhugo new posts/hello-world.md Edit content/posts/hello-world.md:\n--- title: \"Hello World\" date: 2025-02-22T12:00:00 draft: false --- This is my first blog post! 🔧 Local Preview (Skip for First Deployment) hugo server -D Access in browser:\nhttp://localhost:1313 🔥 Publish to GitHub 1. Create GitHub Repositories blog (for Hugo source code) yuuniji.github.io (for generated static files) 2. Push to blog Repository git remote add origin https://github.com/yuuniji/blog.git git branch -M main git add . git commit -m \"Initial commit\" git push -u origin main 3. Generate Static Files hugo -D Static files are located in the public/ directory.\n4. Push to yuuniji.github.io cd public git init git remote add origin https://github.com/yuuniji/yuuniji.github.io.git git checkout -b main git add . git commit -m \"Deploy Hugo site\" git push -f origin main 🌎 Configure GitHub Pages Go to yuuniji.github.io repository Settings → Pages. Select main branch, save and wait for deployment to complete. Visit https://yuuniji.github.io to view your blog. 🔄 Automated Deployment (Optional) 1. Add deploy.sh to blog Repository nano deploy.sh Paste the following content:\n#!/bin/bash hugo -D cd public git add . git commit -m \"Deploy: $(date)\" git push origin main cd .. Save and exit (press Ctrl + X, then Y, and Enter).\n2. Grant Execution Permission chmod +x deploy.sh 3. Run Deployment Script ./deploy.sh 🎉 All Done! To update your blog in the future:\nWrite posts in blog/ directory: hugo new posts/xxx.md Run ./deploy.sh Visit https://yuuniji.github.io to see updates 💡 Refer back to this guide if you have any questions! 🚀\nHugo Blog Multi-language \u0026 Feature Expansion Guide Quick Links baseURL = \"https://yuuniji.github.io\" title = \"Yuuniji的博客\" theme = \"PaperMod\" defaultContentLanguage = \"zh\" hasCJKLanguage = true [languages] [languages.zh] languageName = \"中文\" weight = 1 contentDir = \"content/zh\" [languages.zh.params] archivesTitle = \"归档\" archivesDescription = \"按年份和月份查看文章归档\" [languages.zh.menu] [[languages.zh.menu.main]] name = \"首页\" url = \"/\" weight = 1 [[languages.zh.menu.main]] name = \"关于\" url = \"/about/\" weight = 2 [[languages.zh.menu.main]] name = \"标签\" url = \"/tags/\" weight = 3 [[languages.zh.menu.main]] name = \"归档\" url = \"/archives/\" weight = 4 [[languages.zh.menu.main]] name = \"搜索\" url = \"/search/\" weight = 5 [languages.en] languageName = \"English\" weight = 2 contentDir = \"content/en\" [languages.en.params] archivesTitle = \"Archives\" archivesDescription = \"Browse articles by year and month\" [languages.en.menu] [[languages.en.menu.main]] name = \"Home\" url = \"/\" weight = 1 [[languages.en.menu.main]] name = \"About\" url = \"/about/\" weight = 2 [[languages.en.menu.main]] name = \"Tags\" url = \"/tags/\" weight = 3 [[languages.en.menu.main]] name = \"Archives\" url = \"/archives/\" weight = 4 [[languages.en.menu.main]] name = \"Search\" url = \"/search/\" weight = 5 [languages.ja] languageName = \"日本語\" weight = 3 contentDir = \"content/ja\" [languages.ja.params] archivesTitle = \"アーカイブ\" archivesDescription = \"年と月ごとに記事を表示\" [languages.ja.menu] [[languages.ja.menu.main]] name = \"ホーム\" url = \"/\" weight = 1 [[languages.ja.menu.main]] name = \"について\" url = \"/about/\" weight = 2 [[languages.ja.menu.main]] name = \"タグ\" url = \"/tags/\" weight = 3 [[languages.ja.menu.main]] name = \"アーカイブ\" url = \"/archives/\" weight = 4 [[languages.ja.menu.main]] name = \"検索\" url = \"/search/\" weight = 5 [outputs] home = [\"HTML\", \"RSS\", \"JSON\", \"SITEMAP\"] section = [\"HTML\", \"RSS\"] archives = [\"HTML\"] search = [\"HTML\"] [params] author = \"Yuuniji\" defaultTheme = \"auto\" ShowAllPagesInArchive = true ShowShareButtons = true ShowReadingTime = true ShowToc = true TocOpen = false ShowBreadCrumbs = true ShowCodeCopyButtons = true ShowPostNavLinks = true ShowRssButtonInSectionTermList = true archives = true [params.fuseOpts] isCaseSensitive = false shouldSort = true location = 0 distance = 1_000 threshold = 0.4 minMatchCharLength = 0 keys = [ \"title\", \"permalink\", \"summary\", \"content\" ] [content] archivesDir = \"content/archives\" 1. Directory Structure According to your hugo.toml configuration, your content directory structure should be:\ncontent/ ├── zh/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── en/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── ja/ ├── _index.md ├── about.md ├── archives.md ├── search.md ├── categories/_index.md ├── posts/_index.md ├── tags/_index.md Additionally, you need to create an archetypes directory to adapt to different languages:\narchetypes/ ├── default.md ├── zh.md ├── en.md ├── ja.md 2. archetypes Directory Configuration Each language’s archetypes file is used to set default front matter.\nDefault archetypes/default.md --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] --- archetypes/zh.md (Chinese) --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"zh\" --- archetypes/en.md (English) --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"en\" --- archetypes/ja.md (Japanese) --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"ja\" --- 3. Create Posts in Different Languages Use the --kind option to specify archetypes and create posts in the corresponding content/ directory.\nChinese Post hugo new content/zh/posts/my-first-post1.md This will create my-first-post.md in the content/zh/posts/ directory, using archetypes/zh.md as the template.\nEnglish Post hugo new content/en/posts/my-first-post1.md This will create my-first-post.md in the content/en/posts/ directory, using archetypes/en.md as the template.\nJapanese Post hugo new content/ja/posts/my-first-post1.md This will create my-first-post.md in the content/ja/posts/ directory, using archetypes/ja.md as the template.\nAutomating the Creation of Articles in Different Languages create_multilingual_post.sh Script\n#!/bin/bash # Check if the input parameter exists if [ -z \"$1\" ]; then echo \"Please enter the article title.\" exit 1 fi TITLE=\"$1\" DATE=$(date +%Y-%m-%d) # Create the article file name (using hyphens to separate words) POST_NAME=$(echo \"$TITLE\" | tr \" \" \"-\") # Generate the Chinese article mkdir -p \"content/zh/posts\" cat \u003e \"content/zh/posts/$POST_NAME.md\" \u003c",
-  "wordCount" : "1945",
+  "wordCount" : "2779",
   "inLanguage": "en",
   "datePublished": "2025-02-22T00:00:00Z",
   "dateModified": "2025-02-22T00:00:00Z",
@@ -267,7 +267,7 @@ Create your first post:">
     <h1 class="post-title entry-hint-parent">
       Building My Blog: From Scratch to Online
     </h1>
-    <div class="post-meta"><span title='2025-02-22 00:00:00 +0000 UTC'>February 22, 2025</span>&nbsp;·&nbsp;4 min&nbsp;|&nbsp;Translations:
+    <div class="post-meta"><span title='2025-02-22 00:00:00 +0000 UTC'>February 22, 2025</span>&nbsp;·&nbsp;6 min&nbsp;|&nbsp;Translations:
 <ul class="i18n_list">
     <li>
         <a href="https://yuuniji.github.io/posts/my-first-post/">Zh</a>
@@ -376,8 +376,47 @@ Create your first post:">
                     <a href="#implementation-steps" aria-label="Implementation Steps">Implementation Steps</a></li></ul>
                 </li>
                 <li>
-                    <a href="#inspirational-quotes" aria-label="Inspirational Quotes">Inspirational Quotes</a>
+                    <a href="#inspirational-quotes" aria-label="Inspirational Quotes">Inspirational Quotes</a></li></ul>
                 </li>
+                <li>
+                    <a href="#miscellaneous" aria-label="Miscellaneous">Miscellaneous</a><ul>
+                        
+                <li>
+                    <a href="#code-block-rounded-corners" aria-label="Code Block Rounded Corners">Code Block Rounded Corners</a></li>
+                <li>
+                    <a href="#add-multilingual-chinese-english-japanese-website-uptime-display" aria-label="Add Multilingual (Chinese, English, Japanese) Website Uptime Display">Add Multilingual (Chinese, English, Japanese) Website Uptime Display</a></li>
+                <li>
+                    <a href="#comments" aria-label="Comments">Comments</a><ul>
+                        
+                <li>
+                    <a href="#-step-1-prepare-your-github-repository" aria-label="✅ Step 1: Prepare Your GitHub Repository">✅ Step 1: Prepare Your GitHub Repository</a></li>
+                <li>
+                    <a href="#-step-2-generate-giscus-embed-code" aria-label="✅ Step 2: Generate Giscus Embed Code">✅ Step 2: Generate Giscus Embed Code</a></li>
+                <li>
+                    <a href="#-step-3-insert-giscus-code-into-hugo-template" aria-label="✅ Step 3: Insert Giscus Code into Hugo Template">✅ Step 3: Insert Giscus Code into Hugo Template</a></li>
+                <li>
+                    <a href="#-step-4-rebuild-and-deploy-your-hugo-blog" aria-label="✅ Step 4: Rebuild and Deploy Your Hugo Blog">✅ Step 4: Rebuild and Deploy Your Hugo Blog</a></li></ul>
+                </li>
+                <li>
+                    <a href="#marginnote-sidebar-annotation-feature" aria-label="MarginNote Sidebar Annotation Feature">MarginNote Sidebar Annotation Feature</a><ul>
+                        
+                <li>
+                    <a href="#step-1-define-a-shortcode" aria-label="Step 1: Define a Shortcode">Step 1: Define a Shortcode</a></li>
+                <li>
+                    <a href="#step-2-add-css-styles" aria-label="Step 2: Add CSS Styles">Step 2: Add CSS Styles</a></li>
+                <li>
+                    <a href="#-effect-description" aria-label="✅ Effect Description">✅ Effect Description</a></li></ul>
+                </li>
+                <li>
+                    <a href="#image-click-to-zoom-feature" aria-label="Image Click-to-Zoom Feature">Image Click-to-Zoom Feature</a><ul>
+                        
+                <li>
+                    <a href="#step-1-create-a-partial-template-file" aria-label="Step 1: Create a Partial Template File">Step 1: Create a Partial Template File</a></li>
+                <li>
+                    <a href="#step-2-include-the-partial-in-the-layout-template" aria-label="Step 2: Include the Partial in the Layout Template">Step 2: Include the Partial in the Layout Template</a>
+                </li>
+            </ul>
+            </li>
             </ul>
             </li>
             </ul>
@@ -859,6 +898,203 @@ Create your first post:">
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span></code></pre></div><h2 id="miscellaneous">Miscellaneous<a hidden class="anchor" aria-hidden="true" href="#miscellaneous">#</a></h2>
+<h3 id="code-block-rounded-corners">Code Block Rounded Corners<a hidden class="anchor" aria-hidden="true" href="#code-block-rounded-corners">#</a></h3>
+<p>Modify the following in <code>/assets/css/common/post-single.css</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">post-content</span> .<span style="color:#a6e22e">highlight</span> <span style="color:#f92672">pre</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>theme) <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span>; <span style="color:#75715e">/* Added for rounded corners */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="add-multilingual-chinese-english-japanese-website-uptime-display">Add Multilingual (Chinese, English, Japanese) Website Uptime Display<a hidden class="anchor" aria-hidden="true" href="#add-multilingual-chinese-english-japanese-website-uptime-display">#</a></h3>
+<p>Add the following code to the <code>&lt;footer&gt;</code> section in <code>/layouts/partials/footer.html</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;runtime_span&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt; <span style="color:#75715e">&lt;!-- Container for displaying website uptime --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">show_runtime</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Update every 1 second for real-time display
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">show_runtime</span>, <span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Set the website start date (February 22, 2025, 00:00:00)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">startDate</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#34;2025/02/22 00:00:00&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Get the current time
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">now</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Calculate the time difference (in milliseconds)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">now</span>.<span style="color:#a6e22e">getTime</span>() <span style="color:#f92672">-</span> <span style="color:#a6e22e">startDate</span>.<span style="color:#a6e22e">getTime</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Calculate days, hours, minutes, and seconds
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">days</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">diff</span> <span style="color:#f92672">/</span> (<span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)); <span style="color:#75715e">// Days
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hours</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>((<span style="color:#a6e22e">diff</span> <span style="color:#f92672">%</span> (<span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)) <span style="color:#f92672">/</span> (<span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)); <span style="color:#75715e">// Hours
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">minutes</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>((<span style="color:#a6e22e">diff</span> <span style="color:#f92672">%</span> (<span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)) <span style="color:#f92672">/</span> (<span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)); <span style="color:#75715e">// Minutes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">seconds</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>((<span style="color:#a6e22e">diff</span> <span style="color:#f92672">%</span> (<span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>); <span style="color:#75715e">// Seconds
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Get the language set in the HTML page (e.g., &lt;html lang=&#34;ja&#34;&gt;)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lang</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">lang</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;en&#34;</span>; <span style="color:#75715e">// Default to English
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Translation templates for each language
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">translations</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">zh</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`Website has been running for </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">days</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> days </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">hours</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> hours </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">minutes</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> minutes </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">seconds</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> seconds`</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">ja</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`サイトは稼働してから </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">days</span><span style="color:#e6db74">}</span><span style="color:#e6db74">日 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">hours</span><span style="color:#e6db74">}</span><span style="color:#e6db74">時間 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">minutes</span><span style="color:#e6db74">}</span><span style="color:#e6db74">分 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">seconds</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒`</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">en</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`Site has been running for </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">days</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> days </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">hours</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> hours </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">minutes</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> minutes </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">seconds</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> seconds`</span>
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Select display content based on the current language, fallback to English
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">output</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">translations</span>[<span style="color:#a6e22e">lang</span>] <span style="color:#f92672">||</span> <span style="color:#a6e22e">translations</span>[<span style="color:#e6db74">&#34;en&#34;</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Update the page content
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;runtime_span&#34;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">output</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Initialize the function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">show_runtime</span>();
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><h3 id="comments">Comments<a hidden class="anchor" aria-hidden="true" href="#comments">#</a></h3>
+<p>Below are the detailed steps to integrate the <strong>Giscus comment system</strong> into your Hugo blog, suitable for deployment on GitHub Pages or other static hosting platforms.</p>
+<hr>
+<h4 id="-step-1-prepare-your-github-repository">✅ Step 1: Prepare Your GitHub Repository<a hidden class="anchor" aria-hidden="true" href="#-step-1-prepare-your-github-repository">#</a></h4>
+<ol>
+<li>Log in to your GitHub account.</li>
+<li>Navigate to your blog repository (e.g., <code>yourname/yourblog</code>).</li>
+<li>Enable the <strong>Discussions</strong> feature:
+<ul>
+<li>Go to <strong>Settings</strong> → <strong>Features</strong> → Check <strong>Discussions</strong>.</li>
+<li>Visit the <strong>Discussions</strong> tab and create a new <strong>Discussion Category</strong> (e.g., <code>General</code>).</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="-step-2-generate-giscus-embed-code">✅ Step 2: Generate Giscus Embed Code<a hidden class="anchor" aria-hidden="true" href="#-step-2-generate-giscus-embed-code">#</a></h4>
+<ol>
+<li>
+<p>Visit the Giscus configuration page:
+👉 <a href="https://giscus.app">https://giscus.app</a></p>
+</li>
+<li>
+<p>Configure the following:</p>
+<ul>
+<li><strong>Repository</strong>: Your blog repository (e.g., <code>yourname/yourblog</code>)</li>
+<li><strong>Repository ID / Category / Category ID</strong>: Auto-generated based on your Discussions settings</li>
+<li><strong>Discussion Mapping</strong>: Recommended to select <code>pathname</code></li>
+<li><strong>Reactions</strong>: Enable (e.g., 👍)</li>
+<li><strong>Input Position</strong>: <code>bottom</code> (comment box at the bottom)</li>
+<li><strong>Theme</strong>: <code>preferred_color_scheme</code> (adapts to light/dark mode)</li>
+<li><strong>Language</strong>: Choose <code>zh-CN</code> (Chinese), <code>ja</code> (Japanese), or <code>en</code> (English)</li>
+</ul>
+</li>
+<li>
+<p>Copy the generated <code>&lt;script&gt;</code> code.</p>
+</li>
+</ol>
+<hr>
+<h4 id="-step-3-insert-giscus-code-into-hugo-template">✅ Step 3: Insert Giscus Code into Hugo Template<a hidden class="anchor" aria-hidden="true" href="#-step-3-insert-giscus-code-into-hugo-template">#</a></h4>
+<p>Create a partial file, e.g., <code>layouts/partials/giscus.html</code>, with the following content:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;giscus_container&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://giscus.app/client.js&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-repo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yourname/yourblog&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-repo-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your repo ID&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-category</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;General&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-category-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your category ID&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-mapping</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pathname&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-strict</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-reactions-enabled</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-emit-metadata</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-input-position</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bottom&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-theme</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preferred_color_scheme&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;zh-CN&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">async</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>Then, include it in the <code>single.html</code> article template:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Content</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;giscus.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><hr>
+<h4 id="-step-4-rebuild-and-deploy-your-hugo-blog">✅ Step 4: Rebuild and Deploy Your Hugo Blog<a hidden class="anchor" aria-hidden="true" href="#-step-4-rebuild-and-deploy-your-hugo-blog">#</a></h4>
+<p>Run the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
+</span></span></code></pre></div><p>Deploy the generated files to your hosting platform.</p>
+<hr>
+<h3 id="marginnote-sidebar-annotation-feature">MarginNote Sidebar Annotation Feature<a hidden class="anchor" aria-hidden="true" href="#marginnote-sidebar-annotation-feature">#</a></h3>
+<h4 id="step-1-define-a-shortcode">Step 1: Define a Shortcode<a hidden class="anchor" aria-hidden="true" href="#step-1-define-a-shortcode">#</a></h4>
+<p>Create a shortcode file in your Hugo project:</p>
+<p>Path: <code>layouts/shortcodes/marginnote.html</code></p>
+<p>Content:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;marginnote&#34;</span> <span style="color:#a6e22e">data-note</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Get &#34;</span><span style="color:#a6e22e">note</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Inner }}&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span></code></pre></div><p>Usage example in Markdown:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>This is a sentence in the main text <span class="marginnote" data-note="This is the margin note content.">key term</span>
+ continuing the main text.
+</span></span></code></pre></div><hr>
+<h4 id="step-2-add-css-styles">Step 2: Add CSS Styles<a hidden class="anchor" aria-hidden="true" href="#step-2-add-css-styles">#</a></h4>
+<p>Add the following styles to your theme or site&rsquo;s CSS file (e.g., <code>assets/css/extended/custom.css</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">marginnote</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#007acc</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dotted</span> <span style="color:#ae81ff">#007acc</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">marginnote</span>::<span style="color:#a6e22e">after</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">content</span>: attr(data<span style="color:#f92672">-</span>note);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">220</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#f9f9f9</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#ccc</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.9</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">999</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">white-space</span>: <span style="color:#66d9ef">normal</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0.1</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">marginnote</span>:<span style="color:#a6e22e">hover</span>::<span style="color:#a6e22e">after</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h4 id="-effect-description">✅ Effect Description<a hidden class="anchor" aria-hidden="true" href="#-effect-description">#</a></h4>
+<ul>
+<li>When hovering over a key term in the main text, the margin note pops up on the right without disrupting the reading flow.</li>
+<li>The shortcode is easy to use and does not affect the Markdown article format.</li>
+</ul>
+<hr>
+<h3 id="image-click-to-zoom-feature">Image Click-to-Zoom Feature<a hidden class="anchor" aria-hidden="true" href="#image-click-to-zoom-feature">#</a></h3>
+<p>There are several methods; here, we recommend using <strong>Medium Zoom</strong>.</p>
+<h4 id="step-1-create-a-partial-template-file">Step 1: Create a Partial Template File<a hidden class="anchor" aria-hidden="true" href="#step-1-create-a-partial-template-file">#</a></h4>
+<p>Create a file in your Hugo project: <code>layouts/partials/image-zoom.html</code></p>
+<p>Content:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- layouts/partials/image-zoom.html --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Add click-to-zoom functionality to all images in article content
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">mediumZoom</span>(<span style="color:#e6db74">&#39;article img&#39;</span>, {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">margin</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">24</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">background</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;rgba(0, 0, 0, 0.8)&#39;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">scrollOffset</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">40</span>
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Add CSS styles to make images appear clickable --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">article</span> <span style="color:#f92672">img</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">zoom-in</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">transform</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease-in-out</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">article</span> <span style="color:#f92672">img</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">1.02</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span></code></pre></div><hr>
+<h4 id="step-2-include-the-partial-in-the-layout-template">Step 2: Include the Partial in the Layout Template<a hidden class="anchor" aria-hidden="true" href="#step-2-include-the-partial-in-the-layout-template">#</a></h4>
+<p>Add the following code to your main layout template (e.g., <code>layouts/_default/baseof.html</code> or <code>layouts/_default/single.html</code>) before the <code>&lt;/body&gt;</code> tag:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ partial &#34;image-zoom.html&#34; . }}
 </span></span></code></pre></div>
 
   </div>
@@ -946,10 +1182,68 @@ Create your first post:">
 
   </footer>
 </article>
+<div id="giscus_container"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="yuuniji/yuu-repo"
+        data-repo-id="R_kgDOOl2JTQ"
+        data-category="General"
+        data-category-id="DIC_kwDOOl2JTc4Cp3MT"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://yuuniji.github.io/en/">叶泽伟的博客</a></span>
+    <span>&copy; 2025 <a href="https://yuuniji.github.io/en/">叶泽伟的博客</a></span>
+    <span id="runtime_span"></span> 
+    <script type="text/javascript">
+        function show_runtime() {
+            
+            setTimeout(show_runtime, 1000);
+
+            
+            const startDate = new Date("2025/02/22 00:00:00");
+
+            
+            const now = new Date();
+
+            
+            const diff = now.getTime() - startDate.getTime();
+
+            
+            const days = Math.floor(diff / (24 * 60 * 60 * 1000));                     
+            const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000)); 
+            const minutes = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));        
+            const seconds = Math.floor((diff % (60 * 1000)) / 1000);                    
+
+            
+            const lang = document.documentElement.lang || "en"; 
+
+            
+            const translations = {
+                zh: `网站已运行 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`,
+                ja: `サイトは稼働してから ${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`,
+                en: `Site has been running for ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
+            };
+
+            
+            const output = translations[lang] || translations["en"];
+
+            
+            document.getElementById("runtime_span").innerHTML = output;
+        }
+
+        
+        show_runtime();
+    </script>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -1058,6 +1352,29 @@ Create your first post:">
         }
     });
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    mediumZoom('article img', {
+      margin: 24,
+      background: 'rgba(0, 0, 0, 0.8)',
+      scrollOffset: 40
+    });
+  });
+</script>
+
+
+<style>
+  article img {
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out;
+  }
+  article img:hover {
+    transform: scale(1.02);
+  }
+</style>
 </body>
 
 </html>
