@@ -22,7 +22,7 @@
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/ja/posts/my-first-post/</guid>
       <description>&lt;h1 id=&#34;hugo-ブログ--github-pages-完全デプロイガイド&#34;&gt;Hugo ブログ + GitHub Pages 完全デプロイガイド&lt;/h1&gt;
-&lt;h2 id=&#34;-環境準備&#34;&gt;📌 環境準備&lt;/h2&gt;
+&lt;h2 id=&#34;環境準備&#34;&gt;★環境準備&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;デバイス&lt;/strong&gt;：MacBook（macOS）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;ツール&lt;/strong&gt;：
@@ -33,9 +33,14 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;hugo-のインストール&#34;&gt;&lt;strong&gt;Hugo のインストール&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;hugo-のインストール&#34;&gt;◇&lt;strong&gt;Hugo のインストール&lt;/strong&gt;&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;インストールの確認：&lt;/p&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;インストールの確認：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hugo-ブログの作成&#34;&gt;★Hugo ブログの作成&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir blog &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cd blog
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Git の初期化：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
