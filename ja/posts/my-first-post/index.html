@@ -24,7 +24,7 @@ brew install hugo
 インストールの確認：">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.github.io/ja/posts/my-first-post/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.73a6a10fdd1b97761d58094db273eda3a1b5578a8040b1149a997d7657d4f473.css" integrity="sha256-c6ahD90bl3YdWAlNsnPto6G1V4qAQLEUmpl9dlfU9HM=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3cadb5d68cccefb6e95ac64b1eeb63c7848fda8c98ecbcf2c242de4b8ef18665.css" integrity="sha256-PK211ozM77bpWsZLHutjx4SP2oyY7LzywkLeS47xhmU=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
@@ -132,7 +132,7 @@ brew install hugo
     "ブログ構築", "GitHub"
   ],
   "articleBody": "Hugo ブログ + GitHub Pages 完全デプロイガイド 📌 環境準備 デバイス：MacBook（macOS） ツール： Git Hugo GitHub アカウント Hugo のインストール brew install hugo インストールの確認：\nhugo version 🎯 Hugo ブログの作成 mkdir blog \u0026\u0026 cd blog hugo new site . Git の初期化：\ngit init 🎨 テーマの選択 \u0026 追加 PaperMod テーマを推奨：\ngit submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod config.toml を編集し、以下を追加：\ntheme = \"PaperMod\" baseURL = \"https://yuuniji.github.io\" 📝 ブログ記事の作成 最初の記事を作成：\nhugo new posts/hello-world.md content/posts/hello-world.md を編集：\n--- title: \"Hello World\" date: 2025-02-22T12:00:00 draft: false --- これは私の最初のブログ記事です！ 🔧 ローカルプレビュー（初回デプロイ時はスキップ） hugo server -D ブラウザでアクセス：\nhttp://localhost:1313 🔥 GitHub への公開 1. GitHub リポジトリの作成 blog（Hugo ソースコード用） yuuniji.github.io（生成された静的ファイル用） 2. blog リポジトリのプッシュ git remote add origin https://github.com/yuuniji/blog.git git branch -M main git add . git commit -m \"Initial commit\" git push -u origin main 3. 静的ファイルの生成 hugo -D 静的ファイルは public/ ディレクトリにあります。\n4. yuuniji.github.io へのプッシュ cd public git init git remote add origin https://github.com/yuuniji/yuuniji.github.io.git git checkout -b main git add . git commit -m \"Deploy Hugo site\" git push -f origin main 🌎 GitHub Pages の設定 yuuniji.github.io リポジトリの Settings → Pages に移動。 main ブランチを選択し、保存後デプロイ完了を待つ。 https://yuuniji.github.io にアクセスしてブログを確認。 🔄 自動デプロイ（オプション） 1. blog リポジトリに deploy.sh を追加 nano deploy.sh 以下を貼り付け：\n#!/bin/bash hugo -D cd public git add . git commit -m \"Deploy: $(date)\" git push origin main cd .. 保存して終了（Ctrl + X、Y、Enter）。\n2. 実行権限を付与 chmod +x deploy.sh 3. デプロイスクリプトの実行 ./deploy.sh 🎉 完成！ 以降のブログ更新は、以下の手順で行います：\nblog/ ディレクトリで記事を作成 hugo new posts/xxx.md ./deploy.sh を実行 https://yuuniji.github.io にアクセスして更新を確認 💡 問題があればこのノートを参照してください！ 🚀\nHugo ブログの多言語対応 \u0026 機能拡張ガイド クイックリンク baseURL = \"https://yuuniji.github.io\" title = \"Yuuniji的博客\" theme = \"PaperMod\" defaultContentLanguage = \"zh\" hasCJKLanguage = true [languages] [languages.zh] languageName = \"中文\" weight = 1 contentDir = \"content/zh\" [languages.zh.params] archivesTitle = \"归档\" archivesDescription = \"按年份和月份查看文章归档\" [languages.zh.menu] [[languages.zh.menu.main]] name = \"首页\" url = \"/\" weight = 1 [[languages.zh.menu.main]] name = \"关于\" url = \"/about/\" weight = 2 [[languages.zh.menu.main]] name = \"标签\" url = \"/tags/\" weight = 3 [[languages.zh.menu.main]] name = \"归档\" url = \"/archives/\" weight = 4 [[languages.zh.menu.main]] name = \"搜索\" url = \"/search/\" weight = 5 [languages.en] languageName = \"English\" weight = 2 contentDir = \"content/en\" [languages.en.params] archivesTitle = \"Archives\" archivesDescription = \"Browse articles by year and month\" [languages.en.menu] [[languages.en.menu.main]] name = \"Home\" url = \"/\" weight = 1 [[languages.en.menu.main]] name = \"About\" url = \"/about/\" weight = 2 [[languages.en.menu.main]] name = \"Tags\" url = \"/tags/\" weight = 3 [[languages.en.menu.main]] name = \"Archives\" url = \"/archives/\" weight = 4 [[languages.en.menu.main]] name = \"Search\" url = \"/search/\" weight = 5 [languages.ja] languageName = \"日本語\" weight = 3 contentDir = \"content/ja\" [languages.ja.params] archivesTitle = \"アーカイブ\" archivesDescription = \"年と月ごとに記事を表示\" [languages.ja.menu] [[languages.ja.menu.main]] name = \"ホーム\" url = \"/\" weight = 1 [[languages.ja.menu.main]] name = \"について\" url = \"/about/\" weight = 2 [[languages.ja.menu.main]] name = \"タグ\" url = \"/tags/\" weight = 3 [[languages.ja.menu.main]] name = \"アーカイブ\" url = \"/archives/\" weight = 4 [[languages.ja.menu.main]] name = \"検索\" url = \"/search/\" weight = 5 [outputs] home = [\"HTML\", \"RSS\", \"JSON\", \"SITEMAP\"] section = [\"HTML\", \"RSS\"] archives = [\"HTML\"] search = [\"HTML\"] [params] author = \"Yuuniji\" defaultTheme = \"auto\" ShowAllPagesInArchive = true ShowShareButtons = true ShowReadingTime = true ShowToc = true TocOpen = false ShowBreadCrumbs = true ShowCodeCopyButtons = true ShowPostNavLinks = true ShowRssButtonInSectionTermList = true archives = true [params.fuseOpts] isCaseSensitive = false shouldSort = true location = 0 distance = 1_000 threshold = 0.4 minMatchCharLength = 0 keys = [ \"title\", \"permalink\", \"summary\", \"content\" ] [content] archivesDir = \"content/archives\" 1. ディレクトリ構造 hugo.toml の設定に従い、content ディレクトリの構造は以下のようになります：\ncontent/ ├── zh/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── en/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── ja/ ├── _index.md ├── about.md ├── archives.md ├── search.md ├── categories/_index.md ├── posts/_index.md ├── tags/_index.md また、archetypes ディレクトリを作成し、各言語に対応させます：\narchetypes/ ├── default.md ├── zh.md ├── en.md ├── ja.md 2. archetypes ディレクトリの設定 各言語の archetypes ファイルは、デフォルトの front matter を設定するために使用されます。\nデフォルト archetypes/default.md --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] --- archetypes/zh.md（中文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"zh\" --- archetypes/en.md（英文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"en\" --- archetypes/ja.md（日本語） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"ja\" --- 3. 各言語の記事作成 --kind オプションを使用して archetypes を指定し、対応する content/ ディレクトリに記事を作成します。\n中文記事 hugo new content/zh/posts/my-first-post1.md これにより、content/zh/posts/ ディレクトリに my-first-post.md が作成され、archetypes/zh.md がテンプレートとして使用されます。\n英文記事 hugo new content/en/posts/my-first-post1.md これにより、content/en/posts/ ディレクトリに my-first-post.md が作成され、archetypes/en.md がテンプレートとして使用されます。\n日本語記事 hugo new content/ja/posts/my-first-post1.md これにより、content/ja/posts/ ディレクトリに my-first-post.md が作成され、archetypes/ja.md がテンプレートとして使用されます。\n自動化による多言語記事の作成 create_multilingual_post.sh スクリプト\n#!/bin/bash # 入力パラメータが存在するか確認 if [ -z \"$1\" ]; then echo \"記事のタイトルを入力してください。\" exit 1 fi TITLE=\"$1\" DATE=$(date +%Y-%m-%d) # 記事のファイル名を作成（単語をハイフンで区切る） POST_NAME=$(echo \"$TITLE\" | tr \" \" \"-\") # 中国語の記事を生成 mkdir -p \"content/zh/posts\" cat \u003e \"content/zh/posts/$POST_NAME.md\" \u003c",
-  "wordCount" : "2442",
+  "wordCount" : "3754",
   "inLanguage": "ja",
   "datePublished": "2025-02-22T00:00:00Z",
   "dateModified": "2025-02-22T00:00:00Z",
@@ -233,7 +233,7 @@ brew install hugo
     <h1 class="post-title entry-hint-parent">
       私のブログ構築の旅：ゼロからオンラインへ
     </h1>
-    <div class="post-meta"><span title='2025-02-22 00:00:00 +0000 UTC'>2月 22, 2025</span>&nbsp;·&nbsp;5 分&nbsp;|&nbsp;言語:
+    <div class="post-meta"><span title='2025-02-22 00:00:00 +0000 UTC'>2月 22, 2025</span>&nbsp;·&nbsp;8 分&nbsp;|&nbsp;言語:
 <ul class="i18n_list">
     <li>
         <a href="https://yuuniji.github.io/posts/my-first-post/">Zh</a>
@@ -326,7 +326,23 @@ brew install hugo
                     <a href="#%e8%87%aa%e5%8b%95%e5%8c%96%e3%81%ab%e3%82%88%e3%82%8b%e5%a4%9a%e8%a8%80%e8%aa%9e%e8%a8%98%e4%ba%8b%e3%81%ae%e4%bd%9c%e6%88%90" aria-label="自動化による多言語記事の作成">自動化による多言語記事の作成</a></li></ul>
                 </li>
                 <li>
-                    <a href="#%e3%81%be%e3%81%a8%e3%82%81" aria-label="まとめ">まとめ</a>
+                    <a href="#%e3%81%be%e3%81%a8%e3%82%81" aria-label="まとめ">まとめ</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e3%82%a2%e3%83%83%e3%83%97%e3%82%b0%e3%83%ac%e3%83%bc%e3%83%89" aria-label="アップグレード">アップグレード</a><ul>
+                        
+                <li>
+                    <a href="#%e3%82%b5%e3%82%a4%e3%83%89%e3%83%90%e3%83%bc%e7%9b%ae%e6%ac%a1%e3%81%ae%e8%bf%bd%e5%8a%a0" aria-label="サイドバー目次の追加">サイドバー目次の追加</a><ul>
+                        
+                <li>
+                    <a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a0%85" aria-label="注意事項">注意事項</a></li>
+                <li>
+                    <a href="#%e9%95%b7%e3%81%84%e7%9b%ae%e6%ac%a1%e3%81%8c%e3%82%b9%e3%82%af%e3%83%ad%e3%83%bc%e3%83%ab%e3%81%a7%e3%81%8d%e3%81%aa%e3%81%84%e5%95%8f%e9%a1%8c%e3%81%ae%e8%a7%a3%e6%b1%ba" aria-label="長い目次がスクロールできない問題の解決">長い目次がスクロールできない問題の解決</a></li>
+                <li>
+                    <a href="#%e5%ae%9f%e8%a3%85%e6%89%8b%e9%a0%86" aria-label="実装手順">実装手順</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%90%8d%e8%a8%80%e6%a0%bc%e8%a8%80" aria-label="名言・格言">名言・格言</a>
                 </li>
             </ul>
             </li>
@@ -715,7 +731,101 @@ brew install hugo
 <li><strong><code>contentDir</code> の構造を一貫させる</strong> ことで、Hugo が記事を生成する際に正しいテンプレートを見つけられるようにします。</li>
 </ul>
 <p>これで、Hugo の多言語ブログの記事作成を正しく管理できるようになります！🚀</p>
-
+<h2 id="アップグレード">アップグレード<a hidden class="anchor" aria-hidden="true" href="#アップグレード">#</a></h2>
+<h3 id="サイドバー目次の追加">サイドバー目次の追加<a hidden class="anchor" aria-hidden="true" href="#サイドバー目次の追加">#</a></h3>
+<p>PaperModテーマはデフォルトでサイドバー目次をサポートしていませんが、<a href="https://github.com/arashsm79/hugo-PaperMod-Mod">arashsm79/hugo-PaperMod-Mod</a> リポジトリの <code>sidetoc.css</code> ファイルを利用することでサイドバー目次を実装できます。手順は以下の通りです：</p>
+<ol>
+<li><code>sidetoc.css</code> ファイルをダウンロードします：<a href="https://github.com/arashsm79/hugo-PaperMod-Mod/blob/main/assets/css/extended/sidetoc.css">sidetoc.css</a>。</li>
+<li>ファイルをHugoサイトの <code>assets/css/extended/</code> ディレクトリに配置します。ディレクトリが存在しない場合は作成してください。</li>
+<li>サイトを再構築（<code>hugo</code> コマンドを実行）すると、記事のサイドバーに目次が表示されます。</li>
+</ol>
+<h4 id="注意事項">注意事項<a hidden class="anchor" aria-hidden="true" href="#注意事項">#</a></h4>
+<ul>
+<li>記事に十分な見出し（例：<code># H1</code>、<code>## H2</code> など）が含まれていない場合、目次は生成されません。</li>
+<li><code>sidetoc.css</code> はCSS Gridと <code>position: sticky</code> を使用してサイドバーの固定効果を実現しており、大画面表示に適しています。</li>
+<li>外観や位置に満足できない場合、<code>sidetoc.css</code> ファイルをカスタマイズできます。</li>
+</ul>
+<h4 id="長い目次がスクロールできない問題の解決">長い目次がスクロールできない問題の解決<a hidden class="anchor" aria-hidden="true" href="#長い目次がスクロールできない問題の解決">#</a></h4>
+<ul>
+<li>調査によると、目次が長すぎる場合は、最大高さを設定し、スクロール可能なオーバーフローを有効にすることで解決できます。</li>
+<li>カスタムCSSに <code>max-height</code> と <code>overflow-y: auto</code> を追加することを推奨します。</li>
+<li>PaperMod公式では長い目次のスクロールを直接サポートしていないため、コミュニティの修正に依存する必要があります。</li>
+</ul>
+<h4 id="実装手順">実装手順<a hidden class="anchor" aria-hidden="true" href="#実装手順">#</a></h4>
+<p>長い目次をスクロール可能にするための詳細な手順は以下の通りです：</p>
+<ol>
+<li>
+<p><strong>目次のHTML構造を確認</strong></p>
+<ul>
+<li>ブラウザで記事ページを開き、目次エリアを右クリックして「検証」（Inspect）または「要素を調査」を選択します。</li>
+<li>目次を含むHTML要素を見つけます。通常は <code>&lt;nav id=&quot;TableOfContents&quot;&gt;</code> です。Hugoのデフォルト目次ジェネレーターはこのIDを生成します。</li>
+<li>他のラッパー要素（例：<code>&lt;div class=&quot;toc&quot;&gt;</code> など）が存在するかどうかを確認します。これらは <code>sidetoc.css</code> によって追加されている可能性があります。存在する場合は、クラス名またはIDを記録して後で調整します。</li>
+</ul>
+</li>
+<li>
+<p><strong>カスタムCSSの追加</strong></p>
+<ul>
+<li>PaperModテーマは <code>assets/css/extended/</code> ディレクトリを通じてカスタムCSSを追加できます。ユーザーはこのディレクトリ内にファイル（例：<code>custom.css</code>）を作成または編集できます。</li>
+<li><code>custom.css</code> に以下のコードを追加します：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#TableOfContents {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">80</span><span style="color:#66d9ef">vh</span>; <span style="color:#75715e">/* 最大高さをビューポートの高さの80%に設定。必要に応じて調整可能 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">overflow-y</span>: <span style="color:#66d9ef">auto</span>; <span style="color:#75715e">/* 垂直方向のオーバーフロー時にスクロールバーを表示 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>目次が他のコンテナ（例：<code>&lt;div class=&quot;toc&quot;&gt;</code>）でラップされている場合、セレクタを以下のように調整します：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">toc</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">80</span><span style="color:#66d9ef">vh</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">overflow-y</span>: <span style="color:#66d9ef">auto</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li><code>max-height: 80vh</code> は推奨値です。サイドバーのレイアウトに応じて、たとえば <code>70vh</code> や <code>500px</code> に調整し、さまざまな画面サイズに対応できます。</li>
+</ul>
+</li>
+</ol>
+<h3 id="名言格言">名言・格言<a hidden class="anchor" aria-hidden="true" href="#名言格言">#</a></h3>
+<p><code>quoteszh.html</code>、<code>quotesen.html</code>、<code>quotesja.html</code> ファイルを作成し、Hugoサイトの <code>layouts/shortcodes/</code> ディレクトリに配置します。その後、<code>content/lang/_index.md</code> で参照してください。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- layouts/shortcodes/quoteszh.html --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">blockquote</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;{{ .Inner }}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">footer</span>&gt;{{ .Get &#34;source&#34; }}&lt;/<span style="color:#f92672">footer</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">blockquote</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;quote&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;quote-box&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">quotes</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ランダムに名言を選択
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">randomQuote</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">quotes</span>[Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">quotes</span>.<span style="color:#a6e22e">length</span>)];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 名言を表示
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;quote&#39;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">randomQuote</span>;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">quote-box</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">600</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">left</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">quote-box</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">animation</span>: fadeIn <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease-in-out</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    @<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">fadeIn</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">0</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">100</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span></code></pre></div>
 
   </div>
 

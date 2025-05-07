@@ -29,7 +29,7 @@ hugo new site .
 初始化 Git：">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.github.io/posts/my-first-post/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.73a6a10fdd1b97761d58094db273eda3a1b5578a8040b1149a997d7657d4f473.css" integrity="sha256-c6ahD90bl3YdWAlNsnPto6G1V4qAQLEUmpl9dlfU9HM=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3cadb5d68cccefb6e95ac64b1eeb63c7848fda8c98ecbcf2c242de4b8ef18665.css" integrity="sha256-PK211ozM77bpWsZLHutjx4SP2oyY7LzywkLeS47xhmU=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
@@ -142,8 +142,8 @@ hugo new site .
   "keywords": [
     "博客搭建", "GitHub"
   ],
-  "articleBody": "Hugo 博客 + GitHub Pages 完整部署方案 📌 环境准备 设备：MacBook（macOS） 工具： Git Hugo GitHub 账号 安装 Hugo brew install hugo 确认安装成功：\nhugo version 🎯 创建 Hugo 博客 mkdir blog \u0026\u0026 cd blog hugo new site . 初始化 Git：\ngit init 🎨 选择 \u0026 添加主题 推荐 PaperMod 主题：\ngit submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 编辑 config.toml，添加：\ntheme = \"PaperMod\" baseURL = \"https://yuuniji.github.io\" 📝 编写博客文章 创建第一篇文章：\nhugo new posts/hello-world.md 编辑 content/posts/hello-world.md：\n--- title: \"Hello World\" date: 2025-02-22T12:00:00 draft: false --- 这是我的第一篇博客！ 🔧 本地预览（第一次部署请跳过） hugo server -D 在浏览器访问：\nhttp://localhost:1313 🔥 发布到 GitHub 1. 创建 GitHub 仓库 blog（存放 Hugo 源码） yuuniji.github.io（存放生成的静态文件） 2. 推送 blog 仓库 git remote add origin https://github.com/yuuniji/blog.git git branch -M main git add . git commit -m \"Initial commit\" git push -u origin main 3. 生成静态文件 hugo -D 静态文件位于 public/ 目录。\n4. 推送到 yuuniji.github.io cd public git init git remote add origin https://github.com/yuuniji/yuuniji.github.io.git git checkout -b main git add . git commit -m \"Deploy Hugo site\" git push -f origin main 🌎 配置 GitHub Pages 进入 yuuniji.github.io 仓库 Settings → Pages。 选择 main 分支，保存后等待部署完成。 访问 https://yuuniji.github.io 查看博客。 🔄 自动化部署（可选） 1. 在 blog 仓库添加 deploy.sh nano deploy.sh 粘贴以下内容：\n#!/bin/bash hugo -D cd public git add . git commit -m \"Deploy: $(date)\" git push origin main cd .. 保存并退出（按 Ctrl + X，然后 Y，再回车）。\n2. 赋予执行权限 chmod +x deploy.sh 3. 运行部署脚本 ./deploy.sh 🎉 大功告成！ 以后更新博客时，只需：\n在 blog/ 目录下写文章 hugo new posts/xxx.md 运行 ./deploy.sh 访问 https://yuuniji.github.io 查看更新 💡 有问题随时复习此笔记！ 🚀\nHugo 博客多语言 \u0026 功能扩展指南 快速链接 baseURL = \"https://yuuniji.github.io\" title = \"Yuuniji的博客\" theme = \"PaperMod\" defaultContentLanguage = \"zh\" hasCJKLanguage = true [languages] [languages.zh] languageName = \"中文\" weight = 1 contentDir = \"content/zh\" [languages.zh.params] archivesTitle = \"归档\" archivesDescription = \"按年份和月份查看文章归档\" [languages.zh.menu] [[languages.zh.menu.main]] name = \"首页\" url = \"/\" weight = 1 [[languages.zh.menu.main]] name = \"关于\" url = \"/about/\" weight = 2 [[languages.zh.menu.main]] name = \"标签\" url = \"/tags/\" weight = 3 [[languages.zh.menu.main]] name = \"归档\" url = \"/archives/\" weight = 4 [[languages.zh.menu.main]] name = \"搜索\" url = \"/search/\" weight = 5 [languages.en] languageName = \"English\" weight = 2 contentDir = \"content/en\" [languages.en.params] archivesTitle = \"Archives\" archivesDescription = \"Browse articles by year and month\" [languages.en.menu] [[languages.en.menu.main]] name = \"Home\" url = \"/\" weight = 1 [[languages.en.menu.main]] name = \"About\" url = \"/about/\" weight = 2 [[languages.en.menu.main]] name = \"Tags\" url = \"/tags/\" weight = 3 [[languages.en.menu.main]] name = \"Archives\" url = \"/archives/\" weight = 4 [[languages.en.menu.main]] name = \"Search\" url = \"/search/\" weight = 5 [languages.ja] languageName = \"日本語\" weight = 3 contentDir = \"content/ja\" [languages.ja.params] archivesTitle = \"アーカイブ\" archivesDescription = \"年と月ごとに記事を表示\" [languages.ja.menu] [[languages.ja.menu.main]] name = \"ホーム\" url = \"/\" weight = 1 [[languages.ja.menu.main]] name = \"について\" url = \"/about/\" weight = 2 [[languages.ja.menu.main]] name = \"タグ\" url = \"/tags/\" weight = 3 [[languages.ja.menu.main]] name = \"アーカイブ\" url = \"/archives/\" weight = 4 [[languages.ja.menu.main]] name = \"検索\" url = \"/search/\" weight = 5 [outputs] home = [\"HTML\", \"RSS\", \"JSON\", \"SITEMAP\"] section = [\"HTML\", \"RSS\"] archives = [\"HTML\"] search = [\"HTML\"] [params] author = \"Yuuniji\" defaultTheme = \"auto\" ShowAllPagesInArchive = true ShowShareButtons = true ShowReadingTime = true ShowToc = true TocOpen = false ShowBreadCrumbs = true ShowCodeCopyButtons = true ShowPostNavLinks = true ShowRssButtonInSectionTermList = true archives = true [params.fuseOpts] isCaseSensitive = false shouldSort = true location = 0 distance = 1_000 threshold = 0.4 minMatchCharLength = 0 keys = [ \"title\", \"permalink\", \"summary\", \"content\" ] [content] archivesDir = \"content/archives\" 1. 目录结构 按照我的 hugo.toml 配置，我的 content 目录结构应该是：\ncontent/ ├── zh/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── en/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── ja/ ├── _index.md ├── about.md ├── archives.md ├── search.md ├── categories/_index.md ├── posts/_index.md ├── tags/_index.md 同时，你需要创建 archetypes 目录来适配不同语言：\narchetypes/ ├── default.md ├── zh.md ├── en.md ├── ja.md 2. archetypes 目录配置 每个语言的 archetypes 文件用于设置默认的 front matter。\n默认 archetypes/default.md --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] --- archetypes/zh.md（中文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"zh\" --- archetypes/en.md（英文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"en\" --- archetypes/ja.md（日语） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"ja\" --- 3. 创建不同语言的文章 使用 --kind 选项指定 archetypes，并将文章创建到对应的 content/ 目录。\n中文文章 hugo new content/zh/posts/my-first-post1.md 这会在 content/zh/posts/ 目录下创建 my-first-post.md，并使用 archetypes/zh.md 作为模板。\n英文文章 hugo new content/en/posts/my-first-post1.md 这会在 content/en/posts/ 目录下创建 my-first-post.md，并使用 archetypes/en.md 作为模板。\n日语文章 hugo new content/ja/posts/my-first-post1.md 这会在 content/ja/posts/ 目录下创建 my-first-post.md，并使用 archetypes/ja.md 作为模板。\n自动化创建不同语言的文章 create_multilingual_post.sh 脚本\n#!/bin/bash # 检查传入参数是否存在 if [ -z \"$1\" ]; then echo \"请输入文章标题。\" exit 1 fi TITLE=\"$1\" DATE=$(date +%Y-%m-%d) # 创建文章文件名（使用短横线分隔） POST_NAME=$(echo \"$TITLE\" | tr \" \" \"-\") # 生成中文文章 mkdir -p \"content/zh/posts\" cat \u003e \"content/zh/posts/$POST_NAME.md\" \u003c",
-  "wordCount" : "2005",
+  "articleBody": "Hugo 博客 + GitHub Pages 完整部署方案 📌 环境准备 设备：MacBook（macOS） 工具： Git Hugo GitHub 账号 安装 Hugo brew install hugo 确认安装成功：\nhugo version 🎯 创建 Hugo 博客 mkdir blog \u0026\u0026 cd blog hugo new site . 初始化 Git：\ngit init 🎨 选择 \u0026 添加主题 推荐 PaperMod 主题：\ngit submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 编辑 config.toml，添加：\ntheme = \"PaperMod\" baseURL = \"https://yuuniji.github.io\" 📝 编写博客文章 创建第一篇文章：\nhugo new posts/hello-world.md 编辑 content/posts/hello-world.md：\n--- title: \"Hello World\" date: 2025-02-22T12:00:00 draft: false --- 这是我的第一篇博客！ 🔧 本地预览（第一次部署请跳过） hugo server -D 在浏览器访问：\nhttp://localhost:1313 🔥 发布到 GitHub 1. 创建 GitHub 仓库 blog（存放 Hugo 源码） yuuniji.github.io（存放生成的静态文件） 2. 推送 blog 仓库 git remote add origin https://github.com/yuuniji/blog.git git branch -M main git add . git commit -m \"Initial commit\" git push -u origin main 3. 生成静态文件 hugo -D 静态文件位于 public/ 目录。\n4. 推送到 yuuniji.github.io cd public git init git remote add origin https://github.com/yuuniji/yuuniji.github.io.git git checkout -b main git add . git commit -m \"Deploy Hugo site\" git push -f origin main 🌎 配置 GitHub Pages 进入 yuuniji.github.io 仓库 Settings → Pages。 选择 main 分支，保存后等待部署完成。 访问 https://yuuniji.github.io 查看博客。 🔄 自动化部署（可选） 1. 在 blog 仓库添加 deploy.sh nano deploy.sh 粘贴以下内容：\n#!/bin/bash hugo -D cd public git add . git commit -m \"Deploy: $(date)\" git push origin main cd .. 保存并退出（按 Ctrl + X，然后 Y，再回车）。\n2. 赋予执行权限 chmod +x deploy.sh 3. 运行部署脚本 ./deploy.sh 🎉 大功告成！ 以后更新博客时，只需：\n在 blog/ 目录下写文章 hugo new posts/xxx.md 运行 ./deploy.sh 访问 https://yuuniji.github.io 查看更新 💡 有问题随时复习此笔记！ 🚀\nHugo 博客多语言 \u0026 功能扩展指南 快速链接 baseURL = \"https://yuuniji.github.io\" title = \"叶泽伟的博客\" theme = \"PaperMod\" defaultContentLanguage = \"zh\" hasCJKLanguage = true [languages] [languages.zh] languageName = \"中文\" weight = 1 contentDir = \"content/zh\" [languages.zh.params] archivesTitle = \"归档\" archivesDescription = \"按年份和月份查看文章归档\" [languages.zh.params.homeInfoParams] Title = \"你好 👋\" Content = \"欢迎来到我的博客！这里有技术、日语学习和生活记录。\" [[languages.zh.params.socialIcons]] name = \"portfolio\" url = \"https://xxx.github.io/about/\" [[languages.zh.params.socialIcons]] name = \"youtube\" url = \"https://www.youtube.com/xxx\" [[languages.zh.params.socialIcons]] name = \"instagram\" url = \"https://www.instagram.com/xxx/\" [[languages.zh.params.socialIcons]] name = \"linkedin\" url = \"https://www.linkedin.com/in/xxx\" [[languages.zh.params.socialIcons]] name = \"x\" url = \"https://x.com/xxx\" [[languages.zh.params.socialIcons]] name = \"github\" url = \"https://github.com/xxx\" [languages.zh.menu] [[languages.zh.menu.main]] name = \"首页\" url = \"/\" weight = 1 [[languages.zh.menu.main]] name = \"标签\" url = \"/tags/\" weight = 2 [[languages.zh.menu.main]] name = \"归档\" url = \"/archives/\" weight = 3 [[languages.zh.menu.main]] name = \"搜索\" url = \"/search/\" weight = 4 [languages.en] languageName = \"English\" weight = 2 contentDir = \"content/en\" [languages.en.params] archivesTitle = \"Archives\" archivesDescription = \"Browse articles by year and month\" [languages.en.params.homeInfoParams] Title = \"Hi there 👋\" Content = \"Welcome to my blog! Here you'll find tech content, Japanese learning, and life experiences.\" [[languages.en.params.socialIcons]] name = \"portfolio\" url = \"https://xxx.github.io/about/\" [[languages.en.params.socialIcons]] name = \"youtube\" url = \"https://www.youtube.com/xxx\" [[languages.en.params.socialIcons]] name = \"instagram\" url = \"https://www.instagram.com/xxx/\" [[languages.en.params.socialIcons]] name = \"linkedin\" url = \"https://www.linkedin.com/in/xxx\" [[languages.en.params.socialIcons]] name = \"x\" url = \"https://x.com/xxx\" [[languages.en.params.socialIcons]] name = \"github\" url = \"https://github.com/xxx\" [languages.en.menu] [[languages.en.menu.main]] name = \"Home\" url = \"/\" weight = 1 [[languages.en.menu.main]] name = \"Tags\" url = \"/tags/\" weight = 2 [[languages.en.menu.main]] name = \"Archives\" url = \"/archives/\" weight = 3 [[languages.en.menu.main]] name = \"Search\" url = \"/search/\" weight = 4 [languages.ja] languageName = \"日本語\" weight = 3 contentDir = \"content/ja\" [languages.ja.params] archivesTitle = \"アーカイブ\" archivesDescription = \"年と月ごとに記事を表示\" [languages.ja.params.homeInfoParams] Title = \"こんにちは 👋\" Content = \"私のブログへようこそ！ここには技術、日本語学習、生活記録があります。\" [[languages.ja.params.socialIcons]] name = \"portfolio\" url = \"https://xxx.github.io/about/\" [[languages.ja.params.socialIcons]] name = \"youtube\" url = \"https://www.youtube.com/xxx\" [[languages.ja.params.socialIcons]] name = \"instagram\" url = \"https://www.instagram.com/xxx/\" [[languages.ja.params.socialIcons]] name = \"linkedin\" url = \"https://www.linkedin.com/in/xxx\" [[languages.ja.params.socialIcons]] name = \"x\" url = \"https://x.com/xxx\" [[languages.ja.params.socialIcons]] name = \"github\" url = \"https://github.com/xxx\" [languages.ja.menu] [[languages.ja.menu.main]] name = \"ホーム\" url = \"/\" weight = 1 [[languages.ja.menu.main]] name = \"タグ\" url = \"/tags/\" weight = 2 [[languages.ja.menu.main]] name = \"アーカイブ\" url = \"/archives/\" weight = 3 [[languages.ja.menu.main]] name = \"検索\" url = \"/search/\" weight = 4 [outputs] home = [\"HTML\", \"RSS\", \"JSON\", \"SITEMAP\"] section = [\"HTML\", \"RSS\"] page = [\"HTML\"] [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true # 允许 HTML 解析 [params] defaultTheme = \"auto\" ShowAllPagesInArchive = true ShowShareButtons = true ShowReadingTime = true ShowToc = true TocOpen = false ShowBreadCrumbs = true ShowCodeCopyButtons = true ShowPostNavLinks = true ShowRssButtonInSectionTermList = true archives = true [params.assets] favicon = \"favicon.ico\" [params.fuseOpts] isCaseSensitive = false shouldSort = true location = 0 distance = 1_000 threshold = 0.4 minMatchCharLength = 0 keys = [ \"title\", \"permalink\", \"summary\", \"content\" ] [sitemap] changeFreq = '' disable = false filename = 'sitemap.xml' priority = -1 [content] archivesDir = \"content/archives\" 1. 目录结构 按照我的 hugo.toml 配置，我的 content 目录结构应该是：\ncontent/ ├── zh/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── en/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── ja/ ├── _index.md ├── about.md ├── archives.md ├── search.md ├── categories/_index.md ├── posts/_index.md ├── tags/_index.md 同时，你需要创建 archetypes 目录来适配不同语言：\narchetypes/ ├── default.md ├── zh.md ├── en.md ├── ja.md 2. archetypes 目录配置 每个语言的 archetypes 文件用于设置默认的 front matter。\n默认 archetypes/default.md --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] --- archetypes/zh.md（中文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"zh\" --- archetypes/en.md（英文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"en\" --- archetypes/ja.md（日语） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"ja\" --- 3. 创建不同语言的文章 使用 --kind 选项指定 archetypes，并将文章创建到对应的 content/ 目录。\n中文文章 hugo new content/zh/posts/my-first-post1.md 这会在 content/zh/posts/ 目录下创建 my-first-post.md，并使用 archetypes/zh.md 作为模板。\n英文文章 hugo new content/en/posts/my-first-post1.md 这会在 content/en/posts/ 目录下创建 my-first-post.md，并使用 archetypes/en.md 作为模板。\n日语文章 hugo new content/ja/posts/my-first-post1.md 这会在 content/ja/posts/ 目录下创建 my-first-post.md，并使用 archetypes/ja.md 作为模板。\n自动化创建不同语言的文章 create_multilingual_post.sh 脚本\n#!/bin/bash # 检查传入参数是否存在 if [ -z \"$1\" ]; then echo \"请输入文章标题。\" exit 1 fi TITLE=\"$1\" DATE=$(date +%Y-%m-%d) # 创建文章文件名（使用短横线分隔） POST_NAME=$(echo \"$TITLE\" | tr \" \" \"-\") # 生成中文文章 mkdir -p \"content/zh/posts\" cat \u003e \"content/zh/posts/$POST_NAME.md\" \u003c",
+  "wordCount" : "3098",
   "inLanguage": "zh",
   "datePublished": "2025-02-22T00:00:00Z",
   "dateModified": "2025-02-22T00:00:00Z",
@@ -244,7 +244,7 @@ hugo new site .
     <h1 class="post-title entry-hint-parent">
       我的博客搭建之旅：从零到上线
     </h1>
-    <div class="post-meta"><span title='2025-02-22 00:00:00 +0000 UTC'>二月 22, 2025</span>&nbsp;·&nbsp;5 分钟&nbsp;|&nbsp;语言:
+    <div class="post-meta"><span title='2025-02-22 00:00:00 +0000 UTC'>二月 22, 2025</span>&nbsp;·&nbsp;7 分钟&nbsp;|&nbsp;语言:
 <ul class="i18n_list">
     <li>
         <a href="https://yuuniji.github.io/en/posts/my-first-post/">En</a>
@@ -337,7 +337,23 @@ hugo new site .
                     <a href="#%e8%87%aa%e5%8a%a8%e5%8c%96%e5%88%9b%e5%bb%ba%e4%b8%8d%e5%90%8c%e8%af%ad%e8%a8%80%e7%9a%84%e6%96%87%e7%ab%a0" aria-label="自动化创建不同语言的文章">自动化创建不同语言的文章</a></li></ul>
                 </li>
                 <li>
-                    <a href="#%e6%80%bb%e7%bb%93" aria-label="总结">总结</a>
+                    <a href="#%e6%80%bb%e7%bb%93" aria-label="总结">总结</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%8d%87%e7%ba%a7" aria-label="升级">升级</a><ul>
+                        
+                <li>
+                    <a href="#%e6%b7%bb%e5%8a%a0%e4%be%a7%e8%be%b9%e6%a0%8f%e7%9b%ae%e5%bd%95" aria-label="添加侧边栏目录">添加侧边栏目录</a><ul>
+                        
+                <li>
+                    <a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" aria-label="注意事项">注意事项</a></li>
+                <li>
+                    <a href="#%e8%a7%a3%e5%86%b3%e9%95%bf-toc-%e4%b8%8d%e5%8f%af%e6%bb%9a%e5%8a%a8%e7%9a%84%e9%9a%be%e9%a2%98" aria-label="解决长 TOC 不可滚动的难题">解决长 TOC 不可滚动的难题</a></li>
+                <li>
+                    <a href="#%e5%ae%9e%e7%8e%b0%e6%ad%a5%e9%aa%a4" aria-label="实现步骤">实现步骤</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%90%8d%e8%a8%80%e8%ad%a6%e5%8f%a5" aria-label="名言警句">名言警句</a>
                 </li>
             </ul>
             </li>
@@ -451,7 +467,7 @@ hugo new site .
 <h2 id="hugo-博客多语言--功能扩展指南">Hugo 博客多语言 &amp; 功能扩展指南<a hidden class="anchor" aria-hidden="true" href="#hugo-博客多语言--功能扩展指南">#</a></h2>
 <h3 id="快速链接httpsgithubcomadityatelangehugo-papermodwikifeatures"><a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features">快速链接</a><a hidden class="anchor" aria-hidden="true" href="#快速链接httpsgithubcomadityatelangehugo-papermodwikifeatures">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://yuuniji.github.io&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Yuuniji的博客&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;叶泽伟的博客&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;PaperMod&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">defaultContentLanguage</span> = <span style="color:#e6db74">&#34;zh&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">hasCJKLanguage</span> = <span style="color:#66d9ef">true</span>
@@ -464,27 +480,44 @@ hugo new site .
 </span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">params</span>]
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesTitle</span> = <span style="color:#e6db74">&#34;归档&#34;</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesDescription</span> = <span style="color:#e6db74">&#34;按年份和月份查看文章归档&#34;</span>
+</span></span><span style="display:flex;"><span>      [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">homeInfoParams</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Title</span> = <span style="color:#e6db74">&#34;你好 👋&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Content</span> = <span style="color:#e6db74">&#34;欢迎来到我的博客！这里有技术、日语学习和生活记录。&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;portfolio&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://xxx.github.io/about/&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://www.youtube.com/xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;instagram&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://www.instagram.com/xxx/&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;linkedin&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://www.linkedin.com/in/xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;x&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://x.com/xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;github&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://github.com/xxx&#34;</span>
 </span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>]
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;首页&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;关于&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;标签&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;归档&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/archives/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;搜索&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/search/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>]
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#34;English&#34;</span>
@@ -493,27 +526,44 @@ hugo new site .
 </span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>]
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesTitle</span> = <span style="color:#e6db74">&#34;Archives&#34;</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesDescription</span> = <span style="color:#e6db74">&#34;Browse articles by year and month&#34;</span>
+</span></span><span style="display:flex;"><span>      [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">homeInfoParams</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Title</span> = <span style="color:#e6db74">&#34;Hi there 👋&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Content</span> = <span style="color:#e6db74">&#34;Welcome to my blog! Here you&#39;ll find tech content, Japanese learning, and life experiences.&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;portfolio&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://xxx.github.io/about/&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://www.youtube.com/xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;instagram&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://www.instagram.com/xxx/&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;linkedin&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://www.linkedin.com/in/xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;x&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://x.com/xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;github&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://github.com/xxx&#34;</span>
 </span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>]
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Home&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Tags&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Archives&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/archives/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Search&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/search/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>]
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#34;日本語&#34;</span>
@@ -522,36 +572,56 @@ hugo new site .
 </span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">params</span>]
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesTitle</span> = <span style="color:#e6db74">&#34;アーカイブ&#34;</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesDescription</span> = <span style="color:#e6db74">&#34;年と月ごとに記事を表示&#34;</span>
+</span></span><span style="display:flex;"><span>      [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">homeInfoParams</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Title</span> = <span style="color:#e6db74">&#34;こんにちは 👋&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Content</span> = <span style="color:#e6db74">&#34;私のブログへようこそ！ここには技術、日本語学習、生活記録があります。&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;portfolio&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://xxx.github.io/about/&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://www.youtube.com/xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;instagram&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://www.instagram.com/xxx/&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;linkedin&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://www.linkedin.com/in/xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;x&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://x.com/xxx&#34;</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">socialIcons</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;github&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://github.com/xxx&#34;</span>
 </span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>]
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;ホーム&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;について&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;タグ&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;アーカイブ&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/archives/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
 </span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;検索&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/search/&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">outputs</span>]
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">home</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span>, <span style="color:#e6db74">&#34;SITEMAP&#34;</span>]
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">section</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>]
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">archives</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>]
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">search</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">page</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>] 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># 允许 HTML 解析</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">author</span> = <span style="color:#e6db74">&#34;Yuuniji&#34;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">defaultTheme</span> = <span style="color:#e6db74">&#34;auto&#34;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowAllPagesInArchive</span> = <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowShareButtons</span> = <span style="color:#66d9ef">true</span>
@@ -563,6 +633,8 @@ hugo new site .
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowPostNavLinks</span> = <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowRssButtonInSectionTermList</span> = <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">archives</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">assets</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">favicon</span> = <span style="color:#e6db74">&#34;favicon.ico&#34;</span>
 </span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">fuseOpts</span>]
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">isCaseSensitive</span> = <span style="color:#66d9ef">false</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">shouldSort</span> = <span style="color:#66d9ef">true</span>
@@ -572,6 +644,11 @@ hugo new site .
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">minMatchCharLength</span> = <span style="color:#ae81ff">0</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">keys</span> = [ <span style="color:#e6db74">&#34;title&#34;</span>, <span style="color:#e6db74">&#34;permalink&#34;</span>, <span style="color:#e6db74">&#34;summary&#34;</span>, <span style="color:#e6db74">&#34;content&#34;</span> ]
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">sitemap</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">changeFreq</span> = <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disable</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filename</span> = <span style="color:#e6db74">&#39;sitemap.xml&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">priority</span> = <span style="color:#ae81ff">-1</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">content</span>]
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">archivesDir</span> = <span style="color:#e6db74">&#34;content/archives&#34;</span>
@@ -726,7 +803,100 @@ hugo new site .
 <li><strong>保持 <code>contentDir</code> 结构一致</strong>，避免 Hugo 生成文章时找不到正确的模板。</li>
 </ul>
 <p>这样，你就可以正确管理 Hugo 多语言博客的文章创建了！🚀</p>
-
+<h2 id="升级">升级<a hidden class="anchor" aria-hidden="true" href="#升级">#</a></h2>
+<h3 id="添加侧边栏目录">添加侧边栏目录<a hidden class="anchor" aria-hidden="true" href="#添加侧边栏目录">#</a></h3>
+<p>PaperMod 主题本身不支持侧边栏目录，但你可以利用 <a href="https://github.com/arashsm79/hugo-PaperMod-Mod">arashsm79/hugo-PaperMod-Mod</a> 仓库中的 <code>sidetoc.css</code> 文件来实现侧边栏目录。步骤如下：</p>
+<ol>
+<li>下载 <code>sidetoc.css</code> 文件：<a href="https://github.com/arashsm79/hugo-PaperMod-Mod/blob/main/assets/css/extended/sidetoc.css">sidetoc.css</a>。</li>
+<li>将文件放置到你的 Hugo 站点的 <code>assets/css/extended/</code> 目录中。如果目录不存在，请创建它。</li>
+<li>重新构建站点（运行 <code>hugo</code> 命令），目录应出现在文章的侧边。</li>
+</ol>
+<h4 id="注意事项">注意事项<a hidden class="anchor" aria-hidden="true" href="#注意事项">#</a></h4>
+<ul>
+<li>确保文章包含足够的标题（如 <code># H1</code>、<code>## H2</code> 等），否则目录不会生成。</li>
+<li><code>sidetoc.css</code> 使用 CSS Grid 和 <code>position: sticky</code> 实现侧边固定效果，适合大屏幕显示。</li>
+<li>如果外观或位置不满意，可以自定义 <code>sidetoc.css</code> 文件。</li>
+</ul>
+<h4 id="解决长-toc-不可滚动的难题">解决长 TOC 不可滚动的难题<a hidden class="anchor" aria-hidden="true" href="#解决长-toc-不可滚动的难题">#</a></h4>
+<ul>
+<li>研究表明，目录过长时可以通过设置最大高度和溢出滚动来解决。</li>
+<li>倾向于在自定义 CSS 中添加 <code>max-height</code> 和 <code>overflow-y: auto</code>。</li>
+<li>PaperMod 官方不直接支持长目录滚动，需依赖社区修改。</li>
+</ul>
+<h4 id="实现步骤">实现步骤<a hidden class="anchor" aria-hidden="true" href="#实现步骤">#</a></h4>
+<p>以下是详细的实现步骤，确保长目录可滚动：</p>
+<ol>
+<li>
+<p><strong>确认 TOC 的 HTML 结构</strong></p>
+<ul>
+<li>在浏览器中打开文章页面，右键点击目录区域，选择“检查”（Inspect）或“审查元素”。</li>
+<li>找到包含目录的 HTML 元素，通常是 <code>&lt;nav id=&quot;TableOfContents&quot;&gt;</code>。Hugo 的默认 TOC 生成器会创建此 ID。</li>
+<li>检查是否有其他包裹元素（如 <code>&lt;div class=&quot;toc&quot;&gt;</code> 或类似），这些可能是 <code>sidetoc.css</code> 添加的。如果有，记录类名或 ID 以便后续调整。</li>
+</ul>
+</li>
+<li>
+<p><strong>添加自定义 CSS</strong></p>
+<ul>
+<li>PaperMod 主题支持通过 <code>assets/css/extended/</code> 目录添加自定义 CSS。用户可以创建或编辑此目录下的文件，例如 <code>custom.css</code>。</li>
+<li>在 <code>custom.css</code> 中添加以下代码：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#TableOfContents {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">80</span><span style="color:#66d9ef">vh</span>; <span style="color:#75715e">/* 最大高度为视口高度的 80%，可根据需要调整 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">overflow-y</span>: <span style="color:#66d9ef">auto</span>; <span style="color:#75715e">/* 垂直方向溢出时显示滚动条 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>如果 TOC 被包裹在其他容器中（例如 <code>&lt;div class=&quot;toc&quot;&gt;</code>），调整选择器为：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">toc</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">80</span><span style="color:#66d9ef">vh</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">overflow-y</span>: <span style="color:#66d9ef">auto</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li><code>max-height: 80vh</code> 是建议值，用户可以根据侧边栏布局调整，例如 <code>70vh</code> 或 <code>500px</code>，以适应不同屏幕大小。</li>
+</ul>
+</li>
+</ol>
+<h3 id="名言警句">名言警句<a hidden class="anchor" aria-hidden="true" href="#名言警句">#</a></h3>
+<p>创建 quoteszh.html、quotesen.html、quotesja.html 文件并放置到你的 Hugo 站点的 layouts/shortcodes/ 目录中，然后在 content/lang/_index.md 中引用即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- layouts/shortcodes/quoteszh.html --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">blockquote</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;{{ .Inner }}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">footer</span>&gt;{{ .Get &#34;source&#34; }}&lt;/<span style="color:#f92672">footer</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">blockquote</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;quote&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;quote-box&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">quotes</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;</span><span style="color:#960050;background-color:#1e0010">，</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;</span><span style="color:#960050;background-color:#1e0010">，</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 随机选择一个引语
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">randomQuote</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">quotes</span>[Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">quotes</span>.<span style="color:#a6e22e">length</span>)];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 显示引语
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;quote&#39;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">randomQuote</span>;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">quote-box</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">600</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">left</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">.quote-box</span> <span style="color:#960050;background-color:#1e0010">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">animation</span>: fadeIn <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease-in-out</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    @<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">fadeIn</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">0</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">100</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span></code></pre></div>
 
   </div>
 

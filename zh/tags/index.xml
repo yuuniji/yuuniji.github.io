@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>标签 on 叶泽伟的博客</title>
+    <link>http://localhost:1313/zh/tags/</link>
+    <description>Recent content in 标签 on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.143.0</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 05 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/zh/tags/python/</link>
+      <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>路线图</title>
+      <link>http://localhost:1313/zh/tags/%E8%B7%AF%E7%BA%BF%E5%9B%BE/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/%E8%B7%AF%E7%BA%BF%E5%9B%BE/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>日语</title>
+      <link>http://localhost:1313/zh/tags/%E6%97%A5%E8%AF%AD/</link>
+      <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/%E6%97%A5%E8%AF%AD/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>教材</title>
+      <link>http://localhost:1313/zh/tags/%E6%95%99%E6%9D%90/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/%E6%95%99%E6%9D%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>资源</title>
+      <link>http://localhost:1313/zh/tags/%E8%B5%84%E6%BA%90/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/%E8%B5%84%E6%BA%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>http://localhost:1313/zh/tags/kubernetes/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/zh/tags/docker/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terraform</title>
+      <link>http://localhost:1313/zh/tags/terraform/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/terraform/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/zh/tags/git/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github</title>
+      <link>http://localhost:1313/zh/tags/github/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>http://localhost:1313/zh/tags/go/</link>
+      <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>http://localhost:1313/zh/tags/devops/</link>
+      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>学习法</title>
+      <link>http://localhost:1313/zh/tags/%E5%AD%A6%E4%B9%A0%E6%B3%95/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/%E5%AD%A6%E4%B9%A0%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>博客搭建</title>
+      <link>http://localhost:1313/zh/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
