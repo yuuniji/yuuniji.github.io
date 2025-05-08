@@ -407,7 +407,7 @@
 hugo version ★Hugo ブログの作成 mkdir blog &amp;&amp; cd blog hugo new site . Git の初期化：
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-02-22 00:00:00 +0000 UTC'>2月 22, 2025</span>&nbsp;·&nbsp;13 分</footer>
+  <footer class="entry-footer"><span title='2025-02-22 00:00:00 +0000 UTC'>2月 22, 2025</span>&nbsp;·&nbsp;14 分</footer>
   <a class="entry-link" aria-label="post link to 私のブログ構築の旅：ゼロからオンラインへ" href="https://yuuniji.github.io/ja/posts/my-first-post/"></a>
 </article>
 <footer class="page-footer">
@@ -472,20 +472,20 @@ hugo version ★Hugo ブログの作成 mkdir blog &amp;&amp; cd blog hugo new s
 
 <script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>
-
-document.addEventListener('instantclick:change', function() {
     
-    if (typeof ga === 'function') {
-        ga('set', 'page', location.pathname + location.search);
-        ga('send', 'pageview');
-    }
-    
-    if (typeof _hmt === 'object' && _hmt.push) {
-        _hmt.push(['_trackPageview', location.pathname + location.search]);
-    }
-    
-});
-InstantClick.init();
+    document.addEventListener('instantclick:change', function () {
+        
+        if (typeof ga === 'function') {
+            ga('set', 'page', location.pathname + location.search);
+            ga('send', 'pageview');
+        }
+        
+        if (typeof _hmt === 'object' && _hmt.push) {
+            _hmt.push(['_trackPageview', location.pathname + location.search]);
+        }
+        
+    });
+    InstantClick.init();
 </script>
 
 <script>
@@ -540,7 +540,13 @@ InstantClick.init();
             localStorage.setItem("pref-theme", 'dark');
         }
     })
-
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const isDark = e.matches;
+        document.body.classList.toggle('dark', isDark);
+        localStorage.setItem('pref-theme', isDark ? 'dark' : 'light');
+        
+    });
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>

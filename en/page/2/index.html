@@ -404,7 +404,7 @@ theme = &#34;PaperMod&#34; baseURL = &#34;https://yuuniji.github.io&#34; ★Writ
 hugo new posts/hello-world.md Edit content/posts/hello-world.md:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-02-22 00:00:00 +0000 UTC'>February 22, 2025</span>&nbsp;·&nbsp;6 min</footer>
+  <footer class="entry-footer"><span title='2025-02-22 00:00:00 +0000 UTC'>February 22, 2025</span>&nbsp;·&nbsp;7 min</footer>
   <a class="entry-link" aria-label="post link to Building My Blog: From Scratch to Online" href="https://yuuniji.github.io/en/posts/my-first-post/"></a>
 </article>
 <footer class="page-footer">
@@ -469,20 +469,20 @@ hugo new posts/hello-world.md Edit content/posts/hello-world.md:
 
 <script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>
-
-document.addEventListener('instantclick:change', function() {
     
-    if (typeof ga === 'function') {
-        ga('set', 'page', location.pathname + location.search);
-        ga('send', 'pageview');
-    }
-    
-    if (typeof _hmt === 'object' && _hmt.push) {
-        _hmt.push(['_trackPageview', location.pathname + location.search]);
-    }
-    
-});
-InstantClick.init();
+    document.addEventListener('instantclick:change', function () {
+        
+        if (typeof ga === 'function') {
+            ga('set', 'page', location.pathname + location.search);
+            ga('send', 'pageview');
+        }
+        
+        if (typeof _hmt === 'object' && _hmt.push) {
+            _hmt.push(['_trackPageview', location.pathname + location.search]);
+        }
+        
+    });
+    InstantClick.init();
 </script>
 
 <script>
@@ -537,7 +537,13 @@ InstantClick.init();
             localStorage.setItem("pref-theme", 'dark');
         }
     })
-
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const isDark = e.matches;
+        document.body.classList.toggle('dark', isDark);
+        localStorage.setItem('pref-theme', isDark ? 'dark' : 'light');
+        
+    });
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>

@@ -738,20 +738,20 @@
 
 <script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>
-
-document.addEventListener('instantclick:change', function() {
     
-    if (typeof ga === 'function') {
-        ga('set', 'page', location.pathname + location.search);
-        ga('send', 'pageview');
-    }
-    
-    if (typeof _hmt === 'object' && _hmt.push) {
-        _hmt.push(['_trackPageview', location.pathname + location.search]);
-    }
-    
-});
-InstantClick.init();
+    document.addEventListener('instantclick:change', function () {
+        
+        if (typeof ga === 'function') {
+            ga('set', 'page', location.pathname + location.search);
+            ga('send', 'pageview');
+        }
+        
+        if (typeof _hmt === 'object' && _hmt.push) {
+            _hmt.push(['_trackPageview', location.pathname + location.search]);
+        }
+        
+    });
+    InstantClick.init();
 </script>
 
 <script>
@@ -806,7 +806,13 @@ InstantClick.init();
             localStorage.setItem("pref-theme", 'dark');
         }
     })
-
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const isDark = e.matches;
+        document.body.classList.toggle('dark', isDark);
+        localStorage.setItem('pref-theme', isDark ? 'dark' : 'light');
+        
+    });
 </script>
 <script>
     document.querySelectorAll('pre > code').forEach((codeblock) => {
