@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Go on 叶泽伟的博客</title>
+    <link>https://yuuniji.github.io/tags/go/</link>
+    <description>Recent content in Go on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.143.0</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 28 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 路线图</title>
+      <link>https://yuuniji.github.io/posts/roadmap-go/</link>
+      <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/posts/roadmap-go/</guid>
+      <description>&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
+&lt;p&gt;学习 Go 的常见概念，如变量、循环、条件语句、函数、数据类型等。Go 基础的一个好起点是官方文档。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;官方&lt;/em&gt; &lt;a href=&#34;https://go.dev/doc/tutorial/&#34;&gt;Go 教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;文章&lt;/em&gt; &lt;a href=&#34;https://www.w3schools.com/go/index.php&#34;&gt;W3 Schools Go 教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;订阅&lt;/em&gt; &lt;a href=&#34;https://app.daily.dev/tags/golang?ref=roadmapsh&#34;&gt;探索关于 Golang 的热门文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;基本语法&#34;&gt;◇基本语法&lt;/h3&gt;
+&lt;p&gt;学习 Go 的基本语法，例如 Go 程序的执行方式、包导入、主函数等。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

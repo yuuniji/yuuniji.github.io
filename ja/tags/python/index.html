@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Python | 叶泽伟的博客</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://yuuniji.github.io/ja/tags/python/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.20862d6be0c38dceecc046ef5c2c49d8c2ad7393ff40a0ef7b51bc3d114b99a7.css" integrity="sha256-IIYta&#43;DDjc7swEbvXCxJ2MKtc5P/QKDve1G8PRFLmac=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://yuuniji.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yuuniji.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yuuniji.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://yuuniji.github.io/ja/tags/python/index.xml">
+<link rel="alternate" hreflang="zh" href="https://yuuniji.github.io/tags/python/">
+<link rel="alternate" hreflang="en" href="https://yuuniji.github.io/en/tags/python/">
+<link rel="alternate" hreflang="ja" href="https://yuuniji.github.io/ja/tags/python/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://yuuniji.github.io/ja/tags/python/">
+  <meta property="og:site_name" content="叶泽伟的博客">
+  <meta property="og:title" content="Python">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python">
+<meta name="twitter:description" content="">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yuuniji.github.io/ja/" accesskey="h" title="叶泽伟的博客 (Alt + H)">叶泽伟的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yuuniji.github.io/" title="中文"
+                            aria-label="中文">Zh</a>
+                    </li>
+                    <li>
+                        <a href="https://yuuniji.github.io/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yuuniji.github.io/ja/" title="ホーム">
+                    <span>ホーム</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/ja/tags/" title="タグ">
+                    <span>タグ</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/ja/archives/" title="アーカイブ">
+                    <span>アーカイブ</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/ja/search/" title="検索">
+                    <span>検索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://yuuniji.github.io/ja/">ホーム</a>&nbsp;»&nbsp;<a href="https://yuuniji.github.io/ja/tags/">タグ</a></div>
+  <h1>
+    Python
+    <a href="/ja/tags/python/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Pythonを上手に学ぶ方法[2]: Pythonを学ぶ
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>シリーズの目次に戻る
+1. 変数 ❎ 値（文字列、整数、浮動小数点数、ブール値）を格納するコンテナ
+変数は、その変数が含む値として振る舞います
+# 文字列 first_name = &#34;Bro&#34; food = &#34;ピザ&#34; email = &#34;Bro123@gmail.com&#34; print(f&#34;こんにちは {first_name}&#34;) print(f&#34;あなたは {food} が好きです&#34;) print(f&#34;あなたのメールアドレスは: {email}&#34;) # 整数 age = 25 quantity = 3 num_of_students = 30 print(f&#34;あなたは {age} 歳です&#34;) print(f&#34;あなたは {quantity} 個のアイテムを購入しています&#34;) print(f&#34;あなたのクラスには {num_of_students} 人の生徒がいます&#34;) # 浮動小数点数 price = 10.99 gpa = 3.2 distance = 5.5 print(f&#34;価格は ${price} です&#34;) print(f&#34;あなたのGPAは: {gpa}&#34;) print(f&#34;あなたは {distance}km 走りました&#34;) # ブール値 is_student = False for_sale = False is_online = True if is_online: print(&#34;あなたはオンラインです&#34;) else: print(&#34;あなたはオフラインです&#34;) 変数の代入
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-05 00:00:00 +0000 UTC'>5月 5, 2025</span>&nbsp;·&nbsp;101 分</footer>
+  <a class="entry-link" aria-label="post link to Pythonを上手に学ぶ方法[2]: Pythonを学ぶ" href="https://yuuniji.github.io/ja/posts/python-2-learn/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Pythonを上手に学ぶ方法[1]: ロードマップ
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>シリーズの目次に戻る
+1. 基本を学ぶ Pythonは、高水準、インタプリタ型、汎用のプログラミング言語です。その設計哲学は、インデントを重視したコードの可読性を強調しています。Pythonは動的型付けであり、ガベージコレクションを備えています。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-28 00:00:00 +0000 UTC'>4月 28, 2025</span>&nbsp;·&nbsp;30 分</footer>
+  <a class="entry-link" aria-label="post link to Pythonを上手に学ぶ方法[1]: ロードマップ" href="https://yuuniji.github.io/ja/posts/python-1-roadmap/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Pythonを上手に学ぶ方法[0]: 概要
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>　なぜPythonをお勧めするかについては、Eric Raymondによる主要プログラミング言語の評価、および彼が書いた『Why Python?』をお読みください。
+この投稿シリーズは主に【Pythonをどのように上手に学ぶか】についてです。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-27 00:00:00 +0000 UTC'>4月 27, 2025</span>&nbsp;·&nbsp;1 分</footer>
+  <a class="entry-link" aria-label="post link to Pythonを上手に学ぶ方法[0]: 概要" href="https://yuuniji.github.io/ja/posts/python-0-overview/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 <a href="https://yuuniji.github.io/ja/">叶泽伟的博客</a></span>
+    <span id="runtime_span"></span> 
+    <script type="text/javascript">
+        function show_runtime() {
+            
+            setTimeout(show_runtime, 1000);
+
+            
+            const startDate = new Date("2025/02/22 00:00:00");
+
+            
+            const now = new Date();
+
+            
+            const diff = now.getTime() - startDate.getTime();
+
+            
+            const days = Math.floor(diff / (24 * 60 * 60 * 1000));                     
+            const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000)); 
+            const minutes = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));        
+            const seconds = Math.floor((diff % (60 * 1000)) / 1000);                    
+
+            
+            const lang = document.documentElement.lang || "en"; 
+
+            
+            const translations = {
+                zh: `网站已运行 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`,
+                ja: `サイトは稼働してから ${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`,
+                en: `Site has been running for ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
+            };
+
+            
+            const output = translations[lang] || translations["en"];
+
+            
+            document.getElementById("runtime_span").innerHTML = output;
+        }
+
+        
+        show_runtime();
+    </script>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+    
+    document.addEventListener('instantclick:change', function () {
+        
+        if (typeof ga === 'function') {
+            ga('set', 'page', location.pathname + location.search);
+            ga('send', 'pageview');
+        }
+        
+        if (typeof _hmt === 'object' && _hmt.push) {
+            _hmt.push(['_trackPageview', location.pathname + location.search]);
+        }
+        
+    });
+    InstantClick.init();
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const isDark = e.matches;
+        document.body.classList.toggle('dark', isDark);
+        localStorage.setItem('pref-theme', isDark ? 'dark' : 'light');
+        
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    mediumZoom('article img', {
+      margin: 24,
+      background: 'rgba(0, 0, 0, 0.8)',
+      scrollOffset: 40
+    });
+  });
+</script>
+
+
+<style>
+  article img {
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out;
+  }
+  article img:hover {
+    transform: scale(1.02);
+  }
+</style>
+</body>
+
+</html>

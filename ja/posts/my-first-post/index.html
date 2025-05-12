@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>私のブログ構築の旅：ゼロからオンラインへ | 叶泽伟的博客</title>
+<meta name="keywords" content="ブログ構築, GitHub">
+<meta name="description" content="Hugo ブログ &#43; GitHub Pages 完全デプロイガイド
+★環境準備
+
+デバイス：MacBook（macOS）
+ツール：
+
+Git
+Hugo
+GitHub アカウント
+
+
+
+◇Hugo のインストール
+brew install hugo
+インストールの確認：
+hugo version
+★Hugo ブログの作成
+mkdir blog &amp;&amp; cd blog
+hugo new site .
+Git の初期化：">
+<meta name="author" content="">
+<link rel="canonical" href="https://yuuniji.github.io/ja/posts/my-first-post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.20862d6be0c38dceecc046ef5c2c49d8c2ad7393ff40a0ef7b51bc3d114b99a7.css" integrity="sha256-IIYta&#43;DDjc7swEbvXCxJ2MKtc5P/QKDve1G8PRFLmac=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://yuuniji.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yuuniji.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yuuniji.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://yuuniji.github.io/posts/my-first-post/">
+<link rel="alternate" hreflang="en" href="https://yuuniji.github.io/en/posts/my-first-post/">
+<link rel="alternate" hreflang="ja" href="https://yuuniji.github.io/ja/posts/my-first-post/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://yuuniji.github.io/ja/posts/my-first-post/">
+  <meta property="og:site_name" content="叶泽伟的博客">
+  <meta property="og:title" content="私のブログ構築の旅：ゼロからオンラインへ">
+  <meta property="og:description" content="Hugo ブログ &#43; GitHub Pages 完全デプロイガイド ★環境準備 デバイス：MacBook（macOS） ツール： Git Hugo GitHub アカウント ◇Hugo のインストール brew install hugo インストールの確認：
+hugo version ★Hugo ブログの作成 mkdir blog &amp;&amp; cd blog hugo new site . Git の初期化：">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-22T00:00:00+00:00">
+    <meta property="article:tag" content="ブログ構築">
+    <meta property="article:tag" content="Github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="私のブログ構築の旅：ゼロからオンラインへ">
+<meta name="twitter:description" content="Hugo ブログ &#43; GitHub Pages 完全デプロイガイド
+★環境準備
+
+デバイス：MacBook（macOS）
+ツール：
+
+Git
+Hugo
+GitHub アカウント
+
+
+
+◇Hugo のインストール
+brew install hugo
+インストールの確認：
+hugo version
+★Hugo ブログの作成
+mkdir blog &amp;&amp; cd blog
+hugo new site .
+Git の初期化：">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "記事一覧",
+      "item": "https://yuuniji.github.io/ja/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "私のブログ構築の旅：ゼロからオンラインへ",
+      "item": "https://yuuniji.github.io/ja/posts/my-first-post/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "私のブログ構築の旅：ゼロからオンラインへ",
+  "name": "私のブログ構築の旅：ゼロからオンラインへ",
+  "description": "Hugo ブログ + GitHub Pages 完全デプロイガイド ★環境準備 デバイス：MacBook（macOS） ツール： Git Hugo GitHub アカウント ◇Hugo のインストール brew install hugo インストールの確認：\nhugo version ★Hugo ブログの作成 mkdir blog \u0026amp;\u0026amp; cd blog hugo new site . Git の初期化：\n",
+  "keywords": [
+    "ブログ構築", "GitHub"
+  ],
+  "articleBody": "Hugo ブログ + GitHub Pages 完全デプロイガイド ★環境準備 デバイス：MacBook（macOS） ツール： Git Hugo GitHub アカウント ◇Hugo のインストール brew install hugo インストールの確認：\nhugo version ★Hugo ブログの作成 mkdir blog \u0026\u0026 cd blog hugo new site . Git の初期化：\ngit init ★テーマの選択 \u0026 追加 PaperMod テーマを推奨：\ngit submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod config.toml を編集し、以下を追加：\ntheme = \"PaperMod\" baseURL = \"https://yuuniji.github.io\" ★ブログ記事の作成 最初の記事を作成：\nhugo new posts/hello-world.md content/posts/hello-world.md を編集：\n--- title: \"Hello World\" date: 2025-02-22T12:00:00 draft: false --- これは私の最初のブログ記事です！ ★ローカルプレビュー（初回デプロイ時はスキップ） hugo server -D ブラウザでアクセス：\nhttp://localhost:1313 ★GitHub への公開 ◇1. GitHub リポジトリの作成 blog（Hugo ソースコード用） yuuniji.github.io（生成された静的ファイル用） ◇2. blog リポジトリのプッシュ git remote add origin https://github.com/yuuniji/blog.git git branch -M main git add . git commit -m \"Initial commit\" git push -u origin main ◇3. 静的ファイルの生成 hugo -D 静的ファイルは public/ ディレクトリにあります。\n◇4. yuuniji.github.io へのプッシュ cd public git init git remote add origin https://github.com/yuuniji/yuuniji.github.io.git git checkout -b main git add . git commit -m \"Deploy Hugo site\" git push -f origin main ★GitHub Pages の設定 yuuniji.github.io リポジトリの Settings → Pages に移動。 main ブランチを選択し、保存後デプロイ完了を待つ。 https://yuuniji.github.io にアクセスしてブログを確認。 ★自動デプロイ（オプション） ◇1. blog リポジトリに deploy.sh を追加 nano deploy.sh 以下を貼り付け：\n#!/bin/bash hugo -D cd public git add . git commit -m \"Deploy: $(date)\" git push origin main cd .. 保存して終了（Ctrl + X、Y、Enter）。\n◇2. 実行権限を付与 chmod +x deploy.sh ◇3. デプロイスクリプトの実行 ./deploy.sh ★完成！ 以降のブログ更新は、以下の手順で行います：\nblog/ ディレクトリで記事を作成 hugo new posts/xxx.md ./deploy.sh を実行 https://yuuniji.github.io にアクセスして更新を確認 💡 問題があればこのノートを参照してください！ 🚀\n★Hugo ブログの多言語対応 \u0026 機能拡張ガイド ◇クイックリンク baseURL = \"https://yuuniji.github.io\" title = \"Yuuniji的博客\" theme = \"PaperMod\" defaultContentLanguage = \"zh\" hasCJKLanguage = true [languages] [languages.zh] languageName = \"中文\" weight = 1 contentDir = \"content/zh\" [languages.zh.params] archivesTitle = \"归档\" archivesDescription = \"按年份和月份查看文章归档\" [languages.zh.menu] [[languages.zh.menu.main]] name = \"首页\" url = \"/\" weight = 1 [[languages.zh.menu.main]] name = \"关于\" url = \"/about/\" weight = 2 [[languages.zh.menu.main]] name = \"标签\" url = \"/tags/\" weight = 3 [[languages.zh.menu.main]] name = \"归档\" url = \"/archives/\" weight = 4 [[languages.zh.menu.main]] name = \"搜索\" url = \"/search/\" weight = 5 [languages.en] languageName = \"English\" weight = 2 contentDir = \"content/en\" [languages.en.params] archivesTitle = \"Archives\" archivesDescription = \"Browse articles by year and month\" [languages.en.menu] [[languages.en.menu.main]] name = \"Home\" url = \"/\" weight = 1 [[languages.en.menu.main]] name = \"About\" url = \"/about/\" weight = 2 [[languages.en.menu.main]] name = \"Tags\" url = \"/tags/\" weight = 3 [[languages.en.menu.main]] name = \"Archives\" url = \"/archives/\" weight = 4 [[languages.en.menu.main]] name = \"Search\" url = \"/search/\" weight = 5 [languages.ja] languageName = \"日本語\" weight = 3 contentDir = \"content/ja\" [languages.ja.params] archivesTitle = \"アーカイブ\" archivesDescription = \"年と月ごとに記事を表示\" [languages.ja.menu] [[languages.ja.menu.main]] name = \"ホーム\" url = \"/\" weight = 1 [[languages.ja.menu.main]] name = \"について\" url = \"/about/\" weight = 2 [[languages.ja.menu.main]] name = \"タグ\" url = \"/tags/\" weight = 3 [[languages.ja.menu.main]] name = \"アーカイブ\" url = \"/archives/\" weight = 4 [[languages.ja.menu.main]] name = \"検索\" url = \"/search/\" weight = 5 [outputs] home = [\"HTML\", \"RSS\", \"JSON\", \"SITEMAP\"] section = [\"HTML\", \"RSS\"] archives = [\"HTML\"] search = [\"HTML\"] [params] author = \"Yuuniji\" defaultTheme = \"auto\" ShowAllPagesInArchive = true ShowShareButtons = true ShowReadingTime = true ShowToc = true TocOpen = false ShowBreadCrumbs = true ShowCodeCopyButtons = true ShowPostNavLinks = true ShowRssButtonInSectionTermList = true archives = true [params.fuseOpts] isCaseSensitive = false shouldSort = true location = 0 distance = 1_000 threshold = 0.4 minMatchCharLength = 0 keys = [ \"title\", \"permalink\", \"summary\", \"content\" ] [content] archivesDir = \"content/archives\" ◇1. ディレクトリ構造 hugo.toml の設定に従い、content ディレクトリの構造は以下のようになります：\ncontent/ ├── zh/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── en/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── ja/ ├── _index.md ├── about.md ├── archives.md ├── search.md ├── categories/_index.md ├── posts/_index.md ├── tags/_index.md また、archetypes ディレクトリを作成し、各言語に対応させます：\narchetypes/ ├── default.md ├── zh.md ├── en.md ├── ja.md ◇2. archetypes ディレクトリの設定 各言語の archetypes ファイルは、デフォルトの front matter を設定するために使用されます。\nデフォルト archetypes/default.md --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] --- archetypes/zh.md（中文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"zh\" --- archetypes/en.md（英文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"en\" --- archetypes/ja.md（日本語） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"ja\" --- ◇3. 各言語の記事作成 --kind オプションを使用して archetypes を指定し、対応する content/ ディレクトリに記事を作成します。\n中文記事 hugo new content/zh/posts/my-first-post1.md これにより、content/zh/posts/ ディレクトリに my-first-post.md が作成され、archetypes/zh.md がテンプレートとして使用されます。\n英文記事 hugo new content/en/posts/my-first-post1.md これにより、content/en/posts/ ディレクトリに my-first-post.md が作成され、archetypes/en.md がテンプレートとして使用されます。\n日本語記事 hugo new content/ja/posts/my-first-post1.md これにより、content/ja/posts/ ディレクトリに my-first-post.md が作成され、archetypes/ja.md がテンプレートとして使用されます。\n自動化による多言語記事の作成 create_multilingual_post.sh スクリプト\n#!/bin/bash # 入力パラメータが存在するか確認 if [ -z \"$1\" ]; then echo \"記事のタイトルを入力してください。\" exit 1 fi TITLE=\"$1\" DATE=$(date +%Y-%m-%d) # 記事のファイル名を作成（単語をハイフンで区切る） POST_NAME=$(echo \"$TITLE\" | tr \" \" \"-\") # 中国語の記事を生成 mkdir -p \"content/zh/posts\" cat \u003e \"content/zh/posts/$POST_NAME.md\" \u003c",
+  "wordCount" : "6912",
+  "inLanguage": "ja",
+  "datePublished": "2025-02-22T00:00:00Z",
+  "dateModified": "2025-02-22T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yuuniji.github.io/ja/posts/my-first-post/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "叶泽伟的博客",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yuuniji.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yuuniji.github.io/ja/" accesskey="h" title="叶泽伟的博客 (Alt + H)">叶泽伟的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yuuniji.github.io/" title="中文"
+                            aria-label="中文">Zh</a>
+                    </li>
+                    <li>
+                        <a href="https://yuuniji.github.io/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yuuniji.github.io/ja/" title="ホーム">
+                    <span>ホーム</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/ja/tags/" title="タグ">
+                    <span>タグ</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/ja/archives/" title="アーカイブ">
+                    <span>アーカイブ</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/ja/search/" title="検索">
+                    <span>検索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://yuuniji.github.io/ja/">ホーム</a>&nbsp;»&nbsp;<a href="https://yuuniji.github.io/ja/posts/">記事一覧</a></div>
+    <h1 class="post-title entry-hint-parent">
+      私のブログ構築の旅：ゼロからオンラインへ
+    </h1>
+    <div class="post-meta"><span title='2025-02-22 00:00:00 +0000 UTC'>2月 22, 2025</span>&nbsp;·&nbsp;14 分&nbsp;|&nbsp;言語:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yuuniji.github.io/posts/my-first-post/">Zh</a>
+    </li>
+    <li>
+        <a href="https://yuuniji.github.io/en/posts/my-first-post/">En</a>
+    </li>
+</ul>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#hugo-%e3%83%96%e3%83%ad%e3%82%b0--github-pages-%e5%ae%8c%e5%85%a8%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%82%ac%e3%82%a4%e3%83%89" aria-label="Hugo ブログ &#43; GitHub Pages 完全デプロイガイド">Hugo ブログ + GitHub Pages 完全デプロイガイド</a><ul>
+                        
+                <li>
+                    <a href="#%e7%92%b0%e5%a2%83%e6%ba%96%e5%82%99" aria-label="★環境準備">★環境準備</a><ul>
+                        
+                <li>
+                    <a href="#hugo-%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab" aria-label="◇Hugo のインストール">◇Hugo のインストール</a></li></ul>
+                </li>
+                <li>
+                    <a href="#hugo-%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e4%bd%9c%e6%88%90" aria-label="★Hugo ブログの作成">★Hugo ブログの作成</a></li>
+                <li>
+                    <a href="#%e3%83%86%e3%83%bc%e3%83%9e%e3%81%ae%e9%81%b8%e6%8a%9e--%e8%bf%bd%e5%8a%a0" aria-label="★テーマの選択 &amp; 追加">★テーマの選択 &amp; 追加</a></li>
+                <li>
+                    <a href="#%e3%83%96%e3%83%ad%e3%82%b0%e8%a8%98%e4%ba%8b%e3%81%ae%e4%bd%9c%e6%88%90" aria-label="★ブログ記事の作成">★ブログ記事の作成</a></li>
+                <li>
+                    <a href="#%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%83%97%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc%e5%88%9d%e5%9b%9e%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e6%99%82%e3%81%af%e3%82%b9%e3%82%ad%e3%83%83%e3%83%97" aria-label="★ローカルプレビュー（初回デプロイ時はスキップ）">★ローカルプレビュー（初回デプロイ時はスキップ）</a></li>
+                <li>
+                    <a href="#github-%e3%81%b8%e3%81%ae%e5%85%ac%e9%96%8b" aria-label="★GitHub への公開">★GitHub への公開</a><ul>
+                        
+                <li>
+                    <a href="#1-github-%e3%83%aa%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%81%ae%e4%bd%9c%e6%88%90" aria-label="◇1. GitHub リポジトリの作成">◇1. GitHub リポジトリの作成</a></li>
+                <li>
+                    <a href="#2-blog-%e3%83%aa%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%81%ae%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5" aria-label="◇2. blog リポジトリのプッシュ">◇2. blog リポジトリのプッシュ</a></li>
+                <li>
+                    <a href="#3-%e9%9d%99%e7%9a%84%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e7%94%9f%e6%88%90" aria-label="◇3. 静的ファイルの生成">◇3. 静的ファイルの生成</a></li>
+                <li>
+                    <a href="#4-yuunijigithubio-%e3%81%b8%e3%81%ae%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5" aria-label="◇4. yuuniji.github.io へのプッシュ">◇4. yuuniji.github.io へのプッシュ</a></li></ul>
+                </li>
+                <li>
+                    <a href="#github-pages-%e3%81%ae%e8%a8%ad%e5%ae%9a" aria-label="★GitHub Pages の設定">★GitHub Pages の設定</a></li>
+                <li>
+                    <a href="#%e8%87%aa%e5%8b%95%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%82%aa%e3%83%97%e3%82%b7%e3%83%a7%e3%83%b3" aria-label="★自動デプロイ（オプション）">★自動デプロイ（オプション）</a><ul>
+                        
+                <li>
+                    <a href="#1-blog-%e3%83%aa%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%81%ab-deploysh-%e3%82%92%e8%bf%bd%e5%8a%a0" aria-label="◇1. blog リポジトリに deploy.sh を追加">◇1. blog リポジトリに deploy.sh を追加</a></li>
+                <li>
+                    <a href="#2-%e5%ae%9f%e8%a1%8c%e6%a8%a9%e9%99%90%e3%82%92%e4%bb%98%e4%b8%8e" aria-label="◇2. 実行権限を付与">◇2. 実行権限を付与</a></li>
+                <li>
+                    <a href="#3-%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88%e3%81%ae%e5%ae%9f%e8%a1%8c" aria-label="◇3. デプロイスクリプトの実行">◇3. デプロイスクリプトの実行</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%ae%8c%e6%88%90" aria-label="★完成！">★完成！</a></li>
+                <li>
+                    <a href="#hugo-%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e5%a4%9a%e8%a8%80%e8%aa%9e%e5%af%be%e5%bf%9c--%e6%a9%9f%e8%83%bd%e6%8b%a1%e5%bc%b5%e3%82%ac%e3%82%a4%e3%83%89" aria-label="★Hugo ブログの多言語対応 &amp; 機能拡張ガイド">★Hugo ブログの多言語対応 &amp; 機能拡張ガイド</a><ul>
+                        
+                <li>
+                    <a href="#%e3%82%af%e3%82%a4%e3%83%83%e3%82%af%e3%83%aa%e3%83%b3%e3%82%afhttpsgithubcomadityatelangehugo-papermodwikifeatures" aria-label="◇クイックリンク">◇クイックリンク</a></li>
+                <li>
+                    <a href="#1-%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%83%88%e3%83%aa%e6%a7%8b%e9%80%a0" aria-label="◇1. ディレクトリ構造">◇1. ディレクトリ構造</a></li>
+                <li>
+                    <a href="#2-archetypes-%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%83%88%e3%83%aa%e3%81%ae%e8%a8%ad%e5%ae%9a" aria-label="◇2. archetypes ディレクトリの設定">◇2. archetypes ディレクトリの設定</a><ul>
+                        
+                <li>
+                    <a href="#%e3%83%87%e3%83%95%e3%82%a9%e3%83%ab%e3%83%88-archetypesdefaultmd" aria-label="デフォルト archetypes/default.md">デフォルト archetypes/default.md</a></li>
+                <li>
+                    <a href="#archetypeszhmd%e4%b8%ad%e6%96%87" aria-label="archetypes/zh.md（中文）">archetypes/zh.md（中文）</a></li>
+                <li>
+                    <a href="#archetypesenmd%e8%8b%b1%e6%96%87" aria-label="archetypes/en.md（英文）">archetypes/en.md（英文）</a></li>
+                <li>
+                    <a href="#archetypesjamd%e6%97%a5%e6%9c%ac%e8%aa%9e" aria-label="archetypes/ja.md（日本語）">archetypes/ja.md（日本語）</a></li></ul>
+                </li>
+                <li>
+                    <a href="#3-%e5%90%84%e8%a8%80%e8%aa%9e%e3%81%ae%e8%a8%98%e4%ba%8b%e4%bd%9c%e6%88%90" aria-label="◇3. 各言語の記事作成">◇3. 各言語の記事作成</a><ul>
+                        
+                <li>
+                    <a href="#%e4%b8%ad%e6%96%87%e8%a8%98%e4%ba%8b" aria-label="中文記事">中文記事</a></li>
+                <li>
+                    <a href="#%e8%8b%b1%e6%96%87%e8%a8%98%e4%ba%8b" aria-label="英文記事">英文記事</a></li>
+                <li>
+                    <a href="#%e6%97%a5%e6%9c%ac%e8%aa%9e%e8%a8%98%e4%ba%8b" aria-label="日本語記事">日本語記事</a></li>
+                <li>
+                    <a href="#%e8%87%aa%e5%8b%95%e5%8c%96%e3%81%ab%e3%82%88%e3%82%8b%e5%a4%9a%e8%a8%80%e8%aa%9e%e8%a8%98%e4%ba%8b%e3%81%ae%e4%bd%9c%e6%88%90" aria-label="自動化による多言語記事の作成">自動化による多言語記事の作成</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e3%81%be%e3%81%a8%e3%82%81" aria-label="◇まとめ">◇まとめ</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e3%82%a2%e3%83%83%e3%83%97%e3%82%b0%e3%83%ac%e3%83%bc%e3%83%89" aria-label="★アップグレード">★アップグレード</a><ul>
+                        
+                <li>
+                    <a href="#%e3%82%b5%e3%82%a4%e3%83%89%e3%83%90%e3%83%bc%e7%9b%ae%e6%ac%a1%e3%81%ae%e8%bf%bd%e5%8a%a0" aria-label="◇サイドバー目次の追加">◇サイドバー目次の追加</a><ul>
+                        
+                <li>
+                    <a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a0%85" aria-label="注意事項">注意事項</a></li>
+                <li>
+                    <a href="#%e9%95%b7%e3%81%84%e7%9b%ae%e6%ac%a1%e3%81%8c%e3%82%b9%e3%82%af%e3%83%ad%e3%83%bc%e3%83%ab%e3%81%a7%e3%81%8d%e3%81%aa%e3%81%84%e5%95%8f%e9%a1%8c%e3%81%ae%e8%a7%a3%e6%b1%ba" aria-label="長い目次がスクロールできない問題の解決">長い目次がスクロールできない問題の解決</a></li>
+                <li>
+                    <a href="#%e5%ae%9f%e8%a3%85%e6%89%8b%e9%a0%86" aria-label="実装手順">実装手順</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%90%8d%e8%a8%80%e6%a0%bc%e8%a8%80" aria-label="◇名言・格言">◇名言・格言</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e3%81%9d%e3%81%ae%e4%bb%96" aria-label="★その他">★その他</a><ul>
+                        
+                <li>
+                    <a href="#%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e6%9e%a0%e7%b7%9a%e3%82%92%e8%a7%92%e4%b8%b8%e3%81%ab%e3%81%99%e3%82%8b" aria-label="◇コードの枠線を角丸にする">◇コードの枠線を角丸にする</a></li>
+                <li>
+                    <a href="#%e5%a4%9a%e8%a8%80%e8%aa%9e%e4%b8%ad%e5%9b%bd%e8%aa%9e%e8%8b%b1%e8%aa%9e%e6%97%a5%e6%9c%ac%e8%aa%9e%e5%af%be%e5%bf%9c%e3%81%ae%e3%82%a6%e3%82%a7%e3%83%96%e3%82%b5%e3%82%a4%e3%83%88%e7%a8%bc%e5%83%8d%e6%99%82%e9%96%93%e8%a1%a8%e7%a4%ba" aria-label="◇多言語（中国語、英語、日本語）対応のウェブサイト稼働時間表示">◇多言語（中国語、英語、日本語）対応のウェブサイト稼働時間表示</a></li>
+                <li>
+                    <a href="#%e3%82%b3%e3%83%a1%e3%83%b3%e3%83%88%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0" aria-label="◇コメントシステム">◇コメントシステム</a><ul>
+                        
+                <li>
+                    <a href="#1github-%e3%83%aa%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%81%ae%e6%ba%96%e5%82%99" aria-label="1：GitHub リポジトリの準備">1：GitHub リポジトリの準備</a></li>
+                <li>
+                    <a href="#2giscus-%e3%81%ae%e5%9f%8b%e3%82%81%e8%be%bc%e3%81%bf%e3%82%b3%e3%83%bc%e3%83%89%e7%94%9f%e6%88%90" aria-label="2：Giscus の埋め込みコード生成">2：Giscus の埋め込みコード生成</a></li>
+                <li>
+                    <a href="#3hugo-%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88%e3%81%ab-giscus-%e3%82%b3%e3%83%bc%e3%83%89%e3%82%92%e6%8c%bf%e5%85%a5" aria-label="3：Hugo テンプレートに Giscus コードを挿入">3：Hugo テンプレートに Giscus コードを挿入</a></li>
+                <li>
+                    <a href="#4hugo-%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e5%86%8d%e6%a7%8b%e7%af%89%e3%81%a8%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4" aria-label="4：Hugo ブログの再構築とデプロイ">4：Hugo ブログの再構築とデプロイ</a></li></ul>
+                </li>
+                <li>
+                    <a href="#marginnote-%e3%81%ae%e3%82%b5%e3%82%a4%e3%83%89%e3%83%8e%e3%83%bc%e3%83%88%e6%a9%9f%e8%83%bd" aria-label="◇MarginNote のサイドノート機能">◇MarginNote のサイドノート機能</a><ul>
+                        
+                <li>
+                    <a href="#1%e3%82%b7%e3%83%a7%e3%83%bc%e3%83%88%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e5%ae%9a%e7%be%a9" aria-label="1：ショートコードの定義">1：ショートコードの定義</a></li>
+                <li>
+                    <a href="#2css-%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab%e3%81%ae%e8%bf%bd%e5%8a%a0" aria-label="2：CSS スタイルの追加">2：CSS スタイルの追加</a></li>
+                <li>
+                    <a href="#%e5%8a%b9%e6%9e%9c%e3%81%ae%e8%aa%ac%e6%98%8e" aria-label="効果の説明">効果の説明</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e7%94%bb%e5%83%8f%e3%82%af%e3%83%aa%e3%83%83%e3%82%af%e6%8b%a1%e5%a4%a7%e6%a9%9f%e8%83%bd" aria-label="◇画像クリック拡大機能">◇画像クリック拡大機能</a><ul>
+                        
+                <li>
+                    <a href="#1%e9%83%a8%e5%88%86%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e4%bd%9c%e6%88%90" aria-label="1：部分テンプレートファイルの作成">1：部分テンプレートファイルの作成</a></li>
+                <li>
+                    <a href="#2%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88%e3%81%ab%e9%83%a8%e5%88%86%e3%83%86%e3%83%b3%e3%83%97%e3%83%ac%e3%83%bc%e3%83%88%e3%82%92%e5%90%ab%e3%82%81%e3%82%8b" aria-label="2：レイアウトテンプレートに部分テンプレートを含める">2：レイアウトテンプレートに部分テンプレートを含める</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%abinstantclick%e3%82%92%e7%b5%b1%e5%90%88%e3%81%97%e3%81%a6%e3%83%aa%e3%83%95%e3%83%ac%e3%83%83%e3%82%b7%e3%83%a5%e3%81%aa%e3%81%97%e3%81%ae%e3%82%b8%e3%83%a3%e3%83%b3%e3%83%97%e3%82%92%e5%ae%9f%e7%8f%be" aria-label="★HugoブログにInstantClickを統合してリフレッシュなしのジャンプを実現">★HugoブログにInstantClickを統合してリフレッシュなしのジャンプを実現</a><ul>
+                        
+                <li>
+                    <a href="#%e7%9b%ae%e7%9a%84" aria-label="◇目的">◇目的</a></li>
+                <li>
+                    <a href="#%e6%89%8b%e9%a0%86%e3%81%a8%e5%a4%89%e6%9b%b4%e3%81%ae%e8%aa%ac%e6%98%8e" aria-label="◇手順と変更の説明">◇手順と変更の説明</a></li>
+                <li>
+                    <a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a0%85-1" aria-label="◇注意事項">◇注意事項</a></li></ul>
+                </li>
+                <li>
+                    <a href="#hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%a7%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e3%83%80%e3%83%bc%e3%82%af%e3%83%a9%e3%82%a4%e3%83%88%e3%83%a2%e3%83%bc%e3%83%89%e8%87%aa%e5%8b%95%e5%88%87%e3%82%8a%e6%9b%bf%e3%81%88%e3%82%92%e5%ae%9f%e7%8f%bepapermod" aria-label="★Hugoブログでシステムのダーク/ライトモード自動切り替えを実現（PaperMod）">★Hugoブログでシステムのダーク/ライトモード自動切り替えを実現（PaperMod）</a><ul>
+                        
+                <li>
+                    <a href="#%e5%95%8f%e9%a1%8c%e3%81%ae%e8%83%8c%e6%99%af" aria-label="◇問題の背景">◇問題の背景</a></li>
+                <li>
+                    <a href="#%e5%ae%9f%e7%8f%be%e7%9b%ae%e6%a8%99" aria-label="◇実現目標">◇実現目標</a></li>
+                <li>
+                    <a href="#%e5%ae%9f%e7%8f%be%e6%89%8b%e9%a0%86" aria-label="◇実現手順">◇実現手順</a></li>
+                <li>
+                    <a href="#%e5%8a%b9%e6%9e%9c" aria-label="◇効果">◇効果</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+  <div class="post-content"><h1 id="hugo-ブログ--github-pages-完全デプロイガイド">Hugo ブログ + GitHub Pages 完全デプロイガイド<a hidden class="anchor" aria-hidden="true" href="#hugo-ブログ--github-pages-完全デプロイガイド">#</a></h1>
+<h2 id="環境準備">★環境準備<a hidden class="anchor" aria-hidden="true" href="#環境準備">#</a></h2>
+<ul>
+<li><strong>デバイス</strong>：MacBook（macOS）</li>
+<li><strong>ツール</strong>：
+<ul>
+<li>Git</li>
+<li>Hugo</li>
+<li>GitHub アカウント</li>
+</ul>
+</li>
+</ul>
+<h3 id="hugo-のインストール">◇<strong>Hugo のインストール</strong><a hidden class="anchor" aria-hidden="true" href="#hugo-のインストール">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><p>インストールの確認：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><h2 id="hugo-ブログの作成">★Hugo ブログの作成<a hidden class="anchor" aria-hidden="true" href="#hugo-ブログの作成">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>mkdir blog <span style="color:#f92672">&amp;&amp;</span> cd blog
+</span></span><span style="display:flex;"><span>hugo new site .
+</span></span></code></pre></div><p>Git の初期化：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git init
+</span></span></code></pre></div><h2 id="テーマの選択--追加">★テーマの選択 &amp; 追加<a hidden class="anchor" aria-hidden="true" href="#テーマの選択--追加">#</a></h2>
+<p><code>PaperMod</code> テーマを推奨：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span></code></pre></div><p><code>config.toml</code> を編集し、以下を追加：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;PaperMod&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://yuuniji.github.io&#34;</span>
+</span></span></code></pre></div><hr>
+<h2 id="ブログ記事の作成">★ブログ記事の作成<a hidden class="anchor" aria-hidden="true" href="#ブログ記事の作成">#</a></h2>
+<p>最初の記事を作成：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo new posts/hello-world.md
+</span></span></code></pre></div><p><code>content/posts/hello-world.md</code> を編集：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;Hello World&#34;
+</span></span><span style="display:flex;"><span>date: 2025-02-22T12:00:00
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>これは私の最初のブログ記事です！
+</span></span></code></pre></div><hr>
+<h2 id="ローカルプレビュー初回デプロイ時はスキップ">★ローカルプレビュー（初回デプロイ時はスキップ）<a hidden class="anchor" aria-hidden="true" href="#ローカルプレビュー初回デプロイ時はスキップ">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><p>ブラウザでアクセス：</p>
+<pre tabindex="0"><code>http://localhost:1313
+</code></pre><hr>
+<h2 id="github-への公開">★GitHub への公開<a hidden class="anchor" aria-hidden="true" href="#github-への公開">#</a></h2>
+<h3 id="1-github-リポジトリの作成">◇<strong>1. GitHub リポジトリの作成</strong><a hidden class="anchor" aria-hidden="true" href="#1-github-リポジトリの作成">#</a></h3>
+<ul>
+<li><code>blog</code>（Hugo ソースコード用）</li>
+<li><code>yuuniji.github.io</code>（生成された静的ファイル用）</li>
+</ul>
+<h3 id="2-blog-リポジトリのプッシュ">◇<strong>2. <code>blog</code> リポジトリのプッシュ</strong><a hidden class="anchor" aria-hidden="true" href="#2-blog-リポジトリのプッシュ">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git remote add origin https://github.com/yuuniji/blog.git
+</span></span><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><h3 id="3-静的ファイルの生成">◇<strong>3. 静的ファイルの生成</strong><a hidden class="anchor" aria-hidden="true" href="#3-静的ファイルの生成">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo -D
+</span></span></code></pre></div><p>静的ファイルは <code>public/</code> ディレクトリにあります。</p>
+<h3 id="4-yuunijigithubio-へのプッシュ">◇<strong>4. <code>yuuniji.github.io</code> へのプッシュ</strong><a hidden class="anchor" aria-hidden="true" href="#4-yuunijigithubio-へのプッシュ">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd public
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/yuuniji/yuuniji.github.io.git
+</span></span><span style="display:flex;"><span>git checkout -b main
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Deploy Hugo site&#34;</span>
+</span></span><span style="display:flex;"><span>git push -f origin main
+</span></span></code></pre></div><hr>
+<h2 id="github-pages-の設定">★GitHub Pages の設定<a hidden class="anchor" aria-hidden="true" href="#github-pages-の設定">#</a></h2>
+<ul>
+<li><code>yuuniji.github.io</code> リポジトリの <strong>Settings → Pages</strong> に移動。</li>
+<li><code>main</code> ブランチを選択し、保存後デプロイ完了を待つ。</li>
+<li><code>https://yuuniji.github.io</code> にアクセスしてブログを確認。</li>
+</ul>
+<hr>
+<h2 id="自動デプロイオプション">★自動デプロイ（オプション）<a hidden class="anchor" aria-hidden="true" href="#自動デプロイオプション">#</a></h2>
+<h3 id="1-blog-リポジトリに-deploysh-を追加">◇<strong>1. <code>blog</code> リポジトリに <code>deploy.sh</code> を追加</strong><a hidden class="anchor" aria-hidden="true" href="#1-blog-リポジトリに-deploysh-を追加">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>nano deploy.sh
+</span></span></code></pre></div><p>以下を貼り付け：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>hugo -D
+</span></span><span style="display:flex;"><span>cd public
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Deploy: </span><span style="color:#66d9ef">$(</span>date<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span><span style="display:flex;"><span>cd ..
+</span></span></code></pre></div><p>保存して終了（<code>Ctrl + X</code>、<code>Y</code>、Enter）。</p>
+<h3 id="2-実行権限を付与">◇<strong>2. 実行権限を付与</strong><a hidden class="anchor" aria-hidden="true" href="#2-実行権限を付与">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>chmod +x deploy.sh
+</span></span></code></pre></div><h3 id="3-デプロイスクリプトの実行">◇<strong>3. デプロイスクリプトの実行</strong><a hidden class="anchor" aria-hidden="true" href="#3-デプロイスクリプトの実行">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>./deploy.sh
+</span></span></code></pre></div><h2 id="完成">★完成！<a hidden class="anchor" aria-hidden="true" href="#完成">#</a></h2>
+<p>以降のブログ更新は、以下の手順で行います：</p>
+<ol>
+<li><code>blog/</code> ディレクトリで記事を作成 <code>hugo new posts/xxx.md</code></li>
+<li><code>./deploy.sh</code> を実行</li>
+<li><code>https://yuuniji.github.io</code> にアクセスして更新を確認</li>
+</ol>
+<p>💡 <strong>問題があればこのノートを参照してください！</strong> 🚀</p>
+<h2 id="hugo-ブログの多言語対応--機能拡張ガイド">★Hugo ブログの多言語対応 &amp; 機能拡張ガイド<a hidden class="anchor" aria-hidden="true" href="#hugo-ブログの多言語対応--機能拡張ガイド">#</a></h2>
+<h3 id="クイックリンクhttpsgithubcomadityatelangehugo-papermodwikifeatures">◇<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features">クイックリンク</a><a hidden class="anchor" aria-hidden="true" href="#クイックリンクhttpsgithubcomadityatelangehugo-papermodwikifeatures">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://yuuniji.github.io&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Yuuniji的博客&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;PaperMod&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">defaultContentLanguage</span> = <span style="color:#e6db74">&#34;zh&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">hasCJKLanguage</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">languages</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#34;中文&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contentDir</span> = <span style="color:#e6db74">&#34;content/zh&#34;</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesTitle</span> = <span style="color:#e6db74">&#34;归档&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesDescription</span> = <span style="color:#e6db74">&#34;按年份和月份查看文章归档&#34;</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>]
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;首页&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;关于&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;标签&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;归档&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/archives/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">zh</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;搜索&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/search/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#34;English&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contentDir</span> = <span style="color:#e6db74">&#34;content/en&#34;</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesTitle</span> = <span style="color:#e6db74">&#34;Archives&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesDescription</span> = <span style="color:#e6db74">&#34;Browse articles by year and month&#34;</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>]
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Home&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Tags&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Archives&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/archives/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Search&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/search/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#34;日本語&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">contentDir</span> = <span style="color:#e6db74">&#34;content/ja&#34;</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesTitle</span> = <span style="color:#e6db74">&#34;アーカイブ&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">archivesDescription</span> = <span style="color:#e6db74">&#34;年と月ごとに記事を表示&#34;</span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>]
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;ホーム&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;について&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;タグ&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;アーカイブ&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/archives/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">ja</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;検索&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/search/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">outputs</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">home</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span>, <span style="color:#e6db74">&#34;SITEMAP&#34;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">section</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">archives</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">search</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">author</span> = <span style="color:#e6db74">&#34;Yuuniji&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">defaultTheme</span> = <span style="color:#e6db74">&#34;auto&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowAllPagesInArchive</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowShareButtons</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowReadingTime</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowToc</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">TocOpen</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowBreadCrumbs</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowCodeCopyButtons</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowPostNavLinks</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ShowRssButtonInSectionTermList</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">archives</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">fuseOpts</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">isCaseSensitive</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">shouldSort</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">location</span> = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">distance</span> = <span style="color:#ae81ff">1_000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">threshold</span> = <span style="color:#ae81ff">0.4</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">minMatchCharLength</span> = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">keys</span> = [ <span style="color:#e6db74">&#34;title&#34;</span>, <span style="color:#e6db74">&#34;permalink&#34;</span>, <span style="color:#e6db74">&#34;summary&#34;</span>, <span style="color:#e6db74">&#34;content&#34;</span> ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">content</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">archivesDir</span> = <span style="color:#e6db74">&#34;content/archives&#34;</span>
+</span></span></code></pre></div><h3 id="1-ディレクトリ構造">◇<strong>1. ディレクトリ構造</strong><a hidden class="anchor" aria-hidden="true" href="#1-ディレクトリ構造">#</a></h3>
+<p><code>hugo.toml</code> の設定に従い、<code>content</code> ディレクトリの構造は以下のようになります：</p>
+<pre tabindex="0"><code>content/
+  ├── zh/
+  │   ├── _index.md
+  │   ├── about.md
+  │   ├── archives.md
+  │   ├── search.md
+  │   ├── categories/_index.md
+  │   ├── posts/_index.md
+  │   ├── tags/_index.md
+  ├── en/
+  │   ├── _index.md
+  │   ├── about.md
+  │   ├── archives.md
+  │   ├── search.md
+  │   ├── categories/_index.md
+  │   ├── posts/_index.md
+  │   ├── tags/_index.md
+  ├── ja/
+      ├── _index.md
+      ├── about.md
+      ├── archives.md
+      ├── search.md
+      ├── categories/_index.md
+      ├── posts/_index.md
+      ├── tags/_index.md
+</code></pre><p>また、<code>archetypes</code> ディレクトリを作成し、各言語に対応させます：</p>
+<pre tabindex="0"><code>archetypes/
+  ├── default.md
+  ├── zh.md
+  ├── en.md
+  ├── ja.md
+</code></pre><h3 id="2-archetypes-ディレクトリの設定">◇<strong>2. <code>archetypes</code> ディレクトリの設定</strong><a hidden class="anchor" aria-hidden="true" href="#2-archetypes-ディレクトリの設定">#</a></h3>
+<p>各言語の <code>archetypes</code> ファイルは、デフォルトの front matter を設定するために使用されます。</p>
+<h4 id="デフォルト-archetypesdefaultmd"><strong>デフォルト <code>archetypes/default.md</code></strong><a hidden class="anchor" aria-hidden="true" href="#デフォルト-archetypesdefaultmd">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;{{ replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34; | title }}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: {{ <span style="color:#ae81ff">.Date }}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: []
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h4 id="archetypeszhmd中文"><strong><code>archetypes/zh.md</code>（中文）</strong><a hidden class="anchor" aria-hidden="true" href="#archetypeszhmd中文">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;{{ replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34; | title }}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: {{ <span style="color:#ae81ff">.Date }}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lang</span>: <span style="color:#e6db74">&#34;zh&#34;</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h4 id="archetypesenmd英文"><strong><code>archetypes/en.md</code>（英文）</strong><a hidden class="anchor" aria-hidden="true" href="#archetypesenmd英文">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;{{ replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34; | title }}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: {{ <span style="color:#ae81ff">.Date }}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lang</span>: <span style="color:#e6db74">&#34;en&#34;</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h4 id="archetypesjamd日本語"><strong><code>archetypes/ja.md</code>（日本語）</strong><a hidden class="anchor" aria-hidden="true" href="#archetypesjamd日本語">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;{{ replace .Name &#34;</span>-<span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34; | title }}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: {{ <span style="color:#ae81ff">.Date }}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lang</span>: <span style="color:#e6db74">&#34;ja&#34;</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h3 id="3-各言語の記事作成">◇<strong>3. 各言語の記事作成</strong><a hidden class="anchor" aria-hidden="true" href="#3-各言語の記事作成">#</a></h3>
+<p><code>--kind</code> オプションを使用して <code>archetypes</code> を指定し、対応する <code>content/</code> ディレクトリに記事を作成します。</p>
+<h4 id="中文記事"><strong>中文記事</strong><a hidden class="anchor" aria-hidden="true" href="#中文記事">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo new content/zh/posts/my-first-post1.md
+</span></span></code></pre></div><p>これにより、<code>content/zh/posts/</code> ディレクトリに <code>my-first-post.md</code> が作成され、<code>archetypes/zh.md</code> がテンプレートとして使用されます。</p>
+<h4 id="英文記事"><strong>英文記事</strong><a hidden class="anchor" aria-hidden="true" href="#英文記事">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo new content/en/posts/my-first-post1.md
+</span></span></code></pre></div><p>これにより、<code>content/en/posts/</code> ディレクトリに <code>my-first-post.md</code> が作成され、<code>archetypes/en.md</code> がテンプレートとして使用されます。</p>
+<h4 id="日本語記事"><strong>日本語記事</strong><a hidden class="anchor" aria-hidden="true" href="#日本語記事">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo new content/ja/posts/my-first-post1.md
+</span></span></code></pre></div><p>これにより、<code>content/ja/posts/</code> ディレクトリに <code>my-first-post.md</code> が作成され、<code>archetypes/ja.md</code> がテンプレートとして使用されます。</p>
+<h4 id="自動化による多言語記事の作成">自動化による多言語記事の作成<a hidden class="anchor" aria-hidden="true" href="#自動化による多言語記事の作成">#</a></h4>
+<p>create_multilingual_post.sh スクリプト</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 入力パラメータが存在するか確認</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;記事のタイトルを入力してください。&#34;</span>
+</span></span><span style="display:flex;"><span>    exit <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TITLE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>DATE<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 記事のファイル名を作成（単語をハイフンで区切る）</span>
+</span></span><span style="display:flex;"><span>POST_NAME<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$TITLE<span style="color:#e6db74">&#34;</span> | tr <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#e6db74">&#34;-&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 中国語の記事を生成</span>
+</span></span><span style="display:flex;"><span>mkdir -p <span style="color:#e6db74">&#34;content/zh/posts&#34;</span>
+</span></span><span style="display:flex;"><span>cat &gt; <span style="color:#e6db74">&#34;content/zh/posts/</span>$POST_NAME<span style="color:#e6db74">.md&#34;</span> <span style="color:#e6db74">&lt;&lt;EOL
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">---
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">title: &#34;$TITLE&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">date: $DATE
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">lang: &#34;zh&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">draft: true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">tags: []
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">categories: []
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">---
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">ここは中国語バージョンの内容です。
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 英語の記事を生成</span>
+</span></span><span style="display:flex;"><span>mkdir -p <span style="color:#e6db74">&#34;content/en/posts&#34;</span>
+</span></span><span style="display:flex;"><span>cat &gt; <span style="color:#e6db74">&#34;content/en/posts/</span>$POST_NAME<span style="color:#e6db74">.md&#34;</span> <span style="color:#e6db74">&lt;&lt;EOL
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">---
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">title: &#34;$TITLE&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">date: $DATE
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">lang: &#34;en&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">draft: true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">tags: []
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">categories: []
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">---
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">This is the English version of the post.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 日本語の記事を生成</span>
+</span></span><span style="display:flex;"><span>mkdir -p <span style="color:#e6db74">&#34;content/ja/posts&#34;</span>
+</span></span><span style="display:flex;"><span>cat &gt; <span style="color:#e6db74">&#34;content/ja/posts/</span>$POST_NAME<span style="color:#e6db74">.md&#34;</span> <span style="color:#e6db74">&lt;&lt;EOL
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">---
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">title: &#34;$TITLE&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">date: $DATE
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">lang: &#34;ja&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">draft: true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">tags: []
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">categories: []
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">---
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">この記事は日本語バージョンです。
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;3つの言語バージョンの記事が正常に作成されました：</span>$TITLE<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>ターミナルで、まずスクリプトが存在するディレクトリに移動し、実行権限を付与します：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x create_multilingual_post.sh
+</span></span></code></pre></div><p>以下のコマンドを実行し、記事のタイトルを指定します：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./create_multilingual_post.sh <span style="color:#e6db74">&#34;あなたの記事タイトル&#34;</span>
+</span></span></code></pre></div><h3 id="まとめ">◇<strong>まとめ</strong><a hidden class="anchor" aria-hidden="true" href="#まとめ">#</a></h3>
+<ul>
+<li><strong>各言語の記事を作成する</strong> には、<code>hugo new --kind &lt;language&gt; &lt;path&gt;</code> を使用します。</li>
+<li><strong><code>archetypes</code> ディレクトリ</strong> には、<code>zh.md</code>、<code>en.md</code>、<code>ja.md</code> を用意し、<code>content/</code> ディレクトリと対応させます。</li>
+<li><strong><code>contentDir</code> の構造を一貫させる</strong> ことで、Hugo が記事を生成する際に正しいテンプレートを見つけられるようにします。</li>
+</ul>
+<p>これで、Hugo の多言語ブログの記事作成を正しく管理できるようになります！🚀</p>
+<h2 id="アップグレード">★アップグレード<a hidden class="anchor" aria-hidden="true" href="#アップグレード">#</a></h2>
+<h3 id="サイドバー目次の追加">◇サイドバー目次の追加<a hidden class="anchor" aria-hidden="true" href="#サイドバー目次の追加">#</a></h3>
+<p>PaperModテーマはデフォルトでサイドバー目次をサポートしていませんが、<a href="https://github.com/arashsm79/hugo-PaperMod-Mod">arashsm79/hugo-PaperMod-Mod</a> リポジトリの <code>sidetoc.css</code> ファイルを利用することでサイドバー目次を実装できます。手順は以下の通りです：</p>
+<ol>
+<li><code>sidetoc.css</code> ファイルをダウンロードします：<a href="https://github.com/arashsm79/hugo-PaperMod-Mod/blob/main/assets/css/extended/sidetoc.css">sidetoc.css</a>。</li>
+<li>ファイルをHugoサイトの <code>assets/css/extended/</code> ディレクトリに配置します。ディレクトリが存在しない場合は作成してください。</li>
+<li>サイトを再構築（<code>hugo</code> コマンドを実行）すると、記事のサイドバーに目次が表示されます。</li>
+</ol>
+<h4 id="注意事項">注意事項<a hidden class="anchor" aria-hidden="true" href="#注意事項">#</a></h4>
+<ul>
+<li>記事に十分な見出し（例：<code># H1</code>、<code>## H2</code> など）が含まれていない場合、目次は生成されません。</li>
+<li><code>sidetoc.css</code> はCSS Gridと <code>position: sticky</code> を使用してサイドバーの固定効果を実現しており、大画面表示に適しています。</li>
+<li>外観や位置に満足できない場合、<code>sidetoc.css</code> ファイルをカスタマイズできます。</li>
+</ul>
+<h4 id="長い目次がスクロールできない問題の解決">長い目次がスクロールできない問題の解決<a hidden class="anchor" aria-hidden="true" href="#長い目次がスクロールできない問題の解決">#</a></h4>
+<ul>
+<li>調査によると、目次が長すぎる場合は、最大高さを設定し、スクロール可能なオーバーフローを有効にすることで解決できます。</li>
+<li>カスタムCSSに <code>max-height</code> と <code>overflow-y: auto</code> を追加することを推奨します。</li>
+<li>PaperMod公式では長い目次のスクロールを直接サポートしていないため、コミュニティの修正に依存する必要があります。</li>
+</ul>
+<h4 id="実装手順">実装手順<a hidden class="anchor" aria-hidden="true" href="#実装手順">#</a></h4>
+<p>長い目次をスクロール可能にするための詳細な手順は以下の通りです：</p>
+<ol>
+<li>
+<p><strong>目次のHTML構造を確認</strong></p>
+<ul>
+<li>ブラウザで記事ページを開き、目次エリアを右クリックして「検証」（Inspect）または「要素を調査」を選択します。</li>
+<li>目次を含むHTML要素を見つけます。通常は <code>&lt;nav id=&quot;TableOfContents&quot;&gt;</code> です。Hugoのデフォルト目次ジェネレーターはこのIDを生成します。</li>
+<li>他のラッパー要素（例：<code>&lt;div class=&quot;toc&quot;&gt;</code> など）が存在するかどうかを確認します。これらは <code>sidetoc.css</code> によって追加されている可能性があります。存在する場合は、クラス名またはIDを記録して後で調整します。</li>
+</ul>
+</li>
+<li>
+<p><strong>カスタムCSSの追加</strong></p>
+<ul>
+<li>PaperModテーマは <code>assets/css/extended/</code> ディレクトリを通じてカスタムCSSを追加できます。ユーザーはこのディレクトリ内にファイル（例：<code>custom.css</code>）を作成または編集できます。</li>
+<li><code>custom.css</code> に以下のコードを追加します：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#TableOfContents {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">80</span><span style="color:#66d9ef">vh</span>; <span style="color:#75715e">/* 最大高さをビューポートの高さの80%に設定。必要に応じて調整可能 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">overflow-y</span>: <span style="color:#66d9ef">auto</span>; <span style="color:#75715e">/* 垂直方向のオーバーフロー時にスクロールバーを表示 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>目次が他のコンテナ（例：<code>&lt;div class=&quot;toc&quot;&gt;</code>）でラップされている場合、セレクタを以下のように調整します：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">toc</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">80</span><span style="color:#66d9ef">vh</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">overflow-y</span>: <span style="color:#66d9ef">auto</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li><code>max-height: 80vh</code> は推奨値です。サイドバーのレイアウトに応じて、たとえば <code>70vh</code> や <code>500px</code> に調整し、さまざまな画面サイズに対応できます。</li>
+</ul>
+</li>
+</ol>
+<h3 id="名言格言">◇名言・格言<a hidden class="anchor" aria-hidden="true" href="#名言格言">#</a></h3>
+<p><code>quoteszh.html</code>、<code>quotesen.html</code>、<code>quotesja.html</code> ファイルを作成し、Hugoサイトの <code>layouts/shortcodes/</code> ディレクトリに配置します。その後、<code>content/lang/_index.md</code> で参照してください。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- layouts/shortcodes/quoteszh.html --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">blockquote</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;{{ .Inner }}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">footer</span>&gt;{{ .Get &#34;source&#34; }}&lt;/<span style="color:#f92672">footer</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">blockquote</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;quote&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;quote-box&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">quotes</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ランダムに名言を選択
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">randomQuote</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">quotes</span>[Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">quotes</span>.<span style="color:#a6e22e">length</span>)];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 名言を表示
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;quote&#39;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">randomQuote</span>;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">quote-box</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">600</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">left</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">quote-box</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">animation</span>: fadeIn <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease-in-out</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    @<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">fadeIn</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">0</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">100</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span></code></pre></div><h2 id="その他">★その他<a hidden class="anchor" aria-hidden="true" href="#その他">#</a></h2>
+<h3 id="コードの枠線を角丸にする">◇コードの枠線を角丸にする<a hidden class="anchor" aria-hidden="true" href="#コードの枠線を角丸にする">#</a></h3>
+<p><code>/assets/css/common/post-single.css</code> を以下のように修正します：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">post-content</span> .<span style="color:#a6e22e">highlight</span> <span style="color:#f92672">pre</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>theme) <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span>; <span style="color:#75715e">/* 角丸を追加 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h3 id="多言語中国語英語日本語対応のウェブサイト稼働時間表示">◇多言語（中国語、英語、日本語）対応のウェブサイト稼働時間表示<a hidden class="anchor" aria-hidden="true" href="#多言語中国語英語日本語対応のウェブサイト稼働時間表示">#</a></h3>
+<p><code>/layouts/partials/footer.html</code> の <code>&lt;footer&gt;</code> 内に以下のコードを追加します：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;runtime_span&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt; <span style="color:#75715e">&lt;!-- ウェブサイト稼働時間を表示するコンテナ --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">show_runtime</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 1秒ごとに実行し、リアルタイム更新を実現
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">show_runtime</span>, <span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ウェブサイトの開始日時を設定（2025年2月22日 00:00:00）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">startDate</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#34;2025/02/22 00:00:00&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 現在の日時を取得
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">now</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 時間差を計算（ミリ秒）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">now</span>.<span style="color:#a6e22e">getTime</span>() <span style="color:#f92672">-</span> <span style="color:#a6e22e">startDate</span>.<span style="color:#a6e22e">getTime</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 稼働日数、時間、分、秒を計算
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">days</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">diff</span> <span style="color:#f92672">/</span> (<span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>));                     <span style="color:#75715e">// 日数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hours</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>((<span style="color:#a6e22e">diff</span> <span style="color:#f92672">%</span> (<span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)) <span style="color:#f92672">/</span> (<span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)); <span style="color:#75715e">// 時間
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">minutes</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>((<span style="color:#a6e22e">diff</span> <span style="color:#f92672">%</span> (<span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)) <span style="color:#f92672">/</span> (<span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>));        <span style="color:#75715e">// 分
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">seconds</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>((<span style="color:#a6e22e">diff</span> <span style="color:#f92672">%</span> (<span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>);                    <span style="color:#75715e">// 秒
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// HTMLページの言語設定を取得（Hugoが生成、例：&lt;html lang=&#34;ja&#34;&gt;）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lang</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">lang</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;en&#34;</span>; <span style="color:#75715e">// デフォルトは英語
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 各言語の表示テンプレート
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">translations</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">zh</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`网站已运行 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">days</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 天 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">hours</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 小时 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">minutes</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 分 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">seconds</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 秒`</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">ja</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`サイトは稼働してから </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">days</span><span style="color:#e6db74">}</span><span style="color:#e6db74">日 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">hours</span><span style="color:#e6db74">}</span><span style="color:#e6db74">時間 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">minutes</span><span style="color:#e6db74">}</span><span style="color:#e6db74">分 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">seconds</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒`</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">en</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`Site has been running for </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">days</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> days </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">hours</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> hours </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">minutes</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> minutes </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">seconds</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> seconds`</span>
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 現在の言語に基づいて表示内容を選択、存在しない場合は英語を使用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">output</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">translations</span>[<span style="color:#a6e22e">lang</span>] <span style="color:#f92672">||</span> <span style="color:#a6e22e">translations</span>[<span style="color:#e6db74">&#34;en&#34;</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 表示内容をページに書き込む
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;runtime_span&#34;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">output</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 初期化実行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">show_runtime</span>();
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><hr>
+<h3 id="コメントシステム">◇コメントシステム<a hidden class="anchor" aria-hidden="true" href="#コメントシステム">#</a></h3>
+<p>以下は、GitHub Pages やその他の静的ホスティングプラットフォームにデプロイされた Hugo ブログに <strong>Giscus コメントシステム</strong> を詳細に統合する手順です。</p>
+<hr>
+<h4 id="1github-リポジトリの準備">1：GitHub リポジトリの準備<a hidden class="anchor" aria-hidden="true" href="#1github-リポジトリの準備">#</a></h4>
+<ol>
+<li>GitHub アカウントにログインします。</li>
+<li>ブログのリポジトリ（例：<code>yourname/yourblog</code>）を開きます。</li>
+<li><strong>Discussions</strong> 機能を有効化します：
+<ul>
+<li>リポジトリの設定 → <strong>Features</strong> → <strong>Discussions</strong> にチェックを入れます。</li>
+<li>Discussions ページに移動し、新しい <strong>Discussion Category</strong>（例：<code>General</code>）を作成します。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="2giscus-の埋め込みコード生成">2：Giscus の埋め込みコード生成<a hidden class="anchor" aria-hidden="true" href="#2giscus-の埋め込みコード生成">#</a></h4>
+<ol>
+<li>
+<p>Giscus の設定ページを開きます：
+👉 <a href="https://giscus.app">https://giscus.app</a></p>
+</li>
+<li>
+<p>以下の設定を行います：</p>
+<ul>
+<li><strong>Repository</strong>：ブログのリポジトリ（例：<code>yourname/yourblog</code>）</li>
+<li><strong>Repository ID / Category / Category ID</strong>：Discussions の情報に基づいて自動生成</li>
+<li><strong>Discussion Mapping</strong>：<code>pathname</code> を推奨</li>
+<li><strong>Reaction</strong>：有効化（👍など）</li>
+<li><strong>Input Position</strong>：<code>bottom</code>（コメント入力欄を下部に）</li>
+<li><strong>Theme</strong>：<code>preferred_color_scheme</code>（ライト/ダークモードに自動対応）</li>
+<li><strong>Language</strong>：<code>zh-CN</code>（中国語）、<code>ja</code>（日本語）、または <code>en</code>（英語）を選択</li>
+</ul>
+</li>
+<li>
+<p>生成された <code>&lt;script&gt;</code> コードをコピーします。</p>
+</li>
+</ol>
+<hr>
+<h4 id="3hugo-テンプレートに-giscus-コードを挿入">3：Hugo テンプレートに Giscus コードを挿入<a hidden class="anchor" aria-hidden="true" href="#3hugo-テンプレートに-giscus-コードを挿入">#</a></h4>
+<p>Giscus のコードを独立したファイルに保存します。例：<code>layouts/partials/giscus.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;giscus_container&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://giscus.app/client.js&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-repo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yourname/yourblog&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-repo-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;リポジトリID&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-category</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;General&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-category-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;カテゴリID&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-mapping</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pathname&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-strict</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-reactions-enabled</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-emit-metadata</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-input-position</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bottom&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-theme</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preferred_color_scheme&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ja&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">async</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>次に、<code>single.html</code> テンプレートで呼び出します：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Content</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;giscus.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><hr>
+<h4 id="4hugo-ブログの再構築とデプロイ">4：Hugo ブログの再構築とデプロイ<a hidden class="anchor" aria-hidden="true" href="#4hugo-ブログの再構築とデプロイ">#</a></h4>
+<p>以下のコマンドを実行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
+</span></span></code></pre></div><hr>
+<h3 id="marginnote-のサイドノート機能">◇MarginNote のサイドノート機能<a hidden class="anchor" aria-hidden="true" href="#marginnote-のサイドノート機能">#</a></h3>
+<h4 id="1ショートコードの定義">1：ショートコードの定義<a hidden class="anchor" aria-hidden="true" href="#1ショートコードの定義">#</a></h4>
+<p>Hugo プロジェクト内にショートコードファイルを作成します：</p>
+<p>パス：<code>layouts/shortcodes/marginnote.html</code></p>
+<p>内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;marginnote&#34;</span> <span style="color:#a6e22e">data-note</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Get &#34;</span><span style="color:#a6e22e">note</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;{{ .Inner }}&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span></code></pre></div><p>使用例：</p>
+<p>これは本文中の文です。<span class="marginnote" data-note="これはサイドノートの内容です。">強調語</span>
+本文を続けます。</p>
+<hr>
+<h4 id="2css-スタイルの追加">2：CSS スタイルの追加<a hidden class="anchor" aria-hidden="true" href="#2css-スタイルの追加">#</a></h4>
+<p>テーマまたはサイトの CSS ファイルに以下のスタイルを追加します（例：<code>assets/css/extended/custom.css</code>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">marginnote</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#007acc</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dotted</span> <span style="color:#ae81ff">#007acc</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">marginnote</span>::<span style="color:#a6e22e">after</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">content</span>: attr(data<span style="color:#f92672">-</span>note);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">220</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#f9f9f9</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#ccc</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.9</span><span style="color:#66d9ef">em</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">999</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">white-space</span>: <span style="color:#66d9ef">normal</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0.1</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">marginnote</span>:<span style="color:#a6e22e">hover</span>::<span style="color:#a6e22e">after</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h4 id="効果の説明">効果の説明<a hidden class="anchor" aria-hidden="true" href="#効果の説明">#</a></h4>
+<ul>
+<li>マウスを本文のキーワードにホバーすると、サイドノートが右側にポップアップ表示され、読者の閲覧フローを妨げません。</li>
+<li>Markdown の記事形式に影響を与えず、ショートコードは使いやすいです。</li>
+</ul>
+<hr>
+<h3 id="画像クリック拡大機能">◇画像クリック拡大機能<a hidden class="anchor" aria-hidden="true" href="#画像クリック拡大機能">#</a></h3>
+<p>多くの方法がありますが、ここでは Medium Zoom（推奨）を使用します。</p>
+<h4 id="1部分テンプレートファイルの作成">1：部分テンプレートファイルの作成<a hidden class="anchor" aria-hidden="true" href="#1部分テンプレートファイルの作成">#</a></h4>
+<p>Hugo プロジェクト内にファイルを作成：<code>layouts/partials/image-zoom.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- layouts/partials/image-zoom.html --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 記事内のすべての画像にクリック拡大機能を追加
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">mediumZoom</span>(<span style="color:#e6db74">&#39;article img&#39;</span>, {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">margin</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">24</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">background</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;rgba(0, 0, 0, 0.8)&#39;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">scrollOffset</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">40</span>
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 画像がクリック可能に見えるようにCSSスタイルを追加 --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">article</span> <span style="color:#f92672">img</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">zoom-in</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">transform</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease-in-out</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">article</span> <span style="color:#f92672">img</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">1.02</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span></code></pre></div><h4 id="2レイアウトテンプレートに部分テンプレートを含める">2：レイアウトテンプレートに部分テンプレートを含める<a hidden class="anchor" aria-hidden="true" href="#2レイアウトテンプレートに部分テンプレートを含める">#</a></h4>
+<p>主レイアウトテンプレート（通常は <code>layouts/_default/baseof.html</code> または <code>layouts/_default/single.html</code>）の <code>&lt;/body&gt;</code> タグ直前に以下を追加：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ partial &#34;image-zoom.html&#34; . }}
+</span></span></code></pre></div><h2 id="hugoブログにinstantclickを統合してリフレッシュなしのジャンプを実現">★HugoブログにInstantClickを統合してリフレッシュなしのジャンプを実現<a hidden class="anchor" aria-hidden="true" href="#hugoブログにinstantclickを統合してリフレッシュなしのジャンプを実現">#</a></h2>
+<h3 id="目的">◇目的<a hidden class="anchor" aria-hidden="true" href="#目的">#</a></h3>
+<p>ブログ内の記事ジャンプ体験を向上させ、「リフレッシュなしの瞬時オープン」を実現し、ページのちらつきを軽減する。</p>
+<h3 id="手順と変更の説明">◇手順と変更の説明<a hidden class="anchor" aria-hidden="true" href="#手順と変更の説明">#</a></h3>
+<ol>
+<li>
+<p><strong>InstantClickスクリプトの導入</strong></p>
+<ul>
+<li><code>themes/PaperMod/layouts/partials/footer.html</code> ファイル内の <code>{{- partial &quot;extend_footer.html&quot; . }}</code> の後に、以下のコードを挿入：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- InstantClick 3.1.0 CDNスクリプト統合 --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js&#34;</span> <span style="color:#a6e22e">data-no-instant</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">data-no-instant</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 統計スクリプトの適応例（実際の状況に応じて調整可能）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;instantclick:change&#39;</span>, <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Google Analytics
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">ga</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;function&#39;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;set&#39;</span>, <span style="color:#e6db74">&#39;page&#39;</span>, <span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">pathname</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">search</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;send&#39;</span>, <span style="color:#e6db74">&#39;pageview&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 百度統計（_hmtがロード済みと仮定）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">_hmt</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">_hmt</span>.<span style="color:#a6e22e">push</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">_hmt</span>.<span style="color:#a6e22e">push</span>([<span style="color:#e6db74">&#39;_trackPageview&#39;</span>, <span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">pathname</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">search</span>]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ここに他の統計や初期化コードを追加可能
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">InstantClick</span>.<span style="color:#a6e22e">init</span>();
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div></li>
+<li>これにより、ブログ内のすべてのページジャンプがリフレッシュなしになり、よりスムーズな体験が得られる。</li>
+</ul>
+</li>
+<li>
+<p><strong>統計スクリプトの適応</strong></p>
+<ul>
+<li>Google Analyticsや百度統計などの一般的な統計に対応し、<code>instantclick:change</code> イベントリスナーを追加することで、ジャンプ後の統計データが正常に記録される。</li>
+</ul>
+</li>
+<li>
+<p><strong>いつでも削除可能</strong></p>
+<ul>
+<li>元の状態に戻したい場合は、上記のコードブロックを削除するだけでよい。</li>
+</ul>
+</li>
+</ol>
+<h3 id="注意事項-1">◇注意事項<a hidden class="anchor" aria-hidden="true" href="#注意事項-1">#</a></h3>
+<ul>
+<li>他のカスタムJSやサードパーティスクリプトがある場合も、<code>instantclick:change</code> イベント内で初期化が可能。</li>
+<li>InstantClickはSEOに影響を与えず、ページの初回読み込み速度にも影響しない。</li>
+</ul>
+<h2 id="hugoブログでシステムのダークライトモード自動切り替えを実現papermod">★Hugoブログでシステムのダーク/ライトモード自動切り替えを実現（PaperMod）<a hidden class="anchor" aria-hidden="true" href="#hugoブログでシステムのダークライトモード自動切り替えを実現papermod">#</a></h2>
+<h3 id="問題の背景">◇問題の背景<a hidden class="anchor" aria-hidden="true" href="#問題の背景">#</a></h3>
+<ul>
+<li>Hugo + PaperModテーマでは、デフォルトでページ読み込み時にのみシステムのダーク/ライトモード（<code>prefers-color-scheme</code>）を検出します。システムテーマを切り替えた後、ページを手動でリフレッシュしないと反映されず、ユーザー体験に影響を与えます。</li>
+</ul>
+<h3 id="実現目標">◇実現目標<a hidden class="anchor" aria-hidden="true" href="#実現目標">#</a></h3>
+<ul>
+<li>ユーザーがオペレーティングシステムのダーク/ライトモードを切り替えた際、ブログページがリフレッシュせずに自動的に同期して切り替わり、現代の主流ウェブサイトと同様の体験を提供する。</li>
+</ul>
+<h3 id="実現手順">◇実現手順<a hidden class="anchor" aria-hidden="true" href="#実現手順">#</a></h3>
+<ol>
+<li>
+<p><strong><code>themes/PaperMod/layouts/partials/footer.html</code> の末尾に以下のJSコードを挿入：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// システムのダーク/ライトモード切り替えに自動対応
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>window.<span style="color:#a6e22e">matchMedia</span>(<span style="color:#e6db74">&#39;(prefers-color-scheme: dark)&#39;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;change&#39;</span>, <span style="color:#a6e22e">e</span> =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isDark</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">matches</span>;
+</span></span><span style="display:flex;"><span>  document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">toggle</span>(<span style="color:#e6db74">&#39;dark&#39;</span>, <span style="color:#a6e22e">isDark</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;pref-theme&#39;</span>, <span style="color:#a6e22e">isDark</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;dark&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;light&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// カスタムテーマ切り替えボタンがある場合、ここで状態を同期可能
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div></li>
+<li>
+<p><strong>原理の説明</strong></p>
+<ul>
+<li><code>prefers-color-scheme: dark</code> の <code>change</code> イベントを監視し、システムテーマが切り替わった際にページのテーマを自動更新。</li>
+<li><code>localStorage</code> を同期更新することで、ページリフレッシュ後もユーザーの選択が保持される。</li>
+</ul>
+</li>
+<li>
+<p><strong>注意事項</strong></p>
+<ul>
+<li>テーマ切り替えボタンがある場合、ボタンの状態が自動切り替えロジックと互換性を持つようにする。</li>
+<li>このコードはすべての <code>&lt;script&gt;</code> の最後に配置することを推奨し、優先順位と互換性を確保する。</li>
+</ul>
+</li>
+</ol>
+<h3 id="効果">◇効果<a hidden class="anchor" aria-hidden="true" href="#効果">#</a></h3>
+<ul>
+<li>システムテーマ（macOS、Windows、モバイル端末など）を切り替えると、ブログページがリフレッシュせずに即座に自動切り替えされ、ユーザー体験が向上する。</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yuuniji.github.io/ja/tags/%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89/">ブログ構築</a></li>
+      <li><a href="https://yuuniji.github.io/ja/tags/github/">Github</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-0-overview/">
+    <span class="title">« 前へ</span>
+    <br>
+    <span>日本語を上手に学ぶ方法[0]: 概要</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 私のブログ構築の旅：ゼロからオンラインへ on x"
+            href="https://x.com/intent/tweet/?text=%e7%a7%81%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e6%a7%8b%e7%af%89%e3%81%ae%e6%97%85%ef%bc%9a%e3%82%bc%e3%83%ad%e3%81%8b%e3%82%89%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%b8&amp;url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2fmy-first-post%2f&amp;hashtags=%e3%83%96%e3%83%ad%e3%82%b0%e6%a7%8b%e7%af%89%2cGitHub">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 私のブログ構築の旅：ゼロからオンラインへ on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2fmy-first-post%2f&amp;title=%e7%a7%81%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e6%a7%8b%e7%af%89%e3%81%ae%e6%97%85%ef%bc%9a%e3%82%bc%e3%83%ad%e3%81%8b%e3%82%89%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%b8&amp;summary=%e7%a7%81%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e6%a7%8b%e7%af%89%e3%81%ae%e6%97%85%ef%bc%9a%e3%82%bc%e3%83%ad%e3%81%8b%e3%82%89%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%b8&amp;source=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2fmy-first-post%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 私のブログ構築の旅：ゼロからオンラインへ on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2fmy-first-post%2f&title=%e7%a7%81%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e6%a7%8b%e7%af%89%e3%81%ae%e6%97%85%ef%bc%9a%e3%82%bc%e3%83%ad%e3%81%8b%e3%82%89%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%b8">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 私のブログ構築の旅：ゼロからオンラインへ on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2fmy-first-post%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 私のブログ構築の旅：ゼロからオンラインへ on whatsapp"
+            href="https://api.whatsapp.com/send?text=%e7%a7%81%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e6%a7%8b%e7%af%89%e3%81%ae%e6%97%85%ef%bc%9a%e3%82%bc%e3%83%ad%e3%81%8b%e3%82%89%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%b8%20-%20https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2fmy-first-post%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 私のブログ構築の旅：ゼロからオンラインへ on telegram"
+            href="https://telegram.me/share/url?text=%e7%a7%81%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e6%a7%8b%e7%af%89%e3%81%ae%e6%97%85%ef%bc%9a%e3%82%bc%e3%83%ad%e3%81%8b%e3%82%89%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%b8&amp;url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2fmy-first-post%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 私のブログ構築の旅：ゼロからオンラインへ on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=%e7%a7%81%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e6%a7%8b%e7%af%89%e3%81%ae%e6%97%85%ef%bc%9a%e3%82%bc%e3%83%ad%e3%81%8b%e3%82%89%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%b8&u=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2fmy-first-post%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+<div id="giscus_container"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="yuuniji/yuu-repo"
+        data-repo-id="R_kgDOOl2JTQ"
+        data-category="General"
+        data-category-id="DIC_kwDOOl2JTc4Cp3MT"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 <a href="https://yuuniji.github.io/ja/">叶泽伟的博客</a></span>
+    <span id="runtime_span"></span> 
+    <script type="text/javascript">
+        function show_runtime() {
+            
+            setTimeout(show_runtime, 1000);
+
+            
+            const startDate = new Date("2025/02/22 00:00:00");
+
+            
+            const now = new Date();
+
+            
+            const diff = now.getTime() - startDate.getTime();
+
+            
+            const days = Math.floor(diff / (24 * 60 * 60 * 1000));                     
+            const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000)); 
+            const minutes = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));        
+            const seconds = Math.floor((diff % (60 * 1000)) / 1000);                    
+
+            
+            const lang = document.documentElement.lang || "en"; 
+
+            
+            const translations = {
+                zh: `网站已运行 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`,
+                ja: `サイトは稼働してから ${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`,
+                en: `Site has been running for ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
+            };
+
+            
+            const output = translations[lang] || translations["en"];
+
+            
+            document.getElementById("runtime_span").innerHTML = output;
+        }
+
+        
+        show_runtime();
+    </script>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+    
+    document.addEventListener('instantclick:change', function () {
+        
+        if (typeof ga === 'function') {
+            ga('set', 'page', location.pathname + location.search);
+            ga('send', 'pageview');
+        }
+        
+        if (typeof _hmt === 'object' && _hmt.push) {
+            _hmt.push(['_trackPageview', location.pathname + location.search]);
+        }
+        
+    });
+    InstantClick.init();
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const isDark = e.matches;
+        document.body.classList.toggle('dark', isDark);
+        localStorage.setItem('pref-theme', isDark ? 'dark' : 'light');
+        
+    });
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'コピー';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'コピーされました!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'コピー';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    mediumZoom('article img', {
+      margin: 24,
+      background: 'rgba(0, 0, 0, 0.8)',
+      scrollOffset: 40
+    });
+  });
+</script>
+
+
+<style>
+  article img {
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out;
+  }
+  article img:hover {
+    transform: scale(1.02);
+  }
+</style>
+</body>
+
+</html>

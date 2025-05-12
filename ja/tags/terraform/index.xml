@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Terraform on 叶泽伟的博客</title>
+    <link>https://yuuniji.github.io/ja/tags/terraform/</link>
+    <description>Recent content in Terraform on 叶泽伟的博客</description>
+    <generator>Hugo -- 0.143.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.github.io/ja/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terraformのロードマップ</title>
+      <link>https://yuuniji.github.io/ja/posts/roadmap-terraform/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/ja/posts/roadmap-terraform/</guid>
+      <description>&lt;h2 id=&#34;1-はじめに&#34;&gt;1. はじめに&lt;/h2&gt;
+&lt;p&gt;Terraformは、HashiCorpによって設計された強力なツールで、さまざまなクラウドプロバイダー間でインフラストラクチャを安全かつ効率的に設定、管理、更新するのに役立ちます。サーバー、ストレージ、ネットワークなどのクラウドリソースをシンプルなコード形式で定義する方法と考えてください。これにより、インフラストラクチャの自動化、共有、管理が容易になり、すべてが一貫しており、必要に応じて迅速に再現または変更できるようになります。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Kubernetes 路线图 | 叶泽伟的博客</title>
+<meta name="keywords" content="Kubernetes, 路线图">
+<meta name="description" content="1. Kubernetes 简介
+Kubernetes，也称为 k8s，是一个开源的容器编排平台，能够自动化容器化应用程序的部署、扩展和管理。它提供了一种抽象底层基础设施的方式，并能够大规模管理应用程序，同时还提供了灵活性、可移植性和丰富的功能集。由于其广泛采用、活跃的社区以及处理复杂多层应用程序的能力，Kubernetes 已成为容器编排的事实标准。">
+<meta name="author" content="">
+<link rel="canonical" href="https://yuuniji.github.io/posts/roadmap-kubernetes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.20862d6be0c38dceecc046ef5c2c49d8c2ad7393ff40a0ef7b51bc3d114b99a7.css" integrity="sha256-IIYta&#43;DDjc7swEbvXCxJ2MKtc5P/QKDve1G8PRFLmac=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://yuuniji.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://yuuniji.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://yuuniji.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://yuuniji.github.io/posts/roadmap-kubernetes/">
+<link rel="alternate" hreflang="en" href="https://yuuniji.github.io/en/posts/roadmap-kubernetes/">
+<link rel="alternate" hreflang="ja" href="https://yuuniji.github.io/ja/posts/roadmap-kubernetes/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://yuuniji.github.io/posts/roadmap-kubernetes/">
+  <meta property="og:site_name" content="叶泽伟的博客">
+  <meta property="og:title" content="Kubernetes 路线图">
+  <meta property="og:description" content="1. Kubernetes 简介 Kubernetes，也称为 k8s，是一个开源的容器编排平台，能够自动化容器化应用程序的部署、扩展和管理。它提供了一种抽象底层基础设施的方式，并能够大规模管理应用程序，同时还提供了灵活性、可移植性和丰富的功能集。由于其广泛采用、活跃的社区以及处理复杂多层应用程序的能力，Kubernetes 已成为容器编排的事实标准。">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-03T00:00:00+00:00">
+    <meta property="article:tag" content="Kubernetes">
+    <meta property="article:tag" content="路线图">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kubernetes 路线图">
+<meta name="twitter:description" content="1. Kubernetes 简介
+Kubernetes，也称为 k8s，是一个开源的容器编排平台，能够自动化容器化应用程序的部署、扩展和管理。它提供了一种抽象底层基础设施的方式，并能够大规模管理应用程序，同时还提供了灵活性、可移植性和丰富的功能集。由于其广泛采用、活跃的社区以及处理复杂多层应用程序的能力，Kubernetes 已成为容器编排的事实标准。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "文章列表",
+      "item": "https://yuuniji.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Kubernetes 路线图",
+      "item": "https://yuuniji.github.io/posts/roadmap-kubernetes/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Kubernetes 路线图",
+  "name": "Kubernetes 路线图",
+  "description": "1. Kubernetes 简介 Kubernetes，也称为 k8s，是一个开源的容器编排平台，能够自动化容器化应用程序的部署、扩展和管理。它提供了一种抽象底层基础设施的方式，并能够大规模管理应用程序，同时还提供了灵活性、可移植性和丰富的功能集。由于其广泛采用、活跃的社区以及处理复杂多层应用程序的能力，Kubernetes 已成为容器编排的事实标准。\n",
+  "keywords": [
+    "Kubernetes", "路线图"
+  ],
+  "articleBody": "1. Kubernetes 简介 Kubernetes，也称为 k8s，是一个开源的容器编排平台，能够自动化容器化应用程序的部署、扩展和管理。它提供了一种抽象底层基础设施的方式，并能够大规模管理应用程序，同时还提供了灵活性、可移植性和丰富的功能集。由于其广泛采用、活跃的社区以及处理复杂多层应用程序的能力，Kubernetes 已成为容器编排的事实标准。\n官方 Kubernetes 文档 文章 Kubernetes 简介 视频 Kubernetes 初学者教程 动态 探索关于 Kubernetes 的热门帖子 ◇Kubernetes 概述 Kubernetes 是一个可移植、可扩展的开源平台，用于管理容器化的工作负载和服务，支持声明式配置和自动化。它拥有一个庞大且快速增长的生态系统。Kubernetes 的服务、支持和工具广泛可用。\nKubernetes 的名称源自希腊语，意为舵手或飞行员。K8s 作为缩写，源于“K”和“s”之间的八个字母。Google 在 2014 年开源了 Kubernetes 项目。Kubernetes 结合了 Google 超过 15 年的大规模生产工作负载经验以及社区中的最佳实践和理念。\n官方 Kubernetes 概述 文章 什么是 Kubernetes？ 文章 Kubernetes 概述及必读内容 视频 Kubernetes 教程 动态 探索关于 Kubernetes 的热门帖子 ◇为什么选择 Kubernetes Kubernetes（k8s）之所以必要，是因为它提供了一个强大而灵活的平台，用于大规模部署和管理容器化应用程序。它允许轻松扩展、高弹性、应用程序可移植性、自动化许多任务以及容器平台的标准化。k8s 还有助于减少运维团队的复杂性和工作量，使他们能够专注于更具战略意义的计划。\n官方 为什么你需要 Kubernetes 以及它能做什么 文章 为什么你应该使用 Kubernetes？ 文章 入门：Kubernetes 的起源、它是什么以及为什么你应该关注 动态 探索关于 Kubernetes 的热门帖子 ◇关键概念和术语 Kubernetes 是一个开源的容器编排平台，能够自动化容器化应用程序的部署、扩展和管理。以下是 Kubernetes 中的一些重要概念和术语：\n集群架构：Kubernetes 背后的架构概念。\n容器：用于打包应用程序及其运行时依赖的技术。\n工作负载：了解 Pods，Kubernetes 中最小的可部署计算对象，以及帮助您运行它们的更高级抽象。\n服务、负载均衡和网络：Kubernetes 中网络背后的概念和资源。\n存储：为集群中的 Pods 提供长期和临时存储的方式。\n配置：Kubernetes 提供的用于配置 Pods 的资源。\n集群管理：与创建或管理 Kubernetes 集群相关的底层细节。\n官方 Kubernetes 概念\n文章 理解 Kubernetes 术语\n视频 什么是 Kubernetes？\n视频 专家在 2 分钟内解释 Kubernetes\n◇Kubernetes 替代方案 Kubernetes 是一个流行的开源容器编排工具，广泛用于管理和部署容器化应用程序。虽然还有其他容器编排工具可用，如 Docker Swarm、Mesos 和 Nomad，但 Kubernetes 与这些工具之间存在一些关键差异，其中一些如下所述：\n架构：Kubernetes 设计为一个模块化系统，具有许多协同工作以提供容器编排的组件，例如 Kubernetes API 服务器、kubelet、kube-proxy 和 etcd。\n可扩展性：Kubernetes 设计用于处理大规模部署，并可以根据需求扩展应用程序。\n灵活性：Kubernetes 高度可配置，可以根据特定需求进行定制，而其他容器编排工具的配置选项可能更有限。\n可移植性：Kubernetes 设计为云无关，可以在任何公共或私有云平台上运行，也可以在本地运行。\n社区：Kubernetes 拥有一个庞大且活跃的开发者和用户社区，他们为其开发做出贡献并提供支持。\n文章 比较 Apache Mesos 与 Kubernetes\n文章 Docker Swarm，Kubernetes 的用户友好替代方案\n文章 没有 Kubernetes 你能活吗？\n动态 探索关于 Kubernetes 的热门帖子\n2. 容器 Kubernetes 建立在容器之上，因此在学习 Kubernetes 之前，您应该熟悉从头开始运行和构建容器。\n文章 官方 Docker 教程 文章 Docker 课程 视频 100 秒内了解 Docker 视频 Docker 初学者免费 3 小时视频课程 动态 探索关于容器的热门帖子 3. 设置 Kubernetes 要设置 Kubernetes 集群，您需要选择一个部署环境，在每个节点上安装 Kubernetes 组件，使用插件配置网络，使用 kubeadm init 初始化主节点，使用 kubeadm join 加入工作节点，使用清单部署应用程序，并使用 kubectl 或管理工具管理集群。\n官方 设置 K8s 集群 视频 Kubernetes | 集群设置 动态 探索关于 Kubernetes 的热门帖子 ◇安装本地集群 要在 CentOS 7 或 Ubuntu 上安装和配置 Kubernetes 集群，您需要先设置 Kubernetes 集群的先决条件和要求，然后安装 Kubernetes 组件，包括 Kubeadm、Kubelet 和 Kubectl，接着连接主节点和工作节点。一旦连接建立，您可以通过在集群上部署应用程序来检查它。\n文章 如何在 CentOS 7 上安装 Kubernetes 集群 文章 如何在 Ubuntu 上使用 Kubeadm 创建 Kubernetes 集群 文章 在 Ubuntu 服务器上使用 Microk8s 部署 Kubernetes 集群 ◇选择托管提供商 托管提供商是一种基于云的服务，提供托管的 Kubernetes 环境。这意味着提供商处理底层基础设施，如服务器、存储和网络，以及 Kubernetes 集群的安装、配置和维护。\n在选择托管的 Kubernetes 提供商时，请考虑您使用的云提供商、功能和能力、定价和计费、支持、安全性和合规性以及提供商的声誉和评价。通过考虑这些因素，您可以选择一个满足您需求并为您的组织提供最佳价值的提供商。\n文章 选择托管的 Kubernetes 提供商 文章 亚马逊网络服务为批处理工作准备弹性 Kubernetes 服务 文章 如何为 Kubernetes 构建正确的平台 ◇部署您的第一个应用程序 要在 Kubernetes 中部署您的第一个应用程序，您需要在 YAML 文件中创建部署和服务清单，使用 kubectl apply 命令将清单应用到您的 Kubernetes 集群，使用 kubectl get pods 验证您的应用程序的 Pods 是否正在运行，并使用 kubectl get services 测试服务，然后通过 Web 浏览器或 cURL 等工具访问服务。还有一些工具和平台可以简化 Kubernetes 中的应用程序部署，例如 Helm 图表和 Kubernetes 操作符。\n官方 使用 kubectl 创建部署 文章 从 A 到 Z 在 Kubernetes 上部署应用程序 文章 Kubernetes 101：使用 MicroK8s 部署您的第一个应用程序 视频 Kubernetes 教程 | 您的第一个 Kubernetes 应用程序 视频 Kubernetes 101：部署您的第一个应用程序 4. 运行应用程序 要在 Kubernetes 集群中运行应用程序，您需要使用 YAML 文件定义 Kubernetes 对象，如 Deployment 或 StatefulSet、Service 以及 ConfigMap 或 Secret。Deployment 或 StatefulSet 定义了容器镜像、容器端口和其他设置。Service 为应用程序提供了一个稳定的 IP 地址和 DNS 名称以便访问，而 ConfigMap 或 Secret 包含配置数据或敏感信息。要部署应用程序，请使用 kubectl apply 创建或更新 Kubernetes 对象。Kubernetes 会根据 YAML 文件自动管理应用程序的部署、扩展和网络。可以通过 kubectl 命令进行监控和修改。\n官方 运行应用程序 - 文档 视频 Kubernetes 教程 | 运行和部署 Spring Boot 应用程序 ◇Pods 在 Kubernetes 中，Pod 是最小的可部署单元，代表集群中运行的单个进程实例。一个 Pod 可以包含一个或多个容器，这些容器共享相同的网络命名空间，并且可以访问相同的存储卷。Pod 由 Kubernetes 创建和管理，并被调度到集群中的某个节点上运行。Pod 提供了一个轻量级且灵活的抽象层，使 Kubernetes 能够管理容器化应用程序的部署、扩展和网络。Pod 还促进了在同一 Pod 中运行的容器之间的通信和数据交换。\n官方 Pod 文档 文章 Kubernetes 之道：Pod 和 Service 文章 配置生产环境中运行的 Kubernetes Pod 的 5 个最佳实践 视频 Kubernetes 中的 Pod 是什么？为什么需要它？ ◇ReplicaSets ReplicaSet 是一个控制器，用于确保集群中始终运行指定数量的 Pod 副本（相同的副本）。ReplicaSet 通过根据需求变化或硬件故障自动扩展或缩减 Pod 副本的数量，从而确保高可用性和可扩展性。它们通过 YAML 文件定义，该文件指定了所需的副本数量、要使用的 Pod 模板以及其他设置。ReplicaSet 负责监控 Pod 的状态，并根据需要创建或删除副本以满足所需状态。\n官方 ReplicaSet 文档 文章 在 Kubernetes 中运行有状态工作负载的策略：Pet Sets 视频 Kubernetes 中的 ReplicaSet ◇Deployments Deployment 是一种通过声明式配置管理 Pod 和 ReplicaSet 的资源对象，它定义了描述应用程序工作负载生命周期的期望状态，包括 Pod 数量、部署策略、容器镜像等。Deployment 控制器确保实际状态与期望状态匹配，例如替换失败的 Pod。开箱即用，Deployments 支持多种部署策略，如“重新创建”和“滚动更新”，但也可以自定义以支持更高级的部署策略，如蓝/绿部署或金丝雀部署。\n官方 Deployments 文档 文章 Kubernetes Deployment：从基本策略到渐进式交付 视频 Kubernetes Deployments | 部署策略 ◇StatefulSets StatefulSet 是一个控制器，用于管理一组需要稳定网络标识和稳定存储卷的有状态 Pod 的部署和扩展。StatefulSets 用于运行有状态应用程序，如数据库，其中每个 Pod 的顺序和唯一性很重要。StatefulSets 为每个 Pod 提供唯一的稳定网络标识和稳定存储卷，这使得有状态应用程序即使在扩展或缩减、节点故障或更换时也能保持数据一致性。StatefulSets 通过 YAML 文件定义，该文件包括 Pod 模板、用于访问 Pod 的 Service 以及其他设置。\n官方 StatefulSets 文档 文章 构建有状态 Kubernetes 应用程序的不同方法 视频 Kubernetes StatefulSet | 教程 ◇Jobs Job 是一个控制器，用于管理有限任务或批处理作业的执行。Jobs 用于运行短期任务，如批处理、数据分析或备份，这些任务运行完成后即终止。Jobs 创建一个或多个 Pod 来运行任务，并监控每个 Pod 的完成状态。如果 Pod 失败或终止，Job 会自动创建一个替代 Pod 以确保任务成功完成。Jobs 通过 YAML 文件定义，该文件包括 Pod 模板、完成标准和其他设置。\n官方 Jobs 文档 文章 Kubernetes 如何转变为通用调度器 视频 教程 | Kubernetes 中的 Jobs 5. 服务与网络 服务和网络是实现 Pod 与外部客户端通信的关键组件。服务为访问一组 Pod 提供了稳定的端点，而网络插件和配置选项则实现了 Pod 之间的通信和网络隔离。这些功能设计为可扩展、可靠且灵活，使开发者能够更轻松地管理和编排复杂的微服务架构。诸如 Ingress 和基于 DNS 的服务发现等附加功能，提供了灵活的外部访问服务方式，并简化了集群内的服务发现。\n官方 Service - 文档 官方 Kubernetes 网络模型 推荐 探索关于网络的热门文章 ◇服务的外部访问 Kubernetes (k8s) 服务的外部访问允许外部客户端访问集群中运行的 Pod 和服务。在 k8s 中，有多种方式可以实现服务的外部访问，包括 NodePort、LoadBalancer 和 Ingress。Ingress 是 Kubernetes 中的一个对象，它提供了一种灵活的方式来管理外部访问，基于 URL 或主机将流量路由到服务。外部访问对于确保 Kubernetes 部署的可扩展性和可靠性至关重要。\n官方 Ingress - 文档 文章 Kubernetes Ingress 入门指南 视频 如何为 Kubernetes 服务提供外部访问 ◇负载均衡 负载均衡通过使用 Service 对象将网络流量分配到多个 Pod 或节点。Service 为一组 Pod 提供了稳定的网络端点，允许其他 Pod 或外部客户端通过单个 IP 地址和 DNS 名称访问它们。Kubernetes 为 Service 提供了三种负载均衡算法，分别基于轮询、最少连接或 IP 哈希来分配流量。负载均衡是 Kubernetes 网络的重要组成部分，为集群提供了高效且可靠的流量分配。\n官方 负载均衡 - 文档 文章 Ingress 控制器：Kubernetes 的瑞士军刀 视频 教程 | Kubernetes 中的负载均衡服务 ◇网络与 Pod 间通信 网络对于 Kubernetes 集群中 Pod 和资源之间的通信至关重要。每个 Pod 都有一个唯一的 IP 地址，可以直接与其他 Pod 通信。容器网络接口（CNI）插件用于配置 Pod 的网络接口，并提供 Pod 之间的隔离。Kubernetes 还提供了诸如负载均衡、服务发现和 Ingress 等网络服务，使外部流量能够访问 Pod 和服务。这些服务通过 Kubernetes 对象（如 Service、Ingress 和 NetworkPolicies）实现。网络和 Pod 间通信对于 Kubernetes 集群的可扩展性、可靠性和灵活性至关重要。\n官方 集群网络 - 文档 官方 具有 Pod 间通信的 Job 文章 Kubernetes 如何为应用程序提供网络和存储 推荐 探索关于网络的热门文章 6. 配置管理 Kubernetes (K8s) 中的配置管理是定义和管理在 K8s 集群中运行的应用程序配置的过程。K8s 提供了多种管理配置的机制，包括 ConfigMap 和 Secret，并支持多种将配置注入应用程序容器的方式。配置管理与其他 Kubernetes 功能紧密集成，对于在 Kubernetes 中构建可扩展且可靠的应用程序至关重要。\n官方 容器中的配置管理 视频 Kubernetes 中的配置管理入门 ◇使用 ConfigMap 注入 Pod 配置 ConfigMap 是一种存储配置数据的方式，可供集群中运行的应用程序使用。ConfigMap 是一个键值存储，可以保存诸如数据库 URL、凭证、API 密钥等应用程序配置数据。\n官方 ConfigMap 文档 文章 Kubernetes CRD：它们是什么以及为什么有用 视频 教程 - Kubernetes 中的 ConfigMap ◇使用 Secret 管理敏感数据 Kubernetes Secret 以安全的方式存储敏感数据，如密码、令牌和 API 密钥。它们可以手动或自动创建，并存储在 etcd 中。Secret 可以作为文件或环境变量挂载到 Pod 中，并且可以使用 Kubernetes RBAC 管理访问权限。然而，它们有一些限制，例如大小限制和创建后无法更新。理解 Secret 对于在 Kubernetes 中构建安全的应用程序非常重要。\n官方 Secret 文档 文章 Kubernetes 密钥管理：3 种方法，9 个最佳实践 视频 5 分钟了解 Kubernetes Secret！ 7. 资源管理 Kubernetes 中的资源管理涉及管理 CPU、内存和存储资源，以确保资源的高效和有效利用。Kubernetes 提供了多种功能和工具，包括资源配额、限制、节点亲和性与反亲和性、水平和垂直 Pod 自动扩展以及集群自动扩展，以有效管理资源。这些功能有助于确保资源公平分配，避免资源争用，并使 Pod 能够访问所需的资源。通过使用这些功能，Kubernetes 可以高效地管理资源，从而提高性能、增强可靠性并降低成本。\n官方 资源管理 - 文档 文章 管理 Kubernetes 资源：需要记住的 5 件事 视频 Kubernetes 中的资源管理 ◇设置资源请求和限制 Kubernetes 中的资源请求和限制指定了容器运行所需的最小和最大 CPU 和内存量。资源请求用于在具有足够资源的节点上调度容器，而限制则强制执行资源配额并防止容器消耗过多资源。这些设置可以在 Pod 或容器级别通过 YAML 中的 resources 字段进行配置。正确设置资源请求和限制对于确保 Kubernetes 集群中的最佳资源利用率至关重要。\n官方 请求和限制 - 文档 官方 默认内存限制和请求的动机 文章 理解 Kubernetes 资源类型 文章 Kubernetes 请求和限制揭秘 ◇为命名空间分配配额 为命名空间分配配额是限制 Kubernetes 中特定资源组资源使用的一种方式。可以为 CPU、内存和其他资源以及命名空间中的对象数量设置配额。这有助于确保集群中不同团队或项目之间的资源公平分配。配额可以应用于单个命名空间或整个集群。Kubernetes 允许使用硬配额（强制执行严格的资源限制）和软配额（允许在一定范围内超额）。配额可以通过 Kubernetes API 或 YAML 配置文件进行管理。\n官方 资源配额 - 文档 文章 利用命名空间优化 Kubernetes 成本 视频 15 分钟了解 Kubernetes 命名空间 ◇监控和优化资源使用 在 Kubernetes (k8s) 中监控和优化资源使用对于确保资源的高效和有效利用至关重要。为了监控资源使用，k8s 提供了 Metrics Server，并且可以与 Prometheus 集成。容器运行时接口 (CRI) 也可用于监控容器级资源使用数据。为了优化资源使用，设置适当的请求和限制、使用水平 Pod 自动扩展 (HPA)、实施 Pod 亲和性与反亲和性规则以及控制节点选择都可以帮助减少资源争用并提高资源利用率。通过监控和优化资源使用，k8s 可以确保应用程序高效运行并有效利用资源。\n官方 监控资源的工具 - 文档 文章 Kubernetes 资源优化：基础知识 文章 如何选择正确的 Kubernetes 监控工具 订阅 探索有关监控的热门文章 8. Kubernetes 安全 Kubernetes (k8s) 安全涉及保护集群资源免受潜在威胁，如未经授权的访问、数据泄露和拒绝服务攻击。这可以通过访问控制、网络安全、加密和监控等措施实现。常用的 k8s 安全工具包括基于角色的访问控制 (RBAC)、Kubernetes 网络策略、TLS 证书和容器镜像扫描。定期更新和修补 k8s 环境对于维护安全也很重要。\n官方 安全文档 视频 你需要了解的 Kubernetes 安全最佳实践 订阅 探索有关 Kubernetes 的热门文章 ◇基于角色的访问控制 (RBAC) 基于角色的访问控制 (RBAC) 是一种根据分配给用户或组的角色来控制对 Kubernetes 资源访问的方法。RBAC 涉及创建角色并将其绑定到用户或组，以控制对 Kubernetes 资源的访问。角色被定义为一组规则，决定可以对特定资源执行哪些操作。通过将角色分配给用户或组，可以根据角色中定义的权限限制或授予对 Kubernetes 资源的访问。RBAC 通过限制对授权用户和组的访问，帮助确保 Kubernetes 集群的安全性和完整性。\n官方 基于角色的访问控制最佳实践 文章 Kubernetes 访问控制入门 文章 理解 Kubernetes 授权的实用方法 文章 Kubernetes RBAC 的三种现实方法 文章 基于角色的访问控制：五种常见的授权模式 文章 使用 RBAC 大规模保护 Kubernetes 和其他资源 视频 理解 Kubernetes 中的基于角色的访问控制 ◇网络安全 Kubernetes 中的网络安全涉及保护集群内不同组件之间以及与外部网络之间的网络通信。这可以通过网络策略、加密、认证、授权和防火墙规则等多种机制实现。网络策略提供了对网络流量的细粒度控制，而加密则确保 Pod、节点和外部系统之间的安全通信。认证和授权机制防止未经授权的访问，并提供各种组件之间的安全通信。防火墙规则通过限制对特定端口和协议的访问，帮助保护集群免受外部攻击。总体而言，Kubernetes 中的网络安全对于维护集群的机密性、完整性和可用性至关重要。\n官方 网络策略 - 文档 文章 6 个 Kubernetes 安全最佳实践 文章 Kubernetes 网络安全效应 文章 Kubernetes 安全最佳实践，让你远离新闻头条 视频 Kubernetes 安全最佳实践 订阅 探索有关安全的热门文章 ◇容器和 Pod 安全 Kubernetes (k8s) 可以通过使用可信的容器镜像、限制容器权限、强制执行 Pod 级安全策略、实施网络安全措施、使用 RBAC 进行访问控制以及使用 Secrets 和 ConfigMaps 管理敏感信息等措施来保护容器和 Pod。这些实践有助于组织降低其 k8s 集群中发生安全事件的风险。\n官方 为 Pod 或容器配置安全上下文 文章 教程：创建 Kubernetes Pod 安全策略 文章 6 个被忽视但重要的 Kubernetes 安全功能 视频 Kubernetes 安全 - Pod 或容器的安全上下文 订阅 探索有关安全的热门文章 ◇安全扫描器 Kubernetes 安全扫描器帮助在部署前识别容器镜像中的漏洞和潜在安全威胁。流行的选项包括 Aqua Security、Twistlock、Sysdig Secure、Trivy、Anchore Engine 和 OpenSCAP。这些扫描器提供了多种功能，如漏洞扫描、合规性检查和 Kubernetes 环境的运行时保护。通过将这些扫描器集成到其管道中，组织可以确保其 Kubernetes 部署的安全性和完整性，并最大限度地降低安全漏洞和数据丢失的风险。\n文章 8+ 个开源 Kubernetes 漏洞扫描器 文章 7 个 Kubernetes 安全扫描器 文章 通过 CI/CD 自动化镜像扫描提高安全性 文章 Starboard：将所有 Kubernetes 安全组件整合在一起 订阅 探索有关安全的热门文章 9. 监控与日志 在 Kubernetes 中，监控涉及对集群及其组件的健康和性能进行持续关注。这包括监控 CPU、内存和存储等资源的使用情况和可用性，以及 Kubernetes 服务和节点的状态。一些流行的 Kubernetes 监控解决方案包括 Prometheus、Grafana 和 Datadog。\nKubernetes 中的日志记录涉及收集和分析集群中各种组件（如应用程序、Pod 和节点）生成的日志。这些日志可以提供有关集群行为和性能的洞察，并有助于排查问题。一些流行的 Kubernetes 日志记录解决方案包括 Fluentd、Elasticsearch 和 Kibana。\n官方 资源监控工具 官方 监控、日志记录和调试 官方 日志架构 feed 探索关于日志的热门帖子 ◇日志 日志由集群节点上运行的容器化应用程序生成。您可以使用 kubectl logs 命令后跟 Pod 名称来访问这些日志。默认情况下，此命令显示 Pod 中最近容器的日志，但您可以通过在命令中添加容器名称来指定 Pod 中的特定容器。在命令中添加 -f 标志可以实时跟踪日志。Kubernetes 还提供了第三方日志记录解决方案，如 EFK 和 Prometheus 堆栈，这些解决方案为大规模应用程序提供了更高级的日志记录功能和可扩展性。\n官方 系统日志 视频 Kubernetes：日志收集解释 ◇指标 需要监控的指标包括 CPU 使用率、内存使用率、网络使用率、磁盘使用率、API 服务器指标、Pod 和容器指标以及集群级指标。这些指标提供了有关集群、节点和应用程序的性能和健康的洞察。Kubernetes 提供了 Prometheus、Grafana 和 Kubernetes Dashboard 等工具来收集和分析这些指标。通过监控这些指标，管理员可以识别性能问题并优化集群以提高性能和可扩展性。\n官方 节点指标数据 视频 如何在 K8s 中收集指标？ ◇追踪 Kubernetes 中的追踪涉及使用 Jaeger 或 Zipkin 等工具监控请求在系统不同组件之间的流动。OpenTracing 和 OpenCensus 提供了一种一致的方式来捕获集群上运行的不同组件和应用程序的追踪。追踪有助于识别性能瓶颈、调试问题并优化系统以提高性能和可扩展性。通过在 Kubernetes 中监控追踪，管理员可以识别问题并采取纠正措施，以确保系统的高效性能。\n官方 Kubernetes 系统组件的追踪 视频 追踪简介 ◇资源健康 Kubernetes 中的资源健康监控涉及监控 Pod、节点和容器等资源的健康和可用性。它帮助管理员使用 Kubernetes Dashboard、Prometheus 或 Grafana 等工具识别和排查可能影响系统性能和可用性的问题。资源健康监控还有助于确保系统能够抵御故障，并能够从任何中断中快速恢复。这是管理 Kubernetes 集群的重要部分，确保了系统的可靠性、可用性和可扩展性。\n视频 使用 Grafana 和 Prometheus 的仪表板 视频 如何使用 Prometheus 和 Grafana 监控 Kubernetes 集群 ◇可观测性引擎 Kubernetes 中的可观测性（k8s）指的是能够深入了解集群、应用程序和服务的内部运作。Kubernetes 中的可观测性引擎是一种工具或平台，用于促进从 Kubernetes 环境中的各种来源收集、分析和可视化数据。一些流行的 Kubernetes 可观测性引擎包括 Prometheus、Grafana、Jaeger 和 Elastic Stack (ELK)。\n开源 K8sGPT - Kubernetes 问题的 AI 扫描器 开源 HolmesGPT - 用于调查 Kubernetes 问题和 Prometheus 警报的 AIOps 平台 文章 Kubernetes 可观测性 101：工具、最佳实践等 文章 KubeSphere 中的 Kubernetes 可观测性 feed 探索关于可观测性的热门帖子 10. 自动扩展 Kubernetes 中的自动扩展涉及根据需求调整分配给部署或一组 Pod 的资源。它包括水平 Pod 自动扩展（HPA）和垂直 Pod 自动扩展（VPA），分别增加或减少副本或调整资源请求和限制。自动扩展可以与集群自动扩展结合使用，以有效分配资源并确保应用程序的响应能力。它适用于处理可变工作负载或流量突然激增的情况。\n官方 Kubernetes 中的自动扩展 视频 Kubernetes 集群自动扩展入门 ◇水平 Pod 自动扩展器 (HPA) 这是 Kubernetes 中的一项功能，它根据当前工作负载的需求自动扩展 Pod 的副本数量。HPA 控制器监控 Pod 的 CPU 使用率或其他指标，并调整 Pod 的副本数量以满足指定的目标。这有助于确保工作负载能够处理流量和需求的增加，而不会使集群资源过载。\n官方 水平 Pod 自动扩展 - 文档 ◇垂直 Pod 自动扩展器 (VPA) 垂直 Pod 自动扩展器（VPA）是 Kubernetes 中的一项功能，它自动化了调整 Pod 中容器资源限制的过程。与水平 Pod 自动扩展器（HPA）不同，HPA 扩展 Pod 的副本数量，而 VPA 扩展分配给 Pod 容器的资源。它根据每个容器的实际使用情况调整其资源请求和限制。\n文章 什么是 Kubernetes VPA？ 视频 垂直 Pod 自动扩展：示例 ◇集群自动扩展 集群自动扩展是 Kubernetes 中的一项功能，它根据节点资源利用率自动扩展集群。它监控节点的利用率，并相应地创建或删除节点，以确保有适当的资源来处理工作负载，同时最大限度地降低成本。实现集群自动扩展有不同的方法，例如使用水平 Pod 自动扩展器或集群自动扩展器。它适用于工作负载高度变化的场景，确保应用程序保持响应性和可用性，而无需手动调整集群大小。\n官方 Kubernetes 中的自动扩展 视频 Kubernetes 集群自动扩展入门 11. 调度 Kubernetes中的调度是指将工作负载分配给集群中特定节点的过程。Kubernetes调度器根据资源可用性、节点适用性和工作负载优先级等因素做出调度决策。它在集群中平衡工作负载，以确保高效的资源利用，并避免节点过载。调度会考虑地理位置、硬件需求和应用程序特定需求等因素。\n官方 Kubernetes调度器 官方 调度框架 ◇调度基础 调度涉及根据资源可用性、标签、亲和性/反亲和性规则、污点和容忍度等标准将Pod分配给工作节点。Pod是k8s中最小的可部署单元，由一个或多个共享相同网络命名空间的容器组成。调度器负责将Pod分配给节点，而标签用于匹配。亲和性和反亲和性规则规定了根据Pod与其他Pod或节点的关系如何调度Pod。QoS用于根据资源需求对Pod调度进行优先级排序。\n官方 Kubernetes调度器 视频 Kubernetes中的调度如何工作 ◇污点和容忍度 污点和容忍度在Kubernetes中用于根据标签限制或允许Pod在特定节点上调度。污点是应用于节点的标签，用于指示某些限制或要求。容忍度是应用于Pod的标签，表明它可以容忍某些污点。当节点有污点时，只有具有相应容忍度的Pod才能在该节点上调度。此功能对于各种目的很有用，例如确保关键和非关键工作负载的分离，为特定任务保留节点，以及防止节点过载。\n官方 污点和容忍度 视频 Kubernetes初学者：污点和容忍度 ◇拓扑分布约束 拓扑分布约束确保Pod在集群拓扑中均匀分布。约束定义了在给定级别（如节点、区域或机架）上可以运行特定类型Pod的数量规则。这些约束可以根据特定需求进行自定义，例如确保关键工作负载分布在多个区域。它们通过防止资源过载和促进工作负载的平衡分布，帮助防止单点故障并提高应用程序弹性。可以使用Kubernetes API或命令行界面添加约束。\n官方 拓扑分布约束 视频 Kubernetes | 拓扑分布约束 ◇Pod优先级 Kubernetes中的Pod优先级决定了当资源需求存在竞争时，Pod在节点上调度的顺序。每个Pod都被分配一个数字优先级值，较高的值表示较高的优先级。调度器在考虑节点适用性、污点和容忍度以及亲和性和反亲和性规则的同时，最大化已调度Pod的总优先级。优先级可以根据业务逻辑或应用程序需求手动或自动设置。优先级有助于确保关键工作负载获得必要的资源并首先调度，而较低优先级的工作负载在资源可用时调度。\n官方 Pod优先级 - 文档 视频 Kubernetes Pod优先级（示例） ◇驱逐 驱逐是指由于资源限制或Pod故障等原因，终止或删除节点上运行的Pod。它们可以由系统启动，也可以由管理员通过API手动启动。驱逐可以是优雅的，允许Pod清理资源，也可以是强制的，立即终止它们。Kubernetes提供了抢占和Pod干扰预算，以有效处理驱逐并最小化服务中断。驱逐对于管理和维护Kubernetes集群是必要的，Kubernetes提供了处理它们的工具。\n官方 节点压力驱逐 官方 API发起的驱逐 12. 存储和卷 卷提供可供Pod中运行的容器访问的目录，并可以由各种存储类型支持。持久卷独立于Pod，可以被多个Pod重复使用，而持久卷声明从持久卷请求特定数量的存储。存储类允许管理员定义可以动态配置的不同存储类型。\n官方 存储文档 官方 持久卷文档 视频 Kubernetes中有状态应用程序的基础知识 feed 探索关于存储的热门帖子 ◇CSI驱动 Kubernetes中的CSI（容器存储接口）驱动程序为存储提供商提供了一种标准方式，用于与Kubernetes集成并为容器化应用程序提供持久存储。它们作为独立的容器化进程运行，并通过定义良好的API与Kubernetes通信。CSI驱动程序允许Kubernetes访问各种存储系统，并提供快照和克隆等高级功能。\n官方 Kubernetes的容器存储接口(CSI) 视频 Kubernetes中的CSI ◇有状态应用 在Kubernetes中，存储是有状态应用程序的关键组件，因为这些应用程序需要持久数据存储，可以在应用程序的多个副本之间使用。Kubernetes提供了几种存储选项，包括卷、持久卷和存储类。\n卷是Kubernetes存储的基本构建块。卷是一个可访问运行应用程序的容器的目录，可以由不同类型的存储支持，如主机目录、云提供商磁盘或网络存储系统。卷由Kubernetes创建和管理，可以作为Pod定义的一部分挂载到容器中。\n官方 有状态应用程序 视频 Kubernetes中有状态应用程序的基础知识 13. 部署模式 部署是Kubernetes中用于声明式管理应用程序容器在集群中的推出和扩展的资源。部署允许团队定义部署的期望状态，并自动管理底层的Pod和副本集以实现该状态。Kubernetes提供了各种部署策略，如RollingUpdate或Canary，以控制应用程序新版本的推出和扩展方式。\n官方 部署 - 文档 视频 Kubernetes部署如何工作？ feed 探索关于CI/CD的热门帖子 ◇CI/CD集成 与Kubernetes集成CI/CD涉及设置一个管道，用于构建和部署应用程序到Kubernetes集群。这个过程通常包括开发应用程序代码，设置源代码仓库，选择CI/CD工具，构建Docker镜像，将镜像推送到容器注册表，使用Kubernetes清单部署应用程序，以及监控和排除管道和部署问题。通过自动化应用程序的测试和部署，CI/CD与Kubernetes集成可以帮助提高软件质量，加速开发，并确保一致和可靠的部署。\n文章 使用Kubernetes创建CI/CD管道 视频 部署到Kubernetes集群 | CI/CD Kubernetes feed 探索关于CI/CD的热门帖子 ◇GitOps GitOps是一套使用Git仓库作为声明式配置的真实来源来管理基础设施和应用程序的实践。在Kubernetes中，GitOps涉及使用Git作为系统期望状态和实际状态的单一真实来源，自动化部署和管理任务，并通常与持续交付（CD）实践一起使用。其结果是一种更一致、更可靠、更自动化的管理基础设施和应用程序的方法。\n文章 将GitOps与Kubernetes集群一起使用 视频 Kubernetes的DevOps和GitOps feed 探索关于GitOps的热门帖子 ◇Helm Charts Helm是Kubernetes的包管理器，通过使用可重用和版本化的Helm图表简化了复杂应用程序的部署和管理。这些图表由描述相关Kubernetes资源集的YAML文件组成，可以使用值文件和Go模板进行自定义。Helm图表还可以依赖于其他图表，并存储在中央仓库（如Helm Hub）中，以便于共享和访问。通过利用Helm，团队可以简化应用程序管理并减少重复工作。\n官方 Helm文档 视频 Kubernetes中的Helm是什么？Helm和Helm图表解释 feed 探索关于Helm的热门帖子 ◇金丝雀部署 金丝雀部署是Kubernetes中使用的一种技术，通过将一小部分用户或流量引导到新版本，而大多数用户继续使用旧版本，来逐步推出应用程序的新版本。这种方法允许在实际条件下测试新版本，然后再完全提交更新。在Kubernetes中，金丝雀部署可以使用Istio、Linkerd或Nginx等工具实现，或者使用内置功能，如部署策略和流量路由。\n文章 K8s部署的金丝雀部署 视频 Kubernetes金丝雀部署解释 ◇蓝绿部署 蓝绿部署是Kubernetes中用于部署应用程序新版本的部署策略，通过运行两个相同的生产环境，一个使用当前版本（蓝色），另一个使用新版本（绿色）。在绿色环境经过完全测试后，流量会从蓝色环境路由到绿色环境，为用户提供无缝过渡，避免任何停机或中断。在Kubernetes中，蓝绿部署可以使用各种工具和技术实现，包括部署策略、流量路由和负载平衡。\n文章 创建Kubernetes蓝绿部署 视频 Kubernetes - 蓝/绿部署 ◇滚动更新/回滚 滚动更新是Kubernetes中的一种部署策略，用于通过逐步更新现有Pod为新版本来部署应用程序的新版本，同时确保应用程序在整个过程中保持可用。Kubernetes允许团队配置滚动更新，以一次更新一定百分比的Pod，并等待它们变得可用后再继续更新。如果出现任何问题，Kubernetes提供了回滚机制，允许团队轻松回退到应用程序的先前版本。\n官方 回滚部署 - 文档 视频 Kubernetes滚动更新 | 回滚部署 14. Kubernetes高级主题 Kubernetes可以通过自定义资源和控制器扩展，以管理复杂的应用程序和工作流。它提供了各种网络模型来支持Pod和服务之间的通信，包括服务网格和网络策略，并可以与各种CI/CD工具和平台集成，以自动化应用程序部署和更新。K8s提供了各种管理存储的选项，包括本地存储、网络附加存储（NAS）和云存储提供商。\n文章 47个掌握Kubernetes的高级教程 视频 教程系列 - 高级Kubernetes feed 探索关于Kubernetes的热门帖子 ◇创建自定义控制器 Kubernetes中的自定义控制器自动化管理Kubernetes原生不支持的自定义资源。它们被实现为Kubernetes控制器，监视自定义资源并对其状态变化做出反应。自定义资源是通过扩展Kubernetes API创建的，增加特定于组织需求的新资源类型。自定义控制器可以使用各种编程语言和框架开发，如Operator框架。Operator框架提供了开发、测试和部署自定义控制器的工具和最佳实践。\n官方 自定义控制器 视频 使用自定义控制器扩展Kubernetes ◇自定义调度器和扩展器 Kubernetes中的自定义调度器扩展器通过允许用户基于自定义指标和约束定义自己的调度逻辑，增强了Kubernetes的调度能力。它们被实现为与Kubernetes调度器一起运行的自定义Kubernetes控制器。自定义调度器扩展器可用于实现特定于组织需求的调度策略，并可以使用各种编程语言开发。它们拦截调度请求，根据用户定义的规则添加自定义调度逻辑，并将请求传回Kubernetes调度器。\n文章 创建自定义Kubernetes调度器 视频 自定义调度器Kubernetes | 多调度器Kubernetes ◇自定义资源定义(CRDs) Kubernetes中的自定义资源定义(CRDs)通过定义特定于组织需求的新资源类型来扩展Kubernetes API。CRDs创建可以管理各种资源的自定义资源，如应用程序、数据库、存储和网络。它们使用YAML或JSON清单定义，可以使用Kubernetes API服务器创建和管理。一旦创建，自定义资源可以使用Kubernetes控制器管理，并与其他Kubernetes组件集成。CRDs是简化Kubernetes操作并使组织能够以更高效和定制化的方式管理资源的强大工具。\n官方 自定义资源 - 文档 视频 自定义资源定义(CRD)解释与演示 ◇Kubernetes扩展和API Kubernetes(k8s)扩展和API用于自定义Kubernetes的行为并向系统添加新功能。Kubernetes扩展，包括自定义资源定义(CRDs)、自定义控制器、自定义调度器扩展器和自定义指标API，增强了Kubernetes功能。Kubernetes API用于管理Kubernetes集群中的资源并与系统交互。Kubernetes扩展和API共同提供了一个强大的工具包，用于自定义和扩展Kubernetes，使用户能够构建自定义组件和API，简化Kubernetes中的操作。\n官方 扩展 - 文档 官方 Kubernetes API - 文档 feed 探索关于Kubernetes的热门帖子 ◇集群操作 自己的集群 要创建自己的Kubernetes集群，您需要选择云提供商或设置自己的基础设施，在基础设施上安装Kubernetes，通过设置网络、存储和安全来配置集群，使用Kubernetes清单部署应用程序，并使用Kubernetes Dashboard、kubectl和Prometheus等工具监控和管理集群。这个过程可能很复杂和耗时，但它让您完全控制基础设施，并允许定制以满足特定需求。\n官方 使用kubeadm创建集群 视频 KUBERNETES | 安装Kubernetes集群 控制平面安装 控制平面的组件对集群做出全局决策（例如调度），以及检测和响应集群事件（例如，当部署的副本字段不满足时启动新的Pod）。控制平面组件可以在集群中的任何机器上运行。然而，为了简单起见，设置脚本通常在同一台机器上启动所有控制平面组件，并且不在这台机器上运行用户容器。\n官方 初始化控制平面节点 - 文档 视频 教程 - 安装控制平面组件 管理工作节点 Kubernetes通过将容器放入Pod中在节点上运行您的工作负载。节点可能是虚拟机或物理机，取决于集群。每个节点由控制平面管理，并包含运行Pod所需的服务。\n官方 节点管理 视频 Kubernetes 101：节点教程 多集群管理 Kubernetes(k8s)中的多集群管理是指使用单个控制平面管理多个Kubernetes集群的能力。这种方法允许管理员集中管理和编排多个集群中的资源，无论它们位于何处，而无需在多个管理控制台或工具之间切换。\n官方 配置对多个集群的访问 - 文档 视频 Kubernetes集群管理策略 ",
+  "wordCount" : "14077",
+  "inLanguage": "zh",
+  "datePublished": "2025-03-03T00:00:00Z",
+  "dateModified": "2025-03-03T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yuuniji.github.io/posts/roadmap-kubernetes/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "叶泽伟的博客",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yuuniji.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yuuniji.github.io/" accesskey="h" title="叶泽伟的博客 (Alt + H)">叶泽伟的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://yuuniji.github.io/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                    <li>
+                        <a href="https://yuuniji.github.io/ja/" title="日本語"
+                            aria-label="日本語">Ja</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yuuniji.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yuuniji.github.io/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://yuuniji.github.io/">主页</a>&nbsp;»&nbsp;<a href="https://yuuniji.github.io/posts/">文章列表</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Kubernetes 路线图
+    </h1>
+    <div class="post-meta"><span title='2025-03-03 00:00:00 +0000 UTC'>三月 3, 2025</span>&nbsp;·&nbsp;29 分钟&nbsp;|&nbsp;语言:
+<ul class="i18n_list">
+    <li>
+        <a href="https://yuuniji.github.io/en/posts/roadmap-kubernetes/">En</a>
+    </li>
+    <li>
+        <a href="https://yuuniji.github.io/ja/posts/roadmap-kubernetes/">Ja</a>
+    </li>
+</ul>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-kubernetes-%e7%ae%80%e4%bb%8b" aria-label="1. Kubernetes 简介">1. Kubernetes 简介</a><ul>
+                        
+                <li>
+                    <a href="#kubernetes-%e6%a6%82%e8%bf%b0" aria-label="◇Kubernetes 概述">◇Kubernetes 概述</a></li>
+                <li>
+                    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%80%89%e6%8b%a9-kubernetes" aria-label="◇为什么选择 Kubernetes">◇为什么选择 Kubernetes</a></li>
+                <li>
+                    <a href="#%e5%85%b3%e9%94%ae%e6%a6%82%e5%bf%b5%e5%92%8c%e6%9c%af%e8%af%ad" aria-label="◇关键概念和术语">◇关键概念和术语</a></li>
+                <li>
+                    <a href="#kubernetes-%e6%9b%bf%e4%bb%a3%e6%96%b9%e6%a1%88" aria-label="◇Kubernetes 替代方案">◇Kubernetes 替代方案</a></li></ul>
+                </li>
+                <li>
+                    <a href="#2-%e5%ae%b9%e5%99%a8" aria-label="2. 容器">2. 容器</a></li>
+                <li>
+                    <a href="#3-%e8%ae%be%e7%bd%ae-kubernetes" aria-label="3. 设置 Kubernetes">3. 设置 Kubernetes</a><ul>
+                        
+                <li>
+                    <a href="#%e5%ae%89%e8%a3%85%e6%9c%ac%e5%9c%b0%e9%9b%86%e7%be%a4" aria-label="◇安装本地集群">◇安装本地集群</a></li>
+                <li>
+                    <a href="#%e9%80%89%e6%8b%a9%e6%89%98%e7%ae%a1%e6%8f%90%e4%be%9b%e5%95%86" aria-label="◇选择托管提供商">◇选择托管提供商</a></li>
+                <li>
+                    <a href="#%e9%83%a8%e7%bd%b2%e6%82%a8%e7%9a%84%e7%ac%ac%e4%b8%80%e4%b8%aa%e5%ba%94%e7%94%a8%e7%a8%8b%e5%ba%8f" aria-label="◇部署您的第一个应用程序">◇部署您的第一个应用程序</a></li></ul>
+                </li>
+                <li>
+                    <a href="#4-%e8%bf%90%e8%a1%8c%e5%ba%94%e7%94%a8%e7%a8%8b%e5%ba%8f" aria-label="4. 运行应用程序">4. 运行应用程序</a><ul>
+                        
+                <li>
+                    <a href="#pods" aria-label="◇Pods">◇Pods</a></li>
+                <li>
+                    <a href="#replicasets" aria-label="◇ReplicaSets">◇ReplicaSets</a></li>
+                <li>
+                    <a href="#deployments" aria-label="◇Deployments">◇Deployments</a></li>
+                <li>
+                    <a href="#statefulsets" aria-label="◇StatefulSets">◇StatefulSets</a></li>
+                <li>
+                    <a href="#jobs" aria-label="◇Jobs">◇Jobs</a></li></ul>
+                </li>
+                <li>
+                    <a href="#5-%e6%9c%8d%e5%8a%a1%e4%b8%8e%e7%bd%91%e7%bb%9c" aria-label="5. 服务与网络">5. 服务与网络</a><ul>
+                        
+                <li>
+                    <a href="#%e6%9c%8d%e5%8a%a1%e7%9a%84%e5%a4%96%e9%83%a8%e8%ae%bf%e9%97%ae" aria-label="◇服务的外部访问">◇服务的外部访问</a></li>
+                <li>
+                    <a href="#%e8%b4%9f%e8%bd%bd%e5%9d%87%e8%a1%a1" aria-label="◇负载均衡">◇负载均衡</a></li>
+                <li>
+                    <a href="#%e7%bd%91%e7%bb%9c%e4%b8%8e-pod-%e9%97%b4%e9%80%9a%e4%bf%a1" aria-label="◇网络与 Pod 间通信">◇网络与 Pod 间通信</a></li></ul>
+                </li>
+                <li>
+                    <a href="#6-%e9%85%8d%e7%bd%ae%e7%ae%a1%e7%90%86" aria-label="6. 配置管理">6. 配置管理</a><ul>
+                        
+                <li>
+                    <a href="#%e4%bd%bf%e7%94%a8-configmap-%e6%b3%a8%e5%85%a5-pod-%e9%85%8d%e7%bd%ae" aria-label="◇使用 ConfigMap 注入 Pod 配置">◇使用 ConfigMap 注入 Pod 配置</a></li>
+                <li>
+                    <a href="#%e4%bd%bf%e7%94%a8-secret-%e7%ae%a1%e7%90%86%e6%95%8f%e6%84%9f%e6%95%b0%e6%8d%ae" aria-label="◇使用 Secret 管理敏感数据">◇使用 Secret 管理敏感数据</a></li></ul>
+                </li>
+                <li>
+                    <a href="#7-%e8%b5%84%e6%ba%90%e7%ae%a1%e7%90%86" aria-label="7. 资源管理">7. 资源管理</a><ul>
+                        
+                <li>
+                    <a href="#%e8%ae%be%e7%bd%ae%e8%b5%84%e6%ba%90%e8%af%b7%e6%b1%82%e5%92%8c%e9%99%90%e5%88%b6" aria-label="◇设置资源请求和限制">◇设置资源请求和限制</a></li>
+                <li>
+                    <a href="#%e4%b8%ba%e5%91%bd%e5%90%8d%e7%a9%ba%e9%97%b4%e5%88%86%e9%85%8d%e9%85%8d%e9%a2%9d" aria-label="◇为命名空间分配配额">◇为命名空间分配配额</a></li>
+                <li>
+                    <a href="#%e7%9b%91%e6%8e%a7%e5%92%8c%e4%bc%98%e5%8c%96%e8%b5%84%e6%ba%90%e4%bd%bf%e7%94%a8" aria-label="◇监控和优化资源使用">◇监控和优化资源使用</a></li></ul>
+                </li>
+                <li>
+                    <a href="#8-kubernetes-%e5%ae%89%e5%85%a8" aria-label="8. Kubernetes 安全">8. Kubernetes 安全</a><ul>
+                        
+                <li>
+                    <a href="#%e5%9f%ba%e4%ba%8e%e8%a7%92%e8%89%b2%e7%9a%84%e8%ae%bf%e9%97%ae%e6%8e%a7%e5%88%b6-rbac" aria-label="◇基于角色的访问控制 (RBAC)">◇基于角色的访问控制 (RBAC)</a></li>
+                <li>
+                    <a href="#%e7%bd%91%e7%bb%9c%e5%ae%89%e5%85%a8" aria-label="◇网络安全">◇网络安全</a></li>
+                <li>
+                    <a href="#%e5%ae%b9%e5%99%a8%e5%92%8c-pod-%e5%ae%89%e5%85%a8" aria-label="◇容器和 Pod 安全">◇容器和 Pod 安全</a></li>
+                <li>
+                    <a href="#%e5%ae%89%e5%85%a8%e6%89%ab%e6%8f%8f%e5%99%a8" aria-label="◇安全扫描器">◇安全扫描器</a></li></ul>
+                </li>
+                <li>
+                    <a href="#9-%e7%9b%91%e6%8e%a7%e4%b8%8e%e6%97%a5%e5%bf%97" aria-label="9. 监控与日志">9. 监控与日志</a><ul>
+                        
+                <li>
+                    <a href="#%e6%97%a5%e5%bf%97" aria-label="◇日志">◇日志</a></li>
+                <li>
+                    <a href="#%e6%8c%87%e6%a0%87" aria-label="◇指标">◇指标</a></li>
+                <li>
+                    <a href="#%e8%bf%bd%e8%b8%aa" aria-label="◇追踪">◇追踪</a></li>
+                <li>
+                    <a href="#%e8%b5%84%e6%ba%90%e5%81%a5%e5%ba%b7" aria-label="◇资源健康">◇资源健康</a></li>
+                <li>
+                    <a href="#%e5%8f%af%e8%a7%82%e6%b5%8b%e6%80%a7%e5%bc%95%e6%93%8e" aria-label="◇可观测性引擎">◇可观测性引擎</a></li></ul>
+                </li>
+                <li>
+                    <a href="#10-%e8%87%aa%e5%8a%a8%e6%89%a9%e5%b1%95" aria-label="10. 自动扩展">10. 自动扩展</a><ul>
+                        
+                <li>
+                    <a href="#%e6%b0%b4%e5%b9%b3-pod-%e8%87%aa%e5%8a%a8%e6%89%a9%e5%b1%95%e5%99%a8-hpa" aria-label="◇水平 Pod 自动扩展器 (HPA)">◇水平 Pod 自动扩展器 (HPA)</a></li>
+                <li>
+                    <a href="#%e5%9e%82%e7%9b%b4-pod-%e8%87%aa%e5%8a%a8%e6%89%a9%e5%b1%95%e5%99%a8-vpa" aria-label="◇垂直 Pod 自动扩展器 (VPA)">◇垂直 Pod 自动扩展器 (VPA)</a></li>
+                <li>
+                    <a href="#%e9%9b%86%e7%be%a4%e8%87%aa%e5%8a%a8%e6%89%a9%e5%b1%95" aria-label="◇集群自动扩展">◇集群自动扩展</a></li></ul>
+                </li>
+                <li>
+                    <a href="#11-%e8%b0%83%e5%ba%a6" aria-label="11. 调度">11. 调度</a><ul>
+                        
+                <li>
+                    <a href="#%e8%b0%83%e5%ba%a6%e5%9f%ba%e7%a1%80" aria-label="◇调度基础">◇调度基础</a></li>
+                <li>
+                    <a href="#%e6%b1%a1%e7%82%b9%e5%92%8c%e5%ae%b9%e5%bf%8d%e5%ba%a6" aria-label="◇污点和容忍度">◇污点和容忍度</a></li>
+                <li>
+                    <a href="#%e6%8b%93%e6%89%91%e5%88%86%e5%b8%83%e7%ba%a6%e6%9d%9f" aria-label="◇拓扑分布约束">◇拓扑分布约束</a></li>
+                <li>
+                    <a href="#pod%e4%bc%98%e5%85%88%e7%ba%a7" aria-label="◇Pod优先级">◇Pod优先级</a></li>
+                <li>
+                    <a href="#%e9%a9%b1%e9%80%90" aria-label="◇驱逐">◇驱逐</a></li></ul>
+                </li>
+                <li>
+                    <a href="#12-%e5%ad%98%e5%82%a8%e5%92%8c%e5%8d%b7" aria-label="12. 存储和卷">12. 存储和卷</a><ul>
+                        
+                <li>
+                    <a href="#csi%e9%a9%b1%e5%8a%a8" aria-label="◇CSI驱动">◇CSI驱动</a></li>
+                <li>
+                    <a href="#%e6%9c%89%e7%8a%b6%e6%80%81%e5%ba%94%e7%94%a8" aria-label="◇有状态应用">◇有状态应用</a></li></ul>
+                </li>
+                <li>
+                    <a href="#13-%e9%83%a8%e7%bd%b2%e6%a8%a1%e5%bc%8f" aria-label="13. 部署模式">13. 部署模式</a><ul>
+                        
+                <li>
+                    <a href="#cicd%e9%9b%86%e6%88%90" aria-label="◇CI/CD集成">◇CI/CD集成</a></li>
+                <li>
+                    <a href="#gitops" aria-label="◇GitOps">◇GitOps</a></li>
+                <li>
+                    <a href="#helm-charts" aria-label="◇Helm Charts">◇Helm Charts</a></li>
+                <li>
+                    <a href="#%e9%87%91%e4%b8%9d%e9%9b%80%e9%83%a8%e7%bd%b2" aria-label="◇金丝雀部署">◇金丝雀部署</a></li>
+                <li>
+                    <a href="#%e8%93%9d%e7%bb%bf%e9%83%a8%e7%bd%b2" aria-label="◇蓝绿部署">◇蓝绿部署</a></li>
+                <li>
+                    <a href="#%e6%bb%9a%e5%8a%a8%e6%9b%b4%e6%96%b0%e5%9b%9e%e6%bb%9a" aria-label="◇滚动更新/回滚">◇滚动更新/回滚</a></li></ul>
+                </li>
+                <li>
+                    <a href="#14-kubernetes%e9%ab%98%e7%ba%a7%e4%b8%bb%e9%a2%98" aria-label="14. Kubernetes高级主题">14. Kubernetes高级主题</a><ul>
+                        
+                <li>
+                    <a href="#%e5%88%9b%e5%bb%ba%e8%87%aa%e5%ae%9a%e4%b9%89%e6%8e%a7%e5%88%b6%e5%99%a8" aria-label="◇创建自定义控制器">◇创建自定义控制器</a></li>
+                <li>
+                    <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e8%b0%83%e5%ba%a6%e5%99%a8%e5%92%8c%e6%89%a9%e5%b1%95%e5%99%a8" aria-label="◇自定义调度器和扩展器">◇自定义调度器和扩展器</a></li>
+                <li>
+                    <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e8%b5%84%e6%ba%90%e5%ae%9a%e4%b9%89crds" aria-label="◇自定义资源定义(CRDs)">◇自定义资源定义(CRDs)</a></li>
+                <li>
+                    <a href="#kubernetes%e6%89%a9%e5%b1%95%e5%92%8capi" aria-label="◇Kubernetes扩展和API">◇Kubernetes扩展和API</a></li>
+                <li>
+                    <a href="#%e9%9b%86%e7%be%a4%e6%93%8d%e4%bd%9c" aria-label="◇集群操作">◇集群操作</a><ul>
+                        
+                <li>
+                    <a href="#%e8%87%aa%e5%b7%b1%e7%9a%84%e9%9b%86%e7%be%a4" aria-label="自己的集群">自己的集群</a></li>
+                <li>
+                    <a href="#%e6%8e%a7%e5%88%b6%e5%b9%b3%e9%9d%a2%e5%ae%89%e8%a3%85" aria-label="控制平面安装">控制平面安装</a></li>
+                <li>
+                    <a href="#%e7%ae%a1%e7%90%86%e5%b7%a5%e4%bd%9c%e8%8a%82%e7%82%b9" aria-label="管理工作节点">管理工作节点</a></li>
+                <li>
+                    <a href="#%e5%a4%9a%e9%9b%86%e7%be%a4%e7%ae%a1%e7%90%86" aria-label="多集群管理">多集群管理</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+  <div class="post-content"><h2 id="1-kubernetes-简介">1. Kubernetes 简介<a hidden class="anchor" aria-hidden="true" href="#1-kubernetes-简介">#</a></h2>
+<p>Kubernetes，也称为 k8s，是一个开源的容器编排平台，能够自动化容器化应用程序的部署、扩展和管理。它提供了一种抽象底层基础设施的方式，并能够大规模管理应用程序，同时还提供了灵活性、可移植性和丰富的功能集。由于其广泛采用、活跃的社区以及处理复杂多层应用程序的能力，Kubernetes 已成为容器编排的事实标准。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/">Kubernetes 文档</a></li>
+<li><em>文章</em> <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes">Kubernetes 简介</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=X48VuDVv0do">Kubernetes 初学者教程</a></li>
+<li><em>动态</em> <a href="https://app.daily.dev/tags/kubernetes?ref=roadmapsh">探索关于 Kubernetes 的热门帖子</a></li>
+</ul>
+<h3 id="kubernetes-概述">◇Kubernetes 概述<a hidden class="anchor" aria-hidden="true" href="#kubernetes-概述">#</a></h3>
+<p>Kubernetes 是一个可移植、可扩展的开源平台，用于管理容器化的工作负载和服务，支持声明式配置和自动化。它拥有一个庞大且快速增长的生态系统。Kubernetes 的服务、支持和工具广泛可用。</p>
+<p>Kubernetes 的名称源自希腊语，意为舵手或飞行员。K8s 作为缩写，源于“K”和“s”之间的八个字母。Google 在 2014 年开源了 Kubernetes 项目。Kubernetes 结合了 Google 超过 15 年的大规模生产工作负载经验以及社区中的最佳实践和理念。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/overview/">Kubernetes 概述</a></li>
+<li><em>文章</em> <a href="https://www.redhat.com/en/topics/containers/what-is-kubernetes">什么是 Kubernetes？</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/kubernetes/">Kubernetes 概述及必读内容</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=VnvRFRk_51k&amp;t=1sn">Kubernetes 教程</a></li>
+<li><em>动态</em> <a href="https://app.daily.dev/tags/kubernetes?ref=roadmapsh">探索关于 Kubernetes 的热门帖子</a></li>
+</ul>
+<h3 id="为什么选择-kubernetes">◇为什么选择 Kubernetes<a hidden class="anchor" aria-hidden="true" href="#为什么选择-kubernetes">#</a></h3>
+<p>Kubernetes（k8s）之所以必要，是因为它提供了一个强大而灵活的平台，用于大规模部署和管理容器化应用程序。它允许轻松扩展、高弹性、应用程序可移植性、自动化许多任务以及容器平台的标准化。k8s 还有助于减少运维团队的复杂性和工作量，使他们能够专注于更具战略意义的计划。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/overview/#why-you-need-kubernetes-and-what-can-it-do">为什么你需要 Kubernetes 以及它能做什么</a></li>
+<li><em>文章</em> <a href="https://www.predicagroup.com/blog/why-kubernetes-2022/">为什么你应该使用 Kubernetes？</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/primer-how-kubernetes-came-to-be-what-it-is-and-why-you-should-care/">入门：Kubernetes 的起源、它是什么以及为什么你应该关注</a></li>
+<li><em>动态</em> <a href="https://app.daily.dev/tags/kubernetes?ref=roadmapsh">探索关于 Kubernetes 的热门帖子</a></li>
+</ul>
+<h3 id="关键概念和术语">◇关键概念和术语<a hidden class="anchor" aria-hidden="true" href="#关键概念和术语">#</a></h3>
+<p>Kubernetes 是一个开源的容器编排平台，能够自动化容器化应用程序的部署、扩展和管理。以下是 Kubernetes 中的一些重要概念和术语：</p>
+<ul>
+<li>
+<p>集群架构：Kubernetes 背后的架构概念。</p>
+</li>
+<li>
+<p>容器：用于打包应用程序及其运行时依赖的技术。</p>
+</li>
+<li>
+<p>工作负载：了解 Pods，Kubernetes 中最小的可部署计算对象，以及帮助您运行它们的更高级抽象。</p>
+</li>
+<li>
+<p>服务、负载均衡和网络：Kubernetes 中网络背后的概念和资源。</p>
+</li>
+<li>
+<p>存储：为集群中的 Pods 提供长期和临时存储的方式。</p>
+</li>
+<li>
+<p>配置：Kubernetes 提供的用于配置 Pods 的资源。</p>
+</li>
+<li>
+<p>集群管理：与创建或管理 Kubernetes 集群相关的底层细节。</p>
+</li>
+<li>
+<p><em>官方</em> <a href="https://kubernetes.io/docs/concepts/">Kubernetes 概念</a></p>
+</li>
+<li>
+<p><em>文章</em> <a href="https://about.gitlab.com/blog/2020/07/30/kubernetes-terminology/">理解 Kubernetes 术语</a></p>
+</li>
+<li>
+<p><em>视频</em> <a href="https://www.youtube.com/watch?v=QJ4fODH6DXI">什么是 Kubernetes？</a></p>
+</li>
+<li>
+<p><em>视频</em> <a href="https://youtu.be/XfBrtNZ2OCw">专家在 2 分钟内解释 Kubernetes</a></p>
+</li>
+</ul>
+<h3 id="kubernetes-替代方案">◇Kubernetes 替代方案<a hidden class="anchor" aria-hidden="true" href="#kubernetes-替代方案">#</a></h3>
+<p>Kubernetes 是一个流行的开源容器编排工具，广泛用于管理和部署容器化应用程序。虽然还有其他容器编排工具可用，如 Docker Swarm、Mesos 和 Nomad，但 Kubernetes 与这些工具之间存在一些关键差异，其中一些如下所述：</p>
+<ul>
+<li>
+<p>架构：Kubernetes 设计为一个模块化系统，具有许多协同工作以提供容器编排的组件，例如 Kubernetes API 服务器、kubelet、kube-proxy 和 etcd。</p>
+</li>
+<li>
+<p>可扩展性：Kubernetes 设计用于处理大规模部署，并可以根据需求扩展应用程序。</p>
+</li>
+<li>
+<p>灵活性：Kubernetes 高度可配置，可以根据特定需求进行定制，而其他容器编排工具的配置选项可能更有限。</p>
+</li>
+<li>
+<p>可移植性：Kubernetes 设计为云无关，可以在任何公共或私有云平台上运行，也可以在本地运行。</p>
+</li>
+<li>
+<p>社区：Kubernetes 拥有一个庞大且活跃的开发者和用户社区，他们为其开发做出贡献并提供支持。</p>
+</li>
+<li>
+<p><em>文章</em> <a href="https://www.techtarget.com/searchitoperations/tip/Compare-container-orchestrators-Apache-Mesos-vs-Kubernetes">比较 Apache Mesos 与 Kubernetes</a></p>
+</li>
+<li>
+<p><em>文章</em> <a href="https://thenewstack.io/docker-swarm-a-user-friendly-alternative-to-kubernetes/">Docker Swarm，Kubernetes 的用户友好替代方案</a></p>
+</li>
+<li>
+<p><em>文章</em> <a href="https://thenewstack.io/can-you-live-without-kubernetes/">没有 Kubernetes 你能活吗？</a></p>
+</li>
+<li>
+<p><em>动态</em> <a href="https://app.daily.dev/tags/kubernetes?ref=roadmapsh">探索关于 Kubernetes 的热门帖子</a></p>
+</li>
+</ul>
+<h2 id="2-容器">2. 容器<a hidden class="anchor" aria-hidden="true" href="#2-容器">#</a></h2>
+<p>Kubernetes 建立在容器之上，因此在学习 Kubernetes 之前，您应该熟悉从头开始运行和构建容器。</p>
+<ul>
+<li><em>文章</em> <a href="https://www.docker.com/101-tutorial/">官方 Docker 教程</a></li>
+<li><em>文章</em> <a href="https://docker-curriculum.com/">Docker 课程</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=Gjnup-PuquQ">100 秒内了解 Docker</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=3c-iBn73dDE">Docker 初学者免费 3 小时视频课程</a></li>
+<li><em>动态</em> <a href="https://app.daily.dev/tags/containers?ref=roadmapsh">探索关于容器的热门帖子</a></li>
+</ul>
+<h2 id="3-设置-kubernetes">3. 设置 Kubernetes<a hidden class="anchor" aria-hidden="true" href="#3-设置-kubernetes">#</a></h2>
+<p>要设置 Kubernetes 集群，您需要选择一个部署环境，在每个节点上安装 Kubernetes 组件，使用插件配置网络，使用 kubeadm init 初始化主节点，使用 kubeadm join 加入工作节点，使用清单部署应用程序，并使用 kubectl 或管理工具管理集群。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/home/#set-up-a-k8s-cluster">设置 K8s 集群</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=z_w3me8tmJA">Kubernetes | 集群设置</a></li>
+<li><em>动态</em> <a href="https://app.daily.dev/tags/kubernetes?ref=roadmapsh">探索关于 Kubernetes 的热门帖子</a></li>
+</ul>
+<h3 id="安装本地集群">◇安装本地集群<a hidden class="anchor" aria-hidden="true" href="#安装本地集群">#</a></h3>
+<p>要在 CentOS 7 或 Ubuntu 上安装和配置 Kubernetes 集群，您需要先设置 Kubernetes 集群的先决条件和要求，然后安装 Kubernetes 组件，包括 Kubeadm、Kubelet 和 Kubectl，接着连接主节点和工作节点。一旦连接建立，您可以通过在集群上部署应用程序来检查它。</p>
+<ul>
+<li><em>文章</em> <a href="https://www.tecmint.com/install-kubernetes-cluster-on-centos-7/">如何在 CentOS 7 上安装 Kubernetes 集群</a></li>
+<li><em>文章</em> <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-kubernetes-cluster-using-kubeadm-on-ubuntu-20-04">如何在 Ubuntu 上使用 Kubeadm 创建 Kubernetes 集群</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/deploy-a-kubernetes-cluster-on-ubuntu-server-with-microk8s/">在 Ubuntu 服务器上使用 Microk8s 部署 Kubernetes 集群</a></li>
+</ul>
+<h3 id="选择托管提供商">◇选择托管提供商<a hidden class="anchor" aria-hidden="true" href="#选择托管提供商">#</a></h3>
+<p>托管提供商是一种基于云的服务，提供托管的 Kubernetes 环境。这意味着提供商处理底层基础设施，如服务器、存储和网络，以及 Kubernetes 集群的安装、配置和维护。</p>
+<p>在选择托管的 Kubernetes 提供商时，请考虑您使用的云提供商、功能和能力、定价和计费、支持、安全性和合规性以及提供商的声誉和评价。通过考虑这些因素，您可以选择一个满足您需求并为您的组织提供最佳价值的提供商。</p>
+<ul>
+<li><em>文章</em> <a href="https://containerjournal.com/features/choosing-a-managed-kubernetes-provider/">选择托管的 Kubernetes 提供商</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/amazon-web-services-gears-elastic-kubernetes-service-for-batch-jobs/">亚马逊网络服务为批处理工作准备弹性 Kubernetes 服务</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/kubernetes/kubernetes-infrastructure-architecture/">如何为 Kubernetes 构建正确的平台</a></li>
+</ul>
+<h3 id="部署您的第一个应用程序">◇部署您的第一个应用程序<a hidden class="anchor" aria-hidden="true" href="#部署您的第一个应用程序">#</a></h3>
+<p>要在 Kubernetes 中部署您的第一个应用程序，您需要在 YAML 文件中创建部署和服务清单，使用 kubectl apply 命令将清单应用到您的 Kubernetes 集群，使用 kubectl get pods 验证您的应用程序的 Pods 是否正在运行，并使用 kubectl get services 测试服务，然后通过 Web 浏览器或 cURL 等工具访问服务。还有一些工具和平台可以简化 Kubernetes 中的应用程序部署，例如 Helm 图表和 Kubernetes 操作符。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/">使用 kubectl 创建部署</a></li>
+<li><em>文章</em> <a href="https://web.archive.org/web/20230326150953/https://www.weave.works/blog/deploying-an-application-on-kubernetes-from-a-to-z">从 A 到 Z 在 Kubernetes 上部署应用程序</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/kubernetes-101-deploy-your-first-application-with-microk8s/">Kubernetes 101：使用 MicroK8s 部署您的第一个应用程序</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=Vj6EFnav5Mg">Kubernetes 教程 | 您的第一个 Kubernetes 应用程序</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=XltFOyGanYE">Kubernetes 101：部署您的第一个应用程序</a></li>
+</ul>
+<h2 id="4-运行应用程序">4. 运行应用程序<a hidden class="anchor" aria-hidden="true" href="#4-运行应用程序">#</a></h2>
+<p>要在 Kubernetes 集群中运行应用程序，您需要使用 YAML 文件定义 Kubernetes 对象，如 Deployment 或 StatefulSet、Service 以及 ConfigMap 或 Secret。Deployment 或 StatefulSet 定义了容器镜像、容器端口和其他设置。Service 为应用程序提供了一个稳定的 IP 地址和 DNS 名称以便访问，而 ConfigMap 或 Secret 包含配置数据或敏感信息。要部署应用程序，请使用 <code>kubectl apply</code> 创建或更新 Kubernetes 对象。Kubernetes 会根据 YAML 文件自动管理应用程序的部署、扩展和网络。可以通过 <code>kubectl</code> 命令进行监控和修改。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tasks/run-application/">运行应用程序 - 文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=7o7e8OAAWyg">Kubernetes 教程 | 运行和部署 Spring Boot 应用程序</a></li>
+</ul>
+<h3 id="pods">◇Pods<a hidden class="anchor" aria-hidden="true" href="#pods">#</a></h3>
+<p>在 Kubernetes 中，Pod 是最小的可部署单元，代表集群中运行的单个进程实例。一个 Pod 可以包含一个或多个容器，这些容器共享相同的网络命名空间，并且可以访问相同的存储卷。Pod 由 Kubernetes 创建和管理，并被调度到集群中的某个节点上运行。Pod 提供了一个轻量级且灵活的抽象层，使 Kubernetes 能够管理容器化应用程序的部署、扩展和网络。Pod 还促进了在同一 Pod 中运行的容器之间的通信和数据交换。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/workloads/pods/">Pod 文档</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/kubernetes-way-part-one/">Kubernetes 之道：Pod 和 Service</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/5-best-practices-for-configuring-kubernetes-pods-running-in-production/">配置生产环境中运行的 Kubernetes Pod 的 5 个最佳实践</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=k0fzMZgpp14">Kubernetes 中的 Pod 是什么？为什么需要它？</a></li>
+</ul>
+<h3 id="replicasets">◇ReplicaSets<a hidden class="anchor" aria-hidden="true" href="#replicasets">#</a></h3>
+<p>ReplicaSet 是一个控制器，用于确保集群中始终运行指定数量的 Pod 副本（相同的副本）。ReplicaSet 通过根据需求变化或硬件故障自动扩展或缩减 Pod 副本的数量，从而确保高可用性和可扩展性。它们通过 YAML 文件定义，该文件指定了所需的副本数量、要使用的 Pod 模板以及其他设置。ReplicaSet 负责监控 Pod 的状态，并根据需要创建或删除副本以满足所需状态。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/">ReplicaSet 文档</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/strategies-running-stateful-applications-kubernetes-pet-sets/">在 Kubernetes 中运行有状态工作负载的策略：Pet Sets</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=1WM-LsH6tKc">Kubernetes 中的 ReplicaSet</a></li>
+</ul>
+<h3 id="deployments">◇Deployments<a hidden class="anchor" aria-hidden="true" href="#deployments">#</a></h3>
+<p>Deployment 是一种通过声明式配置管理 Pod 和 ReplicaSet 的资源对象，它定义了描述应用程序工作负载生命周期的期望状态，包括 Pod 数量、部署策略、容器镜像等。Deployment 控制器确保实际状态与期望状态匹配，例如替换失败的 Pod。开箱即用，Deployments 支持多种部署策略，如“重新创建”和“滚动更新”，但也可以自定义以支持更高级的部署策略，如蓝/绿部署或金丝雀部署。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">Deployments 文档</a></li>
+<li><em>文章</em> <a href="https://codefresh.io/learn/kubernetes-deployment/">Kubernetes Deployment：从基本策略到渐进式交付</a></li>
+<li><em>视频</em> <a href="https://youtu.be/lxc4EXZOOvE">Kubernetes Deployments | 部署策略</a></li>
+</ul>
+<h3 id="statefulsets">◇StatefulSets<a hidden class="anchor" aria-hidden="true" href="#statefulsets">#</a></h3>
+<p>StatefulSet 是一个控制器，用于管理一组需要稳定网络标识和稳定存储卷的有状态 Pod 的部署和扩展。StatefulSets 用于运行有状态应用程序，如数据库，其中每个 Pod 的顺序和唯一性很重要。StatefulSets 为每个 Pod 提供唯一的稳定网络标识和稳定存储卷，这使得有状态应用程序即使在扩展或缩减、节点故障或更换时也能保持数据一致性。StatefulSets 通过 YAML 文件定义，该文件包括 Pod 模板、用于访问 Pod 的 Service 以及其他设置。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/">StatefulSets 文档</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/different-approaches-for-building-stateful-kubernetes-applications/">构建有状态 Kubernetes 应用程序的不同方法</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=pPQKAR1pA9U">Kubernetes StatefulSet | 教程</a></li>
+</ul>
+<h3 id="jobs">◇Jobs<a hidden class="anchor" aria-hidden="true" href="#jobs">#</a></h3>
+<p>Job 是一个控制器，用于管理有限任务或批处理作业的执行。Jobs 用于运行短期任务，如批处理、数据分析或备份，这些任务运行完成后即终止。Jobs 创建一个或多个 Pod 来运行任务，并监控每个 Pod 的完成状态。如果 Pod 失败或终止，Job 会自动创建一个替代 Pod 以确保任务成功完成。Jobs 通过 YAML 文件定义，该文件包括 Pod 模板、完成标准和其他设置。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/workloads/controllers/job/">Jobs 文档</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/how-kubernetes-is-transforming-into-a-universal-scheduler/">Kubernetes 如何转变为通用调度器</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=j1EnBbxSz64">教程 | Kubernetes 中的 Jobs</a></li>
+</ul>
+<h2 id="5-服务与网络">5. 服务与网络<a hidden class="anchor" aria-hidden="true" href="#5-服务与网络">#</a></h2>
+<p>服务和网络是实现 Pod 与外部客户端通信的关键组件。服务为访问一组 Pod 提供了稳定的端点，而网络插件和配置选项则实现了 Pod 之间的通信和网络隔离。这些功能设计为可扩展、可靠且灵活，使开发者能够更轻松地管理和编排复杂的微服务架构。诸如 Ingress 和基于 DNS 的服务发现等附加功能，提供了灵活的外部访问服务方式，并简化了集群内的服务发现。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/services-networking/service/">Service - 文档</a></li>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/services-networking/#the-kubernetes-network-model">Kubernetes 网络模型</a></li>
+<li><em>推荐</em> <a href="https://app.daily.dev/tags/networking?ref=roadmapsh">探索关于网络的热门文章</a></li>
+</ul>
+<h3 id="服务的外部访问">◇服务的外部访问<a hidden class="anchor" aria-hidden="true" href="#服务的外部访问">#</a></h3>
+<p>Kubernetes (k8s) 服务的外部访问允许外部客户端访问集群中运行的 Pod 和服务。在 k8s 中，有多种方式可以实现服务的外部访问，包括 NodePort、LoadBalancer 和 Ingress。Ingress 是 Kubernetes 中的一个对象，它提供了一种灵活的方式来管理外部访问，基于 URL 或主机将流量路由到服务。外部访问对于确保 Kubernetes 部署的可扩展性和可靠性至关重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">Ingress - 文档</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/kubernetes-ingress-for-beginners/">Kubernetes Ingress 入门指南</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=iBYTFpoXx24">如何为 Kubernetes 服务提供外部访问</a></li>
+</ul>
+<h3 id="负载均衡">◇负载均衡<a hidden class="anchor" aria-hidden="true" href="#负载均衡">#</a></h3>
+<p>负载均衡通过使用 Service 对象将网络流量分配到多个 Pod 或节点。Service 为一组 Pod 提供了稳定的网络端点，允许其他 Pod 或外部客户端通过单个 IP 地址和 DNS 名称访问它们。Kubernetes 为 Service 提供了三种负载均衡算法，分别基于轮询、最少连接或 IP 哈希来分配流量。负载均衡是 Kubernetes 网络的重要组成部分，为集群提供了高效且可靠的流量分配。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#load-balancing">负载均衡 - 文档</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/ingress-controllers-the-swiss-army-knife-of-kubernetes/">Ingress 控制器：Kubernetes 的瑞士军刀</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=xCsz9IOt-fs">教程 | Kubernetes 中的负载均衡服务</a></li>
+</ul>
+<h3 id="网络与-pod-间通信">◇网络与 Pod 间通信<a hidden class="anchor" aria-hidden="true" href="#网络与-pod-间通信">#</a></h3>
+<p>网络对于 Kubernetes 集群中 Pod 和资源之间的通信至关重要。每个 Pod 都有一个唯一的 IP 地址，可以直接与其他 Pod 通信。容器网络接口（CNI）插件用于配置 Pod 的网络接口，并提供 Pod 之间的隔离。Kubernetes 还提供了诸如负载均衡、服务发现和 Ingress 等网络服务，使外部流量能够访问 Pod 和服务。这些服务通过 Kubernetes 对象（如 Service、Ingress 和 NetworkPolicies）实现。网络和 Pod 间通信对于 Kubernetes 集群的可扩展性、可靠性和灵活性至关重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/cluster-administration/networking/">集群网络 - 文档</a></li>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tasks/job/job-with-pod-to-pod-communication/">具有 Pod 间通信的 Job</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/how-kubernetes-provides-networking-and-storage-to-applications/">Kubernetes 如何为应用程序提供网络和存储</a></li>
+<li><em>推荐</em> <a href="https://app.daily.dev/tags/networking?ref=roadmapsh">探索关于网络的热门文章</a></li>
+</ul>
+<h2 id="6-配置管理">6. 配置管理<a hidden class="anchor" aria-hidden="true" href="#6-配置管理">#</a></h2>
+<p>Kubernetes (K8s) 中的配置管理是定义和管理在 K8s 集群中运行的应用程序配置的过程。K8s 提供了多种管理配置的机制，包括 ConfigMap 和 Secret，并支持多种将配置注入应用程序容器的方式。配置管理与其他 Kubernetes 功能紧密集成，对于在 Kubernetes 中构建可扩展且可靠的应用程序至关重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/blog/2016/04/configuration-management-with-containers/">容器中的配置管理</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=o-gXx7r7Rz4">Kubernetes 中的配置管理入门</a></li>
+</ul>
+<h3 id="使用-configmap-注入-pod-配置">◇使用 ConfigMap 注入 Pod 配置<a hidden class="anchor" aria-hidden="true" href="#使用-configmap-注入-pod-配置">#</a></h3>
+<p>ConfigMap 是一种存储配置数据的方式，可供集群中运行的应用程序使用。ConfigMap 是一个键值存储，可以保存诸如数据库 URL、凭证、API 密钥等应用程序配置数据。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/configuration/configmap/">ConfigMap 文档</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/kubernetes-crds-what-they-are-and-why-they-are-useful/">Kubernetes CRD：它们是什么以及为什么有用</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=BPrC_lgmcHQ">教程 - Kubernetes 中的 ConfigMap</a></li>
+</ul>
+<h3 id="使用-secret-管理敏感数据">◇使用 Secret 管理敏感数据<a hidden class="anchor" aria-hidden="true" href="#使用-secret-管理敏感数据">#</a></h3>
+<p>Kubernetes Secret 以安全的方式存储敏感数据，如密码、令牌和 API 密钥。它们可以手动或自动创建，并存储在 etcd 中。Secret 可以作为文件或环境变量挂载到 Pod 中，并且可以使用 Kubernetes RBAC 管理访问权限。然而，它们有一些限制，例如大小限制和创建后无法更新。理解 Secret 对于在 Kubernetes 中构建安全的应用程序非常重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/configuration/secret/">Secret 文档</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/kubernetes-secrets-management-3-approaches-9-best-practices/">Kubernetes 密钥管理：3 种方法，9 个最佳实践</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=cQAEK9PBY8U">5 分钟了解 Kubernetes Secret！</a></li>
+</ul>
+<h2 id="7-资源管理">7. 资源管理<a hidden class="anchor" aria-hidden="true" href="#7-资源管理">#</a></h2>
+<p>Kubernetes 中的资源管理涉及管理 CPU、内存和存储资源，以确保资源的高效和有效利用。Kubernetes 提供了多种功能和工具，包括资源配额、限制、节点亲和性与反亲和性、水平和垂直 Pod 自动扩展以及集群自动扩展，以有效管理资源。这些功能有助于确保资源公平分配，避免资源争用，并使 Pod 能够访问所需的资源。通过使用这些功能，Kubernetes 可以高效地管理资源，从而提高性能、增强可靠性并降低成本。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/">资源管理 - 文档</a></li>
+<li><em>文章</em> <a href="https://enterprisersproject.com/article/2020/8/managing-kubernetes-resources-5-things-remember">管理 Kubernetes 资源：需要记住的 5 件事</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=MbgFIQoVh6w">Kubernetes 中的资源管理</a></li>
+</ul>
+<h3 id="设置资源请求和限制">◇设置资源请求和限制<a hidden class="anchor" aria-hidden="true" href="#设置资源请求和限制">#</a></h3>
+<p>Kubernetes 中的资源请求和限制指定了容器运行所需的最小和最大 CPU 和内存量。资源请求用于在具有足够资源的节点上调度容器，而限制则强制执行资源配额并防止容器消耗过多资源。这些设置可以在 Pod 或容器级别通过 YAML 中的 <code>resources</code> 字段进行配置。正确设置资源请求和限制对于确保 Kubernetes 集群中的最佳资源利用率至关重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits">请求和限制 - 文档</a></li>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/#motivation-for-default-memory-limits-and-requests">默认内存限制和请求的动机</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/understanding-kubernetes-resource-types/">理解 Kubernetes 资源类型</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/kubernetes-requests-and-limits-demystified/">Kubernetes 请求和限制揭秘</a></li>
+</ul>
+<h3 id="为命名空间分配配额">◇为命名空间分配配额<a hidden class="anchor" aria-hidden="true" href="#为命名空间分配配额">#</a></h3>
+<p>为命名空间分配配额是限制 Kubernetes 中特定资源组资源使用的一种方式。可以为 CPU、内存和其他资源以及命名空间中的对象数量设置配额。这有助于确保集群中不同团队或项目之间的资源公平分配。配额可以应用于单个命名空间或整个集群。Kubernetes 允许使用硬配额（强制执行严格的资源限制）和软配额（允许在一定范围内超额）。配额可以通过 Kubernetes API 或 YAML 配置文件进行管理。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/policy/resource-quotas/">资源配额 - 文档</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/leveraging-namespaces-for-cost-optimization-with-kubernetes/">利用命名空间优化 Kubernetes 成本</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=K3jNo4z5Jx8">15 分钟了解 Kubernetes 命名空间</a></li>
+</ul>
+<h3 id="监控和优化资源使用">◇监控和优化资源使用<a hidden class="anchor" aria-hidden="true" href="#监控和优化资源使用">#</a></h3>
+<p>在 Kubernetes (k8s) 中监控和优化资源使用对于确保资源的高效和有效利用至关重要。为了监控资源使用，k8s 提供了 Metrics Server，并且可以与 Prometheus 集成。容器运行时接口 (CRI) 也可用于监控容器级资源使用数据。为了优化资源使用，设置适当的请求和限制、使用水平 Pod 自动扩展 (HPA)、实施 Pod 亲和性与反亲和性规则以及控制节点选择都可以帮助减少资源争用并提高资源利用率。通过监控和优化资源使用，k8s 可以确保应用程序高效运行并有效利用资源。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-usage-monitoring/">监控资源的工具 - 文档</a></li>
+<li><em>文章</em> <a href="https://sequoia.makes.software/kubernetes-resource-optimization-just-the-basics/">Kubernetes 资源优化：基础知识</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/how-to-choose-the-right-kubernetes-monitoring-tool/">如何选择正确的 Kubernetes 监控工具</a></li>
+<li><em>订阅</em> <a href="https://app.daily.dev/tags/monitoring?ref=roadmapsh">探索有关监控的热门文章</a></li>
+</ul>
+<h2 id="8-kubernetes-安全">8. Kubernetes 安全<a hidden class="anchor" aria-hidden="true" href="#8-kubernetes-安全">#</a></h2>
+<p>Kubernetes (k8s) 安全涉及保护集群资源免受潜在威胁，如未经授权的访问、数据泄露和拒绝服务攻击。这可以通过访问控制、网络安全、加密和监控等措施实现。常用的 k8s 安全工具包括基于角色的访问控制 (RBAC)、Kubernetes 网络策略、TLS 证书和容器镜像扫描。定期更新和修补 k8s 环境对于维护安全也很重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/security/">安全文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=oBf5lrmquYI">你需要了解的 Kubernetes 安全最佳实践</a></li>
+<li><em>订阅</em> <a href="https://app.daily.dev/tags/kubernetes?ref=roadmapsh">探索有关 Kubernetes 的热门文章</a></li>
+</ul>
+<h3 id="基于角色的访问控制-rbac">◇基于角色的访问控制 (RBAC)<a hidden class="anchor" aria-hidden="true" href="#基于角色的访问控制-rbac">#</a></h3>
+<p>基于角色的访问控制 (RBAC) 是一种根据分配给用户或组的角色来控制对 Kubernetes 资源访问的方法。RBAC 涉及创建角色并将其绑定到用户或组，以控制对 Kubernetes 资源的访问。角色被定义为一组规则，决定可以对特定资源执行哪些操作。通过将角色分配给用户或组，可以根据角色中定义的权限限制或授予对 Kubernetes 资源的访问。RBAC 通过限制对授权用户和组的访问，帮助确保 Kubernetes 集群的安全性和完整性。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/security/rbac-good-practices/">基于角色的访问控制最佳实践</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/a-primer-on-kubernetes-access-control/">Kubernetes 访问控制入门</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/a-practical-approach-to-understanding-kubernetes-authorization/">理解 Kubernetes 授权的实用方法</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/three-realistic-approaches-to-kubernetes-rbac/">Kubernetes RBAC 的三种现实方法</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/role-based-access-control-five-common-authorization-patterns/">基于角色的访问控制：五种常见的授权模式</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/securing-kubernetes-and-other-resources-at-scale-using-rbac/">使用 RBAC 大规模保护 Kubernetes 和其他资源</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=G3R24JSlGjY">理解 Kubernetes 中的基于角色的访问控制</a></li>
+</ul>
+<h3 id="网络安全">◇网络安全<a hidden class="anchor" aria-hidden="true" href="#网络安全">#</a></h3>
+<p>Kubernetes 中的网络安全涉及保护集群内不同组件之间以及与外部网络之间的网络通信。这可以通过网络策略、加密、认证、授权和防火墙规则等多种机制实现。网络策略提供了对网络流量的细粒度控制，而加密则确保 Pod、节点和外部系统之间的安全通信。认证和授权机制防止未经授权的访问，并提供各种组件之间的安全通信。防火墙规则通过限制对特定端口和协议的访问，帮助保护集群免受外部攻击。总体而言，Kubernetes 中的网络安全对于维护集群的机密性、完整性和可用性至关重要。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/services-networking/network-policies/">网络策略 - 文档</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/6-kubernetes-security-best-practices/">6 个 Kubernetes 安全最佳实践</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/the-kubernetes-network-security-effect/">Kubernetes 网络安全效应</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/kubernetes-security-best-practices-to-keep-you-out-of-the-news/">Kubernetes 安全最佳实践，让你远离新闻头条</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=oBf5lrmquYI">Kubernetes 安全最佳实践</a></li>
+<li><em>订阅</em> <a href="https://app.daily.dev/tags/security?ref=roadmapsh">探索有关安全的热门文章</a></li>
+</ul>
+<h3 id="容器和-pod-安全">◇容器和 Pod 安全<a hidden class="anchor" aria-hidden="true" href="#容器和-pod-安全">#</a></h3>
+<p>Kubernetes (k8s) 可以通过使用可信的容器镜像、限制容器权限、强制执行 Pod 级安全策略、实施网络安全措施、使用 RBAC 进行访问控制以及使用 Secrets 和 ConfigMaps 管理敏感信息等措施来保护容器和 Pod。这些实践有助于组织降低其 k8s 集群中发生安全事件的风险。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tasks/configure-pod-container/security-context/">为 Pod 或容器配置安全上下文</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/tutorial-create-a-kubernetes-pod-security-policy/">教程：创建 Kubernetes Pod 安全策略</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/6-overlooked-yet-important-kubernetes-features-to-secure/">6 个被忽视但重要的 Kubernetes 安全功能</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=i8wfvoVf2xs">Kubernetes 安全 - Pod 或容器的安全上下文</a></li>
+<li><em>订阅</em> <a href="https://app.daily.dev/tags/security?ref=roadmapsh">探索有关安全的热门文章</a></li>
+</ul>
+<h3 id="安全扫描器">◇安全扫描器<a hidden class="anchor" aria-hidden="true" href="#安全扫描器">#</a></h3>
+<p>Kubernetes 安全扫描器帮助在部署前识别容器镜像中的漏洞和潜在安全威胁。流行的选项包括 Aqua Security、Twistlock、Sysdig Secure、Trivy、Anchore Engine 和 OpenSCAP。这些扫描器提供了多种功能，如漏洞扫描、合规性检查和 Kubernetes 环境的运行时保护。通过将这些扫描器集成到其管道中，组织可以确保其 Kubernetes 部署的安全性和完整性，并最大限度地降低安全漏洞和数据丢失的风险。</p>
+<ul>
+<li><em>文章</em> <a href="https://techbeacon.com/security/8-open-source-kubernetes-vulnerability-scanners-consider">8+ 个开源 Kubernetes 漏洞扫描器</a></li>
+<li><em>文章</em> <a href="https://thechief.io/c/editorial/7-kubernetes-security-scanners-to-use-in-your-devsecops-pipeline/">7 个 Kubernetes 安全扫描器</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/improve-security-with-automated-image-scanning-through-ci-cd/">通过 CI/CD 自动化镜像扫描提高安全性</a></li>
+<li><em>文章</em> <a href="https://thenewstack.io/starboard-putting-all-the-kubernetes-security-pieces-into-one-place/">Starboard：将所有 Kubernetes 安全组件整合在一起</a></li>
+<li><em>订阅</em> <a href="https://app.daily.dev/tags/security?ref=roadmapsh">探索有关安全的热门文章</a></li>
+</ul>
+<h2 id="9-监控与日志">9. 监控与日志<a hidden class="anchor" aria-hidden="true" href="#9-监控与日志">#</a></h2>
+<p>在 Kubernetes 中，监控涉及对集群及其组件的健康和性能进行持续关注。这包括监控 CPU、内存和存储等资源的使用情况和可用性，以及 Kubernetes 服务和节点的状态。一些流行的 Kubernetes 监控解决方案包括 Prometheus、Grafana 和 Datadog。</p>
+<p>Kubernetes 中的日志记录涉及收集和分析集群中各种组件（如应用程序、Pod 和节点）生成的日志。这些日志可以提供有关集群行为和性能的洞察，并有助于排查问题。一些流行的 Kubernetes 日志记录解决方案包括 Fluentd、Elasticsearch 和 Kibana。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-usage-monitoring/">资源监控工具</a></li>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tasks/debug/">监控、日志记录和调试</a></li>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/cluster-administration/logging/">日志架构</a></li>
+<li><em>feed</em> <a href="https://app.daily.dev/tags/logging?ref=roadmapsh">探索关于日志的热门帖子</a></li>
+</ul>
+<h3 id="日志">◇日志<a hidden class="anchor" aria-hidden="true" href="#日志">#</a></h3>
+<p>日志由集群节点上运行的容器化应用程序生成。您可以使用 <code>kubectl logs</code> 命令后跟 Pod 名称来访问这些日志。默认情况下，此命令显示 Pod 中最近容器的日志，但您可以通过在命令中添加容器名称来指定 Pod 中的特定容器。在命令中添加 <code>-f</code> 标志可以实时跟踪日志。Kubernetes 还提供了第三方日志记录解决方案，如 EFK 和 Prometheus 堆栈，这些解决方案为大规模应用程序提供了更高级的日志记录功能和可扩展性。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/cluster-administration/system-logs/">系统日志</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=6kmHvXdAzIM">Kubernetes：日志收集解释</a></li>
+</ul>
+<h3 id="指标">◇指标<a hidden class="anchor" aria-hidden="true" href="#指标">#</a></h3>
+<p>需要监控的指标包括 CPU 使用率、内存使用率、网络使用率、磁盘使用率、API 服务器指标、Pod 和容器指标以及集群级指标。这些指标提供了有关集群、节点和应用程序的性能和健康的洞察。Kubernetes 提供了 Prometheus、Grafana 和 Kubernetes Dashboard 等工具来收集和分析这些指标。通过监控这些指标，管理员可以识别性能问题并优化集群以提高性能和可扩展性。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/reference/instrumentation/node-metrics/">节点指标数据</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=JQrk6HwlN78">如何在 K8s 中收集指标？</a></li>
+</ul>
+<h3 id="追踪">◇追踪<a hidden class="anchor" aria-hidden="true" href="#追踪">#</a></h3>
+<p>Kubernetes 中的追踪涉及使用 Jaeger 或 Zipkin 等工具监控请求在系统不同组件之间的流动。OpenTracing 和 OpenCensus 提供了一种一致的方式来捕获集群上运行的不同组件和应用程序的追踪。追踪有助于识别性能瓶颈、调试问题并优化系统以提高性能和可扩展性。通过在 Kubernetes 中监控追踪，管理员可以识别问题并采取纠正措施，以确保系统的高效性能。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/cluster-administration/system-traces/">Kubernetes 系统组件的追踪</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=idDu_jXqf4E">追踪简介</a></li>
+</ul>
+<h3 id="资源健康">◇资源健康<a hidden class="anchor" aria-hidden="true" href="#资源健康">#</a></h3>
+<p>Kubernetes 中的资源健康监控涉及监控 Pod、节点和容器等资源的健康和可用性。它帮助管理员使用 Kubernetes Dashboard、Prometheus 或 Grafana 等工具识别和排查可能影响系统性能和可用性的问题。资源健康监控还有助于确保系统能够抵御故障，并能够从任何中断中快速恢复。这是管理 Kubernetes 集群的重要部分，确保了系统的可靠性、可用性和可扩展性。</p>
+<ul>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=fzny5uUaAeY">使用 Grafana 和 Prometheus 的仪表板</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=YDtuwlNTzRc">如何使用 Prometheus 和 Grafana 监控 Kubernetes 集群</a></li>
+</ul>
+<h3 id="可观测性引擎">◇可观测性引擎<a hidden class="anchor" aria-hidden="true" href="#可观测性引擎">#</a></h3>
+<p>Kubernetes 中的可观测性（k8s）指的是能够深入了解集群、应用程序和服务的内部运作。Kubernetes 中的可观测性引擎是一种工具或平台，用于促进从 Kubernetes 环境中的各种来源收集、分析和可视化数据。一些流行的 Kubernetes 可观测性引擎包括 Prometheus、Grafana、Jaeger 和 Elastic Stack (ELK)。</p>
+<ul>
+<li><em>开源</em> <a href="https://github.com/k8sgpt-ai/k8sgpt">K8sGPT - Kubernetes 问题的 AI 扫描器</a></li>
+<li><em>开源</em> <a href="https://github.com/robusta-dev/holmesgpt/">HolmesGPT - 用于调查 Kubernetes 问题和 Prometheus 警报的 AIOps 平台</a></li>
+<li><em>文章</em> <a href="https://www.cloudzero.com/blog/kubernetes-observability">Kubernetes 可观测性 101：工具、最佳实践等</a></li>
+<li><em>文章</em> <a href="https://kubesphere.io/observability/">KubeSphere 中的 Kubernetes 可观测性</a></li>
+<li><em>feed</em> <a href="https://app.daily.dev/tags/observability?ref=roadmapsh">探索关于可观测性的热门帖子</a></li>
+</ul>
+<h2 id="10-自动扩展">10. 自动扩展<a hidden class="anchor" aria-hidden="true" href="#10-自动扩展">#</a></h2>
+<p>Kubernetes 中的自动扩展涉及根据需求调整分配给部署或一组 Pod 的资源。它包括水平 Pod 自动扩展（HPA）和垂直 Pod 自动扩展（VPA），分别增加或减少副本或调整资源请求和限制。自动扩展可以与集群自动扩展结合使用，以有效分配资源并确保应用程序的响应能力。它适用于处理可变工作负载或流量突然激增的情况。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/blog/2016/07/autoscaling-in-kubernetes/">Kubernetes 中的自动扩展</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=jM36M39MA3I">Kubernetes 集群自动扩展入门</a></li>
+</ul>
+<h3 id="水平-pod-自动扩展器-hpa">◇水平 Pod 自动扩展器 (HPA)<a hidden class="anchor" aria-hidden="true" href="#水平-pod-自动扩展器-hpa">#</a></h3>
+<p>这是 Kubernetes 中的一项功能，它根据当前工作负载的需求自动扩展 Pod 的副本数量。HPA 控制器监控 Pod 的 CPU 使用率或其他指标，并调整 Pod 的副本数量以满足指定的目标。这有助于确保工作负载能够处理流量和需求的增加，而不会使集群资源过载。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">水平 Pod 自动扩展 - 文档</a></li>
+</ul>
+<h3 id="垂直-pod-自动扩展器-vpa">◇垂直 Pod 自动扩展器 (VPA)<a hidden class="anchor" aria-hidden="true" href="#垂直-pod-自动扩展器-vpa">#</a></h3>
+<p>垂直 Pod 自动扩展器（VPA）是 Kubernetes 中的一项功能，它自动化了调整 Pod 中容器资源限制的过程。与水平 Pod 自动扩展器（HPA）不同，HPA 扩展 Pod 的副本数量，而 VPA 扩展分配给 Pod 容器的资源。它根据每个容器的实际使用情况调整其资源请求和限制。</p>
+<ul>
+<li><em>文章</em> <a href="https://www.kubecost.com/kubernetes-autoscaling/kubernetes-vpa/">什么是 Kubernetes VPA？</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=3h-vDDTZrm8">垂直 Pod 自动扩展：示例</a></li>
+</ul>
+<h3 id="集群自动扩展">◇集群自动扩展<a hidden class="anchor" aria-hidden="true" href="#集群自动扩展">#</a></h3>
+<p>集群自动扩展是 Kubernetes 中的一项功能，它根据节点资源利用率自动扩展集群。它监控节点的利用率，并相应地创建或删除节点，以确保有适当的资源来处理工作负载，同时最大限度地降低成本。实现集群自动扩展有不同的方法，例如使用水平 Pod 自动扩展器或集群自动扩展器。它适用于工作负载高度变化的场景，确保应用程序保持响应性和可用性，而无需手动调整集群大小。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/blog/2016/07/autoscaling-in-kubernetes/">Kubernetes 中的自动扩展</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=jM36M39MA3I">Kubernetes 集群自动扩展入门</a></li>
+</ul>
+<h2 id="11-调度">11. 调度<a hidden class="anchor" aria-hidden="true" href="#11-调度">#</a></h2>
+<p>Kubernetes中的调度是指将工作负载分配给集群中特定节点的过程。Kubernetes调度器根据资源可用性、节点适用性和工作负载优先级等因素做出调度决策。它在集群中平衡工作负载，以确保高效的资源利用，并避免节点过载。调度会考虑地理位置、硬件需求和应用程序特定需求等因素。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/">Kubernetes调度器</a></li>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/">调度框架</a></li>
+</ul>
+<h3 id="调度基础">◇调度基础<a hidden class="anchor" aria-hidden="true" href="#调度基础">#</a></h3>
+<p>调度涉及根据资源可用性、标签、亲和性/反亲和性规则、污点和容忍度等标准将Pod分配给工作节点。Pod是k8s中最小的可部署单元，由一个或多个共享相同网络命名空间的容器组成。调度器负责将Pod分配给节点，而标签用于匹配。亲和性和反亲和性规则规定了根据Pod与其他Pod或节点的关系如何调度Pod。QoS用于根据资源需求对Pod调度进行优先级排序。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/">Kubernetes调度器</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=0FvQR-0tK54">Kubernetes中的调度如何工作</a></li>
+</ul>
+<h3 id="污点和容忍度">◇污点和容忍度<a hidden class="anchor" aria-hidden="true" href="#污点和容忍度">#</a></h3>
+<p>污点和容忍度在Kubernetes中用于根据标签限制或允许Pod在特定节点上调度。污点是应用于节点的标签，用于指示某些限制或要求。容忍度是应用于Pod的标签，表明它可以容忍某些污点。当节点有污点时，只有具有相应容忍度的Pod才能在该节点上调度。此功能对于各种目的很有用，例如确保关键和非关键工作负载的分离，为特定任务保留节点，以及防止节点过载。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/">污点和容忍度</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=mo2UrkjA7FE">Kubernetes初学者：污点和容忍度</a></li>
+</ul>
+<h3 id="拓扑分布约束">◇拓扑分布约束<a hidden class="anchor" aria-hidden="true" href="#拓扑分布约束">#</a></h3>
+<p>拓扑分布约束确保Pod在集群拓扑中均匀分布。约束定义了在给定级别（如节点、区域或机架）上可以运行特定类型Pod的数量规则。这些约束可以根据特定需求进行自定义，例如确保关键工作负载分布在多个区域。它们通过防止资源过载和促进工作负载的平衡分布，帮助防止单点故障并提高应用程序弹性。可以使用Kubernetes API或命令行界面添加约束。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/">拓扑分布约束</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=joRrWJ6bwvE">Kubernetes | 拓扑分布约束</a></li>
+</ul>
+<h3 id="pod优先级">◇Pod优先级<a hidden class="anchor" aria-hidden="true" href="#pod优先级">#</a></h3>
+<p>Kubernetes中的Pod优先级决定了当资源需求存在竞争时，Pod在节点上调度的顺序。每个Pod都被分配一个数字优先级值，较高的值表示较高的优先级。调度器在考虑节点适用性、污点和容忍度以及亲和性和反亲和性规则的同时，最大化已调度Pod的总优先级。优先级可以根据业务逻辑或应用程序需求手动或自动设置。优先级有助于确保关键工作负载获得必要的资源并首先调度，而较低优先级的工作负载在资源可用时调度。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#pod-priority">Pod优先级 - 文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=sR_Zmvme3-0">Kubernetes Pod优先级（示例）</a></li>
+</ul>
+<h3 id="驱逐">◇驱逐<a hidden class="anchor" aria-hidden="true" href="#驱逐">#</a></h3>
+<p>驱逐是指由于资源限制或Pod故障等原因，终止或删除节点上运行的Pod。它们可以由系统启动，也可以由管理员通过API手动启动。驱逐可以是优雅的，允许Pod清理资源，也可以是强制的，立即终止它们。Kubernetes提供了抢占和Pod干扰预算，以有效处理驱逐并最小化服务中断。驱逐对于管理和维护Kubernetes集群是必要的，Kubernetes提供了处理它们的工具。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/">节点压力驱逐</a></li>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/api-eviction/">API发起的驱逐</a></li>
+</ul>
+<h2 id="12-存储和卷">12. 存储和卷<a hidden class="anchor" aria-hidden="true" href="#12-存储和卷">#</a></h2>
+<p>卷提供可供Pod中运行的容器访问的目录，并可以由各种存储类型支持。持久卷独立于Pod，可以被多个Pod重复使用，而持久卷声明从持久卷请求特定数量的存储。存储类允许管理员定义可以动态配置的不同存储类型。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/storage/">存储文档</a></li>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">持久卷文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=GieXzb91I40">Kubernetes中有状态应用程序的基础知识</a></li>
+<li><em>feed</em> <a href="https://app.daily.dev/tags/storage?ref=roadmapsh">探索关于存储的热门帖子</a></li>
+</ul>
+<h3 id="csi驱动">◇CSI驱动<a hidden class="anchor" aria-hidden="true" href="#csi驱动">#</a></h3>
+<p>Kubernetes中的CSI（容器存储接口）驱动程序为存储提供商提供了一种标准方式，用于与Kubernetes集成并为容器化应用程序提供持久存储。它们作为独立的容器化进程运行，并通过定义良好的API与Kubernetes通信。CSI驱动程序允许Kubernetes访问各种存储系统，并提供快照和克隆等高级功能。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/blog/2019/01/15/container-storage-interface-ga/">Kubernetes的容器存储接口(CSI)</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=brXPQ1Qwjl4">Kubernetes中的CSI</a></li>
+</ul>
+<h3 id="有状态应用">◇有状态应用<a hidden class="anchor" aria-hidden="true" href="#有状态应用">#</a></h3>
+<p>在Kubernetes中，存储是有状态应用程序的关键组件，因为这些应用程序需要持久数据存储，可以在应用程序的多个副本之间使用。Kubernetes提供了几种存储选项，包括卷、持久卷和存储类。</p>
+<p>卷是Kubernetes存储的基本构建块。卷是一个可访问运行应用程序的容器的目录，可以由不同类型的存储支持，如主机目录、云提供商磁盘或网络存储系统。卷由Kubernetes创建和管理，可以作为Pod定义的一部分挂载到容器中。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tutorials/stateful-application/">有状态应用程序</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=GieXzb91I40">Kubernetes中有状态应用程序的基础知识</a></li>
+</ul>
+<h2 id="13-部署模式">13. 部署模式<a hidden class="anchor" aria-hidden="true" href="#13-部署模式">#</a></h2>
+<p>部署是Kubernetes中用于声明式管理应用程序容器在集群中的推出和扩展的资源。部署允许团队定义部署的期望状态，并自动管理底层的Pod和副本集以实现该状态。Kubernetes提供了各种部署策略，如RollingUpdate或Canary，以控制应用程序新版本的推出和扩展方式。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">部署 - 文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=mNK14yXIZF4">Kubernetes部署如何工作？</a></li>
+<li><em>feed</em> <a href="https://app.daily.dev/tags/cicd?ref=roadmapsh">探索关于CI/CD的热门帖子</a></li>
+</ul>
+<h3 id="cicd集成">◇CI/CD集成<a hidden class="anchor" aria-hidden="true" href="#cicd集成">#</a></h3>
+<p>与Kubernetes集成CI/CD涉及设置一个管道，用于构建和部署应用程序到Kubernetes集群。这个过程通常包括开发应用程序代码，设置源代码仓库，选择CI/CD工具，构建Docker镜像，将镜像推送到容器注册表，使用Kubernetes清单部署应用程序，以及监控和排除管道和部署问题。通过自动化应用程序的测试和部署，CI/CD与Kubernetes集成可以帮助提高软件质量，加速开发，并确保一致和可靠的部署。</p>
+<ul>
+<li><em>文章</em> <a href="https://discuss.kubernetes.io/t/create-a-ci-cd-pipeline-with-kubernetes-and-jenkins/11043">使用Kubernetes创建CI/CD管道</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=naUhXrV_rRA">部署到Kubernetes集群 | CI/CD Kubernetes</a></li>
+<li><em>feed</em> <a href="https://app.daily.dev/tags/cicd?ref=roadmapsh">探索关于CI/CD的热门帖子</a></li>
+</ul>
+<h3 id="gitops">◇GitOps<a hidden class="anchor" aria-hidden="true" href="#gitops">#</a></h3>
+<p>GitOps是一套使用Git仓库作为声明式配置的真实来源来管理基础设施和应用程序的实践。在Kubernetes中，GitOps涉及使用Git作为系统期望状态和实际状态的单一真实来源，自动化部署和管理任务，并通常与持续交付（CD）实践一起使用。其结果是一种更一致、更可靠、更自动化的管理基础设施和应用程序的方法。</p>
+<ul>
+<li><em>文章</em> <a href="https://docs.gitlab.com/ee/user/clusters/agent/gitops.html">将GitOps与Kubernetes集群一起使用</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=PFLimPh5-wo">Kubernetes的DevOps和GitOps</a></li>
+<li><em>feed</em> <a href="https://app.daily.dev/tags/gitops?ref=roadmapsh">探索关于GitOps的热门帖子</a></li>
+</ul>
+<h3 id="helm-charts">◇Helm Charts<a hidden class="anchor" aria-hidden="true" href="#helm-charts">#</a></h3>
+<p>Helm是Kubernetes的包管理器，通过使用可重用和版本化的Helm图表简化了复杂应用程序的部署和管理。这些图表由描述相关Kubernetes资源集的YAML文件组成，可以使用值文件和Go模板进行自定义。Helm图表还可以依赖于其他图表，并存储在中央仓库（如Helm Hub）中，以便于共享和访问。通过利用Helm，团队可以简化应用程序管理并减少重复工作。</p>
+<ul>
+<li><em>官方</em> <a href="https://helm.sh/docs/">Helm文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=-ykwb1d0DXU">Kubernetes中的Helm是什么？Helm和Helm图表解释</a></li>
+<li><em>feed</em> <a href="https://app.daily.dev/tags/helm?ref=roadmapsh">探索关于Helm的热门帖子</a></li>
+</ul>
+<h3 id="金丝雀部署">◇金丝雀部署<a hidden class="anchor" aria-hidden="true" href="#金丝雀部署">#</a></h3>
+<p>金丝雀部署是Kubernetes中使用的一种技术，通过将一小部分用户或流量引导到新版本，而大多数用户继续使用旧版本，来逐步推出应用程序的新版本。这种方法允许在实际条件下测试新版本，然后再完全提交更新。在Kubernetes中，金丝雀部署可以使用Istio、Linkerd或Nginx等工具实现，或者使用内置功能，如部署策略和流量路由。</p>
+<ul>
+<li><em>文章</em> <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/ecosystems/kubernetes/canary-demo?view=azure-devops&amp;tabs=yaml">K8s部署的金丝雀部署</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=sCevTD_GtvU">Kubernetes金丝雀部署解释</a></li>
+</ul>
+<h3 id="蓝绿部署">◇蓝绿部署<a hidden class="anchor" aria-hidden="true" href="#蓝绿部署">#</a></h3>
+<p>蓝绿部署是Kubernetes中用于部署应用程序新版本的部署策略，通过运行两个相同的生产环境，一个使用当前版本（蓝色），另一个使用新版本（绿色）。在绿色环境经过完全测试后，流量会从蓝色环境路由到绿色环境，为用户提供无缝过渡，避免任何停机或中断。在Kubernetes中，蓝绿部署可以使用各种工具和技术实现，包括部署策略、流量路由和负载平衡。</p>
+<ul>
+<li><em>文章</em> <a href="https://developer.harness.io/docs/continuous-delivery/cd-execution/kubernetes-executions/create-a-kubernetes-blue-green-deployment/">创建Kubernetes蓝绿部署</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=jxhpTGQ484Y">Kubernetes - 蓝/绿部署</a></li>
+</ul>
+<h3 id="滚动更新回滚">◇滚动更新/回滚<a hidden class="anchor" aria-hidden="true" href="#滚动更新回滚">#</a></h3>
+<p>滚动更新是Kubernetes中的一种部署策略，用于通过逐步更新现有Pod为新版本来部署应用程序的新版本，同时确保应用程序在整个过程中保持可用。Kubernetes允许团队配置滚动更新，以一次更新一定百分比的Pod，并等待它们变得可用后再继续更新。如果出现任何问题，Kubernetes提供了回滚机制，允许团队轻松回退到应用程序的先前版本。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-back-a-deployment">回滚部署 - 文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=xRifmrap7S8">Kubernetes滚动更新 | 回滚部署</a></li>
+</ul>
+<h2 id="14-kubernetes高级主题">14. Kubernetes高级主题<a hidden class="anchor" aria-hidden="true" href="#14-kubernetes高级主题">#</a></h2>
+<p>Kubernetes可以通过自定义资源和控制器扩展，以管理复杂的应用程序和工作流。它提供了各种网络模型来支持Pod和服务之间的通信，包括服务网格和网络策略，并可以与各种CI/CD工具和平台集成，以自动化应用程序部署和更新。K8s提供了各种管理存储的选项，包括本地存储、网络附加存储（NAS）和云存储提供商。</p>
+<ul>
+<li><em>文章</em> <a href="https://techbeacon.com/enterprise-it/47-advanced-tutorials-mastering-kubernetes">47个掌握Kubernetes的高级教程</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=OW4MoJudZx8&amp;list=PLTCuRW0ikUdO_XzQtTNrvUAHAAuGeLXfY">教程系列 - 高级Kubernetes</a></li>
+<li><em>feed</em> <a href="https://app.daily.dev/tags/kubernetes?ref=roadmapsh">探索关于Kubernetes的热门帖子</a></li>
+</ul>
+<h3 id="创建自定义控制器">◇创建自定义控制器<a hidden class="anchor" aria-hidden="true" href="#创建自定义控制器">#</a></h3>
+<p>Kubernetes中的自定义控制器自动化管理Kubernetes原生不支持的自定义资源。它们被实现为Kubernetes控制器，监视自定义资源并对其状态变化做出反应。自定义资源是通过扩展Kubernetes API创建的，增加特定于组织需求的新资源类型。自定义控制器可以使用各种编程语言和框架开发，如Operator框架。Operator框架提供了开发、测试和部署自定义控制器的工具和最佳实践。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#custom-controllers">自定义控制器</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/results?search_query=Custom&#43;controllers&#43;in&#43;k8s">使用自定义控制器扩展Kubernetes</a></li>
+</ul>
+<h3 id="自定义调度器和扩展器">◇自定义调度器和扩展器<a hidden class="anchor" aria-hidden="true" href="#自定义调度器和扩展器">#</a></h3>
+<p>Kubernetes中的自定义调度器扩展器通过允许用户基于自定义指标和约束定义自己的调度逻辑，增强了Kubernetes的调度能力。它们被实现为与Kubernetes调度器一起运行的自定义Kubernetes控制器。自定义调度器扩展器可用于实现特定于组织需求的调度策略，并可以使用各种编程语言开发。它们拦截调度请求，根据用户定义的规则添加自定义调度逻辑，并将请求传回Kubernetes调度器。</p>
+<ul>
+<li><em>文章</em> <a href="https://developer.ibm.com/articles/creating-a-custom-kube-scheduler/">创建自定义Kubernetes调度器</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=NiB7sjXmiZc">自定义调度器Kubernetes | 多调度器Kubernetes</a></li>
+</ul>
+<h3 id="自定义资源定义crds">◇自定义资源定义(CRDs)<a hidden class="anchor" aria-hidden="true" href="#自定义资源定义crds">#</a></h3>
+<p>Kubernetes中的自定义资源定义(CRDs)通过定义特定于组织需求的新资源类型来扩展Kubernetes API。CRDs创建可以管理各种资源的自定义资源，如应用程序、数据库、存储和网络。它们使用YAML或JSON清单定义，可以使用Kubernetes API服务器创建和管理。一旦创建，自定义资源可以使用Kubernetes控制器管理，并与其他Kubernetes组件集成。CRDs是简化Kubernetes操作并使组织能够以更高效和定制化的方式管理资源的强大工具。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/">自定义资源 - 文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=u1X5Rf7fWwM">自定义资源定义(CRD)解释与演示</a></li>
+</ul>
+<h3 id="kubernetes扩展和api">◇Kubernetes扩展和API<a hidden class="anchor" aria-hidden="true" href="#kubernetes扩展和api">#</a></h3>
+<p>Kubernetes(k8s)扩展和API用于自定义Kubernetes的行为并向系统添加新功能。Kubernetes扩展，包括自定义资源定义(CRDs)、自定义控制器、自定义调度器扩展器和自定义指标API，增强了Kubernetes功能。Kubernetes API用于管理Kubernetes集群中的资源并与系统交互。Kubernetes扩展和API共同提供了一个强大的工具包，用于自定义和扩展Kubernetes，使用户能够构建自定义组件和API，简化Kubernetes中的操作。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/#extensions">扩展 - 文档</a></li>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/overview/kubernetes-api/">Kubernetes API - 文档</a></li>
+<li><em>feed</em> <a href="https://app.daily.dev/tags/kubernetes?ref=roadmapsh">探索关于Kubernetes的热门帖子</a></li>
+</ul>
+<h3 id="集群操作">◇集群操作<a hidden class="anchor" aria-hidden="true" href="#集群操作">#</a></h3>
+<h4 id="自己的集群">自己的集群<a hidden class="anchor" aria-hidden="true" href="#自己的集群">#</a></h4>
+<p>要创建自己的Kubernetes集群，您需要选择云提供商或设置自己的基础设施，在基础设施上安装Kubernetes，通过设置网络、存储和安全来配置集群，使用Kubernetes清单部署应用程序，并使用Kubernetes Dashboard、kubectl和Prometheus等工具监控和管理集群。这个过程可能很复杂和耗时，但它让您完全控制基础设施，并允许定制以满足特定需求。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/">使用kubeadm创建集群</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=Ro2qeYeisZQ">KUBERNETES | 安装Kubernetes集群</a></li>
+</ul>
+<h4 id="控制平面安装">控制平面安装<a hidden class="anchor" aria-hidden="true" href="#控制平面安装">#</a></h4>
+<p>控制平面的组件对集群做出全局决策（例如调度），以及检测和响应集群事件（例如，当部署的副本字段不满足时启动新的Pod）。控制平面组件可以在集群中的任何机器上运行。然而，为了简单起见，设置脚本通常在同一台机器上启动所有控制平面组件，并且不在这台机器上运行用户容器。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#initializing-your-control-plane-node">初始化控制平面节点 - 文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=IUwuyZ5ReF0">教程 - 安装控制平面组件</a></li>
+</ul>
+<h4 id="管理工作节点">管理工作节点<a hidden class="anchor" aria-hidden="true" href="#管理工作节点">#</a></h4>
+<p>Kubernetes通过将容器放入Pod中在节点上运行您的工作负载。节点可能是虚拟机或物理机，取决于集群。每个节点由控制平面管理，并包含运行Pod所需的服务。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/concepts/architecture/nodes/#management">节点管理</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=xhwi3zIVR-8">Kubernetes 101：节点教程</a></li>
+</ul>
+<h4 id="多集群管理">多集群管理<a hidden class="anchor" aria-hidden="true" href="#多集群管理">#</a></h4>
+<p>Kubernetes(k8s)中的多集群管理是指使用单个控制平面管理多个Kubernetes集群的能力。这种方法允许管理员集中管理和编排多个集群中的资源，无论它们位于何处，而无需在多个管理控制台或工具之间切换。</p>
+<ul>
+<li><em>官方</em> <a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/">配置对多个集群的访问 - 文档</a></li>
+<li><em>视频</em> <a href="https://www.youtube.com/watch?v=966TJ6mlOYY">Kubernetes集群管理策略</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://yuuniji.github.io/tags/kubernetes/">Kubernetes</a></li>
+      <li><a href="https://yuuniji.github.io/tags/%E8%B7%AF%E7%BA%BF%E5%9B%BE/">路线图</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-3-resources/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>如何学好日语[3]: 资源</span>
+  </a>
+  <a class="next" href="https://yuuniji.github.io/posts/roadmap-docker/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>Docker 路线图</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Kubernetes 路线图 on x"
+            href="https://x.com/intent/tweet/?text=Kubernetes%20%e8%b7%af%e7%ba%bf%e5%9b%be&amp;url=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-kubernetes%2f&amp;hashtags=Kubernetes%2c%e8%b7%af%e7%ba%bf%e5%9b%be">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Kubernetes 路线图 on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-kubernetes%2f&amp;title=Kubernetes%20%e8%b7%af%e7%ba%bf%e5%9b%be&amp;summary=Kubernetes%20%e8%b7%af%e7%ba%bf%e5%9b%be&amp;source=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-kubernetes%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Kubernetes 路线图 on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-kubernetes%2f&title=Kubernetes%20%e8%b7%af%e7%ba%bf%e5%9b%be">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Kubernetes 路线图 on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-kubernetes%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Kubernetes 路线图 on whatsapp"
+            href="https://api.whatsapp.com/send?text=Kubernetes%20%e8%b7%af%e7%ba%bf%e5%9b%be%20-%20https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-kubernetes%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Kubernetes 路线图 on telegram"
+            href="https://telegram.me/share/url?text=Kubernetes%20%e8%b7%af%e7%ba%bf%e5%9b%be&amp;url=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-kubernetes%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Kubernetes 路线图 on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Kubernetes%20%e8%b7%af%e7%ba%bf%e5%9b%be&u=https%3a%2f%2fyuuniji.github.io%2fposts%2froadmap-kubernetes%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+<div id="giscus_container"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="yuuniji/yuu-repo"
+        data-repo-id="R_kgDOOl2JTQ"
+        data-category="General"
+        data-category-id="DIC_kwDOOl2JTc4Cp3MT"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 <a href="https://yuuniji.github.io/">叶泽伟的博客</a></span>
+    <span id="runtime_span"></span> 
+    <script type="text/javascript">
+        function show_runtime() {
+            
+            setTimeout(show_runtime, 1000);
+
+            
+            const startDate = new Date("2025/02/22 00:00:00");
+
+            
+            const now = new Date();
+
+            
+            const diff = now.getTime() - startDate.getTime();
+
+            
+            const days = Math.floor(diff / (24 * 60 * 60 * 1000));                     
+            const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000)); 
+            const minutes = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));        
+            const seconds = Math.floor((diff % (60 * 1000)) / 1000);                    
+
+            
+            const lang = document.documentElement.lang || "en"; 
+
+            
+            const translations = {
+                zh: `网站已运行 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`,
+                ja: `サイトは稼働してから ${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`,
+                en: `Site has been running for ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
+            };
+
+            
+            const output = translations[lang] || translations["en"];
+
+            
+            document.getElementById("runtime_span").innerHTML = output;
+        }
+
+        
+        show_runtime();
+    </script>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+    
+    document.addEventListener('instantclick:change', function () {
+        
+        if (typeof ga === 'function') {
+            ga('set', 'page', location.pathname + location.search);
+            ga('send', 'pageview');
+        }
+        
+        if (typeof _hmt === 'object' && _hmt.push) {
+            _hmt.push(['_trackPageview', location.pathname + location.search]);
+        }
+        
+    });
+    InstantClick.init();
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const isDark = e.matches;
+        document.body.classList.toggle('dark', isDark);
+        localStorage.setItem('pref-theme', isDark ? 'dark' : 'light');
+        
+    });
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    mediumZoom('article img', {
+      margin: 24,
+      background: 'rgba(0, 0, 0, 0.8)',
+      scrollOffset: 40
+    });
+  });
+</script>
+
+
+<style>
+  article img {
+    cursor: zoom-in;
+    transition: transform 0.2s ease-in-out;
+  }
+  article img:hover {
+    transform: scale(1.02);
+  }
+</style>
+</body>
+
+</html>
