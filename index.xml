@@ -13,47 +13,222 @@
       <link>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/</link>
       <pubDate>Fri, 09 May 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/</guid>
-      <description>&lt;h2 id=&#34;换页&#34;&gt;★换页&lt;/h2&gt;
-&lt;!-- &lt;style&gt;
-.section { display: none; }
-.section.active { display: block; }
-.sbutton.active { background-color: #4CAF50; color: white; padding: 10px; border: none; cursor: pointer; }
-.sbutton { padding: 10px; border: 1px solid #ccc; cursor: pointer; }
-.navigation { margin: 20px 0; }
-&lt;/style&gt; --&gt;
+      <description>&lt;h2 id=&#34;入门&#34;&gt;★《入门》&lt;/h2&gt;
+&lt;h3 id=&#34;方式1&#34;&gt;◇方式1&lt;/h3&gt;
 &lt;style&gt;
-  .section { display: none; }
-  .section.active { display: block; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+  }
+
+  .player-container {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  #audio-player-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
   .sbutton {
-    padding: 8px 16px;
-    margin: 5px;
-    font-size: 14px;
-    /* background-color: var(--placeholder); */
+    background-color: #4a6fa5;
+    color: white;
     border: none;
+    padding: 8px 12px;
+    margin-right: 8px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-size: 14px;
   }
+
   .sbutton:hover {
-    background-color: rgba(76, 175, 80, 0.1);
-    transform: translateY(-1px);
+    background-color: #3a5a80;
   }
-  .sbutton.active {
-    background-color: #4CAF50;
+
+  .sbutton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+
+  .rate-btn {
+    background-color: #6c757d;
+  }
+
+  .rate-btn.active {
+    background-color: #28a745;
+    font-weight: bold;
+  }
+
+  #audio-status {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  audio {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+
+  th {
+    background-color: #4a6fa5;
     color: white;
-    font-weight: 500;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
   }
-  .navigation { margin: 20px 0; }
-  @media (max-width: 600px) {
-    .sbutton {
-      padding: 6px 12px;
-      font-size: 12px;
-      margin: 3px;
-    }
+
+  td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .note {
+    color: #3a5a80;
+    font-weight: bold;
+    border-bottom: 1px dotted #3a5a80;
+    cursor: help;
+    position: relative;
+  }
+
+  .note:hover::after {
+    content: attr(data-note);
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: #3a5a80;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  #navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  #jump-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  #jump-to {
+    padding: 8px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+
+  .lesson-header {
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #4a6fa5;
+    color: #333;
+  }
+
+  #track-info {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .keyboard-shortcuts {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .keyboard-shortcuts kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    font-family: monospace;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
   }
 &lt;/style&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;⚠️&lt;/strong&gt; 本文分为《入门》、《初级1》、《初级2》三个部分。由于分页，部分内容可能初始隐藏。请&lt;strong&gt;先使用下方导航按钮&lt;/strong&gt;切换到对应部分，再使用目录跳转到具体内容。&lt;/p&gt;</description>
+
+&lt;div class=&#34;player-container&#34;&gt;
+  &lt;div id=&#34;navigation&#34;&gt;
+    &lt;div&gt;
+      &lt;span id=&#34;current-track&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-tracks&#34;&gt;0&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id=&#34;jump-container&#34;&gt;
+      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Search or enter track number&#34; list=&#34;tracks-list&#34;&gt;
+      &lt;datalist id=&#34;tracks-list&#34;&gt;&lt;/datalist&gt;
+      &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;Jump&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&#34;audio-player-controls&#34;&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;play-btn&#34;&gt;▶️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;pause-btn&#34; style=&#34;display:none;&#34;&gt;⏸️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;prev-btn&#34;&gt;⏮️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;next-btn&#34;&gt;⏭️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;rate-1x-btn&#34; class=&#34;rate-btn&#34;&gt;1x&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;rate-2x-btn&#34; class=&#34;rate-btn active&#34;&gt;2x&lt;/button&gt;
+    &lt;span id=&#34;audio-status&#34;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&#34;track-info&#34;&gt;&lt;/div&gt;
+  &lt;audio id=&#34;main-audio&#34; controls&gt;&lt;/audio&gt;
+&lt;/div&gt;
+
+&lt;table id=&#34;transcript-table&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Japanese&lt;/th&gt;
+      &lt;th&gt;Romaji&lt;/th&gt;
+      &lt;th&gt;English&lt;/th&gt;
+      &lt;th&gt;Chinese&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody id=&#34;transcript-body&#34;&gt;
+    
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&#34;keyboard-shortcuts&#34;&gt;
+  &lt;p&gt;&lt;strong&gt;Keyboard shortcuts:&lt;/strong&gt;
+    &lt;kbd&gt;→&lt;/kbd&gt; Next track |
+    &lt;kbd&gt;←&lt;/kbd&gt; Previous track |
+    &lt;kbd&gt;1&lt;/kbd&gt; 1x speed |
+    &lt;kbd&gt;2&lt;/kbd&gt; 2x speed
+  &lt;/p&gt;</description>
     </item>
     <item>
       <title>如何学好Python[2]: 学习 Python</title>
