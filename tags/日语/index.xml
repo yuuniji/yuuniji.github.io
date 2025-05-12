@@ -16,16 +16,9 @@
       <description>&lt;h2 id=&#34;入门&#34;&gt;★《入门》&lt;/h2&gt;
 &lt;h3 id=&#34;方式1&#34;&gt;◇方式1&lt;/h3&gt;
 &lt;style&gt;
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Helvetica, Arial, sans-serif;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    line-height: 1.6;
-  }
 
   .player-container {
-    background-color: #f5f5f5;
+     
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -38,8 +31,8 @@
   }
 
   .sbutton {
-    background-color: #4a6fa5;
-    color: white;
+     
+     
     border: none;
     padding: 8px 12px;
     margin-right: 8px;
@@ -49,7 +42,7 @@
   }
 
   .sbutton:hover {
-    background-color: #3a5a80;
+    background-color: #4CAF50;
   }
 
   .sbutton:disabled {
@@ -69,7 +62,7 @@
   #audio-status {
     margin-left: 10px;
     font-size: 14px;
-    color: #555;
+     
   }
 
   audio {
@@ -77,35 +70,11 @@
     margin-top: 10px;
   }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    font-size: 16px;
-  }
-
-  th {
-    background-color: #4a6fa5;
-    color: white;
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-  }
-
-  td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    vertical-align: top;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
 
   .note {
-    color: #3a5a80;
+    color: #4CAF50;
     font-weight: bold;
-    border-bottom: 1px dotted #3a5a80;
+    border-bottom: 1px dotted #4CAF50;
     cursor: help;
     position: relative;
   }
@@ -115,8 +84,8 @@
     position: absolute;
     bottom: 100%;
     left: 0;
-    background-color: #3a5a80;
-    color: white;
+     
+     
     padding: 5px;
     border-radius: 4px;
     font-size: 12px;
@@ -149,30 +118,30 @@
     margin-bottom: 12px;
     padding-bottom: 8px;
     border-bottom: 2px solid #4a6fa5;
-    color: #333;
+     
   }
 
   #track-info {
     margin-bottom: 15px;
     font-size: 14px;
-    color: #555;
+     
   }
 
   .keyboard-shortcuts {
     margin-top: 20px;
     font-size: 14px;
-    color: #666;
-    background-color: #f8f9fa;
+     
+     
     padding: 10px;
     border-radius: 5px;
   }
 
   .keyboard-shortcuts kbd {
-    background-color: #eee;
+     
     border-radius: 3px;
     border: 1px solid #b4b4b4;
     box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-    color: #333;
+     
     display: inline-block;
     font-size: 12px;
     font-family: monospace;
@@ -188,9 +157,9 @@
       &lt;span id=&#34;current-track&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-tracks&#34;&gt;0&lt;/span&gt;
     &lt;/div&gt;
     &lt;div id=&#34;jump-container&#34;&gt;
-      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Search or enter track number&#34; list=&#34;tracks-list&#34;&gt;
+      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Search or enter track number&#34; list=&#34;tracks-list&#34; style=&#34;color: #A0A0A0;&#34;&gt;
       &lt;datalist id=&#34;tracks-list&#34;&gt;&lt;/datalist&gt;
-      &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;Jump&lt;/button&gt;
+      &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;➡️&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
@@ -199,8 +168,8 @@
     &lt;button class=&#34;sbutton&#34; id=&#34;pause-btn&#34; style=&#34;display:none;&#34;&gt;⏸️&lt;/button&gt;
     &lt;button class=&#34;sbutton&#34; id=&#34;prev-btn&#34;&gt;⏮️&lt;/button&gt;
     &lt;button class=&#34;sbutton&#34; id=&#34;next-btn&#34;&gt;⏭️&lt;/button&gt;
-    &lt;button class=&#34;sbutton&#34; id=&#34;rate-1x-btn&#34; class=&#34;rate-btn&#34;&gt;1x&lt;/button&gt;
-    &lt;button class=&#34;sbutton&#34; id=&#34;rate-2x-btn&#34; class=&#34;rate-btn active&#34;&gt;2x&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;rate-1x-btn&#34; class=&#34;rate-btn&#34;&gt;🐌&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;rate-2x-btn&#34; class=&#34;rate-btn active&#34;&gt;⚡️&lt;/button&gt;
     &lt;span id=&#34;audio-status&#34;&gt;&lt;/span&gt;
   &lt;/div&gt;
 
