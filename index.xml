@@ -17,7 +17,6 @@
 &lt;h2 id=&#34;入门&#34;&gt;★《入门》&lt;/h2&gt;
 &lt;h3 id=&#34;方式1&#34;&gt;◇方式1&lt;/h3&gt;
 &lt;style&gt;
-
   .player-container {
      
     padding: 15px;
@@ -158,7 +157,8 @@
       &lt;span id=&#34;current-track&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-tracks&#34;&gt;0&lt;/span&gt;
     &lt;/div&gt;
     &lt;div id=&#34;jump-container&#34;&gt;
-      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Search or enter track number&#34; list=&#34;tracks-list&#34; style=&#34;color: #A0A0A0;&#34;&gt;
+      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Search or enter track number&#34; list=&#34;tracks-list&#34;
+        style=&#34;color: #A0A0A0;&#34;&gt;
       &lt;datalist id=&#34;tracks-list&#34;&gt;&lt;/datalist&gt;
       &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;➡️&lt;/button&gt;
     &lt;/div&gt;
@@ -179,14 +179,7 @@
 &lt;/div&gt;
 
 &lt;table id=&#34;transcript-table&#34;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Japanese&lt;/th&gt;
-      &lt;th&gt;Romaji&lt;/th&gt;
-      &lt;th&gt;English&lt;/th&gt;
-      &lt;th&gt;Chinese&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
+  &lt;thead id=&#34;transcript-header&#34;&gt;&lt;/thead&gt;
   &lt;tbody id=&#34;transcript-body&#34;&gt;
     
   &lt;/tbody&gt;
