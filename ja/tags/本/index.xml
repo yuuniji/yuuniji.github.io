@@ -27,6 +27,7 @@
         &lt;option value=&#34;book3&#34;&gt;Book 3&lt;/option&gt;
         &lt;option value=&#34;book4&#34;&gt;Book 4&lt;/option&gt;
         &lt;option value=&#34;book5&#34;&gt;Book 5&lt;/option&gt;
+        &lt;option value=&#34;book6&#34;&gt;Book 6&lt;/option&gt;
       &lt;/select&gt;
       &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Chapter number or title&#34; list=&#34;chapters-list-book1&#34;&gt;
       &lt;datalist id=&#34;chapters-list-book1&#34;&gt;&lt;/datalist&gt;
