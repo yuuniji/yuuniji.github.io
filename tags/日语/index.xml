@@ -40,7 +40,8 @@
   &lt;/div&gt;
 
   &lt;div id=&#34;track-info&#34;&gt;&lt;/div&gt;
-  &lt;audio id=&#34;main-audio&#34; controls&gt;&lt;/audio&gt;
+  &lt;audio id=&#34;main-audio&#34; style=&#34;display: none;&#34;&gt;&lt;/audio&gt;
+  
 &lt;/div&gt;
 
 &lt;table id=&#34;transcript-table&#34;&gt;
