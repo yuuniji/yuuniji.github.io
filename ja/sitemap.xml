@@ -38,9 +38,6 @@
                 href="https://yuuniji.github.io/ja/posts/"
                 />
   </url><url>
-    <loc>https://yuuniji.github.io/ja/tags/%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%96%E3%83%83%E3%82%AF/</loc>
-    <lastmod>2025-05-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yuuniji.github.io/ja/posts/audiobook-0/</loc>
     <lastmod>2025-05-13T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -59,6 +56,9 @@
                 href="https://yuuniji.github.io/ja/posts/audiobook-0/"
                 />
   </url><url>
+    <loc>https://yuuniji.github.io/ja/tags/%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%96%E3%83%83%E3%82%AF/</loc>
+    <lastmod>2025-05-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://yuuniji.github.io/ja/tags/</loc>
     <lastmod>2025-05-13T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -76,6 +76,12 @@
                 hreflang="ja"
                 href="https://yuuniji.github.io/ja/tags/"
                 />
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/tags/%E7%B5%8C%E6%B8%88%E5%AD%A6/</loc>
+    <lastmod>2025-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.github.io/ja/tags/%E6%9C%AC/</loc>
+    <lastmod>2025-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yuuniji.github.io/ja/tags/%E6%95%99%E6%9D%90/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>

@@ -38,9 +38,6 @@
                 href="https://yuuniji.github.io/en/"
                 />
   </url><url>
-    <loc>https://yuuniji.github.io/en/tags/audiobook/</loc>
-    <lastmod>2025-05-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yuuniji.github.io/en/posts/audiobook-0/</loc>
     <lastmod>2025-05-13T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -58,6 +55,15 @@
                 hreflang="en"
                 href="https://yuuniji.github.io/en/posts/audiobook-0/"
                 />
+  </url><url>
+    <loc>https://yuuniji.github.io/en/tags/audiobooks/</loc>
+    <lastmod>2025-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.github.io/en/tags/books/</loc>
+    <lastmod>2025-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.github.io/en/tags/economics/</loc>
+    <lastmod>2025-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yuuniji.github.io/en/tags/</loc>
     <lastmod>2025-05-13T00:00:00+00:00</lastmod>
