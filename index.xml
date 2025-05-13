@@ -13,127 +13,232 @@
       <link>https://yuuniji.github.io/posts/audiobook-0/</link>
       <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/posts/audiobook-0/</guid>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang=&#34;zh-CN&#34;&gt;
-&lt;head&gt;
-  &lt;meta charset=&#34;UTF-8&#34;&gt;
-  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
-  &lt;title&gt;有声书播放器&lt;/title&gt;
-  &lt;style&gt;
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-    .player-container {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-    }
-    #navigation {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    #jump-container {
-      display: flex;
-      align-items: center;
-    }
-    #jump-to {
-      padding: 5px;
-      margin-right: 10px;
-      width: 200px;
-    }
-    .sbutton {
-      padding: 8px 12px;
-      margin: 0 5px;
-      border: none;
-      background: #007bff;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .sbutton:hover {
-      background: #0056b3;
-    }
-    #audio-player-controls {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    #chapter-title {
-      font-size: 24px;
-      margin: 10px 0;
-      text-align: center;
-    }
-    #chapter-content {
-      max-height: 400px;
-      overflow-y: auto;
-      padding: 15px;
-      background: #f8f9fa;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      line-height: 1.6;
-    }
-    #audio-status {
-      font-size: 14px;
-      color: #666;
-      margin-top: 10px;
-      text-align: center;
-    }
-    .keyboard-shortcuts {
-      font-size: 14px;
-      color: #666;
-      text-align: center;
-      margin-top: 20px;
-    }
-    kbd {
-      background: #eee;
-      padding: 2px 5px;
-      border-radius: 3px;
-      border: 1px solid #ccc;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div class=&#34;player-container&#34;&gt;
-    &lt;div id=&#34;navigation&#34;&gt;
-      &lt;div&gt;
-        &lt;span id=&#34;current-chapter&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-chapters&#34;&gt;0&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id=&#34;jump-container&#34;&gt;
-        &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;输入章节号或名称&#34; list=&#34;chapters-list&#34;&gt;
-        &lt;datalist id=&#34;chapters-list&#34;&gt;&lt;/datalist&gt;
-        &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;➡️&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://yuuniji.github.io/css/audiobook.css&#34;&gt;
 
-    &lt;div id=&#34;audio-player-controls&#34;&gt;
-      &lt;button class=&#34;sbutton&#34; id=&#34;play-btn&#34;&gt;▶️&lt;/button&gt;
-      &lt;button class=&#34;sbutton&#34; id=&#34;pause-btn&#34; style=&#34;display:none;&#34;&gt;⏸️&lt;/button&gt;
-      &lt;button class=&#34;sbutton&#34; id=&#34;prev-btn&#34;&gt;⏮️&lt;/button&gt;
-      &lt;button class=&#34;sbutton&#34; id=&#34;next-btn&#34;&gt;⏭️&lt;/button&gt;
-      &lt;div id=&#34;audio-status&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;audiobook-player&#34; data-book=&#34;book1&#34; data-baseurl=&#34;https://yuuniji.github.io/audiobook-a/&#34;&gt;
+  &lt;div class=&#34;navigation&#34;&gt;
+    &lt;div&gt;
+      &lt;span&gt;章节：&lt;span id=&#34;current-chapter&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-chapters&#34;&gt;0&lt;/span&gt;&lt;/span&gt;
     &lt;/div&gt;
-
-    &lt;h2 id=&#34;chapter-title&#34;&gt;章节标题&lt;/h2&gt;
-    &lt;div id=&#34;chapter-content&#34;&gt;
-      
+    &lt;div class=&#34;jump-container&#34;&gt;
+      &lt;select id=&#34;book-select&#34;&gt;
+        &lt;option value=&#34;book1&#34;&gt;Book 1&lt;/option&gt;
+        &lt;option value=&#34;book2&#34;&gt;Book 2&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;章节号或名称&#34; list=&#34;chapters-list-book1&#34;&gt;
+      &lt;datalist id=&#34;chapters-list-book1&#34;&gt;&lt;/datalist&gt;
+      &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;➡️&lt;/button&gt;
     &lt;/div&gt;
-    &lt;audio id=&#34;main-audio&#34; controls style=&#34;display: none;&#34;&gt;&lt;/audio&gt;
   &lt;/div&gt;
+  &lt;div class=&#34;audio-player-controls&#34;&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;play-btn&#34;&gt;▶️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;pause-btn&#34; style=&#34;display:none;&#34;&gt;⏸️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;prev-btn&#34;&gt;⏮️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;next-btn&#34;&gt;⏭️&lt;/button&gt;
+    &lt;input type=&#34;range&#34; id=&#34;progress&#34; value=&#34;0&#34; max=&#34;100&#34; style=&#34;width: 100%;&#34;&gt;
+    &lt;div id=&#34;audio-status&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;h2 id=&#34;chapter-title&#34;&gt;章节标题&lt;/h2&gt;
+  &lt;div id=&#34;chapter-content&#34;&gt;&lt;/div&gt;
+  &lt;audio id=&#34;main-audio&#34; style=&#34;display: none;&#34;&gt;&lt;/audio&gt;
+&lt;/div&gt;
 
-  &lt;div class=&#34;keyboard-shortcuts&#34;&gt;
-    &lt;p&gt;&lt;strong&gt;键盘快捷键：&lt;/strong&gt;
-      &lt;kbd&gt;→&lt;/kbd&gt; 下一章 |
-      &lt;kbd&gt;←&lt;/kbd&gt; 上一章 |
-      &lt;kbd&gt;空格&lt;/kbd&gt; 播放/暂停
-    &lt;/p&gt;</description>
+&lt;script&gt;
+  (async () =&gt; {
+    const player = document.querySelector(&#39;.audiobook-player&#39;);
+    const bookId = player.dataset.book;
+    const baseUrl = player.dataset.baseurl;
+    let currentBook = bookId, currentChapters = [], current = 0;
+
+    const audio = player.querySelector(&#39;#main-audio&#39;);
+    const playBtn = player.querySelector(&#39;#play-btn&#39;);
+    const pauseBtn = player.querySelector(&#39;#pause-btn&#39;);
+    const nextBtn = player.querySelector(&#39;#next-btn&#39;);
+    const prevBtn = player.querySelector(&#39;#prev-btn&#39;);
+    const progress = player.querySelector(&#39;#progress&#39;);
+    const status = player.querySelector(&#39;#audio-status&#39;);
+    const currentChapterSpan = player.querySelector(&#39;#current-chapter&#39;);
+    const totalChaptersSpan = player.querySelector(&#39;#total-chapters&#39;);
+    const chapterTitle = player.querySelector(&#39;#chapter-title&#39;);
+    const chapterContent = player.querySelector(&#39;#chapter-content&#39;);
+    const jumpTo = player.querySelector(&#39;#jump-to&#39;);
+    const jumpBtn = player.querySelector(&#39;#jump-btn&#39;);
+    const bookSelect = player.querySelector(&#39;#book-select&#39;);
+    const chaptersList = player.querySelector(`#chapters-list-${bookId}`);
+
+    
+    console.log(&#39;Initializing audiobook player&#39;, { bookId, baseUrl });
+
+    
+    async function loadBook(bookId) {
+      const metadataUrl = `${baseUrl}books/${bookId}/metadata.json`;
+      console.log(&#39;Fetching metadata:&#39;, metadataUrl);
+      try {
+        const res = await fetch(metadataUrl);
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+        const metadata = await res.json();
+        console.log(&#39;Metadata loaded:&#39;, metadata);
+        currentBook = bookId;
+        currentChapters = metadata.chapters;
+        current = 0;
+        chaptersList.innerHTML = &#39;&#39;;
+        currentChapters.forEach(ch =&gt; {
+          const option = document.createElement(&#39;option&#39;);
+          option.value = ch.chapter;
+          option.text = ch.title;
+          chaptersList.appendChild(option);
+        });
+        totalChaptersSpan.textContent = currentChapters.length;
+        bookSelect.value = bookId;
+        await updateChapter();
+      } catch (err) {
+        console.error(&#39;Load metadata failed:&#39;, err);
+        status.textContent = navigator.onLine ? `加载书籍失败: ${err.message}` : &#39;请检查网络连接&#39;;
+      }
+    }
+
+    
+    async function updateChapter() {
+      if (!currentChapters[current]) return;
+      const chapter = currentChapters[current];
+      const contentUrl = `${baseUrl}books/${currentBook}/${chapter.content}`;
+      console.log(&#39;Fetching content:&#39;, contentUrl);
+      currentChapterSpan.textContent = current + 1;
+      chapterTitle.textContent = chapter.title;
+      try {
+        const res = await fetch(contentUrl);
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+        chapterContent.textContent = await res.text();
+      } catch (err) {
+        console.error(&#39;Load content failed:&#39;, err);
+        chapterContent.textContent = navigator.onLine ? `无法加载章节内容: ${err.message}` : &#39;请检查网络连接&#39;;
+      }
+      status.textContent = `已加载：${chapter.title}`;
+    }
+
+    
+    async function playCurrent() {
+      if (current &gt;= currentChapters.length) {
+        status.textContent = &#39;播放完成&#39;;
+        current = 0;
+        progress.value = 0;
+        await updateChapter();
+        return;
+      }
+      const chapter = currentChapters[current];
+      const audioUrl = `${baseUrl}books/${currentBook}/${chapter.audio}`;
+      console.log(&#39;Playing audio:&#39;, audioUrl);
+      audio.src = audioUrl;
+      audio.play().then(() =&gt; {
+        playBtn.style.display = &#39;none&#39;;
+        pauseBtn.style.display = &#39;&#39;;
+        status.textContent = `正在播放：${chapter.title}`;
+      }).catch(err =&gt; {
+        console.error(&#39;Playback failed:&#39;, err);
+        status.textContent = navigator.onLine ? `播放失败：${err.message}` : &#39;请检查网络连接&#39;;
+      });
+      await updateChapter();
+    }
+
+    
+    audio.ontimeupdate = () =&gt; {
+      if (audio.duration) progress.value = (audio.currentTime / audio.duration) * 100;
+    };
+    progress.oninput = () =&gt; {
+      if (audio.duration) audio.currentTime = (progress.value / 100) * audio.duration;
+    };
+
+    
+    bookSelect.onchange = async () =&gt; {
+      if (bookSelect.value) await loadBook(bookSelect.value);
+      await playCurrent();
+    };
+
+    
+    playBtn.onclick = () =&gt; playCurrent();
+
+    
+    pauseBtn.onclick = () =&gt; {
+      if (!audio.paused) {
+        audio.pause();
+        pauseBtn.textContent = &#39;▶️&#39;;
+        status.textContent = &#39;已暂停&#39;;
+      } else {
+        audio.play().catch(err =&gt; status.textContent = navigator.onLine ? `继续播放失败：${err.message}` : &#39;请检查网络连接&#39;);
+        pauseBtn.textContent = &#39;⏸️&#39;;
+        status.textContent = `正在播放：${currentChapters[current].title}`;
+      }
+    };
+
+    
+    nextBtn.onclick = async () =&gt; {
+      if (current &lt; currentChapters.length - 1) {
+        current++;
+        pauseBtn.style.display = &#39;none&#39;;
+        playBtn.style.display = &#39;&#39;;
+        await playCurrent();
+      } else {
+        status.textContent = &#39;已是最后一章&#39;;
+      }
+    };
+
+    
+    prevBtn.onclick = async () =&gt; {
+      if (current &gt; 0) {
+        current--;
+        pauseBtn.style.display = &#39;none&#39;;
+        playBtn.style.display = &#39;&#39;;
+        await playCurrent();
+      } else {
+        status.textContent = &#39;已是第一章&#39;;
+      }
+    };
+
+    
+    jumpBtn.onclick = async () =&gt; {
+      const input = jumpTo.value.trim();
+      if (!isNaN(input) &amp;&amp; input &gt; 0 &amp;&amp; input &lt;= currentChapters.length) {
+        current = parseInt(input) - 1;
+        pauseBtn.style.display = &#39;none&#39;;
+        playBtn.style.display = &#39;&#39;;
+        await playCurrent();
+      } else {
+        const index = currentChapters.findIndex(ch =&gt; ch.title.toLowerCase().includes(input.toLowerCase()));
+        if (index !== -1) {
+          current = index;
+          pauseBtn.style.display = &#39;none&#39;;
+          playBtn.style.display = &#39;&#39;;
+          await playCurrent();
+        } else {
+          status.textContent = &#39;章节未找到&#39;;
+        }
+      }
+      jumpTo.value = &#39;&#39;;
+    };
+
+    
+    audio.onended = async () =&gt; {
+      current++;
+      if (current &lt; currentChapters.length) {
+        await playCurrent();
+      } else {
+        playBtn.style.display = &#39;&#39;;
+        pauseBtn.style.display = &#39;none&#39;;
+        status.textContent = &#39;播放完成&#39;;
+        current = 0;
+        progress.value = 0;
+        await updateChapter();
+      }
+    };
+
+    
+    window.addEventListener(&#39;offline&#39;, () =&gt; status.textContent = &#39;网络断开，请检查连接&#39;);
+    window.addEventListener(&#39;online&#39;, () =&gt; status.textContent = &#39;网络已恢复&#39;);
+
+    
+    await loadBook(bookId);
+  })();
+&lt;/script&gt;</description>
     </item>
     <item>
       <title>如何学好日语[7]: 教材《いろどり》笔记</title>
