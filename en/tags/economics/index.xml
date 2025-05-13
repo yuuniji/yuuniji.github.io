@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Economics on 叶泽伟的博客</title>
-    <link>https://yuuniji.github.io/en/tags/economics/</link>
+    <link>http://localhost:1313/en/tags/economics/</link>
     <description>Recent content in Economics on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
     <lastBuildDate>Tue, 13 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yuuniji.github.io/en/tags/economics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/tags/economics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adam Smith: The Wealth of Nations — An Inquiry into the Nature and Causes of the Wealth of Nations</title>
-      <link>https://yuuniji.github.io/en/posts/audiobook-0/</link>
+      <link>http://localhost:1313/en/posts/audiobook-0/</link>
       <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/en/posts/audiobook-0/</guid>
+      <guid>http://localhost:1313/en/posts/audiobook-0/</guid>
       <description>&lt;h2 id=&#34;-adam-smith-the-wealth-of-nations--an-inquiry-into-the-nature-and-causes-of-the-wealth-of-nations&#34;&gt;★ &lt;em&gt;Adam Smith: The Wealth of Nations — An Inquiry into the Nature and Causes of the Wealth of Nations&lt;/em&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;-book-1-on-the-causes-of-improvement-in-labor-productivity-and-the-distribution-of-labor-products-among-classes&#34;&gt;◇ &lt;strong&gt;Book 1: On the Causes of Improvement in Labor Productivity and the Distribution of Labor Products Among Classes&lt;/strong&gt;&lt;/h3&gt;
 &lt;ul&gt;
@@ -174,7 +174,7 @@
 &lt;li&gt;&lt;strong&gt;Personal Thoughts&lt;/strong&gt;: Analyze whether the fiscal policies of modern welfare states (e.g., Nordic countries) align with Smith’s views.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://yuuniji.github.io/css/audiobook.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/audiobook.css&#34;&gt;
 
 &lt;div class=&#34;audiobook-player&#34; data-book=&#34;book1&#34; data-baseurl=&#34;https://yuuniji.github.io/audiobook-a/&#34;&gt;
   &lt;div class=&#34;navigation&#34;&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>経済学 on 叶泽伟的博客</title>
-    <link>https://yuuniji.github.io/ja/tags/%E7%B5%8C%E6%B8%88%E5%AD%A6/</link>
+    <link>http://localhost:1313/ja/tags/%E7%B5%8C%E6%B8%88%E5%AD%A6/</link>
     <description>Recent content in 経済学 on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 13 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yuuniji.github.io/ja/tags/%E7%B5%8C%E6%B8%88%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/ja/tags/%E7%B5%8C%E6%B8%88%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>『アダム・スミス：国富論——国民の富の性質と原因について』</title>
-      <link>https://yuuniji.github.io/ja/posts/audiobook-0/</link>
+      <link>http://localhost:1313/ja/posts/audiobook-0/</link>
       <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/ja/posts/audiobook-0/</guid>
+      <guid>http://localhost:1313/ja/posts/audiobook-0/</guid>
       <description>&lt;h2 id=&#34;アダムスミス国富論国民の富の性質と原因について&#34;&gt;★『アダム・スミス：国富論——国民の富の性質と原因について』&lt;/h2&gt;
 &lt;h3 id=&#34;book-1労働生産性の向上の原因および労働産物の各階層間での分配について&#34;&gt;◇&lt;strong&gt;Book 1：労働生産性の向上の原因および労働産物の各階層間での分配について&lt;/strong&gt;&lt;/h3&gt;
 &lt;ul&gt;
@@ -173,7 +173,7 @@
 &lt;li&gt;&lt;strong&gt;個人的な考察&lt;/strong&gt;：現代の福祉国家（例：北欧諸国）の財政政策がスミスの見解と一致するか分析可能。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://yuuniji.github.io/css/audiobook.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/audiobook.css&#34;&gt;
 
 &lt;div class=&#34;audiobook-player&#34; data-book=&#34;book1&#34; data-baseurl=&#34;https://yuuniji.github.io/audiobook-a/&#34;&gt;
   &lt;div class=&#34;navigation&#34;&gt;
