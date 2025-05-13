@@ -41,7 +41,7 @@ hugo new posts/hello-world.md
 Edit content/posts/hello-world.md:">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.github.io/en/posts/my-first-post/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.20862d6be0c38dceecc046ef5c2c49d8c2ad7393ff40a0ef7b51bc3d114b99a7.css" integrity="sha256-IIYta&#43;DDjc7swEbvXCxJ2MKtc5P/QKDve1G8PRFLmac=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b6866569f9f1e36bd1dc08a405bd5203906e61eb8b5e5b52e496758dba3d8007.css" integrity="sha256-toZlafnx42vR3AikBb1SA5BuYeuLXltS5JZ1jbo9gAc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
@@ -171,7 +171,7 @@ Edit content/posts/hello-world.md:">
     "Blog Setup", "GitHub"
   ],
   "articleBody": "Hugo Blog + GitHub Pages Complete Deployment Guide ★Environment Preparation Device: MacBook (macOS) Tools: Git Hugo GitHub Account ◇Install Hugo brew install hugo Verify installation:\nhugo version ★Create Hugo Blog mkdir blog \u0026\u0026 cd blog hugo new site . Initialize Git:\ngit init ★Choose \u0026 Add Theme Recommended PaperMod theme:\ngit submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod Edit config.toml, add:\ntheme = \"PaperMod\" baseURL = \"https://yuuniji.github.io\" ★Write Blog Posts Create your first post:\nhugo new posts/hello-world.md Edit content/posts/hello-world.md:\n--- title: \"Hello World\" date: 2025-02-22T12:00:00 draft: false --- This is my first blog post! ★Local Preview (Skip for First Deployment) hugo server -D Access in browser:\nhttp://localhost:1313 ★Publish to GitHub ◇1. Create GitHub Repositories blog (for Hugo source code) yuuniji.github.io (for generated static files) ◇2. Push to blog Repository git remote add origin https://github.com/yuuniji/blog.git git branch -M main git add . git commit -m \"Initial commit\" git push -u origin main ◇3. Generate Static Files hugo -D Static files are located in the public/ directory.\n◇4. Push to yuuniji.github.io cd public git init git remote add origin https://github.com/yuuniji/yuuniji.github.io.git git checkout -b main git add . git commit -m \"Deploy Hugo site\" git push -f origin main ★Configure GitHub Pages Go to yuuniji.github.io repository Settings → Pages. Select main branch, save and wait for deployment to complete. Visit https://yuuniji.github.io to view your blog. ★Automated Deployment (Optional) ◇1. Add deploy.sh to blog Repository nano deploy.sh Paste the following content:\n#!/bin/bash hugo -D cd public git add . git commit -m \"Deploy: $(date)\" git push origin main cd .. Save and exit (press Ctrl + X, then Y, and Enter).\n◇2. Grant Execution Permission chmod +x deploy.sh ◇3. Run Deployment Script ./deploy.sh ★All Done! To update your blog in the future:\nWrite posts in blog/ directory: hugo new posts/xxx.md Run ./deploy.sh Visit https://yuuniji.github.io to see updates 💡 Refer back to this guide if you have any questions! 🚀\n★Hugo Blog Multi-language \u0026 Feature Expansion Guide ◇Quick Links baseURL = \"https://yuuniji.github.io\" title = \"Yuuniji的博客\" theme = \"PaperMod\" defaultContentLanguage = \"zh\" hasCJKLanguage = true [languages] [languages.zh] languageName = \"中文\" weight = 1 contentDir = \"content/zh\" [languages.zh.params] archivesTitle = \"归档\" archivesDescription = \"按年份和月份查看文章归档\" [languages.zh.menu] [[languages.zh.menu.main]] name = \"首页\" url = \"/\" weight = 1 [[languages.zh.menu.main]] name = \"关于\" url = \"/about/\" weight = 2 [[languages.zh.menu.main]] name = \"标签\" url = \"/tags/\" weight = 3 [[languages.zh.menu.main]] name = \"归档\" url = \"/archives/\" weight = 4 [[languages.zh.menu.main]] name = \"搜索\" url = \"/search/\" weight = 5 [languages.en] languageName = \"English\" weight = 2 contentDir = \"content/en\" [languages.en.params] archivesTitle = \"Archives\" archivesDescription = \"Browse articles by year and month\" [languages.en.menu] [[languages.en.menu.main]] name = \"Home\" url = \"/\" weight = 1 [[languages.en.menu.main]] name = \"About\" url = \"/about/\" weight = 2 [[languages.en.menu.main]] name = \"Tags\" url = \"/tags/\" weight = 3 [[languages.en.menu.main]] name = \"Archives\" url = \"/archives/\" weight = 4 [[languages.en.menu.main]] name = \"Search\" url = \"/search/\" weight = 5 [languages.ja] languageName = \"日本語\" weight = 3 contentDir = \"content/ja\" [languages.ja.params] archivesTitle = \"アーカイブ\" archivesDescription = \"年と月ごとに記事を表示\" [languages.ja.menu] [[languages.ja.menu.main]] name = \"ホーム\" url = \"/\" weight = 1 [[languages.ja.menu.main]] name = \"について\" url = \"/about/\" weight = 2 [[languages.ja.menu.main]] name = \"タグ\" url = \"/tags/\" weight = 3 [[languages.ja.menu.main]] name = \"アーカイブ\" url = \"/archives/\" weight = 4 [[languages.ja.menu.main]] name = \"検索\" url = \"/search/\" weight = 5 [outputs] home = [\"HTML\", \"RSS\", \"JSON\", \"SITEMAP\"] section = [\"HTML\", \"RSS\"] archives = [\"HTML\"] search = [\"HTML\"] [params] author = \"Yuuniji\" defaultTheme = \"auto\" ShowAllPagesInArchive = true ShowShareButtons = true ShowReadingTime = true ShowToc = true TocOpen = false ShowBreadCrumbs = true ShowCodeCopyButtons = true ShowPostNavLinks = true ShowRssButtonInSectionTermList = true archives = true [params.fuseOpts] isCaseSensitive = false shouldSort = true location = 0 distance = 1_000 threshold = 0.4 minMatchCharLength = 0 keys = [ \"title\", \"permalink\", \"summary\", \"content\" ] [content] archivesDir = \"content/archives\" ◇1. Directory Structure According to your hugo.toml configuration, your content directory structure should be:\ncontent/ ├── zh/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── en/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── ja/ ├── _index.md ├── about.md ├── archives.md ├── search.md ├── categories/_index.md ├── posts/_index.md ├── tags/_index.md Additionally, you need to create an archetypes directory to adapt to different languages:\narchetypes/ ├── default.md ├── zh.md ├── en.md ├── ja.md ◇2. archetypes Directory Configuration Each language’s archetypes file is used to set default front matter.\nDefault archetypes/default.md --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] --- archetypes/zh.md (Chinese) --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"zh\" --- archetypes/en.md (English) --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"en\" --- archetypes/ja.md (Japanese) --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"ja\" --- ◇3. Create Posts in Different Languages Use the --kind option to specify archetypes and create posts in the corresponding content/ directory.\nChinese Post hugo new content/zh/posts/my-first-post1.md This will create my-first-post.md in the content/zh/posts/ directory, using archetypes/zh.md as the template.\nEnglish Post hugo new content/en/posts/my-first-post1.md This will create my-first-post.md in the content/en/posts/ directory, using archetypes/en.md as the template.\nJapanese Post hugo new content/ja/posts/my-first-post1.md This will create my-first-post.md in the content/ja/posts/ directory, using archetypes/ja.md as the template.\nAutomating the Creation of Articles in Different Languages create_multilingual_post.sh Script\n#!/bin/bash # Check if the input parameter exists if [ -z \"$1\" ]; then echo \"Please enter the article title.\" exit 1 fi TITLE=\"$1\" DATE=$(date +%Y-%m-%d) # Create the article file name (using hyphens to separate words) POST_NAME=$(echo \"$TITLE\" | tr \" \" \"-\") # Generate the Chinese article mkdir -p \"content/zh/posts\" cat \u003e \"content/zh/posts/$POST_NAME.md\" \u003c",
-  "wordCount" : "3230",
+  "wordCount" : "3335",
   "inLanguage": "en",
   "datePublished": "2025-02-22T00:00:00Z",
   "dateModified": "2025-02-22T00:00:00Z",
@@ -403,12 +403,20 @@ Edit content/posts/hello-world.md:">
                     <a href="#4-rebuild-and-deploy-your-hugo-blog" aria-label="4: Rebuild and Deploy Your Hugo Blog">4: Rebuild and Deploy Your Hugo Blog</a></li></ul>
                 </li>
                 <li>
+                    <a href="#note-sidebar-annotation-feature" aria-label="◇Note Sidebar Annotation Feature">◇Note Sidebar Annotation Feature</a><ul>
+                        
+                <li>
+                    <a href="#1-usage-example-in-markdown" aria-label="1: Usage example in Markdown">1: Usage example in Markdown</a></li>
+                <li>
+                    <a href="#2-add-css-styles" aria-label="2: Add CSS Styles">2: Add CSS Styles</a></li></ul>
+                </li>
+                <li>
                     <a href="#marginnote-sidebar-annotation-feature" aria-label="◇MarginNote Sidebar Annotation Feature">◇MarginNote Sidebar Annotation Feature</a><ul>
                         
                 <li>
                     <a href="#1-define-a-shortcode" aria-label="1: Define a Shortcode">1: Define a Shortcode</a></li>
                 <li>
-                    <a href="#2-add-css-styles" aria-label="2: Add CSS Styles">2: Add CSS Styles</a></li>
+                    <a href="#2-add-css-styles-1" aria-label="2: Add CSS Styles">2: Add CSS Styles</a></li>
                 <li>
                     <a href="#effect-description" aria-label="Effect Description">Effect Description</a></li></ul>
                 </li>
@@ -1032,7 +1040,34 @@ Edit content/posts/hello-world.md:">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
 </span></span></code></pre></div><p>Deploy the generated files to your hosting platform.</p>
 <hr>
-<h3 id="marginnote-sidebar-annotation-feature">◇MarginNote Sidebar Annotation Feature<a hidden class="anchor" aria-hidden="true" href="#marginnote-sidebar-annotation-feature">#</a></h3>
+<h3 id="note-sidebar-annotation-feature">◇Note Sidebar Annotation Feature<a hidden class="anchor" aria-hidden="true" href="#note-sidebar-annotation-feature">#</a></h3>
+<h4 id="1-usage-example-in-markdown">1: Usage example in Markdown<a hidden class="anchor" aria-hidden="true" href="#1-usage-example-in-markdown">#</a></h4>
+<p>This is a sentence in the main text <span class="note" data-note="This is the margin note content.">key term</span> continuing the main text.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>This is a sentence in the main text &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;note&#34;</span> <span style="color:#a6e22e">data-note</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;This is the margin note content.&#34;</span>&gt;key term&lt;/<span style="color:#f92672">span</span>&gt; continuing the main text.
+</span></span></code></pre></div><h4 id="2-add-css-styles">2: Add CSS Styles<a hidden class="anchor" aria-hidden="true" href="#2-add-css-styles">#</a></h4>
+<p>Add the following styles to your theme or site&rsquo;s CSS file (e.g., <code>assets/css/extended/custom.css</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">note</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#4CAF50</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dotted</span> <span style="color:#ae81ff">#4CAF50</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">help</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">note</span>:<span style="color:#a6e22e">hover</span>::<span style="color:#a6e22e">after</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">content</span>: attr(data<span style="color:#f92672">-</span>note);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#4CAF50</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">white-space</span>: <span style="color:#66d9ef">nowrap</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="marginnote-sidebar-annotation-feature">◇MarginNote Sidebar Annotation Feature<a hidden class="anchor" aria-hidden="true" href="#marginnote-sidebar-annotation-feature">#</a></h3>
 <h4 id="1-define-a-shortcode">1: Define a Shortcode<a hidden class="anchor" aria-hidden="true" href="#1-define-a-shortcode">#</a></h4>
 <p>Create a shortcode file in your Hugo project:</p>
 <p>Path: <code>layouts/shortcodes/marginnote.html</code></p>
@@ -1042,7 +1077,7 @@ Edit content/posts/hello-world.md:">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>This is a sentence in the main text <span class="marginnote" data-note="This is the margin note content.">key term</span>
  continuing the main text.
 </span></span></code></pre></div><hr>
-<h4 id="2-add-css-styles">2: Add CSS Styles<a hidden class="anchor" aria-hidden="true" href="#2-add-css-styles">#</a></h4>
+<h4 id="2-add-css-styles-1">2: Add CSS Styles<a hidden class="anchor" aria-hidden="true" href="#2-add-css-styles-1">#</a></h4>
 <p>Add the following styles to your theme or site&rsquo;s CSS file (e.g., <code>assets/css/extended/custom.css</code>):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">marginnote</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;

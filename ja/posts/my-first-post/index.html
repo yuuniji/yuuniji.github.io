@@ -29,7 +29,7 @@ hugo new site .
 Git の初期化：">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.github.io/ja/posts/my-first-post/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.20862d6be0c38dceecc046ef5c2c49d8c2ad7393ff40a0ef7b51bc3d114b99a7.css" integrity="sha256-IIYta&#43;DDjc7swEbvXCxJ2MKtc5P/QKDve1G8PRFLmac=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b6866569f9f1e36bd1dc08a405bd5203906e61eb8b5e5b52e496758dba3d8007.css" integrity="sha256-toZlafnx42vR3AikBb1SA5BuYeuLXltS5JZ1jbo9gAc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
@@ -143,7 +143,7 @@ Git の初期化：">
     "ブログ構築", "GitHub"
   ],
   "articleBody": "Hugo ブログ + GitHub Pages 完全デプロイガイド ★環境準備 デバイス：MacBook（macOS） ツール： Git Hugo GitHub アカウント ◇Hugo のインストール brew install hugo インストールの確認：\nhugo version ★Hugo ブログの作成 mkdir blog \u0026\u0026 cd blog hugo new site . Git の初期化：\ngit init ★テーマの選択 \u0026 追加 PaperMod テーマを推奨：\ngit submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod config.toml を編集し、以下を追加：\ntheme = \"PaperMod\" baseURL = \"https://yuuniji.github.io\" ★ブログ記事の作成 最初の記事を作成：\nhugo new posts/hello-world.md content/posts/hello-world.md を編集：\n--- title: \"Hello World\" date: 2025-02-22T12:00:00 draft: false --- これは私の最初のブログ記事です！ ★ローカルプレビュー（初回デプロイ時はスキップ） hugo server -D ブラウザでアクセス：\nhttp://localhost:1313 ★GitHub への公開 ◇1. GitHub リポジトリの作成 blog（Hugo ソースコード用） yuuniji.github.io（生成された静的ファイル用） ◇2. blog リポジトリのプッシュ git remote add origin https://github.com/yuuniji/blog.git git branch -M main git add . git commit -m \"Initial commit\" git push -u origin main ◇3. 静的ファイルの生成 hugo -D 静的ファイルは public/ ディレクトリにあります。\n◇4. yuuniji.github.io へのプッシュ cd public git init git remote add origin https://github.com/yuuniji/yuuniji.github.io.git git checkout -b main git add . git commit -m \"Deploy Hugo site\" git push -f origin main ★GitHub Pages の設定 yuuniji.github.io リポジトリの Settings → Pages に移動。 main ブランチを選択し、保存後デプロイ完了を待つ。 https://yuuniji.github.io にアクセスしてブログを確認。 ★自動デプロイ（オプション） ◇1. blog リポジトリに deploy.sh を追加 nano deploy.sh 以下を貼り付け：\n#!/bin/bash hugo -D cd public git add . git commit -m \"Deploy: $(date)\" git push origin main cd .. 保存して終了（Ctrl + X、Y、Enter）。\n◇2. 実行権限を付与 chmod +x deploy.sh ◇3. デプロイスクリプトの実行 ./deploy.sh ★完成！ 以降のブログ更新は、以下の手順で行います：\nblog/ ディレクトリで記事を作成 hugo new posts/xxx.md ./deploy.sh を実行 https://yuuniji.github.io にアクセスして更新を確認 💡 問題があればこのノートを参照してください！ 🚀\n★Hugo ブログの多言語対応 \u0026 機能拡張ガイド ◇クイックリンク baseURL = \"https://yuuniji.github.io\" title = \"Yuuniji的博客\" theme = \"PaperMod\" defaultContentLanguage = \"zh\" hasCJKLanguage = true [languages] [languages.zh] languageName = \"中文\" weight = 1 contentDir = \"content/zh\" [languages.zh.params] archivesTitle = \"归档\" archivesDescription = \"按年份和月份查看文章归档\" [languages.zh.menu] [[languages.zh.menu.main]] name = \"首页\" url = \"/\" weight = 1 [[languages.zh.menu.main]] name = \"关于\" url = \"/about/\" weight = 2 [[languages.zh.menu.main]] name = \"标签\" url = \"/tags/\" weight = 3 [[languages.zh.menu.main]] name = \"归档\" url = \"/archives/\" weight = 4 [[languages.zh.menu.main]] name = \"搜索\" url = \"/search/\" weight = 5 [languages.en] languageName = \"English\" weight = 2 contentDir = \"content/en\" [languages.en.params] archivesTitle = \"Archives\" archivesDescription = \"Browse articles by year and month\" [languages.en.menu] [[languages.en.menu.main]] name = \"Home\" url = \"/\" weight = 1 [[languages.en.menu.main]] name = \"About\" url = \"/about/\" weight = 2 [[languages.en.menu.main]] name = \"Tags\" url = \"/tags/\" weight = 3 [[languages.en.menu.main]] name = \"Archives\" url = \"/archives/\" weight = 4 [[languages.en.menu.main]] name = \"Search\" url = \"/search/\" weight = 5 [languages.ja] languageName = \"日本語\" weight = 3 contentDir = \"content/ja\" [languages.ja.params] archivesTitle = \"アーカイブ\" archivesDescription = \"年と月ごとに記事を表示\" [languages.ja.menu] [[languages.ja.menu.main]] name = \"ホーム\" url = \"/\" weight = 1 [[languages.ja.menu.main]] name = \"について\" url = \"/about/\" weight = 2 [[languages.ja.menu.main]] name = \"タグ\" url = \"/tags/\" weight = 3 [[languages.ja.menu.main]] name = \"アーカイブ\" url = \"/archives/\" weight = 4 [[languages.ja.menu.main]] name = \"検索\" url = \"/search/\" weight = 5 [outputs] home = [\"HTML\", \"RSS\", \"JSON\", \"SITEMAP\"] section = [\"HTML\", \"RSS\"] archives = [\"HTML\"] search = [\"HTML\"] [params] author = \"Yuuniji\" defaultTheme = \"auto\" ShowAllPagesInArchive = true ShowShareButtons = true ShowReadingTime = true ShowToc = true TocOpen = false ShowBreadCrumbs = true ShowCodeCopyButtons = true ShowPostNavLinks = true ShowRssButtonInSectionTermList = true archives = true [params.fuseOpts] isCaseSensitive = false shouldSort = true location = 0 distance = 1_000 threshold = 0.4 minMatchCharLength = 0 keys = [ \"title\", \"permalink\", \"summary\", \"content\" ] [content] archivesDir = \"content/archives\" ◇1. ディレクトリ構造 hugo.toml の設定に従い、content ディレクトリの構造は以下のようになります：\ncontent/ ├── zh/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── en/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── ja/ ├── _index.md ├── about.md ├── archives.md ├── search.md ├── categories/_index.md ├── posts/_index.md ├── tags/_index.md また、archetypes ディレクトリを作成し、各言語に対応させます：\narchetypes/ ├── default.md ├── zh.md ├── en.md ├── ja.md ◇2. archetypes ディレクトリの設定 各言語の archetypes ファイルは、デフォルトの front matter を設定するために使用されます。\nデフォルト archetypes/default.md --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] --- archetypes/zh.md（中文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"zh\" --- archetypes/en.md（英文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"en\" --- archetypes/ja.md（日本語） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"ja\" --- ◇3. 各言語の記事作成 --kind オプションを使用して archetypes を指定し、対応する content/ ディレクトリに記事を作成します。\n中文記事 hugo new content/zh/posts/my-first-post1.md これにより、content/zh/posts/ ディレクトリに my-first-post.md が作成され、archetypes/zh.md がテンプレートとして使用されます。\n英文記事 hugo new content/en/posts/my-first-post1.md これにより、content/en/posts/ ディレクトリに my-first-post.md が作成され、archetypes/en.md がテンプレートとして使用されます。\n日本語記事 hugo new content/ja/posts/my-first-post1.md これにより、content/ja/posts/ ディレクトリに my-first-post.md が作成され、archetypes/ja.md がテンプレートとして使用されます。\n自動化による多言語記事の作成 create_multilingual_post.sh スクリプト\n#!/bin/bash # 入力パラメータが存在するか確認 if [ -z \"$1\" ]; then echo \"記事のタイトルを入力してください。\" exit 1 fi TITLE=\"$1\" DATE=$(date +%Y-%m-%d) # 記事のファイル名を作成（単語をハイフンで区切る） POST_NAME=$(echo \"$TITLE\" | tr \" \" \"-\") # 中国語の記事を生成 mkdir -p \"content/zh/posts\" cat \u003e \"content/zh/posts/$POST_NAME.md\" \u003c",
-  "wordCount" : "6912",
+  "wordCount" : "7152",
   "inLanguage": "ja",
   "datePublished": "2025-02-22T00:00:00Z",
   "dateModified": "2025-02-22T00:00:00Z",
@@ -244,7 +244,7 @@ Git の初期化：">
     <h1 class="post-title entry-hint-parent">
       私のブログ構築の旅：ゼロからオンラインへ
     </h1>
-    <div class="post-meta"><span title='2025-02-22 00:00:00 +0000 UTC'>2月 22, 2025</span>&nbsp;·&nbsp;14 分&nbsp;|&nbsp;言語:
+    <div class="post-meta"><span title='2025-02-22 00:00:00 +0000 UTC'>2月 22, 2025</span>&nbsp;·&nbsp;15 分&nbsp;|&nbsp;言語:
 <ul class="i18n_list">
     <li>
         <a href="https://yuuniji.github.io/posts/my-first-post/">Zh</a>
@@ -375,12 +375,20 @@ Git の初期化：">
                     <a href="#4hugo-%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e5%86%8d%e6%a7%8b%e7%af%89%e3%81%a8%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4" aria-label="4：Hugo ブログの再構築とデプロイ">4：Hugo ブログの再構築とデプロイ</a></li></ul>
                 </li>
                 <li>
+                    <a href="#note-%e3%81%ae%e3%82%b5%e3%82%a4%e3%83%89%e3%83%8e%e3%83%bc%e3%83%88%e6%a9%9f%e8%83%bd" aria-label="◇Note のサイドノート機能">◇Note のサイドノート機能</a><ul>
+                        
+                <li>
+                    <a href="#1%e4%bd%bf%e7%94%a8%e4%be%8b" aria-label="1：使用例">1：使用例</a></li>
+                <li>
+                    <a href="#2css-%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab%e3%81%ae%e8%bf%bd%e5%8a%a0" aria-label="2：CSS スタイルの追加">2：CSS スタイルの追加</a></li></ul>
+                </li>
+                <li>
                     <a href="#marginnote-%e3%81%ae%e3%82%b5%e3%82%a4%e3%83%89%e3%83%8e%e3%83%bc%e3%83%88%e6%a9%9f%e8%83%bd" aria-label="◇MarginNote のサイドノート機能">◇MarginNote のサイドノート機能</a><ul>
                         
                 <li>
                     <a href="#1%e3%82%b7%e3%83%a7%e3%83%bc%e3%83%88%e3%82%b3%e3%83%bc%e3%83%89%e3%81%ae%e5%ae%9a%e7%be%a9" aria-label="1：ショートコードの定義">1：ショートコードの定義</a></li>
                 <li>
-                    <a href="#2css-%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab%e3%81%ae%e8%bf%bd%e5%8a%a0" aria-label="2：CSS スタイルの追加">2：CSS スタイルの追加</a></li>
+                    <a href="#2css-%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab%e3%81%ae%e8%bf%bd%e5%8a%a0-1" aria-label="2：CSS スタイルの追加">2：CSS スタイルの追加</a></li>
                 <li>
                     <a href="#%e5%8a%b9%e6%9e%9c%e3%81%ae%e8%aa%ac%e6%98%8e" aria-label="効果の説明">効果の説明</a></li></ul>
                 </li>
@@ -1015,7 +1023,34 @@ Git の初期化：">
 <p>以下のコマンドを実行：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
 </span></span></code></pre></div><hr>
-<h3 id="marginnote-のサイドノート機能">◇MarginNote のサイドノート機能<a hidden class="anchor" aria-hidden="true" href="#marginnote-のサイドノート機能">#</a></h3>
+<h3 id="note-のサイドノート機能">◇Note のサイドノート機能<a hidden class="anchor" aria-hidden="true" href="#note-のサイドノート機能">#</a></h3>
+<h4 id="1使用例">1：使用例<a hidden class="anchor" aria-hidden="true" href="#1使用例">#</a></h4>
+<p>これは本文中の文です。<span class="note" data-note="これはサイドノートの内容です。">強調語</span>本文を続けます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>これは本文中の文です。&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;note&#34;</span> <span style="color:#a6e22e">data-note</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;これはサイドノートの内容です。&#34;</span>&gt;強調語&lt;/<span style="color:#f92672">span</span>&gt;本文を続けます。
+</span></span></code></pre></div><h4 id="2css-スタイルの追加">2：CSS スタイルの追加<a hidden class="anchor" aria-hidden="true" href="#2css-スタイルの追加">#</a></h4>
+<p>テーマまたはサイトの CSS ファイルに以下のスタイルを追加します（例：<code>assets/css/extended/custom.css</code>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">note</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#4CAF50</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dotted</span> <span style="color:#ae81ff">#4CAF50</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">help</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">note</span>:<span style="color:#a6e22e">hover</span>::<span style="color:#a6e22e">after</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">content</span>: attr(data<span style="color:#f92672">-</span>note);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#4CAF50</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">white-space</span>: <span style="color:#66d9ef">nowrap</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="marginnote-のサイドノート機能">◇MarginNote のサイドノート機能<a hidden class="anchor" aria-hidden="true" href="#marginnote-のサイドノート機能">#</a></h3>
 <h4 id="1ショートコードの定義">1：ショートコードの定義<a hidden class="anchor" aria-hidden="true" href="#1ショートコードの定義">#</a></h4>
 <p>Hugo プロジェクト内にショートコードファイルを作成します：</p>
 <p>パス：<code>layouts/shortcodes/marginnote.html</code></p>
@@ -1025,7 +1060,7 @@ Git の初期化：">
 <p>これは本文中の文です。<span class="marginnote" data-note="これはサイドノートの内容です。">強調語</span>
 本文を続けます。</p>
 <hr>
-<h4 id="2css-スタイルの追加">2：CSS スタイルの追加<a hidden class="anchor" aria-hidden="true" href="#2css-スタイルの追加">#</a></h4>
+<h4 id="2css-スタイルの追加-1">2：CSS スタイルの追加<a hidden class="anchor" aria-hidden="true" href="#2css-スタイルの追加-1">#</a></h4>
 <p>テーマまたはサイトの CSS ファイルに以下のスタイルを追加します（例：<code>assets/css/extended/custom.css</code>）：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">marginnote</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
