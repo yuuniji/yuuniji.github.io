@@ -38,6 +38,9 @@
                 href="https://yuuniji.github.io/en/"
                 />
   </url><url>
+    <loc>https://yuuniji.github.io/en/tags/audiobook/</loc>
+    <lastmod>2025-05-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://yuuniji.github.io/en/posts/audiobook-0/</loc>
     <lastmod>2025-05-13T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -54,6 +57,24 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yuuniji.github.io/en/posts/audiobook-0/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/en/tags/</loc>
+    <lastmod>2025-05-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/tags/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/</loc>
@@ -76,24 +97,6 @@
   </url><url>
     <loc>https://yuuniji.github.io/en/tags/japanese/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yuuniji.github.io/en/tags/</loc>
-    <lastmod>2025-05-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/tags/"
-                />
   </url><url>
     <loc>https://yuuniji.github.io/en/tags/textbook/</loc>
     <lastmod>2025-05-12T00:00:00+00:00</lastmod>
