@@ -39,9 +39,15 @@
     &lt;span id=&#34;audio-status&#34;&gt;&lt;/span&gt;
   &lt;/div&gt;
 
-  &lt;div id=&#34;track-info&#34;&gt;&lt;/div&gt;
-  &lt;audio id=&#34;main-audio&#34; style=&#34;display: none;&#34;&gt;&lt;/audio&gt;
   
+  &lt;div style=&#34;margin: 10px 0;&#34;&gt;
+    &lt;input type=&#34;range&#34; id=&#34;progress-bar&#34; value=&#34;0&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;0.1&#34; style=&#34;width: 100%;&#34;&gt;
+  &lt;/div&gt;
+
+
+  &lt;div id=&#34;track-info&#34;&gt;&lt;/div&gt;
+  
+  &lt;audio id=&#34;main-audio&#34; style=&#34;display: none;&#34;&gt;&lt;/audio&gt;
 &lt;/div&gt;
 
 &lt;table id=&#34;transcript-table&#34;&gt;
@@ -1239,6 +1245,28 @@
     const jumpTo = document.getElementById(&#39;jump-to&#39;);
     const jumpBtn = document.getElementById(&#39;jump-btn&#39;);
     const tracksList = document.getElementById(&#39;tracks-list&#39;);
+
+    const progressBar = document.getElementById(&#39;progress-bar&#39;);
+
+    
+    audio.addEventListener(&#39;timeupdate&#39;, function () {
+      const percentage = (audio.currentTime / audio.duration) * 100;
+      progressBar.value = percentage || 0;
+    });
+
+    
+    progressBar.addEventListener(&#39;input&#39;, function () {
+      if (!isNaN(audio.duration)) {
+        const seekTime = (progressBar.value / 100) * audio.duration;
+        audio.currentTime = seekTime;
+      }
+    });
+
+    
+    audio.addEventListener(&#39;loadedmetadata&#39;, function () {
+      progressBar.value = 0;
+    });
+
 
     
     files.forEach((file, index) =&gt; {
