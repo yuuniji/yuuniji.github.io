@@ -22,8 +22,7 @@
       &lt;span id=&#34;current-track&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-tracks&#34;&gt;0&lt;/span&gt;
     &lt;/div&gt;
     &lt;div id=&#34;jump-container&#34;&gt;
-      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Search or enter track number&#34; list=&#34;tracks-list&#34;
-        style=&#34;color: #A0A0A0;&#34;&gt;
+      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Search or enter track number&#34; list=&#34;tracks-list&#34;&gt;
       &lt;datalist id=&#34;tracks-list&#34;&gt;&lt;/datalist&gt;
       &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;➡️&lt;/button&gt;
     &lt;/div&gt;
