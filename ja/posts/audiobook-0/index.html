@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -58,22 +58,163 @@
 
 
 ★経済学
-◇『アダム・スミス：国富論――国民の富の性質と原因について』
-Book 1: 労働生産性の向上の原因および労働産物の各階層間における分配について
-中心テーマ：労働分業、労働生産性、価値理論および所得分配">
+◇経済 / 経済学
+◇経済 / 経済学 / 理論
+
+  
+      
+          中国語書名
+          英語書名
+          著者
+          Book ID
+      
+  
+  
+      
+          国富論——国民の富の性質と原因についての研究
+          The Wealth of Nations別名：An Inquiry into the Nature and Causes of the Wealth of Nations
+          （英）アダム・スミス
+          Book 1-5
+      
+  
+
+★軍事
+◇軍事 / 軍事理論
+
+  
+      
+          中国語書名
+          英語書名
+          著者
+          Book ID
+      
+  
+  
+      
+          孫子兵法別名：孫武兵法
+          The Art of War
+          孫武
+          Book 6
+      
+  
+
+★政治
+◇政治 / 政治小説
+
+  
+      
+          中国語書名
+          英語書名
+          著者
+          Book ID
+      
+  
+  
+      
+          一九八四
+          Nineteen Eighty-Four
+          （英）ジョージ・オーウェル
+          Book 7-9
+      
+  
+
+
+★オーディオブック制作用スクリプト
+◇YouTube動画のmp3をダウンロード
+youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34;
+# yt_mp3_download.py
+import subprocess
+
+def download_youtube_mp3():
+    yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34;
+    url = input(&#34;YouTube動画のリンクを入力してください：&#34;).strip()
+    
+    command = [
+        yt_dlp_path,
+        &#34;-x&#34;,  # 音声を抽出
+        &#34;--audio-format&#34;, &#34;mp3&#34;,  # mp3形式に変換
+        url
+    ]
+
+    try:
+        subprocess.run(command, check=True)
+        print(&#34;✅ ダウンロード完了&#34;)
+    except subprocess.CalledProcessError as e:
+        print(&#34;❌ ダウンロード失敗:&#34;, e)
+
+if __name__ == &#34;__main__&#34;:
+    download_youtube_mp3()
+◇各章ごとに音声を分割
+# split_audio.py
+import os
+import subprocess
+
+input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34;
+output_dir = &#34;output_chapters&#34;
+os.makedirs(output_dir, exist_ok=True)
+
+chapters = [
+    (&#34;a0&#34;, &#34;00:00:00&#34;),
+    (&#34;1-chapter1&#34;, &#34;00:00:09&#34;),
+    (&#34;1-chapter2&#34;, &#34;00:39:31&#34;),
+    (&#34;2-chapter1&#34;, &#34;03:35:20&#34;),
+    (&#34;2-chapter2&#34;, &#34;04:00:13&#34;),
+    (&#34;3-chapter1&#34;, &#34;07:48:41&#34;),
+    (&#34;3-chapter2&#34;, &#34;08:18:27&#34;)
+]
+
+for i in range(len(chapters)):
+    title, start = chapters[i]
+    end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None
+
+    output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;)
+    cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start]
+    if end:
+        cmd &#43;= [&#34;-to&#34;, end]
+    cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file]
+
+    subprocess.run(cmd)
+    print(f&#34;出力完了: {output_file}&#34;)
+
+print(&#34;すべての章を正常に分割しました。&#34;)
+◇音声を結合
+# merge_audio.py
+from pydub import AudioSegment
+import os
+
+# 音声ファイルのディレクトリを設定
+audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34;
+# すべての mp3 ファイルを取得し、ファイル名でソート（任意）
+audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)])
+
+# 空のオーディオオブジェクトを作成
+combined = AudioSegment.empty()
+
+# 各音声ファイルを順に追加
+for file in audio_files:
+    file_path = os.path.join(audio_dir, file)
+    audio = AudioSegment.from_mp3(file_path)
+    combined &#43;= audio
+    print(f&#34;追加済み: {file}&#34;)
+
+# 結合された音声を出力
+output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;)
+combined.export(output_path, format=&#34;mp3&#34;)
+print(f&#34;結合完了、保存先: {output_path}&#34;)
+">
 <meta name="author" content="">
-<link rel="canonical" href="https://yuuniji.github.io/ja/posts/audiobook-0/">
+<link rel="canonical" href="http://localhost:1313/ja/posts/audiobook-0/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.d0b4a56466839266fc44b40f43c51b4c152fe4d9ee89a47e818342f22813c7bb.css" integrity="sha256-0LSlZGaDkmb8RLQPQ8UbTBUv5NnuiaR&#43;gYNC8igTx7s=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://yuuniji.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://yuuniji.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://yuuniji.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh" href="https://yuuniji.github.io/posts/audiobook-0/">
-<link rel="alternate" hreflang="en" href="https://yuuniji.github.io/en/posts/audiobook-0/">
-<link rel="alternate" hreflang="ja" href="https://yuuniji.github.io/ja/posts/audiobook-0/">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/posts/audiobook-0/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/en/posts/audiobook-0/">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/ja/posts/audiobook-0/">
 <noscript>
     <style>
         #theme-toggle,
@@ -110,10 +251,12 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
         }
 
     </style>
-</noscript><meta property="og:url" content="https://yuuniji.github.io/ja/posts/audiobook-0/">
+</noscript><meta property="og:url" content="http://localhost:1313/ja/posts/audiobook-0/">
   <meta property="og:site_name" content="叶泽伟的博客">
   <meta property="og:title" content="オーディオブック集：随時更新">
-  <meta property="og:description" content=" 1 / 0 Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★経済学 ◇『アダム・スミス：国富論――国民の富の性質と原因について』 Book 1: 労働生産性の向上の原因および労働産物の各階層間における分配について 中心テーマ：労働分業、労働生産性、価値理論および所得分配">
+  <meta property="og:description" content=" 1 / 0 Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★経済学 ◇経済 / 経済学 ◇経済 / 経済学 / 理論 中国語書名 英語書名 著者 Book ID 国富論——国民の富の性質と原因についての研究 The Wealth of Nations
+別名：An Inquiry into the Nature and Causes of the Wealth of Nations （英）アダム・スミス Book 1-5 ★軍事 ◇軍事 / 軍事理論 中国語書名 英語書名 著者 Book ID 孫子兵法
+別名：孫武兵法 The Art of War 孫武 Book 6 ★政治 ◇政治 / 政治小説 中国語書名 英語書名 著者 Book ID 一九八四 Nineteen Eighty-Four （英）ジョージ・オーウェル Book 7-9 ★オーディオブック制作用スクリプト ◇YouTube動画のmp3をダウンロード youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34; url = input(&#34;YouTube動画のリンクを入力してください：&#34;).strip() command = [ yt_dlp_path, &#34;-x&#34;, # 音声を抽出 &#34;--audio-format&#34;, &#34;mp3&#34;, # mp3形式に変換 url ] try: subprocess.run(command, check=True) print(&#34;✅ ダウンロード完了&#34;) except subprocess.CalledProcessError as e: print(&#34;❌ ダウンロード失敗:&#34;, e) if __name__ == &#34;__main__&#34;: download_youtube_mp3() ◇各章ごとに音声を分割 # split_audio.py import os import subprocess input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34; output_dir = &#34;output_chapters&#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (&#34;a0&#34;, &#34;00:00:00&#34;), (&#34;1-chapter1&#34;, &#34;00:00:09&#34;), (&#34;1-chapter2&#34;, &#34;00:39:31&#34;), (&#34;2-chapter1&#34;, &#34;03:35:20&#34;), (&#34;2-chapter2&#34;, &#34;04:00:13&#34;), (&#34;3-chapter1&#34;, &#34;07:48:41&#34;), (&#34;3-chapter2&#34;, &#34;08:18:27&#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;) cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start] if end: cmd &#43;= [&#34;-to&#34;, end] cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file] subprocess.run(cmd) print(f&#34;出力完了: {output_file}&#34;) print(&#34;すべての章を正常に分割しました。&#34;) ◇音声を結合 # merge_audio.py from pydub import AudioSegment import os # 音声ファイルのディレクトリを設定 audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34; # すべての mp3 ファイルを取得し、ファイル名でソート（任意） audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)]) # 空のオーディオオブジェクトを作成 combined = AudioSegment.empty() # 各音声ファイルを順に追加 for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined &#43;= audio print(f&#34;追加済み: {file}&#34;) # 結合された音声を出力 output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;) combined.export(output_path, format=&#34;mp3&#34;) print(f&#34;結合完了、保存先: {output_path}&#34;) ">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -174,9 +317,150 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
 
 
 ★経済学
-◇『アダム・スミス：国富論――国民の富の性質と原因について』
-Book 1: 労働生産性の向上の原因および労働産物の各階層間における分配について
-中心テーマ：労働分業、労働生産性、価値理論および所得分配">
+◇経済 / 経済学
+◇経済 / 経済学 / 理論
+
+  
+      
+          中国語書名
+          英語書名
+          著者
+          Book ID
+      
+  
+  
+      
+          国富論——国民の富の性質と原因についての研究
+          The Wealth of Nations別名：An Inquiry into the Nature and Causes of the Wealth of Nations
+          （英）アダム・スミス
+          Book 1-5
+      
+  
+
+★軍事
+◇軍事 / 軍事理論
+
+  
+      
+          中国語書名
+          英語書名
+          著者
+          Book ID
+      
+  
+  
+      
+          孫子兵法別名：孫武兵法
+          The Art of War
+          孫武
+          Book 6
+      
+  
+
+★政治
+◇政治 / 政治小説
+
+  
+      
+          中国語書名
+          英語書名
+          著者
+          Book ID
+      
+  
+  
+      
+          一九八四
+          Nineteen Eighty-Four
+          （英）ジョージ・オーウェル
+          Book 7-9
+      
+  
+
+
+★オーディオブック制作用スクリプト
+◇YouTube動画のmp3をダウンロード
+youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34;
+# yt_mp3_download.py
+import subprocess
+
+def download_youtube_mp3():
+    yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34;
+    url = input(&#34;YouTube動画のリンクを入力してください：&#34;).strip()
+    
+    command = [
+        yt_dlp_path,
+        &#34;-x&#34;,  # 音声を抽出
+        &#34;--audio-format&#34;, &#34;mp3&#34;,  # mp3形式に変換
+        url
+    ]
+
+    try:
+        subprocess.run(command, check=True)
+        print(&#34;✅ ダウンロード完了&#34;)
+    except subprocess.CalledProcessError as e:
+        print(&#34;❌ ダウンロード失敗:&#34;, e)
+
+if __name__ == &#34;__main__&#34;:
+    download_youtube_mp3()
+◇各章ごとに音声を分割
+# split_audio.py
+import os
+import subprocess
+
+input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34;
+output_dir = &#34;output_chapters&#34;
+os.makedirs(output_dir, exist_ok=True)
+
+chapters = [
+    (&#34;a0&#34;, &#34;00:00:00&#34;),
+    (&#34;1-chapter1&#34;, &#34;00:00:09&#34;),
+    (&#34;1-chapter2&#34;, &#34;00:39:31&#34;),
+    (&#34;2-chapter1&#34;, &#34;03:35:20&#34;),
+    (&#34;2-chapter2&#34;, &#34;04:00:13&#34;),
+    (&#34;3-chapter1&#34;, &#34;07:48:41&#34;),
+    (&#34;3-chapter2&#34;, &#34;08:18:27&#34;)
+]
+
+for i in range(len(chapters)):
+    title, start = chapters[i]
+    end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None
+
+    output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;)
+    cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start]
+    if end:
+        cmd &#43;= [&#34;-to&#34;, end]
+    cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file]
+
+    subprocess.run(cmd)
+    print(f&#34;出力完了: {output_file}&#34;)
+
+print(&#34;すべての章を正常に分割しました。&#34;)
+◇音声を結合
+# merge_audio.py
+from pydub import AudioSegment
+import os
+
+# 音声ファイルのディレクトリを設定
+audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34;
+# すべての mp3 ファイルを取得し、ファイル名でソート（任意）
+audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)])
+
+# 空のオーディオオブジェクトを作成
+combined = AudioSegment.empty()
+
+# 各音声ファイルを順に追加
+for file in audio_files:
+    file_path = os.path.join(audio_dir, file)
+    audio = AudioSegment.from_mp3(file_path)
+    combined &#43;= audio
+    print(f&#34;追加済み: {file}&#34;)
+
+# 結合された音声を出力
+output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;)
+combined.export(output_path, format=&#34;mp3&#34;)
+print(f&#34;結合完了、保存先: {output_path}&#34;)
+">
 
 
 <script type="application/ld+json">
@@ -188,13 +472,13 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
       "@type": "ListItem",
       "position":  1 ,
       "name": "記事一覧",
-      "item": "https://yuuniji.github.io/ja/posts/"
+      "item": "http://localhost:1313/ja/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "オーディオブック集：随時更新",
-      "item": "https://yuuniji.github.io/ja/posts/audiobook-0/"
+      "item": "http://localhost:1313/ja/posts/audiobook-0/"
     }
   ]
 }
@@ -205,25 +489,25 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
   "@type": "BlogPosting",
   "headline": "オーディオブック集：随時更新",
   "name": "オーディオブック集：随時更新",
-  "description": " 1 / 0 Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★経済学 ◇『アダム・スミス：国富論――国民の富の性質と原因について』 Book 1: 労働生産性の向上の原因および労働産物の各階層間における分配について 中心テーマ：労働分業、労働生産性、価値理論および所得分配\n",
+  "description": " 1 / 0 Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★経済学 ◇経済 / 経済学 ◇経済 / 経済学 / 理論 中国語書名 英語書名 著者 Book ID 国富論——国民の富の性質と原因についての研究 The Wealth of Nations\n別名：An Inquiry into the Nature and Causes of the Wealth of Nations （英）アダム・スミス Book 1-5 ★軍事 ◇軍事 / 軍事理論 中国語書名 英語書名 著者 Book ID 孫子兵法\n別名：孫武兵法 The Art of War 孫武 Book 6 ★政治 ◇政治 / 政治小説 中国語書名 英語書名 著者 Book ID 一九八四 Nineteen Eighty-Four （英）ジョージ・オーウェル Book 7-9 ★オーディオブック制作用スクリプト ◇YouTube動画のmp3をダウンロード youtube-dl -x --audio-format mp3 --audio-quality 0 \u0026#34;https://www.youtube.com/watch?v=VIDEO_ID\u0026#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = \u0026#34;/Users/dev/Library/Python/3.9/bin/yt-dlp\u0026#34; url = input(\u0026#34;YouTube動画のリンクを入力してください：\u0026#34;).strip() command = [ yt_dlp_path, \u0026#34;-x\u0026#34;, # 音声を抽出 \u0026#34;--audio-format\u0026#34;, \u0026#34;mp3\u0026#34;, # mp3形式に変換 url ] try: subprocess.run(command, check=True) print(\u0026#34;✅ ダウンロード完了\u0026#34;) except subprocess.CalledProcessError as e: print(\u0026#34;❌ ダウンロード失敗:\u0026#34;, e) if __name__ == \u0026#34;__main__\u0026#34;: download_youtube_mp3() ◇各章ごとに音声を分割 # split_audio.py import os import subprocess input_file = \u0026#34;/Users/dev/Downloads/aaa/xxx.mp3\u0026#34; output_dir = \u0026#34;output_chapters\u0026#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (\u0026#34;a0\u0026#34;, \u0026#34;00:00:00\u0026#34;), (\u0026#34;1-chapter1\u0026#34;, \u0026#34;00:00:09\u0026#34;), (\u0026#34;1-chapter2\u0026#34;, \u0026#34;00:39:31\u0026#34;), (\u0026#34;2-chapter1\u0026#34;, \u0026#34;03:35:20\u0026#34;), (\u0026#34;2-chapter2\u0026#34;, \u0026#34;04:00:13\u0026#34;), (\u0026#34;3-chapter1\u0026#34;, \u0026#34;07:48:41\u0026#34;), (\u0026#34;3-chapter2\u0026#34;, \u0026#34;08:18:27\u0026#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i+1][1] if i+1 \u0026lt; len(chapters) else None output_file = os.path.join(output_dir, f\u0026#34;{title}.mp3\u0026#34;) cmd = [\u0026#34;ffmpeg\u0026#34;, \u0026#34;-y\u0026#34;, \u0026#34;-i\u0026#34;, input_file, \u0026#34;-ss\u0026#34;, start] if end: cmd += [\u0026#34;-to\u0026#34;, end] cmd += [\u0026#34;-c\u0026#34;, \u0026#34;copy\u0026#34;, output_file] subprocess.run(cmd) print(f\u0026#34;出力完了: {output_file}\u0026#34;) print(\u0026#34;すべての章を正常に分割しました。\u0026#34;) ◇音声を結合 # merge_audio.py from pydub import AudioSegment import os # 音声ファイルのディレクトリを設定 audio_dir = \u0026#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all\u0026#34; # すべての mp3 ファイルを取得し、ファイル名でソート（任意） audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(\u0026#34;.mp3\u0026#34;)]) # 空のオーディオオブジェクトを作成 combined = AudioSegment.empty() # 各音声ファイルを順に追加 for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined += audio print(f\u0026#34;追加済み: {file}\u0026#34;) # 結合された音声を出力 output_path = os.path.join(audio_dir, \u0026#34;combined_output.mp3\u0026#34;) combined.export(output_path, format=\u0026#34;mp3\u0026#34;) print(f\u0026#34;結合完了、保存先: {output_path}\u0026#34;) ",
   "keywords": [
     "本", "オーディオブック"
   ],
-  "articleBody": " 1 / 0 Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★経済学 ◇『アダム・スミス：国富論――国民の富の性質と原因について』 Book 1: 労働生産性の向上の原因および労働産物の各階層間における分配について 中心テーマ：労働分業、労働生産性、価値理論および所得分配\n重要概念：\n労働分業：生産効率を高める核心的なメカニズム 労働価値説：商品の価値はその生産に必要な労働によって決まる 賃金・利潤・地代：労働・資本・土地に対する報酬 主な論点：\n労働分業は専門化により生産効率を向上させるが、市場の規模に制約される 交換価値は労働量に基づき、市場価格は「自然価格」を中心に変動する 社会の所得は賃金（労働）、利潤（資本）、地代（土地）に分かれ、市場メカニズムによって調整される 例：\n針工場の分業例：10人による分業は1人による生産より数百倍効率的 市場価格と自然価格の動的均衡 ノートの要点：\n分業の三つの利点（技能熟練、時間節約、機械の発明）を記録 賃金、利潤、地代の起源と相互関係を整理 考察：分業は現代産業にどのような影響を与えているか？過度な分業に弊害はあるか？ 個人の考察：現代のライン生産やグローバルな分業体制と結びつけて利点と問題点を分析可能\nBook 2: 資本の性質、蓄積および運用について 中心テーマ：資本の定義、蓄積方法と経済成長への影響\n重要概念：\n固定資本と流動資本：機械（固定）、賃金（流動）など 資本蓄積：貯蓄が投資に転化し、経済成長を促進 生産的労働と非生産的労働：前者は資本を増加させ、後者は増加させない 主な論点：\n資本蓄積は富の増大の鍵であり、貯蓄と投資に依存する 固定資本と流動資本は異なる経済的役割を担う 生産的労働の比率が高いほど社会の富は急速に増加する 例：\n農業投資（土地改良）と工業投資（機械）の比較 非生産的労働（召使いやサービス業など）は直接的に富を増やさない ノートの要点：\n固定資本と流動資本の用途を区別 生産的労働の定義と現代サービス経済への示唆を記録 考察：資本蓄積は貧富格差にどのように影響するか？ 個人の考察：現代の金融システム（株式市場や銀行など）の資本蓄積への役割を考察\nBook 3: 各国における富の増加の異なる経路について 中心テーマ：経済発展の歴史的比較、農業と商業の役割\n重要概念：\n自然な発展順序：農業 → 製造業 → 外国貿易 封建制度：農業と商業の発展を阻害する体制 主な論点：\n自然状態では、農業が優先され、その後製造業と貿易が発展すべき ヨーロッパの封建制度はこの順序を歪め、都市商業が先に発展した 農業への投資が経済発展の基礎であり、都市経済は農村の余剰に依存 例：\n中世ヨーロッパの都市と農村の経済関係 英国の農業改良が工業発展を促進した事例 ノートの要点：\n自然な発展順序の論理とそれが破られた原因を記録 封建制度が経済発展を制限する要因を分析 考察：現代の発展途上国の農業・工業化の道筋はスミスの理論に合致するか？ 個人の考察：中国やインドの現代化進程に照らして、農業と工業のバランスを考察\nBook 4: 経済学体系について 中心テーマ：重商主義と重農主義への批判、市場の自由を擁護\n重要概念：\n重商主義：貿易黒字により金銀を蓄えるという誤った観念 重農主義：農業のみが富の源泉であるという限界 自由放任（レッセフェール）：市場の自己調整が政府介入より優れる 主な論点：\n重商主義は金銀を富と見なす誤りであり、真の富は生産力である 重農主義は製造業や貿易の重要性を軽視している 自由市場は「見えざる手」によって資源を最適に配分する 例：\n重商主義による植民地貿易の独占政策（例：英国の植民地貿易制限） 自由貿易によって各国が相互に利益を得る ノートの要点：\n重商主義と重農主義の理論的欠陥を整理 「見えざる手」が個人利益と社会利益をどのように調和させるかを記録 考察：グローバル化の中で自由市場はどこまで有効か？ 個人の考察：現代の保護主義（関税障壁など）とスミスの自由貿易思想との対立を検討可能\nBook 5: 君主または国家の収入について 中心テーマ：政府の役割、財源および公共支出\n重要概念：\n政府の機能：国防、司法、公共事業、教育 課税の原則：公平性、確実性、便宜性、効率性 公共債務：長期的な債務依存の危険性 主な論点：\n政府は基本的な公共サービスを提供すべきだが、過度な経済介入は避けるべき 課税は公平性と効率性の原則に従うべきで、過度の負担を避ける必要がある 公共債務は財政危機を招く恐れがあり、慎重に運用すべき 例：\n英国の課税制度の分析（例：地租、消費税など） 道路・橋梁など公共事業の必要性 ノートの要点：\n政府の三大機能とその経済的意義を記録 四つの課税原則の現代的応用をまとめる 考察：公共債務は現代経済においてどのような役割を果たすか（例：コロナ後の財政刺激策） 個人の考察：北欧のような現代福祉国家の財政政策とスミスの見解は一致するかを検討\n",
-  "wordCount" : "1972",
+  "articleBody": " 1 / 0 Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★経済学 ◇経済 / 経済学 ◇経済 / 経済学 / 理論 中国語書名 英語書名 著者 Book ID 国富論——国民の富の性質と原因についての研究 The Wealth of Nations\n別名：An Inquiry into the Nature and Causes of the Wealth of Nations （英）アダム・スミス Book 1-5 ★軍事 ◇軍事 / 軍事理論 中国語書名 英語書名 著者 Book ID 孫子兵法\n別名：孫武兵法 The Art of War 孫武 Book 6 ★政治 ◇政治 / 政治小説 中国語書名 英語書名 著者 Book ID 一九八四 Nineteen Eighty-Four （英）ジョージ・オーウェル Book 7-9 ★オーディオブック制作用スクリプト ◇YouTube動画のmp3をダウンロード youtube-dl -x --audio-format mp3 --audio-quality 0 \"https://www.youtube.com/watch?v=VIDEO_ID\" # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = \"/Users/dev/Library/Python/3.9/bin/yt-dlp\" url = input(\"YouTube動画のリンクを入力してください：\").strip() command = [ yt_dlp_path, \"-x\", # 音声を抽出 \"--audio-format\", \"mp3\", # mp3形式に変換 url ] try: subprocess.run(command, check=True) print(\"✅ ダウンロード完了\") except subprocess.CalledProcessError as e: print(\"❌ ダウンロード失敗:\", e) if __name__ == \"__main__\": download_youtube_mp3() ◇各章ごとに音声を分割 # split_audio.py import os import subprocess input_file = \"/Users/dev/Downloads/aaa/xxx.mp3\" output_dir = \"output_chapters\" os.makedirs(output_dir, exist_ok=True) chapters = [ (\"a0\", \"00:00:00\"), (\"1-chapter1\", \"00:00:09\"), (\"1-chapter2\", \"00:39:31\"), (\"2-chapter1\", \"03:35:20\"), (\"2-chapter2\", \"04:00:13\"), (\"3-chapter1\", \"07:48:41\"), (\"3-chapter2\", \"08:18:27\") ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i+1][1] if i+1 \u003c len(chapters) else None output_file = os.path.join(output_dir, f\"{title}.mp3\") cmd = [\"ffmpeg\", \"-y\", \"-i\", input_file, \"-ss\", start] if end: cmd += [\"-to\", end] cmd += [\"-c\", \"copy\", output_file] subprocess.run(cmd) print(f\"出力完了: {output_file}\") print(\"すべての章を正常に分割しました。\") ◇音声を結合 # merge_audio.py from pydub import AudioSegment import os # 音声ファイルのディレクトリを設定 audio_dir = \"/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all\" # すべての mp3 ファイルを取得し、ファイル名でソート（任意） audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(\".mp3\")]) # 空のオーディオオブジェクトを作成 combined = AudioSegment.empty() # 各音声ファイルを順に追加 for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined += audio print(f\"追加済み: {file}\") # 結合された音声を出力 output_path = os.path.join(audio_dir, \"combined_output.mp3\") combined.export(output_path, format=\"mp3\") print(f\"結合完了、保存先: {output_path}\") ",
+  "wordCount" : "718",
   "inLanguage": "ja",
   "datePublished": "2025-05-13T00:00:00Z",
   "dateModified": "2025-05-13T00:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://yuuniji.github.io/ja/posts/audiobook-0/"
+    "@id": "http://localhost:1313/ja/posts/audiobook-0/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "叶泽伟的博客",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://yuuniji.github.io/favicon.ico"
+      "url": "http://localhost:1313/favicon.ico"
     }
   }
 }
@@ -245,7 +529,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://yuuniji.github.io/ja/" accesskey="h" title="叶泽伟的博客 (Alt + H)">叶泽伟的博客</a>
+            <a href="http://localhost:1313/ja/" accesskey="h" title="叶泽伟的博客 (Alt + H)">叶泽伟的博客</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -269,11 +553,11 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://yuuniji.github.io/" title="中文"
+                        <a href="http://localhost:1313/" title="中文"
                             aria-label="中文">Zh</a>
                     </li>
                     <li>
-                        <a href="https://yuuniji.github.io/en/" title="English"
+                        <a href="http://localhost:1313/en/" title="English"
                             aria-label="English">En</a>
                     </li>
                 </ul>
@@ -281,22 +565,22 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
         </div>
         <ul id="menu">
             <li>
-                <a href="https://yuuniji.github.io/ja/" title="ホーム">
+                <a href="http://localhost:1313/ja/" title="ホーム">
                     <span>ホーム</span>
                 </a>
             </li>
             <li>
-                <a href="https://yuuniji.github.io/ja/tags/" title="タグ">
+                <a href="http://localhost:1313/ja/tags/" title="タグ">
                     <span>タグ</span>
                 </a>
             </li>
             <li>
-                <a href="https://yuuniji.github.io/ja/archives/" title="アーカイブ">
+                <a href="http://localhost:1313/ja/archives/" title="アーカイブ">
                     <span>アーカイブ</span>
                 </a>
             </li>
             <li>
-                <a href="https://yuuniji.github.io/ja/search/" title="検索">
+                <a href="http://localhost:1313/ja/search/" title="検索">
                     <span>検索</span>
                 </a>
             </li>
@@ -307,7 +591,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://yuuniji.github.io/ja/">ホーム</a>&nbsp;»&nbsp;<a href="https://yuuniji.github.io/ja/posts/">記事一覧</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/ja/">ホーム</a>&nbsp;»&nbsp;<a href="http://localhost:1313/ja/posts/">記事一覧</a></div>
     <h1 class="post-title entry-hint-parent">
       オーディオブック集：随時更新
       <span class="entry-hint" title="Draft">
@@ -317,13 +601,13 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
         </svg>
       </span>
     </h1>
-    <div class="post-meta"><span title='2025-05-13 00:00:00 +0000 UTC'>5月 13, 2025</span>&nbsp;·&nbsp;4 分&nbsp;|&nbsp;言語:
+    <div class="post-meta"><span title='2025-05-13 00:00:00 +0000 UTC'>5月 13, 2025</span>&nbsp;·&nbsp;2 分&nbsp;|&nbsp;言語:
 <ul class="i18n_list">
     <li>
-        <a href="https://yuuniji.github.io/posts/audiobook-0/">Zh</a>
+        <a href="http://localhost:1313/posts/audiobook-0/">Zh</a>
     </li>
     <li>
-        <a href="https://yuuniji.github.io/en/posts/audiobook-0/">En</a>
+        <a href="http://localhost:1313/en/posts/audiobook-0/">En</a>
     </li>
 </ul>
 
@@ -341,21 +625,32 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
                     <a href="#%e7%b5%8c%e6%b8%88%e5%ad%a6" aria-label="★経済学">★経済学</a><ul>
                         
                 <li>
-                    <a href="#%e3%82%a2%e3%83%80%e3%83%a0%e3%82%b9%e3%83%9f%e3%82%b9%e5%9b%bd%e5%af%8c%e8%ab%96%e5%9b%bd%e6%b0%91%e3%81%ae%e5%af%8c%e3%81%ae%e6%80%a7%e8%b3%aa%e3%81%a8%e5%8e%9f%e5%9b%a0%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" aria-label="◇『アダム・スミス：国富論――国民の富の性質と原因について』">◇『アダム・スミス：国富論――国民の富の性質と原因について』</a><ul>
+                    <a href="#%e7%b5%8c%e6%b8%88--%e7%b5%8c%e6%b8%88%e5%ad%a6" aria-label="◇経済 / 経済学">◇経済 / 経済学</a></li>
+                <li>
+                    <a href="#%e7%b5%8c%e6%b8%88--%e7%b5%8c%e6%b8%88%e5%ad%a6--%e7%90%86%e8%ab%96" aria-label="◇経済 / 経済学 / 理論">◇経済 / 経済学 / 理論</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e8%bb%8d%e4%ba%8b" aria-label="★軍事">★軍事</a><ul>
                         
                 <li>
-                    <a href="#book-1-%e5%8a%b4%e5%83%8d%e7%94%9f%e7%94%a3%e6%80%a7%e3%81%ae%e5%90%91%e4%b8%8a%e3%81%ae%e5%8e%9f%e5%9b%a0%e3%81%8a%e3%82%88%e3%81%b3%e5%8a%b4%e5%83%8d%e7%94%a3%e7%89%a9%e3%81%ae%e5%90%84%e9%9a%8e%e5%b1%a4%e9%96%93%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8b%e5%88%86%e9%85%8d%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" aria-label="Book 1: 労働生産性の向上の原因および労働産物の各階層間における分配について">Book 1: 労働生産性の向上の原因および労働産物の各階層間における分配について</a></li>
-                <li>
-                    <a href="#book-2-%e8%b3%87%e6%9c%ac%e3%81%ae%e6%80%a7%e8%b3%aa%e8%93%84%e7%a9%8d%e3%81%8a%e3%82%88%e3%81%b3%e9%81%8b%e7%94%a8%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" aria-label="Book 2: 資本の性質、蓄積および運用について">Book 2: 資本の性質、蓄積および運用について</a></li>
-                <li>
-                    <a href="#book-3-%e5%90%84%e5%9b%bd%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8b%e5%af%8c%e3%81%ae%e5%a2%97%e5%8a%a0%e3%81%ae%e7%95%b0%e3%81%aa%e3%82%8b%e7%b5%8c%e8%b7%af%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" aria-label="Book 3: 各国における富の増加の異なる経路について">Book 3: 各国における富の増加の異なる経路について</a></li>
-                <li>
-                    <a href="#book-4-%e7%b5%8c%e6%b8%88%e5%ad%a6%e4%bd%93%e7%b3%bb%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" aria-label="Book 4: 経済学体系について">Book 4: 経済学体系について</a></li>
-                <li>
-                    <a href="#book-5-%e5%90%9b%e4%b8%bb%e3%81%be%e3%81%9f%e3%81%af%e5%9b%bd%e5%ae%b6%e3%81%ae%e5%8f%8e%e5%85%a5%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" aria-label="Book 5: 君主または国家の収入について">Book 5: 君主または国家の収入について</a>
+                    <a href="#%e8%bb%8d%e4%ba%8b--%e8%bb%8d%e4%ba%8b%e7%90%86%e8%ab%96" aria-label="◇軍事 / 軍事理論">◇軍事 / 軍事理論</a></li></ul>
                 </li>
-            </ul>
-            </li>
+                <li>
+                    <a href="#%e6%94%bf%e6%b2%bb" aria-label="★政治">★政治</a><ul>
+                        
+                <li>
+                    <a href="#%e6%94%bf%e6%b2%bb--%e6%94%bf%e6%b2%bb%e5%b0%8f%e8%aa%ac" aria-label="◇政治 / 政治小説">◇政治 / 政治小説</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e5%88%b6%e4%bd%9c%e7%94%a8%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88" aria-label="★オーディオブック制作用スクリプト">★オーディオブック制作用スクリプト</a><ul>
+                        
+                <li>
+                    <a href="#youtube%e5%8b%95%e7%94%bb%e3%81%aemp3%e3%82%92%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89" aria-label="◇YouTube動画のmp3をダウンロード">◇YouTube動画のmp3をダウンロード</a></li>
+                <li>
+                    <a href="#%e5%90%84%e7%ab%a0%e3%81%94%e3%81%a8%e3%81%ab%e9%9f%b3%e5%a3%b0%e3%82%92%e5%88%86%e5%89%b2" aria-label="◇各章ごとに音声を分割">◇各章ごとに音声を分割</a></li>
+                <li>
+                    <a href="#%e9%9f%b3%e5%a3%b0%e3%82%92%e7%b5%90%e5%90%88" aria-label="◇音声を結合">◇音声を結合</a>
+                </li>
             </ul>
             </li>
             </ul>
@@ -640,215 +935,160 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
   })();
 </script>
 <h2 id="経済学">★経済学<a hidden class="anchor" aria-hidden="true" href="#経済学">#</a></h2>
-<h3 id="アダムスミス国富論国民の富の性質と原因について">◇『アダム・スミス：国富論――国民の富の性質と原因について』<a hidden class="anchor" aria-hidden="true" href="#アダムスミス国富論国民の富の性質と原因について">#</a></h3>
-<h4 id="book-1-労働生産性の向上の原因および労働産物の各階層間における分配について"><strong>Book 1: 労働生産性の向上の原因および労働産物の各階層間における分配について</strong><a hidden class="anchor" aria-hidden="true" href="#book-1-労働生産性の向上の原因および労働産物の各階層間における分配について">#</a></h4>
-<p><strong>中心テーマ</strong>：労働分業、労働生産性、価値理論および所得分配</p>
-<ul>
-<li>
-<p><strong>重要概念</strong>：</p>
-<ul>
-<li><strong>労働分業</strong>：生産効率を高める核心的なメカニズム</li>
-<li><strong>労働価値説</strong>：商品の価値はその生産に必要な労働によって決まる</li>
-<li><strong>賃金・利潤・地代</strong>：労働・資本・土地に対する報酬</li>
-</ul>
-</li>
-<li>
-<p><strong>主な論点</strong>：</p>
-<ul>
-<li>労働分業は専門化により生産効率を向上させるが、市場の規模に制約される</li>
-<li>交換価値は労働量に基づき、市場価格は「自然価格」を中心に変動する</li>
-<li>社会の所得は賃金（労働）、利潤（資本）、地代（土地）に分かれ、市場メカニズムによって調整される</li>
-</ul>
-</li>
-<li>
-<p><strong>例</strong>：</p>
-<ul>
-<li>針工場の分業例：10人による分業は1人による生産より数百倍効率的</li>
-<li>市場価格と自然価格の動的均衡</li>
-</ul>
-</li>
-<li>
-<p><strong>ノートの要点</strong>：</p>
-<ul>
-<li>分業の三つの利点（技能熟練、時間節約、機械の発明）を記録</li>
-<li>賃金、利潤、地代の起源と相互関係を整理</li>
-<li>考察：分業は現代産業にどのような影響を与えているか？過度な分業に弊害はあるか？</li>
-</ul>
-</li>
-<li>
-<p><strong>個人の考察</strong>：現代のライン生産やグローバルな分業体制と結びつけて利点と問題点を分析可能</p>
-</li>
-</ul>
-<h4 id="book-2-資本の性質蓄積および運用について"><strong>Book 2: 資本の性質、蓄積および運用について</strong><a hidden class="anchor" aria-hidden="true" href="#book-2-資本の性質蓄積および運用について">#</a></h4>
-<ul>
-<li>
-<p><strong>中心テーマ</strong>：資本の定義、蓄積方法と経済成長への影響</p>
-</li>
-<li>
-<p><strong>重要概念</strong>：</p>
-<ul>
-<li><strong>固定資本と流動資本</strong>：機械（固定）、賃金（流動）など</li>
-<li><strong>資本蓄積</strong>：貯蓄が投資に転化し、経済成長を促進</li>
-<li><strong>生産的労働と非生産的労働</strong>：前者は資本を増加させ、後者は増加させない</li>
-</ul>
-</li>
-<li>
-<p><strong>主な論点</strong>：</p>
-<ul>
-<li>資本蓄積は富の増大の鍵であり、貯蓄と投資に依存する</li>
-<li>固定資本と流動資本は異なる経済的役割を担う</li>
-<li>生産的労働の比率が高いほど社会の富は急速に増加する</li>
-</ul>
-</li>
-<li>
-<p><strong>例</strong>：</p>
-<ul>
-<li>農業投資（土地改良）と工業投資（機械）の比較</li>
-<li>非生産的労働（召使いやサービス業など）は直接的に富を増やさない</li>
-</ul>
-</li>
-<li>
-<p><strong>ノートの要点</strong>：</p>
-<ul>
-<li>固定資本と流動資本の用途を区別</li>
-<li>生産的労働の定義と現代サービス経済への示唆を記録</li>
-<li>考察：資本蓄積は貧富格差にどのように影響するか？</li>
-</ul>
-</li>
-<li>
-<p><strong>個人の考察</strong>：現代の金融システム（株式市場や銀行など）の資本蓄積への役割を考察</p>
-</li>
-</ul>
-<h4 id="book-3-各国における富の増加の異なる経路について"><strong>Book 3: 各国における富の増加の異なる経路について</strong><a hidden class="anchor" aria-hidden="true" href="#book-3-各国における富の増加の異なる経路について">#</a></h4>
-<ul>
-<li>
-<p><strong>中心テーマ</strong>：経済発展の歴史的比較、農業と商業の役割</p>
-</li>
-<li>
-<p><strong>重要概念</strong>：</p>
-<ul>
-<li><strong>自然な発展順序</strong>：農業 → 製造業 → 外国貿易</li>
-<li><strong>封建制度</strong>：農業と商業の発展を阻害する体制</li>
-</ul>
-</li>
-<li>
-<p><strong>主な論点</strong>：</p>
-<ul>
-<li>自然状態では、農業が優先され、その後製造業と貿易が発展すべき</li>
-<li>ヨーロッパの封建制度はこの順序を歪め、都市商業が先に発展した</li>
-<li>農業への投資が経済発展の基礎であり、都市経済は農村の余剰に依存</li>
-</ul>
-</li>
-<li>
-<p><strong>例</strong>：</p>
-<ul>
-<li>中世ヨーロッパの都市と農村の経済関係</li>
-<li>英国の農業改良が工業発展を促進した事例</li>
-</ul>
-</li>
-<li>
-<p><strong>ノートの要点</strong>：</p>
-<ul>
-<li>自然な発展順序の論理とそれが破られた原因を記録</li>
-<li>封建制度が経済発展を制限する要因を分析</li>
-<li>考察：現代の発展途上国の農業・工業化の道筋はスミスの理論に合致するか？</li>
-</ul>
-</li>
-<li>
-<p><strong>個人の考察</strong>：中国やインドの現代化進程に照らして、農業と工業のバランスを考察</p>
-</li>
-</ul>
-<h4 id="book-4-経済学体系について"><strong>Book 4: 経済学体系について</strong><a hidden class="anchor" aria-hidden="true" href="#book-4-経済学体系について">#</a></h4>
-<ul>
-<li>
-<p><strong>中心テーマ</strong>：重商主義と重農主義への批判、市場の自由を擁護</p>
-</li>
-<li>
-<p><strong>重要概念</strong>：</p>
-<ul>
-<li><strong>重商主義</strong>：貿易黒字により金銀を蓄えるという誤った観念</li>
-<li><strong>重農主義</strong>：農業のみが富の源泉であるという限界</li>
-<li><strong>自由放任（レッセフェール）</strong>：市場の自己調整が政府介入より優れる</li>
-</ul>
-</li>
-<li>
-<p><strong>主な論点</strong>：</p>
-<ul>
-<li>重商主義は金銀を富と見なす誤りであり、真の富は生産力である</li>
-<li>重農主義は製造業や貿易の重要性を軽視している</li>
-<li>自由市場は「見えざる手」によって資源を最適に配分する</li>
-</ul>
-</li>
-<li>
-<p><strong>例</strong>：</p>
-<ul>
-<li>重商主義による植民地貿易の独占政策（例：英国の植民地貿易制限）</li>
-<li>自由貿易によって各国が相互に利益を得る</li>
-</ul>
-</li>
-<li>
-<p><strong>ノートの要点</strong>：</p>
-<ul>
-<li>重商主義と重農主義の理論的欠陥を整理</li>
-<li>「見えざる手」が個人利益と社会利益をどのように調和させるかを記録</li>
-<li>考察：グローバル化の中で自由市場はどこまで有効か？</li>
-</ul>
-</li>
-<li>
-<p><strong>個人の考察</strong>：現代の保護主義（関税障壁など）とスミスの自由貿易思想との対立を検討可能</p>
-</li>
-</ul>
-<h4 id="book-5-君主または国家の収入について"><strong>Book 5: 君主または国家の収入について</strong><a hidden class="anchor" aria-hidden="true" href="#book-5-君主または国家の収入について">#</a></h4>
-<ul>
-<li>
-<p><strong>中心テーマ</strong>：政府の役割、財源および公共支出</p>
-</li>
-<li>
-<p><strong>重要概念</strong>：</p>
-<ul>
-<li><strong>政府の機能</strong>：国防、司法、公共事業、教育</li>
-<li><strong>課税の原則</strong>：公平性、確実性、便宜性、効率性</li>
-<li><strong>公共債務</strong>：長期的な債務依存の危険性</li>
-</ul>
-</li>
-<li>
-<p><strong>主な論点</strong>：</p>
-<ul>
-<li>政府は基本的な公共サービスを提供すべきだが、過度な経済介入は避けるべき</li>
-<li>課税は公平性と効率性の原則に従うべきで、過度の負担を避ける必要がある</li>
-<li>公共債務は財政危機を招く恐れがあり、慎重に運用すべき</li>
-</ul>
-</li>
-<li>
-<p><strong>例</strong>：</p>
-<ul>
-<li>英国の課税制度の分析（例：地租、消費税など）</li>
-<li>道路・橋梁など公共事業の必要性</li>
-</ul>
-</li>
-<li>
-<p><strong>ノートの要点</strong>：</p>
-<ul>
-<li>政府の三大機能とその経済的意義を記録</li>
-<li>四つの課税原則の現代的応用をまとめる</li>
-<li>考察：公共債務は現代経済においてどのような役割を果たすか（例：コロナ後の財政刺激策）</li>
-</ul>
-</li>
-<li>
-<p><strong>個人の考察</strong>：北欧のような現代福祉国家の財政政策とスミスの見解は一致するかを検討</p>
-</li>
-</ul>
-
+<h3 id="経済--経済学">◇経済 / 経済学<a hidden class="anchor" aria-hidden="true" href="#経済--経済学">#</a></h3>
+<h3 id="経済--経済学--理論">◇経済 / 経済学 / 理論<a hidden class="anchor" aria-hidden="true" href="#経済--経済学--理論">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>中国語書名</th>
+          <th>英語書名</th>
+          <th>著者</th>
+          <th>Book ID</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>国富論——国民の富の性質と原因についての研究</td>
+          <td>The Wealth of Nations<br>別名：An Inquiry into the Nature and Causes of the Wealth of Nations</td>
+          <td>（英）アダム・スミス</td>
+          <td>Book 1-5</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="軍事">★軍事<a hidden class="anchor" aria-hidden="true" href="#軍事">#</a></h2>
+<h3 id="軍事--軍事理論">◇軍事 / 軍事理論<a hidden class="anchor" aria-hidden="true" href="#軍事--軍事理論">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>中国語書名</th>
+          <th>英語書名</th>
+          <th>著者</th>
+          <th>Book ID</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>孫子兵法<br>別名：孫武兵法</td>
+          <td>The Art of War</td>
+          <td>孫武</td>
+          <td>Book 6</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="政治">★政治<a hidden class="anchor" aria-hidden="true" href="#政治">#</a></h2>
+<h3 id="政治--政治小説">◇政治 / 政治小説<a hidden class="anchor" aria-hidden="true" href="#政治--政治小説">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>中国語書名</th>
+          <th>英語書名</th>
+          <th>著者</th>
+          <th>Book ID</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>一九八四</td>
+          <td>Nineteen Eighty-Four</td>
+          <td>（英）ジョージ・オーウェル</td>
+          <td>Book 7-9</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="オーディオブック制作用スクリプト">★オーディオブック制作用スクリプト<a hidden class="anchor" aria-hidden="true" href="#オーディオブック制作用スクリプト">#</a></h2>
+<h3 id="youtube動画のmp3をダウンロード">◇YouTube動画のmp3をダウンロード<a hidden class="anchor" aria-hidden="true" href="#youtube動画のmp3をダウンロード">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>youtube<span style="color:#f92672">-</span>dl <span style="color:#f92672">-</span>x <span style="color:#f92672">--</span>audio<span style="color:#f92672">-</span>format mp3 <span style="color:#f92672">--</span>audio<span style="color:#f92672">-</span>quality <span style="color:#ae81ff">0</span> <span style="color:#e6db74">&#34;https://www.youtube.com/watch?v=VIDEO_ID&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># yt_mp3_download.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> subprocess
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">download_youtube_mp3</span>():
+</span></span><span style="display:flex;"><span>    yt_dlp_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34;</span>
+</span></span><span style="display:flex;"><span>    url <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;YouTube動画のリンクを入力してください：&#34;</span>)<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    command <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        yt_dlp_path,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;-x&#34;</span>,  <span style="color:#75715e"># 音声を抽出</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;--audio-format&#34;</span>, <span style="color:#e6db74">&#34;mp3&#34;</span>,  <span style="color:#75715e"># mp3形式に変換</span>
+</span></span><span style="display:flex;"><span>        url
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        subprocess<span style="color:#f92672">.</span>run(command, check<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;✅ ダウンロード完了&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> subprocess<span style="color:#f92672">.</span>CalledProcessError <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;❌ ダウンロード失敗:&#34;</span>, e)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    download_youtube_mp3()
+</span></span></code></pre></div><h3 id="各章ごとに音声を分割">◇各章ごとに音声を分割<a hidden class="anchor" aria-hidden="true" href="#各章ごとに音声を分割">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># split_audio.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> subprocess
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>input_file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/Users/dev/Downloads/aaa/xxx.mp3&#34;</span>
+</span></span><span style="display:flex;"><span>output_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;output_chapters&#34;</span>
+</span></span><span style="display:flex;"><span>os<span style="color:#f92672">.</span>makedirs(output_dir, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chapters <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;a0&#34;</span>, <span style="color:#e6db74">&#34;00:00:00&#34;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;1-chapter1&#34;</span>, <span style="color:#e6db74">&#34;00:00:09&#34;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;1-chapter2&#34;</span>, <span style="color:#e6db74">&#34;00:39:31&#34;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;2-chapter1&#34;</span>, <span style="color:#e6db74">&#34;03:35:20&#34;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;2-chapter2&#34;</span>, <span style="color:#e6db74">&#34;04:00:13&#34;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;3-chapter1&#34;</span>, <span style="color:#e6db74">&#34;07:48:41&#34;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;3-chapter2&#34;</span>, <span style="color:#e6db74">&#34;08:18:27&#34;</span>)
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(chapters)):
+</span></span><span style="display:flex;"><span>    title, start <span style="color:#f92672">=</span> chapters[i]
+</span></span><span style="display:flex;"><span>    end <span style="color:#f92672">=</span> chapters[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>] <span style="color:#66d9ef">if</span> i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> len(chapters) <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    output_file <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(output_dir, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>title<span style="color:#e6db74">}</span><span style="color:#e6db74">.mp3&#34;</span>)
+</span></span><span style="display:flex;"><span>    cmd <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;ffmpeg&#34;</span>, <span style="color:#e6db74">&#34;-y&#34;</span>, <span style="color:#e6db74">&#34;-i&#34;</span>, input_file, <span style="color:#e6db74">&#34;-ss&#34;</span>, start]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> end:
+</span></span><span style="display:flex;"><span>        cmd <span style="color:#f92672">+=</span> [<span style="color:#e6db74">&#34;-to&#34;</span>, end]
+</span></span><span style="display:flex;"><span>    cmd <span style="color:#f92672">+=</span> [<span style="color:#e6db74">&#34;-c&#34;</span>, <span style="color:#e6db74">&#34;copy&#34;</span>, output_file]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    subprocess<span style="color:#f92672">.</span>run(cmd)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;出力完了: </span><span style="color:#e6db74">{</span>output_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;すべての章を正常に分割しました。&#34;</span>)
+</span></span></code></pre></div><h3 id="音声を結合">◇音声を結合<a hidden class="anchor" aria-hidden="true" href="#音声を結合">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># merge_audio.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pydub <span style="color:#f92672">import</span> AudioSegment
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 音声ファイルのディレクトリを設定</span>
+</span></span><span style="display:flex;"><span>audio_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># すべての mp3 ファイルを取得し、ファイル名でソート（任意）</span>
+</span></span><span style="display:flex;"><span>audio_files <span style="color:#f92672">=</span> sorted([f <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>listdir(audio_dir) <span style="color:#66d9ef">if</span> f<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#34;.mp3&#34;</span>)])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 空のオーディオオブジェクトを作成</span>
+</span></span><span style="display:flex;"><span>combined <span style="color:#f92672">=</span> AudioSegment<span style="color:#f92672">.</span>empty()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 各音声ファイルを順に追加</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> file <span style="color:#f92672">in</span> audio_files:
+</span></span><span style="display:flex;"><span>    file_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(audio_dir, file)
+</span></span><span style="display:flex;"><span>    audio <span style="color:#f92672">=</span> AudioSegment<span style="color:#f92672">.</span>from_mp3(file_path)
+</span></span><span style="display:flex;"><span>    combined <span style="color:#f92672">+=</span> audio
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;追加済み: </span><span style="color:#e6db74">{</span>file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 結合された音声を出力</span>
+</span></span><span style="display:flex;"><span>output_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(audio_dir, <span style="color:#e6db74">&#34;combined_output.mp3&#34;</span>)
+</span></span><span style="display:flex;"><span>combined<span style="color:#f92672">.</span>export(output_path, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mp3&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;結合完了、保存先: </span><span style="color:#e6db74">{</span>output_path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div>
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://yuuniji.github.io/ja/tags/%E6%9C%AC/">本</a></li>
-      <li><a href="https://yuuniji.github.io/ja/tags/%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%96%E3%83%83%E3%82%AF/">オーディオブック</a></li>
+      <li><a href="http://localhost:1313/ja/tags/%E6%9C%AC/">本</a></li>
+      <li><a href="http://localhost:1313/ja/tags/%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%96%E3%83%83%E3%82%AF/">オーディオブック</a></li>
     </ul>
 <nav class="paginav">
-  <a class="next" href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/">
+  <a class="next" href="http://localhost:1313/ja/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/">
     <span class="title">次へ »</span>
     <br>
     <span>日本語を上手に学ぶ方法[7]：教材『いろどり』ノート</span>
@@ -859,7 +1099,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share オーディオブック集：随時更新 on x"
-            href="https://x.com/intent/tweet/?text=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0&amp;url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2faudiobook-0%2f&amp;hashtags=%e6%9c%ac%2c%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af">
+            href="https://x.com/intent/tweet/?text=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0&amp;url=http%3a%2f%2flocalhost%3a1313%2fja%2fposts%2faudiobook-0%2f&amp;hashtags=%e6%9c%ac%2c%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
@@ -868,7 +1108,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
     </li>
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share オーディオブック集：随時更新 on linkedin"
-            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2faudiobook-0%2f&amp;title=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0&amp;summary=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0&amp;source=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2faudiobook-0%2f">
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fja%2fposts%2faudiobook-0%2f&amp;title=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0&amp;summary=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0&amp;source=http%3a%2f%2flocalhost%3a1313%2fja%2fposts%2faudiobook-0%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
@@ -877,7 +1117,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
     </li>
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share オーディオブック集：随時更新 on reddit"
-            href="https://reddit.com/submit?url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2faudiobook-0%2f&title=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0">
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fja%2fposts%2faudiobook-0%2f&title=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
@@ -886,7 +1126,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
     </li>
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share オーディオブック集：随時更新 on facebook"
-            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2faudiobook-0%2f">
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fja%2fposts%2faudiobook-0%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
@@ -895,7 +1135,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
     </li>
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share オーディオブック集：随時更新 on whatsapp"
-            href="https://api.whatsapp.com/send?text=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0%20-%20https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2faudiobook-0%2f">
+            href="https://api.whatsapp.com/send?text=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0%20-%20http%3a%2f%2flocalhost%3a1313%2fja%2fposts%2faudiobook-0%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
@@ -904,7 +1144,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
     </li>
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share オーディオブック集：随時更新 on telegram"
-            href="https://telegram.me/share/url?text=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0&amp;url=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2faudiobook-0%2f">
+            href="https://telegram.me/share/url?text=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0&amp;url=http%3a%2f%2flocalhost%3a1313%2fja%2fposts%2faudiobook-0%2f">
             <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
@@ -913,7 +1153,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
     </li>
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share オーディオブック集：随時更新 on ycombinator"
-            href="https://news.ycombinator.com/submitlink?t=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0&u=https%3a%2f%2fyuuniji.github.io%2fja%2fposts%2faudiobook-0%2f">
+            href="https://news.ycombinator.com/submitlink?t=%e3%82%aa%e3%83%bc%e3%83%87%e3%82%a3%e3%82%aa%e3%83%96%e3%83%83%e3%82%af%e9%9b%86%ef%bc%9a%e9%9a%8f%e6%99%82%e6%9b%b4%e6%96%b0&u=http%3a%2f%2flocalhost%3a1313%2fja%2fposts%2faudiobook-0%2f">
             <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
                 <path
@@ -945,7 +1185,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
     </main>
     
 <footer class="footer">
-    <span>&copy; 2025 <a href="https://yuuniji.github.io/ja/">叶泽伟的博客</a></span>
+    <span>&copy; 2025 <a href="http://localhost:1313/ja/">叶泽伟的博客</a></span>
     <span id="runtime_span"></span> 
     <script type="text/javascript">
         function show_runtime() {
