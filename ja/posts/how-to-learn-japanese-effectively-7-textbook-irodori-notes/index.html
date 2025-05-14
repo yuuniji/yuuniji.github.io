@@ -63,7 +63,7 @@
 ">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.34f7c5c411832431eb58c4bc1f413b33c3c410b2721a0fb847d3643967e9424a.css" integrity="sha256-NPfFxBGDJDHrWMS8H0E7M8PEELJyGg&#43;4R9NkOWfpQko=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.40bdd6dc18e3079b62981a27596b1f99d703ba186848f6e20af4b6b290e9f8b8.css" integrity="sha256-QL3W3BjjB5timBonWWsfmdcDuhhoSPbiCvS2spDp&#43;Lg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
@@ -380,8 +380,8 @@
     <button class="sbutton" id="pause-btn" style="display:none;">⏸️</button>
     <button class="sbutton" id="prev-btn">⏮️</button>
     <button class="sbutton" id="next-btn">⏭️</button>
-    <button class="sbutton" id="rate-1x-btn" class="rate-btn">🐌</button>
-    <button class="sbutton" id="rate-2x-btn" class="rate-btn active">⚡️</button>
+    <button class="sbutton rate-btn" id="rate-1x-btn" data-speed="1">🐌</button>
+    <button class="sbutton rate-btn active" id="rate-2x-btn" data-speed="2">⚡️</button>
     <span id="audio-status"></span>
   </div>
 
@@ -2017,9 +2017,9 @@
 
   .player-container-y {
      
-    padding: 15px;
+     
     border-radius: 8px;
-    margin-bottom: 20px;
+     
   }
 
   #audio-player-controls-y {
@@ -2032,11 +2032,11 @@
      
      
     border: none;
-    padding: 8px 12px;
-    margin-right: 8px;
-    border-radius: 4px;
+    padding: 6px 12px;
+    margin-right: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 21px;
   }
 
   .sbutton-y:hover {
@@ -2063,10 +2063,7 @@
      
   }
 
-  audio {
-    width: 100%;
-    margin-top: 10px;
-  }
+
 
 
   .note {
@@ -2104,11 +2101,13 @@
   }
 
   #jump-to-y {
-    padding: 8px;
-    margin-right: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 200px;
+    padding: 6px;
+  margin-right: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  font-size: 13px;
+  color: #A0A0A0;
   }
 
   .lesson-header-y {
@@ -2961,12 +2960,12 @@
 
   .player-container-z {
      
-    padding: 15px;
+     
     border-radius: 8px;
-    margin-bottom: 20px;
+     
   }
 
-  #audio-player-controls-z {
+  #audio-player-controls-y {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -2976,11 +2975,11 @@
      
      
     border: none;
-    padding: 8px 12px;
-    margin-right: 8px;
-    border-radius: 4px;
+    padding: 6px 12px;
+    margin-right: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 21px;
   }
 
   .sbutton-z:hover {
@@ -3007,10 +3006,7 @@
      
   }
 
-  audio {
-    width: 100%;
-    margin-top: 10px;
-  }
+
 
 
   .note {
@@ -3048,11 +3044,13 @@
   }
 
   #jump-to-z {
-    padding: 8px;
-    margin-right: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 200px;
+    padding: 6px;
+  margin-right: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  font-size: 13px;
+  color: #A0A0A0;
   }
 
   .lesson-header-z {

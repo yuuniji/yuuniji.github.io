@@ -18,7 +18,7 @@
 &lt;div class=&#34;audiobook-player&#34; data-book=&#34;book1&#34; data-baseurl=&#34;https://yuuniji.github.io/audiobook-a/&#34;&gt;
   &lt;div class=&#34;navigation&#34;&gt;
     &lt;div&gt;
-      &lt;span&gt;📖 &lt;span id=&#34;current-chapter&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-chapters&#34;&gt;0&lt;/span&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;span id=&#34;current-chapter&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-chapters&#34;&gt;0&lt;/span&gt;&lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&#34;jump-container&#34;&gt;
       &lt;select id=&#34;book-select&#34;&gt;
@@ -39,11 +39,10 @@
     &lt;button class=&#34;sbutton&#34; id=&#34;pause-btn&#34; style=&#34;display:none;&#34;&gt;⏸️&lt;/button&gt;
     &lt;button class=&#34;sbutton&#34; id=&#34;prev-btn&#34;&gt;⏮️&lt;/button&gt;
     &lt;button class=&#34;sbutton&#34; id=&#34;next-btn&#34;&gt;⏭️&lt;/button&gt;
-    &lt;select id=&#34;speed-select&#34;&gt;
-      &lt;option value=&#34;1&#34;&gt;1x&lt;/option&gt;
-      &lt;option value=&#34;1.5&#34;&gt;1.5x&lt;/option&gt;
-      &lt;option value=&#34;2&#34;&gt;2x&lt;/option&gt;
-    &lt;/select&gt;
+    &lt;div id=&#34;speed-buttons&#34;&gt;
+      &lt;button class=&#34;sbutton rate-btn&#34; data-speed=&#34;1&#34;&gt;🐌&lt;/button&gt;
+      &lt;button class=&#34;sbutton rate-btn active&#34; data-speed=&#34;2&#34;&gt;⚡️&lt;/button&gt;
+    &lt;/div&gt;
     &lt;input type=&#34;range&#34; id=&#34;progress&#34; value=&#34;0&#34; max=&#34;100&#34; style=&#34;width: 100%;&#34;&gt;
     &lt;div id=&#34;audio-status&#34;&gt;&lt;/div&gt;
   &lt;/div&gt;
@@ -65,7 +64,6 @@
     const nextBtn = player.querySelector(&#39;#next-btn&#39;);
     const prevBtn = player.querySelector(&#39;#prev-btn&#39;);
     const progress = player.querySelector(&#39;#progress&#39;);
-    const speedSelect = player.querySelector(&#39;#speed-select&#39;);
     const status = player.querySelector(&#39;#audio-status&#39;);
     const currentChapterSpan = player.querySelector(&#39;#current-chapter&#39;);
     const totalChaptersSpan = player.querySelector(&#39;#total-chapters&#39;);
@@ -138,7 +136,9 @@
       const audioUrl = `${baseUrl}books/${currentBook}/${chapter.audio}`;
       console.log(&#39;Playing audio:&#39;, audioUrl);
       audio.src = audioUrl;
-      audio.playbackRate = parseFloat(speedSelect.value);
+      const activeSpeedBtn = player.querySelector(&#39;#speed-buttons .rate-btn.active&#39;);
+audio.playbackRate = activeSpeedBtn ? parseFloat(activeSpeedBtn.dataset.speed) : 1.0;
+
       audio.play().then(() =&gt; {
         playBtn.style.display = &#39;none&#39;;
         pauseBtn.style.display = &#39;&#39;;
@@ -158,13 +158,20 @@
       if (audio.duration) audio.currentTime = (progress.value / 100) * audio.duration;
     };
 
-    
-    speedSelect.onchange = () =&gt; {
-      audio.playbackRate = parseFloat(speedSelect.value);
-      if (!audio.paused) {
-        status.textContent = `Playing: ${currentChapters[current].title} (${speedSelect.value}x)`;
-      }
-    };
+
+const speedButtons = player.querySelectorAll(&#39;#speed-buttons .rate-btn&#39;);
+speedButtons.forEach(btn =&gt; {
+  btn.addEventListener(&#39;click&#39;, () =&gt; {
+    const speed = parseFloat(btn.dataset.speed);
+    audio.playbackRate = speed;
+    speedButtons.forEach(b =&gt; b.classList.remove(&#39;active&#39;));
+    btn.classList.add(&#39;active&#39;);
+    if (!audio.paused) {
+      status.textContent = `Playing: ${currentChapters[current].title} (${speed}x)`;
+    }
+  });
+});
+
 
     
     bookSelect.onchange = async () =&gt; {
