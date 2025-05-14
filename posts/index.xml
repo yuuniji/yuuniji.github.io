@@ -28,6 +28,9 @@
         &lt;option value=&#34;book4&#34;&gt;Book 4&lt;/option&gt;
         &lt;option value=&#34;book5&#34;&gt;Book 5&lt;/option&gt;
         &lt;option value=&#34;book6&#34;&gt;Book 6&lt;/option&gt;
+        &lt;option value=&#34;book7&#34;&gt;Book 7&lt;/option&gt;
+        &lt;option value=&#34;book8&#34;&gt;Book 8&lt;/option&gt;
+        &lt;option value=&#34;book9&#34;&gt;Book 9&lt;/option&gt;
       &lt;/select&gt;
       &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Chapter number or title&#34; list=&#34;chapters-list-book1&#34;&gt;
       &lt;datalist id=&#34;chapters-list-book1&#34;&gt;&lt;/datalist&gt;
@@ -328,9 +331,26 @@ document.getElementById(&#39;toggle-button&#39;).addEventListener(&#39;click&#39
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;亚当斯密国富论国民财富的性质和原因&#34;&gt;◇《亚当·斯密：国富论——国民财富的性质和原因》&lt;/h3&gt;
-&lt;h4 id=&#34;book-1-论劳动生产力提高的原因及劳动产品在各阶层间的分配&#34;&gt;&lt;strong&gt;Book 1: 论劳动生产力提高的原因及劳动产品在各阶层间的分配&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;核心主题&lt;/strong&gt;：劳动分工、劳动生产力、价值理论及收入分配。&lt;/p&gt;</description>
+&lt;h2 id=&#34;政治&#34;&gt;★政治&lt;/h2&gt;
+&lt;h3 id=&#34;政治--政治小说&#34;&gt;◇政治 / 政治小说&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;中文书名&lt;/th&gt;
+          &lt;th&gt;英文书名&lt;/th&gt;
+          &lt;th&gt;作者&lt;/th&gt;
+          &lt;th&gt;Book ID&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;一九八四&lt;/td&gt;
+          &lt;td&gt;Nineteen Eighty-Four&lt;/td&gt;
+          &lt;td&gt;(英) 乔治·奥威尔&lt;/td&gt;
+          &lt;td&gt;Book 7-9&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
     </item>
     <item>
       <title>如何学好日语[7]: 教材《いろどり》笔记</title>
