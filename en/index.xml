@@ -13,7 +13,7 @@
       <link>https://yuuniji.github.io/en/posts/audiobook-0/</link>
       <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/en/posts/audiobook-0/</guid>
-      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://yuuniji.github.io/css/audiobook.css&#34;&gt;
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://yuuniji.github.io/%20css/audiobook.css&#34;&gt;
 
 &lt;div class=&#34;audiobook-player&#34; data-book=&#34;book1&#34; data-baseurl=&#34;https://yuuniji.github.io/audiobook-a/&#34;&gt;
   &lt;div class=&#34;navigation&#34;&gt;
@@ -57,7 +57,7 @@
     &lt;/div&gt;
     &lt;button id=&#34;toggle-button&#34;&gt;🔽&lt;/button&gt;
   &lt;/div&gt;
-  
+
   
   &lt;audio id=&#34;main-audio&#34; style=&#34;display: none;&#34;&gt;&lt;/audio&gt;
 &lt;/div&gt;
@@ -148,7 +148,7 @@
       console.log(&#39;Playing audio:&#39;, audioUrl);
       audio.src = audioUrl;
       const activeSpeedBtn = player.querySelector(&#39;#speed-buttons .rate-btn.active&#39;);
-audio.playbackRate = activeSpeedBtn ? parseFloat(activeSpeedBtn.dataset.speed) : 1.0;
+      audio.playbackRate = activeSpeedBtn ? parseFloat(activeSpeedBtn.dataset.speed) : 1.0;
 
       audio.play().then(() =&gt; {
         playBtn.style.display = &#39;none&#39;;
@@ -169,32 +169,32 @@ audio.playbackRate = activeSpeedBtn ? parseFloat(activeSpeedBtn.dataset.speed) :
       if (audio.duration) audio.currentTime = (progress.value / 100) * audio.duration;
     };
 
+    
+    const speedButtons = player.querySelectorAll(&#39;#speed-buttons .rate-btn&#39;);
+    speedButtons.forEach(btn =&gt; {
+      btn.addEventListener(&#39;click&#39;, () =&gt; {
+        const speed = parseFloat(btn.dataset.speed);
+        audio.playbackRate = speed;
+        speedButtons.forEach(b =&gt; b.classList.remove(&#39;active&#39;));
+        btn.classList.add(&#39;active&#39;);
+        if (!audio.paused) {
+          status.textContent = `Playing: ${currentChapters[current].title} (${speed}x)`;
+        }
+      });
+    });
 
-const speedButtons = player.querySelectorAll(&#39;#speed-buttons .rate-btn&#39;);
-speedButtons.forEach(btn =&gt; {
-  btn.addEventListener(&#39;click&#39;, () =&gt; {
-    const speed = parseFloat(btn.dataset.speed);
-    audio.playbackRate = speed;
-    speedButtons.forEach(b =&gt; b.classList.remove(&#39;active&#39;));
-    btn.classList.add(&#39;active&#39;);
-    if (!audio.paused) {
-      status.textContent = `Playing: ${currentChapters[current].title} (${speed}x)`;
-    }
-  });
-});
-
-document.getElementById(&#39;toggle-button&#39;).addEventListener(&#39;click&#39;, function () {
-  const content = document.getElementById(&#39;chapter-content&#39;);
-  if (content.classList.contains(&#39;collapsed&#39;)) {
-    content.classList.remove(&#39;collapsed&#39;);
-    content.classList.add(&#39;expanded&#39;);
-    this.innerText = &#39;🔼&#39;;
-  } else {
-    content.classList.remove(&#39;expanded&#39;);
-    content.classList.add(&#39;collapsed&#39;);
-    this.innerText = &#39;🔽&#39;;
-  }
-});
+    document.getElementById(&#39;toggle-button&#39;).addEventListener(&#39;click&#39;, function () {
+      const content = document.getElementById(&#39;chapter-content&#39;);
+      if (content.classList.contains(&#39;collapsed&#39;)) {
+        content.classList.remove(&#39;collapsed&#39;);
+        content.classList.add(&#39;expanded&#39;);
+        this.innerText = &#39;🔼&#39;;
+      } else {
+        content.classList.remove(&#39;expanded&#39;);
+        content.classList.add(&#39;collapsed&#39;);
+        this.innerText = &#39;🔽&#39;;
+      }
+    });
 
 
 

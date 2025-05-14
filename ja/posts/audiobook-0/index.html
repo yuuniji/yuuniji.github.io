@@ -51,7 +51,7 @@
     
     🔽
   
-  
+
   
   
 
@@ -167,7 +167,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
     
     🔽
   
-  
+
   
   
 
@@ -362,7 +362,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
         </div>
     </details>
 </div>
-  <div class="post-content"><link rel="stylesheet" href="/css/audiobook.css">
+  <div class="post-content"><link rel="stylesheet" href="/%20css/audiobook.css">
 
 <div class="audiobook-player" data-book="book1" data-baseurl="https://yuuniji.github.io/audiobook-a/">
   <div class="navigation">
@@ -406,7 +406,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
     </div>
     <button id="toggle-button">🔽</button>
   </div>
-  
+
   
   <audio id="main-audio" style="display: none;"></audio>
 </div>
@@ -497,7 +497,7 @@ Book 1: 労働生産性の向上の原因および労働産物の各階層間に
       console.log('Playing audio:', audioUrl);
       audio.src = audioUrl;
       const activeSpeedBtn = player.querySelector('#speed-buttons .rate-btn.active');
-audio.playbackRate = activeSpeedBtn ? parseFloat(activeSpeedBtn.dataset.speed) : 1.0;
+      audio.playbackRate = activeSpeedBtn ? parseFloat(activeSpeedBtn.dataset.speed) : 1.0;
 
       audio.play().then(() => {
         playBtn.style.display = 'none';
@@ -518,32 +518,32 @@ audio.playbackRate = activeSpeedBtn ? parseFloat(activeSpeedBtn.dataset.speed) :
       if (audio.duration) audio.currentTime = (progress.value / 100) * audio.duration;
     };
 
+    
+    const speedButtons = player.querySelectorAll('#speed-buttons .rate-btn');
+    speedButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const speed = parseFloat(btn.dataset.speed);
+        audio.playbackRate = speed;
+        speedButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (!audio.paused) {
+          status.textContent = `Playing: ${currentChapters[current].title} (${speed}x)`;
+        }
+      });
+    });
 
-const speedButtons = player.querySelectorAll('#speed-buttons .rate-btn');
-speedButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const speed = parseFloat(btn.dataset.speed);
-    audio.playbackRate = speed;
-    speedButtons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    if (!audio.paused) {
-      status.textContent = `Playing: ${currentChapters[current].title} (${speed}x)`;
-    }
-  });
-});
-
-document.getElementById('toggle-button').addEventListener('click', function () {
-  const content = document.getElementById('chapter-content');
-  if (content.classList.contains('collapsed')) {
-    content.classList.remove('collapsed');
-    content.classList.add('expanded');
-    this.innerText = '🔼';
-  } else {
-    content.classList.remove('expanded');
-    content.classList.add('collapsed');
-    this.innerText = '🔽';
-  }
-});
+    document.getElementById('toggle-button').addEventListener('click', function () {
+      const content = document.getElementById('chapter-content');
+      if (content.classList.contains('collapsed')) {
+        content.classList.remove('collapsed');
+        content.classList.add('expanded');
+        this.innerText = '🔼';
+      } else {
+        content.classList.remove('expanded');
+        content.classList.add('collapsed');
+        this.innerText = '🔽';
+      }
+    });
 
 
 
