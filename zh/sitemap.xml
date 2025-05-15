@@ -39,7 +39,7 @@
                 />
   </url><url>
     <loc>https://yuuniji.github.io/tags/</loc>
-    <lastmod>2025-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -54,6 +54,48 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://yuuniji.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/</loc>
+    <lastmod>2025-05-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/tags/%E4%B9%A6%E7%B1%8D/</loc>
+    <lastmod>2025-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.github.io/tags/%E6%9C%89%E5%A3%B0%E4%B9%A6/</loc>
+    <lastmod>2025-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.github.io/posts/audiobook-0/</loc>
+    <lastmod>2025-05-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/audiobook-0/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/audiobook-0/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/audiobook-0/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/tags/%E6%95%99%E6%9D%90/</loc>

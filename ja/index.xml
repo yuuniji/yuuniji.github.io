@@ -6,8 +6,443 @@
     <description>Recent content in Yuunijiのブログ on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/ja/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>how-to-learn-japanese-effectively-8-textbook-irodori-vocab</title>
+      <link>https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/</guid>
+      <description>&lt;p&gt;この記事は日本語バージョンです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>オーディオブック集：随時更新</title>
+      <link>https://yuuniji.github.io/ja/posts/audiobook-0/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/ja/posts/audiobook-0/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://yuuniji.github.io/%20css/audiobook.css&#34;&gt;
+
+&lt;div class=&#34;audiobook-player&#34; data-book=&#34;book1&#34; data-baseurl=&#34;https://yuuniji.github.io/audiobook-a/&#34;&gt;
+  &lt;div class=&#34;navigation&#34;&gt;
+    &lt;div&gt;
+      &lt;span id=&#34;current-chapter&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-chapters&#34;&gt;0&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;jump-container&#34;&gt;
+      &lt;select id=&#34;book-select&#34;&gt;
+        &lt;option value=&#34;book1&#34;&gt;Book 1&lt;/option&gt;
+        &lt;option value=&#34;book2&#34;&gt;Book 2&lt;/option&gt;
+        &lt;option value=&#34;book3&#34;&gt;Book 3&lt;/option&gt;
+        &lt;option value=&#34;book4&#34;&gt;Book 4&lt;/option&gt;
+        &lt;option value=&#34;book5&#34;&gt;Book 5&lt;/option&gt;
+        &lt;option value=&#34;book6&#34;&gt;Book 6&lt;/option&gt;
+        &lt;option value=&#34;book7&#34;&gt;Book 7&lt;/option&gt;
+        &lt;option value=&#34;book8&#34;&gt;Book 8&lt;/option&gt;
+        &lt;option value=&#34;book9&#34;&gt;Book 9&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Chapter number or title&#34; list=&#34;chapters-list-book1&#34;&gt;
+      &lt;datalist id=&#34;chapters-list-book1&#34;&gt;&lt;/datalist&gt;
+      &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;➡️&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;audio-player-controls&#34;&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;play-btn&#34;&gt;▶️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;pause-btn&#34; style=&#34;display:none;&#34;&gt;⏸️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;prev-btn&#34;&gt;⏮️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;next-btn&#34;&gt;⏭️&lt;/button&gt;
+    &lt;div id=&#34;speed-buttons&#34;&gt;
+      &lt;button class=&#34;sbutton rate-btn&#34; data-speed=&#34;1&#34;&gt;🐌&lt;/button&gt;
+      &lt;button class=&#34;sbutton rate-btn active&#34; data-speed=&#34;2&#34;&gt;⚡️&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;input type=&#34;range&#34; id=&#34;progress&#34; value=&#34;0&#34; max=&#34;100&#34; style=&#34;width: 100%;&#34;&gt;
+    &lt;div id=&#34;audio-status&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;h2 id=&#34;chapter-title&#34;&gt;★🔊📖&lt;/h2&gt;
+  &lt;div id=&#34;chapter-wrapper&#34;&gt;
+    &lt;div id=&#34;chapter-content&#34; class=&#34;collapsed&#34;&gt;
+      
+      &lt;div id=&#34;chapter-content&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button id=&#34;toggle-button&#34;&gt;🔽&lt;/button&gt;
+  &lt;/div&gt;
+
+  
+  &lt;audio id=&#34;main-audio&#34; style=&#34;display: none;&#34;&gt;&lt;/audio&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  (async () =&gt; {
+    const player = document.querySelector(&#39;.audiobook-player&#39;);
+    const bookId = player.dataset.book;
+    const baseUrl = player.dataset.baseurl;
+    let currentBook = bookId, currentChapters = [], current = 0;
+
+    const audio = player.querySelector(&#39;#main-audio&#39;);
+    const playBtn = player.querySelector(&#39;#play-btn&#39;);
+    const pauseBtn = player.querySelector(&#39;#pause-btn&#39;);
+    const nextBtn = player.querySelector(&#39;#next-btn&#39;);
+    const prevBtn = player.querySelector(&#39;#prev-btn&#39;);
+    const progress = player.querySelector(&#39;#progress&#39;);
+    const status = player.querySelector(&#39;#audio-status&#39;);
+    const currentChapterSpan = player.querySelector(&#39;#current-chapter&#39;);
+    const totalChaptersSpan = player.querySelector(&#39;#total-chapters&#39;);
+    const chapterTitle = player.querySelector(&#39;#chapter-title&#39;);
+    const chapterContent = player.querySelector(&#39;#chapter-content&#39;);
+    const jumpTo = player.querySelector(&#39;#jump-to&#39;);
+    const jumpBtn = player.querySelector(&#39;#jump-btn&#39;);
+    const bookSelect = player.querySelector(&#39;#book-select&#39;);
+    const chaptersList = player.querySelector(`#chapters-list-${bookId}`);
+
+    console.log(&#39;Initializing audiobook player&#39;, { bookId, baseUrl });
+
+    
+    async function loadBook(bookId) {
+      const metadataUrl = `${baseUrl}books/${bookId}/metadata.json`;
+      console.log(&#39;Fetching metadata:&#39;, metadataUrl);
+      try {
+        const res = await fetch(metadataUrl);
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+        const metadata = await res.json();
+        console.log(&#39;Metadata loaded:&#39;, metadata);
+        currentBook = bookId;
+        currentChapters = metadata.chapters;
+        current = 0;
+        chaptersList.innerHTML = &#39;&#39;;
+        currentChapters.forEach(ch =&gt; {
+          const option = document.createElement(&#39;option&#39;);
+          option.value = ch.chapter;
+          option.text = ch.title;
+          chaptersList.appendChild(option);
+        });
+        totalChaptersSpan.textContent = currentChapters.length;
+        bookSelect.value = bookId;
+        await updateChapter();
+      } catch (err) {
+        console.error(&#39;Load metadata failed:&#39;, err);
+        status.textContent = navigator.onLine ? `Failed to load book: ${err.message}` : &#39;Please check your connection&#39;;
+      }
+    }
+
+    
+    async function updateChapter() {
+      if (!currentChapters[current]) return;
+      const chapter = currentChapters[current];
+      const contentUrl = `${baseUrl}books/${currentBook}/${chapter.content}`;
+      console.log(&#39;Fetching content:&#39;, contentUrl);
+      currentChapterSpan.textContent = current + 1;
+      chapterTitle.textContent = chapter.title;
+      try {
+        const res = await fetch(contentUrl);
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+        chapterContent.textContent = await res.text();
+      } catch (err) {
+        console.error(&#39;Load content failed:&#39;, err);
+        chapterContent.textContent = navigator.onLine ? `Failed to load chapter content: ${err.message}` : &#39;Please check your connection&#39;;
+      }
+      status.textContent = `Loaded: ${chapter.title}`;
+    }
+
+    
+    async function playCurrent() {
+      if (current &gt;= currentChapters.length) {
+        status.textContent = &#39;Playback complete&#39;;
+        current = 0;
+        progress.value = 0;
+        await updateChapter();
+        return;
+      }
+      const chapter = currentChapters[current];
+      const audioUrl = `${baseUrl}books/${currentBook}/${chapter.audio}`;
+      console.log(&#39;Playing audio:&#39;, audioUrl);
+      audio.src = audioUrl;
+      const activeSpeedBtn = player.querySelector(&#39;#speed-buttons .rate-btn.active&#39;);
+      audio.playbackRate = activeSpeedBtn ? parseFloat(activeSpeedBtn.dataset.speed) : 1.0;
+
+      audio.play().then(() =&gt; {
+        playBtn.style.display = &#39;none&#39;;
+        pauseBtn.style.display = &#39;&#39;;
+        status.textContent = `Playing: ${chapter.title} (${speedSelect.value}x)`;
+      }).catch(err =&gt; {
+        console.error(&#39;Playback failed:&#39;, err);
+        status.textContent = navigator.onLine ? `Playback failed: ${err.message}` : &#39;Please check your connection&#39;;
+      });
+      await updateChapter();
+    }
+
+    
+    audio.ontimeupdate = () =&gt; {
+      if (audio.duration) progress.value = (audio.currentTime / audio.duration) * 100;
+    };
+    progress.oninput = () =&gt; {
+      if (audio.duration) audio.currentTime = (progress.value / 100) * audio.duration;
+    };
+
+    
+    const speedButtons = player.querySelectorAll(&#39;#speed-buttons .rate-btn&#39;);
+    speedButtons.forEach(btn =&gt; {
+      btn.addEventListener(&#39;click&#39;, () =&gt; {
+        const speed = parseFloat(btn.dataset.speed);
+        audio.playbackRate = speed;
+        speedButtons.forEach(b =&gt; b.classList.remove(&#39;active&#39;));
+        btn.classList.add(&#39;active&#39;);
+        if (!audio.paused) {
+          status.textContent = `Playing: ${currentChapters[current].title} (${speed}x)`;
+        }
+      });
+    });
+
+    document.getElementById(&#39;toggle-button&#39;).addEventListener(&#39;click&#39;, function () {
+      const content = document.getElementById(&#39;chapter-content&#39;);
+      if (content.classList.contains(&#39;collapsed&#39;)) {
+        content.classList.remove(&#39;collapsed&#39;);
+        content.classList.add(&#39;expanded&#39;);
+        this.innerText = &#39;🔼&#39;;
+      } else {
+        content.classList.remove(&#39;expanded&#39;);
+        content.classList.add(&#39;collapsed&#39;);
+        this.innerText = &#39;🔽&#39;;
+      }
+    });
+
+
+
+    
+    bookSelect.onchange = async () =&gt; {
+      if (bookSelect.value) await loadBook(bookSelect.value);
+      await playCurrent();
+    };
+
+    
+    playBtn.onclick = () =&gt; playCurrent();
+
+    
+    pauseBtn.onclick = () =&gt; {
+      if (!audio.paused) {
+        audio.pause();
+        pauseBtn.textContent = &#39;▶️&#39;;
+        status.textContent = &#39;Paused&#39;;
+      } else {
+        audio.playbackRate = parseFloat(speedSelect.value);
+        audio.play().catch(err =&gt; status.textContent = navigator.onLine ? `Continue playback failed: ${err.message}` : &#39;Please check your connection&#39;);
+        pauseBtn.textContent = &#39;⏸️&#39;;
+        status.textContent = `Playing: ${currentChapters[current].title} (${speedSelect.value}x)`;
+      }
+    };
+
+    
+    nextBtn.onclick = async () =&gt; {
+      if (current &lt; currentChapters.length - 1) {
+        current++;
+        pauseBtn.style.display = &#39;none&#39;;
+        playBtn.style.display = &#39;&#39;;
+        await playCurrent();
+      } else {
+        status.textContent = &#39;Already at the last chapter&#39;;
+      }
+    };
+
+    
+    prevBtn.onclick = async () =&gt; {
+      if (current &gt; 0) {
+        current--;
+        pauseBtn.style.display = &#39;none&#39;;
+        playBtn.style.display = &#39;&#39;;
+        await playCurrent();
+      } else {
+        status.textContent = &#39;Already at the first chapter&#39;;
+      }
+    };
+
+    
+    jumpBtn.onclick = async () =&gt; {
+      const input = jumpTo.value.trim();
+      if (!isNaN(input) &amp;&amp; input &gt; 0 &amp;&amp; input &lt;= currentChapters.length) {
+        current = parseInt(input) - 1;
+        pauseBtn.style.display = &#39;none&#39;;
+        playBtn.style.display = &#39;&#39;;
+        await playCurrent();
+      } else {
+        const index = currentChapters.findIndex(ch =&gt; ch.title.toLowerCase().includes(input.toLowerCase()));
+        if (index !== -1) {
+          current = index;
+          pauseBtn.style.display = &#39;none&#39;;
+          playBtn.style.display = &#39;&#39;;
+          await playCurrent();
+        } else {
+          status.textContent = &#39;Chapter not found&#39;;
+        }
+      }
+      jumpTo.value = &#39;&#39;;
+    };
+
+    
+    audio.onended = async () =&gt; {
+      current++;
+      if (current &lt; currentChapters.length) {
+        await playCurrent();
+      } else {
+        playBtn.style.display = &#39;&#39;;
+        pauseBtn.style.display = &#39;none&#39;;
+        status.textContent = &#39;Playback complete&#39;;
+        current = 0;
+        progress.value = 0;
+        await updateChapter();
+      }
+    };
+
+    
+    window.addEventListener(&#39;offline&#39;, () =&gt; status.textContent = &#39;Network disconnected, please check your connection&#39;);
+    window.addEventListener(&#39;online&#39;, () =&gt; status.textContent = &#39;Network restored&#39;);
+
+    
+    await loadBook(bookId);
+  })();
+&lt;/script&gt;
+&lt;h2 id=&#34;経済学&#34;&gt;★経済学&lt;/h2&gt;
+&lt;h3 id=&#34;経済--経済学&#34;&gt;◇経済 / 経済学&lt;/h3&gt;
+&lt;h3 id=&#34;経済--経済学--理論&#34;&gt;◇経済 / 経済学 / 理論&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;中国語書名&lt;/th&gt;
+          &lt;th&gt;英語書名&lt;/th&gt;
+          &lt;th&gt;著者&lt;/th&gt;
+          &lt;th&gt;Book ID&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;国富論——国民の富の性質と原因についての研究&lt;/td&gt;
+          &lt;td&gt;The Wealth of Nations&lt;br&gt;別名：An Inquiry into the Nature and Causes of the Wealth of Nations&lt;/td&gt;
+          &lt;td&gt;（英）アダム・スミス&lt;/td&gt;
+          &lt;td&gt;Book 1-5&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;軍事&#34;&gt;★軍事&lt;/h2&gt;
+&lt;h3 id=&#34;軍事--軍事理論&#34;&gt;◇軍事 / 軍事理論&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;中国語書名&lt;/th&gt;
+          &lt;th&gt;英語書名&lt;/th&gt;
+          &lt;th&gt;著者&lt;/th&gt;
+          &lt;th&gt;Book ID&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;孫子兵法&lt;br&gt;別名：孫武兵法&lt;/td&gt;
+          &lt;td&gt;The Art of War&lt;/td&gt;
+          &lt;td&gt;孫武&lt;/td&gt;
+          &lt;td&gt;Book 6&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;政治&#34;&gt;★政治&lt;/h2&gt;
+&lt;h3 id=&#34;政治--政治小説&#34;&gt;◇政治 / 政治小説&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;中国語書名&lt;/th&gt;
+          &lt;th&gt;英語書名&lt;/th&gt;
+          &lt;th&gt;著者&lt;/th&gt;
+          &lt;th&gt;Book ID&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;一九八四&lt;/td&gt;
+          &lt;td&gt;Nineteen Eighty-Four&lt;/td&gt;
+          &lt;td&gt;（英）ジョージ・オーウェル&lt;/td&gt;
+          &lt;td&gt;Book 7-9&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;オーディオブック制作用スクリプト&#34;&gt;★オーディオブック制作用スクリプト&lt;/h2&gt;
+&lt;h3 id=&#34;youtube動画のmp3をダウンロード&#34;&gt;◇YouTube動画のmp3をダウンロード&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;dl &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;audio&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;format mp3 &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;audio&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;quality &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www.youtube.com/watch?v=VIDEO_ID&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# yt_mp3_download.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; subprocess
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;download_youtube_mp3&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    yt_dlp_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;YouTube動画のリンクを入力してください：&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;strip()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    command &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        yt_dlp_path,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-x&amp;#34;&lt;/span&gt;,  &lt;span style=&#34;color:#75715e&#34;&gt;# 音声を抽出&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;--audio-format&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mp3&amp;#34;&lt;/span&gt;,  &lt;span style=&#34;color:#75715e&#34;&gt;# mp3形式に変換&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        url
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        subprocess&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;run(command, check&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;✅ ダウンロード完了&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; subprocess&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;CalledProcessError &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; e:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;❌ ダウンロード失敗:&amp;#34;&lt;/span&gt;, e)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    download_youtube_mp3()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;各章ごとに音声を分割&#34;&gt;◇各章ごとに音声を分割&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# split_audio.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; subprocess
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;input_file &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/Users/dev/Downloads/aaa/xxx.mp3&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_dir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;output_chapters&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;makedirs(output_dir, exist_ok&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chapters &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a0&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;00:00:00&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1-chapter1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;00:00:09&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1-chapter2&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;00:39:31&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2-chapter1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;03:35:20&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2-chapter2&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;04:00:13&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3-chapter1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;07:48:41&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3-chapter2&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;08:18:27&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(len(chapters)):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    title, start &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; chapters[i]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    end &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; chapters[i&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; len(chapters) &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    output_file &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(output_dir, &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;title&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;.mp3&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cmd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ffmpeg&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-y&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-i&amp;#34;&lt;/span&gt;, input_file, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-ss&amp;#34;&lt;/span&gt;, start]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; end:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cmd &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-to&amp;#34;&lt;/span&gt;, end]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cmd &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-c&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;copy&amp;#34;&lt;/span&gt;, output_file]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    subprocess&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;run(cmd)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;出力完了: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;output_file&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;すべての章を正常に分割しました。&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;音声を結合&#34;&gt;◇音声を結合&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# merge_audio.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; pydub &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; AudioSegment
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 音声ファイルのディレクトリを設定&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;audio_dir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# すべての mp3 ファイルを取得し、ファイル名でソート（任意）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;audio_files &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sorted([f &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; f &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;listdir(audio_dir) &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; f&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;endswith(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.mp3&amp;#34;&lt;/span&gt;)])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 空のオーディオオブジェクトを作成&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;combined &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AudioSegment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;empty()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 各音声ファイルを順に追加&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; file &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; audio_files:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    file_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(audio_dir, file)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    audio &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AudioSegment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;from_mp3(file_path)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    combined &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; audio
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;追加済み: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;file&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 結合された音声を出力&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(audio_dir, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;combined_output.mp3&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;combined&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;export(output_path, format&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mp3&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;結合完了、保存先: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;output_path&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>日本語を上手に学ぶ方法[7]：教材『いろどり』ノート</title>
       <link>https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/</link>

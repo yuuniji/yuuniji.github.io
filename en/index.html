@@ -365,6 +365,43 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Audiobook Collection: Continuously Updated
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 1 / 0 Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★Economics ◇Economics / Economic Theory Chinese Title English Title Author Book ID 国富论——国民财富的性质和原因 The Wealth of Nations Alternate Title: An Inquiry into the Nature and Causes of the Wealth of Nations Adam Smith (UK) Book 1–5 ★Military ◇Military / Military Theory Chinese Title English Title Author Book ID 孙子兵法 Alternate Title: 孙武兵法 The Art of War Sun Tzu Book 6 ★Politics ◇Politics / Political Fiction Chinese Title English Title Author Book ID 一九八四 Nineteen Eighty-Four George Orwell (UK) Book 7–9 ★Audiobook Production Scripts ◇Download MP3 from YouTube youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34; url = input(&#34;Please enter the YouTube video link: &#34;).strip() command = [ yt_dlp_path, &#34;-x&#34;, # Extract audio &#34;--audio-format&#34;, &#34;mp3&#34;, # Convert to MP3 format url ] try: subprocess.run(command, check=True) print(&#34;✅ Download completed&#34;) except subprocess.CalledProcessError as e: print(&#34;❌ Download failed:&#34;, e) if __name__ == &#34;__main__&#34;: download_youtube_mp3() ◇Split Audio by Chapters # split_audio.py import os import subprocess input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34; output_dir = &#34;output_chapters&#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (&#34;a0&#34;, &#34;00:00:00&#34;), (&#34;1-chapter1&#34;, &#34;00:00:09&#34;), (&#34;1-chapter2&#34;, &#34;00:39:31&#34;), (&#34;2-chapter1&#34;, &#34;03:35:20&#34;), (&#34;2-chapter2&#34;, &#34;04:00:13&#34;), (&#34;3-chapter1&#34;, &#34;07:48:41&#34;), (&#34;3-chapter2&#34;, &#34;08:18:27&#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;) cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start] if end: cmd &#43;= [&#34;-to&#34;, end] cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file] subprocess.run(cmd) print(f&#34;Exported: {output_file}&#34;) print(&#34;All chapters have been successfully split.&#34;) ◇Merge Audio Files # merge_audio.py from pydub import AudioSegment import os # Set the path to the audio directory audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34; # Get all mp3 files and sort them by filename (optional) audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)]) # Create an empty audio segment combined = AudioSegment.empty() # Append each audio file for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined &#43;= audio print(f&#34;Added: {file}&#34;) # Export the merged audio output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;) combined.export(output_path, format=&#34;mp3&#34;) print(f&#34;Merged audio saved as: {output_path}&#34;) </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-15 00:00:00 +0000 UTC'>May 15, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to Audiobook Collection: Continuously Updated" href="https://yuuniji.github.io/en/posts/audiobook-0/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">how-to-learn-japanese-effectively-8-textbook-irodori-vocab
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>This is the English version of the post.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-15 00:00:00 +0000 UTC'>May 15, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to how-to-learn-japanese-effectively-8-textbook-irodori-vocab" href="https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">How to Learn Japanese Effectively [7]: Notes on the Textbook Irodori
     </h2>
   </header>
@@ -504,33 +541,6 @@ Japanese has a contrast between long and short vowels, with long vowels indicate
   </div>
   <footer class="entry-footer"><span title='2025-03-15 00:00:00 +0000 UTC'>March 15, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to How to Learn Japanese Effectively [3]: Resources" href="https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-3-resources/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Kubernetes Roadmap
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>1. Kubernetes Introduction Kubernetes, also known as k8s, is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. It provides a way to abstract the underlying infrastructure and manage applications at scale, while also offering flexibility, portability, and a rich feature set. Kubernetes has become the de facto standard for container orchestration due to its widespread adoption, active community, and ability to handle complex, multi-tiered applications.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-03 00:00:00 +0000 UTC'>March 3, 2025</span>&nbsp;·&nbsp;33 min</footer>
-  <a class="entry-link" aria-label="post link to Kubernetes Roadmap" href="https://yuuniji.github.io/en/posts/roadmap-kubernetes/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Docker Roadmap
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>1. What is Docker? Docker is an open-source platform that automates the deployment, scaling, and management of applications by isolating them into lightweight, portable containers. Containers are standalone executable units that encapsulate all necessary dependencies, libraries, and configuration files required for an application to run consistently across various environments.
-official Docker official Docker Docs ◇What are Containers? Containers are lightweight, portable, and isolated software environments that allow developers to run and package applications with their dependencies, consistently across different platforms. They help to streamline application development, deployment, and management processes while ensuring that applications run consistently, regardless of the underlying infrastructure.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-03-02 00:00:00 +0000 UTC'>March 2, 2025</span>&nbsp;·&nbsp;22 min</footer>
-  <a class="entry-link" aria-label="post link to Docker Roadmap" href="https://yuuniji.github.io/en/posts/roadmap-docker/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>オーディオブック on 叶泽伟的博客</title>
-    <link>http://localhost:1313/ja/tags/%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%96%E3%83%83%E3%82%AF/</link>
+    <link>https://yuuniji.github.io/ja/tags/%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%96%E3%83%83%E3%82%AF/</link>
     <description>Recent content in オーディオブック on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 13 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/ja/tags/%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%96%E3%83%83%E3%82%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yuuniji.github.io/ja/tags/%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%96%E3%83%83%E3%82%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>オーディオブック集：随時更新</title>
-      <link>http://localhost:1313/ja/posts/audiobook-0/</link>
-      <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ja/posts/audiobook-0/</guid>
-      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/%20css/audiobook.css&#34;&gt;
+      <link>https://yuuniji.github.io/ja/posts/audiobook-0/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/ja/posts/audiobook-0/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://yuuniji.github.io/%20css/audiobook.css&#34;&gt;
 
 &lt;div class=&#34;audiobook-player&#34; data-book=&#34;book1&#34; data-baseurl=&#34;https://yuuniji.github.io/audiobook-a/&#34;&gt;
   &lt;div class=&#34;navigation&#34;&gt;
