@@ -13,14 +13,19 @@
       <link>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/</link>
       <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;回到本系列的目录&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;h2 id=&#34;回到本系列的目录postshow-to-learn-japanese-effectively-0-overview&#34;&gt;&lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;★回到本系列的目录&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;emoji&#34;&gt;★emoji&lt;/h2&gt;
+&lt;p&gt;📋：选择类别&lt;br&gt;
+📖：选择课程&lt;br&gt;
+⏭️：下一个部分&lt;br&gt;
+🔄：从头开始&lt;/p&gt;
+&lt;h2 id=&#34;词汇表&#34;&gt;★词汇表&lt;/h2&gt;
 &lt;div class=&#34;jp-wordlist&#34;&gt;
   
   &lt;div class=&#34;jp-category-selector&#34;&gt;
     &lt;select id=&#34;category-select&#34; onchange=&#34;changeCategory(this.value)&#34;&gt;
-      &lt;option value=&#34;&#34; &gt;选择类别&lt;/option&gt;
-      &lt;option value=&#34;x&#34; selected&gt;X&lt;/option&gt;
+      &lt;option value=&#34;&#34; selected&gt;📋&lt;/option&gt;
+      &lt;option value=&#34;x&#34; &gt;X&lt;/option&gt;
       &lt;option value=&#34;y&#34; &gt;Y&lt;/option&gt;
       &lt;option value=&#34;z&#34; &gt;Z&lt;/option&gt;
     &lt;/select&gt;
@@ -29,7 +34,7 @@
   
   &lt;div class=&#34;jp-lesson-selector&#34; id=&#34;lesson-selector&#34;&gt;
     &lt;select id=&#34;lesson-select&#34; onchange=&#34;changeLesson(this.value)&#34;&gt;
-      &lt;option value=&#34;&#34;&gt;选择课程&lt;/option&gt;
+      &lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;
       
     &lt;/select&gt;
   &lt;/div&gt;
@@ -41,16 +46,16 @@
 
   
   &lt;div class=&#34;jp-audio-player&#34; id=&#34;audio-player&#34; style=&#34;display: none;&#34;&gt;
-    &lt;audio id=&#34;jp-audio&#34; controls autoplay&gt;&lt;/audio&gt;
+    &lt;audio id=&#34;jp-audio&#34; controls &gt;&lt;/audio&gt;
     &lt;div class=&#34;jp-audio-controls&#34;&gt;
-      &lt;button onclick=&#34;playNextSection()&#34;&gt;下一个部分&lt;/button&gt;
-      &lt;button onclick=&#34;restartAudio()&#34;&gt;从头开始&lt;/button&gt;
+      &lt;button class=&#34;sbutton&#34; onclick=&#34;playNextSection()&#34;&gt;⏭️&lt;/button&gt;
+      &lt;button class=&#34;sbutton&#34; onclick=&#34;restartAudio()&#34;&gt;🔄&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
   &lt;script&gt;
     
-    const baseUrl = &#34;https:\/\/yuuniji.github.io\/japanese-wordlist\/&#34;;
+    const baseUrl = &#34;https:\/\/yuuniji.github.io\/japanese-wordlist&#34;;
     
     
     let currentCategory = &#34;&#34;;
@@ -63,22 +68,67 @@
       x: {
         lessons: [
           { id: &#34;lesson1&#34;, title: &#34;おはようございます&#34; },
-          { id: &#34;lesson2&#34;, title: &#34;これは本です&#34; },
-          { id: &#34;lesson3&#34;, title: &#34;ここはデパートです&#34; }
+          { id: &#34;lesson2&#34;, title: &#34;すみません、よくわかりません&#34; },
+          { id: &#34;lesson3&#34;, title: &#34;よろしくお願いします&#34; },
+          { id: &#34;lesson4&#34;, title: &#34;東京に住んでいます&#34; },
+          { id: &#34;lesson5&#34;, title: &#34;うどんが好きです&#34; },
+          { id: &#34;lesson6&#34;, title: &#34;チーズバーガーください&#34; },
+          { id: &#34;lesson7&#34;, title: &#34;部屋が４つあります&#34; },
+          { id: &#34;lesson8&#34;, title: &#34;山田さんはどこにいますか？&#34; },
+          { id: &#34;lesson9&#34;, title: &#34;12 時から 1 時まで昼休みです&#34; },
+          { id: &#34;lesson10&#34;, title: &#34;ホチキス貸してください&#34; },
+          { id: &#34;lesson11&#34;, title: &#34;どんなマンガが好きですか？&#34; },
+          { id: &#34;lesson12&#34;, title: &#34;いっしょに飲みに行きませんか？&#34; },
+          { id: &#34;lesson13&#34;, title: &#34;このバスは空港に行きますか？&#34; },
+          { id: &#34;lesson14&#34;, title: &#34;大きな建物ですね&#34; },
+          { id: &#34;lesson15&#34;, title: &#34;電池がほしいんですが…&#34; },
+          { id: &#34;lesson16&#34;, title: &#34;これ、いくらですか？&#34; },
+          { id: &#34;lesson17&#34;, title: &#34;映画を見に行きました&#34; },
+          { id: &#34;lesson18&#34;, title: &#34;温泉に入りたいです&#34; }
         ]
       },
       y: {
         lessons: [
-          { id: &#34;lesson1&#34;, title: &#34;新しい友達&#34; },
-          { id: &#34;lesson2&#34;, title: &#34;買い物&#34; },
-          { id: &#34;lesson3&#34;, title: &#34;日常生活&#34; }
+          { id: &#34;lesson1&#34;, title: &#34;レストランで働いています&#34; },
+          { id: &#34;lesson2&#34;, title: &#34;ゲームをするのが好きです&#34; },
+          { id: &#34;lesson3&#34;, title: &#34;冬はとても寒くなります&#34; },
+          { id: &#34;lesson4&#34;, title: &#34;昨日はすごい雨でしたね&#34; },
+          { id: &#34;lesson5&#34;, title: &#34;とてもにぎやかで便利です&#34; },
+          { id: &#34;lesson6&#34;, title: &#34;郵便局はどう行ったらいいですか？&#34; },
+          { id: &#34;lesson7&#34;, title: &#34;道に迷ってちょっと遅れます&#34; },
+          { id: &#34;lesson8&#34;, title: &#34;野球、したことありますか？&#34; },
+          { id: &#34;lesson9&#34;, title: &#34;読み方を教えてもらえませんか？&#34; },
+          { id: &#34;lesson10&#34;, title: &#34;日本語教室に参加したいんですが…&#34; },
+          { id: &#34;lesson11&#34;, title: &#34;肉と野菜は私が買って行きます&#34; },
+          { id: &#34;lesson12&#34;, title: &#34;お弁当、おいしそうですね&#34; },
+          { id: &#34;lesson13&#34;, title: &#34;あと 10 分ぐらいで終わりそうです&#34; },
+          { id: &#34;lesson14&#34;, title: &#34;休みを取ってもいいでしょうか？&#34; },
+          { id: &#34;lesson15&#34;, title: &#34;熱があってのどが痛いんです&#34; },
+          { id: &#34;lesson16&#34;, title: &#34;食べすぎないようにしています&#34; },
+          { id: &#34;lesson17&#34;, title: &#34;兄がくれたお守りです&#34; },
+          { id: &#34;lesson18&#34;, title: &#34;何かプレゼントをあげませんか？&#34; }
         ]
       },
       z: {
         lessons: [
-          { id: &#34;lesson1&#34;, title: &#34;日本語の音と文字&#34; },
-          { id: &#34;lesson2&#34;, title: &#34;挨拶とコミュニケーション&#34; },
-          { id: &#34;lesson3&#34;, title: &#34;学校生活について&#34; }
+          { id: &#34;lesson1&#34;, title: &#34;先週、日本に来たばかりです&#34; },
+          { id: &#34;lesson2&#34;, title: &#34;まじめそうな人ですね&#34; },
+          { id: &#34;lesson3&#34;, title: &#34;アレルギーがあるので、食べられないんです&#34; },
+          { id: &#34;lesson4&#34;, title: &#34;しょうゆをつけないで食べてください&#34; },
+          { id: &#34;lesson5&#34;, title: &#34;早く予約したほうがいいですよ&#34; },
+          { id: &#34;lesson6&#34;, title: &#34;いろいろなところに行けて、よかったです&#34; },
+          { id: &#34;lesson7&#34;, title: &#34;雨が降ったら、ホールでやります&#34; },
+          { id: &#34;lesson8&#34;, title: &#34;屋台はどこかわかりますか？&#34; },
+          { id: &#34;lesson9&#34;, title: &#34;成人の日は、何をするんですか？&#34; },
+          { id: &#34;lesson10&#34;, title: &#34;どんな服を着て行けばいいですか？&#34; },
+          { id: &#34;lesson11&#34;, title: &#34;ポイントカードを忘れてしまいました&#34; },
+          { id: &#34;lesson12&#34;, title: &#34;この掃除機は軽くて動かしやすいですよ&#34; },
+          { id: &#34;lesson13&#34;, title: &#34;いろいろな資料を展示してあります&#34; },
+          { id: &#34;lesson14&#34;, title: &#34;前髪は、もう少し短く切ってもらえますか？&#34; },
+          { id: &#34;lesson15&#34;, title: &#34;会議室の電気がついたままでした&#34; },
+          { id: &#34;lesson16&#34;, title: &#34;地震が来ても、あわてて動かないでください&#34; },
+          { id: &#34;lesson17&#34;, title: &#34;日本語が前より話せるようになりました&#34; },
+          { id: &#34;lesson18&#34;, title: &#34;将来、自分の会社を作ろうと思います&#34; }
         ]
       }
     };
@@ -86,8 +136,8 @@
     
     document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
       
-      const initialCategory = &#34;x&#34;;
-      const initialLesson = &#34;lesson1&#34;;
+      const initialCategory = &#34;&#34;;
+      const initialLesson = &#34;&#34;;
       
       if (initialCategory) {
         currentCategory = initialCategory;
@@ -119,12 +169,12 @@
     
     function populateLessons(category) {
       if (!category) {
-        document.getElementById(&#39;lesson-select&#39;).innerHTML = &#39;&lt;option value=&#34;&#34;&gt;选择课程&lt;/option&gt;&#39;;
+        document.getElementById(&#39;lesson-select&#39;).innerHTML = &#39;&lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;&#39;;
         return;
       }
       
       const lessonSelect = document.getElementById(&#39;lesson-select&#39;);
-      lessonSelect.innerHTML = &#39;&lt;option value=&#34;&#34;&gt;选择课程&lt;/option&gt;&#39;;
+      lessonSelect.innerHTML = &#39;&lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;&#39;;
       
       if (lessonData[category] &amp;&amp; lessonData[category].lessons) {
         lessonData[category].lessons.forEach(lesson =&gt; {
@@ -268,7 +318,16 @@
       const audioPlayer = document.getElementById(&#39;jp-audio&#39;);
       audioPlayer.src = fullAudioUrl;
       audioPlayer.load();
-      audioPlayer.play();
+      audioPlayer.play().catch(error =&gt; {
+        console.error(&#39;Audio playback failed:&#39;, error);
+      });
+      
+      
+      audioPlayer.onended = null;
+      
+      audioPlayer.onended = function() {
+        playNextSection();
+      };
       
       
       highlightCurrentSection();
@@ -304,8 +363,7 @@
       }
     }
   &lt;/script&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;回到本系列的目录&lt;/a&gt;&lt;/p&gt;</description>
+&lt;/div&gt;</description>
     </item>
     <item>
       <title>有声书库：持续更新</title>

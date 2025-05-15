@@ -6,8 +6,365 @@
     <description>Recent content in Textbook on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/en/tags/textbook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Learn Japanese Effectively [8]: Vocabulary from the Irodori Textbook</title>
+      <link>https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/</guid>
+      <description>&lt;h2 id=&#34;back-to-the-series-indexenpostshow-to-learn-japanese-effectively-0-overview&#34;&gt;&lt;a href=&#34;https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;★Back to the series index&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;emoji-guide&#34;&gt;★Emoji Guide&lt;/h2&gt;
+&lt;p&gt;📋: Select a category
+📖: Choose a lesson
+⏭️: Next section
+🔄: Start from the beginning&lt;/p&gt;
+&lt;h2 id=&#34;vocabulary-list&#34;&gt;★Vocabulary List&lt;/h2&gt;
+&lt;div class=&#34;jp-wordlist&#34;&gt;
+  
+  &lt;div class=&#34;jp-category-selector&#34;&gt;
+    &lt;select id=&#34;category-select&#34; onchange=&#34;changeCategory(this.value)&#34;&gt;
+      &lt;option value=&#34;&#34; selected&gt;📋&lt;/option&gt;
+      &lt;option value=&#34;x&#34; &gt;X&lt;/option&gt;
+      &lt;option value=&#34;y&#34; &gt;Y&lt;/option&gt;
+      &lt;option value=&#34;z&#34; &gt;Z&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  
+  &lt;div class=&#34;jp-lesson-selector&#34; id=&#34;lesson-selector&#34;&gt;
+    &lt;select id=&#34;lesson-select&#34; onchange=&#34;changeLesson(this.value)&#34;&gt;
+      &lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;
+      
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  
+  &lt;div class=&#34;jp-content-area&#34; id=&#34;content-area&#34;&gt;
+    
+  &lt;/div&gt;
+
+  
+  &lt;div class=&#34;jp-audio-player&#34; id=&#34;audio-player&#34; style=&#34;display: none;&#34;&gt;
+    &lt;audio id=&#34;jp-audio&#34; controls &gt;&lt;/audio&gt;
+    &lt;div class=&#34;jp-audio-controls&#34;&gt;
+      &lt;button class=&#34;sbutton&#34; onclick=&#34;playNextSection()&#34;&gt;⏭️&lt;/button&gt;
+      &lt;button class=&#34;sbutton&#34; onclick=&#34;restartAudio()&#34;&gt;🔄&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    
+    const baseUrl = &#34;https:\/\/yuuniji.github.io\/japanese-wordlist&#34;;
+    
+    
+    let currentCategory = &#34;&#34;;
+    let currentLesson = &#34;&#34;;
+    let currentSectionIndex = 0;
+    let sections = [];
+
+    
+    const lessonData = {
+      x: {
+        lessons: [
+          { id: &#34;lesson1&#34;, title: &#34;おはようございます&#34; },
+          { id: &#34;lesson2&#34;, title: &#34;すみません、よくわかりません&#34; },
+          { id: &#34;lesson3&#34;, title: &#34;よろしくお願いします&#34; },
+          { id: &#34;lesson4&#34;, title: &#34;東京に住んでいます&#34; },
+          { id: &#34;lesson5&#34;, title: &#34;うどんが好きです&#34; },
+          { id: &#34;lesson6&#34;, title: &#34;チーズバーガーください&#34; },
+          { id: &#34;lesson7&#34;, title: &#34;部屋が４つあります&#34; },
+          { id: &#34;lesson8&#34;, title: &#34;山田さんはどこにいますか？&#34; },
+          { id: &#34;lesson9&#34;, title: &#34;12 時から 1 時まで昼休みです&#34; },
+          { id: &#34;lesson10&#34;, title: &#34;ホチキス貸してください&#34; },
+          { id: &#34;lesson11&#34;, title: &#34;どんなマンガが好きですか？&#34; },
+          { id: &#34;lesson12&#34;, title: &#34;いっしょに飲みに行きませんか？&#34; },
+          { id: &#34;lesson13&#34;, title: &#34;このバスは空港に行きますか？&#34; },
+          { id: &#34;lesson14&#34;, title: &#34;大きな建物ですね&#34; },
+          { id: &#34;lesson15&#34;, title: &#34;電池がほしいんですが…&#34; },
+          { id: &#34;lesson16&#34;, title: &#34;これ、いくらですか？&#34; },
+          { id: &#34;lesson17&#34;, title: &#34;映画を見に行きました&#34; },
+          { id: &#34;lesson18&#34;, title: &#34;温泉に入りたいです&#34; }
+        ]
+      },
+      y: {
+        lessons: [
+          { id: &#34;lesson1&#34;, title: &#34;レストランで働いています&#34; },
+          { id: &#34;lesson2&#34;, title: &#34;ゲームをするのが好きです&#34; },
+          { id: &#34;lesson3&#34;, title: &#34;冬はとても寒くなります&#34; },
+          { id: &#34;lesson4&#34;, title: &#34;昨日はすごい雨でしたね&#34; },
+          { id: &#34;lesson5&#34;, title: &#34;とてもにぎやかで便利です&#34; },
+          { id: &#34;lesson6&#34;, title: &#34;郵便局はどう行ったらいいですか？&#34; },
+          { id: &#34;lesson7&#34;, title: &#34;道に迷ってちょっと遅れます&#34; },
+          { id: &#34;lesson8&#34;, title: &#34;野球、したことありますか？&#34; },
+          { id: &#34;lesson9&#34;, title: &#34;読み方を教えてもらえませんか？&#34; },
+          { id: &#34;lesson10&#34;, title: &#34;日本語教室に参加したいんですが…&#34; },
+          { id: &#34;lesson11&#34;, title: &#34;肉と野菜は私が買って行きます&#34; },
+          { id: &#34;lesson12&#34;, title: &#34;お弁当、おいしそうですね&#34; },
+          { id: &#34;lesson13&#34;, title: &#34;あと 10 分ぐらいで終わりそうです&#34; },
+          { id: &#34;lesson14&#34;, title: &#34;休みを取ってもいいでしょうか？&#34; },
+          { id: &#34;lesson15&#34;, title: &#34;熱があってのどが痛いんです&#34; },
+          { id: &#34;lesson16&#34;, title: &#34;食べすぎないようにしています&#34; },
+          { id: &#34;lesson17&#34;, title: &#34;兄がくれたお守りです&#34; },
+          { id: &#34;lesson18&#34;, title: &#34;何かプレゼントをあげませんか？&#34; }
+        ]
+      },
+      z: {
+        lessons: [
+          { id: &#34;lesson1&#34;, title: &#34;先週、日本に来たばかりです&#34; },
+          { id: &#34;lesson2&#34;, title: &#34;まじめそうな人ですね&#34; },
+          { id: &#34;lesson3&#34;, title: &#34;アレルギーがあるので、食べられないんです&#34; },
+          { id: &#34;lesson4&#34;, title: &#34;しょうゆをつけないで食べてください&#34; },
+          { id: &#34;lesson5&#34;, title: &#34;早く予約したほうがいいですよ&#34; },
+          { id: &#34;lesson6&#34;, title: &#34;いろいろなところに行けて、よかったです&#34; },
+          { id: &#34;lesson7&#34;, title: &#34;雨が降ったら、ホールでやります&#34; },
+          { id: &#34;lesson8&#34;, title: &#34;屋台はどこかわかりますか？&#34; },
+          { id: &#34;lesson9&#34;, title: &#34;成人の日は、何をするんですか？&#34; },
+          { id: &#34;lesson10&#34;, title: &#34;どんな服を着て行けばいいですか？&#34; },
+          { id: &#34;lesson11&#34;, title: &#34;ポイントカードを忘れてしまいました&#34; },
+          { id: &#34;lesson12&#34;, title: &#34;この掃除機は軽くて動かしやすいですよ&#34; },
+          { id: &#34;lesson13&#34;, title: &#34;いろいろな資料を展示してあります&#34; },
+          { id: &#34;lesson14&#34;, title: &#34;前髪は、もう少し短く切ってもらえますか？&#34; },
+          { id: &#34;lesson15&#34;, title: &#34;会議室の電気がついたままでした&#34; },
+          { id: &#34;lesson16&#34;, title: &#34;地震が来ても、あわてて動かないでください&#34; },
+          { id: &#34;lesson17&#34;, title: &#34;日本語が前より話せるようになりました&#34; },
+          { id: &#34;lesson18&#34;, title: &#34;将来、自分の会社を作ろうと思います&#34; }
+        ]
+      }
+    };
+
+    
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+      
+      const initialCategory = &#34;&#34;;
+      const initialLesson = &#34;&#34;;
+      
+      if (initialCategory) {
+        currentCategory = initialCategory;
+        document.getElementById(&#39;category-select&#39;).value = initialCategory;
+        populateLessons(initialCategory);
+        
+        if (initialLesson) {
+          currentLesson = initialLesson;
+          document.getElementById(&#39;lesson-select&#39;).value = initialLesson;
+          loadLesson(initialCategory, initialLesson);
+        }
+      }
+    });
+
+    
+    function changeCategory(category) {
+      currentCategory = category;
+      currentLesson = &#34;&#34;;
+      currentSectionIndex = 0;
+      
+      
+      document.getElementById(&#39;content-area&#39;).innerHTML = &#34;&#34;;
+      document.getElementById(&#39;audio-player&#39;).style.display = &#39;none&#39;;
+      
+      
+      populateLessons(category);
+    }
+
+    
+    function populateLessons(category) {
+      if (!category) {
+        document.getElementById(&#39;lesson-select&#39;).innerHTML = &#39;&lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;&#39;;
+        return;
+      }
+      
+      const lessonSelect = document.getElementById(&#39;lesson-select&#39;);
+      lessonSelect.innerHTML = &#39;&lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;&#39;;
+      
+      if (lessonData[category] &amp;&amp; lessonData[category].lessons) {
+        lessonData[category].lessons.forEach(lesson =&gt; {
+          const option = document.createElement(&#39;option&#39;);
+          option.value = lesson.id;
+          option.textContent = `${lesson.id}: ${lesson.title}`;
+          lessonSelect.appendChild(option);
+        });
+      }
+    }
+
+    
+    function changeLesson(lesson) {
+      currentLesson = lesson;
+      currentSectionIndex = 0;
+      
+      if (lesson) {
+        loadLesson(currentCategory, lesson);
+      } else {
+        document.getElementById(&#39;content-area&#39;).innerHTML = &#34;&#34;;
+        document.getElementById(&#39;audio-player&#39;).style.display = &#39;none&#39;;
+      }
+    }
+
+    
+    function loadLesson(category, lessonId) {
+      if (!category || !lessonId) return;
+      
+      
+      fetch(`${baseUrl}/data/${category}/${lessonId}.json`)
+        .then(response =&gt; {
+          if (!response.ok) {
+            throw new Error(&#39;Network response was not ok&#39;);
+          }
+          return response.json();
+        })
+        .then(data =&gt; {
+          renderLesson(data);
+        })
+        .catch(error =&gt; {
+          console.error(&#39;Error loading lesson data:&#39;, error);
+          document.getElementById(&#39;content-area&#39;).innerHTML = 
+            `&lt;div class=&#34;error-message&#34;&gt;课程数据加载失败。(${error.message})&lt;/div&gt;`;
+        });
+    }
+
+    
+    function renderLesson(lessonData) {
+      const contentArea = document.getElementById(&#39;content-area&#39;);
+      contentArea.innerHTML = &#34;&#34;;
+      
+      
+      const lessonHeader = document.createElement(&#39;div&#39;);
+      lessonHeader.className = &#39;jp-lesson-header&#39;;
+      lessonHeader.innerHTML = `
+        &lt;div class=&#34;jp-lesson-number&#34;&gt;${lessonData.number}&lt;/div&gt;
+        &lt;div class=&#34;jp-lesson-title&#34;&gt;${lessonData.title}&lt;/div&gt;
+      `;
+      contentArea.appendChild(lessonHeader);
+      
+      
+      sections = lessonData.sections;
+      
+      
+      lessonData.sections.forEach((section, index) =&gt; {
+        const sectionDiv = document.createElement(&#39;div&#39;);
+        sectionDiv.className = &#39;jp-section&#39;;
+        sectionDiv.id = `section-${index}`;
+        
+        
+        const sectionHeader = document.createElement(&#39;div&#39;);
+        sectionHeader.className = &#39;jp-section-header&#39;;
+        sectionHeader.innerHTML = `
+          &lt;div class=&#34;jp-section-number&#34;&gt;${section.number}&lt;/div&gt;
+          &lt;div class=&#34;jp-section-title&#34;&gt;${section.title}&lt;/div&gt;
+        `;
+        sectionDiv.appendChild(sectionHeader);
+        
+        
+        const table = document.createElement(&#39;table&#39;);
+        table.className = &#39;jp-vocab-table&#39;;
+        
+        
+        const thead = document.createElement(&#39;thead&#39;);
+        thead.innerHTML = `
+          &lt;tr&gt;
+            &lt;th&gt;ことば&lt;/th&gt;
+            &lt;th&gt;ローマ字&lt;/th&gt;
+            &lt;th&gt;アクセント&lt;/th&gt;
+            &lt;th&gt;English&lt;/th&gt;
+          &lt;/tr&gt;
+        `;
+        table.appendChild(thead);
+        
+        
+        const tbody = document.createElement(&#39;tbody&#39;);
+        section.wordList.forEach(word =&gt; {
+          const tr = document.createElement(&#39;tr&#39;);
+          
+          
+          tr.innerHTML = `
+            &lt;td&gt;${word.japanese}&lt;/td&gt;
+            &lt;td&gt;${word.romaji}&lt;/td&gt;
+            &lt;td&gt;${word.accent}&lt;/td&gt;
+            &lt;td&gt;${word.english}&lt;/td&gt;
+          `;
+          tbody.appendChild(tr);
+        });
+        
+        table.appendChild(tbody);
+        sectionDiv.appendChild(table);
+        contentArea.appendChild(sectionDiv);
+      });
+      
+      
+      if (sections.length &gt; 0 &amp;&amp; sections[0].audio) {
+        document.getElementById(&#39;audio-player&#39;).style.display = &#39;block&#39;;
+        loadAudio(0);
+      }
+    }
+
+    
+    function loadAudio(sectionIndex) {
+      if (!sections || sectionIndex &gt;= sections.length || !sections[sectionIndex].audio) {
+        document.getElementById(&#39;audio-player&#39;).style.display = &#39;none&#39;;
+        return;
+      }
+      
+      currentSectionIndex = sectionIndex;
+      
+      
+      const audioSrc = sections[sectionIndex].audio;
+      let fullAudioUrl = audioSrc;
+      
+      
+      if (!audioSrc.startsWith(&#39;http://&#39;) &amp;&amp; !audioSrc.startsWith(&#39;https://&#39;)) {
+        fullAudioUrl = `${baseUrl}${audioSrc}`;
+      }
+      
+      
+      const audioPlayer = document.getElementById(&#39;jp-audio&#39;);
+      audioPlayer.src = fullAudioUrl;
+      audioPlayer.load();
+      audioPlayer.play().catch(error =&gt; {
+        console.error(&#39;Audio playback failed:&#39;, error);
+      });
+      
+      
+      audioPlayer.onended = null;
+      
+      audioPlayer.onended = function() {
+        playNextSection();
+      };
+      
+      
+      highlightCurrentSection();
+    }
+
+    
+    function playNextSection() {
+      if (currentSectionIndex &lt; sections.length - 1) {
+        loadAudio(currentSectionIndex + 1);
+      } else {
+        
+        loadAudio(0);
+      }
+    }
+
+    
+    function restartAudio() {
+      loadAudio(0);
+    }
+
+    
+    function highlightCurrentSection() {
+      
+      document.querySelectorAll(&#39;.jp-section&#39;).forEach(section =&gt; {
+        section.style.border = &#39;none&#39;;
+      });
+      
+      
+      const currentSection = document.getElementById(`section-${currentSectionIndex}`);
+      if (currentSection) {
+        currentSection.style.border = &#39;2px solid #9e1c23&#39;;
+        currentSection.scrollIntoView({ behavior: &#39;smooth&#39;, block: &#39;nearest&#39; });
+      }
+    }
+  &lt;/script&gt;
+&lt;/div&gt;</description>
+    </item>
     <item>
       <title>How to Learn Japanese Effectively [7]: Notes on the Textbook Irodori</title>
       <link>https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/</link>
