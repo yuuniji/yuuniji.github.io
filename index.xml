@@ -6,797 +6,13 @@
     <description>Recent content on 叶泽伟的博客</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 18 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://yuuniji.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>如何学好日语[8]: 教材《いろどり》词汇</title>
-      <link>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/</link>
-      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/</guid>
-      <description>&lt;h2 id=&#34;回到本系列的目录postshow-to-learn-japanese-effectively-0-overview&#34;&gt;&lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;★回到本系列的目录&lt;/a&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;emoji&#34;&gt;★emoji&lt;/h2&gt;
-&lt;p&gt;📋：选择类别&lt;br&gt;
-📖：选择课程&lt;br&gt;
-⏭️：下一个部分&lt;br&gt;
-🔄：从头开始&lt;/p&gt;
-&lt;h2 id=&#34;词汇表&#34;&gt;★词汇表&lt;/h2&gt;
-&lt;div class=&#34;jp-wordlist&#34;&gt;
-  
-  &lt;div class=&#34;jp-category-selector&#34;&gt;
-    &lt;select id=&#34;category-select&#34; onchange=&#34;changeCategory(this.value)&#34;&gt;
-      &lt;option value=&#34;&#34; selected&gt;📋&lt;/option&gt;
-      &lt;option value=&#34;x&#34; &gt;X&lt;/option&gt;
-      &lt;option value=&#34;y&#34; &gt;Y&lt;/option&gt;
-      &lt;option value=&#34;z&#34; &gt;Z&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
-
-  
-  &lt;div class=&#34;jp-lesson-selector&#34; id=&#34;lesson-selector&#34;&gt;
-    &lt;select id=&#34;lesson-select&#34; onchange=&#34;changeLesson(this.value)&#34;&gt;
-      &lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;
-      
-    &lt;/select&gt;
-  &lt;/div&gt;
-
-  
-  &lt;div class=&#34;jp-content-area&#34; id=&#34;content-area&#34;&gt;
-    
-  &lt;/div&gt;
-
-  
-  &lt;div class=&#34;jp-audio-player&#34; id=&#34;audio-player&#34; style=&#34;display: none;&#34;&gt;
-    &lt;audio id=&#34;jp-audio&#34; controls &gt;&lt;/audio&gt;
-    &lt;div class=&#34;jp-audio-controls&#34;&gt;
-      &lt;button class=&#34;sbutton&#34; onclick=&#34;playNextSection()&#34;&gt;⏭️&lt;/button&gt;
-      &lt;button class=&#34;sbutton&#34; onclick=&#34;restartAudio()&#34;&gt;🔄&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;script&gt;
-    
-    const baseUrl = &#34;https:\/\/yuuniji.github.io\/japanese-wordlist&#34;;
-    
-    
-    let currentCategory = &#34;&#34;;
-    let currentLesson = &#34;&#34;;
-    let currentSectionIndex = 0;
-    let sections = [];
-
-    
-    const lessonData = {
-      x: {
-        lessons: [
-          { id: &#34;lesson1&#34;, title: &#34;おはようございます&#34; },
-          { id: &#34;lesson2&#34;, title: &#34;すみません、よくわかりません&#34; },
-          { id: &#34;lesson3&#34;, title: &#34;よろしくお願いします&#34; },
-          { id: &#34;lesson4&#34;, title: &#34;東京に住んでいます&#34; },
-          { id: &#34;lesson5&#34;, title: &#34;うどんが好きです&#34; },
-          { id: &#34;lesson6&#34;, title: &#34;チーズバーガーください&#34; },
-          { id: &#34;lesson7&#34;, title: &#34;部屋が４つあります&#34; },
-          { id: &#34;lesson8&#34;, title: &#34;山田さんはどこにいますか？&#34; },
-          { id: &#34;lesson9&#34;, title: &#34;12 時から 1 時まで昼休みです&#34; },
-          { id: &#34;lesson10&#34;, title: &#34;ホチキス貸してください&#34; },
-          { id: &#34;lesson11&#34;, title: &#34;どんなマンガが好きですか？&#34; },
-          { id: &#34;lesson12&#34;, title: &#34;いっしょに飲みに行きませんか？&#34; },
-          { id: &#34;lesson13&#34;, title: &#34;このバスは空港に行きますか？&#34; },
-          { id: &#34;lesson14&#34;, title: &#34;大きな建物ですね&#34; },
-          { id: &#34;lesson15&#34;, title: &#34;電池がほしいんですが…&#34; },
-          { id: &#34;lesson16&#34;, title: &#34;これ、いくらですか？&#34; },
-          { id: &#34;lesson17&#34;, title: &#34;映画を見に行きました&#34; },
-          { id: &#34;lesson18&#34;, title: &#34;温泉に入りたいです&#34; }
-        ]
-      },
-      y: {
-        lessons: [
-          { id: &#34;lesson1&#34;, title: &#34;レストランで働いています&#34; },
-          { id: &#34;lesson2&#34;, title: &#34;ゲームをするのが好きです&#34; },
-          { id: &#34;lesson3&#34;, title: &#34;冬はとても寒くなります&#34; },
-          { id: &#34;lesson4&#34;, title: &#34;昨日はすごい雨でしたね&#34; },
-          { id: &#34;lesson5&#34;, title: &#34;とてもにぎやかで便利です&#34; },
-          { id: &#34;lesson6&#34;, title: &#34;郵便局はどう行ったらいいですか？&#34; },
-          { id: &#34;lesson7&#34;, title: &#34;道に迷ってちょっと遅れます&#34; },
-          { id: &#34;lesson8&#34;, title: &#34;野球、したことありますか？&#34; },
-          { id: &#34;lesson9&#34;, title: &#34;読み方を教えてもらえませんか？&#34; },
-          { id: &#34;lesson10&#34;, title: &#34;日本語教室に参加したいんですが…&#34; },
-          { id: &#34;lesson11&#34;, title: &#34;肉と野菜は私が買って行きます&#34; },
-          { id: &#34;lesson12&#34;, title: &#34;お弁当、おいしそうですね&#34; },
-          { id: &#34;lesson13&#34;, title: &#34;あと 10 分ぐらいで終わりそうです&#34; },
-          { id: &#34;lesson14&#34;, title: &#34;休みを取ってもいいでしょうか？&#34; },
-          { id: &#34;lesson15&#34;, title: &#34;熱があってのどが痛いんです&#34; },
-          { id: &#34;lesson16&#34;, title: &#34;食べすぎないようにしています&#34; },
-          { id: &#34;lesson17&#34;, title: &#34;兄がくれたお守りです&#34; },
-          { id: &#34;lesson18&#34;, title: &#34;何かプレゼントをあげませんか？&#34; }
-        ]
-      },
-      z: {
-        lessons: [
-          { id: &#34;lesson1&#34;, title: &#34;先週、日本に来たばかりです&#34; },
-          { id: &#34;lesson2&#34;, title: &#34;まじめそうな人ですね&#34; },
-          { id: &#34;lesson3&#34;, title: &#34;アレルギーがあるので、食べられないんです&#34; },
-          { id: &#34;lesson4&#34;, title: &#34;しょうゆをつけないで食べてください&#34; },
-          { id: &#34;lesson5&#34;, title: &#34;早く予約したほうがいいですよ&#34; },
-          { id: &#34;lesson6&#34;, title: &#34;いろいろなところに行けて、よかったです&#34; },
-          { id: &#34;lesson7&#34;, title: &#34;雨が降ったら、ホールでやります&#34; },
-          { id: &#34;lesson8&#34;, title: &#34;屋台はどこかわかりますか？&#34; },
-          { id: &#34;lesson9&#34;, title: &#34;成人の日は、何をするんですか？&#34; },
-          { id: &#34;lesson10&#34;, title: &#34;どんな服を着て行けばいいですか？&#34; },
-          { id: &#34;lesson11&#34;, title: &#34;ポイントカードを忘れてしまいました&#34; },
-          { id: &#34;lesson12&#34;, title: &#34;この掃除機は軽くて動かしやすいですよ&#34; },
-          { id: &#34;lesson13&#34;, title: &#34;いろいろな資料を展示してあります&#34; },
-          { id: &#34;lesson14&#34;, title: &#34;前髪は、もう少し短く切ってもらえますか？&#34; },
-          { id: &#34;lesson15&#34;, title: &#34;会議室の電気がついたままでした&#34; },
-          { id: &#34;lesson16&#34;, title: &#34;地震が来ても、あわてて動かないでください&#34; },
-          { id: &#34;lesson17&#34;, title: &#34;日本語が前より話せるようになりました&#34; },
-          { id: &#34;lesson18&#34;, title: &#34;将来、自分の会社を作ろうと思います&#34; }
-        ]
-      }
-    };
-
-    
-    document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
-      
-      const initialCategory = &#34;&#34;;
-      const initialLesson = &#34;&#34;;
-      
-      if (initialCategory) {
-        currentCategory = initialCategory;
-        document.getElementById(&#39;category-select&#39;).value = initialCategory;
-        populateLessons(initialCategory);
-        
-        if (initialLesson) {
-          currentLesson = initialLesson;
-          document.getElementById(&#39;lesson-select&#39;).value = initialLesson;
-          loadLesson(initialCategory, initialLesson);
-        }
-      }
-    });
-
-    
-    function changeCategory(category) {
-      currentCategory = category;
-      currentLesson = &#34;&#34;;
-      currentSectionIndex = 0;
-      
-      
-      document.getElementById(&#39;content-area&#39;).innerHTML = &#34;&#34;;
-      document.getElementById(&#39;audio-player&#39;).style.display = &#39;none&#39;;
-      
-      
-      populateLessons(category);
-    }
-
-    
-    function populateLessons(category) {
-      if (!category) {
-        document.getElementById(&#39;lesson-select&#39;).innerHTML = &#39;&lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;&#39;;
-        return;
-      }
-      
-      const lessonSelect = document.getElementById(&#39;lesson-select&#39;);
-      lessonSelect.innerHTML = &#39;&lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;&#39;;
-      
-      if (lessonData[category] &amp;&amp; lessonData[category].lessons) {
-        lessonData[category].lessons.forEach(lesson =&gt; {
-          const option = document.createElement(&#39;option&#39;);
-          option.value = lesson.id;
-          option.textContent = `${lesson.id}: ${lesson.title}`;
-          lessonSelect.appendChild(option);
-        });
-      }
-    }
-
-    
-    function changeLesson(lesson) {
-      currentLesson = lesson;
-      currentSectionIndex = 0;
-      
-      if (lesson) {
-        loadLesson(currentCategory, lesson);
-      } else {
-        document.getElementById(&#39;content-area&#39;).innerHTML = &#34;&#34;;
-        document.getElementById(&#39;audio-player&#39;).style.display = &#39;none&#39;;
-      }
-    }
-
-    
-    function loadLesson(category, lessonId) {
-      if (!category || !lessonId) return;
-      
-      
-      fetch(`${baseUrl}/data/${category}/${lessonId}.json`)
-        .then(response =&gt; {
-          if (!response.ok) {
-            throw new Error(&#39;Network response was not ok&#39;);
-          }
-          return response.json();
-        })
-        .then(data =&gt; {
-          renderLesson(data);
-        })
-        .catch(error =&gt; {
-          console.error(&#39;Error loading lesson data:&#39;, error);
-          document.getElementById(&#39;content-area&#39;).innerHTML = 
-            `&lt;div class=&#34;error-message&#34;&gt;课程数据加载失败。(${error.message})&lt;/div&gt;`;
-        });
-    }
-
-    
-    function renderLesson(lessonData) {
-      const contentArea = document.getElementById(&#39;content-area&#39;);
-      contentArea.innerHTML = &#34;&#34;;
-      
-      
-      const lessonHeader = document.createElement(&#39;div&#39;);
-      lessonHeader.className = &#39;jp-lesson-header&#39;;
-      lessonHeader.innerHTML = `
-        &lt;div class=&#34;jp-lesson-number&#34;&gt;${lessonData.number}&lt;/div&gt;
-        &lt;div class=&#34;jp-lesson-title&#34;&gt;${lessonData.title}&lt;/div&gt;
-      `;
-      contentArea.appendChild(lessonHeader);
-      
-      
-      sections = lessonData.sections;
-      
-      
-      lessonData.sections.forEach((section, index) =&gt; {
-        const sectionDiv = document.createElement(&#39;div&#39;);
-        sectionDiv.className = &#39;jp-section&#39;;
-        sectionDiv.id = `section-${index}`;
-        
-        
-        const sectionHeader = document.createElement(&#39;div&#39;);
-        sectionHeader.className = &#39;jp-section-header&#39;;
-        sectionHeader.innerHTML = `
-          &lt;div class=&#34;jp-section-number&#34;&gt;${section.number}&lt;/div&gt;
-          &lt;div class=&#34;jp-section-title&#34;&gt;${section.title}&lt;/div&gt;
-        `;
-        sectionDiv.appendChild(sectionHeader);
-        
-        
-        const table = document.createElement(&#39;table&#39;);
-        table.className = &#39;jp-vocab-table&#39;;
-        
-        
-        const thead = document.createElement(&#39;thead&#39;);
-        thead.innerHTML = `
-          &lt;tr&gt;
-            &lt;th&gt;ことば&lt;/th&gt;
-            &lt;th&gt;ローマ字&lt;/th&gt;
-            &lt;th&gt;アクセント&lt;/th&gt;
-            &lt;th&gt;English&lt;/th&gt;
-          &lt;/tr&gt;
-        `;
-        table.appendChild(thead);
-        
-        
-        const tbody = document.createElement(&#39;tbody&#39;);
-        section.wordList.forEach(word =&gt; {
-          const tr = document.createElement(&#39;tr&#39;);
-          
-          
-          tr.innerHTML = `
-            &lt;td&gt;${word.japanese}&lt;/td&gt;
-            &lt;td&gt;${word.romaji}&lt;/td&gt;
-            &lt;td&gt;${word.accent}&lt;/td&gt;
-            &lt;td&gt;${word.english}&lt;/td&gt;
-          `;
-          tbody.appendChild(tr);
-        });
-        
-        table.appendChild(tbody);
-        sectionDiv.appendChild(table);
-        contentArea.appendChild(sectionDiv);
-      });
-      
-      
-      if (sections.length &gt; 0 &amp;&amp; sections[0].audio) {
-        document.getElementById(&#39;audio-player&#39;).style.display = &#39;block&#39;;
-        loadAudio(0);
-      }
-    }
-
-    
-    function loadAudio(sectionIndex) {
-      if (!sections || sectionIndex &gt;= sections.length || !sections[sectionIndex].audio) {
-        document.getElementById(&#39;audio-player&#39;).style.display = &#39;none&#39;;
-        return;
-      }
-      
-      currentSectionIndex = sectionIndex;
-      
-      
-      const audioSrc = sections[sectionIndex].audio;
-      let fullAudioUrl = audioSrc;
-      
-      
-      if (!audioSrc.startsWith(&#39;http://&#39;) &amp;&amp; !audioSrc.startsWith(&#39;https://&#39;)) {
-        fullAudioUrl = `${baseUrl}${audioSrc}`;
-      }
-      
-      
-      const audioPlayer = document.getElementById(&#39;jp-audio&#39;);
-      audioPlayer.src = fullAudioUrl;
-      audioPlayer.load();
-      audioPlayer.play().catch(error =&gt; {
-        console.error(&#39;Audio playback failed:&#39;, error);
-      });
-      
-      
-      audioPlayer.onended = null;
-      
-      audioPlayer.onended = function() {
-        playNextSection();
-      };
-      
-      
-      highlightCurrentSection();
-    }
-
-    
-    function playNextSection() {
-      if (currentSectionIndex &lt; sections.length - 1) {
-        loadAudio(currentSectionIndex + 1);
-      } else {
-        
-        loadAudio(0);
-      }
-    }
-
-    
-    function restartAudio() {
-      loadAudio(0);
-    }
-
-    
-    function highlightCurrentSection() {
-      
-      document.querySelectorAll(&#39;.jp-section&#39;).forEach(section =&gt; {
-        section.style.border = &#39;none&#39;;
-      });
-      
-      
-      const currentSection = document.getElementById(`section-${currentSectionIndex}`);
-      if (currentSection) {
-        currentSection.style.border = &#39;2px solid #9e1c23&#39;;
-        currentSection.scrollIntoView({ behavior: &#39;smooth&#39;, block: &#39;nearest&#39; });
-      }
-    }
-  &lt;/script&gt;
-&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title>有声书库：持续更新</title>
-      <link>https://yuuniji.github.io/posts/audiobook-0/</link>
-      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/posts/audiobook-0/</guid>
-      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://yuuniji.github.io/%20css/audiobook.css&#34;&gt;
-
-&lt;div class=&#34;audiobook-player&#34; data-book=&#34;book1&#34; data-baseurl=&#34;https://yuuniji.github.io/audiobook-a/&#34;&gt;
-  &lt;div class=&#34;navigation&#34;&gt;
-    &lt;div&gt;
-      &lt;span id=&#34;current-chapter&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-chapters&#34;&gt;0&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;jump-container&#34;&gt;
-      &lt;select id=&#34;book-select&#34;&gt;
-        &lt;option value=&#34;book1&#34;&gt;Book 1&lt;/option&gt;
-        &lt;option value=&#34;book2&#34;&gt;Book 2&lt;/option&gt;
-        &lt;option value=&#34;book3&#34;&gt;Book 3&lt;/option&gt;
-        &lt;option value=&#34;book4&#34;&gt;Book 4&lt;/option&gt;
-        &lt;option value=&#34;book5&#34;&gt;Book 5&lt;/option&gt;
-        &lt;option value=&#34;book6&#34;&gt;Book 6&lt;/option&gt;
-        &lt;option value=&#34;book7&#34;&gt;Book 7&lt;/option&gt;
-        &lt;option value=&#34;book8&#34;&gt;Book 8&lt;/option&gt;
-        &lt;option value=&#34;book9&#34;&gt;Book 9&lt;/option&gt;
-      &lt;/select&gt;
-      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Chapter number or title&#34; list=&#34;chapters-list-book1&#34;&gt;
-      &lt;datalist id=&#34;chapters-list-book1&#34;&gt;&lt;/datalist&gt;
-      &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;➡️&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;audio-player-controls&#34;&gt;
-    &lt;button class=&#34;sbutton&#34; id=&#34;play-btn&#34;&gt;▶️&lt;/button&gt;
-    &lt;button class=&#34;sbutton&#34; id=&#34;pause-btn&#34; style=&#34;display:none;&#34;&gt;⏸️&lt;/button&gt;
-    &lt;button class=&#34;sbutton&#34; id=&#34;prev-btn&#34;&gt;⏮️&lt;/button&gt;
-    &lt;button class=&#34;sbutton&#34; id=&#34;next-btn&#34;&gt;⏭️&lt;/button&gt;
-    &lt;div id=&#34;speed-buttons&#34;&gt;
-      &lt;button class=&#34;sbutton rate-btn&#34; data-speed=&#34;1&#34;&gt;🐌&lt;/button&gt;
-      &lt;button class=&#34;sbutton rate-btn active&#34; data-speed=&#34;2&#34;&gt;⚡️&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;input type=&#34;range&#34; id=&#34;progress&#34; value=&#34;0&#34; max=&#34;100&#34; style=&#34;width: 100%;&#34;&gt;
-    &lt;div id=&#34;audio-status&#34;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;h2 id=&#34;chapter-title&#34;&gt;★🔊📖&lt;/h2&gt;
-  &lt;div id=&#34;chapter-wrapper&#34;&gt;
-    &lt;div id=&#34;chapter-content&#34; class=&#34;collapsed&#34;&gt;
-      
-      &lt;div id=&#34;chapter-content&#34;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;button id=&#34;toggle-button&#34;&gt;🔽&lt;/button&gt;
-  &lt;/div&gt;
-
-  
-  &lt;audio id=&#34;main-audio&#34; style=&#34;display: none;&#34;&gt;&lt;/audio&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-  (async () =&gt; {
-    const player = document.querySelector(&#39;.audiobook-player&#39;);
-    const bookId = player.dataset.book;
-    const baseUrl = player.dataset.baseurl;
-    let currentBook = bookId, currentChapters = [], current = 0;
-
-    const audio = player.querySelector(&#39;#main-audio&#39;);
-    const playBtn = player.querySelector(&#39;#play-btn&#39;);
-    const pauseBtn = player.querySelector(&#39;#pause-btn&#39;);
-    const nextBtn = player.querySelector(&#39;#next-btn&#39;);
-    const prevBtn = player.querySelector(&#39;#prev-btn&#39;);
-    const progress = player.querySelector(&#39;#progress&#39;);
-    const status = player.querySelector(&#39;#audio-status&#39;);
-    const currentChapterSpan = player.querySelector(&#39;#current-chapter&#39;);
-    const totalChaptersSpan = player.querySelector(&#39;#total-chapters&#39;);
-    const chapterTitle = player.querySelector(&#39;#chapter-title&#39;);
-    const chapterContent = player.querySelector(&#39;#chapter-content&#39;);
-    const jumpTo = player.querySelector(&#39;#jump-to&#39;);
-    const jumpBtn = player.querySelector(&#39;#jump-btn&#39;);
-    const bookSelect = player.querySelector(&#39;#book-select&#39;);
-    const chaptersList = player.querySelector(`#chapters-list-${bookId}`);
-
-    console.log(&#39;Initializing audiobook player&#39;, { bookId, baseUrl });
-
-    
-    async function loadBook(bookId) {
-      const metadataUrl = `${baseUrl}books/${bookId}/metadata.json`;
-      console.log(&#39;Fetching metadata:&#39;, metadataUrl);
-      try {
-        const res = await fetch(metadataUrl);
-        if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
-        const metadata = await res.json();
-        console.log(&#39;Metadata loaded:&#39;, metadata);
-        currentBook = bookId;
-        currentChapters = metadata.chapters;
-        current = 0;
-        chaptersList.innerHTML = &#39;&#39;;
-        currentChapters.forEach(ch =&gt; {
-          const option = document.createElement(&#39;option&#39;);
-          option.value = ch.chapter;
-          option.text = ch.title;
-          chaptersList.appendChild(option);
-        });
-        totalChaptersSpan.textContent = currentChapters.length;
-        bookSelect.value = bookId;
-        await updateChapter();
-      } catch (err) {
-        console.error(&#39;Load metadata failed:&#39;, err);
-        status.textContent = navigator.onLine ? `Failed to load book: ${err.message}` : &#39;Please check your connection&#39;;
-      }
-    }
-
-    
-    async function updateChapter() {
-      if (!currentChapters[current]) return;
-      const chapter = currentChapters[current];
-      const contentUrl = `${baseUrl}books/${currentBook}/${chapter.content}`;
-      console.log(&#39;Fetching content:&#39;, contentUrl);
-      currentChapterSpan.textContent = current + 1;
-      chapterTitle.textContent = chapter.title;
-      try {
-        const res = await fetch(contentUrl);
-        if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
-        chapterContent.textContent = await res.text();
-      } catch (err) {
-        console.error(&#39;Load content failed:&#39;, err);
-        chapterContent.textContent = navigator.onLine ? `Failed to load chapter content: ${err.message}` : &#39;Please check your connection&#39;;
-      }
-      status.textContent = `Loaded: ${chapter.title}`;
-    }
-
-    
-    async function playCurrent() {
-      if (current &gt;= currentChapters.length) {
-        status.textContent = &#39;Playback complete&#39;;
-        current = 0;
-        progress.value = 0;
-        await updateChapter();
-        return;
-      }
-      const chapter = currentChapters[current];
-      const audioUrl = `${baseUrl}books/${currentBook}/${chapter.audio}`;
-      console.log(&#39;Playing audio:&#39;, audioUrl);
-      audio.src = audioUrl;
-      const activeSpeedBtn = player.querySelector(&#39;#speed-buttons .rate-btn.active&#39;);
-      audio.playbackRate = activeSpeedBtn ? parseFloat(activeSpeedBtn.dataset.speed) : 1.0;
-
-      audio.play().then(() =&gt; {
-        playBtn.style.display = &#39;none&#39;;
-        pauseBtn.style.display = &#39;&#39;;
-        status.textContent = `Playing: ${chapter.title} (${speedSelect.value}x)`;
-      }).catch(err =&gt; {
-        console.error(&#39;Playback failed:&#39;, err);
-        status.textContent = navigator.onLine ? `Playback failed: ${err.message}` : &#39;Please check your connection&#39;;
-      });
-      await updateChapter();
-    }
-
-    
-    audio.ontimeupdate = () =&gt; {
-      if (audio.duration) progress.value = (audio.currentTime / audio.duration) * 100;
-    };
-    progress.oninput = () =&gt; {
-      if (audio.duration) audio.currentTime = (progress.value / 100) * audio.duration;
-    };
-
-    
-    const speedButtons = player.querySelectorAll(&#39;#speed-buttons .rate-btn&#39;);
-    speedButtons.forEach(btn =&gt; {
-      btn.addEventListener(&#39;click&#39;, () =&gt; {
-        const speed = parseFloat(btn.dataset.speed);
-        audio.playbackRate = speed;
-        speedButtons.forEach(b =&gt; b.classList.remove(&#39;active&#39;));
-        btn.classList.add(&#39;active&#39;);
-        if (!audio.paused) {
-          status.textContent = `Playing: ${currentChapters[current].title} (${speed}x)`;
-        }
-      });
-    });
-
-    document.getElementById(&#39;toggle-button&#39;).addEventListener(&#39;click&#39;, function () {
-      const content = document.getElementById(&#39;chapter-content&#39;);
-      if (content.classList.contains(&#39;collapsed&#39;)) {
-        content.classList.remove(&#39;collapsed&#39;);
-        content.classList.add(&#39;expanded&#39;);
-        this.innerText = &#39;🔼&#39;;
-      } else {
-        content.classList.remove(&#39;expanded&#39;);
-        content.classList.add(&#39;collapsed&#39;);
-        this.innerText = &#39;🔽&#39;;
-      }
-    });
-
-
-
-    
-    bookSelect.onchange = async () =&gt; {
-      if (bookSelect.value) await loadBook(bookSelect.value);
-      await playCurrent();
-    };
-
-    
-    playBtn.onclick = () =&gt; playCurrent();
-
-    
-    pauseBtn.onclick = () =&gt; {
-      if (!audio.paused) {
-        audio.pause();
-        pauseBtn.textContent = &#39;▶️&#39;;
-        status.textContent = &#39;Paused&#39;;
-      } else {
-        audio.playbackRate = parseFloat(speedSelect.value);
-        audio.play().catch(err =&gt; status.textContent = navigator.onLine ? `Continue playback failed: ${err.message}` : &#39;Please check your connection&#39;);
-        pauseBtn.textContent = &#39;⏸️&#39;;
-        status.textContent = `Playing: ${currentChapters[current].title} (${speedSelect.value}x)`;
-      }
-    };
-
-    
-    nextBtn.onclick = async () =&gt; {
-      if (current &lt; currentChapters.length - 1) {
-        current++;
-        pauseBtn.style.display = &#39;none&#39;;
-        playBtn.style.display = &#39;&#39;;
-        await playCurrent();
-      } else {
-        status.textContent = &#39;Already at the last chapter&#39;;
-      }
-    };
-
-    
-    prevBtn.onclick = async () =&gt; {
-      if (current &gt; 0) {
-        current--;
-        pauseBtn.style.display = &#39;none&#39;;
-        playBtn.style.display = &#39;&#39;;
-        await playCurrent();
-      } else {
-        status.textContent = &#39;Already at the first chapter&#39;;
-      }
-    };
-
-    
-    jumpBtn.onclick = async () =&gt; {
-      const input = jumpTo.value.trim();
-      if (!isNaN(input) &amp;&amp; input &gt; 0 &amp;&amp; input &lt;= currentChapters.length) {
-        current = parseInt(input) - 1;
-        pauseBtn.style.display = &#39;none&#39;;
-        playBtn.style.display = &#39;&#39;;
-        await playCurrent();
-      } else {
-        const index = currentChapters.findIndex(ch =&gt; ch.title.toLowerCase().includes(input.toLowerCase()));
-        if (index !== -1) {
-          current = index;
-          pauseBtn.style.display = &#39;none&#39;;
-          playBtn.style.display = &#39;&#39;;
-          await playCurrent();
-        } else {
-          status.textContent = &#39;Chapter not found&#39;;
-        }
-      }
-      jumpTo.value = &#39;&#39;;
-    };
-
-    
-    audio.onended = async () =&gt; {
-      current++;
-      if (current &lt; currentChapters.length) {
-        await playCurrent();
-      } else {
-        playBtn.style.display = &#39;&#39;;
-        pauseBtn.style.display = &#39;none&#39;;
-        status.textContent = &#39;Playback complete&#39;;
-        current = 0;
-        progress.value = 0;
-        await updateChapter();
-      }
-    };
-
-    
-    window.addEventListener(&#39;offline&#39;, () =&gt; status.textContent = &#39;Network disconnected, please check your connection&#39;);
-    window.addEventListener(&#39;online&#39;, () =&gt; status.textContent = &#39;Network restored&#39;);
-
-    
-    await loadBook(bookId);
-  })();
-&lt;/script&gt;
-&lt;h2 id=&#34;经济学&#34;&gt;★经济学&lt;/h2&gt;
-&lt;h3 id=&#34;经济--经济学&#34;&gt;◇经济 / 经济学&lt;/h3&gt;
-&lt;h3 id=&#34;经济--经济学--理论&#34;&gt;◇经济 / 经济学 / 理论&lt;/h3&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;中文书名&lt;/th&gt;
-          &lt;th&gt;英文书名&lt;/th&gt;
-          &lt;th&gt;作者&lt;/th&gt;
-          &lt;th&gt;Book ID&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;国富论——国民财富的性质和原因&lt;/td&gt;
-          &lt;td&gt;The Wealth of Nations&lt;br&gt;其它英文名：An Inquiry into the Nature and Causes of the Wealth of Nations&lt;/td&gt;
-          &lt;td&gt;(英) 亚当·斯密&lt;/td&gt;
-          &lt;td&gt;Book 1-5&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;军事&#34;&gt;★军事&lt;/h2&gt;
-&lt;h3 id=&#34;军事--军事理论&#34;&gt;◇军事 / 军事理论&lt;/h3&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;中文书名&lt;/th&gt;
-          &lt;th&gt;英文书名&lt;/th&gt;
-          &lt;th&gt;作者&lt;/th&gt;
-          &lt;th&gt;Book ID&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;孙子兵法&lt;br&gt;其它中文名：孙武兵法&lt;/td&gt;
-          &lt;td&gt;The Art of War&lt;/td&gt;
-          &lt;td&gt;孙武&lt;/td&gt;
-          &lt;td&gt;Book 6&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;政治&#34;&gt;★政治&lt;/h2&gt;
-&lt;h3 id=&#34;政治--政治小说&#34;&gt;◇政治 / 政治小说&lt;/h3&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;中文书名&lt;/th&gt;
-          &lt;th&gt;英文书名&lt;/th&gt;
-          &lt;th&gt;作者&lt;/th&gt;
-          &lt;th&gt;Book ID&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;一九八四&lt;/td&gt;
-          &lt;td&gt;Nineteen Eighty-Four&lt;/td&gt;
-          &lt;td&gt;(英) 乔治·奥威尔&lt;/td&gt;
-          &lt;td&gt;Book 7-9&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;制作有声书的脚本&#34;&gt;★制作有声书的脚本&lt;/h2&gt;
-&lt;h3 id=&#34;下载youtube视频的mp3&#34;&gt;◇下载YouTube视频的mp3&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;dl &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;audio&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;format mp3 &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;audio&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;quality &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www.youtube.com/watch?v=VIDEO_ID&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# yt_mp3_download.py&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; subprocess
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;download_youtube_mp3&lt;/span&gt;():
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    yt_dlp_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;请输入 YouTube 视频链接：&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;strip()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    command &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        yt_dlp_path,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-x&amp;#34;&lt;/span&gt;,  &lt;span style=&#34;color:#75715e&#34;&gt;# 提取音频&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;--audio-format&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mp3&amp;#34;&lt;/span&gt;,  &lt;span style=&#34;color:#75715e&#34;&gt;# 转成 mp3 格式&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        url
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        subprocess&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;run(command, check&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;✅ 下载完成&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; subprocess&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;CalledProcessError &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; e:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;❌ 下载失败:&amp;#34;&lt;/span&gt;, e)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    download_youtube_mp3()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;按对应的章节切割音频&#34;&gt;◇按对应的章节切割音频&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# split_audio.py&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; subprocess
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;input_file &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/Users/dev/Downloads/aaa/xxx.mp3&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_dir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;output_chapters&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;makedirs(output_dir, exist_ok&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chapters &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a0&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;00:00:00&amp;#34;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1-chapter1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;00:00:09&amp;#34;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1-chapter2&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;00:39:31&amp;#34;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2-chapter1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;03:35:20&amp;#34;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2-chapter2&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;04:00:13&amp;#34;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3-chapter1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;07:48:41&amp;#34;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3-chapter2&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;08:18:27&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(len(chapters)):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    title, start &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; chapters[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    end &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; chapters[i&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; len(chapters) &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    output_file &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(output_dir, &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;title&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;.mp3&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cmd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ffmpeg&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-y&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-i&amp;#34;&lt;/span&gt;, input_file, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-ss&amp;#34;&lt;/span&gt;, start]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; end:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cmd &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-to&amp;#34;&lt;/span&gt;, end]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cmd &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-c&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;copy&amp;#34;&lt;/span&gt;, output_file]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    subprocess&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;run(cmd)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;导出: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;output_file&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;全部章节已成功分割。&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;合并音频&#34;&gt;◇合并音频&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# merge_audio.py&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; pydub &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; AudioSegment
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 设置音频文件夹路径&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;audio_dir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 获取所有 mp3 文件，并按文件名排序（可选）&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;audio_files &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sorted([f &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; f &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;listdir(audio_dir) &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; f&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;endswith(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.mp3&amp;#34;&lt;/span&gt;)])
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 创建一个空的音频对象&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;combined &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AudioSegment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;empty()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 逐个添加音频文件&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; file &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; audio_files:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    file_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(audio_dir, file)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    audio &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AudioSegment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;from_mp3(file_path)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    combined &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; audio
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;已添加: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;file&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 导出合成后的音频&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(audio_dir, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;combined_output.mp3&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;combined&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;export(output_path, format&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mp3&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;合成完成，保存为: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;output_path&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title>如何学好日语[7]: 教材《いろどり》笔记</title>
-      <link>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/</link>
-      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/</guid>
+      <title>如何学好日语[8]: 教材《いろどり》笔记</title>
+      <link>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;回到本系列的目录&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;入门&#34;&gt;★《入门》&lt;/h2&gt;
 &lt;h3 id=&#34;方式1&#34;&gt;◇方式1&lt;/h3&gt;
@@ -2802,6 +2018,790 @@
         transcriptBody.innerHTML = &#39;&lt;p style=&#34;text-align: center; color: #666;&#34;&gt;加载图片中...&lt;/p&gt;</description>
     </item>
     <item>
+      <title>如何学好日语[7]: 教材《いろどり》词汇</title>
+      <link>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-7-textbook-irodori-vocab/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-7-textbook-irodori-vocab/</guid>
+      <description>&lt;h2 id=&#34;回到本系列的目录postshow-to-learn-japanese-effectively-0-overview&#34;&gt;&lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;★回到本系列的目录&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;emoji&#34;&gt;★emoji&lt;/h2&gt;
+&lt;p&gt;📋：选择类别&lt;br&gt;
+📖：选择课程&lt;br&gt;
+⏭️：下一个部分&lt;br&gt;
+🔄：从头开始&lt;/p&gt;
+&lt;h2 id=&#34;词汇表&#34;&gt;★词汇表&lt;/h2&gt;
+&lt;div class=&#34;jp-wordlist&#34;&gt;
+  
+  &lt;div class=&#34;jp-category-selector&#34;&gt;
+    &lt;select id=&#34;category-select&#34; onchange=&#34;changeCategory(this.value)&#34;&gt;
+      &lt;option value=&#34;&#34; selected&gt;📋&lt;/option&gt;
+      &lt;option value=&#34;x&#34; &gt;X&lt;/option&gt;
+      &lt;option value=&#34;y&#34; &gt;Y&lt;/option&gt;
+      &lt;option value=&#34;z&#34; &gt;Z&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  
+  &lt;div class=&#34;jp-lesson-selector&#34; id=&#34;lesson-selector&#34;&gt;
+    &lt;select id=&#34;lesson-select&#34; onchange=&#34;changeLesson(this.value)&#34;&gt;
+      &lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;
+      
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  
+  &lt;div class=&#34;jp-content-area&#34; id=&#34;content-area&#34;&gt;
+    
+  &lt;/div&gt;
+
+  
+  &lt;div class=&#34;jp-audio-player&#34; id=&#34;audio-player&#34; style=&#34;display: none;&#34;&gt;
+    &lt;audio id=&#34;jp-audio&#34; controls &gt;&lt;/audio&gt;
+    &lt;div class=&#34;jp-audio-controls&#34;&gt;
+      &lt;button class=&#34;sbutton&#34; onclick=&#34;playNextSection()&#34;&gt;⏭️&lt;/button&gt;
+      &lt;button class=&#34;sbutton&#34; onclick=&#34;restartAudio()&#34;&gt;🔄&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    
+    const baseUrl = &#34;https:\/\/yuuniji.github.io\/japanese-wordlist&#34;;
+    
+    
+    let currentCategory = &#34;&#34;;
+    let currentLesson = &#34;&#34;;
+    let currentSectionIndex = 0;
+    let sections = [];
+
+    
+    const lessonData = {
+      x: {
+        lessons: [
+          { id: &#34;lesson1&#34;, title: &#34;おはようございます&#34; },
+          { id: &#34;lesson2&#34;, title: &#34;すみません、よくわかりません&#34; },
+          { id: &#34;lesson3&#34;, title: &#34;よろしくお願いします&#34; },
+          { id: &#34;lesson4&#34;, title: &#34;東京に住んでいます&#34; },
+          { id: &#34;lesson5&#34;, title: &#34;うどんが好きです&#34; },
+          { id: &#34;lesson6&#34;, title: &#34;チーズバーガーください&#34; },
+          { id: &#34;lesson7&#34;, title: &#34;部屋が４つあります&#34; },
+          { id: &#34;lesson8&#34;, title: &#34;山田さんはどこにいますか？&#34; },
+          { id: &#34;lesson9&#34;, title: &#34;12 時から 1 時まで昼休みです&#34; },
+          { id: &#34;lesson10&#34;, title: &#34;ホチキス貸してください&#34; },
+          { id: &#34;lesson11&#34;, title: &#34;どんなマンガが好きですか？&#34; },
+          { id: &#34;lesson12&#34;, title: &#34;いっしょに飲みに行きませんか？&#34; },
+          { id: &#34;lesson13&#34;, title: &#34;このバスは空港に行きますか？&#34; },
+          { id: &#34;lesson14&#34;, title: &#34;大きな建物ですね&#34; },
+          { id: &#34;lesson15&#34;, title: &#34;電池がほしいんですが…&#34; },
+          { id: &#34;lesson16&#34;, title: &#34;これ、いくらですか？&#34; },
+          { id: &#34;lesson17&#34;, title: &#34;映画を見に行きました&#34; },
+          { id: &#34;lesson18&#34;, title: &#34;温泉に入りたいです&#34; }
+        ]
+      },
+      y: {
+        lessons: [
+          { id: &#34;lesson1&#34;, title: &#34;レストランで働いています&#34; },
+          { id: &#34;lesson2&#34;, title: &#34;ゲームをするのが好きです&#34; },
+          { id: &#34;lesson3&#34;, title: &#34;冬はとても寒くなります&#34; },
+          { id: &#34;lesson4&#34;, title: &#34;昨日はすごい雨でしたね&#34; },
+          { id: &#34;lesson5&#34;, title: &#34;とてもにぎやかで便利です&#34; },
+          { id: &#34;lesson6&#34;, title: &#34;郵便局はどう行ったらいいですか？&#34; },
+          { id: &#34;lesson7&#34;, title: &#34;道に迷ってちょっと遅れます&#34; },
+          { id: &#34;lesson8&#34;, title: &#34;野球、したことありますか？&#34; },
+          { id: &#34;lesson9&#34;, title: &#34;読み方を教えてもらえませんか？&#34; },
+          { id: &#34;lesson10&#34;, title: &#34;日本語教室に参加したいんですが…&#34; },
+          { id: &#34;lesson11&#34;, title: &#34;肉と野菜は私が買って行きます&#34; },
+          { id: &#34;lesson12&#34;, title: &#34;お弁当、おいしそうですね&#34; },
+          { id: &#34;lesson13&#34;, title: &#34;あと 10 分ぐらいで終わりそうです&#34; },
+          { id: &#34;lesson14&#34;, title: &#34;休みを取ってもいいでしょうか？&#34; },
+          { id: &#34;lesson15&#34;, title: &#34;熱があってのどが痛いんです&#34; },
+          { id: &#34;lesson16&#34;, title: &#34;食べすぎないようにしています&#34; },
+          { id: &#34;lesson17&#34;, title: &#34;兄がくれたお守りです&#34; },
+          { id: &#34;lesson18&#34;, title: &#34;何かプレゼントをあげませんか？&#34; }
+        ]
+      },
+      z: {
+        lessons: [
+          { id: &#34;lesson1&#34;, title: &#34;先週、日本に来たばかりです&#34; },
+          { id: &#34;lesson2&#34;, title: &#34;まじめそうな人ですね&#34; },
+          { id: &#34;lesson3&#34;, title: &#34;アレルギーがあるので、食べられないんです&#34; },
+          { id: &#34;lesson4&#34;, title: &#34;しょうゆをつけないで食べてください&#34; },
+          { id: &#34;lesson5&#34;, title: &#34;早く予約したほうがいいですよ&#34; },
+          { id: &#34;lesson6&#34;, title: &#34;いろいろなところに行けて、よかったです&#34; },
+          { id: &#34;lesson7&#34;, title: &#34;雨が降ったら、ホールでやります&#34; },
+          { id: &#34;lesson8&#34;, title: &#34;屋台はどこかわかりますか？&#34; },
+          { id: &#34;lesson9&#34;, title: &#34;成人の日は、何をするんですか？&#34; },
+          { id: &#34;lesson10&#34;, title: &#34;どんな服を着て行けばいいですか？&#34; },
+          { id: &#34;lesson11&#34;, title: &#34;ポイントカードを忘れてしまいました&#34; },
+          { id: &#34;lesson12&#34;, title: &#34;この掃除機は軽くて動かしやすいですよ&#34; },
+          { id: &#34;lesson13&#34;, title: &#34;いろいろな資料を展示してあります&#34; },
+          { id: &#34;lesson14&#34;, title: &#34;前髪は、もう少し短く切ってもらえますか？&#34; },
+          { id: &#34;lesson15&#34;, title: &#34;会議室の電気がついたままでした&#34; },
+          { id: &#34;lesson16&#34;, title: &#34;地震が来ても、あわてて動かないでください&#34; },
+          { id: &#34;lesson17&#34;, title: &#34;日本語が前より話せるようになりました&#34; },
+          { id: &#34;lesson18&#34;, title: &#34;将来、自分の会社を作ろうと思います&#34; }
+        ]
+      }
+    };
+
+    
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+      
+      const initialCategory = &#34;&#34;;
+      const initialLesson = &#34;&#34;;
+      
+      if (initialCategory) {
+        currentCategory = initialCategory;
+        document.getElementById(&#39;category-select&#39;).value = initialCategory;
+        populateLessons(initialCategory);
+        
+        if (initialLesson) {
+          currentLesson = initialLesson;
+          document.getElementById(&#39;lesson-select&#39;).value = initialLesson;
+          loadLesson(initialCategory, initialLesson);
+        }
+      }
+    });
+
+    
+    function changeCategory(category) {
+      currentCategory = category;
+      currentLesson = &#34;&#34;;
+      currentSectionIndex = 0;
+      
+      
+      document.getElementById(&#39;content-area&#39;).innerHTML = &#34;&#34;;
+      document.getElementById(&#39;audio-player&#39;).style.display = &#39;none&#39;;
+      
+      
+      populateLessons(category);
+    }
+
+    
+    function populateLessons(category) {
+      if (!category) {
+        document.getElementById(&#39;lesson-select&#39;).innerHTML = &#39;&lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;&#39;;
+        return;
+      }
+      
+      const lessonSelect = document.getElementById(&#39;lesson-select&#39;);
+      lessonSelect.innerHTML = &#39;&lt;option value=&#34;&#34;&gt;📖&lt;/option&gt;&#39;;
+      
+      if (lessonData[category] &amp;&amp; lessonData[category].lessons) {
+        lessonData[category].lessons.forEach(lesson =&gt; {
+          const option = document.createElement(&#39;option&#39;);
+          option.value = lesson.id;
+          option.textContent = `${lesson.id}: ${lesson.title}`;
+          lessonSelect.appendChild(option);
+        });
+      }
+    }
+
+    
+    function changeLesson(lesson) {
+      currentLesson = lesson;
+      currentSectionIndex = 0;
+      
+      if (lesson) {
+        loadLesson(currentCategory, lesson);
+      } else {
+        document.getElementById(&#39;content-area&#39;).innerHTML = &#34;&#34;;
+        document.getElementById(&#39;audio-player&#39;).style.display = &#39;none&#39;;
+      }
+    }
+
+    
+    function loadLesson(category, lessonId) {
+      if (!category || !lessonId) return;
+      
+      
+      fetch(`${baseUrl}/data/${category}/${lessonId}.json`)
+        .then(response =&gt; {
+          if (!response.ok) {
+            throw new Error(&#39;Network response was not ok&#39;);
+          }
+          return response.json();
+        })
+        .then(data =&gt; {
+          renderLesson(data);
+        })
+        .catch(error =&gt; {
+          console.error(&#39;Error loading lesson data:&#39;, error);
+          document.getElementById(&#39;content-area&#39;).innerHTML = 
+            `&lt;div class=&#34;error-message&#34;&gt;课程数据加载失败。(${error.message})&lt;/div&gt;`;
+        });
+    }
+
+    
+    function renderLesson(lessonData) {
+      const contentArea = document.getElementById(&#39;content-area&#39;);
+      contentArea.innerHTML = &#34;&#34;;
+      
+      
+      const lessonHeader = document.createElement(&#39;div&#39;);
+      lessonHeader.className = &#39;jp-lesson-header&#39;;
+      lessonHeader.innerHTML = `
+        &lt;div class=&#34;jp-lesson-number&#34;&gt;${lessonData.number}&lt;/div&gt;
+        &lt;div class=&#34;jp-lesson-title&#34;&gt;${lessonData.title}&lt;/div&gt;
+      `;
+      contentArea.appendChild(lessonHeader);
+      
+      
+      sections = lessonData.sections;
+      
+      
+      lessonData.sections.forEach((section, index) =&gt; {
+        const sectionDiv = document.createElement(&#39;div&#39;);
+        sectionDiv.className = &#39;jp-section&#39;;
+        sectionDiv.id = `section-${index}`;
+        
+        
+        const sectionHeader = document.createElement(&#39;div&#39;);
+        sectionHeader.className = &#39;jp-section-header&#39;;
+        sectionHeader.innerHTML = `
+          &lt;div class=&#34;jp-section-number&#34;&gt;${section.number}&lt;/div&gt;
+          &lt;div class=&#34;jp-section-title&#34;&gt;${section.title}&lt;/div&gt;
+        `;
+        sectionDiv.appendChild(sectionHeader);
+        
+        
+        const table = document.createElement(&#39;table&#39;);
+        table.className = &#39;jp-vocab-table&#39;;
+        
+        
+        const thead = document.createElement(&#39;thead&#39;);
+        thead.innerHTML = `
+          &lt;tr&gt;
+            &lt;th&gt;ことば&lt;/th&gt;
+            &lt;th&gt;ローマ字&lt;/th&gt;
+            &lt;th&gt;アクセント&lt;/th&gt;
+            &lt;th&gt;English&lt;/th&gt;
+          &lt;/tr&gt;
+        `;
+        table.appendChild(thead);
+        
+        
+        const tbody = document.createElement(&#39;tbody&#39;);
+        section.wordList.forEach(word =&gt; {
+          const tr = document.createElement(&#39;tr&#39;);
+          
+          
+          tr.innerHTML = `
+            &lt;td&gt;${word.japanese}&lt;/td&gt;
+            &lt;td&gt;${word.romaji}&lt;/td&gt;
+            &lt;td&gt;${word.accent}&lt;/td&gt;
+            &lt;td&gt;${word.english}&lt;/td&gt;
+          `;
+          tbody.appendChild(tr);
+        });
+        
+        table.appendChild(tbody);
+        sectionDiv.appendChild(table);
+        contentArea.appendChild(sectionDiv);
+      });
+      
+      
+      if (sections.length &gt; 0 &amp;&amp; sections[0].audio) {
+        document.getElementById(&#39;audio-player&#39;).style.display = &#39;block&#39;;
+        loadAudio(0);
+      }
+    }
+
+    
+    function loadAudio(sectionIndex) {
+      if (!sections || sectionIndex &gt;= sections.length || !sections[sectionIndex].audio) {
+        document.getElementById(&#39;audio-player&#39;).style.display = &#39;none&#39;;
+        return;
+      }
+      
+      currentSectionIndex = sectionIndex;
+      
+      
+      const audioSrc = sections[sectionIndex].audio;
+      let fullAudioUrl = audioSrc;
+      
+      
+      if (!audioSrc.startsWith(&#39;http://&#39;) &amp;&amp; !audioSrc.startsWith(&#39;https://&#39;)) {
+        fullAudioUrl = `${baseUrl}${audioSrc}`;
+      }
+      
+      
+      const audioPlayer = document.getElementById(&#39;jp-audio&#39;);
+      audioPlayer.src = fullAudioUrl;
+      audioPlayer.load();
+      audioPlayer.play().catch(error =&gt; {
+        console.error(&#39;Audio playback failed:&#39;, error);
+      });
+      
+      
+      audioPlayer.onended = null;
+      
+      audioPlayer.onended = function() {
+        playNextSection();
+      };
+      
+      
+      highlightCurrentSection();
+    }
+
+    
+    function playNextSection() {
+      if (currentSectionIndex &lt; sections.length - 1) {
+        loadAudio(currentSectionIndex + 1);
+      } else {
+        
+        loadAudio(0);
+      }
+    }
+
+    
+    function restartAudio() {
+      loadAudio(0);
+    }
+
+    
+    function highlightCurrentSection() {
+      
+      document.querySelectorAll(&#39;.jp-section&#39;).forEach(section =&gt; {
+        section.style.border = &#39;none&#39;;
+      });
+      
+      
+      const currentSection = document.getElementById(`section-${currentSectionIndex}`);
+      if (currentSection) {
+        currentSection.style.border = &#39;2px solid #9e1c23&#39;;
+        currentSection.scrollIntoView({ behavior: &#39;smooth&#39;, block: &#39;nearest&#39; });
+      }
+    }
+  &lt;/script&gt;
+&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>有声书库：持续更新</title>
+      <link>https://yuuniji.github.io/posts/audiobook-0/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/posts/audiobook-0/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://yuuniji.github.io/%20css/audiobook.css&#34;&gt;
+
+&lt;div class=&#34;audiobook-player&#34; data-book=&#34;book1&#34; data-baseurl=&#34;https://yuuniji.github.io/audiobook-a/&#34;&gt;
+  &lt;div class=&#34;navigation&#34;&gt;
+    &lt;div&gt;
+      &lt;span id=&#34;current-chapter&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-chapters&#34;&gt;0&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;jump-container&#34;&gt;
+      &lt;select id=&#34;book-select&#34;&gt;
+        &lt;option value=&#34;book1&#34;&gt;Book 1&lt;/option&gt;
+        &lt;option value=&#34;book2&#34;&gt;Book 2&lt;/option&gt;
+        &lt;option value=&#34;book3&#34;&gt;Book 3&lt;/option&gt;
+        &lt;option value=&#34;book4&#34;&gt;Book 4&lt;/option&gt;
+        &lt;option value=&#34;book5&#34;&gt;Book 5&lt;/option&gt;
+        &lt;option value=&#34;book6&#34;&gt;Book 6&lt;/option&gt;
+        &lt;option value=&#34;book7&#34;&gt;Book 7&lt;/option&gt;
+        &lt;option value=&#34;book8&#34;&gt;Book 8&lt;/option&gt;
+        &lt;option value=&#34;book9&#34;&gt;Book 9&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Chapter number or title&#34; list=&#34;chapters-list-book1&#34;&gt;
+      &lt;datalist id=&#34;chapters-list-book1&#34;&gt;&lt;/datalist&gt;
+      &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;➡️&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;audio-player-controls&#34;&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;play-btn&#34;&gt;▶️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;pause-btn&#34; style=&#34;display:none;&#34;&gt;⏸️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;prev-btn&#34;&gt;⏮️&lt;/button&gt;
+    &lt;button class=&#34;sbutton&#34; id=&#34;next-btn&#34;&gt;⏭️&lt;/button&gt;
+    &lt;div id=&#34;speed-buttons&#34;&gt;
+      &lt;button class=&#34;sbutton rate-btn&#34; data-speed=&#34;1&#34;&gt;🐌&lt;/button&gt;
+      &lt;button class=&#34;sbutton rate-btn active&#34; data-speed=&#34;2&#34;&gt;⚡️&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;input type=&#34;range&#34; id=&#34;progress&#34; value=&#34;0&#34; max=&#34;100&#34; style=&#34;width: 100%;&#34;&gt;
+    &lt;div id=&#34;audio-status&#34;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;h2 id=&#34;chapter-title&#34;&gt;★🔊📖&lt;/h2&gt;
+  &lt;div id=&#34;chapter-wrapper&#34;&gt;
+    &lt;div id=&#34;chapter-content&#34; class=&#34;collapsed&#34;&gt;
+      
+      &lt;div id=&#34;chapter-content&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button id=&#34;toggle-button&#34;&gt;🔽&lt;/button&gt;
+  &lt;/div&gt;
+
+  
+  &lt;audio id=&#34;main-audio&#34; style=&#34;display: none;&#34;&gt;&lt;/audio&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  (async () =&gt; {
+    const player = document.querySelector(&#39;.audiobook-player&#39;);
+    const bookId = player.dataset.book;
+    const baseUrl = player.dataset.baseurl;
+    let currentBook = bookId, currentChapters = [], current = 0;
+
+    const audio = player.querySelector(&#39;#main-audio&#39;);
+    const playBtn = player.querySelector(&#39;#play-btn&#39;);
+    const pauseBtn = player.querySelector(&#39;#pause-btn&#39;);
+    const nextBtn = player.querySelector(&#39;#next-btn&#39;);
+    const prevBtn = player.querySelector(&#39;#prev-btn&#39;);
+    const progress = player.querySelector(&#39;#progress&#39;);
+    const status = player.querySelector(&#39;#audio-status&#39;);
+    const currentChapterSpan = player.querySelector(&#39;#current-chapter&#39;);
+    const totalChaptersSpan = player.querySelector(&#39;#total-chapters&#39;);
+    const chapterTitle = player.querySelector(&#39;#chapter-title&#39;);
+    const chapterContent = player.querySelector(&#39;#chapter-content&#39;);
+    const jumpTo = player.querySelector(&#39;#jump-to&#39;);
+    const jumpBtn = player.querySelector(&#39;#jump-btn&#39;);
+    const bookSelect = player.querySelector(&#39;#book-select&#39;);
+    const chaptersList = player.querySelector(`#chapters-list-${bookId}`);
+
+    console.log(&#39;Initializing audiobook player&#39;, { bookId, baseUrl });
+
+    
+    async function loadBook(bookId) {
+      const metadataUrl = `${baseUrl}books/${bookId}/metadata.json`;
+      console.log(&#39;Fetching metadata:&#39;, metadataUrl);
+      try {
+        const res = await fetch(metadataUrl);
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+        const metadata = await res.json();
+        console.log(&#39;Metadata loaded:&#39;, metadata);
+        currentBook = bookId;
+        currentChapters = metadata.chapters;
+        current = 0;
+        chaptersList.innerHTML = &#39;&#39;;
+        currentChapters.forEach(ch =&gt; {
+          const option = document.createElement(&#39;option&#39;);
+          option.value = ch.chapter;
+          option.text = ch.title;
+          chaptersList.appendChild(option);
+        });
+        totalChaptersSpan.textContent = currentChapters.length;
+        bookSelect.value = bookId;
+        await updateChapter();
+      } catch (err) {
+        console.error(&#39;Load metadata failed:&#39;, err);
+        status.textContent = navigator.onLine ? `Failed to load book: ${err.message}` : &#39;Please check your connection&#39;;
+      }
+    }
+
+    
+    async function updateChapter() {
+      if (!currentChapters[current]) return;
+      const chapter = currentChapters[current];
+      const contentUrl = `${baseUrl}books/${currentBook}/${chapter.content}`;
+      console.log(&#39;Fetching content:&#39;, contentUrl);
+      currentChapterSpan.textContent = current + 1;
+      chapterTitle.textContent = chapter.title;
+      try {
+        const res = await fetch(contentUrl);
+        if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+        chapterContent.textContent = await res.text();
+      } catch (err) {
+        console.error(&#39;Load content failed:&#39;, err);
+        chapterContent.textContent = navigator.onLine ? `Failed to load chapter content: ${err.message}` : &#39;Please check your connection&#39;;
+      }
+      status.textContent = `Loaded: ${chapter.title}`;
+    }
+
+    
+    async function playCurrent() {
+      if (current &gt;= currentChapters.length) {
+        status.textContent = &#39;Playback complete&#39;;
+        current = 0;
+        progress.value = 0;
+        await updateChapter();
+        return;
+      }
+      const chapter = currentChapters[current];
+      const audioUrl = `${baseUrl}books/${currentBook}/${chapter.audio}`;
+      console.log(&#39;Playing audio:&#39;, audioUrl);
+      audio.src = audioUrl;
+      const activeSpeedBtn = player.querySelector(&#39;#speed-buttons .rate-btn.active&#39;);
+      audio.playbackRate = activeSpeedBtn ? parseFloat(activeSpeedBtn.dataset.speed) : 1.0;
+
+      audio.play().then(() =&gt; {
+        playBtn.style.display = &#39;none&#39;;
+        pauseBtn.style.display = &#39;&#39;;
+        status.textContent = `Playing: ${chapter.title} (${speedSelect.value}x)`;
+      }).catch(err =&gt; {
+        console.error(&#39;Playback failed:&#39;, err);
+        status.textContent = navigator.onLine ? `Playback failed: ${err.message}` : &#39;Please check your connection&#39;;
+      });
+      await updateChapter();
+    }
+
+    
+    audio.ontimeupdate = () =&gt; {
+      if (audio.duration) progress.value = (audio.currentTime / audio.duration) * 100;
+    };
+    progress.oninput = () =&gt; {
+      if (audio.duration) audio.currentTime = (progress.value / 100) * audio.duration;
+    };
+
+    
+    const speedButtons = player.querySelectorAll(&#39;#speed-buttons .rate-btn&#39;);
+    speedButtons.forEach(btn =&gt; {
+      btn.addEventListener(&#39;click&#39;, () =&gt; {
+        const speed = parseFloat(btn.dataset.speed);
+        audio.playbackRate = speed;
+        speedButtons.forEach(b =&gt; b.classList.remove(&#39;active&#39;));
+        btn.classList.add(&#39;active&#39;);
+        if (!audio.paused) {
+          status.textContent = `Playing: ${currentChapters[current].title} (${speed}x)`;
+        }
+      });
+    });
+
+    document.getElementById(&#39;toggle-button&#39;).addEventListener(&#39;click&#39;, function () {
+      const content = document.getElementById(&#39;chapter-content&#39;);
+      if (content.classList.contains(&#39;collapsed&#39;)) {
+        content.classList.remove(&#39;collapsed&#39;);
+        content.classList.add(&#39;expanded&#39;);
+        this.innerText = &#39;🔼&#39;;
+      } else {
+        content.classList.remove(&#39;expanded&#39;);
+        content.classList.add(&#39;collapsed&#39;);
+        this.innerText = &#39;🔽&#39;;
+      }
+    });
+
+
+
+    
+    bookSelect.onchange = async () =&gt; {
+      if (bookSelect.value) await loadBook(bookSelect.value);
+      await playCurrent();
+    };
+
+    
+    playBtn.onclick = () =&gt; playCurrent();
+
+    
+    pauseBtn.onclick = () =&gt; {
+      if (!audio.paused) {
+        audio.pause();
+        pauseBtn.textContent = &#39;▶️&#39;;
+        status.textContent = &#39;Paused&#39;;
+      } else {
+        audio.playbackRate = parseFloat(speedSelect.value);
+        audio.play().catch(err =&gt; status.textContent = navigator.onLine ? `Continue playback failed: ${err.message}` : &#39;Please check your connection&#39;);
+        pauseBtn.textContent = &#39;⏸️&#39;;
+        status.textContent = `Playing: ${currentChapters[current].title} (${speedSelect.value}x)`;
+      }
+    };
+
+    
+    nextBtn.onclick = async () =&gt; {
+      if (current &lt; currentChapters.length - 1) {
+        current++;
+        pauseBtn.style.display = &#39;none&#39;;
+        playBtn.style.display = &#39;&#39;;
+        await playCurrent();
+      } else {
+        status.textContent = &#39;Already at the last chapter&#39;;
+      }
+    };
+
+    
+    prevBtn.onclick = async () =&gt; {
+      if (current &gt; 0) {
+        current--;
+        pauseBtn.style.display = &#39;none&#39;;
+        playBtn.style.display = &#39;&#39;;
+        await playCurrent();
+      } else {
+        status.textContent = &#39;Already at the first chapter&#39;;
+      }
+    };
+
+    
+    jumpBtn.onclick = async () =&gt; {
+      const input = jumpTo.value.trim();
+      if (!isNaN(input) &amp;&amp; input &gt; 0 &amp;&amp; input &lt;= currentChapters.length) {
+        current = parseInt(input) - 1;
+        pauseBtn.style.display = &#39;none&#39;;
+        playBtn.style.display = &#39;&#39;;
+        await playCurrent();
+      } else {
+        const index = currentChapters.findIndex(ch =&gt; ch.title.toLowerCase().includes(input.toLowerCase()));
+        if (index !== -1) {
+          current = index;
+          pauseBtn.style.display = &#39;none&#39;;
+          playBtn.style.display = &#39;&#39;;
+          await playCurrent();
+        } else {
+          status.textContent = &#39;Chapter not found&#39;;
+        }
+      }
+      jumpTo.value = &#39;&#39;;
+    };
+
+    
+    audio.onended = async () =&gt; {
+      current++;
+      if (current &lt; currentChapters.length) {
+        await playCurrent();
+      } else {
+        playBtn.style.display = &#39;&#39;;
+        pauseBtn.style.display = &#39;none&#39;;
+        status.textContent = &#39;Playback complete&#39;;
+        current = 0;
+        progress.value = 0;
+        await updateChapter();
+      }
+    };
+
+    
+    window.addEventListener(&#39;offline&#39;, () =&gt; status.textContent = &#39;Network disconnected, please check your connection&#39;);
+    window.addEventListener(&#39;online&#39;, () =&gt; status.textContent = &#39;Network restored&#39;);
+
+    
+    await loadBook(bookId);
+  })();
+&lt;/script&gt;
+&lt;h2 id=&#34;经济学&#34;&gt;★经济学&lt;/h2&gt;
+&lt;h3 id=&#34;经济--经济学&#34;&gt;◇经济 / 经济学&lt;/h3&gt;
+&lt;h3 id=&#34;经济--经济学--理论&#34;&gt;◇经济 / 经济学 / 理论&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;中文书名&lt;/th&gt;
+          &lt;th&gt;英文书名&lt;/th&gt;
+          &lt;th&gt;作者&lt;/th&gt;
+          &lt;th&gt;Book ID&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;国富论——国民财富的性质和原因&lt;/td&gt;
+          &lt;td&gt;The Wealth of Nations&lt;br&gt;其它英文名：An Inquiry into the Nature and Causes of the Wealth of Nations&lt;/td&gt;
+          &lt;td&gt;(英) 亚当·斯密&lt;/td&gt;
+          &lt;td&gt;Book 1-5&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;军事&#34;&gt;★军事&lt;/h2&gt;
+&lt;h3 id=&#34;军事--军事理论&#34;&gt;◇军事 / 军事理论&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;中文书名&lt;/th&gt;
+          &lt;th&gt;英文书名&lt;/th&gt;
+          &lt;th&gt;作者&lt;/th&gt;
+          &lt;th&gt;Book ID&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;孙子兵法&lt;br&gt;其它中文名：孙武兵法&lt;/td&gt;
+          &lt;td&gt;The Art of War&lt;/td&gt;
+          &lt;td&gt;孙武&lt;/td&gt;
+          &lt;td&gt;Book 6&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;政治&#34;&gt;★政治&lt;/h2&gt;
+&lt;h3 id=&#34;政治--政治小说&#34;&gt;◇政治 / 政治小说&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;中文书名&lt;/th&gt;
+          &lt;th&gt;英文书名&lt;/th&gt;
+          &lt;th&gt;作者&lt;/th&gt;
+          &lt;th&gt;Book ID&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;一九八四&lt;/td&gt;
+          &lt;td&gt;Nineteen Eighty-Four&lt;/td&gt;
+          &lt;td&gt;(英) 乔治·奥威尔&lt;/td&gt;
+          &lt;td&gt;Book 7-9&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;制作有声书的脚本&#34;&gt;★制作有声书的脚本&lt;/h2&gt;
+&lt;h3 id=&#34;下载youtube视频的mp3&#34;&gt;◇下载YouTube视频的mp3&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;dl &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;audio&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;format mp3 &lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;audio&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;quality &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www.youtube.com/watch?v=VIDEO_ID&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# yt_mp3_download.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; subprocess
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;download_youtube_mp3&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    yt_dlp_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;请输入 YouTube 视频链接：&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;strip()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    command &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        yt_dlp_path,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-x&amp;#34;&lt;/span&gt;,  &lt;span style=&#34;color:#75715e&#34;&gt;# 提取音频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;--audio-format&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mp3&amp;#34;&lt;/span&gt;,  &lt;span style=&#34;color:#75715e&#34;&gt;# 转成 mp3 格式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        url
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        subprocess&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;run(command, check&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;✅ 下载完成&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; subprocess&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;CalledProcessError &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; e:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;❌ 下载失败:&amp;#34;&lt;/span&gt;, e)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    download_youtube_mp3()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;按对应的章节切割音频&#34;&gt;◇按对应的章节切割音频&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# split_audio.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; subprocess
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;input_file &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/Users/dev/Downloads/aaa/xxx.mp3&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_dir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;output_chapters&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;makedirs(output_dir, exist_ok&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chapters &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a0&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;00:00:00&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1-chapter1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;00:00:09&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1-chapter2&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;00:39:31&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2-chapter1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;03:35:20&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2-chapter2&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;04:00:13&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3-chapter1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;07:48:41&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3-chapter2&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;08:18:27&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(len(chapters)):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    title, start &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; chapters[i]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    end &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; chapters[i&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; len(chapters) &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    output_file &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(output_dir, &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;title&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;.mp3&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cmd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ffmpeg&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-y&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-i&amp;#34;&lt;/span&gt;, input_file, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-ss&amp;#34;&lt;/span&gt;, start]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; end:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cmd &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-to&amp;#34;&lt;/span&gt;, end]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    cmd &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-c&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;copy&amp;#34;&lt;/span&gt;, output_file]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    subprocess&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;run(cmd)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;导出: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;output_file&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;全部章节已成功分割。&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;合并音频&#34;&gt;◇合并音频&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# merge_audio.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; pydub &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; AudioSegment
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 设置音频文件夹路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;audio_dir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 获取所有 mp3 文件，并按文件名排序（可选）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;audio_files &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sorted([f &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; f &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;listdir(audio_dir) &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; f&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;endswith(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.mp3&amp;#34;&lt;/span&gt;)])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 创建一个空的音频对象&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;combined &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AudioSegment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;empty()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 逐个添加音频文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; file &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; audio_files:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    file_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(audio_dir, file)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    audio &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AudioSegment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;from_mp3(file_path)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    combined &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; audio
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;已添加: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;file&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 导出合成后的音频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output_path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(audio_dir, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;combined_output.mp3&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;combined&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;export(output_path, format&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mp3&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;合成完成，保存为: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;output_path&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
       <title>如何学好Python[2]: 学习 Python</title>
       <link>https://yuuniji.github.io/posts/python-2-learn/</link>
       <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
@@ -2866,20 +2866,10 @@
 　　2. &lt;a href=&#34;https://yuuniji.github.io/posts/python-2-learn/&#34;&gt;如何学好Python[2]: 学习 Python&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>如何学好日语[6]: 日语的音调</title>
-      <link>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-6-accent/</link>
+      <title>如何学好日语[6]: 教材《いろどり》</title>
+      <link>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-6-textbook-irodori/</link>
       <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-6-accent/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;回到本系列的目录&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;　　日语发音的&lt;strong&gt;音调&lt;/strong&gt;分为&lt;strong&gt;高&lt;/strong&gt;音和&lt;strong&gt;低&lt;/strong&gt;音。读单词时要看有没有&lt;strong&gt;低音处&lt;/strong&gt;(音调突然下降的地方)，对于有低音处的单词来说，每个单词都有其特定的低音位置。音调不同，发音方法也不同。&lt;br&gt;
-　　当单词有低音处，低音位置会用「&lt;strong&gt;↓&lt;/strong&gt;」表示。&lt;br&gt;
-　　当单词&lt;strong&gt;没有&lt;/strong&gt;低音处，单词最后附加「&lt;strong&gt;○&lt;/strong&gt;」符号。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>如何学好日语[5]: 教材《いろどり》</title>
-      <link>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-5-textbook-irodori/</link>
-      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-5-textbook-irodori/</guid>
+      <guid>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-6-textbook-irodori/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;回到本系列的目录&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;教材的特点&#34;&gt;★教材的特点&lt;/h2&gt;
 &lt;p&gt;　　日本国际交流基金会编写的《いろどり》（Irodori）是一套专为外国人设计的日语教材，旨在帮助学习者在日本的生活和工作中掌握基础的日语沟通能力。&lt;br&gt;
@@ -2894,6 +2884,16 @@
 　　7. 扎实学习语法和汉字等语言知识&lt;br&gt;
 　　8. 可以从&lt;strong&gt;网站自由下载&lt;/strong&gt;&lt;br&gt;
 　　9. 与《まるごと》有松散关联&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>如何学好日语[5]: 日语的音调</title>
+      <link>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-5-accent/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-5-accent/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;回到本系列的目录&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;　　日语发音的&lt;strong&gt;音调&lt;/strong&gt;分为&lt;strong&gt;高&lt;/strong&gt;音和&lt;strong&gt;低&lt;/strong&gt;音。读单词时要看有没有&lt;strong&gt;低音处&lt;/strong&gt;(音调突然下降的地方)，对于有低音处的单词来说，每个单词都有其特定的低音位置。音调不同，发音方法也不同。&lt;br&gt;
+　　当单词有低音处，低音位置会用「&lt;strong&gt;↓&lt;/strong&gt;」表示。&lt;br&gt;
+　　当单词&lt;strong&gt;没有&lt;/strong&gt;低音处，单词最后附加「&lt;strong&gt;○&lt;/strong&gt;」符号。&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何学好日语[4]: 假名</title>
@@ -3151,10 +3151,10 @@
 　　2. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-2-methods/&#34;&gt;如何学好日语[2]: 高效方法&lt;/a&gt;&lt;br&gt;
 　　3. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-3-resources/&#34;&gt;如何学好日语[3]: 资源&lt;/a&gt;&lt;br&gt;
 　　4. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-4-kana/&#34;&gt;如何学好日语[4]: 假名&lt;/a&gt;&lt;br&gt;
-　　5. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-5-textbook-irodori/&#34;&gt;如何学好日语[5]: 教材《いろどり》&lt;/a&gt;&lt;br&gt;
-　　6. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-6-accent/&#34;&gt;如何学好日语[6]: 日语的音调&lt;/a&gt;&lt;br&gt;
-　　7. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-7-textbook-irodori-notes/&#34;&gt;如何学好日语[7]: 教材《いろどり》笔记&lt;/a&gt;&lt;br&gt;
-　　8. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-vocab/&#34;&gt;如何学好日语[8]: 教材《いろどり》词汇&lt;/a&gt;&lt;/p&gt;</description>
+　　5. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-5-accent/&#34;&gt;如何学好日语[5]: 日语的音调&lt;/a&gt;&lt;br&gt;
+　　6. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-6-textbook-irodori/&#34;&gt;如何学好日语[6]: 教材《いろどり》&lt;/a&gt;&lt;br&gt;
+　　7. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-7-textbook-irodori-vocab/&#34;&gt;如何学好日语[7]: 教材《いろどり》词汇&lt;/a&gt;&lt;br&gt;
+　　8. &lt;a href=&#34;https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/&#34;&gt;如何学好日语[8]: 教材《いろどり》笔记&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>我的博客搭建之旅：从零到上线</title>
