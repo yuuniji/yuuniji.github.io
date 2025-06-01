@@ -11,9 +11,7 @@
 
 
   
-    
-      1 / 0
-    
+
     
       
         Book 1
@@ -26,9 +24,13 @@
         Book 8
         Book 9
       
-      
-      
+
       ➡️
+      
+      
+      
+        1 / 0
+      
     
   
   
@@ -207,7 +209,7 @@ print(f&#34;Merged audio saved as: {output_path}&#34;)
 ">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.github.io/en/posts/audiobook-0/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f939c4a8c4b2e842074f7c76406cbf67709ffb86460c2edea3b2139df115563a.css" integrity="sha256-&#43;TnEqMSy6EIHT3x2QGy/Z3Cf&#43;4ZGDC7eo7ITnfEVVjo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.72a866fed173c4ce3f4eac2ac8425d73576dcb5b1d3c86a471f7b16c9f8a193c.css" integrity="sha256-cqhm/tFzxM4/TqwqyEJdc1dty1sdPIakcfexbJ&#43;KGTw=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
@@ -257,7 +259,7 @@ print(f&#34;Merged audio saved as: {output_path}&#34;)
 </noscript><meta property="og:url" content="https://yuuniji.github.io/en/posts/audiobook-0/">
   <meta property="og:site_name" content="叶泽伟的博客">
   <meta property="og:title" content="Audiobook Collection: Continuously Updated">
-  <meta property="og:description" content=" 1 / 0 Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★Economics ◇Economics / Economic Theory Chinese Title English Title Author Book ID 国富论——国民财富的性质和原因 The Wealth of Nations Alternate Title: An Inquiry into the Nature and Causes of the Wealth of Nations Adam Smith (UK) Book 1–5 ★Military ◇Military / Military Theory Chinese Title English Title Author Book ID 孙子兵法 Alternate Title: 孙武兵法 The Art of War Sun Tzu Book 6 ★Politics ◇Politics / Political Fiction Chinese Title English Title Author Book ID 一九八四 Nineteen Eighty-Four George Orwell (UK) Book 7–9 ★Audiobook Production Scripts ◇Download MP3 from YouTube youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34; url = input(&#34;Please enter the YouTube video link: &#34;).strip() command = [ yt_dlp_path, &#34;-x&#34;, # Extract audio &#34;--audio-format&#34;, &#34;mp3&#34;, # Convert to MP3 format url ] try: subprocess.run(command, check=True) print(&#34;✅ Download completed&#34;) except subprocess.CalledProcessError as e: print(&#34;❌ Download failed:&#34;, e) if __name__ == &#34;__main__&#34;: download_youtube_mp3() ◇Split Audio by Chapters # split_audio.py import os import subprocess input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34; output_dir = &#34;output_chapters&#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (&#34;a0&#34;, &#34;00:00:00&#34;), (&#34;1-chapter1&#34;, &#34;00:00:09&#34;), (&#34;1-chapter2&#34;, &#34;00:39:31&#34;), (&#34;2-chapter1&#34;, &#34;03:35:20&#34;), (&#34;2-chapter2&#34;, &#34;04:00:13&#34;), (&#34;3-chapter1&#34;, &#34;07:48:41&#34;), (&#34;3-chapter2&#34;, &#34;08:18:27&#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;) cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start] if end: cmd &#43;= [&#34;-to&#34;, end] cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file] subprocess.run(cmd) print(f&#34;Exported: {output_file}&#34;) print(&#34;All chapters have been successfully split.&#34;) ◇Merge Audio Files # merge_audio.py from pydub import AudioSegment import os # Set the path to the audio directory audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34; # Get all mp3 files and sort them by filename (optional) audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)]) # Create an empty audio segment combined = AudioSegment.empty() # Append each audio file for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined &#43;= audio print(f&#34;Added: {file}&#34;) # Export the merged audio output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;) combined.export(output_path, format=&#34;mp3&#34;) print(f&#34;Merged audio saved as: {output_path}&#34;) ">
+  <meta property="og:description" content=" Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ 1 / 0 ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★Economics ◇Economics / Economic Theory Chinese Title English Title Author Book ID 国富论——国民财富的性质和原因 The Wealth of Nations Alternate Title: An Inquiry into the Nature and Causes of the Wealth of Nations Adam Smith (UK) Book 1–5 ★Military ◇Military / Military Theory Chinese Title English Title Author Book ID 孙子兵法 Alternate Title: 孙武兵法 The Art of War Sun Tzu Book 6 ★Politics ◇Politics / Political Fiction Chinese Title English Title Author Book ID 一九八四 Nineteen Eighty-Four George Orwell (UK) Book 7–9 ★Audiobook Production Scripts ◇Download MP3 from YouTube youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34; url = input(&#34;Please enter the YouTube video link: &#34;).strip() command = [ yt_dlp_path, &#34;-x&#34;, # Extract audio &#34;--audio-format&#34;, &#34;mp3&#34;, # Convert to MP3 format url ] try: subprocess.run(command, check=True) print(&#34;✅ Download completed&#34;) except subprocess.CalledProcessError as e: print(&#34;❌ Download failed:&#34;, e) if __name__ == &#34;__main__&#34;: download_youtube_mp3() ◇Split Audio by Chapters # split_audio.py import os import subprocess input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34; output_dir = &#34;output_chapters&#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (&#34;a0&#34;, &#34;00:00:00&#34;), (&#34;1-chapter1&#34;, &#34;00:00:09&#34;), (&#34;1-chapter2&#34;, &#34;00:39:31&#34;), (&#34;2-chapter1&#34;, &#34;03:35:20&#34;), (&#34;2-chapter2&#34;, &#34;04:00:13&#34;), (&#34;3-chapter1&#34;, &#34;07:48:41&#34;), (&#34;3-chapter2&#34;, &#34;08:18:27&#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;) cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start] if end: cmd &#43;= [&#34;-to&#34;, end] cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file] subprocess.run(cmd) print(f&#34;Exported: {output_file}&#34;) print(&#34;All chapters have been successfully split.&#34;) ◇Merge Audio Files # merge_audio.py from pydub import AudioSegment import os # Set the path to the audio directory audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34; # Get all mp3 files and sort them by filename (optional) audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)]) # Create an empty audio segment combined = AudioSegment.empty() # Append each audio file for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined &#43;= audio print(f&#34;Added: {file}&#34;) # Export the merged audio output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;) combined.export(output_path, format=&#34;mp3&#34;) print(f&#34;Merged audio saved as: {output_path}&#34;) ">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -271,9 +273,7 @@ print(f&#34;Merged audio saved as: {output_path}&#34;)
 
 
   
-    
-      1 / 0
-    
+
     
       
         Book 1
@@ -286,9 +286,13 @@ print(f&#34;Merged audio saved as: {output_path}&#34;)
         Book 8
         Book 9
       
-      
-      
+
       ➡️
+      
+      
+      
+        1 / 0
+      
     
   
   
@@ -493,11 +497,11 @@ print(f&#34;Merged audio saved as: {output_path}&#34;)
   "@type": "BlogPosting",
   "headline": "Audiobook Collection: Continuously Updated",
   "name": "Audiobook Collection: Continuously Updated",
-  "description": " 1 / 0 Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★Economics ◇Economics / Economic Theory Chinese Title English Title Author Book ID 国富论——国民财富的性质和原因 The Wealth of Nations Alternate Title: An Inquiry into the Nature and Causes of the Wealth of Nations Adam Smith (UK) Book 1–5 ★Military ◇Military / Military Theory Chinese Title English Title Author Book ID 孙子兵法 Alternate Title: 孙武兵法 The Art of War Sun Tzu Book 6 ★Politics ◇Politics / Political Fiction Chinese Title English Title Author Book ID 一九八四 Nineteen Eighty-Four George Orwell (UK) Book 7–9 ★Audiobook Production Scripts ◇Download MP3 from YouTube youtube-dl -x --audio-format mp3 --audio-quality 0 \u0026#34;https://www.youtube.com/watch?v=VIDEO_ID\u0026#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = \u0026#34;/Users/dev/Library/Python/3.9/bin/yt-dlp\u0026#34; url = input(\u0026#34;Please enter the YouTube video link: \u0026#34;).strip() command = [ yt_dlp_path, \u0026#34;-x\u0026#34;, # Extract audio \u0026#34;--audio-format\u0026#34;, \u0026#34;mp3\u0026#34;, # Convert to MP3 format url ] try: subprocess.run(command, check=True) print(\u0026#34;✅ Download completed\u0026#34;) except subprocess.CalledProcessError as e: print(\u0026#34;❌ Download failed:\u0026#34;, e) if __name__ == \u0026#34;__main__\u0026#34;: download_youtube_mp3() ◇Split Audio by Chapters # split_audio.py import os import subprocess input_file = \u0026#34;/Users/dev/Downloads/aaa/xxx.mp3\u0026#34; output_dir = \u0026#34;output_chapters\u0026#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (\u0026#34;a0\u0026#34;, \u0026#34;00:00:00\u0026#34;), (\u0026#34;1-chapter1\u0026#34;, \u0026#34;00:00:09\u0026#34;), (\u0026#34;1-chapter2\u0026#34;, \u0026#34;00:39:31\u0026#34;), (\u0026#34;2-chapter1\u0026#34;, \u0026#34;03:35:20\u0026#34;), (\u0026#34;2-chapter2\u0026#34;, \u0026#34;04:00:13\u0026#34;), (\u0026#34;3-chapter1\u0026#34;, \u0026#34;07:48:41\u0026#34;), (\u0026#34;3-chapter2\u0026#34;, \u0026#34;08:18:27\u0026#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i+1][1] if i+1 \u0026lt; len(chapters) else None output_file = os.path.join(output_dir, f\u0026#34;{title}.mp3\u0026#34;) cmd = [\u0026#34;ffmpeg\u0026#34;, \u0026#34;-y\u0026#34;, \u0026#34;-i\u0026#34;, input_file, \u0026#34;-ss\u0026#34;, start] if end: cmd += [\u0026#34;-to\u0026#34;, end] cmd += [\u0026#34;-c\u0026#34;, \u0026#34;copy\u0026#34;, output_file] subprocess.run(cmd) print(f\u0026#34;Exported: {output_file}\u0026#34;) print(\u0026#34;All chapters have been successfully split.\u0026#34;) ◇Merge Audio Files # merge_audio.py from pydub import AudioSegment import os # Set the path to the audio directory audio_dir = \u0026#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all\u0026#34; # Get all mp3 files and sort them by filename (optional) audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(\u0026#34;.mp3\u0026#34;)]) # Create an empty audio segment combined = AudioSegment.empty() # Append each audio file for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined += audio print(f\u0026#34;Added: {file}\u0026#34;) # Export the merged audio output_path = os.path.join(audio_dir, \u0026#34;combined_output.mp3\u0026#34;) combined.export(output_path, format=\u0026#34;mp3\u0026#34;) print(f\u0026#34;Merged audio saved as: {output_path}\u0026#34;) ",
+  "description": " Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ 1 / 0 ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★Economics ◇Economics / Economic Theory Chinese Title English Title Author Book ID 国富论——国民财富的性质和原因 The Wealth of Nations Alternate Title: An Inquiry into the Nature and Causes of the Wealth of Nations Adam Smith (UK) Book 1–5 ★Military ◇Military / Military Theory Chinese Title English Title Author Book ID 孙子兵法 Alternate Title: 孙武兵法 The Art of War Sun Tzu Book 6 ★Politics ◇Politics / Political Fiction Chinese Title English Title Author Book ID 一九八四 Nineteen Eighty-Four George Orwell (UK) Book 7–9 ★Audiobook Production Scripts ◇Download MP3 from YouTube youtube-dl -x --audio-format mp3 --audio-quality 0 \u0026#34;https://www.youtube.com/watch?v=VIDEO_ID\u0026#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = \u0026#34;/Users/dev/Library/Python/3.9/bin/yt-dlp\u0026#34; url = input(\u0026#34;Please enter the YouTube video link: \u0026#34;).strip() command = [ yt_dlp_path, \u0026#34;-x\u0026#34;, # Extract audio \u0026#34;--audio-format\u0026#34;, \u0026#34;mp3\u0026#34;, # Convert to MP3 format url ] try: subprocess.run(command, check=True) print(\u0026#34;✅ Download completed\u0026#34;) except subprocess.CalledProcessError as e: print(\u0026#34;❌ Download failed:\u0026#34;, e) if __name__ == \u0026#34;__main__\u0026#34;: download_youtube_mp3() ◇Split Audio by Chapters # split_audio.py import os import subprocess input_file = \u0026#34;/Users/dev/Downloads/aaa/xxx.mp3\u0026#34; output_dir = \u0026#34;output_chapters\u0026#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (\u0026#34;a0\u0026#34;, \u0026#34;00:00:00\u0026#34;), (\u0026#34;1-chapter1\u0026#34;, \u0026#34;00:00:09\u0026#34;), (\u0026#34;1-chapter2\u0026#34;, \u0026#34;00:39:31\u0026#34;), (\u0026#34;2-chapter1\u0026#34;, \u0026#34;03:35:20\u0026#34;), (\u0026#34;2-chapter2\u0026#34;, \u0026#34;04:00:13\u0026#34;), (\u0026#34;3-chapter1\u0026#34;, \u0026#34;07:48:41\u0026#34;), (\u0026#34;3-chapter2\u0026#34;, \u0026#34;08:18:27\u0026#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i+1][1] if i+1 \u0026lt; len(chapters) else None output_file = os.path.join(output_dir, f\u0026#34;{title}.mp3\u0026#34;) cmd = [\u0026#34;ffmpeg\u0026#34;, \u0026#34;-y\u0026#34;, \u0026#34;-i\u0026#34;, input_file, \u0026#34;-ss\u0026#34;, start] if end: cmd += [\u0026#34;-to\u0026#34;, end] cmd += [\u0026#34;-c\u0026#34;, \u0026#34;copy\u0026#34;, output_file] subprocess.run(cmd) print(f\u0026#34;Exported: {output_file}\u0026#34;) print(\u0026#34;All chapters have been successfully split.\u0026#34;) ◇Merge Audio Files # merge_audio.py from pydub import AudioSegment import os # Set the path to the audio directory audio_dir = \u0026#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all\u0026#34; # Get all mp3 files and sort them by filename (optional) audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(\u0026#34;.mp3\u0026#34;)]) # Create an empty audio segment combined = AudioSegment.empty() # Append each audio file for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined += audio print(f\u0026#34;Added: {file}\u0026#34;) # Export the merged audio output_path = os.path.join(audio_dir, \u0026#34;combined_output.mp3\u0026#34;) combined.export(output_path, format=\u0026#34;mp3\u0026#34;) print(f\u0026#34;Merged audio saved as: {output_path}\u0026#34;) ",
   "keywords": [
     "books", "audiobooks"
   ],
-  "articleBody": " 1 / 0 Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★Economics ◇Economics / Economic Theory Chinese Title English Title Author Book ID 国富论——国民财富的性质和原因 The Wealth of Nations Alternate Title: An Inquiry into the Nature and Causes of the Wealth of Nations Adam Smith (UK) Book 1–5 ★Military ◇Military / Military Theory Chinese Title English Title Author Book ID 孙子兵法 Alternate Title: 孙武兵法 The Art of War Sun Tzu Book 6 ★Politics ◇Politics / Political Fiction Chinese Title English Title Author Book ID 一九八四 Nineteen Eighty-Four George Orwell (UK) Book 7–9 ★Audiobook Production Scripts ◇Download MP3 from YouTube youtube-dl -x --audio-format mp3 --audio-quality 0 \"https://www.youtube.com/watch?v=VIDEO_ID\" # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = \"/Users/dev/Library/Python/3.9/bin/yt-dlp\" url = input(\"Please enter the YouTube video link: \").strip() command = [ yt_dlp_path, \"-x\", # Extract audio \"--audio-format\", \"mp3\", # Convert to MP3 format url ] try: subprocess.run(command, check=True) print(\"✅ Download completed\") except subprocess.CalledProcessError as e: print(\"❌ Download failed:\", e) if __name__ == \"__main__\": download_youtube_mp3() ◇Split Audio by Chapters # split_audio.py import os import subprocess input_file = \"/Users/dev/Downloads/aaa/xxx.mp3\" output_dir = \"output_chapters\" os.makedirs(output_dir, exist_ok=True) chapters = [ (\"a0\", \"00:00:00\"), (\"1-chapter1\", \"00:00:09\"), (\"1-chapter2\", \"00:39:31\"), (\"2-chapter1\", \"03:35:20\"), (\"2-chapter2\", \"04:00:13\"), (\"3-chapter1\", \"07:48:41\"), (\"3-chapter2\", \"08:18:27\") ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i+1][1] if i+1 \u003c len(chapters) else None output_file = os.path.join(output_dir, f\"{title}.mp3\") cmd = [\"ffmpeg\", \"-y\", \"-i\", input_file, \"-ss\", start] if end: cmd += [\"-to\", end] cmd += [\"-c\", \"copy\", output_file] subprocess.run(cmd) print(f\"Exported: {output_file}\") print(\"All chapters have been successfully split.\") ◇Merge Audio Files # merge_audio.py from pydub import AudioSegment import os # Set the path to the audio directory audio_dir = \"/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all\" # Get all mp3 files and sort them by filename (optional) audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(\".mp3\")]) # Create an empty audio segment combined = AudioSegment.empty() # Append each audio file for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined += audio print(f\"Added: {file}\") # Export the merged audio output_path = os.path.join(audio_dir, \"combined_output.mp3\") combined.export(output_path, format=\"mp3\") print(f\"Merged audio saved as: {output_path}\") ",
+  "articleBody": " Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ 1 / 0 ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★Economics ◇Economics / Economic Theory Chinese Title English Title Author Book ID 国富论——国民财富的性质和原因 The Wealth of Nations Alternate Title: An Inquiry into the Nature and Causes of the Wealth of Nations Adam Smith (UK) Book 1–5 ★Military ◇Military / Military Theory Chinese Title English Title Author Book ID 孙子兵法 Alternate Title: 孙武兵法 The Art of War Sun Tzu Book 6 ★Politics ◇Politics / Political Fiction Chinese Title English Title Author Book ID 一九八四 Nineteen Eighty-Four George Orwell (UK) Book 7–9 ★Audiobook Production Scripts ◇Download MP3 from YouTube youtube-dl -x --audio-format mp3 --audio-quality 0 \"https://www.youtube.com/watch?v=VIDEO_ID\" # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = \"/Users/dev/Library/Python/3.9/bin/yt-dlp\" url = input(\"Please enter the YouTube video link: \").strip() command = [ yt_dlp_path, \"-x\", # Extract audio \"--audio-format\", \"mp3\", # Convert to MP3 format url ] try: subprocess.run(command, check=True) print(\"✅ Download completed\") except subprocess.CalledProcessError as e: print(\"❌ Download failed:\", e) if __name__ == \"__main__\": download_youtube_mp3() ◇Split Audio by Chapters # split_audio.py import os import subprocess input_file = \"/Users/dev/Downloads/aaa/xxx.mp3\" output_dir = \"output_chapters\" os.makedirs(output_dir, exist_ok=True) chapters = [ (\"a0\", \"00:00:00\"), (\"1-chapter1\", \"00:00:09\"), (\"1-chapter2\", \"00:39:31\"), (\"2-chapter1\", \"03:35:20\"), (\"2-chapter2\", \"04:00:13\"), (\"3-chapter1\", \"07:48:41\"), (\"3-chapter2\", \"08:18:27\") ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i+1][1] if i+1 \u003c len(chapters) else None output_file = os.path.join(output_dir, f\"{title}.mp3\") cmd = [\"ffmpeg\", \"-y\", \"-i\", input_file, \"-ss\", start] if end: cmd += [\"-to\", end] cmd += [\"-c\", \"copy\", output_file] subprocess.run(cmd) print(f\"Exported: {output_file}\") print(\"All chapters have been successfully split.\") ◇Merge Audio Files # merge_audio.py from pydub import AudioSegment import os # Set the path to the audio directory audio_dir = \"/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all\" # Get all mp3 files and sort them by filename (optional) audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(\".mp3\")]) # Create an empty audio segment combined = AudioSegment.empty() # Append each audio file for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined += audio print(f\"Added: {file}\") # Export the merged audio output_path = os.path.join(audio_dir, \"combined_output.mp3\") combined.export(output_path, format=\"mp3\") print(f\"Merged audio saved as: {output_path}\") ",
   "wordCount" : "485",
   "inLanguage": "en",
   "datePublished": "2025-05-15T00:00:00Z",
@@ -663,9 +667,7 @@ print(f&#34;Merged audio saved as: {output_path}&#34;)
 
 <div class="audiobook-player" data-book="book1" data-baseurl="https://yuuniji.github.io/audiobook-a/">
   <div class="navigation">
-    <div>
-      <span id="current-chapter">1</span> / <span id="total-chapters">0</span>
-    </div>
+
     <div class="jump-container">
       <select id="book-select">
         <option value="book1">Book 1</option>
@@ -678,9 +680,13 @@ print(f&#34;Merged audio saved as: {output_path}&#34;)
         <option value="book8">Book 8</option>
         <option value="book9">Book 9</option>
       </select>
+
+      <button class="sbutton" id="jump-btn">➡️</button>
       <input type="text" id="jump-to" placeholder="Chapter number or title" list="chapters-list-book1">
       <datalist id="chapters-list-book1"></datalist>
-      <button class="sbutton" id="jump-btn">➡️</button>
+      <div>
+        <span id="current-chapter">1</span> / <span id="total-chapters">0</span>
+      </div>
     </div>
   </div>
   <div class="audio-player-controls">

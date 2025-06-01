@@ -17,9 +17,7 @@
 
 &lt;div class=&#34;audiobook-player&#34; data-book=&#34;book1&#34; data-baseurl=&#34;https://yuuniji.github.io/audiobook-a/&#34;&gt;
   &lt;div class=&#34;navigation&#34;&gt;
-    &lt;div&gt;
-      &lt;span id=&#34;current-chapter&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-chapters&#34;&gt;0&lt;/span&gt;
-    &lt;/div&gt;
+
     &lt;div class=&#34;jump-container&#34;&gt;
       &lt;select id=&#34;book-select&#34;&gt;
         &lt;option value=&#34;book1&#34;&gt;Book 1&lt;/option&gt;
@@ -32,9 +30,13 @@
         &lt;option value=&#34;book8&#34;&gt;Book 8&lt;/option&gt;
         &lt;option value=&#34;book9&#34;&gt;Book 9&lt;/option&gt;
       &lt;/select&gt;
+
+      &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;➡️&lt;/button&gt;
       &lt;input type=&#34;text&#34; id=&#34;jump-to&#34; placeholder=&#34;Chapter number or title&#34; list=&#34;chapters-list-book1&#34;&gt;
       &lt;datalist id=&#34;chapters-list-book1&#34;&gt;&lt;/datalist&gt;
-      &lt;button class=&#34;sbutton&#34; id=&#34;jump-btn&#34;&gt;➡️&lt;/button&gt;
+      &lt;div&gt;
+        &lt;span id=&#34;current-chapter&#34;&gt;1&lt;/span&gt; / &lt;span id=&#34;total-chapters&#34;&gt;0&lt;/span&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&#34;audio-player-controls&#34;&gt;
