@@ -63,7 +63,7 @@
 ">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.f5c235579487303c2643ee891be9d35ef02fb94f365cbdccbc7e919e28739d0b.css" integrity="sha256-9cI1V5SHMDwmQ&#43;6JG&#43;nTXvAvuU82XL3MvH6RnihznQs=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f939c4a8c4b2e842074f7c76406cbf67709ffb86460c2edea3b2139df115563a.css" integrity="sha256-&#43;TnEqMSy6EIHT3x2QGy/Z3Cf&#43;4ZGDC7eo7ITnfEVVjo=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
@@ -3252,95 +3252,104 @@
 <h3 id="方法2">◇方法2<a hidden class="anchor" aria-hidden="true" href="#方法2">#</a></h3>
 
 
-<div id="audio-ea69a57846cbf89034e3b26d5d68822a-wrapper" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; width: 100%; padding: 10px; background: linear-gradient(135deg, #2a2a72 0%, #6b48ff 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
-<audio controls loop preload="metadata" playsinline id="audio-ea69a57846cbf89034e3b26d5d68822a" class="audio-player" style="flex: 1; min-width: 0; max-width: 100%; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
-<source src="https://yuuniji.github.io/irodori-a/combine/X_all.mp3" type="audio/mpeg">
- Your browser does not support the audio element.
-</audio>
-<div class="speed-controls" style="display: flex; gap: 4px;">
-<button data-speed="1">🐌</button>
-<button data-speed="2">⚡️</button>
-</div>
+<div id="audio-ea69a57846cbf89034e3b26d5d68822a-wrapper"
+  style="display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; width: 100%; padding: 10px; background: linear-gradient(135deg, var(--accent) 0%, var(--link-visited) 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
+  <audio controls loop preload="metadata" playsinline id="audio-ea69a57846cbf89034e3b26d5d68822a" class="audio-player"
+    style="flex: 1; min-width: 0; max-width: 100%; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+    <source src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="speed-controls" style="display: flex; gap: 4px;">
+    <button data-speed="1">🐌</button>
+    <button data-speed="2">⚡️</button>
+  </div>
 </div>
 <script>
-(function () {
-  
-  if (!window.audioPlayerManager) {
-    window.audioPlayerManager = {
-      currentlyPlaying: null,
-      pauseAllExcept: function(exceptAudio) {
-        document.querySelectorAll('audio.audio-player').forEach(audio => {
-          if (audio !== exceptAudio && !audio.paused) {
-            audio.pause();
-          }
-        });
-        this.currentlyPlaying = exceptAudio;
-      }
-    };
-  }
-
-  const wrapper = document.getElementById('audio-ea69a57846cbf89034e3b26d5d68822a-wrapper');
-  const audio = document.getElementById('audio-ea69a57846cbf89034e3b26d5d68822a');
-  const buttons = wrapper.querySelectorAll('[data-speed]');
-  
-  function setSpeed(speed, btn) {
-    audio.playbackRate = speed;
-    if (audio.paused || audio.ended) {
-      
-      window.audioPlayerManager.pauseAllExcept(audio);
-      audio.play().catch(e => console.error('Play error:', e));
+  (function () {
+    
+    if (!window.audioPlayerManager) {
+      window.audioPlayerManager = {
+        currentlyPlaying: null,
+        pauseAllExcept: function (exceptAudio) {
+          document.querySelectorAll('audio.audio-player').forEach(audio => {
+            if (audio !== exceptAudio && !audio.paused) {
+              audio.pause();
+            }
+          });
+          this.currentlyPlaying = exceptAudio;
+        }
+      };
     }
-    buttons.forEach(b => {
-      if (b === btn) {
-        b.style.background = 'linear-gradient(45deg, #ff6b6b, #ff8e53)';
-        b.style.animation = speed === 2 ? 'pulse 2s infinite' : 'none';
-      } else {
-        b.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
-        b.style.animation = 'none';
+
+    const wrapper = document.getElementById('audio-ea69a57846cbf89034e3b26d5d68822a-wrapper');
+    const audio = document.getElementById('audio-ea69a57846cbf89034e3b26d5d68822a');
+    const buttons = wrapper.querySelectorAll('[data-speed]');
+
+    function setSpeed(speed, btn) {
+      audio.playbackRate = speed;
+      if (audio.paused || audio.ended) {
+        
+        window.audioPlayerManager.pauseAllExcept(audio);
+        audio.play().catch(e => console.error('Play error:', e));
       }
+      buttons.forEach(b => {
+        if (b === btn) {
+          b.style.background = 'linear-gradient(45deg, #ff6b6b, #ff8e53)';
+          b.style.animation = speed === 2 ? 'pulse 2s infinite' : 'none';
+        } else {
+          b.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
+          b.style.animation = 'none';
+        }
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.style.fontSize = '18px';
+      btn.style.padding = '6px 10px';
+      btn.style.border = 'none';
+      btn.style.borderRadius = '8px';
+      btn.style.cursor = 'pointer';
+      btn.style.transition = 'transform 0.2s';
+      btn.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+      btn.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
+      btn.addEventListener('mouseover', () => btn.style.transform = 'scale(1.1)');
+      btn.addEventListener('mouseout', () => btn.style.transform = 'scale(1)');
+      btn.addEventListener('click', () => setSpeed(parseFloat(btn.dataset.speed), btn));
     });
-  }
-  
-  buttons.forEach(btn => {
-    btn.style.fontSize = '18px';
-    btn.style.padding = '6px 10px';
-    btn.style.border = 'none';
-    btn.style.borderRadius = '8px';
-    btn.style.cursor = 'pointer';
-    btn.style.transition = 'transform 0.2s';
-    btn.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
-    btn.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
-    btn.addEventListener('mouseover', () => btn.style.transform = 'scale(1.1)');
-    btn.addEventListener('mouseout', () => btn.style.transform = 'scale(1)');
-    btn.addEventListener('click', () => setSpeed(parseFloat(btn.dataset.speed), btn));
-  });
-  
-  audio.addEventListener('loadedmetadata', () => {
-    audio.playbackRate = 2;
-  });
-  
-  
-  audio.addEventListener('play', () => {
-    window.audioPlayerManager.pauseAllExcept(audio);
-  });
-  
-  audio.addEventListener('error', (e) => {
-    console.error('Audio error:', e);
-    audio.load();
-  });
-})();
+
+    audio.addEventListener('loadedmetadata', () => {
+      audio.playbackRate = 2;
+    });
+
+    
+    audio.addEventListener('play', () => {
+      window.audioPlayerManager.pauseAllExcept(audio);
+    });
+
+    audio.addEventListener('error', (e) => {
+      console.error('Audio error:', e);
+      audio.load();
+    });
+  })();
 </script>
 <style>
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
 </style>
 <h2 id="初級1">★『初級1』<a hidden class="anchor" aria-hidden="true" href="#初級1">#</a></h2>
 <h3 id="方法1-1">◇方法1<a hidden class="anchor" aria-hidden="true" href="#方法1-1">#</a></h3>
 <style>
-
   .player-container-y {
      
      
@@ -3366,7 +3375,7 @@
   }
 
   .sbutton-y:hover {
-    background-color: #4CAF50;
+    background-color: var(--accent-hover);
   }
 
   .sbutton-y:disabled {
@@ -3374,12 +3383,13 @@
     cursor: not-allowed;
   }
 
+
   .rate-btn-y {
-    background-color: #6c757d;
+    background-color: var(--accent);
   }
 
   .rate-btn-y.active {
-    background-color: #28a745;
+    background-color: var(--link-visited);
     font-weight: bold;
   }
 
@@ -3390,29 +3400,6 @@
   }
 
 
-
-
-  .note {
-    color: #4CAF50;
-    font-weight: bold;
-    border-bottom: 1px dotted #4CAF50;
-    cursor: help;
-    position: relative;
-  }
-
-  .note:hover::after {
-    content: attr(data-note);
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    z-index: 1;
-  }
 
   #navigation-y {
     display: flex;
@@ -3428,12 +3415,12 @@
 
   #jump-to-y {
     padding: 6px;
-  margin-right: 6px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 200px;
-  font-size: 13px;
-  color: #A0A0A0;
+    margin-right: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 13px;
+    color: #A0A0A0;
   }
 
   .lesson-header-y {
@@ -3491,15 +3478,15 @@
     <button class="sbutton-y" id="pause-btn-y" style="display:none;">⏸️</button>
     <button class="sbutton-y" id="prev-btn-y">⏮️</button>
     <button class="sbutton-y" id="next-btn-y">⏭️</button>
-    <button class="sbutton-y" id="rate-1x-btn-y" class="rate-btn-y">🐌</button>
-    <button class="sbutton-y" id="rate-2x-btn-y" class="rate-btn-y active">⚡️</button>
+    <button class="sbutton-y rate-btn-y" id="rate-1x-btn-y" data-speed="1">🐌</button>
+    <button class="sbutton-y rate-btn-y active" id="rate-2x-btn-y" data-speed="2">⚡️</button>
     <span id="audio-status-y"></span>
   </div>
 
-    
-    <div style="margin: 10px 0;">
-      <input type="range" id="progress-bar-y" value="0" min="0" max="100" step="0.1" style="width: 100%;">
-    </div>
+  
+  <div style="margin: 10px 0;">
+    <input type="range" id="progress-bar-y" value="0" min="0" max="100" step="0.1" style="width: 100%;">
+  </div>
 
   <div id="track-info-y"></div>
   <audio id="main-audio-y" style="display: none;"></audio>
@@ -3889,7 +3876,7 @@
           "en": "",
           "zh": ""
         },],
-        ".mp3": [
+      ".mp3": [
         {
           "jp": "",
           "romaji": "",
@@ -4221,95 +4208,104 @@
 <h3 id="方法2-1">◇方法2<a hidden class="anchor" aria-hidden="true" href="#方法2-1">#</a></h3>
 
 
-<div id="audio-1256fccd3f6439dd8f3c26defeda41af-wrapper" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; width: 100%; padding: 10px; background: linear-gradient(135deg, #2a2a72 0%, #6b48ff 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
-<audio controls loop preload="metadata" playsinline id="audio-1256fccd3f6439dd8f3c26defeda41af" class="audio-player" style="flex: 1; min-width: 0; max-width: 100%; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
-<source src="https://yuuniji.github.io/irodori-a/combine/Y_all.mp3" type="audio/mpeg">
- Your browser does not support the audio element.
-</audio>
-<div class="speed-controls" style="display: flex; gap: 4px;">
-<button data-speed="1">🐌</button>
-<button data-speed="2">⚡️</button>
-</div>
+<div id="audio-1256fccd3f6439dd8f3c26defeda41af-wrapper"
+  style="display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; width: 100%; padding: 10px; background: linear-gradient(135deg, var(--accent) 0%, var(--link-visited) 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
+  <audio controls loop preload="metadata" playsinline id="audio-1256fccd3f6439dd8f3c26defeda41af" class="audio-player"
+    style="flex: 1; min-width: 0; max-width: 100%; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+    <source src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="speed-controls" style="display: flex; gap: 4px;">
+    <button data-speed="1">🐌</button>
+    <button data-speed="2">⚡️</button>
+  </div>
 </div>
 <script>
-(function () {
-  
-  if (!window.audioPlayerManager) {
-    window.audioPlayerManager = {
-      currentlyPlaying: null,
-      pauseAllExcept: function(exceptAudio) {
-        document.querySelectorAll('audio.audio-player').forEach(audio => {
-          if (audio !== exceptAudio && !audio.paused) {
-            audio.pause();
-          }
-        });
-        this.currentlyPlaying = exceptAudio;
-      }
-    };
-  }
-
-  const wrapper = document.getElementById('audio-1256fccd3f6439dd8f3c26defeda41af-wrapper');
-  const audio = document.getElementById('audio-1256fccd3f6439dd8f3c26defeda41af');
-  const buttons = wrapper.querySelectorAll('[data-speed]');
-  
-  function setSpeed(speed, btn) {
-    audio.playbackRate = speed;
-    if (audio.paused || audio.ended) {
-      
-      window.audioPlayerManager.pauseAllExcept(audio);
-      audio.play().catch(e => console.error('Play error:', e));
+  (function () {
+    
+    if (!window.audioPlayerManager) {
+      window.audioPlayerManager = {
+        currentlyPlaying: null,
+        pauseAllExcept: function (exceptAudio) {
+          document.querySelectorAll('audio.audio-player').forEach(audio => {
+            if (audio !== exceptAudio && !audio.paused) {
+              audio.pause();
+            }
+          });
+          this.currentlyPlaying = exceptAudio;
+        }
+      };
     }
-    buttons.forEach(b => {
-      if (b === btn) {
-        b.style.background = 'linear-gradient(45deg, #ff6b6b, #ff8e53)';
-        b.style.animation = speed === 2 ? 'pulse 2s infinite' : 'none';
-      } else {
-        b.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
-        b.style.animation = 'none';
+
+    const wrapper = document.getElementById('audio-1256fccd3f6439dd8f3c26defeda41af-wrapper');
+    const audio = document.getElementById('audio-1256fccd3f6439dd8f3c26defeda41af');
+    const buttons = wrapper.querySelectorAll('[data-speed]');
+
+    function setSpeed(speed, btn) {
+      audio.playbackRate = speed;
+      if (audio.paused || audio.ended) {
+        
+        window.audioPlayerManager.pauseAllExcept(audio);
+        audio.play().catch(e => console.error('Play error:', e));
       }
+      buttons.forEach(b => {
+        if (b === btn) {
+          b.style.background = 'linear-gradient(45deg, #ff6b6b, #ff8e53)';
+          b.style.animation = speed === 2 ? 'pulse 2s infinite' : 'none';
+        } else {
+          b.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
+          b.style.animation = 'none';
+        }
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.style.fontSize = '18px';
+      btn.style.padding = '6px 10px';
+      btn.style.border = 'none';
+      btn.style.borderRadius = '8px';
+      btn.style.cursor = 'pointer';
+      btn.style.transition = 'transform 0.2s';
+      btn.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+      btn.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
+      btn.addEventListener('mouseover', () => btn.style.transform = 'scale(1.1)');
+      btn.addEventListener('mouseout', () => btn.style.transform = 'scale(1)');
+      btn.addEventListener('click', () => setSpeed(parseFloat(btn.dataset.speed), btn));
     });
-  }
-  
-  buttons.forEach(btn => {
-    btn.style.fontSize = '18px';
-    btn.style.padding = '6px 10px';
-    btn.style.border = 'none';
-    btn.style.borderRadius = '8px';
-    btn.style.cursor = 'pointer';
-    btn.style.transition = 'transform 0.2s';
-    btn.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
-    btn.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
-    btn.addEventListener('mouseover', () => btn.style.transform = 'scale(1.1)');
-    btn.addEventListener('mouseout', () => btn.style.transform = 'scale(1)');
-    btn.addEventListener('click', () => setSpeed(parseFloat(btn.dataset.speed), btn));
-  });
-  
-  audio.addEventListener('loadedmetadata', () => {
-    audio.playbackRate = 2;
-  });
-  
-  
-  audio.addEventListener('play', () => {
-    window.audioPlayerManager.pauseAllExcept(audio);
-  });
-  
-  audio.addEventListener('error', (e) => {
-    console.error('Audio error:', e);
-    audio.load();
-  });
-})();
+
+    audio.addEventListener('loadedmetadata', () => {
+      audio.playbackRate = 2;
+    });
+
+    
+    audio.addEventListener('play', () => {
+      window.audioPlayerManager.pauseAllExcept(audio);
+    });
+
+    audio.addEventListener('error', (e) => {
+      console.error('Audio error:', e);
+      audio.load();
+    });
+  })();
 </script>
 <style>
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
 </style>
 <h2 id="初級2">★『初級2』<a hidden class="anchor" aria-hidden="true" href="#初級2">#</a></h2>
 <h3 id="方法1-2">◇方法1<a hidden class="anchor" aria-hidden="true" href="#方法1-2">#</a></h3>
 <style>
-
   .player-container-z {
      
      
@@ -4317,7 +4313,7 @@
      
   }
 
-  #audio-player-controls-y {
+  #audio-player-controls-z {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -4335,7 +4331,7 @@
   }
 
   .sbutton-z:hover {
-    background-color: #4CAF50;
+    background: var(--accent-hover);
   }
 
   .sbutton-z:disabled {
@@ -4344,11 +4340,11 @@
   }
 
   .rate-btn-z {
-    background-color: #6c757d;
+    background-color: var(--accent);
   }
 
   .rate-btn-z.active {
-    background-color: #28a745;
+    background-color: var(--link-visited);
     font-weight: bold;
   }
 
@@ -4359,29 +4355,6 @@
   }
 
 
-
-
-  .note {
-    color: #4CAF50;
-    font-weight: bold;
-    border-bottom: 1px dotted #4CAF50;
-    cursor: help;
-    position: relative;
-  }
-
-  .note:hover::after {
-    content: attr(data-note);
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    z-index: 1;
-  }
 
   #navigation-z {
     display: flex;
@@ -4397,12 +4370,12 @@
 
   #jump-to-z {
     padding: 6px;
-  margin-right: 6px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 200px;
-  font-size: 13px;
-  color: #A0A0A0;
+    margin-right: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 13px;
+    color: #A0A0A0;
   }
 
   .lesson-header-z {
@@ -4460,8 +4433,8 @@
     <button class="sbutton-z" id="pause-btn-z" style="display:none;">⏸️</button>
     <button class="sbutton-z" id="prev-btn-z">⏮️</button>
     <button class="sbutton-z" id="next-btn-z">⏭️</button>
-    <button class="sbutton-z" id="rate-1x-btn-z" class="rate-btn-z">🐌</button>
-    <button class="sbutton-z" id="rate-2x-btn-z" class="rate-btn-z active">⚡️</button>
+    <button class="sbutton-z rate-btn-z" id="rate-1x-btn-z" data-speed="1">🐌</button>
+    <button class="sbutton-z rate-btn-z active" id="rate-2x-btn-z" data-speed="2">⚡️</button>
     <span id="audio-status-z"></span>
   </div>
 
@@ -4870,7 +4843,7 @@
           "en": "",
           "zh": ""
         },],
-        ".mp3": [
+      ".mp3": [
         {
           "jp": "",
           "romaji": "",
@@ -4883,7 +4856,7 @@
           "en": "",
           "zh": ""
         },],
-        ".mp3": [
+      ".mp3": [
         {
           "jp": "",
           "romaji": "",
@@ -4899,9 +4872,9 @@
     };
 
     const baseUrl = "https://yuuniji.github.io/irodori-a/Z_audio_all/";
-  let current = 0;
-  let playingAll = false;
-  let currentRate = 2.0; 
+    let current = 0;
+    let playingAll = false;
+    let currentRate = 2.0; 
 
     const audio = document.getElementById('main-audio-z');
     const playBtn = document.getElementById('play-btn-z');
@@ -5213,90 +5186,100 @@
 <h3 id="方法2-2">◇方法2<a hidden class="anchor" aria-hidden="true" href="#方法2-2">#</a></h3>
 
 
-<div id="audio-a957800019356ffcf0222c46073bdffb-wrapper" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; width: 100%; padding: 10px; background: linear-gradient(135deg, #2a2a72 0%, #6b48ff 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
-<audio controls loop preload="metadata" playsinline id="audio-a957800019356ffcf0222c46073bdffb" class="audio-player" style="flex: 1; min-width: 0; max-width: 100%; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
-<source src="https://yuuniji.github.io/irodori-a/combine/Z_all.mp3" type="audio/mpeg">
- Your browser does not support the audio element.
-</audio>
-<div class="speed-controls" style="display: flex; gap: 4px;">
-<button data-speed="1">🐌</button>
-<button data-speed="2">⚡️</button>
-</div>
+<div id="audio-a957800019356ffcf0222c46073bdffb-wrapper"
+  style="display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; width: 100%; padding: 10px; background: linear-gradient(135deg, var(--accent) 0%, var(--link-visited) 100%); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
+  <audio controls loop preload="metadata" playsinline id="audio-a957800019356ffcf0222c46073bdffb" class="audio-player"
+    style="flex: 1; min-width: 0; max-width: 100%; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+    <source src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="speed-controls" style="display: flex; gap: 4px;">
+    <button data-speed="1">🐌</button>
+    <button data-speed="2">⚡️</button>
+  </div>
 </div>
 <script>
-(function () {
-  
-  if (!window.audioPlayerManager) {
-    window.audioPlayerManager = {
-      currentlyPlaying: null,
-      pauseAllExcept: function(exceptAudio) {
-        document.querySelectorAll('audio.audio-player').forEach(audio => {
-          if (audio !== exceptAudio && !audio.paused) {
-            audio.pause();
-          }
-        });
-        this.currentlyPlaying = exceptAudio;
-      }
-    };
-  }
-
-  const wrapper = document.getElementById('audio-a957800019356ffcf0222c46073bdffb-wrapper');
-  const audio = document.getElementById('audio-a957800019356ffcf0222c46073bdffb');
-  const buttons = wrapper.querySelectorAll('[data-speed]');
-  
-  function setSpeed(speed, btn) {
-    audio.playbackRate = speed;
-    if (audio.paused || audio.ended) {
-      
-      window.audioPlayerManager.pauseAllExcept(audio);
-      audio.play().catch(e => console.error('Play error:', e));
+  (function () {
+    
+    if (!window.audioPlayerManager) {
+      window.audioPlayerManager = {
+        currentlyPlaying: null,
+        pauseAllExcept: function (exceptAudio) {
+          document.querySelectorAll('audio.audio-player').forEach(audio => {
+            if (audio !== exceptAudio && !audio.paused) {
+              audio.pause();
+            }
+          });
+          this.currentlyPlaying = exceptAudio;
+        }
+      };
     }
-    buttons.forEach(b => {
-      if (b === btn) {
-        b.style.background = 'linear-gradient(45deg, #ff6b6b, #ff8e53)';
-        b.style.animation = speed === 2 ? 'pulse 2s infinite' : 'none';
-      } else {
-        b.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
-        b.style.animation = 'none';
+
+    const wrapper = document.getElementById('audio-a957800019356ffcf0222c46073bdffb-wrapper');
+    const audio = document.getElementById('audio-a957800019356ffcf0222c46073bdffb');
+    const buttons = wrapper.querySelectorAll('[data-speed]');
+
+    function setSpeed(speed, btn) {
+      audio.playbackRate = speed;
+      if (audio.paused || audio.ended) {
+        
+        window.audioPlayerManager.pauseAllExcept(audio);
+        audio.play().catch(e => console.error('Play error:', e));
       }
+      buttons.forEach(b => {
+        if (b === btn) {
+          b.style.background = 'linear-gradient(45deg, #ff6b6b, #ff8e53)';
+          b.style.animation = speed === 2 ? 'pulse 2s infinite' : 'none';
+        } else {
+          b.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
+          b.style.animation = 'none';
+        }
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.style.fontSize = '18px';
+      btn.style.padding = '6px 10px';
+      btn.style.border = 'none';
+      btn.style.borderRadius = '8px';
+      btn.style.cursor = 'pointer';
+      btn.style.transition = 'transform 0.2s';
+      btn.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+      btn.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
+      btn.addEventListener('mouseover', () => btn.style.transform = 'scale(1.1)');
+      btn.addEventListener('mouseout', () => btn.style.transform = 'scale(1)');
+      btn.addEventListener('click', () => setSpeed(parseFloat(btn.dataset.speed), btn));
     });
-  }
-  
-  buttons.forEach(btn => {
-    btn.style.fontSize = '18px';
-    btn.style.padding = '6px 10px';
-    btn.style.border = 'none';
-    btn.style.borderRadius = '8px';
-    btn.style.cursor = 'pointer';
-    btn.style.transition = 'transform 0.2s';
-    btn.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
-    btn.style.background = 'linear-gradient(45deg, #e0e0e0, #ffffff)';
-    btn.addEventListener('mouseover', () => btn.style.transform = 'scale(1.1)');
-    btn.addEventListener('mouseout', () => btn.style.transform = 'scale(1)');
-    btn.addEventListener('click', () => setSpeed(parseFloat(btn.dataset.speed), btn));
-  });
-  
-  audio.addEventListener('loadedmetadata', () => {
-    audio.playbackRate = 2;
-  });
-  
-  
-  audio.addEventListener('play', () => {
-    window.audioPlayerManager.pauseAllExcept(audio);
-  });
-  
-  audio.addEventListener('error', (e) => {
-    console.error('Audio error:', e);
-    audio.load();
-  });
-})();
+
+    audio.addEventListener('loadedmetadata', () => {
+      audio.playbackRate = 2;
+    });
+
+    
+    audio.addEventListener('play', () => {
+      window.audioPlayerManager.pauseAllExcept(audio);
+    });
+
+    audio.addEventListener('error', (e) => {
+      console.error('Audio error:', e);
+      audio.load();
+    });
+  })();
 </script>
 <style>
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
 </style>
 <p><a href="/ja/posts/how-to-learn-japanese-effectively-0-overview/">シリーズの目次に戻る</a></p>
 
