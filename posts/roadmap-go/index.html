@@ -18,7 +18,7 @@
 学习 Go 的基本语法，例如 Go 程序的执行方式、包导入、主函数等。">
 <meta name="author" content="">
 <link rel="canonical" href="https://yuuniji.github.io/posts/roadmap-go/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.72a866fed173c4ce3f4eac2ac8425d73576dcb5b1d3c86a471f7b16c9f8a193c.css" integrity="sha256-cqhm/tFzxM4/TqwqyEJdc1dty1sdPIakcfexbJ&#43;KGTw=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9ec0da834ad4db65e1fca4c86925a049a543a5b04ee64b4dd6d70c003585f8cb.css" integrity="sha256-nsDag0rU22Xh/KTIaSWgSaVDpbBO5ktN1tcMADWF&#43;Ms=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://yuuniji.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://yuuniji.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://yuuniji.github.io/favicon-32x32.png">
@@ -1323,6 +1323,240 @@
     transform: scale(1.02);
   }
 </style>
+    
+
+<style>
+    #mini-player-wrapper {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      z-index: 9999;
+      font-family: sans-serif;
+    }
+  
+    #music-panel {
+      margin-bottom: 6px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      width: 240px;
+      max-height: 240px;
+      overflow-y: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: none;
+    }
+  
+    #music-panel.show {
+      display: block;
+    }
+  
+    #music-title {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: bold;
+    }
+  
+    #playlist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+  
+    #playlist li {
+      padding: 4px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  
+    #playlist li:hover {
+      background: #f0f0f0;
+    }
+  
+    #playlist li.active {
+      background: #007bff10;
+      font-weight: bold;
+      color: #007bff;
+    }
+  
+    #mini-player {
+      background: #ffffffcc;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      padding: 8px 10px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(8px);
+      transition: background 0.3s;
+    }
+  
+    #mini-player button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 4px;
+    }
+  
+    audio {
+      display: none;
+    }
+  </style>
+  
+  <div id="mini-player-wrapper">
+    <div id="music-panel">
+      <div id="music-title">Loading...</div>
+      <ul id="playlist"></ul>
+    </div>
+    <div id="mini-player">
+      <button id="toggle-panel" title="Show/Hide Playlist">📂</button>
+      <button id="prev-btn" title="Previous">⏮️</button>
+      <button id="play-btn" title="Play/Pause">▶️</button>
+      <button id="next-btn" title="Next">⏭️</button>
+    </div>
+    <audio id="mini-audio"></audio>
+  </div>
+  
+  <script>
+    const base = "https://yuuniji.github.io/music/lofi_beats/";
+    const jsonURL = base + "songs.json";
+  
+    
+    const STORAGE_KEY = "hugo_music_player_state";
+  
+    async function initMusicPanel() {
+      const res = await fetch(jsonURL);
+      const songs = await res.json();
+      if (!songs.length) return;
+  
+      let i = 0;
+      let isPlaying = false;
+  
+      const audio = document.getElementById("mini-audio");
+      const playBtn = document.getElementById("play-btn");
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+      const toggleBtn = document.getElementById("toggle-panel");
+      const panel = document.getElementById("music-panel");
+      const title = document.getElementById("music-title");
+      const playlist = document.getElementById("playlist");
+  
+      
+      const savedStateStr = localStorage.getItem(STORAGE_KEY);
+      if (savedStateStr) {
+        try {
+          const savedState = JSON.parse(savedStateStr);
+          if (savedState.index >= 0 && savedState.index < songs.length) {
+            i = savedState.index;
+            audio.currentTime = savedState.time || 0;
+            isPlaying = savedState.isPlaying || false;
+          }
+        } catch(e) {
+          console.warn("Failed to parse saved player state:", e);
+        }
+      }
+  
+      songs.forEach((song, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${song.title} - ${song.artist}`;
+        li.onclick = () => {
+          i = index;
+          loadAndPlay(i);
+        };
+        playlist.appendChild(li);
+      });
+  
+      function highlightActive(index) {
+        playlist.querySelectorAll("li").forEach((li, idx) => {
+          li.classList.toggle("active", idx === index);
+        });
+      }
+  
+      function saveState() {
+        const state = {
+          index: i,
+          time: audio.currentTime,
+          isPlaying: !audio.paused,
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      }
+  
+      function loadAndPlay(index) {
+        audio.src = base + songs[index].file;
+        audio.currentTime = 0;
+        audio.play().then(() => {
+          isPlaying = true;
+          playBtn.textContent = "⏸️";
+          title.textContent = `${songs[index].title} - ${songs[index].artist}`;
+          highlightActive(index);
+          saveState();
+        }).catch(() => {
+          
+          isPlaying = false;
+          playBtn.textContent = "▶️";
+        });
+      }
+  
+      
+      audio.src = base + songs[i].file;
+      audio.currentTime = audio.currentTime || 0;
+      title.textContent = `${songs[i].title} - ${songs[i].artist}`;
+      highlightActive(i);
+  
+      if (isPlaying) {
+        audio.play().catch(() => {
+          
+          isPlaying = false;
+          playBtn.textContent = "▶️";
+        });
+        playBtn.textContent = "⏸️";
+      } else {
+        playBtn.textContent = "▶️";
+      }
+  
+      playBtn.onclick = () => {
+        if (audio.paused) {
+          audio.play();
+          playBtn.textContent = "⏸️";
+          isPlaying = true;
+        } else {
+          audio.pause();
+          playBtn.textContent = "▶️";
+          isPlaying = false;
+        }
+        saveState();
+      };
+  
+      prevBtn.onclick = () => {
+        i = (i - 1 + songs.length) % songs.length;
+        loadAndPlay(i);
+      };
+  
+      nextBtn.onclick = () => {
+        i = (i + 1) % songs.length;
+        loadAndPlay(i);
+      };
+  
+      toggleBtn.onclick = () => {
+        panel.classList.toggle("show");
+      };
+  
+      audio.ontimeupdate = () => {
+        saveState();
+      };
+  
+      audio.onended = () => {
+        i = (i + 1) % songs.length;
+        loadAndPlay(i);
+      };
+    }
+  
+    initMusicPanel();
+  </script>
+  
 </body>
 
 </html>
