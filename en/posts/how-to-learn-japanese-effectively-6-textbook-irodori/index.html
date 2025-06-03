@@ -804,23 +804,7 @@ Key features of Irodori:
 </a>
 
 
-<script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
-<script data-no-instant>
-    
-    document.addEventListener('instantclick:change', function () {
-        
-        if (typeof ga === 'function') {
-            ga('set', 'page', location.pathname + location.search);
-            ga('send', 'pageview');
-        }
-        
-        if (typeof _hmt === 'object' && _hmt.push) {
-            _hmt.push(['_trackPageview', location.pathname + location.search]);
-        }
-        
-    });
-    InstantClick.init();
-</script>
+
 
 <script>
     let menu = document.getElementById('menu')
@@ -955,237 +939,249 @@ Key features of Irodori:
     
 
 <style>
-    #mini-player-wrapper {
-      position: fixed;
-      bottom: 16px;
-      right: 16px;
-      z-index: 9999;
-      font-family: sans-serif;
-    }
-  
-    #music-panel {
-      margin-bottom: 6px;
-      background: #fff;
-      border-radius: 8px;
-      padding: 10px;
-      width: 240px;
-      max-height: 240px;
-      overflow-y: auto;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      display: none;
-    }
-  
-    #music-panel.show {
-      display: block;
-    }
-  
-    #music-title {
-      font-size: 14px;
-      margin-bottom: 8px;
-      color: #333;
-      font-weight: bold;
-    }
-  
-    #playlist {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 14px;
-    }
-  
-    #playlist li {
-      padding: 4px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-  
-    #playlist li:hover {
-      background: #f0f0f0;
-    }
-  
-    #playlist li.active {
-      background: #007bff10;
-      font-weight: bold;
-      color: #007bff;
-    }
-  
-    #mini-player {
-      background: #ffffffcc;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      padding: 8px 10px;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(8px);
-      transition: background 0.3s;
-    }
-  
-    #mini-player button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 18px;
-      padding: 4px;
-    }
-  
-    audio {
-      display: none;
-    }
-  </style>
-  
-  <div id="mini-player-wrapper">
-    <div id="music-panel">
-      <div id="music-title">Loading...</div>
-      <ul id="playlist"></ul>
-    </div>
-    <div id="mini-player">
-      <button id="toggle-panel" title="Show/Hide Playlist">📂</button>
-      <button id="prev-btn" title="Previous">⏮️</button>
-      <button id="play-btn" title="Play/Pause">▶️</button>
-      <button id="next-btn" title="Next">⏭️</button>
-    </div>
-    <audio id="mini-audio"></audio>
+  #mini-player-wrapper {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 9999;
+    font-family: sans-serif;
+  }
+
+  #music-panel {
+    margin-bottom: 6px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    width: 240px;
+    max-height: 240px;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: none;
+  }
+
+  #music-panel.show {
+    display: block;
+  }
+
+  #music-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  #playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  #playlist li {
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  #playlist li:hover {
+    background: #f0f0f0;
+  }
+
+  #playlist li.active {
+    background: #007bff10;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  #mini-player {
+    background: #ffffffcc;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 8px 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    transition: background 0.3s;
+  }
+
+  #mini-player button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+  }
+
+  audio {
+    display: none;
+  }
+</style>
+
+<div id="mini-player-wrapper">
+  <div id="music-panel">
+    <div id="music-title">Loading...</div>
+    <ul id="playlist"></ul>
   </div>
-  
-  <script>
-    const base = "https://yuuniji.github.io/music/lofi_beats/";
-    const jsonURL = base + "songs.json";
-  
-    
-    const STORAGE_KEY = "hugo_music_player_state";
-  
-    async function initMusicPanel() {
-      const res = await fetch(jsonURL);
-      const songs = await res.json();
-      if (!songs.length) return;
-  
-      let i = 0;
-      let isPlaying = false;
-  
-      const audio = document.getElementById("mini-audio");
-      const playBtn = document.getElementById("play-btn");
-      const prevBtn = document.getElementById("prev-btn");
-      const nextBtn = document.getElementById("next-btn");
-      const toggleBtn = document.getElementById("toggle-panel");
-      const panel = document.getElementById("music-panel");
-      const title = document.getElementById("music-title");
-      const playlist = document.getElementById("playlist");
-  
-      
-      const savedStateStr = localStorage.getItem(STORAGE_KEY);
-      if (savedStateStr) {
-        try {
-          const savedState = JSON.parse(savedStateStr);
-          if (savedState.index >= 0 && savedState.index < songs.length) {
-            i = savedState.index;
-            audio.currentTime = savedState.time || 0;
-            isPlaying = savedState.isPlaying || false;
-          }
-        } catch(e) {
-          console.warn("Failed to parse saved player state:", e);
-        }
-      }
-  
-      songs.forEach((song, index) => {
-        const li = document.createElement("li");
-        li.textContent = `${song.title} - ${song.artist}`;
-        li.onclick = () => {
-          i = index;
-          loadAndPlay(i);
-        };
-        playlist.appendChild(li);
-      });
-  
-      function highlightActive(index) {
-        playlist.querySelectorAll("li").forEach((li, idx) => {
-          li.classList.toggle("active", idx === index);
-        });
-      }
-  
-      function saveState() {
-        const state = {
-          index: i,
-          time: audio.currentTime,
-          isPlaying: !audio.paused,
-        };
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-      }
-  
-      function loadAndPlay(index) {
-        audio.src = base + songs[index].file;
-        audio.currentTime = 0;
-        audio.play().then(() => {
-          isPlaying = true;
-          playBtn.textContent = "⏸️";
-          title.textContent = `${songs[index].title} - ${songs[index].artist}`;
-          highlightActive(index);
-          saveState();
-        }).catch(() => {
-          
-          isPlaying = false;
-          playBtn.textContent = "▶️";
-        });
-      }
-  
-      
-      audio.src = base + songs[i].file;
-      audio.currentTime = audio.currentTime || 0;
-      title.textContent = `${songs[i].title} - ${songs[i].artist}`;
-      highlightActive(i);
-  
-      if (isPlaying) {
-        audio.play().catch(() => {
-          
-          isPlaying = false;
-          playBtn.textContent = "▶️";
-        });
-        playBtn.textContent = "⏸️";
-      } else {
-        playBtn.textContent = "▶️";
-      }
-  
-      playBtn.onclick = () => {
-        if (audio.paused) {
-          audio.play();
-          playBtn.textContent = "⏸️";
-          isPlaying = true;
-        } else {
-          audio.pause();
-          playBtn.textContent = "▶️";
-          isPlaying = false;
-        }
-        saveState();
+  <div id="mini-player">
+    <button id="toggle-panel" title="Show/Hide Playlist">📂</button>
+    <button id="prev-btn" title="Previous">⏮️</button>
+    <button id="play-btn" title="Play">▶️</button>
+    <button id="next-btn" title="Next">⏭️</button>
+  </div>
+  <audio id="mini-audio"></audio>
+</div>
+
+<script>
+  const base = "https://yuuniji.github.io/music/lofi_beats/";
+  const jsonURL = base + "songs.json";
+
+  const STORAGE_KEY = "hugo_music_player_state";
+  const INTERACT_KEY = "hugo_music_player_user_interacted";
+
+  async function initMusicPanel() {
+    const res = await fetch(jsonURL);
+    const songs = await res.json();
+    if (!songs.length) return;
+
+    let i = 0;
+    let isPlaying = false;
+
+    const audio = document.getElementById("mini-audio");
+    const playBtn = document.getElementById("play-btn");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const toggleBtn = document.getElementById("toggle-panel");
+    const panel = document.getElementById("music-panel");
+    const title = document.getElementById("music-title");
+    const playlist = document.getElementById("playlist");
+
+    function savePlayState() {
+      const state = {
+        index: i,
+        time: audio.currentTime,
+        isPlaying: !audio.paused,
       };
-  
-      prevBtn.onclick = () => {
-        i = (i - 1 + songs.length) % songs.length;
-        loadAndPlay(i);
-      };
-  
-      nextBtn.onclick = () => {
-        i = (i + 1) % songs.length;
-        loadAndPlay(i);
-      };
-  
-      toggleBtn.onclick = () => {
-        panel.classList.toggle("show");
-      };
-  
-      audio.ontimeupdate = () => {
-        saveState();
-      };
-  
-      audio.onended = () => {
-        i = (i + 1) % songs.length;
-        loadAndPlay(i);
-      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     }
-  
-    initMusicPanel();
-  </script>
-  
+
+    function saveUserInteraction() {
+      localStorage.setItem(INTERACT_KEY, "true");
+    }
+
+    function hasUserInteracted() {
+      return localStorage.getItem(INTERACT_KEY) === "true";
+    }
+
+    
+    const savedStateStr = localStorage.getItem(STORAGE_KEY);
+    if (savedStateStr) {
+      try {
+        const savedState = JSON.parse(savedStateStr);
+        if (savedState.index >= 0 && savedState.index < songs.length) {
+          i = savedState.index;
+          audio.currentTime = savedState.time || 0;
+          isPlaying = savedState.isPlaying || false;
+        }
+      } catch(e) {
+        console.warn("Failed to parse saved player state:", e);
+      }
+    }
+
+    songs.forEach((song, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${song.title} - ${song.artist}`;
+      li.onclick = () => {
+        i = index;
+        loadAndPlay(i);
+        saveUserInteraction();
+      };
+      playlist.appendChild(li);
+    });
+
+    function highlightActive(index) {
+      playlist.querySelectorAll("li").forEach((li, idx) => {
+        li.classList.toggle("active", idx === index);
+      });
+    }
+
+    function loadAndPlay(index) {
+      audio.src = base + songs[index].file;
+      audio.currentTime = 0;
+      audio.play().then(() => {
+        isPlaying = true;
+        playBtn.textContent = "⏸️";
+        title.textContent = `${songs[index].title} - ${songs[index].artist}`;
+        highlightActive(index);
+        savePlayState();
+      }).catch(() => {
+        
+        isPlaying = false;
+        playBtn.textContent = "▶️";
+      });
+    }
+
+    
+    audio.src = base + songs[i].file;
+    title.textContent = `${songs[i].title} - ${songs[i].artist}`;
+    highlightActive(i);
+
+    
+    window.addEventListener('load', () => {
+      audio.play().then(() => {
+        playBtn.textContent = "⏸️";
+        isPlaying = true;
+      }).catch(() => {
+        playBtn.textContent = "▶️";
+        isPlaying = false;
+      });
+    });
+
+    playBtn.onclick = () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = "⏸️";
+        isPlaying = true;
+        saveUserInteraction();
+      } else {
+        audio.pause();
+        playBtn.textContent = "▶️";
+        isPlaying = false;
+      }
+      savePlayState();
+    };
+
+    prevBtn.onclick = () => {
+      i = (i - 1 + songs.length) % songs.length;
+      loadAndPlay(i);
+      saveUserInteraction();
+    };
+
+    nextBtn.onclick = () => {
+      i = (i + 1) % songs.length;
+      loadAndPlay(i);
+      saveUserInteraction();
+    };
+
+    toggleBtn.onclick = () => {
+      panel.classList.toggle("show");
+    };
+
+    audio.ontimeupdate = () => {
+      savePlayState();
+    };
+
+    audio.onended = () => {
+      i = (i + 1) % songs.length;
+      loadAndPlay(i);
+      saveUserInteraction();
+    };
+  }
+
+  initMusicPanel();
+</script>
+
 </body>
 
 </html>
