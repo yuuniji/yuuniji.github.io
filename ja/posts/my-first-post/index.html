@@ -143,7 +143,7 @@ Git の初期化：">
     "ブログ構築", "GitHub"
   ],
   "articleBody": "Hugo ブログ + GitHub Pages 完全デプロイガイド ★環境準備 デバイス：MacBook（macOS） ツール： Git Hugo GitHub アカウント ◇Hugo のインストール brew install hugo インストールの確認：\nhugo version ★Hugo ブログの作成 mkdir blog \u0026\u0026 cd blog hugo new site . Git の初期化：\ngit init ★テーマの選択 \u0026 追加 PaperMod テーマを推奨：\ngit submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod config.toml を編集し、以下を追加：\ntheme = \"PaperMod\" baseURL = \"https://yuuniji.github.io\" ★ブログ記事の作成 最初の記事を作成：\nhugo new posts/hello-world.md content/posts/hello-world.md を編集：\n--- title: \"Hello World\" date: 2025-02-22T12:00:00 draft: false --- これは私の最初のブログ記事です！ ★ローカルプレビュー（初回デプロイ時はスキップ） hugo server -D ブラウザでアクセス：\nhttp://localhost:1313 ★GitHub への公開 ◇1. GitHub リポジトリの作成 blog（Hugo ソースコード用） yuuniji.github.io（生成された静的ファイル用） ◇2. blog リポジトリのプッシュ git remote add origin https://github.com/yuuniji/blog.git git branch -M main git add . git commit -m \"Initial commit\" git push -u origin main ◇3. 静的ファイルの生成 hugo -D 静的ファイルは public/ ディレクトリにあります。\n◇4. yuuniji.github.io へのプッシュ cd public git init git remote add origin https://github.com/yuuniji/yuuniji.github.io.git git checkout -b main git add . git commit -m \"Deploy Hugo site\" git push -f origin main ★GitHub Pages の設定 yuuniji.github.io リポジトリの Settings → Pages に移動。 main ブランチを選択し、保存後デプロイ完了を待つ。 https://yuuniji.github.io にアクセスしてブログを確認。 ★自動デプロイ（オプション） ◇1. blog リポジトリに deploy.sh を追加 nano deploy.sh 以下を貼り付け：\n#!/bin/bash hugo -D cd public git add . git commit -m \"Deploy: $(date)\" git push origin main cd .. 保存して終了（Ctrl + X、Y、Enter）。\n◇2. 実行権限を付与 chmod +x deploy.sh ◇3. デプロイスクリプトの実行 ./deploy.sh ★完成！ 以降のブログ更新は、以下の手順で行います：\nblog/ ディレクトリで記事を作成 hugo new posts/xxx.md ./deploy.sh を実行 https://yuuniji.github.io にアクセスして更新を確認 💡 問題があればこのノートを参照してください！ 🚀\n★Hugo ブログの多言語対応 \u0026 機能拡張ガイド ◇クイックリンク baseURL = \"https://yuuniji.github.io\" title = \"Yuuniji的博客\" theme = \"PaperMod\" defaultContentLanguage = \"zh\" hasCJKLanguage = true [languages] [languages.zh] languageName = \"中文\" weight = 1 contentDir = \"content/zh\" [languages.zh.params] archivesTitle = \"归档\" archivesDescription = \"按年份和月份查看文章归档\" [languages.zh.menu] [[languages.zh.menu.main]] name = \"首页\" url = \"/\" weight = 1 [[languages.zh.menu.main]] name = \"关于\" url = \"/about/\" weight = 2 [[languages.zh.menu.main]] name = \"标签\" url = \"/tags/\" weight = 3 [[languages.zh.menu.main]] name = \"归档\" url = \"/archives/\" weight = 4 [[languages.zh.menu.main]] name = \"搜索\" url = \"/search/\" weight = 5 [languages.en] languageName = \"English\" weight = 2 contentDir = \"content/en\" [languages.en.params] archivesTitle = \"Archives\" archivesDescription = \"Browse articles by year and month\" [languages.en.menu] [[languages.en.menu.main]] name = \"Home\" url = \"/\" weight = 1 [[languages.en.menu.main]] name = \"About\" url = \"/about/\" weight = 2 [[languages.en.menu.main]] name = \"Tags\" url = \"/tags/\" weight = 3 [[languages.en.menu.main]] name = \"Archives\" url = \"/archives/\" weight = 4 [[languages.en.menu.main]] name = \"Search\" url = \"/search/\" weight = 5 [languages.ja] languageName = \"日本語\" weight = 3 contentDir = \"content/ja\" [languages.ja.params] archivesTitle = \"アーカイブ\" archivesDescription = \"年と月ごとに記事を表示\" [languages.ja.menu] [[languages.ja.menu.main]] name = \"ホーム\" url = \"/\" weight = 1 [[languages.ja.menu.main]] name = \"について\" url = \"/about/\" weight = 2 [[languages.ja.menu.main]] name = \"タグ\" url = \"/tags/\" weight = 3 [[languages.ja.menu.main]] name = \"アーカイブ\" url = \"/archives/\" weight = 4 [[languages.ja.menu.main]] name = \"検索\" url = \"/search/\" weight = 5 [outputs] home = [\"HTML\", \"RSS\", \"JSON\", \"SITEMAP\"] section = [\"HTML\", \"RSS\"] archives = [\"HTML\"] search = [\"HTML\"] [params] author = \"Yuuniji\" defaultTheme = \"auto\" ShowAllPagesInArchive = true ShowShareButtons = true ShowReadingTime = true ShowToc = true TocOpen = false ShowBreadCrumbs = true ShowCodeCopyButtons = true ShowPostNavLinks = true ShowRssButtonInSectionTermList = true archives = true [params.fuseOpts] isCaseSensitive = false shouldSort = true location = 0 distance = 1_000 threshold = 0.4 minMatchCharLength = 0 keys = [ \"title\", \"permalink\", \"summary\", \"content\" ] [content] archivesDir = \"content/archives\" ◇1. ディレクトリ構造 hugo.toml の設定に従い、content ディレクトリの構造は以下のようになります：\ncontent/ ├── zh/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── en/ │ ├── _index.md │ ├── about.md │ ├── archives.md │ ├── search.md │ ├── categories/_index.md │ ├── posts/_index.md │ ├── tags/_index.md ├── ja/ ├── _index.md ├── about.md ├── archives.md ├── search.md ├── categories/_index.md ├── posts/_index.md ├── tags/_index.md また、archetypes ディレクトリを作成し、各言語に対応させます：\narchetypes/ ├── default.md ├── zh.md ├── en.md ├── ja.md ◇2. archetypes ディレクトリの設定 各言語の archetypes ファイルは、デフォルトの front matter を設定するために使用されます。\nデフォルト archetypes/default.md --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] --- archetypes/zh.md（中文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"zh\" --- archetypes/en.md（英文） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"en\" --- archetypes/ja.md（日本語） --- title: \"{{ replace .Name \"-\" \" \" | title }}\" date: {{ .Date }} draft: true tags: [] categories: [] lang: \"ja\" --- ◇3. 各言語の記事作成 --kind オプションを使用して archetypes を指定し、対応する content/ ディレクトリに記事を作成します。\n中文記事 hugo new content/zh/posts/my-first-post1.md これにより、content/zh/posts/ ディレクトリに my-first-post.md が作成され、archetypes/zh.md がテンプレートとして使用されます。\n英文記事 hugo new content/en/posts/my-first-post1.md これにより、content/en/posts/ ディレクトリに my-first-post.md が作成され、archetypes/en.md がテンプレートとして使用されます。\n日本語記事 hugo new content/ja/posts/my-first-post1.md これにより、content/ja/posts/ ディレクトリに my-first-post.md が作成され、archetypes/ja.md がテンプレートとして使用されます。\n自動化による多言語記事の作成 create_multilingual_post.sh スクリプト\n#!/bin/bash # 入力パラメータが存在するか確認 if [ -z \"$1\" ]; then echo \"記事のタイトルを入力してください。\" exit 1 fi TITLE=\"$1\" DATE=$(date +%Y-%m-%d) # 記事のファイル名を作成（単語をハイフンで区切る） POST_NAME=$(echo \"$TITLE\" | tr \" \" \"-\") # 中国語の記事を生成 mkdir -p \"content/zh/posts\" cat \u003e \"content/zh/posts/$POST_NAME.md\" \u003c",
-  "wordCount" : "8494",
+  "wordCount" : "8504",
   "inLanguage": "ja",
   "datePublished": "2025-02-22T00:00:00Z",
   "dateModified": "2025-02-22T00:00:00Z",
@@ -1236,313 +1236,350 @@ Git の初期化：">
 </ul>
 <h3 id="実装手順-1">◇実装手順<a hidden class="anchor" aria-hidden="true" href="#実装手順-1">#</a></h3>
 <ol>
-<li>
-<p><strong>ファイル layouts/partials/musicplayer.html を作成：</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span> <span style="color:#75715e">&lt;!-- layouts/partials/musicplayer.html --&gt;</span>
-</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">style</span>&gt;
-</span></span><span style="display:flex;"><span>   #mini-player-wrapper {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">fixed</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">9999</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">font-family</span>: system-ui, <span style="color:#66d9ef">sans-serif</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>   }
+<li><strong>ファイル layouts/partials/musicplayer.html を作成：</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- layouts/partials/musicplayer.html --&gt;</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">scoped</span>&gt;
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">fixed</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">9999</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-family</span>: system-ui, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #music-panel {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.1</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 半透明背景 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.2</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 半透明边框 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">180</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">overflow-y</span>: <span style="color:#66d9ef">auto</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">32</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 增强阴影效果 */</span>
-</span></span><span style="display:flex;"><span>     backdrop-filter: blur(<span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>) saturate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">%</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 毛玻璃效果 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">-webkit-</span>backdrop-filter: blur(<span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>) saturate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">%</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* Safari 支持 */</span>
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">music-panel</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.2</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">max-height</span>: <span style="color:#ae81ff">180</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">overflow-y</span>: <span style="color:#66d9ef">auto</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">32</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>);
+</span></span><span style="display:flex;"><span>    backdrop-filter: blur(<span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>) saturate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">%</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-webkit-</span>backdrop-filter: blur(<span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>) saturate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">%</span>);
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #music-panel.<span style="color:#a6e22e">show</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">music-panel</span>.<span style="color:#a6e22e">show</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #music-title {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>primary);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* Theme&#39;s primary text color */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">font-weight</span>: <span style="color:#ae81ff">500</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">text-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 文字阴影增强可读性 */</span>
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">music-title</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>primary, <span style="color:#ae81ff">#333</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-weight</span>: <span style="color:#ae81ff">500</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">text-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>);
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #playlist {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">list-style</span>: <span style="color:#66d9ef">none</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">playlist</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">list-style</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #playlist <span style="color:#f92672">li</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>content);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* Theme&#39;s content text color */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">text-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.2</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 文字阴影 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 平滑过渡效果 */</span>
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">playlist</span> <span style="color:#f92672">li</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>content, <span style="color:#ae81ff">#666</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">text-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.2</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #playlist <span style="color:#f92672">li</span>:<span style="color:#a6e22e">hover</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.15</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 半透明悬停背景 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">transform</span>: translateY(<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 轻微上移效果 */</span>
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">playlist</span> <span style="color:#f92672">li</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.15</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transform</span>: translateY(<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>);
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #playlist <span style="color:#f92672">li</span>.<span style="color:#a6e22e">active</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.2</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 半透明激活背景 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>accent);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* Theme&#39;s accent color */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">font-weight</span>: <span style="color:#ae81ff">600</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.3</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 激活状态边框 */</span>
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">playlist</span> <span style="color:#f92672">li</span>.<span style="color:#a6e22e">active</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.2</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>accent, <span style="color:#ae81ff">#007acc</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-weight</span>: <span style="color:#ae81ff">600</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.3</span>);
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #mini-player {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.1</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 半透明背景 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.2</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 半透明边框 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">gap</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">32</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 增强阴影 */</span>
-</span></span><span style="display:flex;"><span>     backdrop-filter: blur(<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>) saturate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">%</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 毛玻璃效果 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">-webkit-</span>backdrop-filter: blur(<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>) saturate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">%</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* Safari 支持 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.3</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 平滑过渡 */</span>
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">mini-player</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.2</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">gap</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">32</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>);
+</span></span><span style="display:flex;"><span>    backdrop-filter: blur(<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>) saturate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">%</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-webkit-</span>backdrop-filter: blur(<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>) saturate(<span style="color:#ae81ff">180</span><span style="color:#66d9ef">%</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.3</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #mini-player:<span style="color:#a6e22e">hover</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.15</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 悬停时稍微增加透明度 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">transform</span>: translateY(<span style="color:#ae81ff">-2</span><span style="color:#66d9ef">px</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 悬停上移效果 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.4</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 悬停增强阴影 */</span>
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">mini-player</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.15</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transform</span>: translateY(<span style="color:#ae81ff">-2</span><span style="color:#66d9ef">px</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">12</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.4</span>);
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #mini-player <span style="color:#f92672">button</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">none</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>secondary);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* Theme&#39;s secondary text color */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 按钮过渡效果 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">text-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 按钮文字阴影 */</span>
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">mini-player</span> <span style="color:#f92672">button</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>secondary, <span style="color:#ae81ff">#888</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">text-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>);
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #mini-player <span style="color:#f92672">button</span>:<span style="color:#a6e22e">hover</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>accent);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* Theme&#39;s accent color on hover */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.1</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 悬停背景 */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">1.1</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 悬停放大效果 */</span>
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">mini-player</span> <span style="color:#f92672">button</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>accent, <span style="color:#ae81ff">#007acc</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">1.1</span>);
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #mini-player <span style="color:#f92672">button</span>:<span style="color:#a6e22e">active</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>accent<span style="color:#f92672">-</span>active);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* Theme&#39;s active accent color */</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">0.95</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">/* 点击缩小效果 */</span>
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">mini-player</span> <span style="color:#f92672">button</span>:<span style="color:#a6e22e">active</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>accent<span style="color:#f92672">-</span>active, <span style="color:#ae81ff">#005a99</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">0.95</span>);
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">audio</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> <span style="color:#f92672">audio</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#75715e">/* 滚动条美化 */</span>
-</span></span><span style="display:flex;"><span>   #music-panel::<span style="color:#a6e22e">-webkit-scrollbar</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* 滚动条美化 */</span>
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">music-panel</span>::<span style="color:#a6e22e">-webkit-scrollbar</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #music-panel::<span style="color:#a6e22e">-webkit-scrollbar-track</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.1</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">music-panel</span>::<span style="color:#a6e22e">-webkit-scrollbar-track</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #music-panel::<span style="color:#a6e22e">-webkit-scrollbar-thumb</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.3</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">music-panel</span>::<span style="color:#a6e22e">-webkit-scrollbar-thumb</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.3</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   #music-panel::<span style="color:#a6e22e">-webkit-scrollbar-thumb</span>:<span style="color:#a6e22e">hover</span> {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.5</span>);
-</span></span><span style="display:flex;"><span>   }
-</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">music-player-container</span> .<span style="color:#a6e22e">music-panel</span>::<span style="color:#a6e22e">-webkit-scrollbar-thumb</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.5</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mini-player-wrapper&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;music-panel&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;music-title&#34;</span>&gt;Loading...&lt;/<span style="color:#f92672">div</span>&gt;
-</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;playlist&#34;</span>&gt;&lt;/<span style="color:#f92672">ul</span>&gt;
-</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">div</span>&gt;
-</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mini-player&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;toggle-panel&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Toggle Playlist&#34;</span>&gt;📂&lt;/<span style="color:#f92672">button</span>&gt;
-</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prev-btn&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Previous&#34;</span>&gt;⏮️&lt;/<span style="color:#f92672">button</span>&gt;
-</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;play-btn&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Play&#34;</span>&gt;▶️&lt;/<span style="color:#f92672">button</span>&gt;
-</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;next-btn&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Next&#34;</span>&gt;⏭️&lt;/<span style="color:#f92672">button</span>&gt;
-</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">div</span>&gt;
-</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">audio</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mini-audio&#34;</span>&gt;&lt;/<span style="color:#f92672">audio</span>&gt;
-</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;music-player-container&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;musicPlayerContainer&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;music-panel&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;musicPanel&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;music-title&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;musicTitle&#34;</span>&gt;Loading...&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;playlist&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;musicPlaylist&#34;</span>&gt;&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mini-player&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;miniPlayer&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;musicTogglePanel&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Toggle Playlist&#34;</span>&gt;📂&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;musicPrevBtn&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Previous&#34;</span>&gt;⏮️&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;musicPlayBtn&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Play&#34;</span>&gt;▶️&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;musicNextBtn&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Next&#34;</span>&gt;⏭️&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">audio</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;musicAudio&#34;</span>&gt;&lt;/<span style="color:#f92672">audio</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">base</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://yuuniji.github.io/music/lofi_beats/&#34;</span>;
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">jsonURL</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">base</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;songs.json&#34;</span>;
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">STORAGE_KEY</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hugo_music_player_state&#34;</span>;
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">INTERACT_KEY</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hugo_music_player_user_interacted&#34;</span>;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;use strict&#39;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 命名空间前缀，避免全局冲突
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MUSIC_PLAYER_NS</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;HugoMusicPlayer_&#39;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">base</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://yuuniji.github.io/music/lofi_beats/&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">jsonURL</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">base</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;songs.json&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">STORAGE_KEY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">MUSIC_PLAYER_NS</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;state&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">INTERACT_KEY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">MUSIC_PLAYER_NS</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;user_interacted&#34;</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initMusicPanel</span>() {
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">jsonURL</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">songs</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>();
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>) <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initMusicPanel</span>() {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">jsonURL</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">songs</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>) <span style="color:#66d9ef">return</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">audio</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;mini-audio&#34;</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">playBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;play-btn&#34;</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prevBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;prev-btn&#34;</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">nextBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;next-btn&#34;</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">toggleBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;toggle-panel&#34;</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">panel</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;music-panel&#34;</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;music-title&#34;</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">playlist</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;playlist&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">currentIndex</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 使用带命名空间的ID选择器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">audio</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;musicAudio&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">playBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;musicPlayBtn&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prevBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;musicPrevBtn&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">nextBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;musicNextBtn&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">toggleBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;musicTogglePanel&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">panel</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;musicPanel&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;musicTitle&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">playlist</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;musicPlaylist&#34;</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">savedStateStr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">STORAGE_KEY</span>);
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">savedStateStr</span>) {
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">saved</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">savedStateStr</span>);
-</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">saved</span>.<span style="color:#a6e22e">index</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">saved</span>.<span style="color:#a6e22e">index</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>) {
-</span></span><span style="display:flex;"><span>           <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saved</span>.<span style="color:#a6e22e">index</span>;
-</span></span><span style="display:flex;"><span>           <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">currentTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saved</span>.<span style="color:#a6e22e">time</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>           <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saved</span>.<span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>         }
-</span></span><span style="display:flex;"><span>       } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) { }
-</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 检查元素是否存在
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">audio</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">playBtn</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">prevBtn</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">nextBtn</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">toggleBtn</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">panel</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">title</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">playlist</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#39;Music player elements not found&#39;</span>);
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">song</span>, <span style="color:#a6e22e">index</span>) =&gt; {
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">li</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">song</span>.<span style="color:#a6e22e">title</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> () =&gt; {
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">index</span>;
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">loadAndPlay</span>(<span style="color:#a6e22e">i</span>);
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#a6e22e">INTERACT_KEY</span>, <span style="color:#e6db74">&#34;true&#34;</span>);
-</span></span><span style="display:flex;"><span>       };
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">playlist</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">li</span>);
-</span></span><span style="display:flex;"><span>     });
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 恢复保存的状态
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">savedStateStr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">STORAGE_KEY</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">savedStateStr</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">saved</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">savedStateStr</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">saved</span>.<span style="color:#a6e22e">index</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">saved</span>.<span style="color:#a6e22e">index</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">currentIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saved</span>.<span style="color:#a6e22e">index</span>;
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">currentTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saved</span>.<span style="color:#a6e22e">time</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saved</span>.<span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#39;Failed to parse saved music player state:&#39;</span>, <span style="color:#a6e22e">e</span>);
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">highlight</span>(<span style="color:#a6e22e">index</span>) {
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">playlist</span>.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;li&#34;</span>).<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">li</span>, <span style="color:#a6e22e">idx</span>) =&gt; {
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">toggle</span>(<span style="color:#e6db74">&#34;active&#34;</span>, <span style="color:#a6e22e">idx</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">index</span>);
-</span></span><span style="display:flex;"><span>       });
-</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 构建播放列表
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">song</span>, <span style="color:#a6e22e">index</span>) =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">li</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">song</span>.<span style="color:#a6e22e">title</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">currentIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">index</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">loadAndPlay</span>(<span style="color:#a6e22e">currentIndex</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#a6e22e">INTERACT_KEY</span>, <span style="color:#e6db74">&#34;true&#34;</span>);
+</span></span><span style="display:flex;"><span>          };
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">playlist</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">li</span>);
+</span></span><span style="display:flex;"><span>        });
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadAndPlay</span>(<span style="color:#a6e22e">index</span>) {
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">base</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">songs</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">file</span>;
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">currentTime</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">play</span>().<span style="color:#a6e22e">then</span>(() =&gt; {
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;⏸️&#34;</span>;
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">songs</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">title</span>;
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">highlight</span>(<span style="color:#a6e22e">index</span>);
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">saveState</span>();
-</span></span><span style="display:flex;"><span>       }).<span style="color:#66d9ef">catch</span>(() =&gt; {
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;▶️&#34;</span>;
-</span></span><span style="display:flex;"><span>       });
-</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">highlight</span>(<span style="color:#a6e22e">index</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">listItems</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">playlist</span>.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">listItems</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">li</span>, <span style="color:#a6e22e">idx</span>) =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">li</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">toggle</span>(<span style="color:#e6db74">&#34;active&#34;</span>, <span style="color:#a6e22e">idx</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">index</span>);
+</span></span><span style="display:flex;"><span>          });
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">saveState</span>() {
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#a6e22e">STORAGE_KEY</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">index</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">i</span>,
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">currentTime</span>,
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">isPlaying</span><span style="color:#f92672">:</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">paused</span>
-</span></span><span style="display:flex;"><span>       }));
-</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadAndPlay</span>(<span style="color:#a6e22e">index</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">base</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">songs</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">file</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">currentTime</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">play</span>().<span style="color:#a6e22e">then</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;⏸️&#34;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">songs</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">title</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">highlight</span>(<span style="color:#a6e22e">index</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">saveState</span>();
+</span></span><span style="display:flex;"><span>          }).<span style="color:#66d9ef">catch</span>((<span style="color:#a6e22e">error</span>) =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#39;Failed to play audio:&#39;</span>, <span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;▶️&#34;</span>;
+</span></span><span style="display:flex;"><span>          });
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">// 初始化显示
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">base</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">songs</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">file</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">songs</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">title</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">highlight</span>(<span style="color:#a6e22e">i</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">saveState</span>() {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#a6e22e">STORAGE_KEY</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">index</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">currentIndex</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">currentTime</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">isPlaying</span><span style="color:#f92672">:</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">paused</span>
+</span></span><span style="display:flex;"><span>            }));
+</span></span><span style="display:flex;"><span>          } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#39;Failed to save music player state:&#39;</span>, <span style="color:#a6e22e">e</span>);
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;load&#34;</span>, () =&gt; {
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">play</span>().<span style="color:#a6e22e">then</span>(() =&gt; {
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;⏸️&#34;</span>;
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>       }).<span style="color:#66d9ef">catch</span>(() =&gt; {
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;▶️&#34;</span>;
-</span></span><span style="display:flex;"><span>       });
-</span></span><span style="display:flex;"><span>     });
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 初始化显示
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">base</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">songs</span>[<span style="color:#a6e22e">currentIndex</span>].<span style="color:#a6e22e">file</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">songs</span>[<span style="color:#a6e22e">currentIndex</span>].<span style="color:#a6e22e">title</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">highlight</span>(<span style="color:#a6e22e">currentIndex</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> () =&gt; {
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">paused</span>) {
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">play</span>();
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;⏸️&#34;</span>;
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>       } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">pause</span>();
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;▶️&#34;</span>;
-</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>       }
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">saveState</span>();
-</span></span><span style="display:flex;"><span>     };
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 更新播放按钮状态的函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">updatePlayButton</span>() {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">paused</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;▶️&#34;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>          } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;⏸️&#34;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">prevBtn</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> () =&gt; {
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>;
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">loadAndPlay</span>(<span style="color:#a6e22e">i</span>);
-</span></span><span style="display:flex;"><span>     };
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 事件监听器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">playBtn</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">paused</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">play</span>().<span style="color:#a6e22e">then</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">updatePlayButton</span>();
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">saveState</span>();
+</span></span><span style="display:flex;"><span>            }).<span style="color:#66d9ef">catch</span>((<span style="color:#a6e22e">error</span>) =&gt; {
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#39;Failed to play audio:&#39;</span>, <span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">updatePlayButton</span>();
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>          } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">pause</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">updatePlayButton</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">saveState</span>();
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        };
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">nextBtn</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> () =&gt; {
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>;
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">loadAndPlay</span>(<span style="color:#a6e22e">i</span>);
-</span></span><span style="display:flex;"><span>     };
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">prevBtn</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">currentIndex</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">currentIndex</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">loadAndPlay</span>(<span style="color:#a6e22e">currentIndex</span>);
+</span></span><span style="display:flex;"><span>        };
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">toggleBtn</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> () =&gt; {
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">panel</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">toggle</span>(<span style="color:#e6db74">&#34;show&#34;</span>);
-</span></span><span style="display:flex;"><span>     };
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">nextBtn</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">currentIndex</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">currentIndex</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">loadAndPlay</span>(<span style="color:#a6e22e">currentIndex</span>);
+</span></span><span style="display:flex;"><span>        };
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">ontimeupdate</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saveState</span>;
-</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">onended</span> <span style="color:#f92672">=</span> () =&gt; {
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>;
-</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">loadAndPlay</span>(<span style="color:#a6e22e">i</span>);
-</span></span><span style="display:flex;"><span>     };
-</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">toggleBtn</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">panel</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">toggle</span>(<span style="color:#e6db74">&#34;show&#34;</span>);
+</span></span><span style="display:flex;"><span>        };
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">initMusicPanel</span>();
-</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">script</span>&gt;
-</span></span></code></pre></div></li>
-<li>
-<p><strong>テンプレートにパーツを組み込む</strong></p>
-</li>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 音频事件监听
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">ontimeupdate</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saveState</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">onplay</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">updatePlayButton</span>();
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">saveState</span>();
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">onpause</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">updatePlayButton</span>();
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">saveState</span>();
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">onended</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">currentIndex</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">currentIndex</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">songs</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">loadAndPlay</span>(<span style="color:#a6e22e">currentIndex</span>);
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 页面加载完成后尝试自动播放
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (document.<span style="color:#a6e22e">readyState</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;complete&#39;</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">tryAutoPlay</span>();
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>          window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;load&#34;</span>, <span style="color:#a6e22e">tryAutoPlay</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">tryAutoPlay</span>() {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">audio</span>.<span style="color:#a6e22e">play</span>().<span style="color:#a6e22e">then</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">updatePlayButton</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">saveState</span>();
+</span></span><span style="display:flex;"><span>          }).<span style="color:#66d9ef">catch</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">updatePlayButton</span>();
+</span></span><span style="display:flex;"><span>          });
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;Failed to initialize music player:&#39;</span>, <span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 确保DOM加载完成后再初始化
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (document.<span style="color:#a6e22e">readyState</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;loading&#39;</span>) {
+</span></span><span style="display:flex;"><span>      document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#a6e22e">initMusicPanel</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">initMusicPanel</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  })();
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><ol start="2">
+<li><strong>テンプレートにパーツを組み込む</strong></li>
 </ol>
 <p><code>layouts/_default/baseof.html</code> または <code>layouts/_default/single.html</code> など、メインのレイアウトテンプレートの <code>&lt;/body&gt;</code> タグの直前に以下のコードを追加してください：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ partial &#34;musicplayer.html&#34; . }}
@@ -1837,10 +1874,8 @@ Git の初期化：">
 </style>
     
 
-
-
-<style>
-  #mini-player-wrapper {
+<style scoped>
+  .music-player-container {
     position: fixed;
     bottom: 12px;
     right: 12px;
@@ -1849,295 +1884,333 @@ Git の初期化：">
     font-size: 13px;
   }
 
-  #music-panel {
+  .music-player-container .music-panel {
     display: none;
     margin-bottom: 6px;
     background: rgba(255, 255, 255, 0.1);
-     
     border: 1px solid rgba(255, 255, 255, 0.2);
-     
     border-radius: 12px;
     padding: 12px 14px;
     width: 200px;
     max-height: 180px;
     overflow-y: auto;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-     
     backdrop-filter: blur(16px) saturate(180%);
-     
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-     
   }
 
-  #music-panel.show {
+  .music-player-container .music-panel.show {
     display: block;
   }
 
-  #music-title {
+  .music-player-container .music-title {
     font-size: 13px;
-    color: var(--primary);
-     
+    color: var(--primary, #333);
     font-weight: 500;
     margin-bottom: 6px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-     
   }
 
-  #playlist {
+  .music-player-container .playlist {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  #playlist li {
+  .music-player-container .playlist li {
     padding: 4px 6px;
     border-radius: 6px;
     cursor: pointer;
-    color: var(--content);
-     
+    color: var(--content, #666);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-     
     transition: all 0.2s ease;
-     
   }
 
-  #playlist li:hover {
+  .music-player-container .playlist li:hover {
     background: rgba(255, 255, 255, 0.15);
-     
     transform: translateY(-1px);
-     
   }
 
-  #playlist li.active {
+  .music-player-container .playlist li.active {
     background: rgba(255, 255, 255, 0.2);
-     
-    color: var(--accent);
-     
+    color: var(--accent, #007acc);
     font-weight: 600;
     border: 1px solid rgba(255, 255, 255, 0.3);
-     
   }
 
-  #mini-player {
+  .music-player-container .mini-player {
     background: rgba(255, 255, 255, 0.1);
-     
     border: 1px solid rgba(255, 255, 255, 0.2);
-     
     border-radius: 100px;
     display: flex;
     gap: 8px;
     padding: 6px 10px;
     align-items: center;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-     
     backdrop-filter: blur(20px) saturate(180%);
-     
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-     
     transition: all 0.3s ease;
-     
   }
 
-  #mini-player:hover {
+  .music-player-container .mini-player:hover {
     background: rgba(255, 255, 255, 0.15);
-     
     transform: translateY(-2px);
-     
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-     
   }
 
-  #mini-player button {
+  .music-player-container .mini-player button {
     background: none;
     border: none;
     font-size: 16px;
-    color: var(--secondary);
-     
+    color: var(--secondary, #888);
     cursor: pointer;
     padding: 4px;
     border-radius: 50%;
     transition: all 0.2s ease;
-     
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-     
   }
 
-  #mini-player button:hover {
-    color: var(--accent);
-     
+  .music-player-container .mini-player button:hover {
+    color: var(--accent, #007acc);
     background: rgba(255, 255, 255, 0.1);
-     
     transform: scale(1.1);
-     
   }
 
-  #mini-player button:active {
-    color: var(--accent-active);
-     
+  .music-player-container .mini-player button:active {
+    color: var(--accent-active, #005a99);
     transform: scale(0.95);
-     
   }
 
-  audio {
+  .music-player-container audio {
     display: none;
   }
 
    
-  #music-panel::-webkit-scrollbar {
+  .music-player-container .music-panel::-webkit-scrollbar {
     width: 4px;
   }
 
-  #music-panel::-webkit-scrollbar-track {
+  .music-player-container .music-panel::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 2px;
   }
 
-  #music-panel::-webkit-scrollbar-thumb {
+  .music-player-container .music-panel::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 2px;
   }
 
-  #music-panel::-webkit-scrollbar-thumb:hover {
+  .music-player-container .music-panel::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
   }
 </style>
 
-<div id="mini-player-wrapper">
-  <div id="music-panel">
-    <div id="music-title">Loading...</div>
-    <ul id="playlist"></ul>
+<div class="music-player-container" id="musicPlayerContainer">
+  <div class="music-panel" id="musicPanel">
+    <div class="music-title" id="musicTitle">Loading...</div>
+    <ul class="playlist" id="musicPlaylist"></ul>
   </div>
-  <div id="mini-player">
-    <button id="toggle-panel" title="Toggle Playlist">📂</button>
-    <button id="prev-btn" title="Previous">⏮️</button>
-    <button id="play-btn" title="Play">▶️</button>
-    <button id="next-btn" title="Next">⏭️</button>
+  <div class="mini-player" id="miniPlayer">
+    <button id="musicTogglePanel" title="Toggle Playlist">📂</button>
+    <button id="musicPrevBtn" title="Previous">⏮️</button>
+    <button id="musicPlayBtn" title="Play">▶️</button>
+    <button id="musicNextBtn" title="Next">⏭️</button>
   </div>
-  <audio id="mini-audio"></audio>
+  <audio id="musicAudio"></audio>
 </div>
 
 <script>
-  const base = "https://yuuniji.github.io/music/lofi_beats/";
-  const jsonURL = base + "songs.json";
-  const STORAGE_KEY = "hugo_music_player_state";
-  const INTERACT_KEY = "hugo_music_player_user_interacted";
+  (function() {
+    'use strict';
+    
+    
+    const MUSIC_PLAYER_NS = 'HugoMusicPlayer_';
+    
+    const base = "https://yuuniji.github.io/music/lofi_beats/";
+    const jsonURL = base + "songs.json";
+    const STORAGE_KEY = MUSIC_PLAYER_NS + "state";
+    const INTERACT_KEY = MUSIC_PLAYER_NS + "user_interacted";
 
-  async function initMusicPanel() {
-    const res = await fetch(jsonURL);
-    const songs = await res.json();
-    if (!songs.length) return;
-
-    let i = 0, isPlaying = false;
-    const audio = document.getElementById("mini-audio");
-    const playBtn = document.getElementById("play-btn");
-    const prevBtn = document.getElementById("prev-btn");
-    const nextBtn = document.getElementById("next-btn");
-    const toggleBtn = document.getElementById("toggle-panel");
-    const panel = document.getElementById("music-panel");
-    const title = document.getElementById("music-title");
-    const playlist = document.getElementById("playlist");
-
-    const savedStateStr = localStorage.getItem(STORAGE_KEY);
-    if (savedStateStr) {
+    async function initMusicPanel() {
       try {
-        const saved = JSON.parse(savedStateStr);
-        if (saved.index >= 0 && saved.index < songs.length) {
-          i = saved.index;
-          audio.currentTime = saved.time || 0;
-          isPlaying = saved.isPlaying || false;
+        const res = await fetch(jsonURL);
+        const songs = await res.json();
+        if (!songs.length) return;
+
+        let currentIndex = 0;
+        let isPlaying = false;
+        
+        
+        const audio = document.getElementById("musicAudio");
+        const playBtn = document.getElementById("musicPlayBtn");
+        const prevBtn = document.getElementById("musicPrevBtn");
+        const nextBtn = document.getElementById("musicNextBtn");
+        const toggleBtn = document.getElementById("musicTogglePanel");
+        const panel = document.getElementById("musicPanel");
+        const title = document.getElementById("musicTitle");
+        const playlist = document.getElementById("musicPlaylist");
+
+        
+        if (!audio || !playBtn || !prevBtn || !nextBtn || !toggleBtn || !panel || !title || !playlist) {
+          console.warn('Music player elements not found');
+          return;
         }
-      } catch (e) { }
-    }
 
-    songs.forEach((song, index) => {
-      const li = document.createElement("li");
-      li.textContent = `${song.title}`;
-      li.onclick = () => {
-        i = index;
-        loadAndPlay(i);
-        localStorage.setItem(INTERACT_KEY, "true");
-      };
-      playlist.appendChild(li);
-    });
+        
+        const savedStateStr = localStorage.getItem(STORAGE_KEY);
+        if (savedStateStr) {
+          try {
+            const saved = JSON.parse(savedStateStr);
+            if (saved.index >= 0 && saved.index < songs.length) {
+              currentIndex = saved.index;
+              audio.currentTime = saved.time || 0;
+              isPlaying = saved.isPlaying || false;
+            }
+          } catch (e) {
+            console.warn('Failed to parse saved music player state:', e);
+          }
+        }
 
-    function highlight(index) {
-      playlist.querySelectorAll("li").forEach((li, idx) => {
-        li.classList.toggle("active", idx === index);
-      });
-    }
+        
+        songs.forEach((song, index) => {
+          const li = document.createElement("li");
+          li.textContent = song.title;
+          li.onclick = function() {
+            currentIndex = index;
+            loadAndPlay(currentIndex);
+            localStorage.setItem(INTERACT_KEY, "true");
+          };
+          playlist.appendChild(li);
+        });
 
-    function loadAndPlay(index) {
-      audio.src = base + songs[index].file;
-      audio.currentTime = 0;
-      audio.play().then(() => {
-        isPlaying = true;
-        playBtn.textContent = "⏸️";
-        title.textContent = songs[index].title;
-        highlight(index);
-        saveState();
-      }).catch(() => {
-        isPlaying = false;
-        playBtn.textContent = "▶️";
-      });
-    }
+        function highlight(index) {
+          const listItems = playlist.querySelectorAll("li");
+          listItems.forEach((li, idx) => {
+            li.classList.toggle("active", idx === index);
+          });
+        }
 
-    function saveState() {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        index: i,
-        time: audio.currentTime,
-        isPlaying: !audio.paused
-      }));
+        function loadAndPlay(index) {
+          audio.src = base + songs[index].file;
+          audio.currentTime = 0;
+          audio.play().then(() => {
+            isPlaying = true;
+            playBtn.textContent = "⏸️";
+            title.textContent = songs[index].title;
+            highlight(index);
+            saveState();
+          }).catch((error) => {
+            console.warn('Failed to play audio:', error);
+            isPlaying = false;
+            playBtn.textContent = "▶️";
+          });
+        }
+
+        function saveState() {
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({
+              index: currentIndex,
+              time: audio.currentTime,
+              isPlaying: !audio.paused
+            }));
+          } catch (e) {
+            console.warn('Failed to save music player state:', e);
+          }
+        }
+
+        
+        audio.src = base + songs[currentIndex].file;
+        title.textContent = songs[currentIndex].title;
+        highlight(currentIndex);
+
+        
+        function updatePlayButton() {
+          if (audio.paused) {
+            playBtn.textContent = "▶️";
+            isPlaying = false;
+          } else {
+            playBtn.textContent = "⏸️";
+            isPlaying = true;
+          }
+        }
+
+        
+        playBtn.onclick = function() {
+          if (audio.paused) {
+            audio.play().then(() => {
+              updatePlayButton();
+              saveState();
+            }).catch((error) => {
+              console.warn('Failed to play audio:', error);
+              updatePlayButton();
+            });
+          } else {
+            audio.pause();
+            updatePlayButton();
+            saveState();
+          }
+        };
+
+        prevBtn.onclick = function() {
+          currentIndex = (currentIndex - 1 + songs.length) % songs.length;
+          loadAndPlay(currentIndex);
+        };
+
+        nextBtn.onclick = function() {
+          currentIndex = (currentIndex + 1) % songs.length;
+          loadAndPlay(currentIndex);
+        };
+
+        toggleBtn.onclick = function() {
+          panel.classList.toggle("show");
+        };
+
+        
+        audio.ontimeupdate = saveState;
+        
+        audio.onplay = function() {
+          updatePlayButton();
+          saveState();
+        };
+        
+        audio.onpause = function() {
+          updatePlayButton();
+          saveState();
+        };
+        
+        audio.onended = function() {
+          currentIndex = (currentIndex + 1) % songs.length;
+          loadAndPlay(currentIndex);
+        };
+
+        
+        if (document.readyState === 'complete') {
+          tryAutoPlay();
+        } else {
+          window.addEventListener("load", tryAutoPlay);
+        }
+
+        function tryAutoPlay() {
+          audio.play().then(() => {
+            updatePlayButton();
+            saveState();
+          }).catch(() => {
+            updatePlayButton();
+          });
+        }
+
+      } catch (error) {
+        console.error('Failed to initialize music player:', error);
+      }
     }
 
     
-    audio.src = base + songs[i].file;
-    title.textContent = songs[i].title;
-    highlight(i);
-
-    window.addEventListener("load", () => {
-      audio.play().then(() => {
-        playBtn.textContent = "⏸️";
-        isPlaying = true;
-      }).catch(() => {
-        playBtn.textContent = "▶️";
-      });
-    });
-
-    playBtn.onclick = () => {
-      if (audio.paused) {
-        audio.play();
-        playBtn.textContent = "⏸️";
-        isPlaying = true;
-      } else {
-        audio.pause();
-        playBtn.textContent = "▶️";
-        isPlaying = false;
-      }
-      saveState();
-    };
-
-    prevBtn.onclick = () => {
-      i = (i - 1 + songs.length) % songs.length;
-      loadAndPlay(i);
-    };
-
-    nextBtn.onclick = () => {
-      i = (i + 1) % songs.length;
-      loadAndPlay(i);
-    };
-
-    toggleBtn.onclick = () => {
-      panel.classList.toggle("show");
-    };
-
-    audio.ontimeupdate = saveState;
-    audio.onended = () => {
-      i = (i + 1) % songs.length;
-      loadAndPlay(i);
-    };
-  }
-
-  initMusicPanel();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMusicPanel);
+    } else {
+      initMusicPanel();
+    }
+  })();
 </script>
 </body>
 

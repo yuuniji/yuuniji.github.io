@@ -868,10 +868,8 @@
 </style>
     
 
-
-
-<style>
-  #mini-player-wrapper {
+<style scoped>
+  .music-player-container {
     position: fixed;
     bottom: 12px;
     right: 12px;
@@ -880,295 +878,333 @@
     font-size: 13px;
   }
 
-  #music-panel {
+  .music-player-container .music-panel {
     display: none;
     margin-bottom: 6px;
     background: rgba(255, 255, 255, 0.1);
-     
     border: 1px solid rgba(255, 255, 255, 0.2);
-     
     border-radius: 12px;
     padding: 12px 14px;
     width: 200px;
     max-height: 180px;
     overflow-y: auto;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-     
     backdrop-filter: blur(16px) saturate(180%);
-     
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-     
   }
 
-  #music-panel.show {
+  .music-player-container .music-panel.show {
     display: block;
   }
 
-  #music-title {
+  .music-player-container .music-title {
     font-size: 13px;
-    color: var(--primary);
-     
+    color: var(--primary, #333);
     font-weight: 500;
     margin-bottom: 6px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-     
   }
 
-  #playlist {
+  .music-player-container .playlist {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  #playlist li {
+  .music-player-container .playlist li {
     padding: 4px 6px;
     border-radius: 6px;
     cursor: pointer;
-    color: var(--content);
-     
+    color: var(--content, #666);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-     
     transition: all 0.2s ease;
-     
   }
 
-  #playlist li:hover {
+  .music-player-container .playlist li:hover {
     background: rgba(255, 255, 255, 0.15);
-     
     transform: translateY(-1px);
-     
   }
 
-  #playlist li.active {
+  .music-player-container .playlist li.active {
     background: rgba(255, 255, 255, 0.2);
-     
-    color: var(--accent);
-     
+    color: var(--accent, #007acc);
     font-weight: 600;
     border: 1px solid rgba(255, 255, 255, 0.3);
-     
   }
 
-  #mini-player {
+  .music-player-container .mini-player {
     background: rgba(255, 255, 255, 0.1);
-     
     border: 1px solid rgba(255, 255, 255, 0.2);
-     
     border-radius: 100px;
     display: flex;
     gap: 8px;
     padding: 6px 10px;
     align-items: center;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-     
     backdrop-filter: blur(20px) saturate(180%);
-     
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-     
     transition: all 0.3s ease;
-     
   }
 
-  #mini-player:hover {
+  .music-player-container .mini-player:hover {
     background: rgba(255, 255, 255, 0.15);
-     
     transform: translateY(-2px);
-     
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-     
   }
 
-  #mini-player button {
+  .music-player-container .mini-player button {
     background: none;
     border: none;
     font-size: 16px;
-    color: var(--secondary);
-     
+    color: var(--secondary, #888);
     cursor: pointer;
     padding: 4px;
     border-radius: 50%;
     transition: all 0.2s ease;
-     
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-     
   }
 
-  #mini-player button:hover {
-    color: var(--accent);
-     
+  .music-player-container .mini-player button:hover {
+    color: var(--accent, #007acc);
     background: rgba(255, 255, 255, 0.1);
-     
     transform: scale(1.1);
-     
   }
 
-  #mini-player button:active {
-    color: var(--accent-active);
-     
+  .music-player-container .mini-player button:active {
+    color: var(--accent-active, #005a99);
     transform: scale(0.95);
-     
   }
 
-  audio {
+  .music-player-container audio {
     display: none;
   }
 
    
-  #music-panel::-webkit-scrollbar {
+  .music-player-container .music-panel::-webkit-scrollbar {
     width: 4px;
   }
 
-  #music-panel::-webkit-scrollbar-track {
+  .music-player-container .music-panel::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 2px;
   }
 
-  #music-panel::-webkit-scrollbar-thumb {
+  .music-player-container .music-panel::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 2px;
   }
 
-  #music-panel::-webkit-scrollbar-thumb:hover {
+  .music-player-container .music-panel::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
   }
 </style>
 
-<div id="mini-player-wrapper">
-  <div id="music-panel">
-    <div id="music-title">Loading...</div>
-    <ul id="playlist"></ul>
+<div class="music-player-container" id="musicPlayerContainer">
+  <div class="music-panel" id="musicPanel">
+    <div class="music-title" id="musicTitle">Loading...</div>
+    <ul class="playlist" id="musicPlaylist"></ul>
   </div>
-  <div id="mini-player">
-    <button id="toggle-panel" title="Toggle Playlist">📂</button>
-    <button id="prev-btn" title="Previous">⏮️</button>
-    <button id="play-btn" title="Play">▶️</button>
-    <button id="next-btn" title="Next">⏭️</button>
+  <div class="mini-player" id="miniPlayer">
+    <button id="musicTogglePanel" title="Toggle Playlist">📂</button>
+    <button id="musicPrevBtn" title="Previous">⏮️</button>
+    <button id="musicPlayBtn" title="Play">▶️</button>
+    <button id="musicNextBtn" title="Next">⏭️</button>
   </div>
-  <audio id="mini-audio"></audio>
+  <audio id="musicAudio"></audio>
 </div>
 
 <script>
-  const base = "https://yuuniji.github.io/music/lofi_beats/";
-  const jsonURL = base + "songs.json";
-  const STORAGE_KEY = "hugo_music_player_state";
-  const INTERACT_KEY = "hugo_music_player_user_interacted";
+  (function() {
+    'use strict';
+    
+    
+    const MUSIC_PLAYER_NS = 'HugoMusicPlayer_';
+    
+    const base = "https://yuuniji.github.io/music/lofi_beats/";
+    const jsonURL = base + "songs.json";
+    const STORAGE_KEY = MUSIC_PLAYER_NS + "state";
+    const INTERACT_KEY = MUSIC_PLAYER_NS + "user_interacted";
 
-  async function initMusicPanel() {
-    const res = await fetch(jsonURL);
-    const songs = await res.json();
-    if (!songs.length) return;
-
-    let i = 0, isPlaying = false;
-    const audio = document.getElementById("mini-audio");
-    const playBtn = document.getElementById("play-btn");
-    const prevBtn = document.getElementById("prev-btn");
-    const nextBtn = document.getElementById("next-btn");
-    const toggleBtn = document.getElementById("toggle-panel");
-    const panel = document.getElementById("music-panel");
-    const title = document.getElementById("music-title");
-    const playlist = document.getElementById("playlist");
-
-    const savedStateStr = localStorage.getItem(STORAGE_KEY);
-    if (savedStateStr) {
+    async function initMusicPanel() {
       try {
-        const saved = JSON.parse(savedStateStr);
-        if (saved.index >= 0 && saved.index < songs.length) {
-          i = saved.index;
-          audio.currentTime = saved.time || 0;
-          isPlaying = saved.isPlaying || false;
+        const res = await fetch(jsonURL);
+        const songs = await res.json();
+        if (!songs.length) return;
+
+        let currentIndex = 0;
+        let isPlaying = false;
+        
+        
+        const audio = document.getElementById("musicAudio");
+        const playBtn = document.getElementById("musicPlayBtn");
+        const prevBtn = document.getElementById("musicPrevBtn");
+        const nextBtn = document.getElementById("musicNextBtn");
+        const toggleBtn = document.getElementById("musicTogglePanel");
+        const panel = document.getElementById("musicPanel");
+        const title = document.getElementById("musicTitle");
+        const playlist = document.getElementById("musicPlaylist");
+
+        
+        if (!audio || !playBtn || !prevBtn || !nextBtn || !toggleBtn || !panel || !title || !playlist) {
+          console.warn('Music player elements not found');
+          return;
         }
-      } catch (e) { }
-    }
 
-    songs.forEach((song, index) => {
-      const li = document.createElement("li");
-      li.textContent = `${song.title}`;
-      li.onclick = () => {
-        i = index;
-        loadAndPlay(i);
-        localStorage.setItem(INTERACT_KEY, "true");
-      };
-      playlist.appendChild(li);
-    });
+        
+        const savedStateStr = localStorage.getItem(STORAGE_KEY);
+        if (savedStateStr) {
+          try {
+            const saved = JSON.parse(savedStateStr);
+            if (saved.index >= 0 && saved.index < songs.length) {
+              currentIndex = saved.index;
+              audio.currentTime = saved.time || 0;
+              isPlaying = saved.isPlaying || false;
+            }
+          } catch (e) {
+            console.warn('Failed to parse saved music player state:', e);
+          }
+        }
 
-    function highlight(index) {
-      playlist.querySelectorAll("li").forEach((li, idx) => {
-        li.classList.toggle("active", idx === index);
-      });
-    }
+        
+        songs.forEach((song, index) => {
+          const li = document.createElement("li");
+          li.textContent = song.title;
+          li.onclick = function() {
+            currentIndex = index;
+            loadAndPlay(currentIndex);
+            localStorage.setItem(INTERACT_KEY, "true");
+          };
+          playlist.appendChild(li);
+        });
 
-    function loadAndPlay(index) {
-      audio.src = base + songs[index].file;
-      audio.currentTime = 0;
-      audio.play().then(() => {
-        isPlaying = true;
-        playBtn.textContent = "⏸️";
-        title.textContent = songs[index].title;
-        highlight(index);
-        saveState();
-      }).catch(() => {
-        isPlaying = false;
-        playBtn.textContent = "▶️";
-      });
-    }
+        function highlight(index) {
+          const listItems = playlist.querySelectorAll("li");
+          listItems.forEach((li, idx) => {
+            li.classList.toggle("active", idx === index);
+          });
+        }
 
-    function saveState() {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        index: i,
-        time: audio.currentTime,
-        isPlaying: !audio.paused
-      }));
+        function loadAndPlay(index) {
+          audio.src = base + songs[index].file;
+          audio.currentTime = 0;
+          audio.play().then(() => {
+            isPlaying = true;
+            playBtn.textContent = "⏸️";
+            title.textContent = songs[index].title;
+            highlight(index);
+            saveState();
+          }).catch((error) => {
+            console.warn('Failed to play audio:', error);
+            isPlaying = false;
+            playBtn.textContent = "▶️";
+          });
+        }
+
+        function saveState() {
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({
+              index: currentIndex,
+              time: audio.currentTime,
+              isPlaying: !audio.paused
+            }));
+          } catch (e) {
+            console.warn('Failed to save music player state:', e);
+          }
+        }
+
+        
+        audio.src = base + songs[currentIndex].file;
+        title.textContent = songs[currentIndex].title;
+        highlight(currentIndex);
+
+        
+        function updatePlayButton() {
+          if (audio.paused) {
+            playBtn.textContent = "▶️";
+            isPlaying = false;
+          } else {
+            playBtn.textContent = "⏸️";
+            isPlaying = true;
+          }
+        }
+
+        
+        playBtn.onclick = function() {
+          if (audio.paused) {
+            audio.play().then(() => {
+              updatePlayButton();
+              saveState();
+            }).catch((error) => {
+              console.warn('Failed to play audio:', error);
+              updatePlayButton();
+            });
+          } else {
+            audio.pause();
+            updatePlayButton();
+            saveState();
+          }
+        };
+
+        prevBtn.onclick = function() {
+          currentIndex = (currentIndex - 1 + songs.length) % songs.length;
+          loadAndPlay(currentIndex);
+        };
+
+        nextBtn.onclick = function() {
+          currentIndex = (currentIndex + 1) % songs.length;
+          loadAndPlay(currentIndex);
+        };
+
+        toggleBtn.onclick = function() {
+          panel.classList.toggle("show");
+        };
+
+        
+        audio.ontimeupdate = saveState;
+        
+        audio.onplay = function() {
+          updatePlayButton();
+          saveState();
+        };
+        
+        audio.onpause = function() {
+          updatePlayButton();
+          saveState();
+        };
+        
+        audio.onended = function() {
+          currentIndex = (currentIndex + 1) % songs.length;
+          loadAndPlay(currentIndex);
+        };
+
+        
+        if (document.readyState === 'complete') {
+          tryAutoPlay();
+        } else {
+          window.addEventListener("load", tryAutoPlay);
+        }
+
+        function tryAutoPlay() {
+          audio.play().then(() => {
+            updatePlayButton();
+            saveState();
+          }).catch(() => {
+            updatePlayButton();
+          });
+        }
+
+      } catch (error) {
+        console.error('Failed to initialize music player:', error);
+      }
     }
 
     
-    audio.src = base + songs[i].file;
-    title.textContent = songs[i].title;
-    highlight(i);
-
-    window.addEventListener("load", () => {
-      audio.play().then(() => {
-        playBtn.textContent = "⏸️";
-        isPlaying = true;
-      }).catch(() => {
-        playBtn.textContent = "▶️";
-      });
-    });
-
-    playBtn.onclick = () => {
-      if (audio.paused) {
-        audio.play();
-        playBtn.textContent = "⏸️";
-        isPlaying = true;
-      } else {
-        audio.pause();
-        playBtn.textContent = "▶️";
-        isPlaying = false;
-      }
-      saveState();
-    };
-
-    prevBtn.onclick = () => {
-      i = (i - 1 + songs.length) % songs.length;
-      loadAndPlay(i);
-    };
-
-    nextBtn.onclick = () => {
-      i = (i + 1) % songs.length;
-      loadAndPlay(i);
-    };
-
-    toggleBtn.onclick = () => {
-      panel.classList.toggle("show");
-    };
-
-    audio.ontimeupdate = saveState;
-    audio.onended = () => {
-      i = (i + 1) % songs.length;
-      loadAndPlay(i);
-    };
-  }
-
-  initMusicPanel();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMusicPanel);
+    } else {
+      initMusicPanel();
+    }
+  })();
 </script>
 </body>
 
