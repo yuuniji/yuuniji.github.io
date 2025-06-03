@@ -1479,6 +1479,8 @@ feed <a href="https://app.daily.dev/tags/grafana?ref=roadmapsh">Explore top post
 </style>
     
 
+
+
 <style>
   #mini-player-wrapper {
     position: fixed;
@@ -1492,16 +1494,20 @@ feed <a href="https://app.daily.dev/tags/grafana?ref=roadmapsh">Explore top post
   #music-panel {
     display: none;
     margin-bottom: 6px;
-    background: var(--entry);
+    background: rgba(255, 255, 255, 0.1);
      
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255, 255, 255, 0.2);
      
-    border-radius: 6px;
-    padding: 6px 8px;
+    border-radius: 12px;
+    padding: 12px 14px;
     width: 200px;
     max-height: 180px;
     overflow-y: auto;
-    box-shadow: var(--elevation-low);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+     
+    backdrop-filter: blur(16px) saturate(180%);
+     
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
      
   }
 
@@ -1514,7 +1520,9 @@ feed <a href="https://app.daily.dev/tags/grafana?ref=roadmapsh">Explore top post
     color: var(--primary);
      
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+     
   }
 
   #playlist {
@@ -1524,63 +1532,115 @@ feed <a href="https://app.daily.dev/tags/grafana?ref=roadmapsh">Explore top post
   }
 
   #playlist li {
-    padding: 3px 4px;
-    border-radius: 3px;
+    padding: 4px 6px;
+    border-radius: 6px;
     cursor: pointer;
     color: var(--content);
+     
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+     
+    transition: all 0.2s ease;
      
   }
 
   #playlist li:hover {
-    background: var(--link-hover-bg);
+    background: rgba(255, 255, 255, 0.15);
+     
+    transform: translateY(-1px);
      
   }
 
   #playlist li.active {
-    background: var(--tertiary);
+    background: rgba(255, 255, 255, 0.2);
      
     color: var(--accent);
      
     font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+     
   }
 
   #mini-player {
-    background: var(--surface);
+    background: rgba(255, 255, 255, 0.1);
      
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255, 255, 255, 0.2);
      
     border-radius: 100px;
     display: flex;
-    gap: 6px;
-    padding: 4px 6px;
+    gap: 8px;
+    padding: 6px 10px;
     align-items: center;
-    box-shadow: var(--elevation-low);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
      
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(20px) saturate(180%);
+     
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+     
+    transition: all 0.3s ease;
+     
+  }
+
+  #mini-player:hover {
+    background: rgba(255, 255, 255, 0.15);
+     
+    transform: translateY(-2px);
+     
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+     
   }
 
   #mini-player button {
     background: none;
     border: none;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--secondary);
      
     cursor: pointer;
-    padding: 3px;
+    padding: 4px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+     
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+     
   }
 
   #mini-player button:hover {
     color: var(--accent);
+     
+    background: rgba(255, 255, 255, 0.1);
+     
+    transform: scale(1.1);
      
   }
 
   #mini-player button:active {
     color: var(--accent-active);
      
+    transform: scale(0.95);
+     
   }
 
   audio {
     display: none;
+  }
+
+   
+  #music-panel::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  #music-panel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+  }
+
+  #music-panel::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+  }
+
+  #music-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
   }
 </style>
 
