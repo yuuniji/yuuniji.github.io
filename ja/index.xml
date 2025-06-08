@@ -13,22 +13,14 @@
       <link>https://yuuniji.github.io/ja/posts/reading-1-how-to-read-a-book/</link>
       <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/ja/posts/reading-1-how-to-read-a-book/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/reading-0-overview/&#34;&gt;シリーズの目次に戻る&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;⚠️ &lt;strong&gt;ご案内&lt;/strong&gt;
-本記事で紹介する『本を読む本』（モーティマー・J・アドラー、チャールズ・ヴァン・ドーレン著）は、現在も著作権で保護されているため、合法的に無料でダウンロードできるHTML・PDF・テキスト形式の電子版は公開されておりません。
-読書にご興味のある方は、以下の正規リンクからご購入・ご利用ください。&lt;/p&gt;</description>
+      <description>本書は1940年に初版が発行され、すぐにベストセラーとなりました。1972年には内容が改訂・追加され、現在でも推薦する価値のある一冊です。</description>
     </item>
     <item>
       <title>読書ログ[0]: 概要</title>
       <link>https://yuuniji.github.io/ja/posts/reading-0-overview/</link>
       <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/ja/posts/reading-0-overview/</guid>
-      <description>&lt;p&gt;読みやすくするために、本シリーズの投稿の目次を以下のように整理しました：&lt;br&gt;
-　　1. &lt;a href=&#34;https://yuuniji.github.io/ja/posts/reading-1-how-to-read-a-book/&#34;&gt;本を読む本&lt;/a&gt;&lt;br&gt;
-　　2. []&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;★&lt;/h2&gt;
-&lt;h3 id=&#34;heading-1&#34;&gt;◇&lt;/h3&gt;</description>
+      <description>読みやすくするために、本シリーズの投稿の目次を以下のように整理しました</description>
     </item>
     <item>
       <title>日本語を上手に学ぶ方法[8]：教材『いろどり』ノート</title>
@@ -3497,8 +3489,8 @@
       <link>https://yuuniji.github.io/ja/posts/python-0-overview/</link>
       <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/ja/posts/python-0-overview/</guid>
-      <description>&lt;p&gt;　　なぜPythonをお勧めするかについては、&lt;a href=&#34;https://en.wikipedia.org/wiki/Eric_S._Raymond&#34;&gt;Eric Raymond&lt;/a&gt;による&lt;a href=&#34;http://www.catb.org/%7Eesr/writings/taoup/html/ch14s04.html#c_lang&#34;&gt;主要プログラミング言語の評価&lt;/a&gt;、および彼が書いた『&lt;a href=&#34;http://www.linuxjournal.com/article/3882&#34;&gt;Why Python?&lt;/a&gt;』をお読みください。&lt;/p&gt;
-&lt;p&gt;　　この投稿シリーズは主に【Pythonをどのように上手に学ぶか】についてです。&lt;/p&gt;</description>
+      <description>&lt;p&gt;なぜPythonをお勧めするかについては、&lt;a href=&#34;https://en.wikipedia.org/wiki/Eric_S._Raymond&#34;&gt;Eric Raymond&lt;/a&gt;による&lt;a href=&#34;http://www.catb.org/%7Eesr/writings/taoup/html/ch14s04.html#c_lang&#34;&gt;主要プログラミング言語の評価&lt;/a&gt;、および彼が書いた『&lt;a href=&#34;http://www.linuxjournal.com/article/3882&#34;&gt;Why Python?&lt;/a&gt;』をお読みください。&lt;/p&gt;
+&lt;p&gt;この投稿シリーズは主に【Pythonをどのように上手に学ぶか】についてです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>日本語を上手に学ぶ方法[6]: 教材『いろどり』</title>
@@ -3537,14 +3529,18 @@
       <guid>https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-4-kana/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-0-overview/&#34;&gt;シリーズの目次に戻る&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;母音と子音&#34;&gt;★母音と子音&lt;/h2&gt;
-&lt;p&gt;　　&lt;strong&gt;5つの基本母音&lt;/strong&gt;：/a/, /i/, /u/, /e/, /o/&lt;br&gt;
-　　母音の特徴：&lt;br&gt;
-　　1. 発音が純粋：&lt;br&gt;
-　　　　日本語の母音発音は非常に明確で、英語のような母音の弱化（例：「schwa」音/ə/）はありません。&lt;br&gt;
-　　2. 二重母音がない：&lt;br&gt;
-　　　　日本語には真の二重母音（diphthongs）はありませんが、母音の連続によって似た効果が生まれることがあります（例：「あい」/ai/）。&lt;br&gt;
-　　3. 長音と短音の対立：&lt;br&gt;
-　　　　日本語には母音の長短の対立があり、長音は母音の時間を延ばすことで表されます（例：「おお」/oː/ vs. 「お」/o/）。&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;5つの基本母音&lt;/strong&gt;：/a/, /i/, /u/, /e/, /o/&lt;br&gt;
+母音の特徴：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;発音が純粋：&lt;br&gt;
+日本語の母音発音は非常に明確で、英語のような母音の弱化（例：「schwa」音/ə/）はありません。&lt;/li&gt;
+&lt;li&gt;二重母音がない：&lt;br&gt;
+日本語には真の二重母音（diphthongs）はありませんが、母音の連続によって似た効果が生まれることがあります（例：「あい」/ai/）。&lt;/li&gt;
+&lt;li&gt;長音と短音の対立：&lt;br&gt;
+日本語には母音の長短の対立があり、長音は母音の時間を延ばすことで表されます（例：「おお」/oː/ vs. 「お」/o/）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;14の基本子音&lt;/strong&gt;：/k/, /s/, /t/, /n/, /h/, /m/, /y/, /r/, /w/, /g/, /z/, /d/, /b/, /p/&lt;br&gt;
+子音の特徴：&lt;/p&gt;</description>
     </item>
     <item>
       <title>日本語を上手に学ぶ方法[3]: 資源</title>
@@ -3770,15 +3766,21 @@
       <link>https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-0-overview/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-0-overview/</guid>
-      <description>&lt;p&gt;読みやすくするために、本シリーズの投稿の目次を以下のように整理しました：&lt;br&gt;
-　　1. &lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-1-concept/&#34;&gt;日本語を上手に学ぶ方法[1]: 核心概念&lt;/a&gt;&lt;br&gt;
-　　2. &lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-2-methods/&#34;&gt;日本語を上手に学ぶ方法[2]: 効率的な学習方法&lt;/a&gt;&lt;br&gt;
-　　3. &lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-3-resources/&#34;&gt;日本語を上手に学ぶ方法[3]: 資源&lt;/a&gt;&lt;br&gt;
-　　4. &lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-4-kana/&#34;&gt;日本語を上手に学ぶ方法[4]: 仮名&lt;/a&gt;&lt;br&gt;
-　　5. &lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-5-accent/&#34;&gt;日本語を上手に学ぶ方法[5]: 日本語のアクセント&lt;/a&gt;&lt;br&gt;
-　　6. &lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-6-textbook-irodori/&#34;&gt;日本語を上手に学ぶ方法[6]: 教材『いろどり』&lt;/a&gt;&lt;br&gt;
-　　7. &lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-7-textbook-irodori-vocab/&#34;&gt;日本語を上手に学ぶ方法[7]: 教材『いろどり』の語彙&lt;/a&gt;&lt;br&gt;
-　　8. &lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/&#34;&gt;日本語を上手に学ぶ方法[8]: 教材『いろどり』ノート&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;読みやすくするために、本シリーズの投稿の目次を以下のように整理しました：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-1-concept/&#34;&gt;日本語を上手に学ぶ方法[1]: 核心概念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-2-methods/&#34;&gt;日本語を上手に学ぶ方法[2]: 効率的な学習方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-3-resources/&#34;&gt;日本語を上手に学ぶ方法[3]: 資源&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-4-kana/&#34;&gt;日本語を上手に学ぶ方法[4]: 仮名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-5-accent/&#34;&gt;日本語を上手に学ぶ方法[5]: 日本語のアクセント&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-6-textbook-irodori/&#34;&gt;日本語を上手に学ぶ方法[6]: 教材『いろどり』&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-7-textbook-irodori-vocab/&#34;&gt;日本語を上手に学ぶ方法[7]: 教材『いろどり』の語彙&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/&#34;&gt;日本語を上手に学ぶ方法[8]: 教材『いろどり』ノート&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;最初にいくつかの注意点&#34;&gt;★最初にいくつかの注意点&lt;/h2&gt;
+&lt;h3 id=&#34;本質について&#34;&gt;◇「本質」について&lt;/h3&gt;
+&lt;p&gt;言語は意識的な学習（learn）によって「学ぶ」ものではなく、使用と没入によって自然に「習得」（acquire）するものであることをまず覚えておいてください。それは静的な知識ではなく、動的な実践です。言語学習の過程では、絶対的な「できる」や「できない」は存在せず、ただ深まる理解と運用があるだけです。&lt;br&gt;
+言語学習の最適解は、&lt;strong&gt;大量の時間を日本語に触れ、理解し、表現しようとすることに費やし、単語や文法の学習にはわずかな時間しか使わないこと&lt;/strong&gt;です。&lt;/p&gt;</description>
     </item>
     <item>
       <title>私のブログ構築の旅：ゼロからオンラインへ</title>
