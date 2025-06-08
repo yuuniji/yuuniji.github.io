@@ -161,8 +161,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>回到本系列的目录
-★《入门》 ◇方式1 1 / 0 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ Keyboard shortcuts: → Next track | ← Previous track | 1 1x speed | 2 2x speed ...</p>
+    <p>分享《いろどり》教材的笔记整理及音频。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-19 00:00:00 +0000 UTC'>五月 19, 2025</span>&nbsp;·&nbsp;1 分钟</footer>
   <a class="entry-link" aria-label="post link to 如何学好日语[8]: 教材《いろどり》笔记" href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/"></a>
@@ -174,11 +173,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>★回到本系列的目录 ★emoji 📋：选择类别
-📖：选择课程
-⏭️：下一个部分
-🔄：从头开始
-★词汇表 📋 X Y Z 📖 ⏭️ 🔄 </p>
+    <p>介绍《いろどり》教材中的词汇和配套音频资源。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-18 00:00:00 +0000 UTC'>五月 18, 2025</span>&nbsp;·&nbsp;1 分钟</footer>
   <a class="entry-link" aria-label="post link to 如何学好日语[7]: 教材《いろどり》词汇" href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-7-textbook-irodori-vocab/"></a>
@@ -196,9 +191,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p> Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ 1 / 0 ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★经济学 ◇经济 / 经济学 ◇经济 / 经济学 / 理论 中文书名 英文书名 作者 Book ID 国富论——国民财富的性质和原因 The Wealth of Nations
-其它英文名：An Inquiry into the Nature and Causes of the Wealth of Nations (英) 亚当·斯密 Book 1-5 ★军事 ◇军事 / 军事理论 中文书名 英文书名 作者 Book ID 孙子兵法
-其它中文名：孙武兵法 The Art of War 孙武 Book 6 ★政治 ◇政治 / 政治小说 中文书名 英文书名 作者 Book ID 一九八四 Nineteen Eighty-Four (英) 乔治·奥威尔 Book 7-9 ★制作有声书的脚本 ◇下载YouTube视频的mp3 youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34; url = input(&#34;请输入 YouTube 视频链接：&#34;).strip() command = [ yt_dlp_path, &#34;-x&#34;, # 提取音频 &#34;--audio-format&#34;, &#34;mp3&#34;, # 转成 mp3 格式 url ] try: subprocess.run(command, check=True) print(&#34;✅ 下载完成&#34;) except subprocess.CalledProcessError as e: print(&#34;❌ 下载失败:&#34;, e) if __name__ == &#34;__main__&#34;: download_youtube_mp3() ◇按对应的章节切割音频 # split_audio.py import os import subprocess input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34; output_dir = &#34;output_chapters&#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (&#34;a0&#34;, &#34;00:00:00&#34;), (&#34;1-chapter1&#34;, &#34;00:00:09&#34;), (&#34;1-chapter2&#34;, &#34;00:39:31&#34;), (&#34;2-chapter1&#34;, &#34;03:35:20&#34;), (&#34;2-chapter2&#34;, &#34;04:00:13&#34;), (&#34;3-chapter1&#34;, &#34;07:48:41&#34;), (&#34;3-chapter2&#34;, &#34;08:18:27&#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;) cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start] if end: cmd &#43;= [&#34;-to&#34;, end] cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file] subprocess.run(cmd) print(f&#34;导出: {output_file}&#34;) print(&#34;全部章节已成功分割。&#34;) ◇合并音频 # merge_audio.py from pydub import AudioSegment import os # 设置音频文件夹路径 audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34; # 获取所有 mp3 文件，并按文件名排序（可选） audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)]) # 创建一个空的音频对象 combined = AudioSegment.empty() # 逐个添加音频文件 for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined &#43;= audio print(f&#34;已添加: {file}&#34;) # 导出合成后的音频 output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;) combined.export(output_path, format=&#34;mp3&#34;) print(f&#34;合成完成，保存为: {output_path}&#34;) </p>
+    <p>汇集并不断更新丰富的有声书资源，方便随时收听。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-15 00:00:00 +0000 UTC'>五月 15, 2025</span>&nbsp;·&nbsp;2 分钟</footer>
   <a class="entry-link" aria-label="post link to 有声书库：持续更新" href="https://yuuniji.github.io/posts/audiobook-0/"></a>

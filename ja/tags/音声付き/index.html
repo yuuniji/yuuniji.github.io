@@ -161,8 +161,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>シリーズの目次に戻る
-★『入門』 ◇方法1 1 / 0 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ Keyboard shortcuts: → Next track | ← Previous track | 1 1x speed | 2 2x speed ...</p>
+    <p>『いろどり』教材の整理したノートと音声を共有する。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-19 00:00:00 +0000 UTC'>5月 19, 2025</span>&nbsp;·&nbsp;1 分</footer>
   <a class="entry-link" aria-label="post link to 日本語を上手に学ぶ方法[8]：教材『いろどり』ノート" href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/"></a>
@@ -174,8 +173,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>★シリーズの目次に戻る ★絵文字の説明 📋：カテゴリーを選ぶ 📖：レッスンを選ぶ ⏭️：次のセクションへ 🔄：最初から始める
-★単語リスト 📋 X Y Z 📖 ⏭️ 🔄 </p>
+    <p>『いろどり』教材の語彙と付属の音声資料を紹介する。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-18 00:00:00 +0000 UTC'>5月 18, 2025</span>&nbsp;·&nbsp;1 分</footer>
   <a class="entry-link" aria-label="post link to 日本語を上手に学ぶ方法[7]：教材『いろどり』の語彙" href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-7-textbook-irodori-vocab/"></a>
@@ -193,9 +191,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p> Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ 1 / 0 ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★経済学 ◇経済 / 経済学 ◇経済 / 経済学 / 理論 中国語書名 英語書名 著者 Book ID 国富論——国民の富の性質と原因についての研究 The Wealth of Nations
-別名：An Inquiry into the Nature and Causes of the Wealth of Nations （英）アダム・スミス Book 1-5 ★軍事 ◇軍事 / 軍事理論 中国語書名 英語書名 著者 Book ID 孫子兵法
-別名：孫武兵法 The Art of War 孫武 Book 6 ★政治 ◇政治 / 政治小説 中国語書名 英語書名 著者 Book ID 一九八四 Nineteen Eighty-Four （英）ジョージ・オーウェル Book 7-9 ★オーディオブック制作用スクリプト ◇YouTube動画のmp3をダウンロード youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34; url = input(&#34;YouTube動画のリンクを入力してください：&#34;).strip() command = [ yt_dlp_path, &#34;-x&#34;, # 音声を抽出 &#34;--audio-format&#34;, &#34;mp3&#34;, # mp3形式に変換 url ] try: subprocess.run(command, check=True) print(&#34;✅ ダウンロード完了&#34;) except subprocess.CalledProcessError as e: print(&#34;❌ ダウンロード失敗:&#34;, e) if __name__ == &#34;__main__&#34;: download_youtube_mp3() ◇各章ごとに音声を分割 # split_audio.py import os import subprocess input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34; output_dir = &#34;output_chapters&#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (&#34;a0&#34;, &#34;00:00:00&#34;), (&#34;1-chapter1&#34;, &#34;00:00:09&#34;), (&#34;1-chapter2&#34;, &#34;00:39:31&#34;), (&#34;2-chapter1&#34;, &#34;03:35:20&#34;), (&#34;2-chapter2&#34;, &#34;04:00:13&#34;), (&#34;3-chapter1&#34;, &#34;07:48:41&#34;), (&#34;3-chapter2&#34;, &#34;08:18:27&#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;) cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start] if end: cmd &#43;= [&#34;-to&#34;, end] cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file] subprocess.run(cmd) print(f&#34;出力完了: {output_file}&#34;) print(&#34;すべての章を正常に分割しました。&#34;) ◇音声を結合 # merge_audio.py from pydub import AudioSegment import os # 音声ファイルのディレクトリを設定 audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34; # すべての mp3 ファイルを取得し、ファイル名でソート（任意） audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)]) # 空のオーディオオブジェクトを作成 combined = AudioSegment.empty() # 各音声ファイルを順に追加 for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined &#43;= audio print(f&#34;追加済み: {file}&#34;) # 結合された音声を出力 output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;) combined.export(output_path, format=&#34;mp3&#34;) print(f&#34;結合完了、保存先: {output_path}&#34;) </p>
+    <p>豊富なオーディオブック資源を集め、随時聞けるように継続的に更新している。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-15 00:00:00 +0000 UTC'>5月 15, 2025</span>&nbsp;·&nbsp;2 分</footer>
   <a class="entry-link" aria-label="post link to オーディオブック集：随時更新" href="https://yuuniji.github.io/ja/posts/audiobook-0/"></a>

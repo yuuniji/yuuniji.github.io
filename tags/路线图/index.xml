@@ -13,9 +13,7 @@
       <link>https://yuuniji.github.io/posts/python-1-roadmap/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/posts/python-1-roadmap/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/posts/python-0-overview/&#34;&gt;回到本系列的目录&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;1-学习基础知识&#34;&gt;1. 学习基础知识&lt;/h2&gt;
-&lt;p&gt;Python 是一种高级、解释型、通用编程语言。其设计哲学强调代码的可读性，使用显著的缩进。Python 是动态类型语言，并且具有垃圾回收机制。&lt;/p&gt;</description>
+      <description>Python 路线图</description>
     </item>
     <item>
       <title>Kubernetes 路线图</title>

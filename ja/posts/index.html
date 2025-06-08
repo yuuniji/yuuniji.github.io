@@ -196,7 +196,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>読みやすくするために、本シリーズの投稿の目次を以下のように整理しました</p>
+    <p>読書ログシリーズ</p>
   </div>
   <footer class="entry-footer"><span title='2025-06-01 00:00:00 +0000 UTC'>6月 1, 2025</span>&nbsp;·&nbsp;1 分</footer>
   <a class="entry-link" aria-label="post link to 読書ログ[0]: 概要" href="https://yuuniji.github.io/ja/posts/reading-0-overview/"></a>
@@ -208,8 +208,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>シリーズの目次に戻る
-★『入門』 ◇方法1 1 / 0 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ Keyboard shortcuts: → Next track | ← Previous track | 1 1x speed | 2 2x speed ...</p>
+    <p>『いろどり』教材の整理したノートと音声を共有する。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-19 00:00:00 +0000 UTC'>5月 19, 2025</span>&nbsp;·&nbsp;1 分</footer>
   <a class="entry-link" aria-label="post link to 日本語を上手に学ぶ方法[8]：教材『いろどり』ノート" href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/"></a>
@@ -221,8 +220,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>★シリーズの目次に戻る ★絵文字の説明 📋：カテゴリーを選ぶ 📖：レッスンを選ぶ ⏭️：次のセクションへ 🔄：最初から始める
-★単語リスト 📋 X Y Z 📖 ⏭️ 🔄 </p>
+    <p>『いろどり』教材の語彙と付属の音声資料を紹介する。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-18 00:00:00 +0000 UTC'>5月 18, 2025</span>&nbsp;·&nbsp;1 分</footer>
   <a class="entry-link" aria-label="post link to 日本語を上手に学ぶ方法[7]：教材『いろどり』の語彙" href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-7-textbook-irodori-vocab/"></a>
@@ -240,9 +238,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p> Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ 1 / 0 ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★経済学 ◇経済 / 経済学 ◇経済 / 経済学 / 理論 中国語書名 英語書名 著者 Book ID 国富論——国民の富の性質と原因についての研究 The Wealth of Nations
-別名：An Inquiry into the Nature and Causes of the Wealth of Nations （英）アダム・スミス Book 1-5 ★軍事 ◇軍事 / 軍事理論 中国語書名 英語書名 著者 Book ID 孫子兵法
-別名：孫武兵法 The Art of War 孫武 Book 6 ★政治 ◇政治 / 政治小説 中国語書名 英語書名 著者 Book ID 一九八四 Nineteen Eighty-Four （英）ジョージ・オーウェル Book 7-9 ★オーディオブック制作用スクリプト ◇YouTube動画のmp3をダウンロード youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34; url = input(&#34;YouTube動画のリンクを入力してください：&#34;).strip() command = [ yt_dlp_path, &#34;-x&#34;, # 音声を抽出 &#34;--audio-format&#34;, &#34;mp3&#34;, # mp3形式に変換 url ] try: subprocess.run(command, check=True) print(&#34;✅ ダウンロード完了&#34;) except subprocess.CalledProcessError as e: print(&#34;❌ ダウンロード失敗:&#34;, e) if __name__ == &#34;__main__&#34;: download_youtube_mp3() ◇各章ごとに音声を分割 # split_audio.py import os import subprocess input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34; output_dir = &#34;output_chapters&#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (&#34;a0&#34;, &#34;00:00:00&#34;), (&#34;1-chapter1&#34;, &#34;00:00:09&#34;), (&#34;1-chapter2&#34;, &#34;00:39:31&#34;), (&#34;2-chapter1&#34;, &#34;03:35:20&#34;), (&#34;2-chapter2&#34;, &#34;04:00:13&#34;), (&#34;3-chapter1&#34;, &#34;07:48:41&#34;), (&#34;3-chapter2&#34;, &#34;08:18:27&#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;) cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start] if end: cmd &#43;= [&#34;-to&#34;, end] cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file] subprocess.run(cmd) print(f&#34;出力完了: {output_file}&#34;) print(&#34;すべての章を正常に分割しました。&#34;) ◇音声を結合 # merge_audio.py from pydub import AudioSegment import os # 音声ファイルのディレクトリを設定 audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34; # すべての mp3 ファイルを取得し、ファイル名でソート（任意） audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)]) # 空のオーディオオブジェクトを作成 combined = AudioSegment.empty() # 各音声ファイルを順に追加 for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined &#43;= audio print(f&#34;追加済み: {file}&#34;) # 結合された音声を出力 output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;) combined.export(output_path, format=&#34;mp3&#34;) print(f&#34;結合完了、保存先: {output_path}&#34;) </p>
+    <p>豊富なオーディオブック資源を集め、随時聞けるように継続的に更新している。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-15 00:00:00 +0000 UTC'>5月 15, 2025</span>&nbsp;·&nbsp;2 分</footer>
   <a class="entry-link" aria-label="post link to オーディオブック集：随時更新" href="https://yuuniji.github.io/ja/posts/audiobook-0/"></a>
@@ -254,11 +250,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>シリーズの目次に戻る
-1. 変数 ❎ 値（文字列、整数、浮動小数点数、ブール値）を格納するコンテナ
-変数は、その変数が含む値として振る舞います
-# 文字列 first_name = &#34;Bro&#34; food = &#34;ピザ&#34; email = &#34;Bro123@gmail.com&#34; print(f&#34;こんにちは {first_name}&#34;) print(f&#34;あなたは {food} が好きです&#34;) print(f&#34;あなたのメールアドレスは: {email}&#34;) # 整数 age = 25 quantity = 3 num_of_students = 30 print(f&#34;あなたは {age} 歳です&#34;) print(f&#34;あなたは {quantity} 個のアイテムを購入しています&#34;) print(f&#34;あなたのクラスには {num_of_students} 人の生徒がいます&#34;) # 浮動小数点数 price = 10.99 gpa = 3.2 distance = 5.5 print(f&#34;価格は ${price} です&#34;) print(f&#34;あなたのGPAは: {gpa}&#34;) print(f&#34;あなたは {distance}km 走りました&#34;) # ブール値 is_student = False for_sale = False is_online = True if is_online: print(&#34;あなたはオンラインです&#34;) else: print(&#34;あなたはオフラインです&#34;) 変数の代入
-...</p>
+    <p>初心者向けの完全な Python チュートリアル</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-05 00:00:00 +0000 UTC'>5月 5, 2025</span>&nbsp;·&nbsp;101 分</footer>
   <a class="entry-link" aria-label="post link to Pythonを上手に学ぶ方法[2]: Pythonを学ぶ" href="https://yuuniji.github.io/ja/posts/python-2-learn/"></a>
@@ -270,9 +262,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>シリーズの目次に戻る
-1. 基本を学ぶ Pythonは、高水準、インタプリタ型、汎用のプログラミング言語です。その設計哲学は、インデントを重視したコードの可読性を強調しています。Pythonは動的型付けであり、ガベージコレクションを備えています。
-...</p>
+    <p>Python のロードマップ</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-28 00:00:00 +0000 UTC'>4月 28, 2025</span>&nbsp;·&nbsp;30 分</footer>
   <a class="entry-link" aria-label="post link to Pythonを上手に学ぶ方法[1]: ロードマップ" href="https://yuuniji.github.io/ja/posts/python-1-roadmap/"></a>
@@ -290,9 +280,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>なぜPythonをお勧めするかについては、Eric Raymondによる主要プログラミング言語の評価、および彼が書いた『Why Python?』をお読みください。
-この投稿シリーズは主に【Pythonをどのように上手に学ぶか】についてです。
-...</p>
+    <p>Python シリーズ</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-27 00:00:00 +0000 UTC'>4月 27, 2025</span>&nbsp;·&nbsp;1 分</footer>
   <a class="entry-link" aria-label="post link to Pythonを上手に学ぶ方法[0]: 概要" href="https://yuuniji.github.io/ja/posts/python-0-overview/"></a>
@@ -304,20 +292,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>シリーズの目次に戻る
-★教材の特徴 国際交流基金が開発した『いろどり』は、外国人が日本での生活や仕事に必要な基礎的な日本語コミュニケーション能力を習得するための教材です。
-『いろどり』の核心理念は「コミュニケーションと文化理解」を通じて、人々の相互理解を促進することです。教材は言語知識の習得だけでなく、実際の生活場面での応用を特に重視しています。その学習目標は「JF生活日本語CanDo」基準に基づいており、学習者が買い物、仕事、社交などさまざまな日常場面に対応できるよう設計されています。
-『いろどり』の特徴：
-1. 日本での生活場面で「できること」を増やす
-2. AI～A2レベルの日本語を習得
-3. 「JF生活日本語Can-do」に基づく
-4. コミュニケーションと文化理解を通じた相互理解の促進
-5. 生活に密着した多様なトピックを網羅
-6. 豊富な音声と実用的な教材で実践的な日本語を学習
-7. 文法や漢字などの言語知識をしっかり習得
-8. ウェブサイトから自由にダウンロード可能
-9. 『まるごと』と緩やかに関連
-...</p>
+    <p>日本語教材『いろどり』の内容の特徴と学習のすすめ方を紹介する。</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-06 00:00:00 +0000 UTC'>4月 6, 2025</span>&nbsp;·&nbsp;8 分</footer>
   <a class="entry-link" aria-label="post link to 日本語を上手に学ぶ方法[6]: 教材『いろどり』" href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-6-textbook-irodori/"></a>
@@ -329,11 +304,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>シリーズの目次に戻る
-日本語の発音におけるアクセント（音調）は、高音と低音に分かれます。単語を読むときは、アクセントのある位置（音が急に下がる場所）があるかどうかを確認します。アクセントがある単語は、それぞれ特定の位置で音が下がります。音調が異なれば、発音の方法も異なります。
-単語にアクセントがある場合、その位置を「↓」で示します。
-アクセントがない単語には、単語の最後に「○」を付けます。
-...</p>
+    <p>日本語の音調の基本的な規則と、その言語表現における重要性を紹介する。</p>
   </div>
   <footer class="entry-footer"><span title='2025-03-23 00:00:00 +0000 UTC'>3月 23, 2025</span>&nbsp;·&nbsp;3 分</footer>
   <a class="entry-link" aria-label="post link to 日本語を上手に学ぶ方法[5]: 日本語のアクセント" href="https://yuuniji.github.io/ja/posts/how-to-learn-japanese-effectively-5-accent/"></a>

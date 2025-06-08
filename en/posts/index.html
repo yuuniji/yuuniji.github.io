@@ -202,7 +202,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>For ease of reading, the directory of this series of posts is organized as follows</p>
+    <p>Reading Log Series</p>
   </div>
   <footer class="entry-footer"><span title='2025-06-01 00:00:00 +0000 UTC'>June 1, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to BookLog [0]: Overview" href="https://yuuniji.github.io/en/posts/reading-0-overview/"></a>
@@ -214,8 +214,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Back to the series index
-★Beginner ◇Method 1 1 / 0 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ Keyboard shortcuts: → Next track | ← Previous track | 1 1x speed | 2 2x speed ...</p>
+    <p>Sharing organized notes and audio for the ‘いろどり’ textbook.</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-19 00:00:00 +0000 UTC'>May 19, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to How to Learn Japanese Effectively [8]: Notes on the Textbook Irodori" href="https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/"></a>
@@ -227,8 +226,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>★Back to the series index ★Emoji Guide 📋: Select a category 📖: Choose a lesson ⏭️: Next section 🔄: Start from the beginning
-★Vocabulary List 📋 X Y Z 📖 ⏭️ 🔄 </p>
+    <p>Introduces the vocabulary and accompanying audio resources in the ‘いろどり’ textbook.</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-18 00:00:00 +0000 UTC'>May 18, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to How to Learn Japanese Effectively [7]: Vocabulary from the Irodori Textbook" href="https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-7-textbook-irodori-vocab/"></a>
@@ -246,7 +244,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p> Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ 1 / 0 ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★Economics ◇Economics / Economic Theory Chinese Title English Title Author Book ID 国富论——国民财富的性质和原因 The Wealth of Nations Alternate Title: An Inquiry into the Nature and Causes of the Wealth of Nations Adam Smith (UK) Book 1–5 ★Military ◇Military / Military Theory Chinese Title English Title Author Book ID 孙子兵法 Alternate Title: 孙武兵法 The Art of War Sun Tzu Book 6 ★Politics ◇Politics / Political Fiction Chinese Title English Title Author Book ID 一九八四 Nineteen Eighty-Four George Orwell (UK) Book 7–9 ★Audiobook Production Scripts ◇Download MP3 from YouTube youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34; url = input(&#34;Please enter the YouTube video link: &#34;).strip() command = [ yt_dlp_path, &#34;-x&#34;, # Extract audio &#34;--audio-format&#34;, &#34;mp3&#34;, # Convert to MP3 format url ] try: subprocess.run(command, check=True) print(&#34;✅ Download completed&#34;) except subprocess.CalledProcessError as e: print(&#34;❌ Download failed:&#34;, e) if __name__ == &#34;__main__&#34;: download_youtube_mp3() ◇Split Audio by Chapters # split_audio.py import os import subprocess input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34; output_dir = &#34;output_chapters&#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (&#34;a0&#34;, &#34;00:00:00&#34;), (&#34;1-chapter1&#34;, &#34;00:00:09&#34;), (&#34;1-chapter2&#34;, &#34;00:39:31&#34;), (&#34;2-chapter1&#34;, &#34;03:35:20&#34;), (&#34;2-chapter2&#34;, &#34;04:00:13&#34;), (&#34;3-chapter1&#34;, &#34;07:48:41&#34;), (&#34;3-chapter2&#34;, &#34;08:18:27&#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;) cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start] if end: cmd &#43;= [&#34;-to&#34;, end] cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file] subprocess.run(cmd) print(f&#34;Exported: {output_file}&#34;) print(&#34;All chapters have been successfully split.&#34;) ◇Merge Audio Files # merge_audio.py from pydub import AudioSegment import os # Set the path to the audio directory audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34; # Get all mp3 files and sort them by filename (optional) audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)]) # Create an empty audio segment combined = AudioSegment.empty() # Append each audio file for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined &#43;= audio print(f&#34;Added: {file}&#34;) # Export the merged audio output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;) combined.export(output_path, format=&#34;mp3&#34;) print(f&#34;Merged audio saved as: {output_path}&#34;) </p>
+    <p>Collecting and continuously updating a rich collection of audiobooks for easy listening anytime.</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-15 00:00:00 +0000 UTC'>May 15, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to Audiobook Collection: Continuously Updated" href="https://yuuniji.github.io/en/posts/audiobook-0/"></a>
@@ -258,11 +256,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Back to the series index
-1. variables ❎ A container for a value (string, integer, float, boolean)
-A variable behaves as if it was the value it contains
-# Strings first_name = &#34;Bro&#34; food = &#34;pizza&#34; email = &#34;Bro123@gmail.com&#34; print(f&#34;Hello {first_name}&#34;) print(f&#34;You like {food}&#34;) print(f&#34;Your email is: {email}&#34;) # Integers age = 25 quantity = 3 num_of_students =30 print(f&#34;You are {age} years old&#34;) print(f&#34;You are buying {quantity} items&#34;) print(f&#34;You class has {num_of_students} students&#34;) # Float price = 10.99 gpa = 3.2 distance = 5.5 print(f&#34;The price is ${price}&#34;) print(f&#34;Your gpa is: {gpa}&#34;) print(f&#34;You ran {distance}km&#34;) # Boolean is_student = False for_sale = False is_online = True if is_online: print(&#34;You are online&#34;) else: print(&#34;You are offline&#34;) Variable assignments
-...</p>
+    <p>A complete Python tutorial for beginners</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-05 00:00:00 +0000 UTC'>May 5, 2025</span>&nbsp;·&nbsp;49 min</footer>
   <a class="entry-link" aria-label="post link to How to Learn Python Effectively [2]: Learn Python" href="https://yuuniji.github.io/en/posts/python-2-learn/"></a>
@@ -274,10 +268,7 @@ A variable behaves as if it was the value it contains
     </h2>
   </header>
   <div class="entry-content">
-    <p>Back to the series index
-1. Learn the Basics Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected.
-official Python Website article Python - Wiki article Tutorial Series: How to Code in Python article Google’s Python Class article W3Schools - Python Tutorial video Learn Python - Full Course feed Explore top posts about Python ◇Basics Syntax Setup the environment for python and get started with the basics.
-...</p>
+    <p>Python Roadmap</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-28 00:00:00 +0000 UTC'>April 28, 2025</span>&nbsp;·&nbsp;24 min</footer>
   <a class="entry-link" aria-label="post link to How to Learn Python Effectively [1]: Roadmap" href="https://yuuniji.github.io/en/posts/python-1-roadmap/"></a>
@@ -295,10 +286,7 @@ official Python Website article Python - Wiki article Tutorial Series: How to Co
     </h2>
   </header>
   <div class="entry-content">
-    <p>As for why Python is recommended, I suggest reading Eric Raymond’s evaluation of several major programming languages, as well as his article “Why Python?”.
-This series of posts primarily focuses on [How to Learn Python Well].
-For ease of reading, the directory of this series of posts is organized as follows:
-How to Learn Python Effectively [1]: Roadmap How to Learn Python Effectively [2]: Learn Python </p>
+    <p>Python Series</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-27 00:00:00 +0000 UTC'>April 27, 2025</span>&nbsp;·&nbsp;1 min</footer>
   <a class="entry-link" aria-label="post link to How to Learn Python Effectively [0]: Overview" href="https://yuuniji.github.io/en/posts/python-0-overview/"></a>
@@ -310,11 +298,7 @@ How to Learn Python Effectively [1]: Roadmap How to Learn Python Effectively [2]
     </h2>
   </header>
   <div class="entry-content">
-    <p>Back to the series index
-★Features of the Textbook Irodori, developed by the Japan Foundation, is a Japanese language textbook series designed specifically for foreigners, aiming to help learners acquire basic communication skills for daily life and work in Japan.
-The core philosophy of Irodori is to foster mutual understanding through communication and cultural awareness. The textbook not only focuses on language knowledge but also emphasizes practical application in real-life scenarios. Its learning objectives are based on the JF Standard for Japanese-Language Education (Can-do), enabling learners to handle various everyday situations in Japan, such as shopping, work, and social interactions.
-Key features of Irodori:
-...</p>
+    <p>Introduces the content features and study recommendations of the Japanese textbook ‘いろどり’.</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-06 00:00:00 +0000 UTC'>April 6, 2025</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to How to Learn Japanese Effectively [6]: Textbook Irodori" href="https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-6-textbook-irodori/"></a>
@@ -326,11 +310,7 @@ Key features of Irodori:
     </h2>
   </header>
   <div class="entry-content">
-    <p>Back to the series index
-Japanese pronunciation includes pitch accents, which are categorized into high and low pitches. When reading a word, you must check whether there is a pitch drop (a point where the pitch suddenly falls). For words with a pitch drop, each has a specific pitch drop position. Different pitch patterns require different pronunciation methods.
-If a word has a pitch drop, it is marked with 「↓」.
-If a word does not have a pitch drop, the symbol 「○」 is attached to the end of the word.
-...</p>
+    <p>Introduces the basic rules of Japanese pitch accent and its importance in language expression.</p>
   </div>
   <footer class="entry-footer"><span title='2025-03-23 00:00:00 +0000 UTC'>March 23, 2025</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to How to Learn Japanese Effectively [5]: Japanese Pitch Accent" href="https://yuuniji.github.io/en/posts/how-to-learn-japanese-effectively-5-accent/"></a>

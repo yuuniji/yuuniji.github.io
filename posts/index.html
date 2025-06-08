@@ -202,7 +202,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>为了方便阅读，把本系列帖子的目录整理如下</p>
+    <p>阅读日志系列</p>
   </div>
   <footer class="entry-footer"><span title='2025-06-01 00:00:00 +0000 UTC'>六月 1, 2025</span>&nbsp;·&nbsp;1 分钟</footer>
   <a class="entry-link" aria-label="post link to 阅读日志[0]: 概述" href="https://yuuniji.github.io/posts/reading-0-overview/"></a>
@@ -214,8 +214,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>回到本系列的目录
-★《入门》 ◇方式1 1 / 0 ➡️ ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ Keyboard shortcuts: → Next track | ← Previous track | 1 1x speed | 2 2x speed ...</p>
+    <p>分享《いろどり》教材的笔记整理及音频。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-19 00:00:00 +0000 UTC'>五月 19, 2025</span>&nbsp;·&nbsp;1 分钟</footer>
   <a class="entry-link" aria-label="post link to 如何学好日语[8]: 教材《いろどり》笔记" href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-8-textbook-irodori-notes/"></a>
@@ -227,11 +226,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>★回到本系列的目录 ★emoji 📋：选择类别
-📖：选择课程
-⏭️：下一个部分
-🔄：从头开始
-★词汇表 📋 X Y Z 📖 ⏭️ 🔄 </p>
+    <p>介绍《いろどり》教材中的词汇和配套音频资源。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-18 00:00:00 +0000 UTC'>五月 18, 2025</span>&nbsp;·&nbsp;1 分钟</footer>
   <a class="entry-link" aria-label="post link to 如何学好日语[7]: 教材《いろどり》词汇" href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-7-textbook-irodori-vocab/"></a>
@@ -249,9 +244,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p> Book 1 Book 2 Book 3 Book 4 Book 5 Book 6 Book 7 Book 8 Book 9 ➡️ 1 / 0 ▶️ ⏸️ ⏮️ ⏭️ 🐌 ⚡️ ★🔊📖 🔽 ★经济学 ◇经济 / 经济学 ◇经济 / 经济学 / 理论 中文书名 英文书名 作者 Book ID 国富论——国民财富的性质和原因 The Wealth of Nations
-其它英文名：An Inquiry into the Nature and Causes of the Wealth of Nations (英) 亚当·斯密 Book 1-5 ★军事 ◇军事 / 军事理论 中文书名 英文书名 作者 Book ID 孙子兵法
-其它中文名：孙武兵法 The Art of War 孙武 Book 6 ★政治 ◇政治 / 政治小说 中文书名 英文书名 作者 Book ID 一九八四 Nineteen Eighty-Four (英) 乔治·奥威尔 Book 7-9 ★制作有声书的脚本 ◇下载YouTube视频的mp3 youtube-dl -x --audio-format mp3 --audio-quality 0 &#34;https://www.youtube.com/watch?v=VIDEO_ID&#34; # yt_mp3_download.py import subprocess def download_youtube_mp3(): yt_dlp_path = &#34;/Users/dev/Library/Python/3.9/bin/yt-dlp&#34; url = input(&#34;请输入 YouTube 视频链接：&#34;).strip() command = [ yt_dlp_path, &#34;-x&#34;, # 提取音频 &#34;--audio-format&#34;, &#34;mp3&#34;, # 转成 mp3 格式 url ] try: subprocess.run(command, check=True) print(&#34;✅ 下载完成&#34;) except subprocess.CalledProcessError as e: print(&#34;❌ 下载失败:&#34;, e) if __name__ == &#34;__main__&#34;: download_youtube_mp3() ◇按对应的章节切割音频 # split_audio.py import os import subprocess input_file = &#34;/Users/dev/Downloads/aaa/xxx.mp3&#34; output_dir = &#34;output_chapters&#34; os.makedirs(output_dir, exist_ok=True) chapters = [ (&#34;a0&#34;, &#34;00:00:00&#34;), (&#34;1-chapter1&#34;, &#34;00:00:09&#34;), (&#34;1-chapter2&#34;, &#34;00:39:31&#34;), (&#34;2-chapter1&#34;, &#34;03:35:20&#34;), (&#34;2-chapter2&#34;, &#34;04:00:13&#34;), (&#34;3-chapter1&#34;, &#34;07:48:41&#34;), (&#34;3-chapter2&#34;, &#34;08:18:27&#34;) ] for i in range(len(chapters)): title, start = chapters[i] end = chapters[i&#43;1][1] if i&#43;1 &lt; len(chapters) else None output_file = os.path.join(output_dir, f&#34;{title}.mp3&#34;) cmd = [&#34;ffmpeg&#34;, &#34;-y&#34;, &#34;-i&#34;, input_file, &#34;-ss&#34;, start] if end: cmd &#43;= [&#34;-to&#34;, end] cmd &#43;= [&#34;-c&#34;, &#34;copy&#34;, output_file] subprocess.run(cmd) print(f&#34;导出: {output_file}&#34;) print(&#34;全部章节已成功分割。&#34;) ◇合并音频 # merge_audio.py from pydub import AudioSegment import os # 设置音频文件夹路径 audio_dir = &#34;/Users/dev/Downloads/aaa/irodori-mp3/X_audio_all&#34; # 获取所有 mp3 文件，并按文件名排序（可选） audio_files = sorted([f for f in os.listdir(audio_dir) if f.endswith(&#34;.mp3&#34;)]) # 创建一个空的音频对象 combined = AudioSegment.empty() # 逐个添加音频文件 for file in audio_files: file_path = os.path.join(audio_dir, file) audio = AudioSegment.from_mp3(file_path) combined &#43;= audio print(f&#34;已添加: {file}&#34;) # 导出合成后的音频 output_path = os.path.join(audio_dir, &#34;combined_output.mp3&#34;) combined.export(output_path, format=&#34;mp3&#34;) print(f&#34;合成完成，保存为: {output_path}&#34;) </p>
+    <p>汇集并不断更新丰富的有声书资源，方便随时收听。</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-15 00:00:00 +0000 UTC'>五月 15, 2025</span>&nbsp;·&nbsp;2 分钟</footer>
   <a class="entry-link" aria-label="post link to 有声书库：持续更新" href="https://yuuniji.github.io/posts/audiobook-0/"></a>
@@ -263,11 +256,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>回到本系列的目录
-1. 变量 ❎ 变量是用于存储值（字符串、整数、浮点数、布尔值）的容器。
-变量的行为就像它包含的值一样。
-# 字符串 first_name = &#34;Bro&#34; food = &#34;pizza&#34; email = &#34;Bro123@gmail.com&#34; print(f&#34;你好 {first_name}&#34;) print(f&#34;你喜欢 {food}&#34;) print(f&#34;你的邮箱是: {email}&#34;) # 整数 age = 25 quantity = 3 num_of_students =30 print(f&#34;你 {age} 岁了&#34;) print(f&#34;你购买了 {quantity} 件商品&#34;) print(f&#34;你的班级有 {num_of_students} 名学生&#34;) # 浮点数 price = 10.99 gpa = 3.2 distance = 5.5 print(f&#34;价格是 ${price}&#34;) print(f&#34;你的 GPA 是: {gpa}&#34;) print(f&#34;你跑了 {distance} 公里&#34;) # 布尔值 is_student = False for_sale = False is_online = True if is_online: print(&#34;你在线&#34;) else: print(&#34;你离线&#34;) 变量赋值
-...</p>
+    <p>初学者完整的 Python 教程</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-05 00:00:00 +0000 UTC'>五月 5, 2025</span>&nbsp;·&nbsp;90 分钟</footer>
   <a class="entry-link" aria-label="post link to 如何学好Python[2]: 学习 Python" href="https://yuuniji.github.io/posts/python-2-learn/"></a>
@@ -279,9 +268,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>回到本系列的目录
-1. 学习基础知识 Python 是一种高级、解释型、通用编程语言。其设计哲学强调代码的可读性，使用显著的缩进。Python 是动态类型语言，并且具有垃圾回收机制。
-...</p>
+    <p>Python 路线图</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-28 00:00:00 +0000 UTC'>四月 28, 2025</span>&nbsp;·&nbsp;19 分钟</footer>
   <a class="entry-link" aria-label="post link to 如何学好Python[1]: 路线图" href="https://yuuniji.github.io/posts/python-1-roadmap/"></a>
@@ -299,10 +286,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>至于为什么推荐 Python，建议阅读Eric Raymond 关于几大编程语言的评价，以及他写的《Why Python?》。
-本系列帖子主要是关于【如何学好Python】。
-为了方便阅读，把本系列帖子的目录整理如下：
-...</p>
+    <p>Python 系列</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-27 00:00:00 +0000 UTC'>四月 27, 2025</span>&nbsp;·&nbsp;1 分钟</footer>
   <a class="entry-link" aria-label="post link to 如何学好Python[0]: 概述" href="https://yuuniji.github.io/posts/python-0-overview/"></a>
@@ -314,11 +298,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>回到本系列的目录
-★教材的特点 日本国际交流基金会编写的《いろどり》（Irodori）是一套专为外国人设计的日语教材，旨在帮助学习者在日本的生活和工作中掌握基础的日语沟通能力。
-《いろどり》的核心理念是通过沟通与文化理解，促进人与人之间的相互理解。教材不仅注重语言知识的传授，还特别强调在实际生活场景中的应用。它的学习目标基于JF生活日语CanDo标准，帮助学习者在日本的生活中能够应对各种日常场景，如购物、工作、社交等。
-《いろどり》的特点：
-...</p>
+    <p>介绍日语教材《いろどり》的内容特色及学习建议。</p>
   </div>
   <footer class="entry-footer"><span title='2025-04-06 00:00:00 +0000 UTC'>四月 6, 2025</span>&nbsp;·&nbsp;12 分钟</footer>
   <a class="entry-link" aria-label="post link to 如何学好日语[6]: 教材《いろどり》" href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-6-textbook-irodori/"></a>
@@ -330,11 +310,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>回到本系列的目录
-日语发音的音调分为高音和低音。读单词时要看有没有低音处(音调突然下降的地方)，对于有低音处的单词来说，每个单词都有其特定的低音位置。音调不同，发音方法也不同。
-当单词有低音处，低音位置会用「↓」表示。
-当单词没有低音处，单词最后附加「○」符号。
-...</p>
+    <p>介绍日语音调的基本规律及其在语言表达中的重要性。</p>
   </div>
   <footer class="entry-footer"><span title='2025-03-23 00:00:00 +0000 UTC'>三月 23, 2025</span>&nbsp;·&nbsp;2 分钟</footer>
   <a class="entry-link" aria-label="post link to 如何学好日语[5]: 日语的音调" href="https://yuuniji.github.io/posts/how-to-learn-japanese-effectively-5-accent/"></a>

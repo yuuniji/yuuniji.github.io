@@ -13,9 +13,7 @@
       <link>https://yuuniji.github.io/ja/posts/python-1-roadmap/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://yuuniji.github.io/ja/posts/python-1-roadmap/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://yuuniji.github.io/ja/posts/python-0-overview/&#34;&gt;シリーズの目次に戻る&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;1-基本を学ぶ&#34;&gt;1. 基本を学ぶ&lt;/h2&gt;
-&lt;p&gt;Pythonは、高水準、インタプリタ型、汎用のプログラミング言語です。その設計哲学は、インデントを重視したコードの可読性を強調しています。Pythonは動的型付けであり、ガベージコレクションを備えています。&lt;/p&gt;</description>
+      <description>Python のロードマップ</description>
     </item>
     <item>
       <title>Kubernetesのロードマップ</title>
