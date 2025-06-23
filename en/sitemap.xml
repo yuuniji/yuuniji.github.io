@@ -38,6 +38,45 @@
                 href="https://yuuniji.github.io/en/"
                 />
   </url><url>
+    <loc>https://yuuniji.github.io/en/tags/books/</loc>
+    <lastmod>2025-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yuuniji.github.io/en/posts/reading-2-the-wealth-of-nations/</loc>
+    <lastmod>2025-06-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/posts/reading-2-the-wealth-of-nations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/posts/reading-2-the-wealth-of-nations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/posts/reading-2-the-wealth-of-nations/"
+                />
+  </url><url>
+    <loc>https://yuuniji.github.io/en/tags/</loc>
+    <lastmod>2025-06-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yuuniji.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yuuniji.github.io/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yuuniji.github.io/en/tags/"
+                />
+  </url><url>
     <loc>https://yuuniji.github.io/en/posts/reading-1-how-to-read-a-book/</loc>
     <lastmod>2025-06-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -54,27 +93,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yuuniji.github.io/en/posts/reading-1-how-to-read-a-book/"
-                />
-  </url><url>
-    <loc>https://yuuniji.github.io/en/tags/books/</loc>
-    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yuuniji.github.io/en/tags/</loc>
-    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yuuniji.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuuniji.github.io/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuuniji.github.io/en/tags/"
                 />
   </url><url>
     <loc>https://yuuniji.github.io/en/posts/reading-0-overview/</loc>
