@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on yuuniji</title>
+    <link>https://yuuniji.github.io/tags/</link>
+    <description>Recent content in Tags on yuuniji</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
+    <webMaster>yuuniji@example.com (yuuniji)</webMaster>
+    <copyright>© 2025 yuuniji</copyright>
+    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>日语</title>
+      <link>https://yuuniji.github.io/tags/%E6%97%A5%E8%AF%AD/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/tags/%E6%97%A5%E8%AF%AD/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>语法</title>
+      <link>https://yuuniji.github.io/tags/%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/tags/%E8%AF%AD%E6%B3%95/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>沉浸</title>
+      <link>https://yuuniji.github.io/tags/%E6%B2%89%E6%B5%B8/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/tags/%E6%B2%89%E6%B5%B8/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>https://yuuniji.github.io/tags/github/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/tags/github/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://yuuniji.github.io/tags/hugo/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/tags/hugo/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>博客</title>
+      <link>https://yuuniji.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

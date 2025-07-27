@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yuuniji.github.io/sitemap.xml

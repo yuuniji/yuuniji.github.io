@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on yuuniji</title>
+    <link>https://yuuniji.github.io/posts/</link>
+    <description>Recent content in Blog on yuuniji</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
+    <webMaster>yuuniji@example.com (yuuniji)</webMaster>
+    <copyright>© 2025 yuuniji</copyright>
+    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>如何学好日语[1]: 核心语法与句型结构</title>
+      <link>https://yuuniji.github.io/posts/japanese-1-core/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-1-core/</guid>
+      <description>梳理核心语法与句型结构，帮助初学者搭建日语学习的知识框架。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-1-core/featured-Tokyo.gif" />
+    </item>
+    
+    <item>
+      <title>如何学好日语[0]: 概述</title>
+      <link>https://yuuniji.github.io/posts/japanese-0-overview/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-0-overview/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-0-overview/featured-Tokyo.gif" />
+    </item>
+    
+    <item>
+      <title>我网站的部署和扩展</title>
+      <link>https://yuuniji.github.io/posts/a/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/a/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/a/featured-DragonBall.gif" />
+    </item>
+    
+  </channel>
+</rss>
