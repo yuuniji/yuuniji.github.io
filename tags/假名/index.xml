@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>假名 on yuuniji</title>
+    <link>https://yuuniji.github.io/tags/%E5%81%87%E5%90%8D/</link>
+    <description>Recent content in 假名 on yuuniji</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
+    <webMaster>yuuniji@example.com (yuuniji)</webMaster>
+    <copyright>© 2025 yuuniji</copyright>
+    <lastBuildDate>Mon, 17 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/tags/%E5%81%87%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>日语的假名</title>
+      <link>https://yuuniji.github.io/posts/japanese-2-kana/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-2-kana/</guid>
+      <description>介绍日语假名的构成、读法及学习技巧，帮助打好基础。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-2-kana/featured-Doraemon.gif" />
+    </item>
+    
+  </channel>
+</rss>

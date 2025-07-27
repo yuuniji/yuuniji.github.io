@@ -9,20 +9,80 @@
     <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
     <webMaster>yuuniji@example.com (yuuniji)</webMaster>
     <copyright>© 2025 yuuniji</copyright>
-    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>日语的核心语法与句型结构</title>
-      <link>https://yuuniji.github.io/posts/japanese-1-core/</link>
-      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <title>318骑行一周年有感</title>
+      <link>https://yuuniji.github.io/posts/life-1-road-318/</link>
+      <pubDate>Wed, 25 Jun 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-1-core/</guid>
-      <description>梳理核心语法与句型结构，帮助初学者搭建日语学习的知识框架。</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-1-core/featured-Doraemon.gif" />
+      <guid>https://yuuniji.github.io/posts/life-1-road-318/</guid>
+      <description>回顾一年骑行318国道的旅程，体会那些虽不完美但引领我们靠近目标的道路。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-1-road-318/featured-Bike.gif" />
     </item>
     
     <item>
-      <title>语言习得</title>
+      <title>日语教材《いろどり》</title>
+      <link>https://yuuniji.github.io/posts/japanese-5-textbook-irodori/</link>
+      <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-5-textbook-irodori/</guid>
+      <description>介绍日语教材《いろどり》的内容特色及学习建议。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-5-textbook-irodori/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>日语的音调</title>
+      <link>https://yuuniji.github.io/posts/japanese-1-accent/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-1-accent/</guid>
+      <description>介绍日语音调的基本规律及其在语言表达中的重要性。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-1-accent/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>日语的假名</title>
+      <link>https://yuuniji.github.io/posts/japanese-2-kana/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-2-kana/</guid>
+      <description>介绍日语假名的构成、读法及学习技巧，帮助打好基础。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-2-kana/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>学日语的一些资源</title>
+      <link>https://yuuniji.github.io/posts/japanese-6-resources/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-6-resources/</guid>
+      <description>为日语学习者精心整理的推荐学习资源、工具和练习材料合集。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-6-resources/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>学日语的方法</title>
+      <link>https://yuuniji.github.io/posts/japanese-4-methods/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-4-methods/</guid>
+      <description>分享提升日语学习效率的实用技巧和方法。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-4-methods/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>日语的语法与句型结构</title>
+      <link>https://yuuniji.github.io/posts/japanese-3-core/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-3-core/</guid>
+      <description>梳理核心语法与句型结构，帮助初学者搭建日语学习的知识框架。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-3-core/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>日语习得</title>
       <link>https://yuuniji.github.io/posts/japanese-0-overview/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>

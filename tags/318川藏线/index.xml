@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>318川藏线 on yuuniji</title>
+    <link>https://yuuniji.github.io/tags/318%E5%B7%9D%E8%97%8F%E7%BA%BF/</link>
+    <description>Recent content in 318川藏线 on yuuniji</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
+    <webMaster>yuuniji@example.com (yuuniji)</webMaster>
+    <copyright>© 2025 yuuniji</copyright>
+    <lastBuildDate>Wed, 25 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/tags/318%E5%B7%9D%E8%97%8F%E7%BA%BF/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>318骑行一周年有感</title>
+      <link>https://yuuniji.github.io/posts/life-1-road-318/</link>
+      <pubDate>Wed, 25 Jun 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/life-1-road-318/</guid>
+      <description>回顾一年骑行318国道的旅程，体会那些虽不完美但引领我们靠近目标的道路。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-1-road-318/featured-Bike.gif" />
+    </item>
+    
+  </channel>
+</rss>
