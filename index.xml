@@ -32,6 +32,36 @@
     </item>
     
     <item>
+      <title>How to Learn Python Effectively [2]: Learn Python</title>
+      <link>https://yuuniji.github.io/posts/python-2-learn/</link>
+      <pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/python-2-learn/</guid>
+      <description>A complete Python tutorial for beginners</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/python-2-learn/featured-Python.gif" />
+    </item>
+    
+    <item>
+      <title>How to Learn Python Effectively [1]: Roadmap</title>
+      <link>https://yuuniji.github.io/posts/python-1-roadmap/</link>
+      <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/python-1-roadmap/</guid>
+      <description>Python Roadmap</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/python-1-roadmap/featured-Python.gif" />
+    </item>
+    
+    <item>
+      <title>How to Learn Python Effectively [0]: Overview</title>
+      <link>https://yuuniji.github.io/posts/python-0-overview/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/python-0-overview/</guid>
+      <description>Python Series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/python-0-overview/featured-Python.gif" />
+    </item>
+    
+    <item>
       <title>Some Resources for Learning Japanese</title>
       <link>https://yuuniji.github.io/posts/japanese-6-resources/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>

@@ -9,7 +9,17 @@
     <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
     <webMaster>yuuniji@example.com (yuuniji)</webMaster>
     <copyright>© 2025 yuuniji</copyright>
-    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Learn Python Effectively [0]: Overview</title>
+      <link>https://yuuniji.github.io/posts/python-0-overview/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/python-0-overview/</guid>
+      <description>Python Series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/python-0-overview/featured-Python.gif" />
+    </item>
     
     <item>
       <title>Deployment and Expansion of My Website</title>
