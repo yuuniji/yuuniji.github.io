@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Japanese on yuuniji</title>
+    <link>https://yuuniji.github.io/tags/japanese/</link>
+    <description>Recent content in Japanese on yuuniji</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
+    <webMaster>yuuniji@example.com (yuuniji)</webMaster>
+    <copyright>© 2025 yuuniji</copyright>
+    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/tags/japanese/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Some Resources for Learning Japanese</title>
+      <link>https://yuuniji.github.io/posts/japanese-6-resources/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-6-resources/</guid>
+      <description>A curated collection of recommended Japanese learning resources, tools, and practice materials for learners at all levels.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-6-resources/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>The Japanese textbook Irodori</title>
+      <link>https://yuuniji.github.io/posts/japanese-5-textbook-irodori/</link>
+      <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-5-textbook-irodori/</guid>
+      <description>Introduces the content features and study recommendations of the Japanese textbook ‘いろどり’.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-5-textbook-irodori/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>The Methods for Learning Japanese</title>
+      <link>https://yuuniji.github.io/posts/japanese-4-methods/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-4-methods/</guid>
+      <description>Sharing practical tips and methods to improve Japanese learning efficiency.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-4-methods/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>Japanese Grammar and Sentence Structure</title>
+      <link>https://yuuniji.github.io/posts/japanese-3-core/</link>
+      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-3-core/</guid>
+      <description>A structured overview of core grammar and sentence patterns to help beginners build a solid foundation in Japanese.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-3-core/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>Japanese Kana</title>
+      <link>https://yuuniji.github.io/posts/japanese-2-kana/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-2-kana/</guid>
+      <description>Introduces the structure, pronunciation, and learning techniques of Japanese kana to help build a solid foundation.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-2-kana/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>Japanese Pitch Accent</title>
+      <link>https://yuuniji.github.io/posts/japanese-1-accent/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-1-accent/</guid>
+      <description>An introduction to the basic rules of Japanese pitch accent and its importance in language expression.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-1-accent/featured-Doraemon.gif" />
+    </item>
+    
+    <item>
+      <title>Japanese Language Acquisition</title>
+      <link>https://yuuniji.github.io/posts/japanese-0-overview/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/japanese-0-overview/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-0-overview/featured-Doraemon.gif" />
+    </item>
+    
+  </channel>
+</rss>

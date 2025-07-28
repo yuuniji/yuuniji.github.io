@@ -12,31 +12,41 @@
     <lastBuildDate>Fri, 18 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>生活记录</title>
-      <link>https://yuuniji.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</link>
+      <title>Life Records</title>
+      <link>https://yuuniji.github.io/categories/life-records/</link>
       <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</guid>
+      <guid>https://yuuniji.github.io/categories/life-records/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>语言习得</title>
-      <link>https://yuuniji.github.io/categories/%E8%AF%AD%E8%A8%80%E4%B9%A0%E5%BE%97/</link>
+      <title>Reflections &amp; Essays</title>
+      <link>https://yuuniji.github.io/categories/reflections--essays/</link>
+      <pubDate>Wed, 25 Jun 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/categories/reflections--essays/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Language Acquisition</title>
+      <link>https://yuuniji.github.io/categories/language-acquisition/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/categories/%E8%AF%AD%E8%A8%80%E4%B9%A0%E5%BE%97/</guid>
+      <guid>https://yuuniji.github.io/categories/language-acquisition/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>技术</title>
-      <link>https://yuuniji.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
+      <title>Technology</title>
+      <link>https://yuuniji.github.io/categories/technology/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <guid>https://yuuniji.github.io/categories/technology/</guid>
       <description></description>
       
     </item>
