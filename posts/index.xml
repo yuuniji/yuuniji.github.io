@@ -38,7 +38,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/reading-1-how-to-read-a-book/</guid>
       <description>First published in 1940 and immediately a bestseller, this book was revised and expanded in 1972. Its enduring relevance makes it well worth recommending even today.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/reading-1-how-to-read-a-book/featured-Book.gif" />
     </item>
     
     <item>
@@ -48,11 +48,11 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/reading-0-overview/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/reading-0-overview/featured-Book.gif" />
     </item>
     
     <item>
-      <title>How to Learn Python Effectively [2]: Learn Python</title>
+      <title>Python Learning</title>
       <link>https://yuuniji.github.io/posts/python-2-learn/</link>
       <pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>How to Learn Python Effectively [1]: Roadmap</title>
+      <title>Python Roadmap</title>
       <link>https://yuuniji.github.io/posts/python-1-roadmap/</link>
       <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
@@ -72,7 +72,7 @@
     </item>
     
     <item>
-      <title>How to Learn Python Effectively [0]: Overview</title>
+      <title>Python Overview</title>
       <link>https://yuuniji.github.io/posts/python-0-overview/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
