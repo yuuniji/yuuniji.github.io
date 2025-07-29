@@ -32,6 +32,8 @@
   
   
   
+    
+  
   
     
     
@@ -40,8 +42,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.d0a41ca80d28348252894330e7a9454282705e05ce55ee019607c85971568680cb9b9e6b1141a006ba828686c2acc436079aff715fb8da553bcd44b10f18f216.css"
-    integrity="sha512-0KQcqA0oNIJSiUMw56lFQoJwXgXOVe4BlgfIWXFWhoDLm55rEUGgBrqChobCrMQ2B5r/cV&#43;42lU7zUSxDxjyFg==">
+    href="/css/main.bundle.min.6a9ed859f2c09ba055017cb44f8f5e631d7931af852b8d120328c251b3481dd482bf557ba23959e3ff88ba36e0db6b8c3e69c669f34828e57060873ef8eafc59.css"
+    integrity="sha512-ap7YWfLAm6BVAXy0T49eYx15Ma&#43;FK40SAyjCUbNIHdSCv1V7ojlZ4/&#43;Iujbg22uMPmnGafNIKOVwYIc&#43;&#43;Or8WQ==">
 
   
   
@@ -140,7 +142,7 @@
     "keywords": ["Blog","GitHub","Hugo"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1861"
+    "wordCount": "2111"
   }]
   </script>
 
@@ -709,7 +711,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-02-22T00:00:00&#43;00:00">22 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1861 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-02-22T00:00:00&#43;00:00">22 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2111 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 
@@ -1008,7 +1010,14 @@
             <li><a href="#in-layout-template">In layout template</a></li>
           </ul>
         </li>
-        <li><a href="#icon">◇icon</a></li>
+        <li><a href="#icon">Icon</a></li>
+        <li><a href="#sidenote-shortcode">◇Sidenote Shortcode</a>
+          <ul>
+            <li><a href="#1-usage">1. Usage</a></li>
+            <li><a href="#2-shortcode-html">2. Shortcode (HTML)</a></li>
+            <li><a href="#3-css">3. CSS</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1060,7 +1069,14 @@
             <li><a href="#in-layout-template">In layout template</a></li>
           </ul>
         </li>
-        <li><a href="#icon">◇icon</a></li>
+        <li><a href="#icon">Icon</a></li>
+        <li><a href="#sidenote-shortcode">◇Sidenote Shortcode</a>
+          <ul>
+            <li><a href="#1-usage">1. Usage</a></li>
+            <li><a href="#2-shortcode-html">2. Shortcode (HTML)</a></li>
+            <li><a href="#3-css">3. CSS</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -2039,7 +2055,7 @@
 <p>Add the following code to the newly created <code>/layouts/partials/extend-footer.html</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ partial &#34;musicplayer.html&#34; . }}
 </span></span></code></pre></div>
-<h3 class="relative group">◇icon 
+<h3 class="relative group">Icon 
     <div id="icon" class="anchor"></div>
     
     <span
@@ -2061,6 +2077,144 @@
 </span></span><span class="line"><span class="cl">  │   ├── favicon-16x16.png
 </span></span><span class="line"><span class="cl">  │   ├── favicon-32x32.png
 </span></span><span class="line"><span class="cl">  │   └── site.webmanifest
+</span></span></code></pre></div><p>当然，以下是更精简且专业的英文笔记：</p>
+<hr>
+
+<h3 class="relative group">◇Sidenote Shortcode 
+    <div id="sidenote-shortcode" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#sidenote-shortcode" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+<h4 class="relative group">1. Usage 
+    <div id="1-usage" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#1-usage" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li>
+<p><strong>Markdown</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">{{\&lt; sidenote label=&#34;☍&#34; &gt;}}Your note here{{\&lt; /sidenote &gt;}} (remove <span class="sb">`\`</span>).
+</span></span></code></pre></div></li>
+<li>
+<p><strong>e.g.:</strong> The term &ldquo;sidenote&quot;<span class="sidenote-block">
+  <label for="sn-1-toggle" class="sidenote-label">☍</label>
+  <input type="checkbox" id="sn-1-toggle" class="sidenote-toggle" hidden>
+  <span class="sidenote">A small note that provides extra context without interrupting the flow.</span>
+</span> is often used in academic writing.</p>
+</li>
+<li>
+<p><strong>File</strong>: <code>layouts/shortcodes/sidenote.html</code></p>
+</li>
+</ul>
+
+<h4 class="relative group">2. Shortcode (HTML) 
+    <div id="2-shortcode-html" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#2-shortcode-html" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- $id := .Get &#34;id&#34; | default (printf &#34;sn-%d&#34; (.Page.Scratch.Get &#34;sidenoteID&#34; | default 1)) -}}
+</span></span><span class="line"><span class="cl">{{- $label := .Get &#34;label&#34; | default &#34;☍&#34; -}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sidenote-block&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;{{ $id }}-toggle&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sidenote-label&#34;</span><span class="p">&gt;</span>{{ $label }}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ $id }}-toggle&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sidenote-toggle&#34;</span> <span class="na">hidden</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sidenote&#34;</span><span class="p">&gt;</span>{{ .Inner }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- .Page.Scratch.Set &#34;sidenoteID&#34; ((.Page.Scratch.Get &#34;sidenoteID&#34; | default 1) | add 1) -}}
+</span></span></code></pre></div>
+<h4 class="relative group">3. CSS 
+    <div id="3-css" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#3-css" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* assets/css/custom.css */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">sidenote-block</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">sidenote-label</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.8</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">super</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="mh">#888</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">user-select</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">sidenote</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">15</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.85</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">sidenote</span><span class="o">-</span><span class="n">bg</span><span class="p">,</span> <span class="mh">#f9f9f9</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">padding</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border-left</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">sidenote</span><span class="o">-</span><span class="n">border</span><span class="p">,</span> <span class="mh">#ccc</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">sidenote</span><span class="o">-</span><span class="kc">text</span><span class="p">,</span> <span class="mh">#333</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">z-index</span><span class="p">:</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">sidenote-toggle</span><span class="p">:</span><span class="nd">checked</span> <span class="o">~</span> <span class="p">.</span><span class="nc">sidenote</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 深色模式适配（适用于 prefers-color-scheme 或 Blowfish 的 .dark class） */</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">prefers-color-scheme</span><span class="o">:</span> <span class="nt">dark</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">sidenote</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--sidenote-bg</span><span class="p">:</span> <span class="mh">#1e1e1e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--sidenote-text</span><span class="p">:</span> <span class="mh">#ddd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--sidenote-border</span><span class="p">:</span> <span class="mh">#444</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">sidenote-label</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--sidenote-label-color</span><span class="p">:</span> <span class="mh">#aaa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">dark</span> <span class="p">.</span><span class="nc">sidenote</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--sidenote-bg</span><span class="p">:</span> <span class="mh">#1e1e1e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--sidenote-text</span><span class="p">:</span> <span class="mh">#ddd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--sidenote-border</span><span class="p">:</span> <span class="mh">#444</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">dark</span> <span class="p">.</span><span class="nc">sidenote-label</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--sidenote-label-color</span><span class="p">:</span> <span class="mh">#aaa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 手机端适配 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">sidenote</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">top</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-top</span><span class="p">:</span> <span class="mf">0.3</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-left</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-top</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">sidenote</span><span class="o">-</span><span class="n">border</span><span class="p">,</span> <span class="mh">#ccc</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">sidenote</span><span class="o">-</span><span class="n">bg</span><span class="p">,</span> <span class="mh">#f2f2f2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div>
           
           
