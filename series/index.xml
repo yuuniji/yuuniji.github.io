@@ -9,7 +9,17 @@
     <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
     <webMaster>yuuniji@example.com (yuuniji)</webMaster>
     <copyright>© 2025 yuuniji</copyright>
-    <lastBuildDate>Sat, 05 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2025 Reading Log</title>
+      <link>https://yuuniji.github.io/series/2025-reading-log/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/series/2025-reading-log/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>How to Master Python</title>
