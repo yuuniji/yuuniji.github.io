@@ -4,18 +4,24 @@
 
   <url>
     <loc>https://yuuniji.github.io/posts/</loc>
-    <lastmod>2025-07-18T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-04T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/life-2-hongkong/</loc>
-    <lastmod>2025-07-18T00:00:00+00:00</lastmod>
+    <loc>https://yuuniji.github.io/posts/reading-2-tao_te_ching/</loc>
+    <lastmod>2025-08-04T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://yuuniji.github.io/</loc>
+    <lastmod>2025-08-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://yuuniji.github.io/posts/life-2-hongkong/</loc>
     <lastmod>2025-07-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -27,7 +33,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/reading-1-how-to-read-a-book/</loc>
+    <loc>https://yuuniji.github.io/posts/reading-1-how_to_read_a_book/</loc>
     <lastmod>2025-06-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

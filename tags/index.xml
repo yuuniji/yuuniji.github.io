@@ -9,7 +9,37 @@
     <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
     <webMaster>yuuniji@example.com (yuuniji)</webMaster>
     <copyright>© 2025 yuuniji</copyright>
-    <lastBuildDate>Fri, 18 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Literature &amp; Arts</title>
+      <link>https://yuuniji.github.io/tags/literature--arts/</link>
+      <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/tags/literature--arts/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Philosophy</title>
+      <link>https://yuuniji.github.io/tags/philosophy/</link>
+      <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/tags/philosophy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Politics</title>
+      <link>https://yuuniji.github.io/tags/politics/</link>
+      <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/tags/politics/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Bank</title>
@@ -62,31 +92,11 @@
     </item>
     
     <item>
-      <title>Literature &amp; Arts</title>
-      <link>https://yuuniji.github.io/tags/literature--arts/</link>
+      <title>Popular Science</title>
+      <link>https://yuuniji.github.io/tags/popular-science/</link>
       <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/tags/literature--arts/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Management</title>
-      <link>https://yuuniji.github.io/tags/management/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/tags/management/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Philosophy</title>
-      <link>https://yuuniji.github.io/tags/philosophy/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/tags/philosophy/</guid>
+      <guid>https://yuuniji.github.io/tags/popular-science/</guid>
       <description></description>
       
     </item>
@@ -132,31 +142,21 @@
     </item>
     
     <item>
+      <title>Management</title>
+      <link>https://yuuniji.github.io/tags/management/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/tags/management/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Military</title>
       <link>https://yuuniji.github.io/tags/military/</link>
       <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/tags/military/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Politics</title>
-      <link>https://yuuniji.github.io/tags/politics/</link>
-      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/tags/politics/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Popular Science</title>
-      <link>https://yuuniji.github.io/tags/popular-science/</link>
-      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/tags/popular-science/</guid>
       <description></description>
       
     </item>

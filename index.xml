@@ -9,7 +9,17 @@
     <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
     <webMaster>yuuniji@example.com (yuuniji)</webMaster>
     <copyright>© 2025 yuuniji</copyright>
-    <lastBuildDate>Fri, 18 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tao Te Ching</title>
+      <link>https://yuuniji.github.io/posts/reading-2-tao_te_ching/</link>
+      <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/reading-2-tao_te_ching/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/reading-2-tao_te_ching/featured-Laozi.png" />
+    </item>
     
     <item>
       <title>Hong Kong</title>
@@ -33,12 +43,12 @@
     
     <item>
       <title>How to Read a Book 1972 Edition</title>
-      <link>https://yuuniji.github.io/posts/reading-1-how-to-read-a-book/</link>
+      <link>https://yuuniji.github.io/posts/reading-1-how_to_read_a_book/</link>
       <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/reading-1-how-to-read-a-book/</guid>
+      <guid>https://yuuniji.github.io/posts/reading-1-how_to_read_a_book/</guid>
       <description>First published in 1940 and immediately a bestseller, this book was revised and expanded in 1972. Its enduring relevance makes it well worth recommending even today.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/reading-1-how-to-read-a-book/featured-Book.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/reading-1-how_to_read_a_book/featured-Book.png" />
     </item>
     
     <item>
