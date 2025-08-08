@@ -9,7 +9,17 @@
     <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
     <webMaster>yuuniji@example.com (yuuniji)</webMaster>
     <copyright>© 2025 yuuniji</copyright>
-    <lastBuildDate>Mon, 04 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Programming</title>
+      <link>https://yuuniji.github.io/categories/programming/</link>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/categories/programming/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Books</title>
@@ -17,6 +27,16 @@
       <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/categories/books/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Philosophy</title>
+      <link>https://yuuniji.github.io/categories/philosophy/</link>
+      <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/categories/philosophy/</guid>
       <description></description>
       
     </item>
@@ -32,21 +52,11 @@
     </item>
     
     <item>
-      <title>Reflections &amp; Essays</title>
-      <link>https://yuuniji.github.io/categories/reflections--essays/</link>
-      <pubDate>Wed, 25 Jun 2025 00:00:00 +0000</pubDate>
+      <title>Popular Science</title>
+      <link>https://yuuniji.github.io/categories/popular-science/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/categories/reflections--essays/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Technology</title>
-      <link>https://yuuniji.github.io/categories/technology/</link>
-      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/categories/technology/</guid>
+      <guid>https://yuuniji.github.io/categories/popular-science/</guid>
       <description></description>
       
     </item>
@@ -54,9 +64,19 @@
     <item>
       <title>Language Acquisition</title>
       <link>https://yuuniji.github.io/categories/language-acquisition/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/categories/language-acquisition/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>IT</title>
+      <link>https://yuuniji.github.io/categories/it/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/categories/it/</guid>
       <description></description>
       
     </item>

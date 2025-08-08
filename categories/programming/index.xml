@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on yuuniji</title>
+    <link>https://yuuniji.github.io/categories/programming/</link>
+    <description>Recent content in Programming on yuuniji</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
+    <webMaster>yuuniji@example.com (yuuniji)</webMaster>
+    <copyright>© 2025 yuuniji</copyright>
+    <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Top 3 Articles for Learning Programming</title>
+      <link>https://yuuniji.github.io/posts/it-programming/</link>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/it-programming/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/it-programming/featured-JavaScript_code.png" />
+    </item>
+    
+    <item>
+      <title>Python Learning</title>
+      <link>https://yuuniji.github.io/posts/python-2-learn/</link>
+      <pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/python-2-learn/</guid>
+      <description>A complete Python tutorial for beginners</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/python-2-learn/featured-Python.gif" />
+    </item>
+    
+    <item>
+      <title>Python Roadmap</title>
+      <link>https://yuuniji.github.io/posts/python-1-roadmap/</link>
+      <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/python-1-roadmap/</guid>
+      <description>Python Roadmap</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/python-1-roadmap/featured-Python.gif" />
+    </item>
+    
+    <item>
+      <title>Python Overview</title>
+      <link>https://yuuniji.github.io/posts/python-0-overview/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/python-0-overview/</guid>
+      <description>Python Series</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/python-0-overview/featured-Python.gif" />
+    </item>
+    
+  </channel>
+</rss>
