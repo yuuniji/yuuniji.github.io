@@ -9,16 +9,26 @@
     <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
     <webMaster>yuuniji@example.com (yuuniji)</webMaster>
     <copyright>© 2025 yuuniji</copyright>
-    <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Data Analyst Roadmap</title>
+      <link>https://yuuniji.github.io/posts/it-data_analyst/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/it-data_analyst/</guid>
+      <description>Step by step guide to becoming an Data Analyst in 2025</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/it-data_analyst/featured-Data_Analyst.png" />
+    </item>
     
     <item>
       <title>Top 3 Articles for Learning Programming</title>
-      <link>https://yuuniji.github.io/posts/it-programming/</link>
+      <link>https://yuuniji.github.io/posts/programming-articles/</link>
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/it-programming/</guid>
+      <guid>https://yuuniji.github.io/posts/programming-articles/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/it-programming/featured-JavaScript_code.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/programming-articles/featured-JavaScript_code.png" />
     </item>
     
     <item>
@@ -38,7 +48,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/life-2-hongkong/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-2-hongkong/featured-HongKong.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-2-hongkong/featured-HongKong.png" />
     </item>
     
     <item>
@@ -48,7 +58,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/life-1-road-318/</guid>
       <description>Looking back on a year of cycling along National Highway 318, reflecting on those imperfect but goal-oriented roads.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-1-road-318/featured-Bike.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-1-road-318/featured-318.png" />
     </item>
     
     <item>
@@ -73,32 +83,32 @@
     
     <item>
       <title>Python Learning</title>
-      <link>https://yuuniji.github.io/posts/python-2-learn/</link>
+      <link>https://yuuniji.github.io/posts/programming-python-2-learn/</link>
       <pubDate>Sat, 05 Apr 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/python-2-learn/</guid>
+      <guid>https://yuuniji.github.io/posts/programming-python-2-learn/</guid>
       <description>A complete Python tutorial for beginners</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/python-2-learn/featured-Python.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/programming-python-2-learn/featured-Python.png" />
     </item>
     
     <item>
       <title>Python Roadmap</title>
-      <link>https://yuuniji.github.io/posts/python-1-roadmap/</link>
+      <link>https://yuuniji.github.io/posts/programming-python-1-roadmap/</link>
       <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/python-1-roadmap/</guid>
+      <guid>https://yuuniji.github.io/posts/programming-python-1-roadmap/</guid>
       <description>Python Roadmap</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/python-1-roadmap/featured-Python.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/programming-python-1-roadmap/featured-Python.png" />
     </item>
     
     <item>
       <title>Python Overview</title>
-      <link>https://yuuniji.github.io/posts/python-0-overview/</link>
+      <link>https://yuuniji.github.io/posts/programming-python-0-overview/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/python-0-overview/</guid>
+      <guid>https://yuuniji.github.io/posts/programming-python-0-overview/</guid>
       <description>Python Series</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/python-0-overview/featured-Python.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/programming-python-0-overview/featured-Python.png" />
     </item>
     
     <item>
@@ -108,7 +118,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/japanese-6-resources/</guid>
       <description>A curated collection of recommended Japanese learning resources, tools, and practice materials for learners at all levels.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-6-resources/featured-Doraemon.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-6-resources/featured-japanese.png" />
     </item>
     
     <item>
@@ -118,7 +128,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/japanese-5-textbook-irodori/</guid>
       <description>Introduces the content features and study recommendations of the Japanese textbook ‘いろどり’.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-5-textbook-irodori/featured-Doraemon.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-5-textbook-irodori/featured-japanese.png" />
     </item>
     
     <item>
@@ -128,7 +138,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/japanese-4-methods/</guid>
       <description>Sharing practical tips and methods to improve Japanese learning efficiency.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-4-methods/featured-Doraemon.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-4-methods/featured-japanese.png" />
     </item>
     
     <item>
@@ -138,7 +148,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/japanese-3-core/</guid>
       <description>A structured overview of core grammar and sentence patterns to help beginners build a solid foundation in Japanese.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-3-core/featured-Doraemon.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-3-core/featured-japanese.png" />
     </item>
     
     <item>
@@ -148,7 +158,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/japanese-2-kana/</guid>
       <description>Introduces the structure, pronunciation, and learning techniques of Japanese kana to help build a solid foundation.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-2-kana/featured-Doraemon.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-2-kana/featured-japanese.png" />
     </item>
     
     <item>
@@ -158,7 +168,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/japanese-1-accent/</guid>
       <description>An introduction to the basic rules of Japanese pitch accent and its importance in language expression.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-1-accent/featured-Doraemon.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-1-accent/featured-japanese.png" />
     </item>
     
     <item>
@@ -168,17 +178,17 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/japanese-0-overview/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-0-overview/featured-Doraemon.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-0-overview/featured-japanese.png" />
     </item>
     
     <item>
       <title>Deployment and Expansion of My Website</title>
-      <link>https://yuuniji.github.io/posts/a/</link>
+      <link>https://yuuniji.github.io/posts/it-a/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/a/</guid>
+      <guid>https://yuuniji.github.io/posts/it-a/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/a/featured-DragonBall.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/it-a/featured-DragonBall.gif" />
     </item>
     
   </channel>

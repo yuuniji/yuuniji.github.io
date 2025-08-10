@@ -18,7 +18,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/life-2-hongkong/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-2-hongkong/featured-HongKong.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-2-hongkong/featured-HongKong.png" />
     </item>
     
     <item>
@@ -28,7 +28,7 @@
       <author>yuuniji@example.com (yuuniji)</author>
       <guid>https://yuuniji.github.io/posts/life-1-road-318/</guid>
       <description>Looking back on a year of cycling along National Highway 318, reflecting on those imperfect but goal-oriented roads.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-1-road-318/featured-Bike.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-1-road-318/featured-318.png" />
     </item>
     
   </channel>

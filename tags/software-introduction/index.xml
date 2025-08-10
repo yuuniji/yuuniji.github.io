@@ -13,12 +13,12 @@
     
     <item>
       <title>Deployment and Expansion of My Website</title>
-      <link>https://yuuniji.github.io/posts/a/</link>
+      <link>https://yuuniji.github.io/posts/it-a/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/a/</guid>
+      <guid>https://yuuniji.github.io/posts/it-a/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/a/featured-DragonBall.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/it-a/featured-DragonBall.gif" />
     </item>
     
   </channel>

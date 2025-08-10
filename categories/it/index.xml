@@ -9,16 +9,26 @@
     <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
     <webMaster>yuuniji@example.com (yuuniji)</webMaster>
     <copyright>© 2025 yuuniji</copyright>
-    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Data Analyst Roadmap</title>
+      <link>https://yuuniji.github.io/posts/it-data_analyst/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/it-data_analyst/</guid>
+      <description>Step by step guide to becoming an Data Analyst in 2025</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/it-data_analyst/featured-Data_Analyst.png" />
+    </item>
     
     <item>
       <title>Deployment and Expansion of My Website</title>
-      <link>https://yuuniji.github.io/posts/a/</link>
+      <link>https://yuuniji.github.io/posts/it-a/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/a/</guid>
+      <guid>https://yuuniji.github.io/posts/it-a/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/a/featured-DragonBall.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/it-a/featured-DragonBall.gif" />
     </item>
     
   </channel>
