@@ -122,53 +122,43 @@
     </item>
     
     <item>
-      <title>The Methods for Learning Japanese</title>
-      <link>https://yuuniji.github.io/posts/japanese-4-methods/</link>
-      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-4-methods/</guid>
-      <description>Sharing practical tips and methods to improve Japanese learning efficiency.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-4-methods/featured-japanese.png" />
-    </item>
-    
-    <item>
       <title>Japanese Grammar and Sentence Structure</title>
-      <link>https://yuuniji.github.io/posts/japanese-3-core/</link>
+      <link>https://yuuniji.github.io/posts/japanese-4-core/</link>
       <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-3-core/</guid>
+      <guid>https://yuuniji.github.io/posts/japanese-4-core/</guid>
       <description>A structured overview of core grammar and sentence patterns to help beginners build a solid foundation in Japanese.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-3-core/featured-japanese.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-4-core/featured-japanese.png" />
     </item>
     
     <item>
       <title>Japanese Kana</title>
-      <link>https://yuuniji.github.io/posts/japanese-2-kana/</link>
+      <link>https://yuuniji.github.io/posts/japanese-3-kana/</link>
       <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-2-kana/</guid>
+      <guid>https://yuuniji.github.io/posts/japanese-3-kana/</guid>
       <description>Introduces the structure, pronunciation, and learning techniques of Japanese kana to help build a solid foundation.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-2-kana/featured-japanese.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-3-kana/featured-japanese.png" />
     </item>
     
     <item>
       <title>Japanese Pitch Accent</title>
-      <link>https://yuuniji.github.io/posts/japanese-1-accent/</link>
+      <link>https://yuuniji.github.io/posts/japanese-2-accent/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-1-accent/</guid>
+      <guid>https://yuuniji.github.io/posts/japanese-2-accent/</guid>
       <description>An introduction to the basic rules of Japanese pitch accent and its importance in language expression.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-1-accent/featured-japanese.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-2-accent/featured-japanese.png" />
     </item>
     
     <item>
       <title>Japanese Language Acquisition</title>
-      <link>https://yuuniji.github.io/posts/japanese-0-overview/</link>
+      <link>https://yuuniji.github.io/posts/japanese-1-overview/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-0-overview/</guid>
+      <guid>https://yuuniji.github.io/posts/japanese-1-overview/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-0-overview/featured-japanese.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-1-overview/featured-japanese.png" />
     </item>
     
     <item>
