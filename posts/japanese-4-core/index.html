@@ -148,7 +148,7 @@
     "keywords": ["Japanese","Grammar"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2160"
+    "wordCount": "2278"
   }]
   </script>
 
@@ -784,7 +784,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-02-26T00:00:00&#43;00:00">26 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2160 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-02-26T00:00:00&#43;00:00">26 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2278 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 
@@ -1037,6 +1037,8 @@
     <li><a href="#-core-notes-for-japanese-from-scratch-course-lessons-193">★ <strong>Core Notes for Japanese from Scratch Course (Lessons 1–93)</strong></a></li>
     <li><a href="#-part-1-core-sentence-structure-and-basic-particles-lessons-120">★ <strong>Part 1: Core Sentence Structure and Basic Particles (Lessons 1–20)</strong></a>
       <ul>
+        <li><a href="#-three-basic-sentence-types">◇ Three Basic Sentence Types</a></li>
+        <li><a href="#-core-concept-invisible-subject-zero-pronoun">◇ Core Concept: Invisible Subject (Zero Pronoun)</a></li>
         <li><a href="#-12-core-sentence-structure">◇ <strong>[1–2] Core Sentence Structure</strong></a></li>
         <li><a href="#-super-basic-japanese-vocabulary-list">◇ Super Basic Japanese Vocabulary List</a></li>
         <li><a href="#-35-core-particles-は-wa-and-も-mo">◇ <strong>[3–5] Core Particles <code>は (wa)</code> and <code>も (mo)</code></strong></a></li>
@@ -1084,6 +1086,8 @@
     <li><a href="#-core-notes-for-japanese-from-scratch-course-lessons-193">★ <strong>Core Notes for Japanese from Scratch Course (Lessons 1–93)</strong></a></li>
     <li><a href="#-part-1-core-sentence-structure-and-basic-particles-lessons-120">★ <strong>Part 1: Core Sentence Structure and Basic Particles (Lessons 1–20)</strong></a>
       <ul>
+        <li><a href="#-three-basic-sentence-types">◇ Three Basic Sentence Types</a></li>
+        <li><a href="#-core-concept-invisible-subject-zero-pronoun">◇ Core Concept: Invisible Subject (Zero Pronoun)</a></li>
         <li><a href="#-12-core-sentence-structure">◇ <strong>[1–2] Core Sentence Structure</strong></a></li>
         <li><a href="#-super-basic-japanese-vocabulary-list">◇ Super Basic Japanese Vocabulary List</a></li>
         <li><a href="#-35-core-particles-は-wa-and-も-mo">◇ <strong>[3–5] Core Particles <code>は (wa)</code> and <code>も (mo)</code></strong></a></li>
@@ -1333,29 +1337,78 @@
     </span>        
     
 </h2>
-<p>This section lays the foundation for the course, explaining the basic structure of Japanese sentences, the core particles <code>が</code>, <code>は</code>, <code>も</code>, and <code>の</code>, and how to express location, time, and tools.</p>
-<p>A dose B</p>
+<p>All Japanese sentences consist of <strong>A (Subject/Main Carriage)</strong> and <strong>B (Predicate/Engine)</strong>. <strong>A が B</strong> is the most basic sentence form. <code>が</code> is the “pin” linking the subject to the predicate.</p>
+
+<h3 class="relative group">◇ Three Basic Sentence Types 
+    <div id="-three-basic-sentence-types" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#-three-basic-sentence-types" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Pattern</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>A does B (Verb Sentence)</strong><br><code>A が [verb ending in u]</code></td>
+          <td>Sakura walks<br><code>さくら が あるく</code></td>
+      </tr>
+  </tbody>
+</table>
 <div class="mermaid" align="center">
   <pre>
 flowchart LR
+    Ax["`◇ M  A  I  N   C  A  R ◇
+    *Sakura*`"]
+    Bx["`◇ E  N  G  I  N  E ◇
+    *aruku*`"]
+
     subgraph "う *U-Train (verb)*"
     direction LR
-    A["`◇ M  A  I  N   C  A  R ◇
-    A 
-    *Sakura*`"]
-    B["`◇ E  N  G  I  N  E ◇
-    B 
-    *aruku*`"]
-    A:::mainNode e0@-->|が|B:::mainNode
+    A ~~~ B
+    subgraph A
+    direction TB
+    Ax
     end
+    subgraph B
+    direction TB
+    Bx
+    end
+    end
+
+    Ax e0@-->|が|B
+
+    classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
+    class Ax,Bx mainNode
 
     classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
     class e0 animate
-    classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
 </pre>
 </div>
 
-<p>A is B</p>
+<table>
+  <thead>
+      <tr>
+          <th>Pattern</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>A is B (Noun Sentence)</strong><br><code>A が [noun] だ</code></td>
+          <td>Sakura is Japanese<br><code>さくら が 日本人(にほんじん) だ</code></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p><code>だ (da)</code> is the copula, like “is”.</p></blockquote>
 <div class="mermaid" align="center">
   <pre>
 flowchart LR
@@ -1392,6 +1445,22 @@ flowchart LR
 </pre>
 </div>
 
+<table>
+  <thead>
+      <tr>
+          <th>Pattern</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>A is B (Adjective Sentence)</strong><br><code>A が [i-adjective]</code></td>
+          <td>The pen is red<br><code>ペン が あかい</code></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p><code>i-adjectives</code> contain the meaning of “is” inherently—<code>だ</code> is not needed.</p></blockquote>
 <div class="mermaid" align="center">
   <pre>
 flowchart LR
@@ -1428,29 +1497,38 @@ flowchart LR
 </pre>
 </div>
 
-<p>XXXXXXXXXX</p>
+
+<h3 class="relative group">◇ Core Concept: Invisible Subject (Zero Pronoun) 
+    <div id="-core-concept-invisible-subject-zero-pronoun" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#-core-concept-invisible-subject-zero-pronoun" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>When context is clear, the subject <code>A が</code> is often omitted but still exists logically. Very common in spoken and written Japanese.<br>
+Example: <code>ケーキ を 食べる</code> – Eat cake. (“I” or “you” is implied.)</p>
 <div class="mermaid" align="center">
   <pre>
 flowchart LR
     Ax["`◇ MAIN CAR ◇
-    *Sakura*`"]
+    *⌀ が*
+    *⌀ ga*`"]
     Bx["`◇ ENGINE ◇
-    *Nihonjin*`"]
-    C["`だ
-    da`"]
-    D["`が
-    ga`"]
+    *ドりーだ
+    Dolly da*`"]
 
-    subgraph "だ *DA-Train (noun)*"
+    subgraph "⌀ = I (watashi)"
     direction LR
     A ~~~ B
     subgraph A
     direction TB
-    Ax ~~~ D
+    Ax
     end
     subgraph B
     direction TB
-    Bx ~~~ C
+    Bx
     end
     end
 
@@ -1458,10 +1536,8 @@ flowchart LR
 
     classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
     class Bx mainNode
-    classDef redText fill:none,color:red,stroke:#1B9AAA,font-family:Arial;
-    class C,D redText
-    classDef greenText fill:none,color:#1B9AAA,stroke:#1B9AAA,font-family:Arial;
-    class Ax greenText
+    classDef grayText fill:none,color:#888888,stroke:#888888,font-family:Arial;
+    class Ax grayText
     classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
     class e0 animate
 </pre>
