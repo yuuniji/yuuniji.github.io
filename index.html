@@ -888,6 +888,147 @@
         }
     }
 </style>
+<div id="heatmap" style="max-width: 600px;height: 180px;padding: 2px;text-align: center;"></div>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+<script>
+(function() {
+  
+  var dataArr = [["2025-08-08", "6.6", "\/posts\/programming-articles\/", "Top 3 Articles for Learning Programming"],["2025-08-04", "1.5", "\/posts\/reading-2-tao_te_ching\/", "Tao Te Ching"],["2025-07-18", "0.5", "\/posts\/life-2-hongkong\/", "Hong Kong"],["2025-06-25", "0.6", "\/posts\/life-1-road-318\/", "Reflections on the First Anniversary of Cycling China\u0027s 318"],["2025-06-02", "32.1", "\/posts\/reading-1-how_to_read_a_book\/", "How to Read a Book 1972 Edition"],["2025-06-01", "0.0", "\/posts\/reading-0-overview\/", "Book Log Overview"],["2025-04-05", "22.5", "\/posts\/programming-python-2-learn\/", "Python Learning"],["2025-03-08", "5.0", "\/posts\/programming-python-1-roadmap\/", "Python Roadmap"],["2025-03-02", "0.0", "\/posts\/programming-python-0-overview\/", "Python Overview"],["2025-03-01", "0.5", "\/posts\/japanese-6-resources\/", "Some Resources for Learning Japanese"],["2025-02-28", "1.0", "\/posts\/japanese-5-textbook-irodori\/", "The Japanese textbook Irodori"],["2025-02-26", "2.2", "\/posts\/japanese-4-core\/", "Japanese Grammar and Sentence Structure"],["2025-02-25", "2.2", "\/posts\/japanese-3-kana\/", "Japanese Kana"],["2025-02-24", "0.5", "\/posts\/japanese-2-accent\/", "Japanese Pitch Accent"],["2025-02-23", "0.8", "\/posts\/japanese-1-overview\/", "Japanese Language Acquisition"],["2025-02-22", "3.1", "\/posts\/it-a\/", "Deployment and Expansion of My Website"],];
+
+  var dataMap = new Map();
+  dataArr.forEach(function(item) {
+    var key = item[0];
+    var wordCount = item[1];
+    var link = item[2];
+    var title = item[3];
+    var value = dataMap.get(key);
+    if (!value || wordCount > value.wordCount) {
+      dataMap.set(key, {wordCount, link, title});
+    }
+  });
+
+  var data = [];
+  for (const [key, value] of dataMap.entries()) {
+    data.push([key, value.wordCount]);
+  }
+
+  var chartDom = document.getElementById('heatmap');
+  var myChart = echarts.init(chartDom);
+
+  function heatmap_width(months){
+    var startDate = new Date();
+    var mill = startDate.setMonth(startDate.getMonth() - months);
+    var endDate = +new Date();
+    startDate = +new Date(mill);
+    endDate = echarts.format.formatTime('yyyy-MM-dd', endDate);
+    startDate = echarts.format.formatTime('yyyy-MM-dd', startDate);
+    return [[startDate, endDate]];
+  }
+
+  function getRangeArr() {
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 600) return heatmap_width(12);
+    else if (windowWidth >= 400) return heatmap_width(9);
+    else return heatmap_width(6);
+  }
+
+  
+  function getThemeOptions(isDark) {
+  return {
+    title: {
+  top: 15,                
+  left: 'center',
+  text: 'Article Activity Heatmap',
+  textStyle: { 
+    color: isDark ? '#ccc' : '#666', 
+    fontSize: 14               
+  }
+},
+
+    tooltip: {
+      backgroundColor: isDark ? '#222' : '#fff',
+      borderColor: isDark ? '#444' : '#ccc',
+      textStyle: { color: isDark ? '#F6F5EB' : '#222' },
+      formatter: function(p) {
+        const post = dataMap.get(p.data[0]);
+        if (!post) return '';
+        return (post.title || 'No title') + ' | ' + post.wordCount + 'k words';
+      }
+    },
+    visualMap: {
+      min: 0,
+      max: 10,
+      type: 'piecewise',
+      orient: 'horizontal', 
+      left: 'center',
+      bottom: 10, 
+      inRange: {
+        color: isDark
+          ? ['#3A3D5C', '#9AA7E0']
+          : ['#9aa7e04c', '#3A3D5C']
+      },
+      splitNumber: 4,
+      text: ['k words', ''],
+      showLabel: true,
+      itemGap: 20,
+      textStyle: { color: isDark ? '#F6F5EB' : '#222' }
+    },
+    calendar: {
+      top: 60, 
+      left: 20,
+      right: 20,
+      cellSize: ['auto', 12],
+      range: getRangeArr(),
+      itemStyle: {
+        color: isDark ? '#23272e' : '#F1F1F1',
+        borderWidth: 2.5,
+        borderColor: isDark ? '#444' : '#fff'
+      },
+      yearLabel: { show: false, color: isDark ? '#F6F5EB' : '#222' },
+      dayLabel: { color: isDark ? '#F6F5EB' : '#222' },
+      monthLabel: { color: isDark ? '#F6F5EB' : '#222' },
+      splitLine: { lineStyle: { color: 'rgba(0,0,0,0)' } }
+    },
+    series: {
+      type: 'heatmap',
+      coordinateSystem: 'calendar',
+      data: data
+    }
+  };
+}
+
+
+  
+  function isDarkMode() {
+    return document.documentElement.classList.contains('dark');
+  }
+
+  function setChartTheme() {
+    myChart.setOption(getThemeOptions(isDarkMode()));
+  }
+
+  
+  setChartTheme();
+
+  
+  var observer = new MutationObserver(setChartTheme);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+  
+  window.onresize = function() { myChart.resize(); };
+
+  
+  myChart.on('click', function(params) {
+    if (params.componentType === 'series') {
+      const post = dataMap.get(params.data[0]);
+      if (post) {
+        window.open(window.location.origin + post.link, '_blank').focus();
+      }
+    }
+  });
+})();
+</script>
+
 </section>
         </div>
       </div>
