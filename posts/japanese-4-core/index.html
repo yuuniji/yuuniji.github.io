@@ -148,7 +148,7 @@
     "keywords": ["Japanese","Grammar"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2510"
+    "wordCount": "2300"
   }]
   </script>
 
@@ -798,7 +798,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-02-26T00:00:00&#43;00:00">26 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2510 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">12 mins</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-02-26T00:00:00&#43;00:00">26 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2300 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 
@@ -1604,33 +1604,31 @@
 <li>
 <p><strong>A does B (Verb Sentence)</strong>: <code>A が [verb ending in u]</code></p>
 <ul>
-<li>Example: <code>さくら が あるく</code> (Sakura ga aruku) – Sakura walks.</li>
+<li>Example:<br>
+<code>さくら が あるく</code> (Sakura ga aruku) – Sakura walks.</li>
 </ul>
 <div class="mermaid" align="center">
   <pre>
   flowchart LR
-      Ax["`◇ M  A  I  N   C  A  R ◇
-      *Sakura*`"]
-      Bx["`◇ E  N  G  I  N  E ◇
-      *aruku*`"]
+      b>aruku]
+      a{{Sakura}}
 
       subgraph "う *U-Train (verb)*"
       direction LR
-      A ~~~ B
-      subgraph A
-      direction TB
-      Ax
+      subgraph A[" A (MAIN CAR) "]
+      direction LR
+      a
       end
-      subgraph B
-      direction TB
-      Bx
+      subgraph B[" B (ENGINE) "]
+      direction LR
+      b
       end
       end
 
-      Ax e0@-->|が|Bx
+      a e0@-->|が| B
 
-      classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
-      class Ax,Bx mainNode
+      classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,letter-spacing:2px
+      class A,B mainNode
 
       classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
       class e0 animate
@@ -1642,43 +1640,20 @@
 <p><strong>A is B (Noun Sentence)</strong>: <code>A が [noun] だ</code></p>
 <ul>
 <li><code>だ (da)</code> is the copula, like “is”.</li>
-<li>Example: <code>さくら が 日本人(にほんじん) だ</code> – Sakura is Japanese.</li>
+<li>Example:<br>
+<code>さくら が 日本人(にほんじん) だ</code> – Sakura is Japanese.</li>
 </ul>
 <div class="mermaid" align="center">
   <pre>
   flowchart LR
-      Ax["`◇ MAIN CAR ◇
-      *Sakura*`"]
-      Bx["`◇ ENGINE ◇
-      *Nihonjin*`"]
-      C["`だ
-      da`"]
-      D["`が
-      ga`"]
+      b>Nihonjin だ]
+      a{{Sakura が}}
 
       subgraph "だ *DA-Train (noun)*"
-      direction LR
-      A ~~~ B
-      subgraph A
-      direction TB
-      Ax ~~~ D
-      end
-      subgraph B
-      direction TB
-      Bx ~~~ C
-      end
+        direction LR
+        a --> b
       end
 
-      D e0@--> Bx
-      Ax --- D
-      Bx --- C
-
-      classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
-      class Ax,Bx mainNode
-      classDef redText fill:none,color:red,stroke:#1B9AAA,font-family:Arial;
-      class C,D redText
-      classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
-      class e0 animate
   </pre>
 </div>
 
@@ -1687,43 +1662,19 @@
 <p><strong>A is B (Adjective Sentence)</strong>: <code>A が [i-adjective]</code></p>
 <ul>
 <li><code>i-adjectives</code> contain the meaning of “is” inherently—<code>だ</code> is not needed.</li>
-<li>Example: <code>ペン が あかい</code> – The pen is red.</li>
+<li>Example:<br>
+<code>ペン が あかい</code> – The pen is red.</li>
 </ul>
 <div class="mermaid" align="center">
   <pre>
   flowchart LR
-      Ax["`◇ MAIN CAR ◇
-      *Pen*`"]
-      Bx["`◇ ENGINE ◇
-      *akai*`"]
-      C["`い
-      i`"]
-      D["`が
-      ga`"]
+      b>akai い]
+      a{{Pen が}}
 
       subgraph "い *I-Train 'adjective'*"
       direction LR
-      A ~~~ B
-      subgraph A
-      direction TB
-      Ax ~~~ D
+      a --> b
       end
-      subgraph B
-      direction TB
-      Bx ~~~ C
-      end
-      end
-
-      D e0@--> Bx
-      Ax --- D
-      Bx --- C
-
-      classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
-      class Ax,Bx mainNode
-      classDef redText fill:none,color:red,stroke:#1B9AAA,font-family:Arial;
-      class C,D redText
-      classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
-      class e0 animate
   </pre>
 </div>
 
@@ -1739,87 +1690,68 @@
     </span>        
     
 </h4>
+<p>In Japanese, all minor pronouns—such as &ldquo;it,&rdquo; &ldquo;she,&rdquo; &ldquo;he,&rdquo; &ldquo;I,&rdquo; and &ldquo;they&rdquo;—can be replaced by an invisible medium, the zero pronoun. However, it’s crucial to remember that <strong>they still exist implicitly</strong>.</p>
 <ul>
 <li>
 <p>When context is clear, the subject <code>A が</code> is often omitted but still exists logically. Very common in spoken and written Japanese.</p>
 </li>
 <li>
-<p>Example: <code>ドりーだ</code> – I&rsquo;m Dolly.</p>
+<p>Example:<br>
+<code>ドりーだ</code> – I&rsquo;m Dolly.</p>
 <div class="mermaid" align="center">
   <pre>
   flowchart LR
-      Ax["`◇ MAIN CAR ◇
-      ⌀ が
-      *⌀ ga*`"]
-      Bx["`◇ ENGINE ◇
-      ドりーだ
-      *Dolly da*`"]
+      b>Dolly だ]
+      a{{⌀ が}}
 
       subgraph "⌀ = I (watashi)"
       direction LR
-      Ax e0@--> Bx
+      a --> b
       end
 
-      classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
-      class Bx mainNode
       classDef grayText fill:none,color:#888888,stroke:#888888,font-family:Arial;
-      class Ax grayText
-      classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
-      class e0 animate
+      class a grayText
   </pre>
 </div>
 
 </li>
 <li>
-<p>Example: <code>ドりーだ</code> – It is a rabbit!</p>
+<p>Example:<br>
+<code>うさぎだ</code> – It is a rabbit!</p>
 <div class="mermaid" align="center">
   <pre>
   flowchart LR
-      Ax["`◇ MAIN CAR ◇
-      ⌀ が
-      *⌀ ga*`"]
-      Bx["`◇ ENGINE ◇
-      うさぎだ
-      *usagi da*`"]
+      b>usagi だ]
+      a{{⌀ が}}
 
       subgraph "⌀ = *it*: the thing moving in the trees"
       direction LR
-      Ax e0@--> Bx
+      a --> b
       end
 
-      classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
-      class Bx mainNode
       classDef grayText fill:none,color:#888888,stroke:#888888,font-family:Arial;
-      class Ax grayText
-      classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
-      class e0 animate
+      class a grayText
+
   </pre>
 </div>
 
 </li>
 <li>
-<p>Example: <code>どようびだ</code> – It is Saturday!</p>
+<p>Example:<br>
+<code>どようびだ</code> – It is Saturday!</p>
 <div class="mermaid" align="center">
   <pre>
   flowchart LR
-      Ax["`◇ MAIN CAR ◇
-      ⌀ が
-      *⌀ ga*`"]
-      Bx["`◇ ENGINE ◇
-      どようびだ
-      *doyoubi da*`"]
+      b>doyoubi だ]
+      a{{⌀ が}}
 
       subgraph "⌀ = *it*: today"
       direction LR
-      Ax e0@--> Bx
+      a --> b
       end
 
-      classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
-      class Bx mainNode
       classDef grayText fill:none,color:#888888,stroke:#888888,font-family:Arial;
-      class Ax grayText
-      classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
-      class e0 animate
+      class a grayText
   </pre>
 </div>
 
@@ -1835,57 +1767,31 @@
     </span>        
     
 </h4>
+<p>This carriage is painted <strong>white</strong> because it <em>isn’t part of</em> the core train. The core train is always made up of just two pieces: the <em>Engine</em> and the <em>Main Carriage</em>. So whenever we spot a white carriage, we know it’s there to tell us something extra about either the engine or the main carriage.</p>
 <ul>
 <li>
-<p>Marks the direct object of a verb.</p>
+<p><strong>Object</strong>: The noun we are <em>doing something to</em>.</p>
 </li>
 <li>
-<p>Example: <code>私 が ケーキ を 食べる</code> – I eat cake.</p>
+<p><strong>Grammar role</strong>: Marks the <strong>direct object</strong> of a verb.</p>
+</li>
+<li>
+<p><strong>Example</strong>:<br>
+<code>(私 が) ケーキ を 食べる</code> – <em>I eat cake.</em></p>
 <div class="mermaid" align="center">
   <pre>
   flowchart LR
-      Ax["`◇ MAIN CAR ◇
-      わたしが
-      *watashi-ga*
-      I`"]
-      Bx["`◇ ENGINE ◇
-      たべる
-      *taberu*
-      eat`"]
-      C["`*keeki-wo*
-      けーきを
-      cake`"]
-      
-
-      subgraph "Object: Noun we are *doing something to*"
+      b>taberu]
+      a{{watashi が}}
+      o{{keeki を}}
+      a e0@<-->|Core Sentence| b
+      subgraph "Object"
       direction LR
-      A ~~~ C ~~~ B
-
-      subgraph A
-      direction LR
-      Ax
+      a --> o --> b
       end
 
-      subgraph B
-      direction LR
-      Bx
-      end
-
-      subgraph o
-      direction LR
-      C
-      end
-
-      end
-
-      A --> o --> B
-
-      A e0@<-->|Core Sentence| B
-
-      classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
-      class Ax,Bx mainNode
-      classDef blueText fill:none,color:#1B9AAA,stroke:#1B9AAA,font-family:Arial;
-      class C blueText
+      classDef whiteText fill:none
+      class o whiteText
       classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
       class e0 animate
   </pre>
@@ -1895,48 +1801,18 @@
 <div class="mermaid" align="center">
   <pre>
   flowchart LR
-      Ax["`◇ MAIN CAR ◇
-      ⌀ が
-      *⌀ ga* 
-      ⌀ = I (watashi)`"]
-      Bx["`◇ ENGINE ◇
-      たべる
-      *taberu*
-      eat`"]
-      C["`*keeki-wo*
-      けーきを
-      cake`"]
-      
-
-      subgraph A
+      b>taberu]
+      a{{⌀ が}}
+      o{{keeki を}}
+      subgraph "Object"
       direction LR
-      Ax
+      a --> o --> b
       end
 
-      subgraph B
-      direction LR
-      Bx
-      end
-
-      subgraph o
-      direction LR
-      C
-      end
-
-      
-
-      A --> o --> B
-
-      A e0@<-->|Core Sentence| B
-
+      classDef whiteText fill:none
+      class o whiteText
       classDef grayText fill:none,color:#888888,stroke:#888888,font-family:Arial;
-      class Ax grayText
-      classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
-      class Bx mainNode
-      classDef blueText fill:none,color:#1B9AAA,stroke:#1B9AAA,font-family:Arial;
-      class C blueText
-      classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
-      class e0 animate
+      class a grayText
   </pre>
 </div>
 
@@ -1944,26 +1820,33 @@
 <div class="mermaid" align="center">
   <pre>
   flowchart LR
-      Bx["`◇ ENGINE ◇
-      たべる
-      *taberu*
-      eat`"]
-      C["`*keeki-wo*
-      けーきを
-      cake`"]
-
-      C --> Bx
-
-      
-
+      a{{私が}}
+      b>taberu]
+      o{{keeki を}}
+      subgraph "Object"
+      direction LR
+      o --> b
+      end
+      a --> o
       classDef grayText fill:none,color:#888888,stroke:#888888,font-family:Arial;
-      class Ax grayText
-      classDef mainNode fill:#1B9AAA,color:#F6F5EB,stroke:#1B9AAA,font-family:Arial,letter-spacing:2px
-      class Bx mainNode
-      classDef blueText fill:none,color:#1B9AAA,stroke:#1B9AAA,font-family:Arial;
-      class C blueText
-      classDef animate stroke-dasharray: 9,5,stroke-dashoffset: 900,animation: dash 25s linear infinite;
-      class e0 animate
+      class a grayText
+      classDef whiteText fill:none
+      class o whiteText
+  </pre>
+</div>
+
+<div style="text-align: center">⇩</div>
+<div class="mermaid" align="center">
+  <pre>
+    flowchart LR
+    a{{私が}}
+    subgraph "I eat cake"
+      b("ケーキを食べる")
+    end
+
+    a --> b
+    classDef grayText fill:none,color:#888888,stroke:#888888,font-family:Arial;
+    class a grayText
   </pre>
 </div>
 
