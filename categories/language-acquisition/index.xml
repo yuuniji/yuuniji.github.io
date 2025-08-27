@@ -2,74 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Language Acquisition on yuuniji</title>
-    <link>https://yuuniji.github.io/categories/language-acquisition/</link>
+    <link>http://localhost:1313/categories/language-acquisition/</link>
     <description>Recent content in Language Acquisition on yuuniji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
     <webMaster>yuuniji@example.com (yuuniji)</webMaster>
     <copyright>© 2025 yuuniji</copyright>
-    <lastBuildDate>Sat, 01 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/categories/language-acquisition/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Japanese Learning Resources</title>
-      <link>https://yuuniji.github.io/posts/japanese-6-resources/</link>
-      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-6-resources/</guid>
-      <description>A curated collection of recommended Japanese learning resources, tools, and practice materials for learners at all levels.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-6-resources/featured-japanese.png" />
-    </item>
-    
-    <item>
-      <title>Irodori（いろどり）</title>
-      <link>https://yuuniji.github.io/posts/japanese-5-textbook-irodori/</link>
-      <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-5-textbook-irodori/</guid>
-      <description>Introduces the content features and study recommendations of the Japanese textbook ‘いろどり’.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-5-textbook-irodori/featured-japanese.png" />
-    </item>
-    
-    <item>
-      <title>Grammar &amp; Syntax</title>
-      <link>https://yuuniji.github.io/posts/japanese-4-core/</link>
-      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-4-core/</guid>
-      <description>A structured overview of core grammar and sentence patterns to help beginners build a solid foundation in Japanese.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-4-core/featured-japanese.png" />
-    </item>
-    
-    <item>
-      <title>Kana</title>
-      <link>https://yuuniji.github.io/posts/japanese-3-kana/</link>
-      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-3-kana/</guid>
-      <description>Introduces the structure, pronunciation, and learning techniques of Japanese kana to help build a solid foundation.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-3-kana/featured-japanese.png" />
-    </item>
-    
-    <item>
-      <title>Pitch Accent</title>
-      <link>https://yuuniji.github.io/posts/japanese-2-accent/</link>
-      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-2-accent/</guid>
-      <description>An introduction to the basic rules of Japanese pitch accent and its importance in language expression.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-2-accent/featured-japanese.png" />
-    </item>
-    
-    <item>
-      <title>Language Acquisition</title>
-      <link>https://yuuniji.github.io/posts/japanese-1-overview/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-1-overview/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-1-overview/featured-japanese.png" />
-    </item>
+    <atom:link href="http://localhost:1313/categories/language-acquisition/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

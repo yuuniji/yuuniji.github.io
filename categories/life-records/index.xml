@@ -2,34 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life Records on yuuniji</title>
-    <link>https://yuuniji.github.io/categories/life-records/</link>
+    <link>http://localhost:1313/categories/life-records/</link>
     <description>Recent content in Life Records on yuuniji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>yuuniji@example.com (yuuniji)</managingEditor>
     <webMaster>yuuniji@example.com (yuuniji)</webMaster>
     <copyright>© 2025 yuuniji</copyright>
-    <lastBuildDate>Fri, 18 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/categories/life-records/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Hong Kong</title>
-      <link>https://yuuniji.github.io/posts/life-2-hongkong/</link>
-      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/life-2-hongkong/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-2-hongkong/featured-HongKong.png" />
-    </item>
-    
-    <item>
-      <title>Reflections on the First Anniversary of Cycling China&#39;s 318</title>
-      <link>https://yuuniji.github.io/posts/life-1-road-318/</link>
-      <pubDate>Wed, 25 Jun 2025 00:00:00 +0000</pubDate>
-      <author>yuuniji@example.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/life-1-road-318/</guid>
-      <description>Looking back on a year of cycling along National Highway 318, reflecting on those imperfect but goal-oriented roads.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-1-road-318/featured-318.png" />
-    </item>
+    <atom:link href="http://localhost:1313/categories/life-records/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
