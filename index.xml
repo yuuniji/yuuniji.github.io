@@ -12,6 +12,16 @@
     <lastBuildDate>Sun, 16 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>My Language Study Journey in the Philippines 🇵🇭</title>
+      <link>https://yuuniji.github.io/posts/life-3-philippines/</link>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji@example.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/life-3-philippines/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/life-3-philippines/featured-Philippines.png" />
+    </item>
+    
+    <item>
       <title>Top 3 Articles for Learning Programming</title>
       <link>https://yuuniji.github.io/posts/programming-articles/</link>
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
