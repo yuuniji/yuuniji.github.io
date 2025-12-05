@@ -15,6 +15,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://yuuniji.github.io/about/</loc>
+    <lastmod>2025-12-05T17:00:00+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://yuuniji.github.io/posts/life-3-philippines/</loc>
     <lastmod>2025-10-11T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
