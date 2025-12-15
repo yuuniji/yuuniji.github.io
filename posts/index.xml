@@ -12,6 +12,16 @@
     <lastBuildDate>Sun, 16 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Obsidian Workflow: Sync &amp; Quick Notes</title>
+      <link>https://yuuniji.github.io/posts/tech-obsidian/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji81@gmail.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/tech-obsidian/</guid>
+      <description>Configuring iCloud sync for Obsidian without errors and using &amp;lsquo;Quick Sticky Notes&amp;rsquo; for better desktop accessibility.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/tech-obsidian/featured-Obsidian.png" />
+    </item>
+    
+    <item>
       <title>My Language Study Journey in the Philippines 🇵🇭</title>
       <link>https://yuuniji.github.io/posts/life-3-philippines/</link>
       <pubDate>Sat, 11 Oct 2025 00:00:00 +0000</pubDate>
@@ -33,12 +43,12 @@
     
     <item>
       <title>Tao Te Ching</title>
-      <link>https://yuuniji.github.io/posts/reading-2-tao_te_ching/</link>
+      <link>https://yuuniji.github.io/posts/r-2-tao_te_ching/</link>
       <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
       <author>yuuniji81@gmail.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/reading-2-tao_te_ching/</guid>
+      <guid>https://yuuniji.github.io/posts/r-2-tao_te_ching/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/reading-2-tao_te_ching/featured-Laozi.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/r-2-tao_te_ching/featured-Laozi.png" />
     </item>
     
     <item>
@@ -63,22 +73,22 @@
     
     <item>
       <title>How to Read a Book 1972 Edition</title>
-      <link>https://yuuniji.github.io/posts/reading-1-how_to_read_a_book/</link>
+      <link>https://yuuniji.github.io/posts/r-1-how_to_read_a_book/</link>
       <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
       <author>yuuniji81@gmail.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/reading-1-how_to_read_a_book/</guid>
+      <guid>https://yuuniji.github.io/posts/r-1-how_to_read_a_book/</guid>
       <description>First published in 1940 and immediately a bestseller, this book was revised and expanded in 1972. Its enduring relevance makes it well worth recommending even today.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/reading-1-how_to_read_a_book/featured-Book.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/r-1-how_to_read_a_book/featured-HowToReadABook.png" />
     </item>
     
     <item>
       <title>Book Log Overview</title>
-      <link>https://yuuniji.github.io/posts/reading-0-overview/</link>
+      <link>https://yuuniji.github.io/posts/r-0-overview/</link>
       <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
       <author>yuuniji81@gmail.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/reading-0-overview/</guid>
+      <guid>https://yuuniji.github.io/posts/r-0-overview/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/reading-0-overview/featured-Book.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/r-0-overview/featured-Book.png" />
     </item>
     
     <item>
@@ -113,72 +123,72 @@
     
     <item>
       <title>Japanese Learning Resources</title>
-      <link>https://yuuniji.github.io/posts/japanese-6-resources/</link>
+      <link>https://yuuniji.github.io/posts/language-ja-6-resources/</link>
       <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
       <author>yuuniji81@gmail.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-6-resources/</guid>
+      <guid>https://yuuniji.github.io/posts/language-ja-6-resources/</guid>
       <description>A curated collection of recommended Japanese learning resources, tools, and practice materials for learners at all levels.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-6-resources/featured-japanese.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/language-ja-6-resources/featured-japanese.png" />
     </item>
     
     <item>
       <title>Irodori（いろどり）</title>
-      <link>https://yuuniji.github.io/posts/japanese-5-textbook-irodori/</link>
+      <link>https://yuuniji.github.io/posts/language-ja-5-textbook-irodori/</link>
       <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji81@gmail.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-5-textbook-irodori/</guid>
+      <guid>https://yuuniji.github.io/posts/language-ja-5-textbook-irodori/</guid>
       <description>Introduces the content features and study recommendations of the Japanese textbook ‘いろどり’.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-5-textbook-irodori/featured-japanese.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/language-ja-5-textbook-irodori/featured-japanese.png" />
     </item>
     
     <item>
       <title>Grammar &amp; Syntax</title>
-      <link>https://yuuniji.github.io/posts/japanese-4-core/</link>
+      <link>https://yuuniji.github.io/posts/language-ja-4-core/</link>
       <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji81@gmail.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-4-core/</guid>
+      <guid>https://yuuniji.github.io/posts/language-ja-4-core/</guid>
       <description>A structured overview of core grammar and sentence patterns to help beginners build a solid foundation in Japanese.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-4-core/featured-japanese.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/language-ja-4-core/featured-japanese.png" />
     </item>
     
     <item>
       <title>Kana</title>
-      <link>https://yuuniji.github.io/posts/japanese-3-kana/</link>
+      <link>https://yuuniji.github.io/posts/language-ja-3-kana/</link>
       <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji81@gmail.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-3-kana/</guid>
+      <guid>https://yuuniji.github.io/posts/language-ja-3-kana/</guid>
       <description>Introduces the structure, pronunciation, and learning techniques of Japanese kana to help build a solid foundation.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-3-kana/featured-japanese.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/language-ja-3-kana/featured-japanese.png" />
     </item>
     
     <item>
       <title>Pitch Accent</title>
-      <link>https://yuuniji.github.io/posts/japanese-2-accent/</link>
+      <link>https://yuuniji.github.io/posts/language-ja-2-accent/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji81@gmail.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-2-accent/</guid>
+      <guid>https://yuuniji.github.io/posts/language-ja-2-accent/</guid>
       <description>An introduction to the basic rules of Japanese pitch accent and its importance in language expression.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-2-accent/featured-japanese.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/language-ja-2-accent/featured-japanese.png" />
     </item>
     
     <item>
       <title>Language Acquisition</title>
-      <link>https://yuuniji.github.io/posts/japanese-1-overview/</link>
+      <link>https://yuuniji.github.io/posts/language-ja-1-overview/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji81@gmail.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/japanese-1-overview/</guid>
+      <guid>https://yuuniji.github.io/posts/language-ja-1-overview/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/japanese-1-overview/featured-japanese.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/language-ja-1-overview/featured-japanese.png" />
     </item>
     
     <item>
       <title>Deployment and Expansion of My Website</title>
-      <link>https://yuuniji.github.io/posts/it-a/</link>
+      <link>https://yuuniji.github.io/posts/tech-a/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
       <author>yuuniji81@gmail.com (yuuniji)</author>
-      <guid>https://yuuniji.github.io/posts/it-a/</guid>
+      <guid>https://yuuniji.github.io/posts/tech-a/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/it-a/featured-DragonBall.gif" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/tech-a/featured-DragonBall.gif" />
     </item>
     
   </channel>

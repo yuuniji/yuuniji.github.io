@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Yuuniji&#39;s Blog</title>
+    <link>https://yuuniji.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on Yuuniji&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>yuuniji81@gmail.com (yuuniji)</managingEditor>
+    <webMaster>yuuniji81@gmail.com (yuuniji)</webMaster>
+    <copyright>© 2025 yuuniji</copyright>
+    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yuuniji.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Deployment and Expansion of My Website</title>
+      <link>https://yuuniji.github.io/posts/tech-a/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>yuuniji81@gmail.com (yuuniji)</author>
+      <guid>https://yuuniji.github.io/posts/tech-a/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yuuniji.github.io/posts/tech-a/featured-DragonBall.gif" />
+    </item>
+    
+  </channel>
+</rss>

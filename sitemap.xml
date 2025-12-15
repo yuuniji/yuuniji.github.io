@@ -15,6 +15,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://yuuniji.github.io/posts/tech-obsidian/</loc>
+    <lastmod>2025-12-15T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://yuuniji.github.io/about/</loc>
     <lastmod>2025-12-05T17:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
@@ -33,7 +39,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/reading-2-tao_te_ching/</loc>
+    <loc>https://yuuniji.github.io/posts/r-2-tao_te_ching/</loc>
     <lastmod>2025-08-04T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -51,13 +57,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/reading-1-how_to_read_a_book/</loc>
+    <loc>https://yuuniji.github.io/posts/r-1-how_to_read_a_book/</loc>
     <lastmod>2025-06-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/reading-0-overview/</loc>
+    <loc>https://yuuniji.github.io/posts/r-0-overview/</loc>
     <lastmod>2025-06-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -81,43 +87,43 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/japanese-6-resources/</loc>
+    <loc>https://yuuniji.github.io/posts/language-ja-6-resources/</loc>
     <lastmod>2025-03-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/japanese-5-textbook-irodori/</loc>
+    <loc>https://yuuniji.github.io/posts/language-ja-5-textbook-irodori/</loc>
     <lastmod>2025-02-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/japanese-4-core/</loc>
+    <loc>https://yuuniji.github.io/posts/language-ja-4-core/</loc>
     <lastmod>2025-02-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/japanese-3-kana/</loc>
+    <loc>https://yuuniji.github.io/posts/language-ja-3-kana/</loc>
     <lastmod>2025-02-25T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/japanese-2-accent/</loc>
+    <loc>https://yuuniji.github.io/posts/language-ja-2-accent/</loc>
     <lastmod>2025-02-24T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/japanese-1-overview/</loc>
+    <loc>https://yuuniji.github.io/posts/language-ja-1-overview/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://yuuniji.github.io/posts/it-a/</loc>
+    <loc>https://yuuniji.github.io/posts/tech-a/</loc>
     <lastmod>2025-02-22T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
